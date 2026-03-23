@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menuverso — Pitch Deck Presenter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ═══════════════════════════════════════════
+       MENUVERSO PRESENTER — IMMERSIVE MODE
+       ═══════════════════════════════════════════ */
+
+    :root {
+      --olive-deep:    #1E2E1C;
+      --olive-dark:    #2A3F28;
+      --olive:         #3D5A3A;
+      --olive-light:   #5A7A56;
+      --olive-muted:   #4A6647;
+      --terra:         #C4633F;
+      --terra-light:   #D8835F;
+      --terra-glow:    rgba(196, 99, 63, 0.15);
+      --text-primary:  rgba(255, 255, 255, 0.95);
+      --text-secondary: rgba(255, 255, 255, 0.60);
+      --text-tertiary: rgba(255, 255, 255, 0.40);
+      --text-accent:   var(--terra-light);
+      --glass:         rgba(255, 255, 255, 0.06);
+      --glass-border:  rgba(255, 255, 255, 0.10);
+      --glass-hover:   rgba(255, 255, 255, 0.10);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #111a10;
+      color: var(--text-primary);
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+      cursor: none;
+    }
+
+    body.cursor-visible { cursor: default; }
+    body.cursor-visible .nav-arrow { cursor: pointer; }
+    body.cursor-visible .progress-dot { cursor: pointer; }
+
+    /* ═══════ PROGRESS TRACK (top) ═══════ */
+    .progress-track {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: rgba(255,255,255,0.06);
+      z-index: 200;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--terra), var(--terra-light));
+      transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      border-radius: 0 2px 2px 0;
+      box-shadow: 0 0 12px rgba(196, 99, 63, 0.4);
+    }
+
+    /* ═══════ SLIDE ENGINE ═══════ */
+    .deck { width: 100vw; height: 100vh; position: relative; }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: scale(0.96) translateY(20px);
+      transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      pointer-events: none;
+      padding: 56px 100px 80px;
+      background: linear-gradient(155deg, var(--olive-dark) 0%, var(--olive) 55%, var(--olive-muted) 100%);
+    }
+
+    .slide.active {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      pointer-events: all;
+    }
+
+    .slide.exiting-left {
+      opacity: 0;
+      transform: scale(0.94) translateX(-60px);
+    }
+
+    .slide.exiting-right {
+      opacity: 0;
+      transform: scale(0.94) translateX(60px);
+    }
+
+    /* ── Decorative blur orb per slide ── */
+    .slide::before {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.04;
+      pointer-events: none;
+    }
+
+    .s-cover  { background: linear-gradient(135deg, var(--olive-dark) 0%, var(--olive) 40%, var(--olive-light) 100%); }
+    .s-problem { background: linear-gradient(160deg, var(--olive-deep) 0%, var(--olive-dark) 45%, var(--olive) 100%); }
+    .s-solution { background: linear-gradient(145deg, var(--olive-dark) 0%, var(--olive) 50%, var(--olive-muted) 100%); }
+    .s-market { background: linear-gradient(170deg, var(--olive-deep) 0%, var(--olive-dark) 50%, var(--olive) 100%); }
+    .s-how { background: linear-gradient(140deg, var(--olive-dark) 0%, var(--olive) 55%, var(--olive-light) 100%); }
+    .s-restaurants { background: linear-gradient(165deg, var(--olive-deep) 0%, var(--olive-dark) 40%, var(--olive) 100%); }
+    .s-business { background: linear-gradient(150deg, var(--olive-dark) 0%, var(--olive) 50%, var(--olive-muted) 100%); }
+    .s-cta { background: linear-gradient(135deg, var(--olive-dark) 0%, var(--olive) 50%, var(--olive-light) 100%); }
+
+    .s-problem::before { width: 500px; height: 500px; background: var(--terra); bottom: -200px; right: -150px; }
+    .s-solution::before { width: 450px; height: 450px; background: var(--terra); top: -180px; left: -100px; opacity: 0.035; }
+    .s-market::before { width: 600px; height: 600px; background: rgba(255,255,255,1); top: -250px; right: -200px; opacity: 0.025; }
+    .s-how::before { width: 400px; height: 400px; background: var(--terra); bottom: -150px; left: -120px; }
+    .s-restaurants::before { width: 500px; height: 500px; background: rgba(255,255,255,1); top: -200px; left: -180px; opacity: 0.03; }
+    .s-business::before { width: 550px; height: 550px; background: var(--terra); bottom: -220px; right: -180px; opacity: 0.035; }
+
+    /* ═══════ BOTTOM HUD ═══════ */
+    .hud {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      background: linear-gradient(to top, rgba(17, 26, 16, 0.9) 0%, transparent 100%);
+      z-index: 150;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    body.cursor-visible .hud { opacity: 1; }
+
+    .hud-left, .hud-right { display: flex; align-items: center; gap: 12px; }
+
+    .slide-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .slide-counter-hud {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      letter-spacing: 1px;
+    }
+
+    /* ── Progress dots in HUD ── */
+    .progress-dots {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .progress-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,0.20);
+      background: transparent;
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      cursor: pointer;
+    }
+
+    .progress-dot.active {
+      background: var(--terra);
+      border-color: var(--terra);
+      transform: scale(1.5);
+      box-shadow: 0 0 8px rgba(196, 99, 63, 0.4);
+    }
+
+    .progress-dot.visited {
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.3);
+    }
+
+    .progress-dot:hover {
+      border-color: rgba(255,255,255,0.5);
+      transform: scale(1.3);
+    }
+
+    /* ── HUD Buttons ── */
+    .hud-btn {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      color: var(--text-secondary);
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .hud-btn:hover {
+      background: var(--glass-hover);
+      color: var(--text-primary);
+      transform: translateY(-1px);
+    }
+
+    /* ═══════ NAVIGATION ARROWS ═══════ */
+    .nav-arrow {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: rgba(30, 46, 28, 0.6);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.5);
+      font-size: 22px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.35s ease;
+      z-index: 150;
+      backdrop-filter: blur(12px);
+      opacity: 0;
+    }
+
+    body.cursor-visible .nav-arrow { opacity: 1; }
+
+    .nav-arrow:hover {
+      background: rgba(30, 46, 28, 0.9);
+      color: var(--text-primary);
+      border-color: rgba(255,255,255,0.15);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .nav-arrow.left { left: 24px; }
+    .nav-arrow.right { right: 24px; }
+    .nav-arrow.disabled { opacity: 0.15 !important; pointer-events: none; }
+
+    /* ═══════ KEYBOARD SHORTCUT HINT ═══════ */
+    .shortcut-hint {
+      position: fixed;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 24px;
+      z-index: 200;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+
+    .shortcut-hint.visible { opacity: 1; }
+
+    .shortcut-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+    }
+
+    .key-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 22px;
+      height: 22px;
+      padding: 0 6px;
+      border-radius: 5px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    /* ═══════ TYPOGRAPHY SYSTEM ═══════ */
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: clamp(1.3rem, 2vw, 1.8rem);
+      line-height: 1.25;
+      color: var(--text-primary);
+    }
+
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+      line-height: 1.3;
+      color: var(--text-primary);
+    }
+
+    p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    .label {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-accent);
+      margin-bottom: 16px;
+    }
+
+    .accent { color: var(--text-accent); }
+
+    /* ═══════ CARD SYSTEM ═══════ */
+    .card {
+      padding: 24px 22px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      backdrop-filter: blur(8px);
+    }
+
+    /* ═══════ STAGGERED ANIMATIONS ═══════ */
+    .slide.active .au { animation: reveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .au { opacity: 0; transform: translateY(28px); }
+    @keyframes reveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .d1 { animation-delay: 0.1s !important; }
+    .d2 { animation-delay: 0.2s !important; }
+    .d3 { animation-delay: 0.3s !important; }
+    .d4 { animation-delay: 0.4s !important; }
+    .d5 { animation-delay: 0.5s !important; }
+    .d6 { animation-delay: 0.6s !important; }
+    .d7 { animation-delay: 0.7s !important; }
+
+    /* ═══════════════════════════════════════════
+       SLIDE-SPECIFIC LAYOUTS
+       ═══════════════════════════════════════════ */
+
+    /* ── SLIDE 1: PORTADA ── */
+    .s-cover {
+      flex-direction: column;
+      text-align: center;
+      gap: 28px;
+    }
+
+    .s-cover::before {
+      width: 600px; height: 600px;
+      background: var(--terra);
+      top: -200px; right: -150px;
+      opacity: 0.05;
+    }
+
+    .s-cover::after {
+      content: '';
+      position: absolute;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.03);
+      bottom: -120px; left: -80px;
+    }
+
+    .logo-mark {
+      width: 110px; height: 110px;
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .logo-mark img { width: 100%; height: 100%; object-fit: cover; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .brand-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.03em;
+    }
+
+    .tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1rem, 1.5vw, 1.3rem);
+      color: var(--text-secondary);
+      font-weight: 300;
+      max-width: 550px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 26px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 100px;
+      color: var(--text-secondary);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+    }
+
+    /* ── SLIDE 2: EL PROBLEMA ── */
+    .s-problem .inner {
+      max-width: 1060px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .pain-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 18px 20px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 14px;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .pain-card:hover {
+      transform: translateX(4px);
+      border-color: rgba(255,255,255,0.15);
+    }
+
+    .pain-card .icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: var(--terra-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .pain-card h3 { margin-bottom: 3px; font-size: 0.95rem; }
+    .pain-card p { font-size: 0.85rem; line-height: 1.45; }
+    .pain-list { display: flex; flex-direction: column; gap: 14px; }
+
+    /* ── SLIDE 3: LA SOLUCIÓN ── */
+    .s-solution .inner {
+      max-width: 1060px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text-primary);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .feature-list .chk {
+      width: 26px; height: 26px;
+      border-radius: 7px;
+      background: var(--terra);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    .phone-img { display: flex; justify-content: center; }
+    .phone-img img {
+      max-height: 480px;
+      width: auto;
+      border-radius: 20px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.35);
+    }
+
+    /* ── SLIDE 4: EL MERCADO ── */
+    .s-market .inner {
+      max-width: 1060px;
+      width: 100%;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .stat-card {
+      padding: 28px 20px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s ease;
+    }
+
+    .stat-card:hover { transform: translateY(-3px); }
+
+    .stat-card .num {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 700;
+      color: var(--text-accent);
+      margin-bottom: 6px;
+    }
+
+    .stat-card .desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    .tam-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .tam-card {
+      padding: 18px 20px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+    }
+
+    .tam-card h3 { font-size: 0.9rem; margin-bottom: 4px; }
+    .tam-card p { font-size: 0.82rem; line-height: 1.45; }
+
+    /* ── SLIDE 5: CÓMO FUNCIONA ── */
+    .s-how .inner {
+      max-width: 960px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .s-how .inner > p { margin-bottom: 36px; }
+
+    .steps-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .step-card {
+      padding: 28px 20px 24px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .step-card:hover { transform: translateY(-3px); }
+
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: var(--terra);
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+
+    .step-icon { font-size: 26px; margin-bottom: 10px; }
+    .step-card h3 { margin-bottom: 6px; }
+    .step-card p { font-size: 0.85rem; }
+
+    /* ── SLIDE 6: PARA RESTAURANTES ── */
+    .s-restaurants .inner {
+      max-width: 1060px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .benefit {
+      padding: 20px 16px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 14px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .benefit:hover { transform: translateY(-2px); }
+    .benefit .b-icon { font-size: 24px; margin-bottom: 8px; }
+    .benefit h3 { font-size: 0.9rem; margin-bottom: 4px; }
+    .benefit p { font-size: 0.8rem; line-height: 1.4; }
+
+    .rest-visual { position: relative; }
+    .rest-visual img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 20px 56px rgba(0,0,0,0.3);
+    }
+
+    .float-card {
+      position: absolute;
+      bottom: -16px; left: -16px;
+      background: rgba(30, 46, 28, 0.8);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      padding: 16px 20px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .float-card .fc-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: var(--terra);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .float-card h4 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+    }
+
+    .float-card p { font-size: 0.78rem; }
+
+    /* ── SLIDE 7: MODELO DE NEGOCIO ── */
+    .s-business .inner {
+      max-width: 960px;
+      width: 100%;
+    }
+
+    .rev-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .rev-card {
+      padding: 22px 20px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 14px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .rev-card:hover { transform: translateY(-2px); }
+
+    .rev-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+
+    .rev-card.t1::before { background: var(--olive-light); }
+    .rev-card.t2::before { background: var(--terra); }
+    .rev-card.t3::before { background: #D4A853; }
+    .rev-card.t4::before { background: var(--olive-light); }
+
+    .rev-card .rc-emoji { font-size: 20px; margin-bottom: 8px; }
+    .rev-card h3 { font-size: 0.95rem; margin-bottom: 4px; }
+    .rev-card p { font-size: 0.82rem; line-height: 1.4; }
+
+    .price-pill {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 4px 12px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 6px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: var(--text-accent);
+    }
+
+    /* ── SLIDE 8: CTA ── */
+    .s-cta {
+      flex-direction: column;
+      text-align: center;
+      gap: 24px;
+    }
+
+    .s-cta::before {
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(196, 99, 63, 0.12) 0%, rgba(196, 99, 63, 0.04) 40%, transparent 70%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+
+    .s-cta::after {
+      content: '';
+      position: absolute;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.02);
+      bottom: -100px; right: -100px;
+      pointer-events: none;
+    }
+
+    .s-cta .logo-mark {
+      width: 80px; height: 80px;
+      border-radius: 20px;
+    }
+
+    .cta-sub {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      max-width: 500px;
+    }
+
+    .cta-btns {
+      display: flex;
+      gap: 14px;
+      margin-top: 4px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 100px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--terra);
+      color: white;
+      box-shadow: 0 8px 24px rgba(196,99,63,0.3);
+    }
+
+    .btn-primary:hover {
+      background: #A04D2E;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(196,99,63,0.4);
+    }
+
+    .btn-ghost {
+      background: var(--glass);
+      color: white;
+      border: 1px solid var(--glass-border);
+    }
+
+    .btn-ghost:hover {
+      background: var(--glass-hover);
+      transform: translateY(-2px);
+    }
+
+    .contact-line {
+      color: var(--text-tertiary);
+      font-size: 0.8rem;
+      margin-top: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ═══════ OVERVIEW (Grid) MODE ═══════ */
+    .overview-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(17, 26, 16, 0.95);
+      backdrop-filter: blur(24px);
+      z-index: 300;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .overview-backdrop.visible {
+      display: flex;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .overview-thumb {
+      background: var(--glass);
+      border: 2px solid transparent;
+      border-radius: 12px;
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      aspect-ratio: 16 / 10;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .overview-thumb:hover {
+      border-color: var(--terra);
+      background: var(--glass-hover);
+      transform: translateY(-4px);
+    }
+
+    .overview-thumb.active-thumb {
+      border-color: var(--terra);
+      box-shadow: 0 0 20px rgba(196, 99, 63, 0.2);
+    }
+
+    .overview-thumb .thumb-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--terra-light);
+      margin-bottom: 4px;
+    }
+
+    .overview-thumb .thumb-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .overview-header {
+      position: absolute;
+      top: 24px; left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+    }
+
+    /* ═══════ RESPONSIVE ═══════ */
+    @media (max-width: 900px) {
+      .slide { padding: 36px 28px 72px; }
+      .s-problem .inner,
+      .s-solution .inner,
+      .s-restaurants .inner { grid-template-columns: 1fr; gap: 32px; }
+      .stat-row, .tam-row { grid-template-columns: 1fr 1fr; }
+      .steps-row { grid-template-columns: 1fr; }
+      .rev-grid { grid-template-columns: 1fr; }
+      .phone-img img { max-height: 320px; }
+      .overview-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body class="cursor-visible">
+
+<!-- ── Progress Bar ── -->
+<div class="progress-track">
+  <div class="progress-fill" id="progressFill" style="width: 12.5%"></div>
+</div>
+
+<div class="deck">
+
+  <!-- ═══════ SLIDE 1: PORTADA ═══════ -->
+  <div class="slide s-cover active" data-slide="0" data-name="Portada">
+    <div class="logo-mark au d1">
+      <img src="assets/logo.png" alt="Menuverso">
+    </div>
+    <div class="brand-name au d2">Menu<span class="accent">verso</span></div>
+    <p class="tagline au d3">Tu guía definitiva del menú del día en España</p>
+    <div class="pill au d4">🍽️&nbsp; Descubre · Filtra · Disfruta</div>
+  </div>
+
+  <!-- ═══════ SLIDE 2: EL PROBLEMA ═══════ -->
+  <div class="slide s-problem" data-slide="1" data-name="El Problema">
+    <div class="inner">
+      <div>
+        <div class="label au d1">EL PROBLEMA</div>
+        <h1 class="au d2">Encontrar un buen menú del día no debería ser tan difícil</h1>
+        <p class="au d3" style="margin-top: 16px;">Cada día, millones de personas en España buscan dónde comer un menú del día. La información está fragmentada, desactualizada o simplemente no existe.</p>
+      </div>
+      <div class="pain-list">
+        <div class="pain-card au d3">
+          <div class="icon">🔍</div>
+          <div>
+            <h3>Información dispersa</h3>
+            <p>Los menús cambian cada día pero no se publican online de forma centralizada</p>
+          </div>
+        </div>
+        <div class="pain-card au d4">
+          <div class="icon">😤</div>
+          <div>
+            <h3>Frustración del comensal</h3>
+            <p>Turistas y locales pierden tiempo buscando opciones sin poder comparar</p>
+          </div>
+        </div>
+        <div class="pain-card au d5">
+          <div class="icon">📉</div>
+          <div>
+            <h3>Restaurantes invisibles</h3>
+            <p>Pequeños restaurantes con excelentes menús no logran atraer nuevos clientes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════ SLIDE 3: LA SOLUCIÓN ═══════ -->
+  <div class="slide s-solution" data-slide="2" data-name="La Solución">
+    <div class="inner">
+      <div>
+        <div class="label au d1">LA SOLUCIÓN</div>
+        <h1 class="au d2"><span class="accent">Menuverso</span> — toda la oferta gastronómica en un solo lugar</h1>
+        <p class="au d3" style="margin-top: 16px;">La primera plataforma dedicada exclusivamente a descubrir, comparar y elegir menús del día en España.</p>
+        <ul class="feature-list au d4">
+          <li><span class="chk">✓</span> Búsqueda por barrio, precio y cocina</li>
+          <li><span class="chk">✓</span> Menús actualizados a diario</li>
+          <li><span class="chk">✓</span> Fotos reales de cada plato</li>
+          <li><span class="chk">✓</span> Valoraciones de la comunidad</li>
+          <li><span class="chk">✓</span> Filtros por dieta y preferencias</li>
+        </ul>
+      </div>
+      <div class="phone-img au d3">
+        <img src="assets/app_mockup.png" alt="Menuverso App">
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════ SLIDE 4: EL MERCADO ═══════ -->
+  <div class="slide s-market" data-slide="3" data-name="Oportunidad de Mercado">
+    <div class="inner">
+      <div class="label au d1">OPORTUNIDAD DE MERCADO</div>
+      <h1 class="au d2">Una cultura gastronómica única en el mundo</h1>
+      <p class="au d3" style="margin-top: 10px; margin-bottom: 32px; max-width: 600px;">El menú del día es una tradición española que mueve miles de millones de euros al año. No existe ninguna plataforma que lo centralice.</p>
+
+      <div class="stat-row">
+        <div class="stat-card au d3">
+          <div class="num">999</div>
+          <div class="desc">Restaurantes catalogados<br>solo en Barcelona</div>
+        </div>
+        <div class="stat-card au d4">
+          <div class="num">21</div>
+          <div class="desc">Barrios cubiertos<br>en nuestra base de datos</div>
+        </div>
+        <div class="stat-card au d5">
+          <div class="num">70K+</div>
+          <div class="desc">Restaurantes con menú del día<br>estimados en toda España</div>
+        </div>
+      </div>
+
+      <div class="tam-row">
+        <div class="tam-card au d5">
+          <h3>🏙️ TAM</h3>
+          <p>Hostelería española — mercado de 123.000M€</p>
+        </div>
+        <div class="tam-card au d6">
+          <h3>🎯 SAM</h3>
+          <p>70K+ restaurantes con menú del día · Precio medio 14,68€</p>
+        </div>
+        <div class="tam-card au d7">
+          <h3>🚀 SOM</h3>
+          <p>999 catalogados en BCN · 40+ tipos de cocina · 288 verificados</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════ SLIDE 5: CÓMO FUNCIONA ═══════ -->
+  <div class="slide s-how" data-slide="4" data-name="Cómo Funciona">
+    <div class="inner">
+      <div class="label au d1">CÓMO FUNCIONA</div>
+      <h1 class="au d2">Tres pasos para tu menú perfecto</h1>
+      <p class="au d3">Una experiencia simple y rápida para encontrar exactamente lo que buscas</p>
+
+      <div class="steps-row">
+        <div class="step-card au d3">
+          <div class="step-num">1</div>
+          <div class="step-icon">📍</div>
+          <h3>Descubre</h3>
+          <p>Explora restaurantes cerca de ti con menú del día. Filtra por barrio, cocina, precio o valoración.</p>
+        </div>
+        <div class="step-card au d4">
+          <div class="step-num">2</div>
+          <div class="step-icon">⚡</div>
+          <h3>Compara</h3>
+          <p>Consulta los platos del día, precios y fotos reales. Compara opciones en segundos.</p>
+        </div>
+        <div class="step-card au d5">
+          <div class="step-num">3</div>
+          <div class="step-icon">🎉</div>
+          <h3>Disfruta</h3>
+          <p>Dirígete al restaurante y disfruta de tu menú del día. Deja tu valoración.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════ SLIDE 6: PARA RESTAURANTES ═══════ -->
+  <div class="slide s-restaurants" data-slide="5" data-name="Para Restaurantes">
+    <div class="inner">
+      <div>
+        <div class="label au d1">PARA RESTAURANTES</div>
+        <h1 class="au d2">Llena tu restaurante <span class="accent">cada mediodía</span></h1>
+        <p class="au d3" style="margin-top: 14px;">Menuverso conecta tu menú del día con miles de comensales hambrientos. Sin comisiones, sin complicaciones.</p>
+        <div class="benefit-grid au d4">
+          <div class="benefit">
+            <div class="b-icon">👥</div>
+            <h3>Nuevos clientes</h3>
+            <p>Accede a comensales que buscan activamente un menú del día</p>
+          </div>
+          <div class="benefit">
+            <div class="b-icon">📸</div>
+            <h3>Tu escaparate</h3>
+            <p>Muestra tu menú con fotos y actualización diaria</p>
+          </div>
+          <div class="benefit">
+            <div class="b-icon">💰</div>
+            <h3>0% comisión</h3>
+            <p>Sin comisiones por reserva ni por comensal</p>
+          </div>
+          <div class="benefit">
+            <div class="b-icon">📊</div>
+            <h3>Analíticas</h3>
+            <p>Datos sobre visualizaciones y tendencias</p>
+          </div>
+        </div>
+      </div>
+      <div class="rest-visual au d3">
+        <img src="assets/hero_food.png" alt="Menú del día">
+        <div class="float-card">
+          <div class="fc-icon">↗</div>
+          <div>
+            <h4>+40% visibilidad</h4>
+            <p>Nuevos clientes cada semana</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════ SLIDE 7: MODELO DE NEGOCIO ═══════ -->
+  <div class="slide s-business" data-slide="6" data-name="Modelo de Negocio">
+    <div class="inner">
+      <div class="label au d1">MODELO DE NEGOCIO</div>
+      <h1 class="au d2">Monetización sostenible y escalable</h1>
+      <p class="au d3" style="margin-top: 10px; margin-bottom: 28px; max-width: 600px;">Un modelo freemium que crece con la comunidad y aporta valor a todas las partes</p>
+
+      <div class="rev-grid">
+        <div class="rev-card t1 au d3">
+          <div class="rc-emoji">🆓</div>
+          <h3>App Gratuita (Usuarios)</h3>
+          <p>Acceso básico: búsqueda, filtros y listados. Generar base de usuarios y tracción orgánica.</p>
+          <div class="price-pill">Gratis</div>
+        </div>
+        <div class="rev-card t2 au d4">
+          <div class="rc-emoji">⭐</div>
+          <h3>Menuverso Premium</h3>
+          <p>Alertas, menús exclusivos, reservas prioritarias y recomendaciones AI.</p>
+          <div class="price-pill">4,99€/mes</div>
+        </div>
+        <div class="rev-card t3 au d5">
+          <div class="rc-emoji">🏪</div>
+          <h3>Perfil Destacado</h3>
+          <p>Restaurantes destacados, primeros en búsquedas y campañas promocionales.</p>
+          <div class="price-pill">Desde 29€/mes</div>
+        </div>
+        <div class="rev-card t4 au d6">
+          <div class="rc-emoji">📈</div>
+          <h3>Insights Gastronómicos</h3>
+          <p>Datos agregados sobre tendencias culinarias para cadenas y grupos hosteleros.</p>
+          <div class="price-pill">Personalizado</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════ SLIDE 8: ÚNETE ═══════ -->
+  <div class="slide s-cta" data-slide="7" data-name="Únete">
+    <div class="logo-mark au d1">
+      <img src="assets/logo.png" alt="Menuverso">
+    </div>
+    <h1 class="au d2">Únete a la revolución del <span class="accent">menú del día</span></h1>
+    <p class="cta-sub au d3">Buscamos restaurantes pioneros e inversores visionarios para construir la plataforma gastronómica de referencia en España.</p>
+    <div class="cta-btns au d4">
+      <button class="btn btn-primary" onclick="window.open('mailto:hola@menuverso.com')">🤝&nbsp; Colaboremos</button>
+      <button class="btn btn-ghost" onclick="window.open('mailto:inversores@menuverso.com')">💼&nbsp; Invertir</button>
+    </div>
+    <p class="contact-line au d5">hola@menuverso.com &nbsp;·&nbsp; Barcelona, España &nbsp;·&nbsp; 2026</p>
+  </div>
+
+</div>
+
+<!-- ── Navigation Arrows ── -->
+<button class="nav-arrow left disabled" id="prevBtn" aria-label="Previous slide">‹</button>
+<button class="nav-arrow right" id="nextBtn" aria-label="Next slide">›</button>
+
+<!-- ── Bottom HUD ── -->
+<div class="hud" id="hud">
+  <div class="hud-left">
+    <span class="slide-counter-hud" id="slideCounter">01 / 08</span>
+    <span class="slide-label" id="slideLabel">PORTADA</span>
+  </div>
+  <div class="progress-dots" id="progressDots"></div>
+  <div class="hud-right">
+    <button class="hud-btn" id="overviewBtn" title="Overview (G)">▦</button>
+    <button class="hud-btn" id="fullscreenBtn" title="Fullscreen (F)">⛶</button>
+  </div>
+</div>
+
+<!-- ── Keyboard Shortcut Hint ── -->
+<div class="shortcut-hint" id="shortcutHint">
+  <div class="shortcut-item"><span class="key-badge">←</span><span class="key-badge">→</span> Navigate</div>
+  <div class="shortcut-item"><span class="key-badge">F</span> Fullscreen</div>
+  <div class="shortcut-item"><span class="key-badge">G</span> Overview</div>
+  <div class="shortcut-item"><span class="key-badge">Esc</span> Exit</div>
+</div>
+
+<!-- ── Overview Modal ── -->
+<div class="overview-backdrop" id="overviewBackdrop">
+  <div class="overview-header">SLIDE OVERVIEW — CLICK TO JUMP</div>
+  <div class="overview-grid" id="overviewGrid"></div>
+</div>
+
+<script>
+  // ═══════ PRESENTER ENGINE ═══════
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  let currentSlide = 0;
+  let visited = new Set([0]);
+  let overviewOpen = false;
+
+  // Slide names
+  const slideNames = Array.from(slides).map(s => s.dataset.name || '');
+
+  // Build progress dots
+  const dotsContainer = document.getElementById('progressDots');
+  slides.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'progress-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goSlide(i);
+    dotsContainer.appendChild(dot);
+  });
+
+  // Build overview grid
+  const overviewGrid = document.getElementById('overviewGrid');
+  slides.forEach((_, i) => {
+    const thumb = document.createElement('div');
+    thumb.className = 'overview-thumb' + (i === 0 ? ' active-thumb' : '');
+    thumb.innerHTML = `<div class="thumb-num">${i + 1}</div><div class="thumb-title">${slideNames[i]}</div>`;
+    thumb.onclick = () => { goSlide(i); closeOverview(); };
+    overviewGrid.appendChild(thumb);
+  });
+
+  function goSlide(n) {
+    if (n < 0 || n >= total || n === currentSlide) return;
+
+    const prev = slides[currentSlide];
+    const next = slides[n];
+    const dir = n > currentSlide ? 1 : -1;
+
+    // Reset animations on incoming slide
+    next.querySelectorAll('.au').forEach(el => {
+      el.style.animation = 'none';
+      el.offsetHeight; // trigger reflow
+      el.style.animation = '';
+    });
+
+    // Animate exit
+    prev.classList.remove('active');
+    prev.classList.add(dir > 0 ? 'exiting-left' : 'exiting-right');
+    setTimeout(() => {
+      prev.classList.remove('exiting-left', 'exiting-right');
+    }, 700);
+
+    // Animate entrance
+    next.classList.add('active');
+
+    visited.add(n);
+    currentSlide = n;
+    updateUI();
+  }
+
+  function updateUI() {
+    const n = currentSlide;
+
+    // Progress bar
+    document.getElementById('progressFill').style.width = ((n + 1) / total * 100) + '%';
+
+    // Counter
+    document.getElementById('slideCounter').textContent =
+      String(n + 1).padStart(2, '0') + ' / ' + String(total).padStart(2, '0');
+
+    // Slide label
+    document.getElementById('slideLabel').textContent = slideNames[n].toUpperCase();
+
+    // Dots
+    document.querySelectorAll('.progress-dot').forEach((d, i) => {
+      d.className = 'progress-dot';
+      if (i === n) d.classList.add('active');
+      else if (visited.has(i)) d.classList.add('visited');
+    });
+
+    // Arrows
+    document.getElementById('prevBtn').classList.toggle('disabled', n === 0);
+    document.getElementById('nextBtn').classList.toggle('disabled', n === total - 1);
+
+    // Overview thumbs
+    document.querySelectorAll('.overview-thumb').forEach((t, i) => {
+      t.classList.toggle('active-thumb', i === n);
+    });
+  }
+
+  // ── Overview ──
+  function openOverview() {
+    overviewOpen = true;
+    document.getElementById('overviewBackdrop').classList.add('visible');
+  }
+
+  function closeOverview() {
+    overviewOpen = false;
+    document.getElementById('overviewBackdrop').classList.remove('visible');
+  }
+
+  document.getElementById('overviewBtn').onclick = () => overviewOpen ? closeOverview() : openOverview();
+
+  // ── Fullscreen ──
+  document.getElementById('fullscreenBtn').onclick = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(() => {});
+    } else {
+      document.exitFullscreen();
+    }
+  };
+
+  // ── Arrow buttons ──
+  document.getElementById('prevBtn').onclick = () => goSlide(currentSlide - 1);
+  document.getElementById('nextBtn').onclick = () => goSlide(currentSlide + 1);
+
+  // ── Keyboard ──
+  document.addEventListener('keydown', (e) => {
+    if (overviewOpen) {
+      if (e.key === 'Escape' || e.key === 'g') { e.preventDefault(); closeOverview(); }
+      return;
+    }
+
+    switch (e.key) {
+      case 'ArrowRight':
+      case 'ArrowDown':
+      case ' ':
+      case 'PageDown':
+        e.preventDefault();
+        goSlide(currentSlide + 1);
+        break;
+      case 'ArrowLeft':
+      case 'ArrowUp':
+      case 'PageUp':
+        e.preventDefault();
+        goSlide(currentSlide - 1);
+        break;
+      case 'Home':
+        e.preventDefault();
+        goSlide(0);
+        break;
+      case 'End':
+        e.preventDefault();
+        goSlide(total - 1);
+        break;
+      case 'f':
+      case 'F':
+        e.preventDefault();
+        document.getElementById('fullscreenBtn').click();
+        break;
+      case 'g':
+      case 'G':
+        e.preventDefault();
+        openOverview();
+        break;
+      case 'Escape':
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        }
+        break;
+    }
+  });
+
+  // ── Touch / Swipe ──
+  let touchX = 0;
+  let touchY = 0;
+  document.addEventListener('touchstart', e => {
+    touchX = e.touches[0].clientX;
+    touchY = e.touches[0].clientY;
+  });
+  document.addEventListener('touchend', e => {
+    const dx = touchX - e.changedTouches[0].clientX;
+    const dy = touchY - e.changedTouches[0].clientY;
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
+      dx > 0 ? goSlide(currentSlide + 1) : goSlide(currentSlide - 1);
+    }
+  });
+
+  // ── Mouse wheel ──
+  let wheelCooldown = false;
+  document.addEventListener('wheel', (e) => {
+    if (overviewOpen || wheelCooldown) return;
+    e.preventDefault();
+    wheelCooldown = true;
+    setTimeout(() => { wheelCooldown = false; }, 800);
+    if (e.deltaY > 30) goSlide(currentSlide + 1);
+    else if (e.deltaY < -30) goSlide(currentSlide - 1);
+  }, { passive: false });
+
+  // ── Auto-hide cursor & HUD ──
+  let cursorTimer;
+  function showCursor() {
+    document.body.classList.add('cursor-visible');
+    clearTimeout(cursorTimer);
+    cursorTimer = setTimeout(() => {
+      document.body.classList.remove('cursor-visible');
+    }, 3000);
+  }
+
+  document.addEventListener('mousemove', showCursor);
+  document.addEventListener('mousedown', showCursor);
+
+  // ── Keyboard shortcut hint on first load ──
+  const hint = document.getElementById('shortcutHint');
+  setTimeout(() => { hint.classList.add('visible'); }, 1500);
+  setTimeout(() => { hint.classList.remove('visible'); }, 6000);
+
+  // ── Init ──
+  showCursor();
+
+  // Click outside overview to close
+  document.getElementById('overviewBackdrop').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('overviewBackdrop')) closeOverview();
+  });
+</script>
+
+</body>
+</html>

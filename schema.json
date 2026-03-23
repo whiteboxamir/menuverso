@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Menuverso Restaurant",
+  "type": "object",
+  "required": ["id", "name", "address", "neighborhood"],
+  "properties": {
+    "id": { "type": "integer", "description": "Unique restaurant identifier" },
+    "name": { "type": "string" },
+    "address": { "type": "string" },
+    "neighborhood": { "type": "string" },
+    "coordinates": {
+      "type": "object",
+      "properties": {
+        "lat": { "type": "number" },
+        "lng": { "type": "number" }
+      }
+    },
+    "cuisine_type": {
+      "type": "string",
+      "enum": ["Mediterranean", "Spanish", "Catalan", "Italian", "Asian", "Japanese", "Indian", "Mexican", "Middle Eastern", "Fusion", "Vegetarian/Vegan", "Seafood", "Basque", "Other"]
+    },
+    "pricing_tier": {
+      "type": "string",
+      "enum": ["budget", "mid-range", "premium"]
+    },
+    "menu_del_dia_confirmed": { "type": "boolean" },
+    "menu_price_range": { "type": "string", "description": "e.g. 10-14€" },
+    "website": { "type": "string", "format": "uri" },
+    "google_maps_url": { "type": "string", "format": "uri" },
+    "phone": { "type": "string" },
+    "opening_hours_lunch": { "type": "string", "description": "e.g. 13:00-16:00" },
+    "hero_image_url": { "type": "string" },
+    "menu_photo_url": { "type": "string" },
+    "rating": { "type": "number", "minimum": 0, "maximum": 5 },
+    "notes": { "type": "string" }
+  }
+}

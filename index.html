@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menuverso — Barcelona Restaurant Database</title>
+<meta name="description" content="Exhaustive Barcelona restaurant database. 1201 restaurants across 18 neighborhoods with menú del día tracking.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0f0f14;--surface:#1a1a24;--card:#1e1e2e;--border:#2a2a3a;--text:#e8e8f0;--text2:#999ab0;--accent:#ff6b35;--accent2:#ff8c5a;--green:#22c55e;--yellow:#eab308;--purple:#a855f7;--blue:#3b82f6;--red:#ef4444}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+.hero{text-align:center;padding:3rem 1.5rem 2rem;background:linear-gradient(180deg,rgba(255,107,53,.08),transparent)}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:.5rem}
+.hero p{color:var(--text2);max-width:600px;margin:0 auto;font-size:.95rem}
+.stats{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding:1rem 1.5rem 2rem}
+.stat{text-align:center}.stat-num{font-size:1.6rem;font-weight:700;color:var(--accent)}.stat-label{font-size:.7rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em}
+.stat-num.green{color:var(--green)}.stat-num.yellow{color:var(--yellow)}.stat-num.red{color:var(--red)}
+.controls{max-width:1200px;margin:0 auto;padding:0 1.5rem 1.5rem}
+.search{width:100%;padding:.8rem 1.2rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;color:var(--text);font-size:1rem;outline:none;transition:border .2s}.search:focus{border-color:var(--accent)}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.chip{padding:.4rem .9rem;border-radius:20px;background:var(--surface);border:1px solid var(--border);color:var(--text2);font-size:.78rem;cursor:pointer;transition:all .2s;user-select:none}.chip:hover,.chip.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.chip.g:hover,.chip.g.active{background:var(--green);border-color:var(--green)}.chip.y:hover,.chip.y.active{background:#b8960a;border-color:#b8960a}.chip.r:hover,.chip.r.active{background:var(--red);border-color:var(--red)}
+.section-label{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text2);padding:.5rem .9rem;font-weight:600;width:100%}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;max-width:1200px;margin:0 auto;padding:0 1.5rem 3rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem;transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem}.card-name{font-weight:600;font-size:1rem}.card-price{color:var(--accent);font-weight:700;font-size:1rem;white-space:nowrap}
+.badge{display:inline-block;font-size:.6rem;padding:.15rem .45rem;border-radius:6px;font-weight:600;text-transform:uppercase;letter-spacing:.03em}.badge.confirmed{background:rgba(34,197,94,.15);color:var(--green)}.badge.likely{background:rgba(234,179,8,.15);color:var(--yellow)}.badge.none{background:rgba(239,68,68,.15);color:var(--red)}
+.tags{display:flex;flex-wrap:wrap;gap:.25rem;margin:.5rem 0}.tag{font-size:.6rem;padding:.15rem .45rem;border-radius:5px;font-weight:500;text-transform:uppercase}.tag.hood{background:rgba(59,130,246,.15);color:var(--blue)}.tag.cuisine{background:rgba(168,85,247,.15);color:var(--purple)}.tag.budget{background:rgba(34,197,94,.15);color:var(--green)}.tag.mid-range{background:rgba(255,107,53,.15);color:var(--accent)}.tag.premium{background:rgba(168,85,247,.15);color:var(--purple)}
+.card-detail{font-size:.78rem;color:var(--text2);margin:.1rem 0}.card-detail span{margin-right:.4rem}.card-notes{font-size:.78rem;color:var(--text2);margin-top:.4rem;line-height:1.4}
+.card-links{margin-top:.5rem;display:flex;gap:.7rem}.card-links a{font-size:.75rem;color:var(--accent);text-decoration:none}.card-links a:hover{text-decoration:underline}
+.count-display{text-align:center;padding:.5rem;color:var(--text2);font-size:.85rem;margin-bottom:1rem;max-width:1200px;margin-left:auto;margin-right:auto}
+.loading{text-align:center;padding:3rem;color:var(--text2);font-size:1.1rem}
+footer{text-align:center;padding:2rem;color:var(--text2);font-size:.75rem;border-top:1px solid var(--border)}footer a{color:var(--accent);text-decoration:none}
+.no-results{grid-column:1/-1;text-align:center;padding:3rem;color:var(--text2)}
+@media(max-width:640px){.grid{grid-template-columns:1fr}.stats{gap:.8rem}.stat-num{font-size:1.2rem}}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>🍽️ Menuverso</h1>
+<p id="subtitle">Loading Barcelona restaurant database...</p>
+</div>
+<div class="stats" id="statsbar">
+<div class="stat"><div class="stat-num" id="s-total">—</div><div class="stat-label">Total Restaurants</div></div>
+<div class="stat"><div class="stat-num green" id="s-confirmed">—</div><div class="stat-label">🟢 Confirmed Menú</div></div>
+<div class="stat"><div class="stat-num yellow" id="s-likely">—</div><div class="stat-label">🟡 Likely Menú</div></div>
+<div class="stat"><div class="stat-num red" id="s-none">—</div><div class="stat-label">🔴 No Menú</div></div>
+<div class="stat"><div class="stat-num" id="s-hoods">—</div><div class="stat-label">Neighborhoods</div></div>
+</div>
+<div class="controls">
+<input type="text" class="search" id="search" placeholder="🔍 Search by name, neighborhood, cuisine, notes..." autocomplete="off">
+<div class="filters" id="filters">
+<span class="section-label">Menú del Día Status</span>
+<span class="chip g" data-filter="mtier" data-value="confirmed">🟢 Confirmed</span>
+<span class="chip y" data-filter="mtier" data-value="likely">🟡 Likely</span>
+<span class="chip r" data-filter="mtier" data-value="none">🔴 No Menú</span>
+<span class="section-label">Neighborhood</span>
+<span id="hood-chips"></span>
+<span class="section-label">Price Tier</span>
+<span class="chip" data-filter="tier" data-value="budget">💚 Budget</span>
+<span class="chip" data-filter="tier" data-value="mid-range">🧡 Mid-Range</span>
+<span class="chip" data-filter="tier" data-value="premium">💜 Premium</span>
+</div>
+</div>
+<div class="count-display" id="count"></div>
+<div class="grid" id="grid"><div class="loading">⏳ Loading restaurants...</div></div>
+<footer id="footer">Built with ❤️ by <a href="#">Menuverso</a> · March 2026</footer>
+<script src="restaurants_data.js"></script>
+<script>
+let DATA=window.RESTAURANT_DATA||[];
+let activeFilters={};
+
+// Data loaded from restaurants_data.js via script tag (avoids CORS for file://)
+if(DATA.length){init()}else{document.getElementById('grid').innerHTML='<div class="no-results">Error: restaurants_data.js not found. Run the build script to generate it.</div>'}
+
+function init(){
+  const hoods=[...new Set(DATA.map(r=>r.neighborhood))].sort();
+  const confirmed=DATA.filter(r=>r.menu_tier==='confirmed').length;
+  const likely=DATA.filter(r=>r.menu_tier==='likely').length;
+  const none=DATA.length-confirmed-likely;
+
+  document.getElementById('subtitle').textContent=`Exhaustive Barcelona restaurant database. ${DATA.length} restaurants across ${hoods.length} neighborhoods with menú del día tracking.`;
+  document.getElementById('s-total').textContent=DATA.length;
+  document.getElementById('s-confirmed').textContent=confirmed;
+  document.getElementById('s-likely').textContent=likely;
+  document.getElementById('s-none').textContent=none;
+  document.getElementById('s-hoods').textContent=hoods.length;
+  document.getElementById('footer').innerHTML=`Built with ❤️ by <a href="#">Menuverso</a> · March 2026 · ${DATA.length} restaurants across ${hoods.length} neighborhoods`;
+
+  // Build hood chips
+  const hoodContainer=document.getElementById('hood-chips');
+  hoodContainer.innerHTML=hoods.map(h=>`<span class="chip" data-filter="hood" data-value="${h}">${h}</span>`).join('');
+
+  // Attach events
+  document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',function(){
+    const f=this.dataset.filter,v=this.dataset.value;
+    if(!f)return;
+    if(activeFilters[f]===v){delete activeFilters[f];this.classList.remove('active')}
+    else{document.querySelectorAll(`.chip[data-filter="${f}"]`).forEach(x=>x.classList.remove('active'));activeFilters[f]=v;this.classList.add('active')}
+    render()
+  }));
+  document.getElementById('search').addEventListener('input',render);
+  render()
+}
+
+function render(){
+  const q=document.getElementById('search').value.toLowerCase();
+  let filtered=DATA.filter(r=>{
+    if(activeFilters.mtier&&r.menu_tier!==activeFilters.mtier)return false;
+    if(activeFilters.hood&&r.neighborhood!==activeFilters.hood)return false;
+    if(activeFilters.tier&&r.pricing_tier!==activeFilters.tier)return false;
+    if(q){const s=[r.name,r.neighborhood,r.cuisine_type,r.notes||'',r.address_full||''].join(' ').toLowerCase();if(!s.includes(q))return false}
+    return true
+  });
+  document.getElementById('count').textContent=`Showing ${filtered.length} of ${DATA.length} restaurants`;
+  const grid=document.getElementById('grid');
+  if(!filtered.length){grid.innerHTML='<div class="no-results">No restaurants match. Try different filters.</div>';return}
+  grid.innerHTML=filtered.slice(0,200).map(r=>{
+    const tier=r.menu_tier||'none';
+    let links='';
+    if(r.website)links+=`<a href="${r.website}" target="_blank">🌐 Website</a>`;
+    if(r.phone)links+=`<a href="tel:${r.phone}">📞 ${r.phone}</a>`;
+    if(r.instagram)links+=`<a href="https://instagram.com/${r.instagram.replace('@','')}" target="_blank">📸 IG</a>`;
+    const rating=r.google_maps_rating?`⭐ ${r.google_maps_rating} (${r.google_maps_review_count||0} rev)`:'';
+    return `<div class="card">
+      <div class="card-header"><span class="card-name">${r.name}</span><span class="card-price">${r.menu_price_range||''}</span></div>
+      <span class="badge ${tier}">${tier==='confirmed'?'🟢 Confirmed':tier==='likely'?'🟡 Likely':'🔴 No Menú'}</span>
+      <div class="tags"><span class="tag hood">${r.neighborhood}</span><span class="tag cuisine">${r.cuisine_type}</span><span class="tag ${r.pricing_tier}">${r.pricing_tier}</span></div>
+      ${rating?`<div class="card-detail">${rating}</div>`:''}
+      ${r.address_full?`<div class="card-detail">📍 ${r.address_full}${r.postal_code?' · '+r.postal_code:''}</div>`:''}
+      ${r.notes?`<div class="card-notes">${r.notes}</div>`:''}
+      ${links?`<div class="card-links">${links}</div>`:''}
+    </div>`
+  }).join('');
+  if(filtered.length>200)grid.innerHTML+=`<div class="no-results">Showing first 200 of ${filtered.length} results. Use search to refine.</div>`;
+}
+</script>
+</body>
+</html>

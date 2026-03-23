@@ -1,0 +1,11 @@
+{
+  "naming_convention": {
+    "hero.jpg": "Primary profile image — used as the main restaurant card photo. Should show the restaurant's best angle (storefront or signature interior shot).",
+    "food_01.jpg ... food_03.jpg": "Dish photography — up to 3 photos of signature dishes. Used in gallery carousels and menu previews.",
+    "interior_01.jpg, interior_02.jpg": "Interior/dining room shots — atmosphere, decor, seating. Used for 'ambiance' section of restaurant profile.",
+    "exterior_01.jpg": "Storefront/façade — shows the entrance, signage, terrace if applicable.",
+    "menu_photo_01.jpg": "Physical menu card — photo of the actual menú del día board or printed menu.",
+    "ambiance_01.jpg": "Atmosphere/vibe shot — captures the feel (lighting, crowd, energy). For 'vibe' tags in app.",
+    "team_01.jpg": "Chef/staff photo — personal touch for the profile. Optional but adds trust."
+  }
+}
