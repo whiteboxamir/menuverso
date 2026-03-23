@@ -69,7 +69,8 @@ footer a:hover{color:var(--text-main);}
 </head>
 <body>
 <div class="hero">
-<h1>🍽️ Menuverso</h1>
+<img src="assets/logo.png" alt="Menuverso Logo" style="width:72px; height:72px; border-radius:18px; margin-bottom:1.25rem; box-shadow:var(--shadow);">
+<h1>Menuverso</h1>
 <p id="subtitle">Loading Barcelona restaurant database...</p>
 </div>
 <div class="stats" id="statsbar">
@@ -80,18 +81,20 @@ footer a:hover{color:var(--text-main);}
 <div class="stat"><div class="stat-num" id="s-hoods">—</div><div class="stat-label">Neighborhoods</div></div>
 </div>
 <div class="controls">
-<input type="text" class="search" id="search" placeholder="🔍 Search by name, neighborhood, cuisine, notes..." autocomplete="off">
-<div class="filters" id="filters">
-<span class="section-label">Menú del Día Status</span>
-<span class="chip g" data-filter="mtier" data-value="confirmed">🟢 Confirmed</span>
-<span class="chip y" data-filter="mtier" data-value="likely">🟡 Likely</span>
-<span class="chip r" data-filter="mtier" data-value="none">🔴 No Menú</span>
-<span class="section-label">Neighborhood</span>
-<span id="hood-chips"></span>
-<span class="section-label">Price Tier</span>
-<span class="chip" data-filter="tier" data-value="budget">💚 Budget</span>
-<span class="chip" data-filter="tier" data-value="mid-range">🧡 Mid-Range</span>
-<span class="chip" data-filter="tier" data-value="premium">💜 Premium</span>
+<input type="text" class="search" id="search" placeholder="🔍 Search by name, cuisine, notes..." autocomplete="off">
+<div class="filters" id="filters" style="display:flex; align-items:center; gap:1.5rem; justify-content:space-between; flex-wrap:wrap;">
+  <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;">
+    <span class="chip g" data-filter="mtier" data-value="confirmed">🟢 Confirmed</span>
+    <span class="chip y" data-filter="mtier" data-value="likely">🟡 Likely</span>
+    <span class="chip r" data-filter="mtier" data-value="none">🔴 No Menú</span>
+    <span style="color:var(--border); margin:0 0.5rem;">|</span>
+    <span class="chip" data-filter="tier" data-value="budget">💚 Budget</span>
+    <span class="chip" data-filter="tier" data-value="mid-range">🧡 Mid-Range</span>
+    <span class="chip" data-filter="tier" data-value="premium">💜 Premium</span>
+  </div>
+  <select id="hood-select" class="search" style="width:auto; min-width:200px; padding:0.5rem 1rem;">
+    <option value="">All Neighborhoods</option>
+  </select>
 </div>
 </div>
 <div class="count-display" id="count"></div>
@@ -119,9 +122,14 @@ function init(){
   document.getElementById('s-hoods').textContent=hoods.length;
   document.getElementById('footer').innerHTML=`Built with ❤️ by <a href="#">Menuverso</a> · March 2026 · ${DATA.length} restaurants across ${hoods.length} neighborhoods`;
 
-  // Build hood chips
-  const hoodContainer=document.getElementById('hood-chips');
-  hoodContainer.innerHTML=hoods.map(h=>`<span class="chip" data-filter="hood" data-value="${h}">${h}</span>`).join('');
+  // Build hood select
+  const hoodSelect=document.getElementById('hood-select');
+  hoodSelect.innerHTML='<option value="">All Neighborhoods</option>'+hoods.map(h=>`<option value="${h}">${h}</option>`).join('');
+  hoodSelect.addEventListener('change', function(){
+    if(this.value) activeFilters['hood']=this.value;
+    else delete activeFilters['hood'];
+    render();
+  });
 
   // Attach events
   document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',function(){
