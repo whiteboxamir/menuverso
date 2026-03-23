@@ -2,11 +2,14 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Menuverso Restaurant",
   "type": "object",
-  "required": ["id", "name", "address", "neighborhood"],
+  "required": ["id", "name", "neighborhood", "cuisine_type", "pricing_tier", "menu_tier", "postal_code"],
   "properties": {
     "id": { "type": "integer", "description": "Unique restaurant identifier" },
     "name": { "type": "string" },
-    "address": { "type": "string" },
+    "address": { "type": "string", "description": "Short address with neighborhood" },
+    "address_full": { "type": "string", "description": "Full street address" },
+    "postal_code": { "type": "string", "description": "Postal code, e.g. 08011" },
+    "city": { "type": "string", "default": "Barcelona" },
     "neighborhood": { "type": "string" },
     "coordinates": {
       "type": "object",
@@ -17,21 +20,81 @@
     },
     "cuisine_type": {
       "type": "string",
-      "enum": ["Mediterranean", "Spanish", "Catalan", "Italian", "Asian", "Japanese", "Indian", "Mexican", "Middle Eastern", "Fusion", "Vegetarian/Vegan", "Seafood", "Basque", "Other"]
+      "enum": [
+        "Mediterranean", "Spanish", "Catalan", "Italian", "Asian",
+        "Japanese", "Indian", "Mexican", "Middle Eastern", "Fusion",
+        "Vegetarian/Vegan", "Seafood", "Basque", "French", "Greek",
+        "Lebanese", "Argentine", "Peruvian", "Chinese", "Korean",
+        "Thai", "Colombian", "Cuban", "Ethiopian", "Turkish",
+        "Gastropub", "Café", "Market", "Other"
+      ]
     },
     "pricing_tier": {
       "type": "string",
       "enum": ["budget", "mid-range", "premium"]
     },
     "menu_del_dia_confirmed": { "type": "boolean" },
+    "menu_tier": {
+      "type": "string",
+      "enum": ["confirmed", "likely", "none"],
+      "description": "Menú del día confidence level"
+    },
     "menu_price_range": { "type": "string", "description": "e.g. 10-14€" },
+    "menu_evidence": { "type": "string", "description": "Source of menú confirmation" },
+    "dinner_menu_del_dia": { "type": "boolean" },
+    "dinner_price_range": { "type": "string" },
+    "dinner_tier": { "type": "string" },
+    "verification_status": { "type": "string" },
+    "source": { "type": "string" },
+    "last_verified": { "type": "string", "format": "date" },
+    "status": {
+      "type": "string",
+      "enum": ["active", "permanently_closed", "temporarily_closed"],
+      "default": "active"
+    },
     "website": { "type": "string", "format": "uri" },
     "google_maps_url": { "type": "string", "format": "uri" },
     "phone": { "type": "string" },
+    "instagram": { "type": "string" },
+    "facebook": { "type": "string" },
+    "twitter": { "type": "string" },
+    "google_maps_rating": { "type": "number", "minimum": 0, "maximum": 5 },
+    "google_maps_review_count": { "type": "integer" },
     "opening_hours_lunch": { "type": "string", "description": "e.g. 13:00-16:00" },
+    "opening_hours_full": {
+      "type": "object",
+      "properties": {
+        "monday": { "type": "string" },
+        "tuesday": { "type": "string" },
+        "wednesday": { "type": "string" },
+        "thursday": { "type": "string" },
+        "friday": { "type": "string" },
+        "saturday": { "type": "string" },
+        "sunday": { "type": "string" },
+        "closed_days": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "images": {
+      "type": "object",
+      "properties": {
+        "hero": { "type": "string" },
+        "food": { "type": "array", "items": { "type": "string" } },
+        "interior": { "type": "array", "items": { "type": "string" } },
+        "exterior": { "type": "array", "items": { "type": "string" } },
+        "menu_photo": { "type": "array", "items": { "type": "string" } },
+        "ambiance": { "type": "array", "items": { "type": "string" } },
+        "team": { "type": "array", "items": { "type": "string" } }
+      }
+    },
     "hero_image_url": { "type": "string" },
     "menu_photo_url": { "type": "string" },
     "rating": { "type": "number", "minimum": 0, "maximum": 5 },
-    "notes": { "type": "string" }
+    "notes": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "metro_station": { "type": "string" },
+    "reservation_required": { "type": "boolean" },
+    "delivery_available": { "type": "boolean" },
+    "outdoor_seating": { "type": "boolean" },
+    "dog_friendly": { "type": "boolean" }
   }
 }

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menuverso — The Definitive Menú del Día Database</title>
+<meta name="description" content="Exhaustive Barcelona restaurant database. Discover, filter, and compare 1200+ restaurants offering Menú del Día.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --bg: #F8FAFC;
+  --bg-dark: #0F172A;
+  --card: #FFFFFF;
+  --border: #E2E8F0;
+  --border-hover: #CBD5E1;
+  
+  --text-main: #0F172A;
+  --text-sub: #475569;
+  --text-mut: #94A3B8;
+  
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-sub: #DBEAFE;
+  
+  --green: #059669; --green-bg: #D1FAE5;
+  --amber: #D97706; --amber-bg: #FEF3C7;
+  --red: #DC2626; --red-bg: #FEE2E2;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+  --radius: 16px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Navbar */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 72px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 100;
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+.nav-brand img {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-sub);
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-left: 24px;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text-main); }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #FFF;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 14px 0 rgba(37,99,235,0.39);
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(37,99,235,0.23);
+}
+.btn-secondary {
+  background: var(--card);
+  color: var(--text-main);
+  border: 1px solid var(--border);
+}
+.btn-secondary:hover {
+  background: var(--bg);
+  border-color: var(--border-hover);
+  transform: translateY(-1px);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+  padding: 180px 0 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before { /* Decorative background gradient sphere */
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 500px;
+  background: radial-gradient(ellipse at top, var(--accent-sub) 0%, rgba(255,255,255,0) 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-sub);
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+}
+.hero h1 span {
+  color: var(--accent);
+}
+.hero p {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  color: var(--text-sub);
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+}
+.hero-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Stats Section */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin: -40px auto 100px;
+  position: relative;
+  z-index: 10;
+}
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+.stat-card .num {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.stat-card .label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-sub);
+}
+
+/* Features Section */
+.section {
+  padding: 100px 0;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+.section-header p {
+  font-size: 1.1rem;
+  color: var(--text-sub);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+.feature {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+}
+.feature:hover {
+  background: var(--card);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+}
+.feature-icon {
+  width: 56px; height: 56px;
+  background: var(--accent-sub);
+  color: var(--accent);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.feature h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+.feature p {
+  color: var(--text-sub);
+  font-size: 1rem;
+}
+
+/* Pricing/Tiers Section */
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+.tier-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.tier-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+}
+.tier-card.budget::before { background: var(--green); }
+.tier-card.mid::before { background: var(--amber); }
+.tier-card.premium::before { background: var(--accent); }
+
+.tier-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 1rem 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+.tier-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-sub);
+}
+.tier-desc {
+  color: var(--text-sub);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Footer */
+footer {
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  padding: 4rem 0;
+  text-align: center;
+}
+footer .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+footer .logo img {
+  width: 28px; height: 28px;
+  border-radius: 6px;
+}
+footer p {
+  color: var(--text-mut);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 140px 0 80px; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#" class="nav-brand">
+    <img src="assets/logo.png" alt="Menuverso">
+    Menuverso
+  </a>
+  <div class="nav-links">
+    <a href="#features">Features</a>
+    <a href="#tiers">Tiers</a>
+    <a href="index.html" class="btn btn-primary" style="margin-left: 24px; color: white;">Open Database</a>
+  </div>
+</nav>
+
+<div class="container">
+  <section class="hero">
+    <div class="badge-pill">
+      🚀 The ultimate Barcelona food tech platform
+    </div>
+    <h1>Finding a good Menú del Día <span>shouldn't be so hard.</span></h1>
+    <p>We've centralized Barcelona's fragmented lunch scene. Discover, filter, and compare daily menus across the city in one beautifully organized database.</p>
+    
+    <div class="hero-cta">
+      <a href="index.html" class="btn btn-primary" style="padding: 0.875rem 1.75rem; font-size: 1.05rem;">Browse the Database</a>
+      <a href="#features" class="btn btn-secondary" style="padding: 0.875rem 1.75rem; font-size: 1.05rem;">Learn More</a>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat-card">
+      <div class="num">1,200+</div>
+      <div class="label">Restaurants Tracked</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">18</div>
+      <div class="label">Barcelona Neighborhoods</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">100%</div>
+      <div class="label">Verified Menus</div>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="section-header">
+      <h2>A single source of truth for lunch</h2>
+      <p>Stop wandering the streets looking at chalkboards. Menuverso brings the city's best options directly to your screen.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">🔍</div>
+        <h3>Powerful Filtering</h3>
+        <p>Find exactly what you're craving. Filter our extensive database by neighborhood, cuisine type, menu status, and pricing tier to find your perfect lunch spot in seconds.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">✅</div>
+        <h3>Menu Confidence Tags</h3>
+        <p>No more guessing games. We tag every restaurant with 🟢 Confirmed, 🟡 Likely, or 🔴 No Menú, so you know exactly what to expect before you walk through the door.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚡️</div>
+        <h3>Actionable Data</h3>
+        <p>From exact pricing and Google Maps ratings to direct links to their Instagram and website, we provide all the details you need to make an informed decision.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tiers" class="section">
+    <div class="section-header">
+      <h2>Understand your options</h2>
+      <p>We categorize menus into three clear pricing tiers, accommodating everything from quick daily lunches to business meetings.</p>
+    </div>
+    
+    <div class="tiers-grid">
+      <div class="tier-card budget">
+        <div class="tier-name">Budget</div>
+        <div class="tier-price">≤ 12€</div>
+        <div class="tier-desc">No-frills, generous portions for the everyday lunch.</div>
+        <ul style="list-style: none; color: var(--text-sub); font-size: 0.95rem;">
+          <li style="margin-bottom: 0.5rem;">✓ Great value for money</li>
+          <li style="margin-bottom: 0.5rem;">✓ Neighborhood classics</li>
+          <li>✓ Fast & reliable</li>
+        </ul>
+      </div>
+      
+      <div class="tier-card mid">
+        <div class="tier-name">Mid-Range</div>
+        <div class="tier-price">12€ – 18€</div>
+        <div class="tier-desc">Quality ingredients and a nice atmosphere.</div>
+        <ul style="list-style: none; color: var(--text-sub); font-size: 0.95rem;">
+          <li style="margin-bottom: 0.5rem;">✓ Plated with care</li>
+          <li style="margin-bottom: 0.5rem;">✓ Modern cuisine options</li>
+          <li>✓ Perfect for casual meetings</li>
+        </ul>
+      </div>
+      
+      <div class="tier-card premium">
+        <div class="tier-name">Premium</div>
+        <div class="tier-price">18€+</div>
+        <div class="tier-desc">Chef-driven, upscale presentation and service.</div>
+        <ul style="list-style: none; color: var(--text-sub); font-size: 0.95rem;">
+          <li style="margin-bottom: 0.5rem;">✓ High-end ingredients</li>
+          <li style="margin-bottom: 0.5rem;">✓ Exceptional experience</li>
+          <li>✓ Ideal for business lunches</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Menuverso">
+      Menuverso
+    </div>
+    <p>&copy; 2026 Menuverso Barcelona. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+</body>
+</html>
