@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menuverso — Startup Business Plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --olive-deep:#1E2E1C;--olive-dark:#2A3F28;--olive:#3D5A3A;--olive-light:#5A7A56;--olive-muted:#4A6647;
+      --terra:#C4633F;--terra-light:#D8835F;--terra-glow:rgba(196,99,63,0.15);
+      --text-primary:rgba(255,255,255,0.95);--text-secondary:rgba(255,255,255,0.60);--text-tertiary:rgba(255,255,255,0.40);--text-accent:var(--terra-light);
+      --glass:rgba(255,255,255,0.06);--glass-border:rgba(255,255,255,0.10);--glass-hover:rgba(255,255,255,0.10);
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',-apple-system,sans-serif;background:var(--olive-deep);color:var(--text-primary);line-height:1.6;}
+    h1,h2,h3,h4{font-family:'Outfit',sans-serif;line-height:1.2;}
+    h1{font-weight:700;font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-0.02em;}
+    h2{font-weight:600;font-size:clamp(1.5rem,2.5vw,2rem);letter-spacing:-0.01em;}
+    h3{font-weight:600;font-size:clamp(1rem,1.3vw,1.15rem);}
+    p{color:var(--text-secondary);font-size:clamp(0.9rem,1.1vw,1.05rem);}
+    .accent{color:var(--text-accent);}
+    .label{font-family:'Outfit',sans-serif;font-weight:600;font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--text-accent);margin-bottom:12px;}
+
+    /* ═══ NAV ═══ */
+    .topnav{position:fixed;top:0;left:0;right:0;height:60px;background:rgba(30,46,28,0.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;padding:0 40px;z-index:100;}
+    .topnav .brand{font-family:'Outfit',sans-serif;font-weight:800;font-size:1.3rem;}
+    .topnav .nav-links{display:flex;gap:24px;}
+    .topnav .nav-links a{color:var(--text-secondary);text-decoration:none;font-size:0.82rem;font-weight:500;transition:color 0.3s;}
+    .topnav .nav-links a:hover{color:var(--text-primary);}
+
+    /* ═══ HERO ═══ */
+    .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 40px 80px;position:relative;overflow:hidden;background:linear-gradient(155deg,var(--olive-dark) 0%,var(--olive) 55%,var(--olive-muted) 100%);}
+    .hero::before{content:'';position:absolute;width:700px;height:700px;border-radius:50%;background:var(--terra);opacity:0.05;top:-250px;right:-200px;}
+    .hero::after{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(255,255,255,0.03);bottom:-150px;left:-100px;}
+    .hero .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;background:var(--glass);border:1px solid var(--glass-border);border-radius:100px;color:var(--text-secondary);font-size:0.82rem;margin-bottom:24px;}
+    .hero h1{font-size:clamp(2.5rem,5.5vw,4.5rem);font-weight:800;max-width:900px;margin-bottom:20px;}
+    .hero .tagline{font-size:clamp(1rem,1.5vw,1.25rem);color:var(--text-secondary);max-width:650px;margin-bottom:32px;font-weight:300;}
+    .hero .stats-row{display:flex;gap:40px;margin-top:20px;}
+    .hero .stat{text-align:center;}
+    .hero .stat .num{font-family:'Outfit',sans-serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;color:var(--text-accent);}
+    .hero .stat .desc{font-size:0.8rem;color:var(--text-tertiary);}
+
+    /* ═══ SECTIONS ═══ */
+    section{padding:100px 40px;position:relative;}
+    section:nth-child(odd){background:linear-gradient(165deg,var(--olive-deep) 0%,var(--olive-dark) 100%);}
+    section:nth-child(even){background:linear-gradient(155deg,var(--olive-dark) 0%,var(--olive) 100%);}
+    .container{max-width:1100px;margin:0 auto;}
+    .section-header{margin-bottom:48px;}
+    .section-header h2{margin-bottom:12px;}
+    .section-header p{max-width:600px;}
+
+    /* ═══ CARDS ═══ */
+    .card{padding:24px;background:var(--glass);border:1px solid var(--glass-border);border-radius:16px;backdrop-filter:blur(8px);transition:all 0.3s ease;}
+    .card:hover{background:var(--glass-hover);border-color:rgba(255,255,255,0.15);transform:translateY(-2px);}
+    .card .icon{width:44px;height:44px;border-radius:12px;background:var(--terra-glow);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:14px;}
+    .card h3{margin-bottom:6px;}
+    .card p{font-size:0.88rem;line-height:1.5;}
+
+    /* ═══ GRIDS ═══ */
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+
+    /* ═══ TABLES ═══ */
+    .styled-table{width:100%;border-collapse:collapse;margin-top:16px;}
+    .styled-table th{font-family:'Outfit',sans-serif;font-weight:600;font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;color:var(--text-accent);text-align:left;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.12);}
+    .styled-table td{padding:12px 16px;font-size:0.9rem;color:var(--text-secondary);border-bottom:1px solid rgba(255,255,255,0.05);}
+    .styled-table tr:hover td{color:var(--text-primary);background:rgba(255,255,255,0.02);}
+
+    /* ═══ TAGS ═══ */
+    .tag{display:inline-block;padding:4px 12px;border-radius:6px;font-family:'Outfit',sans-serif;font-weight:600;font-size:0.78rem;}
+    .tag-green{background:rgba(90,122,86,0.3);color:#8FB88A;}
+    .tag-red{background:rgba(196,99,63,0.2);color:var(--terra-light);}
+    .tag-yellow{background:rgba(212,168,83,0.2);color:#D4A853;}
+    .tag-blue{background:rgba(80,140,200,0.2);color:#7CB8E4;}
+
+    /* ═══ TIMELINE ═══ */
+    .timeline{position:relative;padding-left:40px;}
+    .timeline::before{content:'';position:absolute;left:14px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--terra),var(--olive-light));}
+    .timeline-item{position:relative;padding-bottom:40px;}
+    .timeline-item:last-child{padding-bottom:0;}
+    .timeline-item .dot{position:absolute;left:-33px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--terra);border:3px solid var(--olive-deep);}
+    .timeline-item h3{margin-bottom:6px;}
+    .timeline-item p{font-size:0.88rem;}
+    .timeline-item .sub-items{margin-top:10px;display:flex;flex-direction:column;gap:6px;}
+    .timeline-item .sub-items span{font-size:0.84rem;color:var(--text-tertiary);padding-left:16px;position:relative;}
+    .timeline-item .sub-items span::before{content:'→';position:absolute;left:0;}
+
+    /* ═══ PHASE BADGE ═══ */
+    .phase-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:8px;font-family:'Outfit',sans-serif;font-weight:600;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;}
+    .phase-1{background:rgba(90,122,86,0.25);color:#8FB88A;}
+    .phase-2{background:rgba(196,99,63,0.2);color:var(--terra-light);}
+
+    /* ═══ COMPARISON ═══ */
+    .vs-card{padding:28px;background:var(--glass);border:1px solid var(--glass-border);border-radius:16px;position:relative;overflow:hidden;}
+    .vs-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+    .vs-card.ours::before{background:var(--terra);}
+    .vs-card.theirs::before{background:var(--olive-light);}
+    .vs-card h3{margin-bottom:16px;font-size:1.1rem;}
+    .vs-card .metric{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.88rem;}
+    .vs-card .metric .val{color:var(--text-accent);font-weight:600;}
+
+    /* ═══ SWOT ═══ */
+    .swot-card{padding:24px;border-radius:16px;border:1px solid var(--glass-border);position:relative;overflow:hidden;}
+    .swot-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+    .swot-card.strengths{background:rgba(90,122,86,0.1);}
+    .swot-card.strengths::before{background:#8FB88A;}
+    .swot-card.weaknesses{background:rgba(196,99,63,0.08);}
+    .swot-card.weaknesses::before{background:var(--terra);}
+    .swot-card.opportunities{background:rgba(80,140,200,0.08);}
+    .swot-card.opportunities::before{background:#7CB8E4;}
+    .swot-card.threats{background:rgba(212,168,83,0.08);}
+    .swot-card.threats::before{background:#D4A853;}
+    .swot-card h3{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:1rem;}
+    .swot-card ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+    .swot-card li{font-size:0.86rem;color:var(--text-secondary);padding-left:16px;position:relative;line-height:1.45;}
+    .swot-card li::before{content:'•';position:absolute;left:0;color:var(--text-accent);}
+
+    /* ═══ FOOTER ═══ */
+    .footer{padding:60px 40px;text-align:center;background:var(--olive-deep);border-top:1px solid rgba(255,255,255,0.06);}
+    .footer p{font-size:0.82rem;color:var(--text-tertiary);}
+
+    /* ═══ ANIMATIONS ═══ */
+    .fade-in{opacity:0;transform:translateY(24px);transition:all 0.7s cubic-bezier(0.22,1,0.36,1);}
+    .fade-in.visible{opacity:1;transform:translateY(0);}
+
+    /* ═══ RESPONSIVE ═══ */
+    @media(max-width:900px){
+      .grid-2,.grid-3,.grid-4,.split{grid-template-columns:1fr;}
+      section{padding:60px 20px;}
+      .topnav .nav-links{display:none;}
+      .hero .stats-row{flex-direction:column;gap:20px;}
+    }
+    @media(max-width:600px){
+      .hero{padding:100px 20px 60px;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav class="topnav">
+  <div class="brand">Menu<span class="accent">verso</span></div>
+  <div class="nav-links">
+    <a href="#strategy">Strategy</a><a href="#swot">SWOT</a><a href="#gtm">Go-to-Market</a>
+    <a href="#financials">Financials</a><a href="#risks">Risks</a><a href="#funding">Funding</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<div class="hero">
+  <div class="pill fade-in">🚀&nbsp; YC-Style Business Plan · March 2026</div>
+  <h1 class="fade-in">The Definitive Platform for Spain's <span class="accent">€15B+ Lunch Economy</span></h1>
+  <p class="tagline fade-in">Starting as the largest menú del día directory, evolving into a NeoTaste-style subscription deals marketplace.</p>
+  <div class="stats-row fade-in">
+    <div class="stat"><div class="num">1,500+</div><div class="desc">Restaurants Catalogued</div></div>
+    <div class="stat"><div class="num">4,546</div><div class="desc">Total BCN Restaurants</div></div>
+    <div class="stat"><div class="num">€15.40</div><div class="desc">Avg Menú del Día</div></div>
+    <div class="stat"><div class="num">12M+</div><div class="desc">Annual Tourists</div></div>
+  </div>
+</div>
+
+<!-- ═══ TWO-PHASE STRATEGY ═══ -->
+<section id="strategy">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="label">The Strategy</div>
+      <h2>Two Phases to Market Dominance</h2>
+      <p>Build the moat first (data), then monetize (deals). Classic marketplace playbook.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card fade-in">
+        <div class="phase-badge phase-1">📚 Phase 1 · Months 0–9</div>
+        <h3>The Definitive Directory</h3>
+        <p style="margin:10px 0 16px">Free, searchable database of every restaurant in Barcelona offering menú del día. Aggregate demand, build SEO dominance, become the default lunch answer.</p>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <span style="font-size:0.84rem;color:var(--text-secondary)">✓ Search by neighborhood, price, cuisine</span>
+          <span style="font-size:0.84rem;color:var(--text-secondary)">✓ Daily-updated menu content</span>
+          <span style="font-size:0.84rem;color:var(--text-secondary)">✓ Mobile-first PWA</span>
+          <span style="font-size:0.84rem;color:var(--text-secondary)">✓ SEO-optimized pages</span>
+        </div>
+      </div>
+      <div class="card fade-in">
+        <div class="phase-badge phase-2">💎 Phase 2 · Months 6–18+</div>
+        <h3>Subscription Deals Marketplace</h3>
+        <p style="margin:10px 0 16px">NeoTaste-style subscription (€5.99–6.99/mo) offering exclusive 2-for-1 deals. Restaurants pay nothing — they get free customer acquisition.</p>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <span style="font-size:0.84rem;color:var(--text-secondary)">✓ 2-for-1 main courses at partner restaurants</span>
+          <span style="font-size:0.84rem;color:var(--text-secondary)">✓ Book time slot → Show QR → Validated</span>
+          <span style="font-size:0.84rem;color:var(--text-secondary)">✓ Restaurants control availability & caps</span>
+          <span style="font-size:0.84rem;color:var(--text-secondary)">✓ Corporate subscription tier</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ THE PROBLEM ═══ -->
+<section>
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="label">The Problem</div>
+      <h2>Discovery Is Broken for Spain's Biggest Daily Habit</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card fade-in"><div class="icon">🔍</div><h3>Workers & Locals</h3><p>No reliable way to find, compare, or filter menú del día options by price, cuisine, or neighborhood. Rely on word-of-mouth.</p></div>
+      <div class="card fade-in"><div class="icon">🌍</div><h3>Tourists</h3><p>Don't understand the menú del día system. Overpay at tourist traps instead of finding authentic €12–15 lunches.</p></div>
+      <div class="card fade-in"><div class="icon">📉</div><h3>Restaurants</h3><p>Lunchtime capacity is underutilized. No cost-effective channel to attract new lunch customers.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COMPETITIVE LANDSCAPE ═══ -->
+<section>
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="label">Competition</div>
+      <h2>Why Existing Solutions Fail</h2>
+    </div>
+    <table class="styled-table fade-in">
+      <thead><tr><th>Competitor</th><th>Weakness</th></tr></thead>
+      <tbody>
+        <tr><td>Google Maps</td><td>No menú del día filter, no daily pricing, no cuisine-specific lunch search</td></tr>
+        <tr><td>TheFork / ElTenedor</td><td>Dinner-focused, reservation-heavy, no daily menu content</td></tr>
+        <tr><td>Menu Del Dia App</td><td>Poor UX, sparse data, no deals layer, no monetization engine</td></tr>
+        <tr><td>Menu Diario</td><td>Restaurant-upload model (low adoption), no demand-side brand</td></tr>
+        <tr><td>TripAdvisor</td><td>Tourist-focused, no structured menú del día data, pay-to-play</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══ SWOT ═══ -->
+<section id="swot">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="label">SWOT Analysis</div>
+      <h2>Strategic Assessment</h2>
+    </div>
+    <div class="grid-2">
+      <div class="swot-card strengths fade-in">
+        <h3>💪 Strengths</h3>
+        <ul>
+          <li><strong>First-mover data advantage</strong> — 1,500+ restaurants already catalogued</li>
+          <li><strong>Niche focus</strong> — purpose-built for lunch vs. generalist platforms</li>
+          <li><strong>Proven model</strong> — NeoTaste validated at €21M Series A scale</li>
+          <li><strong>Low CAC</strong> — SEO + viral content drives organic growth</li>
+          <li><strong>Cultural tailwind</strong> — menú del día is a daily habit, not a novelty</li>
+        </ul>
+      </div>
+      <div class="swot-card weaknesses fade-in">
+        <h3>😟 Weaknesses</h3>
+        <ul>
+          <li><strong>No app yet</strong> — mitigated by PWA-first approach</li>
+          <li><strong>Tiny team</strong> — lean is an advantage pre-PMF</li>
+          <li><strong>Unproven revenue</strong> — Phase 1 deliberately free</li>
+          <li><strong>Data maintenance</strong> — needs community + automated scraping</li>
+          <li><strong>No restaurant relationships</strong> — Phase 1 creates warm intros</li>
+        </ul>
+      </div>
+      <div class="swot-card opportunities fade-in">
+        <h3>🌟 Opportunities</h3>
+        <ul>
+          <li><strong>Multi-city expansion</strong> — Madrid, Valencia, Seville</li>
+          <li><strong>Tourist market</strong> — 12M+ annual visitors to Barcelona</li>
+          <li><strong>Corporate subscriptions</strong> — employee lunch perks</li>
+          <li><strong>Restaurant SaaS upsell</strong> — analytics, reservations, menu tools</li>
+          <li><strong>Delivery integration</strong> — Glovo/UberEats partnerships</li>
+        </ul>
+      </div>
+      <div class="swot-card threats fade-in">
+        <h3>⚠️ Threats</h3>
+        <ul>
+          <li><strong>NeoTaste enters Spain</strong> — move fast; local knowledge is a moat</li>
+          <li><strong>Google adds features</strong> — Google moves slowly on local features</li>
+          <li><strong>Restaurant resistance</strong> — deals are free; frame as free marketing</li>
+          <li><strong>Low willingness to pay</strong> — validate with beta cohorts first</li>
+          <li><strong>Data quality degradation</strong> — automated verification + user flags</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GO-TO-MARKET TIMELINE ═══ -->
+<section id="gtm">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="label">Go-to-Market</div>
+      <h2>12-Month Roadmap</h2>
+    </div>
+    <div class="split">
+      <div class="fade-in">
+        <div class="phase-badge phase-1">Phase 1: Directory Launch</div>
+        <div class="timeline">
+          <div class="timeline-item"><div class="dot"></div><h3>Month 0–2: Product</h3><p>Launch PWA with 1,500+ restaurants</p>
+            <div class="sub-items"><span>Implement search, filters, map view</span><span>SEO-optimize for target keywords</span></div></div>
+          <div class="timeline-item"><div class="dot"></div><h3>Month 2–4: Growth</h3><p>Target: 5,000 MAU</p>
+            <div class="sub-items"><span>Instagram/TikTok content machine</span><span>Partner with food bloggers</span><span>Reddit/expat forum seeding</span></div></div>
+          <div class="timeline-item"><div class="dot"></div><h3>Month 4–6: Community</h3><p>Target: 15,000 MAU</p>
+            <div class="sub-items"><span>User reviews & photo uploads</span><span>Weekly newsletter launch</span><span>Restaurant outreach begins</span></div></div>
+        </div>
+      </div>
+      <div class="fade-in">
+        <div class="phase-badge phase-2">Phase 2: Deals Launch</div>
+        <div class="timeline">
+          <div class="timeline-item"><div class="dot"></div><h3>Month 6–8: Supply Side</h3><p>Sign 50 pilot restaurants for 2-for-1 deals</p>
+            <div class="sub-items"><span>Build deal booking + QR validation</span><span>Closed beta with 500 power users</span></div></div>
+          <div class="timeline-item"><div class="dot"></div><h3>Month 8–10: Demand Side</h3><p>Target: 1,000 paying subscribers</p>
+            <div class="sub-items"><span>Launch subscription: €6.99/mo</span><span>PR push + referral program</span></div></div>
+          <div class="timeline-item"><div class="dot"></div><h3>Month 10–12: Scale</h3><p>Target: 5,000 paying subscribers</p>
+            <div class="sub-items"><span>200+ partner restaurants</span><span>Corporate tier launch</span><span>Madrid soft-launch research</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FINANCIALS ═══ -->
+<section id="financials">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="label">Financial Projections</div>
+      <h2>3-Year Conservative Model</h2>
+    </div>
+    <table class="styled-table fade-in">
+      <thead><tr><th>Metric</th><th>Year 1</th><th>Year 2</th><th>Year 3</th></tr></thead>
+      <tbody>
+        <tr><td>MAU (free)</td><td>25,000</td><td>80,000</td><td>200,000</td></tr>
+        <tr><td>Paying Subscribers</td><td>2,500</td><td>15,000</td><td>50,000</td></tr>
+        <tr><td>Subscription Revenue</td><td>€180K</td><td>€1.08M</td><td>€3.9M</td></tr>
+        <tr><td>Premium Listings</td><td>€20K</td><td>€120K</td><td>€300K</td></tr>
+        <tr><td>Corporate Subscriptions</td><td>—</td><td>€50K</td><td>€250K</td></tr>
+        <tr><td style="color:var(--text-accent);font-weight:600">Total Revenue</td><td style="color:var(--text-accent);font-weight:600">€200K</td><td style="color:var(--text-accent);font-weight:600">€1.25M</td><td style="color:var(--text-accent);font-weight:600">€4.45M</td></tr>
+        <tr><td>Monthly Burn</td><td>€15K</td><td>€40K</td><td>€80K</td></tr>
+        <tr><td>Team Size</td><td>3</td><td>8</td><td>18</td></tr>
+      </tbody>
+    </table>
+    <div class="grid-4 fade-in" style="margin-top:32px;">
+      <div class="card" style="text-align:center"><div style="font-family:'Outfit';font-size:1.6rem;font-weight:700;color:var(--text-accent)">5–9x</div><p style="font-size:0.8rem">LTV/CAC Ratio</p></div>
+      <div class="card" style="text-align:center"><div style="font-family:'Outfit';font-size:1.6rem;font-weight:700;color:var(--text-accent)">€72</div><p style="font-size:0.8rem">12-Month LTV</p></div>
+      <div class="card" style="text-align:center"><div style="font-family:'Outfit';font-size:1.6rem;font-weight:700;color:var(--text-accent)">~85%</div><p style="font-size:0.8rem">Gross Margin</p></div>
+      <div class="card" style="text-align:center"><div style="font-family:'Outfit';font-size:1.6rem;font-weight:700;color:var(--text-accent)">&lt;2 mo</div><p style="font-size:0.8rem">CAC Payback</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RISKS ═══ -->
+<section id="risks">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="label">Risk Assessment</div>
+      <h2>Key Risks & Mitigations</h2>
+    </div>
+    <div class="grid-2">
+      <div class="card fade-in"><div style="display:flex;align-items:center;gap:8px;margin-bottom:10px"><span class="tag tag-red">CRITICAL</span><h3>Users Won't Pay</h3></div><p>NeoTaste has hundreds of thousands of paying users. Spanish consumers are price-sensitive at lunch → savings have high perceived value. <strong>Mitigate:</strong> Validate with 500-person beta. If conversion &lt;3%, pivot to restaurant-pays model.</p></div>
+      <div class="card fade-in"><div style="display:flex;align-items:center;gap:8px;margin-bottom:10px"><span class="tag tag-red">CRITICAL</span><h3>Restaurants Won't Participate</h3></div><p>Deals are free for restaurants. Lunch is often the slowest period. <strong>Mitigate:</strong> Start with restaurants that have empty tables. Offer 100% control over deal frequency.</p></div>
+      <div class="card fade-in"><div style="display:flex;align-items:center;gap:8px;margin-bottom:10px"><span class="tag tag-red">CRITICAL</span><h3>NeoTaste Enters Spain</h3></div><p>Speed, local knowledge, and Spanish-language menú del día specialization create a moat. <strong>Also:</strong> being acquired by NeoTaste is a valid exit.</p></div>
+      <div class="card fade-in"><div style="display:flex;align-items:center;gap:8px;margin-bottom:10px"><span class="tag tag-yellow">MODERATE</span><h3>Data Freshness</h3></div><p>Menus change daily. <strong>Mitigate:</strong> Automated scraping + user-submitted photos + restaurant self-service portal.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NEOTASTE COMPARISON ═══ -->
+<section>
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="label">Benchmark</div>
+      <h2>Menuverso vs. NeoTaste</h2>
+      <p>NeoTaste proved the model in Germany. We're bringing it to Spain with a lunch-specific twist.</p>
+    </div>
+    <div class="grid-2">
+      <div class="vs-card theirs fade-in">
+        <h3>NeoTaste 🇩🇪</h3>
+        <div class="metric"><span>Market</span><span class="val">Germany, NL, UK, Austria</span></div>
+        <div class="metric"><span>Focus</span><span class="val">General dining deals</span></div>
+        <div class="metric"><span>Pricing</span><span class="val">€6.99/mo</span></div>
+        <div class="metric"><span>Funding</span><span class="val">€21M Series A</span></div>
+        <div class="metric"><span>Restaurants</span><span class="val">3,000+</span></div>
+        <div class="metric"><span>Cities</span><span class="val">53+</span></div>
+      </div>
+      <div class="vs-card ours fade-in">
+        <h3>Menuverso 🇪🇸</h3>
+        <div class="metric"><span>Market</span><span class="val">Spain (Barcelona first)</span></div>
+        <div class="metric"><span>Focus</span><span class="val">Menú del día specialist</span></div>
+        <div class="metric"><span>Pricing</span><span class="val">€5.99–6.99/mo (planned)</span></div>
+        <div class="metric"><span>Funding</span><span class="val">Pre-seed</span></div>
+        <div class="metric"><span>Restaurants</span><span class="val">1,500+ (database)</span></div>
+        <div class="metric"><span>Cities</span><span class="val">1 (expanding)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FUNDING ROADMAP ═══ -->
+<section id="funding">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="label">Fundraising</div>
+      <h2>Capital Roadmap</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card fade-in">
+        <div class="tag tag-green" style="margin-bottom:14px">NOW → MONTH 3</div>
+        <h3>Pre-Seed · €100–150K</h3>
+        <p style="margin:8px 0">Angels, FFF, Antler, SeedRocket, Wayra</p>
+        <p style="font-size:0.82rem;color:var(--text-tertiary)"><strong style="color:var(--text-secondary)">Use:</strong> PWA dev, data enrichment, 1 hire, 6mo runway</p>
+        <p style="font-size:0.82rem;color:var(--text-tertiary);margin-top:6px"><strong style="color:var(--text-secondary)">Milestone:</strong> 15K MAU, 1,500+ verified restaurants</p>
+      </div>
+      <div class="card fade-in">
+        <div class="tag tag-blue" style="margin-bottom:14px">MONTH 6–9</div>
+        <h3>Seed · €500K–1M</h3>
+        <p style="margin:8px 0">JME Ventures, Samaipata, K Fund, Nauta Capital</p>
+        <p style="font-size:0.82rem;color:var(--text-tertiary)"><strong style="color:var(--text-secondary)">Use:</strong> Native app, deals infra, sales team, Madrid prep</p>
+        <p style="font-size:0.82rem;color:var(--text-tertiary);margin-top:6px"><strong style="color:var(--text-secondary)">Milestone:</strong> 5K subscribers, 200+ deal restaurants, €30K MRR</p>
+      </div>
+      <div class="card fade-in">
+        <div class="tag tag-yellow" style="margin-bottom:14px">MONTH 18–24</div>
+        <h3>Series A · €3–5M</h3>
+        <p style="margin:8px 0">Earlybird, Point Nine, food-tech VCs</p>
+        <p style="font-size:0.82rem;color:var(--text-tertiary)"><strong style="color:var(--text-secondary)">Use:</strong> Multi-city (Madrid, Valencia, Seville), team to 15+</p>
+        <p style="font-size:0.82rem;color:var(--text-tertiary);margin-top:6px"><strong style="color:var(--text-secondary)">Milestone:</strong> 30K+ subscribers, 3+ cities, €200K+ MRR</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ THE ASK ═══ -->
+<section style="background:linear-gradient(135deg,var(--olive-dark) 0%,var(--olive) 50%,var(--olive-light) 100%);text-align:center">
+  <div class="container fade-in" style="max-width:700px">
+    <div class="label">The Ask</div>
+    <h2 style="font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:20px">We've built the largest menú del día database in Barcelona. <span class="accent">Now we're turning it into a business.</span></h2>
+    <p style="font-size:1rem;line-height:1.7;margin-bottom:24px">1,500+ restaurants, fully structured. Free directory launching now. NeoTaste-style subscription deals in 6 months. NeoTaste raised €21M doing this in Germany. Nobody's doing it in Spain.</p>
+    <div style="display:inline-block;padding:16px 32px;background:var(--terra);border-radius:100px;font-family:'Outfit',sans-serif;font-weight:600;font-size:0.95rem;color:white;box-shadow:0 8px 24px rgba(196,99,63,0.3);">€150K to reach 15K users & 50 restaurant partners</div>
+  </div>
+</section>
+
+<div class="footer">
+  <p>Menuverso — Startup Business Plan · March 2026</p>
+</div>
+
+<script>
+// Intersection Observer for scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+}, { threshold: 0.15 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
