@@ -513,11 +513,8 @@ function renderSaved(){
 function initMap(){
   map = L.map('appMap',{zoomControl:true}).setView([41.3888,2.1700],13);
 
-  // Use light tiles for light mode, dark for dark
-  const isDark = !document.documentElement.classList.contains('light');
-  const tileUrl = isDark
-    ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
-    : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+  // Light CARTO tiles
+  const tileUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
   L.tileLayer(tileUrl,{
     attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
     maxZoom:19
