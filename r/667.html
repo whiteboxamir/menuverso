@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SOLC Majestic — Menú del Día Barcelona | Menuverso</title>
-<meta name="description" content="SOLC Majestic in Eixample, Barcelona. Catalan cuisine.  menú del día. No Menú del Día. Rating: 4.5/5 (554 reviews).">
-<meta property="og:title" content="SOLC Majestic — Menú del Día | Menuverso">
-<meta property="og:description" content="Catalan in Eixample.  menú del día. ⭐ 4.5/5">
+<title>CatBar — Menú del Día Barcelona | Menuverso</title>
+<meta name="description" content="CatBar in El Raval, Barcelona. Vegetarian/Vegan cuisine.  menú del día. Likely Menú del Día. Rating: 4.3/5 (1419 reviews).">
+<meta property="og:title" content="CatBar — Menú del Día | Menuverso">
+<meta property="og:description" content="Vegetarian/Vegan in El Raval.  menú del día. ⭐ 4.3/5">
 <meta property="og:url" content="https://whiteboxamir.github.io/menuverso/r/667.html">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:site_name" content="Menuverso">
@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "SOLC Majestic", "address": {"@type": "PostalAddress", "streetAddress": "Pg. de Gràcia, 68", "addressLocality": "Barcelona", "postalCode": "08007", "addressCountry": "ES"}, "servesCuisine": "Catalan", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.5, "reviewCount": 554}, "geo": {"@type": "GeoCoordinates", "latitude": 41.3917422, "longitude": 2.1654245}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "CatBar", "address": {"@type": "PostalAddress", "streetAddress": "C/ de la Bòria, 17", "addressLocality": "Barcelona", "postalCode": "08003", "addressCountry": "ES"}, "servesCuisine": "Vegetarian/Vegan", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.3, "reviewCount": 1419}, "geo": {"@type": "GeoCoordinates", "latitude": 41.3845069, "longitude": 2.1787539}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -55,13 +55,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .container{max-width:720px;margin:-40px auto 0;padding:0 1rem 2rem;position:relative;z-index:2;}
 
 /* Deal Card (Neotaste-style) */
-.deal-card{background:#FEE2E2;border:2px solid #DC262622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
+.deal-card{background:#FEF3C7;border:2px solid #D9770622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
 .deal-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}
 .deal-emoji{font-size:1.5rem;}
-.deal-title{font-size:1.1rem;font-weight:700;color:#DC2626;}
+.deal-title{font-size:1.1rem;font-weight:700;color:#D97706;}
 .deal-price{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:0.25rem;}
 .deal-desc{font-size:0.82rem;color:var(--sub);}
-:root.dark .deal-card{background:var(--card);border-color:#DC262644;}
+:root.dark .deal-card{background:var(--card);border-color:#D9770644;}
 
 /* Open Status */
 .open-status{display:inline-flex;align-items:center;gap:5px;padding:0.3rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:600;}
@@ -168,14 +168,14 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
 <!-- Hero Section -->
 <div class="hero">
-  <img src="../assets/no-image.svg" alt="Catalan cuisine" loading="eager">
+  <img src="../assets/no-image.svg" alt="Vegetarian/Vegan cuisine" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <a href="../index.html?hood=Eixample" class="hero-back">← Eixample</a>
-    <h1>SOLC Majestic</h1>
+    <a href="../index.html?hood=El+Raval" class="hero-back">← El Raval</a>
+    <h1>CatBar</h1>
     <div class="hero-meta">
-      <span>Catalan</span>
-      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span> 4.5</span>
+      <span>Vegetarian/Vegan</span>
+      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span> 4.3</span>
       
       <span>·</span>
       <div class="open-status unknown" id="open-status"><span class="open-dot"></span> <span id="open-text">Checking...</span></div>
@@ -187,44 +187,44 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <!-- Menú del Día Deal Card -->
   <div class="deal-card">
     <div class="deal-header">
-      <span class="deal-emoji">🔴</span>
-      <span class="deal-title">No Menú del Día</span>
+      <span class="deal-emoji">🟡</span>
+      <span class="deal-title">Likely Menú del Día</span>
     </div>
     
-    <div class="deal-desc">Eixample · Passeig de Gràcia (L2/L3/L4)</div>
+    <div class="deal-desc">El Raval · Jaume I (L4)</div>
   </div>
 
-  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=SOLC+Majestic+Pg.+de+Gr%C3%A0cia%2C+68+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=CatBar+C%2F+de+la+B%C3%B2ria%2C+17+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
     <button class="share-btn" style="flex:1;justify-content:center;" onclick="toggleFav(667)">❤️ Save</button></div>
 
   <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('info')">Info</button>
     <button class="tab-btn" onclick="switchTab('map')">Map</button>
-    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.5)</button>
+    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.3)</button>
     <button class="tab-btn" onclick="switchTab('nearby')">Nearby</button>
   </div>
 
   <!-- Tab: Info -->
   <div class="tab-content active" id="tab-info">
-    
+    <div class="tags"><span class="tag">budget-friendly</span><span class="tag">burgers</span><span class="tag">craft-beer</span><span class="tag">great-value</span><span class="tag">vegan</span><span class="tag">vegetarian</span></div>
 
     <div class="info-section">
       <h3>Details</h3>
-      <div class="info-row"><span class="link-icon">📍</span> Eixample · Pg. de Gràcia, 68 · 08007</div>
-      <div class="info-row"><span class="link-icon">🍽️</span> Catalan · premium</div>
+      <div class="info-row"><span class="link-icon">📍</span> El Raval · C/ de la Bòria, 17 · 08003</div>
+      <div class="info-row"><span class="link-icon">🍽️</span> Vegetarian/Vegan · budget</div>
       <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00</div>
-      <div class="info-row"><span class="link-icon">🚇</span> Passeig de Gràcia (L2/L3/L4)</div>
+      <div class="info-row"><span class="link-icon">🚇</span> Jaume I (L4)</div>
     </div>
 
-    <div class="notes">Majestic Hotel. Catalan cuisine.</div>
+    <div class="notes">Cheap tasty vegan burgers. Craft beers. Punk aesthetic.</div>
 
-    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=SOLC+Majestic+Pg.+de+Gr%C3%A0cia%2C+68+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
+    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=CatBar+C%2F+de+la+B%C3%B2ria%2C+17+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
 
     <div class="share-section">
       <button class="share-btn" onclick="shareNative()">📤 Share</button>
       <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
-      <a class="share-btn" href="https://wa.me/?text=Check%20out%20SOLC%20Majestic%20in%20Eixample%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/667.html" target="_blank">💬 WhatsApp</a>
+      <a class="share-btn" href="https://wa.me/?text=Check%20out%20CatBar%20in%20El%20Raval%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/667.html" target="_blank">💬 WhatsApp</a>
     </div>
 
     <div class="community">
@@ -236,50 +236,50 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <div class="tab-content" id="tab-map">
       <div id="minimap"></div>
       <div class="map-address">
-        <span class="link-icon">📍</span> Pg. de Gràcia, 68, 08007, Barcelona
-        <br><span class="link-icon">🚇</span> Passeig de Gràcia (L2/L3/L4)
+        <span class="link-icon">📍</span> C/ de la Bòria, 17, 08003, Barcelona
+        <br><span class="link-icon">🚇</span> Jaume I (L4)
       </div>
     </div>
 
   <!-- Tab: Reviews -->
   <div class="tab-content" id="tab-reviews">
       <div class="review-card">
-        <div class="review-score">4.5</div>
+        <div class="review-score">4.3</div>
         <div class="review-details">
-          <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span></div>
-          <div class="review-count">554 Google reviews</div>
+          <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span></div>
+          <div class="review-count">1,419 Google reviews</div>
         </div>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=SOLC+Majestic+Pg.+de+Gr%C3%A0cia%2C+68+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=CatBar+C%2F+de+la+B%C3%B2ria%2C+17+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
     </div>
 
   <!-- Tab: Nearby -->
   <div class="tab-content" id="tab-nearby">
       <h2>📍 Nearby Restaurants</h2>
-      <a href="664.html" class="nearby-card">
-          <div class="nearby-icon">🥘</div>
+      <a href="481.html" class="nearby-card">
+          <div class="nearby-icon">🌶️</div>
           <div class="nearby-info">
-            <div class="nearby-name">Tapa Tapa</div>
-            <div class="nearby-meta">🟡 Spanish ·  · 44m</div>
+            <div class="nearby-name">Senyor Parellada</div>
+            <div class="nearby-meta">🟢 Catalan · 14-17€ · 134m</div>
           </div>
-        </a><a href="883.html" class="nearby-card">
-          <div class="nearby-icon">🥘</div>
+        </a><a href="690.html" class="nearby-card">
+          <div class="nearby-icon">🥗</div>
           <div class="nearby-info">
-            <div class="nearby-name">Pans & Company Pg Gràcia</div>
-            <div class="nearby-meta">🟡 Spanish ·  · 53m</div>
+            <div class="nearby-name">La Carassa</div>
+            <div class="nearby-meta">🟡 Mediterranean ·  · 142m</div>
           </div>
-        </a><a href="885.html" class="nearby-card">
-          <div class="nearby-icon">🍔</div>
+        </a><a href="727.html" class="nearby-card">
+          <div class="nearby-icon">🌶️</div>
           <div class="nearby-info">
-            <div class="nearby-name">TGB The Good Burger</div>
-            <div class="nearby-meta">🔴 Gastropub ·  · 76m</div>
+            <div class="nearby-name">Bornès</div>
+            <div class="nearby-meta">🟡 Catalan ·  · 161m</div>
           </div>
         </a>
     </div>
 </div>
 
 <footer>
-  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #667 of 1,520
+  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #667 of 1,458
 </footer>
 
 <script>
@@ -308,7 +308,7 @@ function switchTab(id){
 
 // Share
 function shareNative(){
-  if(navigator.share){navigator.share({title:'SOLC Majestic — Menuverso',text:'Catalan in Eixample.  menú del día.',url:window.location.href})}
+  if(navigator.share){navigator.share({title:'CatBar — Menuverso',text:'Vegetarian/Vegan in El Raval.  menú del día.',url:window.location.href})}
   else{copyLink(document.querySelector('.share-btn'))}
 }
 function copyLink(btn){
@@ -369,9 +369,9 @@ initTheme();
 renderVisited(667);
 </script>
 <script>
-var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.3917422,2.1654245],16);
+var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.3845069,2.1787539],16);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
-L.circleMarker([41.3917422,2.1654245],{radius:10,fillColor:'#DC2626',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
+L.circleMarker([41.3845069,2.1787539],{radius:10,fillColor:'#D97706',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
 if(document.documentElement.classList.contains('dark')){document.querySelectorAll('.leaflet-tile').forEach(t=>t.style.filter='invert(1) hue-rotate(180deg) brightness(0.9)');};
 </script>
 </body>

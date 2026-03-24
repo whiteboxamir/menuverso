@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Irati — Menú del Día Barcelona | Menuverso</title>
-<meta name="description" content="Irati in Barri Gòtic, Barcelona. Basque cuisine.  menú del día. Likely Menú del Día. Rating: 4.3/5 (2443 reviews).">
-<meta property="og:title" content="Irati — Menú del Día | Menuverso">
-<meta property="og:description" content="Basque in Barri Gòtic.  menú del día. ⭐ 4.3/5">
+<title>Restaurante Pica-Pica — Menú del Día Barcelona | Menuverso</title>
+<meta name="description" content="Restaurante Pica-Pica in Nou Barris, Barcelona. Other cuisine.  menú del día. No Menú del Día. Rating: 4.2/5 (312 reviews).">
+<meta property="og:title" content="Restaurante Pica-Pica — Menú del Día | Menuverso">
+<meta property="og:description" content="Other in Nou Barris.  menú del día. ⭐ 4.2/5">
 <meta property="og:url" content="https://whiteboxamir.github.io/menuverso/r/612.html">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:site_name" content="Menuverso">
@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Irati", "address": {"@type": "PostalAddress", "streetAddress": "C/ del Cardenal Casañas, 17", "addressLocality": "Barcelona", "postalCode": "08002", "addressCountry": "ES"}, "servesCuisine": "Basque", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.3, "reviewCount": 2443}, "telephone": "+34 933022084", "url": "https://iratitaverna.com/", "geo": {"@type": "GeoCoordinates", "latitude": 41.3820592, "longitude": 2.1734611}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Restaurante Pica-Pica", "address": {"@type": "PostalAddress", "streetAddress": "C/ de Viladrosa, 30", "addressLocality": "Barcelona", "postalCode": "08042", "addressCountry": "ES"}, "servesCuisine": "Other", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.2, "reviewCount": 312}, "geo": {"@type": "GeoCoordinates", "latitude": 41.4432111, "longitude": 2.1762617}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -55,13 +55,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .container{max-width:720px;margin:-40px auto 0;padding:0 1rem 2rem;position:relative;z-index:2;}
 
 /* Deal Card (Neotaste-style) */
-.deal-card{background:#FEF3C7;border:2px solid #D9770622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
+.deal-card{background:#FEE2E2;border:2px solid #DC262622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
 .deal-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}
 .deal-emoji{font-size:1.5rem;}
-.deal-title{font-size:1.1rem;font-weight:700;color:#D97706;}
+.deal-title{font-size:1.1rem;font-weight:700;color:#DC2626;}
 .deal-price{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:0.25rem;}
 .deal-desc{font-size:0.82rem;color:var(--sub);}
-:root.dark .deal-card{background:var(--card);border-color:#D9770644;}
+:root.dark .deal-card{background:var(--card);border-color:#DC262644;}
 
 /* Open Status */
 .open-status{display:inline-flex;align-items:center;gap:5px;padding:0.3rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:600;}
@@ -168,14 +168,14 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
 <!-- Hero Section -->
 <div class="hero">
-  <img src="../assets/no-image.svg" alt="Basque cuisine" loading="eager">
+  <img src="../assets/no-image.svg" alt="Other cuisine" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <a href="../index.html?hood=Barri+G%C3%B2tic" class="hero-back">← Barri Gòtic</a>
-    <h1>Irati</h1>
+    <a href="../index.html?hood=Nou+Barris" class="hero-back">← Nou Barris</a>
+    <h1>Restaurante Pica-Pica</h1>
     <div class="hero-meta">
-      <span>Basque</span>
-      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span> 4.3</span>
+      <span>Other</span>
+      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span> 4.2</span>
       
       <span>·</span>
       <div class="open-status unknown" id="open-status"><span class="open-dot"></span> <span id="open-text">Checking...</span></div>
@@ -187,46 +187,44 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <!-- Menú del Día Deal Card -->
   <div class="deal-card">
     <div class="deal-header">
-      <span class="deal-emoji">🟡</span>
-      <span class="deal-title">Likely Menú del Día</span>
+      <span class="deal-emoji">🔴</span>
+      <span class="deal-title">No Menú del Día</span>
     </div>
     
-    <div class="deal-desc">Barri Gòtic · Liceu (L3)</div>
+    <div class="deal-desc">Nou Barris · Via Júlia (L4)</div>
   </div>
 
-  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Irati+C%2F+del+Cardenal+Casa%C3%B1as%2C+17+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
-    <a href="tel:+34 933022084" class="share-btn" style="flex:1;justify-content:center;">📞 Call</a>
-    <a href="https://iratitaverna.com/" target="_blank" class="share-btn" style="flex:1;justify-content:center;">🌐 Website</a>
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Restaurante+Pica-Pica+C%2F+de+Viladrosa%2C+30+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
     <button class="share-btn" style="flex:1;justify-content:center;" onclick="toggleFav(612)">❤️ Save</button></div>
 
   <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('info')">Info</button>
     <button class="tab-btn" onclick="switchTab('map')">Map</button>
-    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.3)</button>
+    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.2)</button>
     <button class="tab-btn" onclick="switchTab('nearby')">Nearby</button>
   </div>
 
   <!-- Tab: Info -->
   <div class="tab-content active" id="tab-info">
-    <div class="tags"><span class="tag">solo-friendly</span><span class="tag">tapas</span></div>
+    <div class="tags"><span class="tag">budget-friendly</span></div>
 
     <div class="info-section">
       <h3>Details</h3>
-      <div class="info-row"><span class="link-icon">📍</span> Barri Gòtic · C/ del Cardenal Casañas, 17 · 08002</div>
-      <div class="info-row"><span class="link-icon">🍽️</span> Basque · mid-range</div>
+      <div class="info-row"><span class="link-icon">📍</span> Nou Barris · C/ de Viladrosa, 30 · 08042</div>
+      <div class="info-row"><span class="link-icon">🍽️</span> Other · budget</div>
       <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00</div>
-      <div class="info-row"><span class="link-icon">🚇</span> Liceu (L3)</div>
+      <div class="info-row"><span class="link-icon">🚇</span> Via Júlia (L4)</div>
     </div>
 
-    <div class="notes">Basque pintxos bar. Steps from La Rambla.</div>
+    <div class="notes">Salvadoran pupusas</div>
 
-    <div class="contact-links"><a href="https://iratitaverna.com/" target="_blank" class="contact-link"><span class="link-icon">🌐</span> Website</a><a href="https://www.google.com/maps/search/?api=1&query=Irati+C%2F+del+Cardenal+Casa%C3%B1as%2C+17+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a><a href="tel:+34 933022084" class="contact-link"><span class="link-icon">📞</span> +34 933022084</a></div>
+    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=Restaurante+Pica-Pica+C%2F+de+Viladrosa%2C+30+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
 
     <div class="share-section">
       <button class="share-btn" onclick="shareNative()">📤 Share</button>
       <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
-      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Irati%20in%20Barri%20G%C3%B2tic%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/612.html" target="_blank">💬 WhatsApp</a>
+      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Restaurante%20Pica-Pica%20in%20Nou%20Barris%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/612.html" target="_blank">💬 WhatsApp</a>
     </div>
 
     <div class="community">
@@ -238,50 +236,50 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <div class="tab-content" id="tab-map">
       <div id="minimap"></div>
       <div class="map-address">
-        <span class="link-icon">📍</span> C/ del Cardenal Casañas, 17, 08002, Barcelona
-        <br><span class="link-icon">🚇</span> Liceu (L3)
+        <span class="link-icon">📍</span> C/ de Viladrosa, 30, 08042, Barcelona
+        <br><span class="link-icon">🚇</span> Via Júlia (L4)
       </div>
     </div>
 
   <!-- Tab: Reviews -->
   <div class="tab-content" id="tab-reviews">
       <div class="review-card">
-        <div class="review-score">4.3</div>
+        <div class="review-score">4.2</div>
         <div class="review-details">
           <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span></div>
-          <div class="review-count">2,443 Google reviews</div>
+          <div class="review-count">312 Google reviews</div>
         </div>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=Irati+C%2F+del+Cardenal+Casa%C3%B1as%2C+17+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Restaurante+Pica-Pica+C%2F+de+Viladrosa%2C+30+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
     </div>
 
   <!-- Tab: Nearby -->
   <div class="tab-content" id="tab-nearby">
       <h2>📍 Nearby Restaurants</h2>
-      <a href="378.html" class="nearby-card">
-          <div class="nearby-icon">☕</div>
+      <a href="66.html" class="nearby-card">
+          <div class="nearby-icon">🌍</div>
           <div class="nearby-info">
-            <div class="nearby-name">Granja Dulcinea</div>
-            <div class="nearby-meta">🔴 Café ·  · 49m</div>
+            <div class="nearby-name">La Forquilla</div>
+            <div class="nearby-meta">🟢 Fusion · 17€ · 0m</div>
           </div>
-        </a><a href="809.html" class="nearby-card">
-          <div class="nearby-icon">🥘</div>
-          <div class="nearby-info">
-            <div class="nearby-name">Bar del Pi</div>
-            <div class="nearby-meta">🟡 Spanish ·  · 63m</div>
-          </div>
-        </a><a href="672.html" class="nearby-card">
+        </a><a href="451.html" class="nearby-card">
           <div class="nearby-icon">🌶️</div>
           <div class="nearby-info">
-            <div class="nearby-name">Julivert Meu</div>
-            <div class="nearby-meta">🟢 Catalan · 14-16€ · 70m</div>
+            <div class="nearby-name">Can Maño Nou Barris</div>
+            <div class="nearby-meta">🟢 Catalan · 10-12€ · 0m</div>
+          </div>
+        </a><a href="453.html" class="nearby-card">
+          <div class="nearby-icon">🌶️</div>
+          <div class="nearby-info">
+            <div class="nearby-name">Restaurant La Llanterna</div>
+            <div class="nearby-meta">🟢 Catalan · 10-12€ · 5m</div>
           </div>
         </a>
     </div>
 </div>
 
 <footer>
-  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #612 of 1,520
+  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #612 of 1,458
 </footer>
 
 <script>
@@ -310,7 +308,7 @@ function switchTab(id){
 
 // Share
 function shareNative(){
-  if(navigator.share){navigator.share({title:'Irati — Menuverso',text:'Basque in Barri Gòtic.  menú del día.',url:window.location.href})}
+  if(navigator.share){navigator.share({title:'Restaurante Pica-Pica — Menuverso',text:'Other in Nou Barris.  menú del día.',url:window.location.href})}
   else{copyLink(document.querySelector('.share-btn'))}
 }
 function copyLink(btn){
@@ -371,9 +369,9 @@ initTheme();
 renderVisited(612);
 </script>
 <script>
-var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.3820592,2.1734611],16);
+var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.4432111,2.1762617],16);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
-L.circleMarker([41.3820592,2.1734611],{radius:10,fillColor:'#D97706',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
+L.circleMarker([41.4432111,2.1762617],{radius:10,fillColor:'#DC2626',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
 if(document.documentElement.classList.contains('dark')){document.querySelectorAll('.leaflet-tile').forEach(t=>t.style.filter='invert(1) hue-rotate(180deg) brightness(0.9)');};
 </script>
 </body>

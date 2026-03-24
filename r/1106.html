@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bar Dijous — Menú del Día Barcelona | Menuverso</title>
-<meta name="description" content="Bar Dijous in Eixample, Barcelona. Catalan cuisine. 13-16€ menú del día. Menú del Día Confirmed. Rating: 4.3/5 (254 reviews).">
-<meta property="og:title" content="Bar Dijous — Menú del Día | Menuverso">
-<meta property="og:description" content="Catalan in Eixample. 13-16€ menú del día. ⭐ 4.3/5">
+<title>El Filete Ruso — Menú del Día Barcelona | Menuverso</title>
+<meta name="description" content="El Filete Ruso in Eixample, Barcelona. Spanish cuisine.  menú del día. Likely Menú del Día. Rating: 4.3/5 (346 reviews).">
+<meta property="og:title" content="El Filete Ruso — Menú del Día | Menuverso">
+<meta property="og:description" content="Spanish in Eixample.  menú del día. ⭐ 4.3/5">
 <meta property="og:url" content="https://whiteboxamir.github.io/menuverso/r/1106.html">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:site_name" content="Menuverso">
@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Bar Dijous", "address": {"@type": "PostalAddress", "streetAddress": "Eixample, Barcelona", "addressLocality": "Barcelona", "postalCode": "08036", "addressCountry": "ES"}, "servesCuisine": "Catalan", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.3, "reviewCount": 254}, "priceRange": "13-16€", "geo": {"@type": "GeoCoordinates", "latitude": 41.3936885, "longitude": 2.1636552}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "El Filete Ruso", "address": {"@type": "PostalAddress", "streetAddress": "Eixample, Barcelona", "addressLocality": "Barcelona", "postalCode": "08010", "addressCountry": "ES"}, "servesCuisine": "Spanish", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.3, "reviewCount": 346}, "geo": {"@type": "GeoCoordinates", "latitude": 41.3936885, "longitude": 2.1636552}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -55,13 +55,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .container{max-width:720px;margin:-40px auto 0;padding:0 1rem 2rem;position:relative;z-index:2;}
 
 /* Deal Card (Neotaste-style) */
-.deal-card{background:#D1FAE5;border:2px solid #05966922;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
+.deal-card{background:#FEF3C7;border:2px solid #D9770622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
 .deal-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}
 .deal-emoji{font-size:1.5rem;}
-.deal-title{font-size:1.1rem;font-weight:700;color:#059669;}
+.deal-title{font-size:1.1rem;font-weight:700;color:#D97706;}
 .deal-price{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:0.25rem;}
 .deal-desc{font-size:0.82rem;color:var(--sub);}
-:root.dark .deal-card{background:var(--card);border-color:#05966944;}
+:root.dark .deal-card{background:var(--card);border-color:#D9770644;}
 
 /* Open Status */
 .open-status{display:inline-flex;align-items:center;gap:5px;padding:0.3rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:600;}
@@ -168,15 +168,15 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
 <!-- Hero Section -->
 <div class="hero">
-  <img src="../assets/no-image.svg" alt="Catalan cuisine" loading="eager">
+  <img src="../assets/no-image.svg" alt="Spanish cuisine" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <a href="../index.html?hood=Eixample" class="hero-back">← Eixample</a>
-    <h1>Bar Dijous</h1>
+    <h1>El Filete Ruso</h1>
     <div class="hero-meta">
-      <span>Catalan</span>
+      <span>Spanish</span>
       <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span> 4.3</span>
-      <span>·</span><span>13-16€</span>
+      
       <span>·</span>
       <div class="open-status unknown" id="open-status"><span class="open-dot"></span> <span id="open-text">Checking...</span></div>
     </div>
@@ -187,14 +187,14 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <!-- Menú del Día Deal Card -->
   <div class="deal-card">
     <div class="deal-header">
-      <span class="deal-emoji">🟢</span>
-      <span class="deal-title">Menú del Día Confirmed</span>
+      <span class="deal-emoji">🟡</span>
+      <span class="deal-title">Likely Menú del Día</span>
     </div>
-    <div class="deal-price">13-16€</div>
-    <div class="deal-desc">Menú del día price range · Eixample · Passeig de Gràcia (L2/L3/L4)</div>
+    
+    <div class="deal-desc">Eixample · Passeig de Gràcia (L2/L3/L4)</div>
   </div>
 
-  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Bar+Dijous+Eixample%2C+Barcelona+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=El+Filete+Ruso+Eixample%2C+Barcelona+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
     <button class="share-btn" style="flex:1;justify-content:center;" onclick="toggleFav(1106)">❤️ Save</button></div>
 
   <!-- Tabs -->
@@ -207,24 +207,24 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
   <!-- Tab: Info -->
   <div class="tab-content active" id="tab-info">
-    <div class="tags"><span class="tag">business-lunch</span><span class="tag">menú-del-día</span></div>
+    <div class="tags"><span class="tag">waterfront</span></div>
 
     <div class="info-section">
       <h3>Details</h3>
-      <div class="info-row"><span class="link-icon">📍</span> Eixample · Eixample, Barcelona · 08036</div>
-      <div class="info-row"><span class="link-icon">🍽️</span> Catalan · mid-range</div>
+      <div class="info-row"><span class="link-icon">📍</span> Eixample · Eixample, Barcelona · 08010</div>
+      <div class="info-row"><span class="link-icon">🍽️</span> Spanish · mid-range</div>
       <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00</div>
       <div class="info-row"><span class="link-icon">🚇</span> Passeig de Gràcia (L2/L3/L4)</div>
     </div>
 
-    <div class="notes">2025. Catalan classics.</div>
+    <div class="notes">Classic Spanish comfort. Hearty portions.</div>
 
-    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=Bar+Dijous+Eixample%2C+Barcelona+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
+    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=El+Filete+Ruso+Eixample%2C+Barcelona+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
 
     <div class="share-section">
       <button class="share-btn" onclick="shareNative()">📤 Share</button>
       <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
-      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Bar%20Dijous%20in%20Eixample%2C%20Barcelona%21%2013-16%E2%82%AC%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/1106.html" target="_blank">💬 WhatsApp</a>
+      <a class="share-btn" href="https://wa.me/?text=Check%20out%20El%20Filete%20Ruso%20in%20Eixample%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/1106.html" target="_blank">💬 WhatsApp</a>
     </div>
 
     <div class="community">
@@ -236,7 +236,7 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <div class="tab-content" id="tab-map">
       <div id="minimap"></div>
       <div class="map-address">
-        <span class="link-icon">📍</span> Eixample, Barcelona, 08036, Barcelona
+        <span class="link-icon">📍</span> Eixample, Barcelona, 08010, Barcelona
         <br><span class="link-icon">🚇</span> Passeig de Gràcia (L2/L3/L4)
       </div>
     </div>
@@ -247,28 +247,28 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
         <div class="review-score">4.3</div>
         <div class="review-details">
           <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span></div>
-          <div class="review-count">254 Google reviews</div>
+          <div class="review-count">346 Google reviews</div>
         </div>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=Bar+Dijous+Eixample%2C+Barcelona+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=El+Filete+Ruso+Eixample%2C+Barcelona+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
     </div>
 
   <!-- Tab: Nearby -->
   <div class="tab-content" id="tab-nearby">
       <h2>📍 Nearby Restaurants</h2>
-      <a href="942.html" class="nearby-card">
+      <a href="908.html" class="nearby-card">
           <div class="nearby-icon">🥗</div>
           <div class="nearby-info">
             <div class="nearby-name">Taller del Chef</div>
             <div class="nearby-meta">🟢 Mediterranean · 15-18€ · 0m</div>
           </div>
-        </a><a href="953.html" class="nearby-card">
+        </a><a href="919.html" class="nearby-card">
           <div class="nearby-icon">🌶️</div>
           <div class="nearby-info">
             <div class="nearby-name">El Celler de Can Roca Pop-up</div>
             <div class="nearby-meta">🔴 Catalan ·  · 0m</div>
           </div>
-        </a><a href="960.html" class="nearby-card">
+        </a><a href="926.html" class="nearby-card">
           <div class="nearby-icon">🥘</div>
           <div class="nearby-info">
             <div class="nearby-name">El Portalón</div>
@@ -279,7 +279,7 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 </div>
 
 <footer>
-  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #1106 of 1,520
+  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #1106 of 1,458
 </footer>
 
 <script>
@@ -308,7 +308,7 @@ function switchTab(id){
 
 // Share
 function shareNative(){
-  if(navigator.share){navigator.share({title:'Bar Dijous — Menuverso',text:'Catalan in Eixample. 13-16€ menú del día.',url:window.location.href})}
+  if(navigator.share){navigator.share({title:'El Filete Ruso — Menuverso',text:'Spanish in Eixample.  menú del día.',url:window.location.href})}
   else{copyLink(document.querySelector('.share-btn'))}
 }
 function copyLink(btn){
@@ -371,7 +371,7 @@ renderVisited(1106);
 <script>
 var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.3936885,2.1636552],16);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
-L.circleMarker([41.3936885,2.1636552],{radius:10,fillColor:'#059669',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
+L.circleMarker([41.3936885,2.1636552],{radius:10,fillColor:'#D97706',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
 if(document.documentElement.classList.contains('dark')){document.querySelectorAll('.leaflet-tile').forEach(t=>t.style.filter='invert(1) hue-rotate(180deg) brightness(0.9)');};
 </script>
 </body>

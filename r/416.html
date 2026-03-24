@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>22:22 Cultura Dulce — Menú del Día Barcelona | Menuverso</title>
-<meta name="description" content="22:22 Cultura Dulce in Eixample, Barcelona. Mexican cuisine.  menú del día. Likely Menú del Día. Rating: 4.6/5 (222 reviews).">
-<meta property="og:title" content="22:22 Cultura Dulce — Menú del Día | Menuverso">
-<meta property="og:description" content="Mexican in Eixample.  menú del día. ⭐ 4.6/5">
+<title>Generation B — Menú del Día Barcelona | Menuverso</title>
+<meta name="description" content="Generation B in Eixample, Barcelona. Café cuisine.  menú del día. No Menú del Día. Rating: 4.4/5 (259 reviews).">
+<meta property="og:title" content="Generation B — Menú del Día | Menuverso">
+<meta property="og:description" content="Café in Eixample.  menú del día. ⭐ 4.4/5">
 <meta property="og:url" content="https://whiteboxamir.github.io/menuverso/r/416.html">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:site_name" content="Menuverso">
@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "22:22 Cultura Dulce", "address": {"@type": "PostalAddress", "streetAddress": "C/ de París, 165", "addressLocality": "Barcelona", "postalCode": "08036", "addressCountry": "ES"}, "servesCuisine": "Mexican", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.6, "reviewCount": 222}, "geo": {"@type": "GeoCoordinates", "latitude": 41.3923056, "longitude": 2.1512877}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Generation B", "address": {"@type": "PostalAddress", "streetAddress": "C/ de Girona, 118", "addressLocality": "Barcelona", "postalCode": "08009", "addressCountry": "ES"}, "servesCuisine": "Café", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.4, "reviewCount": 259}, "geo": {"@type": "GeoCoordinates", "latitude": 41.3970942, "longitude": 2.1682789}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -55,13 +55,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .container{max-width:720px;margin:-40px auto 0;padding:0 1rem 2rem;position:relative;z-index:2;}
 
 /* Deal Card (Neotaste-style) */
-.deal-card{background:#FEF3C7;border:2px solid #D9770622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
+.deal-card{background:#FEE2E2;border:2px solid #DC262622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
 .deal-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}
 .deal-emoji{font-size:1.5rem;}
-.deal-title{font-size:1.1rem;font-weight:700;color:#D97706;}
+.deal-title{font-size:1.1rem;font-weight:700;color:#DC2626;}
 .deal-price{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:0.25rem;}
 .deal-desc{font-size:0.82rem;color:var(--sub);}
-:root.dark .deal-card{background:var(--card);border-color:#D9770644;}
+:root.dark .deal-card{background:var(--card);border-color:#DC262644;}
 
 /* Open Status */
 .open-status{display:inline-flex;align-items:center;gap:5px;padding:0.3rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:600;}
@@ -168,14 +168,14 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
 <!-- Hero Section -->
 <div class="hero">
-  <img src="../assets/no-image.svg" alt="Mexican cuisine" loading="eager">
+  <img src="../assets/no-image.svg" alt="Café cuisine" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <a href="../index.html?hood=Eixample" class="hero-back">← Eixample</a>
-    <h1>22:22 Cultura Dulce</h1>
+    <h1>Generation B</h1>
     <div class="hero-meta">
-      <span>Mexican</span>
-      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span> 4.6</span>
+      <span>Café</span>
+      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span> 4.4</span>
       
       <span>·</span>
       <div class="open-status unknown" id="open-status"><span class="open-dot"></span> <span id="open-text">Checking...</span></div>
@@ -187,44 +187,44 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <!-- Menú del Día Deal Card -->
   <div class="deal-card">
     <div class="deal-header">
-      <span class="deal-emoji">🟡</span>
-      <span class="deal-title">Likely Menú del Día</span>
+      <span class="deal-emoji">🔴</span>
+      <span class="deal-title">No Menú del Día</span>
     </div>
     
-    <div class="deal-desc">Eixample · Hospital Clínic (L5)</div>
+    <div class="deal-desc">Eixample · Verdaguer (L4/L5)</div>
   </div>
 
-  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=22%3A22+Cultura+Dulce+C%2F+de+Par%C3%ADs%2C+165+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Generation+B+C%2F+de+Girona%2C+118+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
     <button class="share-btn" style="flex:1;justify-content:center;" onclick="toggleFav(416)">❤️ Save</button></div>
 
   <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('info')">Info</button>
     <button class="tab-btn" onclick="switchTab('map')">Map</button>
-    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.6)</button>
+    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.4)</button>
     <button class="tab-btn" onclick="switchTab('nearby')">Nearby</button>
   </div>
 
   <!-- Tab: Info -->
   <div class="tab-content active" id="tab-info">
-    <div class="tags"><span class="tag">tasting-menu</span></div>
+    <div class="tags"><span class="tag">breakfast</span><span class="tag">gluten-free</span><span class="tag">healthy</span></div>
 
     <div class="info-section">
       <h3>Details</h3>
-      <div class="info-row"><span class="link-icon">📍</span> Eixample · C/ de París, 165 · 08036</div>
-      <div class="info-row"><span class="link-icon">🍽️</span> Mexican · mid-range</div>
+      <div class="info-row"><span class="link-icon">📍</span> Eixample · C/ de Girona, 118 · 08009</div>
+      <div class="info-row"><span class="link-icon">🍽️</span> Café · mid-range</div>
       <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00</div>
-      <div class="info-row"><span class="link-icon">🚇</span> Hospital Clínic (L5)</div>
+      <div class="info-row"><span class="link-icon">🚇</span> Verdaguer (L4/L5)</div>
     </div>
 
-    <div class="notes">Mexican pastry chef Maite Otegui. Dessert tasting menus.</div>
+    <div class="notes">Healthy, gluten and sugar-free</div>
 
-    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=22%3A22+Cultura+Dulce+C%2F+de+Par%C3%ADs%2C+165+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
+    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=Generation+B+C%2F+de+Girona%2C+118+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
 
     <div class="share-section">
       <button class="share-btn" onclick="shareNative()">📤 Share</button>
       <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
-      <a class="share-btn" href="https://wa.me/?text=Check%20out%2022%3A22%20Cultura%20Dulce%20in%20Eixample%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/416.html" target="_blank">💬 WhatsApp</a>
+      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Generation%20B%20in%20Eixample%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/416.html" target="_blank">💬 WhatsApp</a>
     </div>
 
     <div class="community">
@@ -236,50 +236,50 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <div class="tab-content" id="tab-map">
       <div id="minimap"></div>
       <div class="map-address">
-        <span class="link-icon">📍</span> C/ de París, 165, 08036, Barcelona
-        <br><span class="link-icon">🚇</span> Hospital Clínic (L5)
+        <span class="link-icon">📍</span> C/ de Girona, 118, 08009, Barcelona
+        <br><span class="link-icon">🚇</span> Verdaguer (L4/L5)
       </div>
     </div>
 
   <!-- Tab: Reviews -->
   <div class="tab-content" id="tab-reviews">
       <div class="review-card">
-        <div class="review-score">4.6</div>
+        <div class="review-score">4.4</div>
         <div class="review-details">
           <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span></div>
-          <div class="review-count">222 Google reviews</div>
+          <div class="review-count">259 Google reviews</div>
         </div>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=22%3A22+Cultura+Dulce+C%2F+de+Par%C3%ADs%2C+165+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Generation+B+C%2F+de+Girona%2C+118+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
     </div>
 
   <!-- Tab: Nearby -->
   <div class="tab-content" id="tab-nearby">
       <h2>📍 Nearby Restaurants</h2>
-      <a href="1391.html" class="nearby-card">
+      <a href="91.html" class="nearby-card">
+          <div class="nearby-icon">🌶️</div>
+          <div class="nearby-info">
+            <div class="nearby-name">Casa Amalia</div>
+            <div class="nearby-meta">🟢 Catalan · 14-16€ · 96m</div>
+          </div>
+        </a><a href="713.html" class="nearby-card">
+          <div class="nearby-icon">🍣</div>
+          <div class="nearby-info">
+            <div class="nearby-name">Rakkan Barcelona</div>
+            <div class="nearby-meta">🔴 Japanese ·  · 128m</div>
+          </div>
+        </a><a href="85.html" class="nearby-card">
           <div class="nearby-icon">🥘</div>
           <div class="nearby-info">
-            <div class="nearby-name">Maitea</div>
-            <div class="nearby-meta">🟡 Basque ·  · 135m</div>
-          </div>
-        </a><a href="418.html" class="nearby-card">
-          <div class="nearby-icon">☕</div>
-          <div class="nearby-info">
-            <div class="nearby-name">New Pause Coffee Bar</div>
-            <div class="nearby-meta">🔴 Café ·  · 142m</div>
-          </div>
-        </a><a href="322.html" class="nearby-card">
-          <div class="nearby-icon">🍜</div>
-          <div class="nearby-info">
-            <div class="nearby-name">Hawker 45</div>
-            <div class="nearby-meta">🟡 Asian ·  · 146m</div>
+            <div class="nearby-name">Bar Anita</div>
+            <div class="nearby-meta">🟡 Spanish ·  · 135m</div>
           </div>
         </a>
     </div>
 </div>
 
 <footer>
-  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #416 of 1,520
+  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #416 of 1,458
 </footer>
 
 <script>
@@ -308,7 +308,7 @@ function switchTab(id){
 
 // Share
 function shareNative(){
-  if(navigator.share){navigator.share({title:'22:22 Cultura Dulce — Menuverso',text:'Mexican in Eixample.  menú del día.',url:window.location.href})}
+  if(navigator.share){navigator.share({title:'Generation B — Menuverso',text:'Café in Eixample.  menú del día.',url:window.location.href})}
   else{copyLink(document.querySelector('.share-btn'))}
 }
 function copyLink(btn){
@@ -369,9 +369,9 @@ initTheme();
 renderVisited(416);
 </script>
 <script>
-var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.3923056,2.1512877],16);
+var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.3970942,2.1682789],16);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
-L.circleMarker([41.3923056,2.1512877],{radius:10,fillColor:'#D97706',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
+L.circleMarker([41.3970942,2.1682789],{radius:10,fillColor:'#DC2626',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
 if(document.documentElement.classList.contains('dark')){document.querySelectorAll('.leaflet-tile').forEach(t=>t.style.filter='invert(1) hue-rotate(180deg) brightness(0.9)');};
 </script>
 </body>

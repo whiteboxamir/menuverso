@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agut — Menú del Día Barcelona | Menuverso</title>
-<meta name="description" content="Agut in Barri Gòtic, Barcelona. Catalan cuisine. 15-18€ menú del día. Menú del Día Confirmed. Rating: 4.4/5 (1446 reviews).">
-<meta property="og:title" content="Agut — Menú del Día | Menuverso">
-<meta property="og:description" content="Catalan in Barri Gòtic. 15-18€ menú del día. ⭐ 4.4/5">
+<title>L'olla del Torrent — Menú del Día Barcelona | Menuverso</title>
+<meta name="description" content="L'olla del Torrent in Gràcia, Barcelona. French cuisine.  menú del día. Likely Menú del Día. Rating: 4.4/5 (603 reviews).">
+<meta property="og:title" content="L'olla del Torrent — Menú del Día | Menuverso">
+<meta property="og:description" content="French in Gràcia.  menú del día. ⭐ 4.4/5">
 <meta property="og:url" content="https://whiteboxamir.github.io/menuverso/r/380.html">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:site_name" content="Menuverso">
@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Agut", "address": {"@type": "PostalAddress", "streetAddress": "C/ d'en Gignàs, 16", "addressLocality": "Barcelona", "postalCode": "08002", "addressCountry": "ES"}, "servesCuisine": "Catalan", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.4, "reviewCount": 1446}, "telephone": "+34 933151709", "url": "http://www.restaurantagut.com/", "priceRange": "15-18€", "geo": {"@type": "GeoCoordinates", "latitude": 41.380947, "longitude": 2.1799439}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "L'olla del Torrent", "address": {"@type": "PostalAddress", "streetAddress": "C/ del Torrent de l'Olla, 106", "addressLocality": "Barcelona", "postalCode": "08012", "addressCountry": "ES"}, "servesCuisine": "French", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.4, "reviewCount": 603}, "geo": {"@type": "GeoCoordinates", "latitude": 41.4015808, "longitude": 2.1579316}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -55,13 +55,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .container{max-width:720px;margin:-40px auto 0;padding:0 1rem 2rem;position:relative;z-index:2;}
 
 /* Deal Card (Neotaste-style) */
-.deal-card{background:#D1FAE5;border:2px solid #05966922;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
+.deal-card{background:#FEF3C7;border:2px solid #D9770622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
 .deal-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}
 .deal-emoji{font-size:1.5rem;}
-.deal-title{font-size:1.1rem;font-weight:700;color:#059669;}
+.deal-title{font-size:1.1rem;font-weight:700;color:#D97706;}
 .deal-price{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:0.25rem;}
 .deal-desc{font-size:0.82rem;color:var(--sub);}
-:root.dark .deal-card{background:var(--card);border-color:#05966944;}
+:root.dark .deal-card{background:var(--card);border-color:#D9770644;}
 
 /* Open Status */
 .open-status{display:inline-flex;align-items:center;gap:5px;padding:0.3rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:600;}
@@ -168,15 +168,15 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
 <!-- Hero Section -->
 <div class="hero">
-  <img src="../assets/no-image.svg" alt="Catalan cuisine" loading="eager">
+  <img src="../assets/no-image.svg" alt="French cuisine" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <a href="../index.html?hood=Barri+G%C3%B2tic" class="hero-back">← Barri Gòtic</a>
-    <h1>Agut</h1>
+    <a href="../index.html?hood=Gr%C3%A0cia" class="hero-back">← Gràcia</a>
+    <h1>L'olla del Torrent</h1>
     <div class="hero-meta">
-      <span>Catalan</span>
+      <span>French</span>
       <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span> 4.4</span>
-      <span>·</span><span>15-18€</span>
+      
       <span>·</span>
       <div class="open-status unknown" id="open-status"><span class="open-dot"></span> <span id="open-text">Checking...</span></div>
     </div>
@@ -187,16 +187,14 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <!-- Menú del Día Deal Card -->
   <div class="deal-card">
     <div class="deal-header">
-      <span class="deal-emoji">🟢</span>
-      <span class="deal-title">Menú del Día Confirmed</span>
+      <span class="deal-emoji">🟡</span>
+      <span class="deal-title">Likely Menú del Día</span>
     </div>
-    <div class="deal-price">15-18€</div>
-    <div class="deal-desc">Menú del día price range · Barri Gòtic · Jaume I (L4)</div>
+    
+    <div class="deal-desc">Gràcia · Fontana (L3)</div>
   </div>
 
-  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Agut+C%2F+d%27en+Gign%C3%A0s%2C+16+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
-    <a href="tel:+34 933151709" class="share-btn" style="flex:1;justify-content:center;">📞 Call</a>
-    <a href="http://www.restaurantagut.com/" target="_blank" class="share-btn" style="flex:1;justify-content:center;">🌐 Website</a>
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=L%27olla+del+Torrent+C%2F+del+Torrent+de+l%27Olla%2C+106+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
     <button class="share-btn" style="flex:1;justify-content:center;" onclick="toggleFav(380)">❤️ Save</button></div>
 
   <!-- Tabs -->
@@ -209,24 +207,24 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
   <!-- Tab: Info -->
   <div class="tab-content active" id="tab-info">
-    <div class="tags"><span class="tag">historic</span><span class="tag">menú-del-día</span></div>
+    <div class="tags"><span class="tag">budget-friendly</span></div>
 
     <div class="info-section">
       <h3>Details</h3>
-      <div class="info-row"><span class="link-icon">📍</span> Barri Gòtic · C/ d'en Gignàs, 16 · 08002</div>
-      <div class="info-row"><span class="link-icon">🍽️</span> Catalan · mid-range</div>
-      <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00 (Tue-Sat)</div>
-      <div class="info-row"><span class="link-icon">🚇</span> Jaume I (L4)</div>
+      <div class="info-row"><span class="link-icon">📍</span> Gràcia · C/ del Torrent de l'Olla, 106 · 08012</div>
+      <div class="info-row"><span class="link-icon">🍽️</span> French · budget</div>
+      <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00</div>
+      <div class="info-row"><span class="link-icon">🚇</span> Fontana (L3)</div>
     </div>
 
-    <div class="notes">Traditional Catalan cuisine since 1924</div>
+    <div class="notes">Creperie</div>
 
-    <div class="contact-links"><a href="http://www.restaurantagut.com/" target="_blank" class="contact-link"><span class="link-icon">🌐</span> Website</a><a href="https://www.google.com/maps/search/?api=1&query=Agut+C%2F+d%27en+Gign%C3%A0s%2C+16+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a><a href="tel:+34 933151709" class="contact-link"><span class="link-icon">📞</span> +34 933151709</a></div>
+    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=L%27olla+del+Torrent+C%2F+del+Torrent+de+l%27Olla%2C+106+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
 
     <div class="share-section">
       <button class="share-btn" onclick="shareNative()">📤 Share</button>
       <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
-      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Agut%20in%20Barri%20G%C3%B2tic%2C%20Barcelona%21%2015-18%E2%82%AC%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/380.html" target="_blank">💬 WhatsApp</a>
+      <a class="share-btn" href="https://wa.me/?text=Check%20out%20L%27olla%20del%20Torrent%20in%20Gr%C3%A0cia%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/380.html" target="_blank">💬 WhatsApp</a>
     </div>
 
     <div class="community">
@@ -238,8 +236,8 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <div class="tab-content" id="tab-map">
       <div id="minimap"></div>
       <div class="map-address">
-        <span class="link-icon">📍</span> C/ d'en Gignàs, 16, 08002, Barcelona
-        <br><span class="link-icon">🚇</span> Jaume I (L4)
+        <span class="link-icon">📍</span> C/ del Torrent de l'Olla, 106, 08012, Barcelona
+        <br><span class="link-icon">🚇</span> Fontana (L3)
       </div>
     </div>
 
@@ -249,39 +247,39 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
         <div class="review-score">4.4</div>
         <div class="review-details">
           <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span></div>
-          <div class="review-count">1,446 Google reviews</div>
+          <div class="review-count">603 Google reviews</div>
         </div>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=Agut+C%2F+d%27en+Gign%C3%A0s%2C+16+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=L%27olla+del+Torrent+C%2F+del+Torrent+de+l%27Olla%2C+106+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
     </div>
 
   <!-- Tab: Nearby -->
   <div class="tab-content" id="tab-nearby">
       <h2>📍 Nearby Restaurants</h2>
-      <a href="614.html" class="nearby-card">
-          <div class="nearby-icon">🌶️</div>
-          <div class="nearby-info">
-            <div class="nearby-name">Restaurante Agut</div>
-            <div class="nearby-meta">🟢 Catalan · 15-18€ · 0m</div>
-          </div>
-        </a><a href="1306.html" class="nearby-card">
-          <div class="nearby-icon">🌍</div>
-          <div class="nearby-info">
-            <div class="nearby-name">Milk Bar Gothic</div>
-            <div class="nearby-meta">🟡 Fusion ·  · 44m</div>
-          </div>
-        </a><a href="491.html" class="nearby-card">
+      <a href="381.html" class="nearby-card">
           <div class="nearby-icon">🥘</div>
           <div class="nearby-info">
-            <div class="nearby-name">Sensi Tapas</div>
-            <div class="nearby-meta">🟡 Spanish ·  · 67m</div>
+            <div class="nearby-name">Bar Alegría Gràcia</div>
+            <div class="nearby-meta">🟡 Spanish ·  · 38m</div>
+          </div>
+        </a><a href="384.html" class="nearby-card">
+          <div class="nearby-icon">🌶️</div>
+          <div class="nearby-info">
+            <div class="nearby-name">La Llar dels Orígens</div>
+            <div class="nearby-meta">🟢 Catalan · 12-14€ · 66m</div>
+          </div>
+        </a><a href="497.html" class="nearby-card">
+          <div class="nearby-icon">🥗</div>
+          <div class="nearby-info">
+            <div class="nearby-name">La Monroe</div>
+            <div class="nearby-meta">🟡 Mediterranean ·  · 97m</div>
           </div>
         </a>
     </div>
 </div>
 
 <footer>
-  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #380 of 1,520
+  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #380 of 1,458
 </footer>
 
 <script>
@@ -310,7 +308,7 @@ function switchTab(id){
 
 // Share
 function shareNative(){
-  if(navigator.share){navigator.share({title:'Agut — Menuverso',text:'Catalan in Barri Gòtic. 15-18€ menú del día.',url:window.location.href})}
+  if(navigator.share){navigator.share({title:'L'olla del Torrent — Menuverso',text:'French in Gràcia.  menú del día.',url:window.location.href})}
   else{copyLink(document.querySelector('.share-btn'))}
 }
 function copyLink(btn){
@@ -321,7 +319,7 @@ function copyLink(btn){
 
 // Open Now
 (function(){
-  var hoursStr='13:00-16:00 (Tue-Sat)';
+  var hoursStr='13:00-16:00';
   var el=document.getElementById('open-status');
   var txt=document.getElementById('open-text');
   if(!hoursStr||!hoursStr.trim()){el.className='open-status unknown';txt.textContent='Hours unavailable';return;}
@@ -371,9 +369,9 @@ initTheme();
 renderVisited(380);
 </script>
 <script>
-var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.380947,2.1799439],16);
+var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.4015808,2.1579316],16);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
-L.circleMarker([41.380947,2.1799439],{radius:10,fillColor:'#059669',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
+L.circleMarker([41.4015808,2.1579316],{radius:10,fillColor:'#D97706',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
 if(document.documentElement.classList.contains('dark')){document.querySelectorAll('.leaflet-tile').forEach(t=>t.style.filter='invert(1) hue-rotate(180deg) brightness(0.9)');};
 </script>
 </body>

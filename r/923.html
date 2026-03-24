@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Restaurant Can Rectoret — Menú del Día Barcelona | Menuverso</title>
-<meta name="description" content="Restaurant Can Rectoret in Horta-Guinardó, Barcelona. Catalan cuisine. 15-18€ menú del día. Menú del Día Confirmed. Rating: 4.4/5 (664 reviews).">
-<meta property="og:title" content="Restaurant Can Rectoret — Menú del Día | Menuverso">
-<meta property="og:description" content="Catalan in Horta-Guinardó. 15-18€ menú del día. ⭐ 4.4/5">
+<title>El Pasaje — Menú del Día Barcelona | Menuverso</title>
+<meta name="description" content="El Pasaje in El Born, Barcelona. Spanish cuisine.  menú del día. Likely Menú del Día. Rating: 3.9/5 (1543 reviews).">
+<meta property="og:title" content="El Pasaje — Menú del Día | Menuverso">
+<meta property="og:description" content="Spanish in El Born.  menú del día. ⭐ 3.9/5">
 <meta property="og:url" content="https://whiteboxamir.github.io/menuverso/r/923.html">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:site_name" content="Menuverso">
@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Restaurant Can Rectoret", "address": {"@type": "PostalAddress", "streetAddress": "C/ d'Horta, 100", "addressLocality": "Barcelona", "postalCode": "08032", "addressCountry": "ES"}, "servesCuisine": "Catalan", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.4, "reviewCount": 664}, "priceRange": "15-18€", "geo": {"@type": "GeoCoordinates", "latitude": 41.4307129, "longitude": 2.1618668}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "El Pasaje", "address": {"@type": "PostalAddress", "streetAddress": "C/ de Sant Pere Més Baix, 56", "addressLocality": "Barcelona", "postalCode": "08003", "addressCountry": "ES"}, "servesCuisine": "Spanish", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 3.9, "reviewCount": 1543}, "telephone": "+34 933198498", "url": "https://elpasaje.es/", "geo": {"@type": "GeoCoordinates", "latitude": 41.3877781, "longitude": 2.1783531}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -55,13 +55,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .container{max-width:720px;margin:-40px auto 0;padding:0 1rem 2rem;position:relative;z-index:2;}
 
 /* Deal Card (Neotaste-style) */
-.deal-card{background:#D1FAE5;border:2px solid #05966922;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
+.deal-card{background:#FEF3C7;border:2px solid #D9770622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
 .deal-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}
 .deal-emoji{font-size:1.5rem;}
-.deal-title{font-size:1.1rem;font-weight:700;color:#059669;}
+.deal-title{font-size:1.1rem;font-weight:700;color:#D97706;}
 .deal-price{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:0.25rem;}
 .deal-desc{font-size:0.82rem;color:var(--sub);}
-:root.dark .deal-card{background:var(--card);border-color:#05966944;}
+:root.dark .deal-card{background:var(--card);border-color:#D9770644;}
 
 /* Open Status */
 .open-status{display:inline-flex;align-items:center;gap:5px;padding:0.3rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:600;}
@@ -168,15 +168,15 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
 <!-- Hero Section -->
 <div class="hero">
-  <img src="../assets/no-image.svg" alt="Catalan cuisine" loading="eager">
+  <img src="../assets/no-image.svg" alt="Spanish cuisine" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <a href="../index.html?hood=Horta-Guinard%C3%B3" class="hero-back">← Horta-Guinardó</a>
-    <h1>Restaurant Can Rectoret</h1>
+    <a href="../index.html?hood=El+Born" class="hero-back">← El Born</a>
+    <h1>El Pasaje</h1>
     <div class="hero-meta">
-      <span>Catalan</span>
-      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span> 4.4</span>
-      <span>·</span><span>15-18€</span>
+      <span>Spanish</span>
+      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span> 3.9</span>
+      
       <span>·</span>
       <div class="open-status unknown" id="open-status"><span class="open-dot"></span> <span id="open-text">Checking...</span></div>
     </div>
@@ -187,44 +187,46 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <!-- Menú del Día Deal Card -->
   <div class="deal-card">
     <div class="deal-header">
-      <span class="deal-emoji">🟢</span>
-      <span class="deal-title">Menú del Día Confirmed</span>
+      <span class="deal-emoji">🟡</span>
+      <span class="deal-title">Likely Menú del Día</span>
     </div>
-    <div class="deal-price">15-18€</div>
-    <div class="deal-desc">Menú del día price range · Horta-Guinardó · Horta (L5)</div>
+    
+    <div class="deal-desc">El Born · Arc de Triomf (L1)</div>
   </div>
 
-  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Rectoret+C%2F+d%27Horta%2C+100+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=El+Pasaje+C%2F+de+Sant+Pere+M%C3%A9s+Baix%2C+56+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
+    <a href="tel:+34 933198498" class="share-btn" style="flex:1;justify-content:center;">📞 Call</a>
+    <a href="https://elpasaje.es/" target="_blank" class="share-btn" style="flex:1;justify-content:center;">🌐 Website</a>
     <button class="share-btn" style="flex:1;justify-content:center;" onclick="toggleFav(923)">❤️ Save</button></div>
 
   <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('info')">Info</button>
     <button class="tab-btn" onclick="switchTab('map')">Map</button>
-    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.4)</button>
+    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (3.9)</button>
     <button class="tab-btn" onclick="switchTab('nearby')">Nearby</button>
   </div>
 
   <!-- Tab: Info -->
   <div class="tab-content active" id="tab-info">
-    <div class="tags"><span class="tag">menú-del-día</span><span class="tag">terrace</span></div>
+    
 
     <div class="info-section">
       <h3>Details</h3>
-      <div class="info-row"><span class="link-icon">📍</span> Horta-Guinardó · C/ d'Horta, 100 · 08032</div>
-      <div class="info-row"><span class="link-icon">🍽️</span> Catalan · mid-range</div>
-      <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00 (Tue-Sat)</div>
-      <div class="info-row"><span class="link-icon">🚇</span> Horta (L5)</div>
+      <div class="info-row"><span class="link-icon">📍</span> El Born · C/ de Sant Pere Més Baix, 56 · 08003</div>
+      <div class="info-row"><span class="link-icon">🍽️</span> Spanish · mid-range</div>
+      <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00</div>
+      <div class="info-row"><span class="link-icon">🚇</span> Arc de Triomf (L1)</div>
     </div>
 
-    <div class="notes">Farmhouse restaurant. Garden dining.</div>
+    <div class="notes">Hidden passage restaurant</div>
 
-    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Rectoret+C%2F+d%27Horta%2C+100+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
+    <div class="contact-links"><a href="https://elpasaje.es/" target="_blank" class="contact-link"><span class="link-icon">🌐</span> Website</a><a href="https://www.google.com/maps/search/?api=1&query=El+Pasaje+C%2F+de+Sant+Pere+M%C3%A9s+Baix%2C+56+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a><a href="tel:+34 933198498" class="contact-link"><span class="link-icon">📞</span> +34 933198498</a></div>
 
     <div class="share-section">
       <button class="share-btn" onclick="shareNative()">📤 Share</button>
       <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
-      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Restaurant%20Can%20Rectoret%20in%20Horta-Guinard%C3%B3%2C%20Barcelona%21%2015-18%E2%82%AC%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/923.html" target="_blank">💬 WhatsApp</a>
+      <a class="share-btn" href="https://wa.me/?text=Check%20out%20El%20Pasaje%20in%20El%20Born%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/923.html" target="_blank">💬 WhatsApp</a>
     </div>
 
     <div class="community">
@@ -236,50 +238,50 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <div class="tab-content" id="tab-map">
       <div id="minimap"></div>
       <div class="map-address">
-        <span class="link-icon">📍</span> C/ d'Horta, 100, 08032, Barcelona
-        <br><span class="link-icon">🚇</span> Horta (L5)
+        <span class="link-icon">📍</span> C/ de Sant Pere Més Baix, 56, 08003, Barcelona
+        <br><span class="link-icon">🚇</span> Arc de Triomf (L1)
       </div>
     </div>
 
   <!-- Tab: Reviews -->
   <div class="tab-content" id="tab-reviews">
       <div class="review-card">
-        <div class="review-score">4.4</div>
+        <div class="review-score">3.9</div>
         <div class="review-details">
-          <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span></div>
-          <div class="review-count">664 Google reviews</div>
+          <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span></div>
+          <div class="review-count">1,543 Google reviews</div>
         </div>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Rectoret+C%2F+d%27Horta%2C+100+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=El+Pasaje+C%2F+de+Sant+Pere+M%C3%A9s+Baix%2C+56+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
     </div>
 
   <!-- Tab: Nearby -->
   <div class="tab-content" id="tab-nearby">
       <h2>📍 Nearby Restaurants</h2>
-      <a href="643.html" class="nearby-card">
-          <div class="nearby-icon">🌶️</div>
+      <a href="557.html" class="nearby-card">
+          <div class="nearby-icon">🥗</div>
           <div class="nearby-info">
-            <div class="nearby-name">Casa Julia 1978</div>
-            <div class="nearby-meta">🟢 Catalan · 14-16€ · 0m</div>
+            <div class="nearby-name">Bar Puntal</div>
+            <div class="nearby-meta">🟡 Mediterranean ·  · 25m</div>
           </div>
-        </a><a href="545.html" class="nearby-card">
-          <div class="nearby-icon">🌶️</div>
+        </a><a href="785.html" class="nearby-card">
+          <div class="nearby-icon">🥗</div>
           <div class="nearby-info">
-            <div class="nearby-name">La Bodegueta d'Horta</div>
-            <div class="nearby-meta">🟡 Catalan ·  · 156m</div>
+            <div class="nearby-name">Cuines Santa Caterina</div>
+            <div class="nearby-meta">🟡 Mediterranean ·  · 158m</div>
           </div>
-        </a><a href="640.html" class="nearby-card">
-          <div class="nearby-icon">🌶️</div>
+        </a><a href="25.html" class="nearby-card">
+          <div class="nearby-icon">🧀</div>
           <div class="nearby-info">
-            <div class="nearby-name">Can Xus Horta</div>
-            <div class="nearby-meta">🟢 Catalan · 13-15€ · 186m</div>
+            <div class="nearby-name">En Aparte</div>
+            <div class="nearby-meta">🟢 French · 15-20€ · 200m</div>
           </div>
         </a>
     </div>
 </div>
 
 <footer>
-  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #923 of 1,520
+  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #923 of 1,458
 </footer>
 
 <script>
@@ -308,7 +310,7 @@ function switchTab(id){
 
 // Share
 function shareNative(){
-  if(navigator.share){navigator.share({title:'Restaurant Can Rectoret — Menuverso',text:'Catalan in Horta-Guinardó. 15-18€ menú del día.',url:window.location.href})}
+  if(navigator.share){navigator.share({title:'El Pasaje — Menuverso',text:'Spanish in El Born.  menú del día.',url:window.location.href})}
   else{copyLink(document.querySelector('.share-btn'))}
 }
 function copyLink(btn){
@@ -319,7 +321,7 @@ function copyLink(btn){
 
 // Open Now
 (function(){
-  var hoursStr='13:00-16:00 (Tue-Sat)';
+  var hoursStr='13:00-16:00';
   var el=document.getElementById('open-status');
   var txt=document.getElementById('open-text');
   if(!hoursStr||!hoursStr.trim()){el.className='open-status unknown';txt.textContent='Hours unavailable';return;}
@@ -369,9 +371,9 @@ initTheme();
 renderVisited(923);
 </script>
 <script>
-var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.4307129,2.1618668],16);
+var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.3877781,2.1783531],16);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
-L.circleMarker([41.4307129,2.1618668],{radius:10,fillColor:'#059669',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
+L.circleMarker([41.3877781,2.1783531],{radius:10,fillColor:'#D97706',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
 if(document.documentElement.classList.contains('dark')){document.querySelectorAll('.leaflet-tile').forEach(t=>t.style.filter='invert(1) hue-rotate(180deg) brightness(0.9)');};
 </script>
 </body>

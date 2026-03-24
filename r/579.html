@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Uchu — Menú del Día Barcelona | Menuverso</title>
-<meta name="description" content="Uchu in Eixample, Barcelona. Japanese cuisine.  menú del día. No Menú del Día. Rating: 4.5/5 (255 reviews).">
-<meta property="og:title" content="Uchu — Menú del Día | Menuverso">
-<meta property="og:description" content="Japanese in Eixample.  menú del día. ⭐ 4.5/5">
+<title>Café de París — Menú del Día Barcelona | Menuverso</title>
+<meta name="description" content="Café de París in Sarrià-Sant Gervasi, Barcelona. Mediterranean cuisine.  menú del día. Likely Menú del Día. Rating: 4.2/5 (391 reviews).">
+<meta property="og:title" content="Café de París — Menú del Día | Menuverso">
+<meta property="og:description" content="Mediterranean in Sarrià-Sant Gervasi.  menú del día. ⭐ 4.2/5">
 <meta property="og:url" content="https://whiteboxamir.github.io/menuverso/r/579.html">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:site_name" content="Menuverso">
@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Uchu", "address": {"@type": "PostalAddress", "streetAddress": "C/ d'Aribau, 120", "addressLocality": "Barcelona", "postalCode": "08036", "addressCountry": "ES"}, "servesCuisine": "Japanese", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.5, "reviewCount": 255}, "geo": {"@type": "GeoCoordinates", "latitude": 41.39109, "longitude": 2.1560106}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Café de París", "address": {"@type": "PostalAddress", "streetAddress": "C/ de la Travessera de Gràcia, 250", "addressLocality": "Barcelona", "postalCode": "08021", "addressCountry": "ES"}, "servesCuisine": "Mediterranean", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.2, "reviewCount": 391}, "geo": {"@type": "GeoCoordinates", "latitude": 41.408528, "longitude": 2.169385}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -55,13 +55,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .container{max-width:720px;margin:-40px auto 0;padding:0 1rem 2rem;position:relative;z-index:2;}
 
 /* Deal Card (Neotaste-style) */
-.deal-card{background:#FEE2E2;border:2px solid #DC262622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
+.deal-card{background:#FEF3C7;border:2px solid #D9770622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
 .deal-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}
 .deal-emoji{font-size:1.5rem;}
-.deal-title{font-size:1.1rem;font-weight:700;color:#DC2626;}
+.deal-title{font-size:1.1rem;font-weight:700;color:#D97706;}
 .deal-price{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:0.25rem;}
 .deal-desc{font-size:0.82rem;color:var(--sub);}
-:root.dark .deal-card{background:var(--card);border-color:#DC262644;}
+:root.dark .deal-card{background:var(--card);border-color:#D9770644;}
 
 /* Open Status */
 .open-status{display:inline-flex;align-items:center;gap:5px;padding:0.3rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:600;}
@@ -168,14 +168,14 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
 <!-- Hero Section -->
 <div class="hero">
-  <img src="../assets/no-image.svg" alt="Japanese cuisine" loading="eager">
+  <img src="../assets/no-image.svg" alt="Mediterranean cuisine" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <a href="../index.html?hood=Eixample" class="hero-back">← Eixample</a>
-    <h1>Uchu</h1>
+    <a href="../index.html?hood=Sarri%C3%A0-Sant+Gervasi" class="hero-back">← Sarrià-Sant Gervasi</a>
+    <h1>Café de París</h1>
     <div class="hero-meta">
-      <span>Japanese</span>
-      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span> 4.5</span>
+      <span>Mediterranean</span>
+      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span> 4.2</span>
       
       <span>·</span>
       <div class="open-status unknown" id="open-status"><span class="open-dot"></span> <span id="open-text">Checking...</span></div>
@@ -187,21 +187,21 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <!-- Menú del Día Deal Card -->
   <div class="deal-card">
     <div class="deal-header">
-      <span class="deal-emoji">🔴</span>
-      <span class="deal-title">No Menú del Día</span>
+      <span class="deal-emoji">🟡</span>
+      <span class="deal-title">Likely Menú del Día</span>
     </div>
     
-    <div class="deal-desc">Eixample · Hospital Clínic (L5)</div>
+    <div class="deal-desc">Sarrià-Sant Gervasi · Sant Pau/Dos de Maig (L5)</div>
   </div>
 
-  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Uchu+C%2F+d%27Aribau%2C+120+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+de+Par%C3%ADs+C%2F+de+la+Travessera+de+Gr%C3%A0cia%2C+250+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
     <button class="share-btn" style="flex:1;justify-content:center;" onclick="toggleFav(579)">❤️ Save</button></div>
 
   <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('info')">Info</button>
     <button class="tab-btn" onclick="switchTab('map')">Map</button>
-    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.5)</button>
+    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.2)</button>
     <button class="tab-btn" onclick="switchTab('nearby')">Nearby</button>
   </div>
 
@@ -211,20 +211,20 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
     <div class="info-section">
       <h3>Details</h3>
-      <div class="info-row"><span class="link-icon">📍</span> Eixample · C/ d'Aribau, 120 · 08036</div>
-      <div class="info-row"><span class="link-icon">🍽️</span> Japanese · premium</div>
+      <div class="info-row"><span class="link-icon">📍</span> Sarrià-Sant Gervasi · C/ de la Travessera de Gràcia, 250 · 08021</div>
+      <div class="info-row"><span class="link-icon">🍽️</span> Mediterranean · mid-range</div>
       <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00</div>
-      <div class="info-row"><span class="link-icon">🚇</span> Hospital Clínic (L5)</div>
+      <div class="info-row"><span class="link-icon">🚇</span> Sant Pau/Dos de Maig (L5)</div>
     </div>
 
-    <div class="notes">Nikkei cuisine. Japanese techniques + Peruvian ingredients.</div>
+    
 
-    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=Uchu+C%2F+d%27Aribau%2C+120+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
+    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+de+Par%C3%ADs+C%2F+de+la+Travessera+de+Gr%C3%A0cia%2C+250+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
 
     <div class="share-section">
       <button class="share-btn" onclick="shareNative()">📤 Share</button>
       <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
-      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Uchu%20in%20Eixample%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/579.html" target="_blank">💬 WhatsApp</a>
+      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Caf%C3%A9%20de%20Par%C3%ADs%20in%20Sarri%C3%A0-Sant%20Gervasi%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/579.html" target="_blank">💬 WhatsApp</a>
     </div>
 
     <div class="community">
@@ -236,50 +236,50 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <div class="tab-content" id="tab-map">
       <div id="minimap"></div>
       <div class="map-address">
-        <span class="link-icon">📍</span> C/ d'Aribau, 120, 08036, Barcelona
-        <br><span class="link-icon">🚇</span> Hospital Clínic (L5)
+        <span class="link-icon">📍</span> C/ de la Travessera de Gràcia, 250, 08021, Barcelona
+        <br><span class="link-icon">🚇</span> Sant Pau/Dos de Maig (L5)
       </div>
     </div>
 
   <!-- Tab: Reviews -->
   <div class="tab-content" id="tab-reviews">
       <div class="review-card">
-        <div class="review-score">4.5</div>
+        <div class="review-score">4.2</div>
         <div class="review-details">
-          <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span></div>
-          <div class="review-count">255 Google reviews</div>
+          <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span></div>
+          <div class="review-count">391 Google reviews</div>
         </div>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=Uchu+C%2F+d%27Aribau%2C+120+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+de+Par%C3%ADs+C%2F+de+la+Travessera+de+Gr%C3%A0cia%2C+250+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
     </div>
 
   <!-- Tab: Nearby -->
   <div class="tab-content" id="tab-nearby">
       <h2>📍 Nearby Restaurants</h2>
-      <a href="751.html" class="nearby-card">
-          <div class="nearby-icon">🦐</div>
+      <a href="679.html" class="nearby-card">
+          <div class="nearby-icon">🌶️</div>
           <div class="nearby-info">
-            <div class="nearby-name">Batea Barcelona</div>
-            <div class="nearby-meta">🟡 Seafood ·  · 51m</div>
+            <div class="nearby-name">Restaurant Alkimia Next</div>
+            <div class="nearby-meta">🟢 Catalan · 15-18€ · 288m</div>
           </div>
-        </a><a href="9.html" class="nearby-card">
-          <div class="nearby-icon">🥗</div>
+        </a><a href="61.html" class="nearby-card">
+          <div class="nearby-icon">🥘</div>
           <div class="nearby-info">
-            <div class="nearby-name">Balthazar</div>
-            <div class="nearby-meta">🟢 Mediterranean · 19.60€ · 110m</div>
+            <div class="nearby-name">La Yaya Amelia</div>
+            <div class="nearby-meta">🟢 Spanish · 10-13€ · 342m</div>
           </div>
-        </a><a href="847.html" class="nearby-card">
-          <div class="nearby-icon">🥗</div>
+        </a><a href="59.html" class="nearby-card">
+          <div class="nearby-icon">🥘</div>
           <div class="nearby-info">
-            <div class="nearby-name">Osmosis Restaurant</div>
-            <div class="nearby-meta">🟢 Mediterranean · 16-20€ · 129m</div>
+            <div class="nearby-name">Restaurante Lepanto</div>
+            <div class="nearby-meta">🟢 Spanish · 13-16€ · 573m</div>
           </div>
         </a>
     </div>
 </div>
 
 <footer>
-  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #579 of 1,520
+  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #579 of 1,458
 </footer>
 
 <script>
@@ -308,7 +308,7 @@ function switchTab(id){
 
 // Share
 function shareNative(){
-  if(navigator.share){navigator.share({title:'Uchu — Menuverso',text:'Japanese in Eixample.  menú del día.',url:window.location.href})}
+  if(navigator.share){navigator.share({title:'Café de París — Menuverso',text:'Mediterranean in Sarrià-Sant Gervasi.  menú del día.',url:window.location.href})}
   else{copyLink(document.querySelector('.share-btn'))}
 }
 function copyLink(btn){
@@ -369,9 +369,9 @@ initTheme();
 renderVisited(579);
 </script>
 <script>
-var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.39109,2.1560106],16);
+var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.408528,2.169385],16);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
-L.circleMarker([41.39109,2.1560106],{radius:10,fillColor:'#DC2626',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
+L.circleMarker([41.408528,2.169385],{radius:10,fillColor:'#D97706',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
 if(document.documentElement.classList.contains('dark')){document.querySelectorAll('.leaflet-tile').forEach(t=>t.style.filter='invert(1) hue-rotate(180deg) brightness(0.9)');};
 </script>
 </body>

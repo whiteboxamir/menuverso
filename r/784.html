@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>El Velódromo — Menú del Día Barcelona | Menuverso</title>
-<meta name="description" content="El Velódromo in Eixample, Barcelona. Spanish cuisine. 14-16€ menú del día. Menú del Día Confirmed. Rating: 4.2/5 (1184 reviews).">
-<meta property="og:title" content="El Velódromo — Menú del Día | Menuverso">
-<meta property="og:description" content="Spanish in Eixample. 14-16€ menú del día. ⭐ 4.2/5">
+<title>Euskal Etxea Taberna — Menú del Día Barcelona | Menuverso</title>
+<meta name="description" content="Euskal Etxea Taberna in El Born, Barcelona. Basque cuisine.  menú del día. Likely Menú del Día. Rating: 4.3/5 (1230 reviews).">
+<meta property="og:title" content="Euskal Etxea Taberna — Menú del Día | Menuverso">
+<meta property="og:description" content="Basque in El Born.  menú del día. ⭐ 4.3/5">
 <meta property="og:url" content="https://whiteboxamir.github.io/menuverso/r/784.html">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:site_name" content="Menuverso">
@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "El Velódromo", "address": {"@type": "PostalAddress", "streetAddress": "C/ de Muntaner, 213", "addressLocality": "Barcelona", "postalCode": "08036", "addressCountry": "ES"}, "servesCuisine": "Spanish", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.2, "reviewCount": 1184}, "telephone": "+34 934306022", "url": "https://barvelodromo.com/", "priceRange": "14-16€", "geo": {"@type": "GeoCoordinates", "latitude": 41.3888, "longitude": 2.162}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Euskal Etxea Taberna", "address": {"@type": "PostalAddress", "streetAddress": "Pl. de Montcada, 1-3", "addressLocality": "Barcelona", "postalCode": "08003", "addressCountry": "ES"}, "servesCuisine": "Basque", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.3, "reviewCount": 1230}, "geo": {"@type": "GeoCoordinates", "latitude": 41.4632308, "longitude": 2.1702555}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -55,13 +55,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .container{max-width:720px;margin:-40px auto 0;padding:0 1rem 2rem;position:relative;z-index:2;}
 
 /* Deal Card (Neotaste-style) */
-.deal-card{background:#D1FAE5;border:2px solid #05966922;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
+.deal-card{background:#FEF3C7;border:2px solid #D9770622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
 .deal-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}
 .deal-emoji{font-size:1.5rem;}
-.deal-title{font-size:1.1rem;font-weight:700;color:#059669;}
+.deal-title{font-size:1.1rem;font-weight:700;color:#D97706;}
 .deal-price{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:0.25rem;}
 .deal-desc{font-size:0.82rem;color:var(--sub);}
-:root.dark .deal-card{background:var(--card);border-color:#05966944;}
+:root.dark .deal-card{background:var(--card);border-color:#D9770644;}
 
 /* Open Status */
 .open-status{display:inline-flex;align-items:center;gap:5px;padding:0.3rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:600;}
@@ -168,15 +168,15 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
 <!-- Hero Section -->
 <div class="hero">
-  <img src="../assets/photos/784_hero.webp" alt="Spanish cuisine" loading="eager">
+  <img src="../assets/photos/784_hero.webp" alt="Basque cuisine" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <a href="../index.html?hood=Eixample" class="hero-back">← Eixample</a>
-    <h1>El Velódromo</h1>
+    <a href="../index.html?hood=El+Born" class="hero-back">← El Born</a>
+    <h1>Euskal Etxea Taberna</h1>
     <div class="hero-meta">
-      <span>Spanish</span>
-      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span> 4.2</span>
-      <span>·</span><span>14-16€</span>
+      <span>Basque</span>
+      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span> 4.3</span>
+      
       <span>·</span>
       <div class="open-status unknown" id="open-status"><span class="open-dot"></span> <span id="open-text">Checking...</span></div>
     </div>
@@ -187,46 +187,44 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <!-- Menú del Día Deal Card -->
   <div class="deal-card">
     <div class="deal-header">
-      <span class="deal-emoji">🟢</span>
-      <span class="deal-title">Menú del Día Confirmed</span>
+      <span class="deal-emoji">🟡</span>
+      <span class="deal-title">Likely Menú del Día</span>
     </div>
-    <div class="deal-price">14-16€</div>
-    <div class="deal-desc">Menú del día price range · Eixample · Universitat (L1/L2)</div>
+    
+    <div class="deal-desc">El Born · Trinitat Nova (L3/L4/L11)</div>
   </div>
 
-  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=El+Vel%C3%B3dromo+C%2F+de+Muntaner%2C+213+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
-    <a href="tel:+34 934306022" class="share-btn" style="flex:1;justify-content:center;">📞 Call</a>
-    <a href="https://barvelodromo.com/" target="_blank" class="share-btn" style="flex:1;justify-content:center;">🌐 Website</a>
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Euskal+Etxea+Taberna+Pl.+de+Montcada%2C+1-3+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
     <button class="share-btn" style="flex:1;justify-content:center;" onclick="toggleFav(784)">❤️ Save</button></div>
 
   <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('info')">Info</button>
     <button class="tab-btn" onclick="switchTab('map')">Map</button>
-    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.2)</button>
+    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.3)</button>
     <button class="tab-btn" onclick="switchTab('nearby')">Nearby</button>
   </div>
 
   <!-- Tab: Info -->
   <div class="tab-content active" id="tab-info">
-    <div class="tags"><span class="tag">business-lunch</span><span class="tag">menú-del-día</span><span class="tag">weekday-lunch</span></div>
+    <div class="tags"><span class="tag">solo-friendly</span><span class="tag">tapas</span></div>
 
     <div class="info-section">
       <h3>Details</h3>
-      <div class="info-row"><span class="link-icon">📍</span> Eixample · C/ de Muntaner, 213 · 08036</div>
-      <div class="info-row"><span class="link-icon">🍽️</span> Spanish · mid-range</div>
-      <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00 (Mon-Fri)</div>
-      <div class="info-row"><span class="link-icon">🚇</span> Universitat (L1/L2)</div>
+      <div class="info-row"><span class="link-icon">📍</span> El Born · Pl. de Montcada, 1-3 · 08003</div>
+      <div class="info-row"><span class="link-icon">🍽️</span> Basque · mid-range</div>
+      <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00</div>
+      <div class="info-row"><span class="link-icon">🚇</span> Trinitat Nova (L3/L4/L11)</div>
     </div>
 
-    <div class="notes">Art Deco gem restored from 1933.</div>
+    <div class="notes">Classic Basque pintxos. Txakoli wine.</div>
 
-    <div class="contact-links"><a href="https://barvelodromo.com/" target="_blank" class="contact-link"><span class="link-icon">🌐</span> Website</a><a href="https://www.google.com/maps/search/?api=1&query=El+Vel%C3%B3dromo+C%2F+de+Muntaner%2C+213+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a><a href="tel:+34 934306022" class="contact-link"><span class="link-icon">📞</span> +34 934306022</a></div>
+    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=Euskal+Etxea+Taberna+Pl.+de+Montcada%2C+1-3+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
 
     <div class="share-section">
       <button class="share-btn" onclick="shareNative()">📤 Share</button>
       <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
-      <a class="share-btn" href="https://wa.me/?text=Check%20out%20El%20Vel%C3%B3dromo%20in%20Eixample%2C%20Barcelona%21%2014-16%E2%82%AC%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/784.html" target="_blank">💬 WhatsApp</a>
+      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Euskal%20Etxea%20Taberna%20in%20El%20Born%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/784.html" target="_blank">💬 WhatsApp</a>
     </div>
 
     <div class="community">
@@ -238,50 +236,50 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <div class="tab-content" id="tab-map">
       <div id="minimap"></div>
       <div class="map-address">
-        <span class="link-icon">📍</span> C/ de Muntaner, 213, 08036, Barcelona
-        <br><span class="link-icon">🚇</span> Universitat (L1/L2)
+        <span class="link-icon">📍</span> Pl. de Montcada, 1-3, 08003, Barcelona
+        <br><span class="link-icon">🚇</span> Trinitat Nova (L3/L4/L11)
       </div>
     </div>
 
   <!-- Tab: Reviews -->
   <div class="tab-content" id="tab-reviews">
       <div class="review-card">
-        <div class="review-score">4.2</div>
+        <div class="review-score">4.3</div>
         <div class="review-details">
           <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span></div>
-          <div class="review-count">1,184 Google reviews</div>
+          <div class="review-count">1,230 Google reviews</div>
         </div>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=El+Vel%C3%B3dromo+C%2F+de+Muntaner%2C+213+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Euskal+Etxea+Taberna+Pl.+de+Montcada%2C+1-3+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
     </div>
 
   <!-- Tab: Nearby -->
   <div class="tab-content" id="tab-nearby">
       <h2>📍 Nearby Restaurants</h2>
-      <a href="93.html" class="nearby-card">
+      <a href="478.html" class="nearby-card">
           <div class="nearby-icon">🥘</div>
           <div class="nearby-info">
-            <div class="nearby-name">Portolés</div>
-            <div class="nearby-meta">🟡 Spanish ·  · 0m</div>
+            <div class="nearby-name">Euskal Etxea</div>
+            <div class="nearby-meta">🟡 Basque ·  · 0m</div>
           </div>
-        </a><a href="95.html" class="nearby-card">
+        </a><a href="537.html" class="nearby-card">
           <div class="nearby-icon">🥘</div>
           <div class="nearby-info">
-            <div class="nearby-name">El Cierzo</div>
-            <div class="nearby-meta">🟡 Spanish ·  · 0m</div>
+            <div class="nearby-name">El Barrilet</div>
+            <div class="nearby-meta">🟡 Spanish ·  · 662m</div>
           </div>
-        </a><a href="100.html" class="nearby-card">
-          <div class="nearby-icon">🌶️</div>
+        </a><a href="66.html" class="nearby-card">
+          <div class="nearby-icon">🌍</div>
           <div class="nearby-info">
-            <div class="nearby-name">Xampú Xampany</div>
-            <div class="nearby-meta">🟡 Catalan ·  · 0m</div>
+            <div class="nearby-name">La Forquilla</div>
+            <div class="nearby-meta">🟢 Fusion · 17€ · 2.3km</div>
           </div>
         </a>
     </div>
 </div>
 
 <footer>
-  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #784 of 1,520
+  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #784 of 1,458
 </footer>
 
 <script>
@@ -310,7 +308,7 @@ function switchTab(id){
 
 // Share
 function shareNative(){
-  if(navigator.share){navigator.share({title:'El Velódromo — Menuverso',text:'Spanish in Eixample. 14-16€ menú del día.',url:window.location.href})}
+  if(navigator.share){navigator.share({title:'Euskal Etxea Taberna — Menuverso',text:'Basque in El Born.  menú del día.',url:window.location.href})}
   else{copyLink(document.querySelector('.share-btn'))}
 }
 function copyLink(btn){
@@ -321,7 +319,7 @@ function copyLink(btn){
 
 // Open Now
 (function(){
-  var hoursStr='13:00-16:00 (Mon-Fri)';
+  var hoursStr='13:00-16:00';
   var el=document.getElementById('open-status');
   var txt=document.getElementById('open-text');
   if(!hoursStr||!hoursStr.trim()){el.className='open-status unknown';txt.textContent='Hours unavailable';return;}
@@ -371,9 +369,9 @@ initTheme();
 renderVisited(784);
 </script>
 <script>
-var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.3888,2.162],16);
+var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.4632308,2.1702555],16);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
-L.circleMarker([41.3888,2.162],{radius:10,fillColor:'#059669',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
+L.circleMarker([41.4632308,2.1702555],{radius:10,fillColor:'#D97706',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
 if(document.documentElement.classList.contains('dark')){document.querySelectorAll('.leaflet-tile').forEach(t=>t.style.filter='invert(1) hue-rotate(180deg) brightness(0.9)');};
 </script>
 </body>

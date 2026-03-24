@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Can Kenji — Menú del Día Barcelona | Menuverso</title>
-<meta name="description" content="Can Kenji in Eixample, Barcelona. Japanese cuisine. 15-18€ menú del día. Menú del Día Confirmed. Rating: 4.5/5 (657 reviews).">
-<meta property="og:title" content="Can Kenji — Menú del Día | Menuverso">
-<meta property="og:description" content="Japanese in Eixample. 15-18€ menú del día. ⭐ 4.5/5">
+<title>Koy Shunka — Menú del Día Barcelona | Menuverso</title>
+<meta name="description" content="Koy Shunka in El Raval, Barcelona. Japanese cuisine.  menú del día. No Menú del Día. Rating: 4.6/5 (829 reviews).">
+<meta property="og:title" content="Koy Shunka — Menú del Día | Menuverso">
+<meta property="og:description" content="Japanese in El Raval.  menú del día. ⭐ 4.6/5">
 <meta property="og:url" content="https://whiteboxamir.github.io/menuverso/r/346.html">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:site_name" content="Menuverso">
@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Can Kenji", "address": {"@type": "PostalAddress", "streetAddress": "C/ del Rosselló, 325", "addressLocality": "Barcelona", "postalCode": "08037", "addressCountry": "ES"}, "servesCuisine": "Japanese", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.5, "reviewCount": 657}, "priceRange": "15-18€", "geo": {"@type": "GeoCoordinates", "latitude": 41.4004186, "longitude": 2.166339}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Koy Shunka", "address": {"@type": "PostalAddress", "streetAddress": "C/ de Copons, 7", "addressLocality": "Barcelona", "postalCode": "08002", "addressCountry": "ES"}, "servesCuisine": "Japanese", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.6, "reviewCount": 829}, "telephone": "+34 934127939", "url": "https://koyshunka.com/", "geo": {"@type": "GeoCoordinates", "latitude": 41.38, "longitude": 2.168}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -55,13 +55,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .container{max-width:720px;margin:-40px auto 0;padding:0 1rem 2rem;position:relative;z-index:2;}
 
 /* Deal Card (Neotaste-style) */
-.deal-card{background:#D1FAE5;border:2px solid #05966922;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
+.deal-card{background:#FEE2E2;border:2px solid #DC262622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
 .deal-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}
 .deal-emoji{font-size:1.5rem;}
-.deal-title{font-size:1.1rem;font-weight:700;color:#059669;}
+.deal-title{font-size:1.1rem;font-weight:700;color:#DC2626;}
 .deal-price{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:0.25rem;}
 .deal-desc{font-size:0.82rem;color:var(--sub);}
-:root.dark .deal-card{background:var(--card);border-color:#05966944;}
+:root.dark .deal-card{background:var(--card);border-color:#DC262644;}
 
 /* Open Status */
 .open-status{display:inline-flex;align-items:center;gap:5px;padding:0.3rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:600;}
@@ -171,12 +171,12 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <img src="../assets/no-image.svg" alt="Japanese cuisine" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <a href="../index.html?hood=Eixample" class="hero-back">← Eixample</a>
-    <h1>Can Kenji</h1>
+    <a href="../index.html?hood=El+Raval" class="hero-back">← El Raval</a>
+    <h1>Koy Shunka</h1>
     <div class="hero-meta">
       <span>Japanese</span>
-      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span> 4.5</span>
-      <span>·</span><span>15-18€</span>
+      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span> 4.6</span>
+      
       <span>·</span>
       <div class="open-status unknown" id="open-status"><span class="open-dot"></span> <span id="open-text">Checking...</span></div>
     </div>
@@ -187,44 +187,46 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <!-- Menú del Día Deal Card -->
   <div class="deal-card">
     <div class="deal-header">
-      <span class="deal-emoji">🟢</span>
-      <span class="deal-title">Menú del Día Confirmed</span>
+      <span class="deal-emoji">🔴</span>
+      <span class="deal-title">No Menú del Día</span>
     </div>
-    <div class="deal-price">15-18€</div>
-    <div class="deal-desc">Menú del día price range · Eixample · Verdaguer (L4/L5)</div>
+    
+    <div class="deal-desc">El Raval · Sant Antoni (L2)</div>
   </div>
 
-  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Can+Kenji+C%2F+del+Rossell%C3%B3%2C+325+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Koy+Shunka+C%2F+de+Copons%2C+7+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
+    <a href="tel:+34 934127939" class="share-btn" style="flex:1;justify-content:center;">📞 Call</a>
+    <a href="https://koyshunka.com/" target="_blank" class="share-btn" style="flex:1;justify-content:center;">🌐 Website</a>
     <button class="share-btn" style="flex:1;justify-content:center;" onclick="toggleFav(346)">❤️ Save</button></div>
 
   <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('info')">Info</button>
     <button class="tab-btn" onclick="switchTab('map')">Map</button>
-    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.5)</button>
+    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.6)</button>
     <button class="tab-btn" onclick="switchTab('nearby')">Nearby</button>
   </div>
 
   <!-- Tab: Info -->
   <div class="tab-content active" id="tab-info">
-    <div class="tags"><span class="tag">business-lunch</span><span class="tag">menú-del-día</span><span class="tag">weekday-lunch</span></div>
+    <div class="tags"><span class="tag">michelin</span></div>
 
     <div class="info-section">
       <h3>Details</h3>
-      <div class="info-row"><span class="link-icon">📍</span> Eixample · C/ del Rosselló, 325 · 08037</div>
-      <div class="info-row"><span class="link-icon">🍽️</span> Japanese · mid-range</div>
-      <div class="info-row"><span class="link-icon">🕐</span> 13:00-15:30 (Mon-Fri)</div>
-      <div class="info-row"><span class="link-icon">🚇</span> Verdaguer (L4/L5)</div>
+      <div class="info-row"><span class="link-icon">📍</span> El Raval · C/ de Copons, 7 · 08002</div>
+      <div class="info-row"><span class="link-icon">🍽️</span> Japanese · premium</div>
+      <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00</div>
+      <div class="info-row"><span class="link-icon">🚇</span> Sant Antoni (L2)</div>
     </div>
 
-    
+    <div class="notes">1 Michelin star. Japanese haute cuisine.</div>
 
-    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=Can+Kenji+C%2F+del+Rossell%C3%B3%2C+325+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
+    <div class="contact-links"><a href="https://koyshunka.com/" target="_blank" class="contact-link"><span class="link-icon">🌐</span> Website</a><a href="https://www.google.com/maps/search/?api=1&query=Koy+Shunka+C%2F+de+Copons%2C+7+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a><a href="tel:+34 934127939" class="contact-link"><span class="link-icon">📞</span> +34 934127939</a></div>
 
     <div class="share-section">
       <button class="share-btn" onclick="shareNative()">📤 Share</button>
       <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
-      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Can%20Kenji%20in%20Eixample%2C%20Barcelona%21%2015-18%E2%82%AC%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/346.html" target="_blank">💬 WhatsApp</a>
+      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Koy%20Shunka%20in%20El%20Raval%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/346.html" target="_blank">💬 WhatsApp</a>
     </div>
 
     <div class="community">
@@ -236,50 +238,50 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <div class="tab-content" id="tab-map">
       <div id="minimap"></div>
       <div class="map-address">
-        <span class="link-icon">📍</span> C/ del Rosselló, 325, 08037, Barcelona
-        <br><span class="link-icon">🚇</span> Verdaguer (L4/L5)
+        <span class="link-icon">📍</span> C/ de Copons, 7, 08002, Barcelona
+        <br><span class="link-icon">🚇</span> Sant Antoni (L2)
       </div>
     </div>
 
   <!-- Tab: Reviews -->
   <div class="tab-content" id="tab-reviews">
       <div class="review-card">
-        <div class="review-score">4.5</div>
+        <div class="review-score">4.6</div>
         <div class="review-details">
           <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span></div>
-          <div class="review-count">657 Google reviews</div>
+          <div class="review-count">829 Google reviews</div>
         </div>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=Can+Kenji+C%2F+del+Rossell%C3%B3%2C+325+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Koy+Shunka+C%2F+de+Copons%2C+7+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
     </div>
 
   <!-- Tab: Nearby -->
   <div class="tab-content" id="tab-nearby">
       <h2>📍 Nearby Restaurants</h2>
-      <a href="750.html" class="nearby-card">
-          <div class="nearby-icon">🍣</div>
+      <a href="216.html" class="nearby-card">
+          <div class="nearby-icon">🌶️</div>
           <div class="nearby-info">
-            <div class="nearby-name">Tamae BAR</div>
-            <div class="nearby-meta">🔴 Japanese ·  · 46m</div>
+            <div class="nearby-name">Ca l'Estevet</div>
+            <div class="nearby-meta">🟡 Catalan ·  · 0m</div>
           </div>
-        </a><a href="105.html" class="nearby-card">
-          <div class="nearby-icon">🥗</div>
+        </a><a href="217.html" class="nearby-card">
+          <div class="nearby-icon">🌶️</div>
           <div class="nearby-info">
-            <div class="nearby-name">Lateral Consell de Cent</div>
-            <div class="nearby-meta">🟡 Mediterranean ·  · 165m</div>
+            <div class="nearby-name">Suculent</div>
+            <div class="nearby-meta">🔴 Catalan ·  · 0m</div>
           </div>
-        </a><a href="106.html" class="nearby-card">
-          <div class="nearby-icon">🌍</div>
+        </a><a href="218.html" class="nearby-card">
+          <div class="nearby-icon">🌶️</div>
           <div class="nearby-info">
-            <div class="nearby-name">Malpaso</div>
-            <div class="nearby-meta">🟡 Fusion ·  · 173m</div>
+            <div class="nearby-name">Ca l'Isidre</div>
+            <div class="nearby-meta">🔴 Catalan ·  · 0m</div>
           </div>
         </a>
     </div>
 </div>
 
 <footer>
-  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #346 of 1,520
+  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #346 of 1,458
 </footer>
 
 <script>
@@ -308,7 +310,7 @@ function switchTab(id){
 
 // Share
 function shareNative(){
-  if(navigator.share){navigator.share({title:'Can Kenji — Menuverso',text:'Japanese in Eixample. 15-18€ menú del día.',url:window.location.href})}
+  if(navigator.share){navigator.share({title:'Koy Shunka — Menuverso',text:'Japanese in El Raval.  menú del día.',url:window.location.href})}
   else{copyLink(document.querySelector('.share-btn'))}
 }
 function copyLink(btn){
@@ -319,7 +321,7 @@ function copyLink(btn){
 
 // Open Now
 (function(){
-  var hoursStr='13:00-15:30 (Mon-Fri)';
+  var hoursStr='13:00-16:00';
   var el=document.getElementById('open-status');
   var txt=document.getElementById('open-text');
   if(!hoursStr||!hoursStr.trim()){el.className='open-status unknown';txt.textContent='Hours unavailable';return;}
@@ -369,9 +371,9 @@ initTheme();
 renderVisited(346);
 </script>
 <script>
-var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.4004186,2.166339],16);
+var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.38,2.168],16);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
-L.circleMarker([41.4004186,2.166339],{radius:10,fillColor:'#059669',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
+L.circleMarker([41.38,2.168],{radius:10,fillColor:'#DC2626',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
 if(document.documentElement.classList.contains('dark')){document.querySelectorAll('.leaflet-tile').forEach(t=>t.style.filter='invert(1) hue-rotate(180deg) brightness(0.9)');};
 </script>
 </body>

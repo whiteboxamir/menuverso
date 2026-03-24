@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>El Born Bàsic — Menú del Día Barcelona | Menuverso</title>
-<meta name="description" content="El Born Bàsic in Sagrada Família, Barcelona. Mediterranean cuisine.  menú del día. Likely Menú del Día. Rating: 4.2/5 (253 reviews).">
-<meta property="og:title" content="El Born Bàsic — Menú del Día | Menuverso">
-<meta property="og:description" content="Mediterranean in Sagrada Família.  menú del día. ⭐ 4.2/5">
+<title>La Parra — Menú del Día Barcelona | Menuverso</title>
+<meta name="description" content="La Parra in Gràcia, Barcelona. Mediterranean cuisine. 13-15€ menú del día. Menú del Día Confirmed. Rating: 3.9/5 (2416 reviews).">
+<meta property="og:title" content="La Parra — Menú del Día | Menuverso">
+<meta property="og:description" content="Mediterranean in Gràcia. 13-15€ menú del día. ⭐ 3.9/5">
 <meta property="og:url" content="https://whiteboxamir.github.io/menuverso/r/916.html">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:site_name" content="Menuverso">
@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "El Born Bàsic", "address": {"@type": "PostalAddress", "streetAddress": "C/ de Sardenya, 220", "addressLocality": "Barcelona", "postalCode": "08013", "addressCountry": "ES"}, "servesCuisine": "Mediterranean", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.2, "reviewCount": 253}, "geo": {"@type": "GeoCoordinates", "latitude": 41.398635, "longitude": 2.179801}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "La Parra", "address": {"@type": "PostalAddress", "streetAddress": "C/ de Joanot Martorell, 3", "addressLocality": "Barcelona", "postalCode": "08012", "addressCountry": "ES"}, "servesCuisine": "Mediterranean", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 3.9, "reviewCount": 2416}, "telephone": "+34 932134733", "url": "https://barlaparra.com/", "priceRange": "13-15€", "geo": {"@type": "GeoCoordinates", "latitude": 41.3751001, "longitude": 2.1409075}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -55,13 +55,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .container{max-width:720px;margin:-40px auto 0;padding:0 1rem 2rem;position:relative;z-index:2;}
 
 /* Deal Card (Neotaste-style) */
-.deal-card{background:#FEF3C7;border:2px solid #D9770622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
+.deal-card{background:#D1FAE5;border:2px solid #05966922;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
 .deal-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}
 .deal-emoji{font-size:1.5rem;}
-.deal-title{font-size:1.1rem;font-weight:700;color:#D97706;}
+.deal-title{font-size:1.1rem;font-weight:700;color:#059669;}
 .deal-price{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:0.25rem;}
 .deal-desc{font-size:0.82rem;color:var(--sub);}
-:root.dark .deal-card{background:var(--card);border-color:#D9770644;}
+:root.dark .deal-card{background:var(--card);border-color:#05966944;}
 
 /* Open Status */
 .open-status{display:inline-flex;align-items:center;gap:5px;padding:0.3rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:600;}
@@ -168,15 +168,15 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
 <!-- Hero Section -->
 <div class="hero">
-  <img src="../assets/no-image.svg" alt="Mediterranean cuisine" loading="eager">
+  <img src="../assets/photos/950_hero.webp" alt="Mediterranean cuisine" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <a href="../index.html?hood=Sagrada+Fam%C3%ADlia" class="hero-back">← Sagrada Família</a>
-    <h1>El Born Bàsic</h1>
+    <a href="../index.html?hood=Gr%C3%A0cia" class="hero-back">← Gràcia</a>
+    <h1>La Parra</h1>
     <div class="hero-meta">
       <span>Mediterranean</span>
-      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span> 4.2</span>
-      
+      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span> 3.9</span>
+      <span>·</span><span>13-15€</span>
       <span>·</span>
       <div class="open-status unknown" id="open-status"><span class="open-dot"></span> <span id="open-text">Checking...</span></div>
     </div>
@@ -187,44 +187,46 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <!-- Menú del Día Deal Card -->
   <div class="deal-card">
     <div class="deal-header">
-      <span class="deal-emoji">🟡</span>
-      <span class="deal-title">Likely Menú del Día</span>
+      <span class="deal-emoji">🟢</span>
+      <span class="deal-title">Menú del Día Confirmed</span>
     </div>
-    
-    <div class="deal-desc">Sagrada Família · Monumental (L2)</div>
+    <div class="deal-price">13-15€</div>
+    <div class="deal-desc">Menú del día price range · Gràcia · Mercat Nou (L1)</div>
   </div>
 
-  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=El+Born+B%C3%A0sic+C%2F+de+Sardenya%2C+220+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=La+Parra+C%2F+de+Joanot+Martorell%2C+3+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
+    <a href="tel:+34 932134733" class="share-btn" style="flex:1;justify-content:center;">📞 Call</a>
+    <a href="https://barlaparra.com/" target="_blank" class="share-btn" style="flex:1;justify-content:center;">🌐 Website</a>
     <button class="share-btn" style="flex:1;justify-content:center;" onclick="toggleFav(916)">❤️ Save</button></div>
 
   <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('info')">Info</button>
     <button class="tab-btn" onclick="switchTab('map')">Map</button>
-    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.2)</button>
+    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (3.9)</button>
     <button class="tab-btn" onclick="switchTab('nearby')">Nearby</button>
   </div>
 
   <!-- Tab: Info -->
   <div class="tab-content active" id="tab-info">
-    
+    <div class="tags"><span class="tag">menú-del-día</span><span class="tag">terrace</span></div>
 
     <div class="info-section">
       <h3>Details</h3>
-      <div class="info-row"><span class="link-icon">📍</span> Sagrada Família · C/ de Sardenya, 220 · 08013</div>
+      <div class="info-row"><span class="link-icon">📍</span> Gràcia · C/ de Joanot Martorell, 3 · 08012</div>
       <div class="info-row"><span class="link-icon">🍽️</span> Mediterranean · mid-range</div>
       <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00</div>
-      <div class="info-row"><span class="link-icon">🚇</span> Monumental (L2)</div>
+      <div class="info-row"><span class="link-icon">🚇</span> Mercat Nou (L1)</div>
     </div>
 
-    
+    <div class="notes">Vine-covered terrace</div>
 
-    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=El+Born+B%C3%A0sic+C%2F+de+Sardenya%2C+220+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
+    <div class="contact-links"><a href="https://barlaparra.com/" target="_blank" class="contact-link"><span class="link-icon">🌐</span> Website</a><a href="https://www.google.com/maps/search/?api=1&query=La+Parra+C%2F+de+Joanot+Martorell%2C+3+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a><a href="tel:+34 932134733" class="contact-link"><span class="link-icon">📞</span> +34 932134733</a></div>
 
     <div class="share-section">
       <button class="share-btn" onclick="shareNative()">📤 Share</button>
       <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
-      <a class="share-btn" href="https://wa.me/?text=Check%20out%20El%20Born%20B%C3%A0sic%20in%20Sagrada%20Fam%C3%ADlia%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/916.html" target="_blank">💬 WhatsApp</a>
+      <a class="share-btn" href="https://wa.me/?text=Check%20out%20La%20Parra%20in%20Gr%C3%A0cia%2C%20Barcelona%21%2013-15%E2%82%AC%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/916.html" target="_blank">💬 WhatsApp</a>
     </div>
 
     <div class="community">
@@ -236,50 +238,50 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <div class="tab-content" id="tab-map">
       <div id="minimap"></div>
       <div class="map-address">
-        <span class="link-icon">📍</span> C/ de Sardenya, 220, 08013, Barcelona
-        <br><span class="link-icon">🚇</span> Monumental (L2)
+        <span class="link-icon">📍</span> C/ de Joanot Martorell, 3, 08012, Barcelona
+        <br><span class="link-icon">🚇</span> Mercat Nou (L1)
       </div>
     </div>
 
   <!-- Tab: Reviews -->
   <div class="tab-content" id="tab-reviews">
       <div class="review-card">
-        <div class="review-score">4.2</div>
+        <div class="review-score">3.9</div>
         <div class="review-details">
           <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span></div>
-          <div class="review-count">253 Google reviews</div>
+          <div class="review-count">2,416 Google reviews</div>
         </div>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=El+Born+B%C3%A0sic+C%2F+de+Sardenya%2C+220+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=La+Parra+C%2F+de+Joanot+Martorell%2C+3+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
     </div>
 
   <!-- Tab: Nearby -->
   <div class="tab-content" id="tab-nearby">
       <h2>📍 Nearby Restaurants</h2>
-      <a href="918.html" class="nearby-card">
-          <div class="nearby-icon">🥘</div>
+      <a href="308.html" class="nearby-card">
+          <div class="nearby-icon">🍝</div>
           <div class="nearby-info">
-            <div class="nearby-name">Bar Mut Sagrada Família</div>
-            <div class="nearby-meta">🟡 Spanish ·  · 53m</div>
+            <div class="nearby-name">La Briciola</div>
+            <div class="nearby-meta">🟡 Italian ·  · 32m</div>
           </div>
-        </a><a href="60.html" class="nearby-card">
-          <div class="nearby-icon">🥦</div>
+        </a><a href="309.html" class="nearby-card">
+          <div class="nearby-icon">🌮</div>
           <div class="nearby-info">
-            <div class="nearby-name">Arc Iris</div>
-            <div class="nearby-meta">🟢 Vegetarian/Vegan · 9.50€ · 55m</div>
+            <div class="nearby-name">Las Tres Mentiras</div>
+            <div class="nearby-meta">🟡 Mexican ·  · 32m</div>
           </div>
-        </a><a href="755.html" class="nearby-card">
-          <div class="nearby-icon">🥘</div>
+        </a><a href="310.html" class="nearby-card">
+          <div class="nearby-icon">🍽️</div>
           <div class="nearby-info">
-            <div class="nearby-name">El Glop Gaudí</div>
-            <div class="nearby-meta">🟢 Spanish · 12-15€ · 152m</div>
+            <div class="nearby-name">Addis Abeba</div>
+            <div class="nearby-meta">🔴 Ethiopian ·  · 34m</div>
           </div>
         </a>
     </div>
 </div>
 
 <footer>
-  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #916 of 1,520
+  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #916 of 1,458
 </footer>
 
 <script>
@@ -308,7 +310,7 @@ function switchTab(id){
 
 // Share
 function shareNative(){
-  if(navigator.share){navigator.share({title:'El Born Bàsic — Menuverso',text:'Mediterranean in Sagrada Família.  menú del día.',url:window.location.href})}
+  if(navigator.share){navigator.share({title:'La Parra — Menuverso',text:'Mediterranean in Gràcia. 13-15€ menú del día.',url:window.location.href})}
   else{copyLink(document.querySelector('.share-btn'))}
 }
 function copyLink(btn){
@@ -369,9 +371,9 @@ initTheme();
 renderVisited(916);
 </script>
 <script>
-var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.398635,2.179801],16);
+var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.3751001,2.1409075],16);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
-L.circleMarker([41.398635,2.179801],{radius:10,fillColor:'#D97706',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
+L.circleMarker([41.3751001,2.1409075],{radius:10,fillColor:'#059669',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
 if(document.documentElement.classList.contains('dark')){document.querySelectorAll('.leaflet-tile').forEach(t=>t.style.filter='invert(1) hue-rotate(180deg) brightness(0.9)');};
 </script>
 </body>

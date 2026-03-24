@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Corgi Cafe — Menú del Día Barcelona | Menuverso</title>
-<meta name="description" content="Corgi Cafe in Eixample, Barcelona. Café cuisine.  menú del día. No Menú del Día. Rating: 4.5/5 (391 reviews).">
-<meta property="og:title" content="Corgi Cafe — Menú del Día | Menuverso">
-<meta property="og:description" content="Café in Eixample.  menú del día. ⭐ 4.5/5">
+<title>Can Pizza Universidad — Menú del Día Barcelona | Menuverso</title>
+<meta name="description" content="Can Pizza Universidad in Eixample, Barcelona. Italian cuisine.  menú del día. Likely Menú del Día. Rating: 4.2/5 (2349 reviews).">
+<meta property="og:title" content="Can Pizza Universidad — Menú del Día | Menuverso">
+<meta property="og:description" content="Italian in Eixample.  menú del día. ⭐ 4.2/5">
 <meta property="og:url" content="https://whiteboxamir.github.io/menuverso/r/328.html">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:site_name" content="Menuverso">
@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Corgi Cafe", "address": {"@type": "PostalAddress", "streetAddress": "C/ d'Enric Granados, 21", "addressLocality": "Barcelona", "postalCode": "08007", "addressCountry": "ES"}, "servesCuisine": "Café", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.5, "reviewCount": 391}, "geo": {"@type": "GeoCoordinates", "latitude": 41.3883709, "longitude": 2.1614586}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Can Pizza Universidad", "address": {"@type": "PostalAddress", "streetAddress": "Pl. de la Universitat, 4", "addressLocality": "Barcelona", "postalCode": "08007", "addressCountry": "ES"}, "servesCuisine": "Italian", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.2, "reviewCount": 2349}, "telephone": "+34 933016839", "url": "https://canpizza.com/", "geo": {"@type": "GeoCoordinates", "latitude": 41.3848554, "longitude": 2.16361}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -55,13 +55,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .container{max-width:720px;margin:-40px auto 0;padding:0 1rem 2rem;position:relative;z-index:2;}
 
 /* Deal Card (Neotaste-style) */
-.deal-card{background:#FEE2E2;border:2px solid #DC262622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
+.deal-card{background:#FEF3C7;border:2px solid #D9770622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
 .deal-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}
 .deal-emoji{font-size:1.5rem;}
-.deal-title{font-size:1.1rem;font-weight:700;color:#DC2626;}
+.deal-title{font-size:1.1rem;font-weight:700;color:#D97706;}
 .deal-price{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:0.25rem;}
 .deal-desc{font-size:0.82rem;color:var(--sub);}
-:root.dark .deal-card{background:var(--card);border-color:#DC262644;}
+:root.dark .deal-card{background:var(--card);border-color:#D9770644;}
 
 /* Open Status */
 .open-status{display:inline-flex;align-items:center;gap:5px;padding:0.3rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:600;}
@@ -168,14 +168,14 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
 <!-- Hero Section -->
 <div class="hero">
-  <img src="../assets/no-image.svg" alt="Café cuisine" loading="eager">
+  <img src="../assets/no-image.svg" alt="Italian cuisine" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <a href="../index.html?hood=Eixample" class="hero-back">← Eixample</a>
-    <h1>Corgi Cafe</h1>
+    <h1>Can Pizza Universidad</h1>
     <div class="hero-meta">
-      <span>Café</span>
-      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span> 4.5</span>
+      <span>Italian</span>
+      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span> 4.2</span>
       
       <span>·</span>
       <div class="open-status unknown" id="open-status"><span class="open-dot"></span> <span id="open-text">Checking...</span></div>
@@ -187,44 +187,46 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <!-- Menú del Día Deal Card -->
   <div class="deal-card">
     <div class="deal-header">
-      <span class="deal-emoji">🔴</span>
-      <span class="deal-title">No Menú del Día</span>
+      <span class="deal-emoji">🟡</span>
+      <span class="deal-title">Likely Menú del Día</span>
     </div>
     
     <div class="deal-desc">Eixample · Universitat (L1/L2)</div>
   </div>
 
-  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Corgi+Cafe+C%2F+d%27Enric+Granados%2C+21+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Can+Pizza+Universidad+Pl.+de+la+Universitat%2C+4+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
+    <a href="tel:+34 933016839" class="share-btn" style="flex:1;justify-content:center;">📞 Call</a>
+    <a href="https://canpizza.com/" target="_blank" class="share-btn" style="flex:1;justify-content:center;">🌐 Website</a>
     <button class="share-btn" style="flex:1;justify-content:center;" onclick="toggleFav(328)">❤️ Save</button></div>
 
   <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('info')">Info</button>
     <button class="tab-btn" onclick="switchTab('map')">Map</button>
-    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.5)</button>
+    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.2)</button>
     <button class="tab-btn" onclick="switchTab('nearby')">Nearby</button>
   </div>
 
   <!-- Tab: Info -->
   <div class="tab-content active" id="tab-info">
-    <div class="tags"><span class="tag">brunch</span><span class="tag">dog-friendly</span></div>
+    <div class="tags"><span class="tag">budget-friendly</span><span class="tag">chain</span><span class="tag">pizza</span></div>
 
     <div class="info-section">
       <h3>Details</h3>
-      <div class="info-row"><span class="link-icon">📍</span> Eixample · C/ d'Enric Granados, 21 · 08007</div>
-      <div class="info-row"><span class="link-icon">🍽️</span> Café · mid-range</div>
-      <div class="info-row"><span class="link-icon">🕐</span> 09:00-18:00</div>
+      <div class="info-row"><span class="link-icon">📍</span> Eixample · Pl. de la Universitat, 4 · 08007</div>
+      <div class="info-row"><span class="link-icon">🍽️</span> Italian · budget</div>
+      <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00</div>
       <div class="info-row"><span class="link-icon">🚇</span> Universitat (L1/L2)</div>
     </div>
 
-    <div class="notes">Brunch and specialty coffee. Dog-friendly.</div>
+    <div class="notes">CHAIN - Multiple locations</div>
 
-    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=Corgi+Cafe+C%2F+d%27Enric+Granados%2C+21+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
+    <div class="contact-links"><a href="https://canpizza.com/" target="_blank" class="contact-link"><span class="link-icon">🌐</span> Website</a><a href="https://www.google.com/maps/search/?api=1&query=Can+Pizza+Universidad+Pl.+de+la+Universitat%2C+4+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a><a href="tel:+34 933016839" class="contact-link"><span class="link-icon">📞</span> +34 933016839</a></div>
 
     <div class="share-section">
       <button class="share-btn" onclick="shareNative()">📤 Share</button>
       <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
-      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Corgi%20Cafe%20in%20Eixample%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/328.html" target="_blank">💬 WhatsApp</a>
+      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Can%20Pizza%20Universidad%20in%20Eixample%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/328.html" target="_blank">💬 WhatsApp</a>
     </div>
 
     <div class="community">
@@ -236,7 +238,7 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <div class="tab-content" id="tab-map">
       <div id="minimap"></div>
       <div class="map-address">
-        <span class="link-icon">📍</span> C/ d'Enric Granados, 21, 08007, Barcelona
+        <span class="link-icon">📍</span> Pl. de la Universitat, 4, 08007, Barcelona
         <br><span class="link-icon">🚇</span> Universitat (L1/L2)
       </div>
     </div>
@@ -244,42 +246,42 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <!-- Tab: Reviews -->
   <div class="tab-content" id="tab-reviews">
       <div class="review-card">
-        <div class="review-score">4.5</div>
+        <div class="review-score">4.2</div>
         <div class="review-details">
-          <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span></div>
-          <div class="review-count">391 Google reviews</div>
+          <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span></div>
+          <div class="review-count">2,349 Google reviews</div>
         </div>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=Corgi+Cafe+C%2F+d%27Enric+Granados%2C+21+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Can+Pizza+Universidad+Pl.+de+la+Universitat%2C+4+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
     </div>
 
   <!-- Tab: Nearby -->
   <div class="tab-content" id="tab-nearby">
       <h2>📍 Nearby Restaurants</h2>
-      <a href="875.html" class="nearby-card">
-          <div class="nearby-icon">☕</div>
+      <a href="786.html" class="nearby-card">
+          <div class="nearby-icon">🌶️</div>
           <div class="nearby-info">
-            <div class="nearby-name">Brunch & Cake</div>
-            <div class="nearby-meta">🔴 Café ·  · 12m</div>
+            <div class="nearby-name">RAÓ</div>
+            <div class="nearby-meta">🟡 Catalan ·  · 97m</div>
           </div>
-        </a><a href="93.html" class="nearby-card">
-          <div class="nearby-icon">🥘</div>
+        </a><a href="487.html" class="nearby-card">
+          <div class="nearby-icon">🥦</div>
           <div class="nearby-info">
-            <div class="nearby-name">Portolés</div>
-            <div class="nearby-meta">🟡 Spanish ·  · 65m</div>
+            <div class="nearby-name">Flax & Kale Raval</div>
+            <div class="nearby-meta">🟡 Vegetarian/Vegan ·  · 158m</div>
           </div>
-        </a><a href="95.html" class="nearby-card">
-          <div class="nearby-icon">🥘</div>
+        </a><a href="1098.html" class="nearby-card">
+          <div class="nearby-icon">🥦</div>
           <div class="nearby-info">
-            <div class="nearby-name">El Cierzo</div>
-            <div class="nearby-meta">🟡 Spanish ·  · 65m</div>
+            <div class="nearby-name">Flax&Kale</div>
+            <div class="nearby-meta">🟡 Vegetarian/Vegan ·  · 158m</div>
           </div>
         </a>
     </div>
 </div>
 
 <footer>
-  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #328 of 1,520
+  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #328 of 1,458
 </footer>
 
 <script>
@@ -308,7 +310,7 @@ function switchTab(id){
 
 // Share
 function shareNative(){
-  if(navigator.share){navigator.share({title:'Corgi Cafe — Menuverso',text:'Café in Eixample.  menú del día.',url:window.location.href})}
+  if(navigator.share){navigator.share({title:'Can Pizza Universidad — Menuverso',text:'Italian in Eixample.  menú del día.',url:window.location.href})}
   else{copyLink(document.querySelector('.share-btn'))}
 }
 function copyLink(btn){
@@ -319,7 +321,7 @@ function copyLink(btn){
 
 // Open Now
 (function(){
-  var hoursStr='09:00-18:00';
+  var hoursStr='13:00-16:00';
   var el=document.getElementById('open-status');
   var txt=document.getElementById('open-text');
   if(!hoursStr||!hoursStr.trim()){el.className='open-status unknown';txt.textContent='Hours unavailable';return;}
@@ -369,9 +371,9 @@ initTheme();
 renderVisited(328);
 </script>
 <script>
-var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.3883709,2.1614586],16);
+var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.3848554,2.16361],16);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
-L.circleMarker([41.3883709,2.1614586],{radius:10,fillColor:'#DC2626',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
+L.circleMarker([41.3848554,2.16361],{radius:10,fillColor:'#D97706',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
 if(document.documentElement.classList.contains('dark')){document.querySelectorAll('.leaflet-tile').forEach(t=>t.style.filter='invert(1) hue-rotate(180deg) brightness(0.9)');};
 </script>
 </body>

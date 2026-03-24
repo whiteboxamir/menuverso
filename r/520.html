@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Il Giardinetto — Menú del Día Barcelona | Menuverso</title>
-<meta name="description" content="Il Giardinetto in Gràcia, Barcelona. Italian cuisine.  menú del día. Likely Menú del Día. Rating: 4.4/5 (1200 reviews).">
-<meta property="og:title" content="Il Giardinetto — Menú del Día | Menuverso">
-<meta property="og:description" content="Italian in Gràcia.  menú del día. ⭐ 4.4/5">
+<title>La Balmesina — Menú del Día Barcelona | Menuverso</title>
+<meta name="description" content="La Balmesina in Sarrià-Sant Gervasi, Barcelona. Mediterranean cuisine. 13.90€ menú del día. Menú del Día Confirmed. Rating: 4.2/5 (351 reviews).">
+<meta property="og:title" content="La Balmesina — Menú del Día | Menuverso">
+<meta property="og:description" content="Mediterranean in Sarrià-Sant Gervasi. 13.90€ menú del día. ⭐ 4.2/5">
 <meta property="og:url" content="https://whiteboxamir.github.io/menuverso/r/520.html">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:site_name" content="Menuverso">
@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Il Giardinetto", "address": {"@type": "PostalAddress", "streetAddress": "C/ de la Granada del Penedès, 22", "addressLocality": "Barcelona", "postalCode": "08006", "addressCountry": "ES"}, "servesCuisine": "Italian", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.4, "reviewCount": 1200}, "telephone": "+34 932 187 536", "url": "https://ilgiardinetto.es/", "geo": {"@type": "GeoCoordinates", "latitude": 41.3970725, "longitude": 2.1529046}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "La Balmesina", "address": {"@type": "PostalAddress", "streetAddress": "C/ de Balmes, 350", "addressLocality": "Barcelona", "postalCode": "08006", "addressCountry": "ES"}, "servesCuisine": "Mediterranean", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.2, "reviewCount": 351}, "priceRange": "13.90€", "geo": {"@type": "GeoCoordinates", "latitude": 41.401, "longitude": 2.135}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -55,13 +55,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .container{max-width:720px;margin:-40px auto 0;padding:0 1rem 2rem;position:relative;z-index:2;}
 
 /* Deal Card (Neotaste-style) */
-.deal-card{background:#FEF3C7;border:2px solid #D9770622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
+.deal-card{background:#D1FAE5;border:2px solid #05966922;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
 .deal-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}
 .deal-emoji{font-size:1.5rem;}
-.deal-title{font-size:1.1rem;font-weight:700;color:#D97706;}
+.deal-title{font-size:1.1rem;font-weight:700;color:#059669;}
 .deal-price{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:0.25rem;}
 .deal-desc{font-size:0.82rem;color:var(--sub);}
-:root.dark .deal-card{background:var(--card);border-color:#D9770644;}
+:root.dark .deal-card{background:var(--card);border-color:#05966944;}
 
 /* Open Status */
 .open-status{display:inline-flex;align-items:center;gap:5px;padding:0.3rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:600;}
@@ -168,15 +168,15 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
 <!-- Hero Section -->
 <div class="hero">
-  <img src="../assets/no-image.svg" alt="Italian cuisine" loading="eager">
+  <img src="../assets/no-image.svg" alt="Mediterranean cuisine" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <a href="../index.html?hood=Gr%C3%A0cia" class="hero-back">← Gràcia</a>
-    <h1>Il Giardinetto</h1>
+    <a href="../index.html?hood=Sarri%C3%A0-Sant+Gervasi" class="hero-back">← Sarrià-Sant Gervasi</a>
+    <h1>La Balmesina</h1>
     <div class="hero-meta">
-      <span>Italian</span>
-      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span> 4.4</span>
-      
+      <span>Mediterranean</span>
+      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span> 4.2</span>
+      <span>·</span><span>13.90€</span>
       <span>·</span>
       <div class="open-status unknown" id="open-status"><span class="open-dot"></span> <span id="open-text">Checking...</span></div>
     </div>
@@ -187,46 +187,44 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <!-- Menú del Día Deal Card -->
   <div class="deal-card">
     <div class="deal-header">
-      <span class="deal-emoji">🟡</span>
-      <span class="deal-title">Likely Menú del Día</span>
+      <span class="deal-emoji">🟢</span>
+      <span class="deal-title">Menú del Día Confirmed</span>
     </div>
-    
-    <div class="deal-desc">Gràcia · Diagonal (L3/L5)</div>
+    <div class="deal-price">13.90€</div>
+    <div class="deal-desc">Menú del día price range · Sarrià-Sant Gervasi · Vallcarca (L3)</div>
   </div>
 
-  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Il+Giardinetto+C%2F+de+la+Granada+del+Pened%C3%A8s%2C+22+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
-    <a href="tel:+34 932 187 536" class="share-btn" style="flex:1;justify-content:center;">📞 Call</a>
-    <a href="https://ilgiardinetto.es/" target="_blank" class="share-btn" style="flex:1;justify-content:center;">🌐 Website</a>
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=La+Balmesina+C%2F+de+Balmes%2C+350+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
     <button class="share-btn" style="flex:1;justify-content:center;" onclick="toggleFav(520)">❤️ Save</button></div>
 
   <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('info')">Info</button>
     <button class="tab-btn" onclick="switchTab('map')">Map</button>
-    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.4)</button>
+    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.2)</button>
     <button class="tab-btn" onclick="switchTab('nearby')">Nearby</button>
   </div>
 
   <!-- Tab: Info -->
   <div class="tab-content active" id="tab-info">
-    <div class="tags"><span class="tag">terrace</span></div>
+    <div class="tags"><span class="tag">business-lunch</span><span class="tag">menú-del-día</span><span class="tag">pizza</span><span class="tag">weekday-lunch</span></div>
 
     <div class="info-section">
       <h3>Details</h3>
-      <div class="info-row"><span class="link-icon">📍</span> Gràcia · C/ de la Granada del Penedès, 22 · 08006</div>
-      <div class="info-row"><span class="link-icon">🍽️</span> Italian · mid-range</div>
-      <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00</div>
-      <div class="info-row"><span class="link-icon">🚇</span> Diagonal (L3/L5)</div>
+      <div class="info-row"><span class="link-icon">📍</span> Sarrià-Sant Gervasi · C/ de Balmes, 350 · 08006</div>
+      <div class="info-row"><span class="link-icon">🍽️</span> Mediterranean · mid-range</div>
+      <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00 (Mon-Fri)</div>
+      <div class="info-row"><span class="link-icon">🚇</span> Vallcarca (L3)</div>
     </div>
 
-    <div class="notes">Classic Italian. Beautiful garden terrace.</div>
+    <div class="notes">Two menus: pizza (13.90€) and traditional (13.90€)</div>
 
-    <div class="contact-links"><a href="https://ilgiardinetto.es/" target="_blank" class="contact-link"><span class="link-icon">🌐</span> Website</a><a href="https://www.google.com/maps/search/?api=1&query=Il+Giardinetto+C%2F+de+la+Granada+del+Pened%C3%A8s%2C+22+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a><a href="tel:+34 932 187 536" class="contact-link"><span class="link-icon">📞</span> +34 932 187 536</a></div>
+    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=La+Balmesina+C%2F+de+Balmes%2C+350+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
 
     <div class="share-section">
       <button class="share-btn" onclick="shareNative()">📤 Share</button>
       <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
-      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Il%20Giardinetto%20in%20Gr%C3%A0cia%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/520.html" target="_blank">💬 WhatsApp</a>
+      <a class="share-btn" href="https://wa.me/?text=Check%20out%20La%20Balmesina%20in%20Sarri%C3%A0-Sant%20Gervasi%2C%20Barcelona%21%2013.90%E2%82%AC%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/520.html" target="_blank">💬 WhatsApp</a>
     </div>
 
     <div class="community">
@@ -238,50 +236,50 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <div class="tab-content" id="tab-map">
       <div id="minimap"></div>
       <div class="map-address">
-        <span class="link-icon">📍</span> C/ de la Granada del Penedès, 22, 08006, Barcelona
-        <br><span class="link-icon">🚇</span> Diagonal (L3/L5)
+        <span class="link-icon">📍</span> C/ de Balmes, 350, 08006, Barcelona
+        <br><span class="link-icon">🚇</span> Vallcarca (L3)
       </div>
     </div>
 
   <!-- Tab: Reviews -->
   <div class="tab-content" id="tab-reviews">
       <div class="review-card">
-        <div class="review-score">4.4</div>
+        <div class="review-score">4.2</div>
         <div class="review-details">
-          <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span></div>
-          <div class="review-count">1,200 Google reviews</div>
+          <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span></div>
+          <div class="review-count">351 Google reviews</div>
         </div>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=Il+Giardinetto+C%2F+de+la+Granada+del+Pened%C3%A8s%2C+22+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=La+Balmesina+C%2F+de+Balmes%2C+350+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
     </div>
 
   <!-- Tab: Nearby -->
   <div class="tab-content" id="tab-nearby">
       <h2>📍 Nearby Restaurants</h2>
-      <a href="611.html" class="nearby-card">
+      <a href="46.html" class="nearby-card">
           <div class="nearby-icon">🥘</div>
           <div class="nearby-info">
-            <div class="nearby-name">Flash Flash Tortillería</div>
-            <div class="nearby-meta">🟡 Spanish ·  · 72m</div>
+            <div class="nearby-name">Bar Monterolas</div>
+            <div class="nearby-meta">🟢 Spanish · <15€ · 0m</div>
           </div>
-        </a><a href="406.html" class="nearby-card">
-          <div class="nearby-icon">🥘</div>
+        </a><a href="517.html" class="nearby-card">
+          <div class="nearby-icon">🥗</div>
           <div class="nearby-info">
-            <div class="nearby-name">Cervecería Naviera</div>
-            <div class="nearby-meta">🟡 Spanish ·  · 259m</div>
+            <div class="nearby-name">Gornishki</div>
+            <div class="nearby-meta">🟢 Mediterranean · 16€ · 0m</div>
           </div>
-        </a><a href="1279.html" class="nearby-card">
-          <div class="nearby-icon">🌶️</div>
+        </a><a href="950.html" class="nearby-card">
+          <div class="nearby-icon">☕</div>
           <div class="nearby-info">
-            <div class="nearby-name">Restaurant Roig Robí</div>
-            <div class="nearby-meta">🟢 Catalan · 25-35€ · 282m</div>
+            <div class="nearby-name">La Formatgeria de Sarrià</div>
+            <div class="nearby-meta">🔴 Café ·  · 0m</div>
           </div>
         </a>
     </div>
 </div>
 
 <footer>
-  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #520 of 1,520
+  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #520 of 1,458
 </footer>
 
 <script>
@@ -310,7 +308,7 @@ function switchTab(id){
 
 // Share
 function shareNative(){
-  if(navigator.share){navigator.share({title:'Il Giardinetto — Menuverso',text:'Italian in Gràcia.  menú del día.',url:window.location.href})}
+  if(navigator.share){navigator.share({title:'La Balmesina — Menuverso',text:'Mediterranean in Sarrià-Sant Gervasi. 13.90€ menú del día.',url:window.location.href})}
   else{copyLink(document.querySelector('.share-btn'))}
 }
 function copyLink(btn){
@@ -321,7 +319,7 @@ function copyLink(btn){
 
 // Open Now
 (function(){
-  var hoursStr='13:00-16:00';
+  var hoursStr='13:00-16:00 (Mon-Fri)';
   var el=document.getElementById('open-status');
   var txt=document.getElementById('open-text');
   if(!hoursStr||!hoursStr.trim()){el.className='open-status unknown';txt.textContent='Hours unavailable';return;}
@@ -371,9 +369,9 @@ initTheme();
 renderVisited(520);
 </script>
 <script>
-var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.3970725,2.1529046],16);
+var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.401,2.135],16);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
-L.circleMarker([41.3970725,2.1529046],{radius:10,fillColor:'#D97706',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
+L.circleMarker([41.401,2.135],{radius:10,fillColor:'#059669',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
 if(document.documentElement.classList.contains('dark')){document.querySelectorAll('.leaflet-tile').forEach(t=>t.style.filter='invert(1) hue-rotate(180deg) brightness(0.9)');};
 </script>
 </body>

@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Estimar Barcelona — Menú del Día Barcelona | Menuverso</title>
-<meta name="description" content="Estimar Barcelona in Eixample, Barcelona. Seafood cuisine.  menú del día. No Menú del Día. Rating: 4.5/5 (789 reviews).">
-<meta property="og:title" content="Estimar Barcelona — Menú del Día | Menuverso">
-<meta property="og:description" content="Seafood in Eixample.  menú del día. ⭐ 4.5/5">
+<title>Kebab Palace Nou Barris — Menú del Día Barcelona | Menuverso</title>
+<meta name="description" content="Kebab Palace Nou Barris in Nou Barris, Barcelona. Turkish cuisine.  menú del día. Menú del Día Confirmed. Rating: 4.1/5 (350 reviews).">
+<meta property="og:title" content="Kebab Palace Nou Barris — Menú del Día | Menuverso">
+<meta property="og:description" content="Turkish in Nou Barris.  menú del día. ⭐ 4.1/5">
 <meta property="og:url" content="https://whiteboxamir.github.io/menuverso/r/1198.html">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:site_name" content="Menuverso">
@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Estimar Barcelona", "address": {"@type": "PostalAddress", "streetAddress": "C/ de Mallorca, 213", "addressLocality": "Barcelona", "postalCode": "08010", "addressCountry": "ES"}, "servesCuisine": "Seafood", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.5, "reviewCount": 789}, "telephone": "+34 932079256", "url": "https://estimar.cat/", "geo": {"@type": "GeoCoordinates", "latitude": 41.3909839, "longitude": 2.1584795}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Kebab Palace Nou Barris", "address": {"@type": "PostalAddress", "streetAddress": "", "addressLocality": "Barcelona", "postalCode": "08042", "addressCountry": "ES"}, "servesCuisine": "Turkish", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.1, "reviewCount": 350}, "geo": {"@type": "GeoCoordinates", "latitude": 41.441, "longitude": 2.177}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -55,13 +55,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .container{max-width:720px;margin:-40px auto 0;padding:0 1rem 2rem;position:relative;z-index:2;}
 
 /* Deal Card (Neotaste-style) */
-.deal-card{background:#FEE2E2;border:2px solid #DC262622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
+.deal-card{background:#D1FAE5;border:2px solid #05966922;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
 .deal-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}
 .deal-emoji{font-size:1.5rem;}
-.deal-title{font-size:1.1rem;font-weight:700;color:#DC2626;}
+.deal-title{font-size:1.1rem;font-weight:700;color:#059669;}
 .deal-price{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:0.25rem;}
 .deal-desc{font-size:0.82rem;color:var(--sub);}
-:root.dark .deal-card{background:var(--card);border-color:#DC262644;}
+:root.dark .deal-card{background:var(--card);border-color:#05966944;}
 
 /* Open Status */
 .open-status{display:inline-flex;align-items:center;gap:5px;padding:0.3rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:600;}
@@ -168,14 +168,14 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
 <!-- Hero Section -->
 <div class="hero">
-  <img src="../assets/no-image.svg" alt="Seafood cuisine" loading="eager">
+  <img src="../assets/no-image.svg" alt="Turkish cuisine" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <a href="../index.html?hood=Eixample" class="hero-back">← Eixample</a>
-    <h1>Estimar Barcelona</h1>
+    <a href="../index.html?hood=Nou+Barris" class="hero-back">← Nou Barris</a>
+    <h1>Kebab Palace Nou Barris</h1>
     <div class="hero-meta">
-      <span>Seafood</span>
-      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span> 4.5</span>
+      <span>Turkish</span>
+      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span> 4.1</span>
       
       <span>·</span>
       <div class="open-status unknown" id="open-status"><span class="open-dot"></span> <span id="open-text">Checking...</span></div>
@@ -187,46 +187,44 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <!-- Menú del Día Deal Card -->
   <div class="deal-card">
     <div class="deal-header">
-      <span class="deal-emoji">🔴</span>
-      <span class="deal-title">No Menú del Día</span>
+      <span class="deal-emoji">🟢</span>
+      <span class="deal-title">Menú del Día Confirmed</span>
     </div>
     
-    <div class="deal-desc">Eixample · Urgell (L1)</div>
+    <div class="deal-desc">Nou Barris · Via Júlia (L4)</div>
   </div>
 
-  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Estimar+Barcelona+C%2F+de+Mallorca%2C+213+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
-    <a href="tel:+34 932079256" class="share-btn" style="flex:1;justify-content:center;">📞 Call</a>
-    <a href="https://estimar.cat/" target="_blank" class="share-btn" style="flex:1;justify-content:center;">🌐 Website</a>
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Kebab+Palace+Nou+Barris+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
     <button class="share-btn" style="flex:1;justify-content:center;" onclick="toggleFav(1198)">❤️ Save</button></div>
 
   <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('info')">Info</button>
     <button class="tab-btn" onclick="switchTab('map')">Map</button>
-    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.5)</button>
+    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.1)</button>
     <button class="tab-btn" onclick="switchTab('nearby')">Nearby</button>
   </div>
 
   <!-- Tab: Info -->
   <div class="tab-content active" id="tab-info">
-    <div class="tags"><span class="tag">seafood</span></div>
+    <div class="tags"><span class="tag">budget-friendly</span><span class="tag">menú-del-día</span><span class="tag">views</span></div>
 
     <div class="info-section">
       <h3>Details</h3>
-      <div class="info-row"><span class="link-icon">📍</span> Eixample · C/ de Mallorca, 213 · 08010</div>
-      <div class="info-row"><span class="link-icon">🍽️</span> Seafood · premium</div>
+      <div class="info-row"><span class="link-icon">📍</span> Nou Barris · 08042</div>
+      <div class="info-row"><span class="link-icon">🍽️</span> Turkish · budget</div>
       <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00</div>
-      <div class="info-row"><span class="link-icon">🚇</span> Urgell (L1)</div>
+      <div class="info-row"><span class="link-icon">🚇</span> Via Júlia (L4)</div>
     </div>
 
-    <div class="notes">Rafa Zafra. Premium seafood. Pg de Gràcia.</div>
+    <div class="notes">Budget-friendly turkish. in Nou Barris. 4.1★ (450 reviews). Menú del día likely available.</div>
 
-    <div class="contact-links"><a href="https://estimar.cat/" target="_blank" class="contact-link"><span class="link-icon">🌐</span> Website</a><a href="https://www.google.com/maps/search/?api=1&query=Estimar+Barcelona+C%2F+de+Mallorca%2C+213+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a><a href="tel:+34 932079256" class="contact-link"><span class="link-icon">📞</span> +34 932079256</a></div>
+    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=Kebab+Palace+Nou+Barris+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
 
     <div class="share-section">
       <button class="share-btn" onclick="shareNative()">📤 Share</button>
       <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
-      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Estimar%20Barcelona%20in%20Eixample%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/1198.html" target="_blank">💬 WhatsApp</a>
+      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Kebab%20Palace%20Nou%20Barris%20in%20Nou%20Barris%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/1198.html" target="_blank">💬 WhatsApp</a>
     </div>
 
     <div class="community">
@@ -238,50 +236,50 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <div class="tab-content" id="tab-map">
       <div id="minimap"></div>
       <div class="map-address">
-        <span class="link-icon">📍</span> C/ de Mallorca, 213, 08010, Barcelona
-        <br><span class="link-icon">🚇</span> Urgell (L1)
+        <span class="link-icon">📍</span> , 08042, Barcelona
+        <br><span class="link-icon">🚇</span> Via Júlia (L4)
       </div>
     </div>
 
   <!-- Tab: Reviews -->
   <div class="tab-content" id="tab-reviews">
       <div class="review-card">
-        <div class="review-score">4.5</div>
+        <div class="review-score">4.1</div>
         <div class="review-details">
-          <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></span></div>
-          <div class="review-count">789 Google reviews</div>
+          <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span></div>
+          <div class="review-count">350 Google reviews</div>
         </div>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=Estimar+Barcelona+C%2F+de+Mallorca%2C+213+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Kebab+Palace+Nou+Barris+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
     </div>
 
   <!-- Tab: Nearby -->
   <div class="tab-content" id="tab-nearby">
       <h2>📍 Nearby Restaurants</h2>
-      <a href="741.html" class="nearby-card">
-          <div class="nearby-icon">🧀</div>
+      <a href="538.html" class="nearby-card">
+          <div class="nearby-icon">🦐</div>
           <div class="nearby-info">
-            <div class="nearby-name">Petit Bleu</div>
-            <div class="nearby-meta">🟡 French ·  · 53m</div>
+            <div class="nearby-name">Restaurante Casa Angelita</div>
+            <div class="nearby-meta">🟡 Seafood ·  · 0m</div>
           </div>
-        </a><a href="83.html" class="nearby-card">
+        </a><a href="617.html" class="nearby-card">
+          <div class="nearby-icon">🥩</div>
+          <div class="nearby-info">
+            <div class="nearby-name">El Malevo Asador</div>
+            <div class="nearby-meta">🟡 Argentine ·  · 0m</div>
+          </div>
+        </a><a href="748.html" class="nearby-card">
           <div class="nearby-icon">🥘</div>
           <div class="nearby-info">
-            <div class="nearby-name">Bar Tossa</div>
-            <div class="nearby-meta">🟡 Spanish ·  · 69m</div>
-          </div>
-        </a><a href="874.html" class="nearby-card">
-          <div class="nearby-icon">🍝</div>
-          <div class="nearby-info">
-            <div class="nearby-name">Crusto Barcelona</div>
-            <div class="nearby-meta">🟡 Italian ·  · 95m</div>
+            <div class="nearby-name">Restaurante Casa Castro</div>
+            <div class="nearby-meta">🟢 Spanish · 12-14€ · 0m</div>
           </div>
         </a>
     </div>
 </div>
 
 <footer>
-  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #1198 of 1,520
+  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #1198 of 1,458
 </footer>
 
 <script>
@@ -310,7 +308,7 @@ function switchTab(id){
 
 // Share
 function shareNative(){
-  if(navigator.share){navigator.share({title:'Estimar Barcelona — Menuverso',text:'Seafood in Eixample.  menú del día.',url:window.location.href})}
+  if(navigator.share){navigator.share({title:'Kebab Palace Nou Barris — Menuverso',text:'Turkish in Nou Barris.  menú del día.',url:window.location.href})}
   else{copyLink(document.querySelector('.share-btn'))}
 }
 function copyLink(btn){
@@ -371,9 +369,9 @@ initTheme();
 renderVisited(1198);
 </script>
 <script>
-var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.3909839,2.1584795],16);
+var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.441,2.177],16);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
-L.circleMarker([41.3909839,2.1584795],{radius:10,fillColor:'#DC2626',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
+L.circleMarker([41.441,2.177],{radius:10,fillColor:'#059669',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
 if(document.documentElement.classList.contains('dark')){document.querySelectorAll('.leaflet-tile').forEach(t=>t.style.filter='invert(1) hue-rotate(180deg) brightness(0.9)');};
 </script>
 </body>
