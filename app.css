@@ -12,10 +12,10 @@
 /* ─── Design Tokens — Soft Pastel Light ─── */
 :root{
   /* Surfaces */
-  --bg:#FBF8F5;
+  --bg:#FFFFFF;
   --surface:#FFFFFF;
-  --surface-hover:#F5F0EB;
-  --surface-border:#EDE6DE;
+  --surface-hover:#F7F5F3;
+  --surface-border:#EDEBE8;
   --glass:rgba(251,248,245,0.92);
   --glass-border:rgba(0,0,0,0.06);
 
@@ -308,19 +308,20 @@ body{
   aspect-ratio:16/9;
   display:flex;align-items:center;justify-content:center;
   font-family:'Outfit',sans-serif;
-  font-weight:800;font-size:2rem;
-  color:rgba(255,255,255,0.5);
+  font-weight:700;font-size:1.6rem;
+  color:rgba(0,0,0,0.12);
   letter-spacing:2px;
+  background:#F0EEEB;
 }
-.placeholder-img.cuisine-spanish{background:linear-gradient(135deg,#F4A6A0,#F0C4BF,#F7DDD9);}
-.placeholder-img.cuisine-mediterranean{background:linear-gradient(135deg,#A8D5E2,#C9E4EC,#DEF0F5);}
-.placeholder-img.cuisine-catalan{background:linear-gradient(135deg,#F4C08E,#F7D4AC,#FAE4C8);}
-.placeholder-img.cuisine-italian{background:linear-gradient(135deg,#A3D9A5,#C5E8C7,#DEF2DF);}
-.placeholder-img.cuisine-japanese{background:linear-gradient(135deg,#F0B4CC,#F5CBE0,#FADDEF);}
-.placeholder-img.cuisine-peruvian{background:linear-gradient(135deg,#F4D08E,#F7DFAC,#FAEAC8);}
-.placeholder-img.cuisine-french{background:linear-gradient(135deg,#B3C7E6,#CDDAF0,#E2EAF7);}
-.placeholder-img.cuisine-asian{background:linear-gradient(135deg,#F4C4A0,#F7D5BA,#FAE5D3);}
-.placeholder-img.cuisine-default{background:linear-gradient(135deg,#D5CFC9,#E4DFDA,#EFEBE8);}
+.placeholder-img.cuisine-spanish,
+.placeholder-img.cuisine-mediterranean,
+.placeholder-img.cuisine-catalan,
+.placeholder-img.cuisine-italian,
+.placeholder-img.cuisine-japanese,
+.placeholder-img.cuisine-peruvian,
+.placeholder-img.cuisine-french,
+.placeholder-img.cuisine-asian,
+.placeholder-img.cuisine-default{background:#F0EEEB;}
 
 /* ─── Bottom Tab Bar ─── */
 .tab-bar{
