@@ -106,20 +106,13 @@ body{
 }
 .app-nav-brand img{width:28px;height:28px;border-radius:8px;}
 .app-nav-actions{display:flex;align-items:center;gap:0.5rem;}
-.app-nav-btn{
-  background:none;border:1px solid var(--surface-border);
-  border-radius:var(--radius-pill);padding:0.3rem 0.6rem;
-  color:var(--text-sub);font-size:0.85rem;cursor:pointer;
-  transition:all 0.2s;font-family:'Inter',sans-serif;
+.app-nav-location{
+  display:flex;align-items:center;gap:4px;
+  color:var(--text-sub);font-size:0.85rem;font-weight:500;
+  padding:0.35rem 0.7rem;border-radius:var(--radius-pill);
+  background:var(--surface);border:1px solid var(--surface-border);
 }
-.app-nav-btn:hover{border-color:var(--accent);color:var(--accent);}
-.app-nav-link{
-  color:var(--text-sub);text-decoration:none;font-size:0.85rem;
-  font-weight:500;padding:0.4rem 0.7rem;border-radius:var(--radius-sm);
-  transition:all 0.2s;
-}
-.app-nav-link:hover{color:var(--text);background:var(--surface);}
-.app-nav-links{display:flex;align-items:center;gap:0.25rem;}
+.app-nav-location .location-icon{font-size:0.9rem;}
 
 /* ─── Search Bar ─── */
 .search-container{
@@ -524,14 +517,13 @@ body{
   .card-body{padding:0.55rem;}
   .card-name{font-size:0.88rem;}
   .card-meta{font-size:0.72rem;}
-  .app-nav-links{display:none;}
+  .app-nav-location{display:none;}
   .search-container{padding:0.5rem 0.75rem;}
 }
 @media(min-width:641px) and (max-width:1024px){
   .feed{grid-template-columns:repeat(2,1fr);}
 }
 @media(min-width:1025px){
-  .tab-bar{display:none;}
   .screen{padding-bottom:2rem;}
 }
 

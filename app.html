@@ -15,20 +15,17 @@
 </head>
 <body>
 
-<!-- ═══ Top Nav ═══ -->
+<!-- ═══ Top Nav (Consumer) ═══ -->
 <nav class="app-nav">
   <a href="app.html" class="app-nav-brand">
     <img src="assets/logo.png" alt="Menuverso">
     <span>Menuverso</span>
   </a>
-  <div class="app-nav-links">
-    <a href="app.html" class="app-nav-link" style="color:var(--accent);">Discover</a>
-    <a href="index.html" class="app-nav-link">Database</a>
-    <a href="analytics.html" class="app-nav-link">Analytics</a>
-    <a href="lists.html" class="app-nav-link">Best Of</a>
+  <div class="app-nav-location">
+    <span class="location-icon">📍</span>
+    <span>Barcelona</span>
   </div>
   <div class="app-nav-actions">
-    <button class="app-nav-btn" id="themeToggle" onclick="toggleTheme()" title="Toggle theme">🌙</button>
     <div style="display:flex;border-radius:var(--radius-pill);overflow:hidden;border:1px solid var(--surface-border);font-size:0.72rem;font-weight:600;">
       <button data-lang="es" class="active" onclick="setLang('es')" style="padding:0.3rem 0.5rem;border:none;cursor:pointer;font-family:Inter,sans-serif;background:var(--accent);color:#fff;transition:all 0.2s;">ES</button>
       <button data-lang="ca" onclick="setLang('ca')" style="padding:0.3rem 0.5rem;border:none;cursor:pointer;font-family:Inter,sans-serif;background:var(--surface);color:var(--text-sub);transition:all 0.2s;">CA</button>
@@ -80,7 +77,7 @@
   </div>
 
   <footer class="app-footer">
-    Built with ❤️ by <a href="landing.html">Menuverso</a> · <a href="index.html">Database View</a>
+    © 2025 Menuverso · Barcelona
   </footer>
 </div>
 
@@ -289,21 +286,9 @@ function getOpenStatus(r){ return parseHoursStatus(r.opening_hours_lunch||''); }
 function isOpen(r){ return getOpenStatus(r)==='open'; }
 
 // ═══════════════════════════════════════
-//  Theme
+//  Theme — dark only (consumer app)
 // ═══════════════════════════════════════
-function initTheme(){
-  const saved = localStorage.getItem('menuverso_theme');
-  // Default to dark (our primary design)
-  if(saved==='light'){
-    document.documentElement.classList.add('light');
-    document.getElementById('themeToggle').textContent='☀️';
-  }
-}
-function toggleTheme(){
-  const isLight = document.documentElement.classList.toggle('light');
-  localStorage.setItem('menuverso_theme', isLight?'light':'dark');
-  document.getElementById('themeToggle').textContent = isLight?'☀️':'🌙';
-}
+function initTheme(){ /* dark by default, no toggle */ }
 
 // ═══════════════════════════════════════
 //  Language
