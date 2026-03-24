@@ -12,10 +12,10 @@
 /* ─── Design Tokens — Soft Pastel Light ─── */
 :root{
   /* Surfaces */
-  --bg:#FFFFFF;
+  --bg:#FBF8F5;
   --surface:#FFFFFF;
-  --surface-hover:#F7F5F3;
-  --surface-border:#EDEBE8;
+  --surface-hover:#F5F0EB;
+  --surface-border:#EDE6DE;
   --glass:rgba(251,248,245,0.92);
   --glass-border:rgba(0,0,0,0.06);
 
