@@ -9755,7 +9755,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.3984984,
       "lng": 2.1570532
-    }
+    },
+    "image_url": "assets/photos/151_hero.webp"
   },
   {
     "id": 152,
@@ -9818,7 +9819,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.4052704,
       "lng": 2.161758
-    }
+    },
+    "image_url": "assets/photos/152_hero.webp"
   },
   {
     "id": 153,
@@ -9943,7 +9945,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.4042661,
       "lng": 2.1579181
-    }
+    },
+    "image_url": "assets/photos/154_hero.webp"
   },
   {
     "id": 155,
@@ -10002,7 +10005,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.4003274,
       "lng": 2.157786
-    }
+    },
+    "image_url": "assets/photos/155_hero.webp"
   },
   {
     "id": 156,
@@ -10066,7 +10070,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.4030399,
       "lng": 2.1565642
-    }
+    },
+    "image_url": "assets/photos/156_hero.webp"
   },
   {
     "id": 157,
@@ -10128,7 +10133,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.4087908,
       "lng": 2.1569467
-    }
+    },
+    "image_url": "assets/photos/157_hero.webp"
   },
   {
     "id": 158,
@@ -10192,7 +10198,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.4037725,
       "lng": 2.1576976
-    }
+    },
+    "image_url": "assets/photos/158_hero.webp"
   },
   {
     "id": 159,
@@ -10253,7 +10260,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.3979849,
       "lng": 2.1591579
-    }
+    },
+    "image_url": "assets/photos/159_hero.webp"
   },
   {
     "id": 160,
@@ -10317,7 +10325,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.4016246,
       "lng": 2.1567108
-    }
+    },
+    "image_url": "assets/photos/160_hero.webp"
   },
   {
     "id": 161,
@@ -10378,7 +10387,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.3981882,
       "lng": 2.1575808
-    }
+    },
+    "image_url": "assets/photos/161_hero.webp"
   },
   {
     "id": 162,
@@ -10439,7 +10449,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.4045382,
       "lng": 2.1604979
-    }
+    },
+    "image_url": "assets/photos/162_hero.webp"
   },
   {
     "id": 163,
@@ -10566,7 +10577,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.4006979,
       "lng": 2.1592224
-    }
+    },
+    "image_url": "assets/photos/164_hero.webp"
   },
   {
     "id": 165,
@@ -10627,7 +10639,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.4044152,
       "lng": 2.1561827
-    }
+    },
+    "image_url": "assets/photos/165_hero.webp"
   },
   {
     "id": 166,
@@ -10690,7 +10703,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.4059084,
       "lng": 2.1547111
-    }
+    },
+    "image_url": "assets/photos/166_hero.webp"
   },
   {
     "id": 167,
@@ -10756,7 +10770,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.3991014,
       "lng": 2.1606888
-    }
+    },
+    "image_url": "assets/photos/167_hero.webp"
   },
   {
     "id": 168,
@@ -10818,7 +10833,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.4037725,
       "lng": 2.1576976
-    }
+    },
+    "image_url": "assets/photos/168_hero.webp"
   },
   {
     "id": 169,
@@ -10883,7 +10899,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.398699,
       "lng": 2.1603906
-    }
+    },
+    "image_url": "assets/photos/169_hero.webp"
   },
   {
     "id": 170,
@@ -10947,7 +10964,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.4049488,
       "lng": 2.1577448
-    }
+    },
+    "image_url": "assets/photos/170_hero.webp"
   },
   {
     "id": 171,
@@ -11011,7 +11029,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.4078985,
       "lng": 2.1528045
-    }
+    },
+    "image_url": "assets/photos/171_hero.webp"
   },
   {
     "id": 172,
@@ -11072,7 +11091,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.4049488,
       "lng": 2.1577448
-    }
+    },
+    "image_url": "assets/photos/172_hero.webp"
   },
   {
     "id": 173,
@@ -11136,7 +11156,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.4036,
       "lng": 2.1567
-    }
+    },
+    "image_url": "assets/photos/173_hero.webp"
   },
   {
     "id": 174,
@@ -11201,7 +11222,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.383,
       "lng": 2.177
-    }
+    },
+    "image_url": "assets/photos/174_hero.webp"
   },
   {
     "id": 175,
@@ -11521,7 +11543,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.3816342,
       "lng": 2.1749146
-    }
+    },
+    "image_url": "assets/photos/179_hero.webp"
   },
   {
     "id": 180,
@@ -11652,7 +11675,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.3815693,
       "lng": 2.174519
-    }
+    },
+    "image_url": "assets/photos/181_hero.webp"
   },
   {
     "id": 182,
@@ -11775,7 +11799,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.3827518,
       "lng": 2.173018
-    }
+    },
+    "image_url": "assets/photos/183_hero.webp"
   },
   {
     "id": 184,
@@ -11838,7 +11863,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.3827518,
       "lng": 2.173018
-    }
+    },
+    "image_url": "assets/photos/184_hero.webp"
   },
   {
     "id": 185,
@@ -12157,7 +12183,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.3835881,
       "lng": 2.1766716
-    }
+    },
+    "image_url": "assets/photos/189_hero.webp"
   },
   {
     "id": 190,
@@ -12222,7 +12249,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.3835881,
       "lng": 2.1766548
-    }
+    },
+    "image_url": "assets/photos/190_hero.webp"
   },
   {
     "id": 191,
@@ -12283,7 +12311,8 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.3812094,
       "lng": 2.1753772
-    }
+    },
+    "image_url": "assets/photos/191_hero.webp"
   },
   {
     "id": 192,
