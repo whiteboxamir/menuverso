@@ -386,10 +386,29 @@ body{
 
 /* ─── Map Screen ─── */
 #map-screen .map-wrap{
+  position:relative;
   width:100%;height:calc(100vh - var(--nav-h) - var(--tab-h));
   height:calc(100dvh - var(--nav-h) - var(--tab-h));
 }
 #map-screen .map-wrap #appMap{width:100%;height:100%;}
+.map-list-btn{
+  position:absolute;top:1rem;left:50%;transform:translateX(-50%);z-index:90;
+  padding:0.55rem 1.1rem;
+  border-radius:var(--radius-pill);
+  background:var(--accent);color:#fff;
+  border:none;font-size:0.82rem;font-weight:600;
+  font-family:'Inter',sans-serif;
+  cursor:pointer;
+  box-shadow:0 4px 16px rgba(0,0,0,0.3);
+  transition:all 0.2s;
+  white-space:nowrap;
+}
+.map-list-btn:hover{background:var(--accent-hover);transform:translateX(-50%) scale(1.04);}
+.map-list-btn:active{transform:translateX(-50%) scale(0.96);}
+
+/* ─── Bottom Sheet Hero ─── */
+.bs-hero{overflow:hidden;border-radius:var(--radius) var(--radius) 0 0;}
+.bs-hero img{display:block;}
 
 /* ─── Bottom Sheet ─── */
 .bottom-sheet-overlay{

@@ -88,6 +88,9 @@
 <div class="screen" id="map-screen">
   <div class="map-wrap">
     <div id="appMap"></div>
+    <button class="map-list-btn" id="listAreaBtn" onclick="listThisArea()" style="display:none;">
+      📍 List restaurants in this area
+    </button>
   </div>
 </div>
 
@@ -96,6 +99,15 @@
   <div class="finder-wrap">
     <div class="finder-title" id="finderTitle">🍽️ Encuentra tu Almuerzo</div>
     <div class="finder-sub" id="finderSub">Tell us what you're looking for and we'll find the perfect spot.</div>
+
+    <!-- Open Now Toggle -->
+    <div class="finder-section">
+      <div class="finder-label">Status</div>
+      <div class="finder-chips">
+        <span class="finder-chip" data-pref="openNow" data-val="yes" onclick="toggleFinderChip(this)">🟢 Open Now Only</span>
+        <span class="finder-chip" data-pref="menuConfirmed" data-val="yes" onclick="toggleFinderChip(this)">✅ Menú Confirmed</span>
+      </div>
+    </div>
 
     <!-- Neighborhood -->
     <div class="finder-section">
@@ -141,8 +153,12 @@
 <div class="bottom-sheet-overlay" id="bsOverlay" onclick="closeBottomSheet()"></div>
 <div class="bottom-sheet" id="bottomSheet">
   <div class="bottom-sheet-handle"></div>
+  <div class="bs-hero" id="bsHero" style="display:none;"></div>
   <div class="bottom-sheet-content">
-    <div class="bs-name" id="bsName"></div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+      <div class="bs-name" id="bsName"></div>
+      <button class="card-fav" id="bsFav" style="position:static;" onclick="toggleBsFav()">🤍</button>
+    </div>
     <div class="bs-meta" id="bsMeta"></div>
     <div id="bsBadges" style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:0.5rem;"></div>
     <div class="bs-meta" id="bsNotes" style="font-size:0.82rem;"></div>
@@ -188,7 +204,8 @@ let map = null, markerCluster = null;
 let loadedCount = 0;
 const BATCH = 24;
 let currentFiltered = [];
-let finderPrefs = { hood: null, budget: null, cuisine: null };
+let finderPrefs = { hood: null, budget: null, cuisine: null, openNow: null, menuConfirmed: null };
+let currentBsRestaurant = null;
 
 // Cuisine type → image slug mapping
 const CUISINE_MAP = {
@@ -330,28 +347,36 @@ function switchScreen(id, tabEl){
 // ═══════════════════════════════════════
 //  Filtering & Sorting
 // ═══════════════════════════════════════
+function applySort(filtered){
+  if(sortMode==='rating') filtered.sort((a,b)=>(b.google_maps_rating||0)-(a.google_maps_rating||0));
+  else if(sortMode==='reviews') filtered.sort((a,b)=>(b.google_maps_review_count||0)-(a.google_maps_review_count||0));
+  else if(sortMode==='price-low') filtered.sort((a,b)=>(parsePrice(a.menu_price_range)||999)-(parsePrice(b.menu_price_range)||999));
+  else if(sortMode==='price-high') filtered.sort((a,b)=>(parsePrice(b.menu_price_range)||0)-(parsePrice(a.menu_price_range)||0));
+  else filtered.sort((a,b)=>a.name.localeCompare(b.name));
+  return filtered;
+}
+
 function getFiltered(){
   const q = searchQuery.toLowerCase();
   let filtered = DATA.filter(r=>{
+    // Category filters
     if(activeFilter==='open' && !isOpen(r)) return false;
     if(activeFilter==='confirmed' && r.menu_tier!=='confirmed') return false;
     if(activeFilter==='budget' && r.pricing_tier!=='budget') return false;
     if(activeFilter==='mid-range' && r.pricing_tier!=='mid-range') return false;
     if(activeFilter==='premium' && r.pricing_tier!=='premium') return false;
+    // Cuisine filter
+    if(activeFilter && activeFilter.startsWith('cuisine:')){
+      if(r.cuisine_type !== activeFilter.split(':')[1]) return false;
+    }
+    // Search
     if(q){
       const haystack = [r.name, r.neighborhood, r.cuisine_type, r.notes||'', (r.tags||[]).join(' '), r.address_full||'', r.metro_station||''].join(' ').toLowerCase();
       if(!haystack.includes(q)) return false;
     }
     return true;
   });
-
-  if(sortMode==='rating') filtered.sort((a,b)=>(b.google_maps_rating||0)-(a.google_maps_rating||0));
-  else if(sortMode==='reviews') filtered.sort((a,b)=>(b.google_maps_review_count||0)-(a.google_maps_review_count||0));
-  else if(sortMode==='price-low') filtered.sort((a,b)=>(parsePrice(a.menu_price_range)||999)-(parsePrice(b.menu_price_range)||999));
-  else if(sortMode==='price-high') filtered.sort((a,b)=>(parsePrice(b.menu_price_range)||0)-(parsePrice(a.menu_price_range)||0));
-  else filtered.sort((a,b)=>a.name.localeCompare(b.name));
-
-  return filtered;
+  return applySort(filtered);
 }
 
 // ═══════════════════════════════════════
@@ -502,7 +527,13 @@ function renderSaved(){
 // ═══════════════════════════════════════
 function initMap(){
   map = L.map('appMap',{zoomControl:true}).setView([41.3888,2.1700],13);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
+
+  // Use light tiles for light mode, dark for dark
+  const isDark = !document.documentElement.classList.contains('light');
+  const tileUrl = isDark
+    ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+    : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+  L.tileLayer(tileUrl,{
     attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
     maxZoom:19
   }).addTo(map);
@@ -516,7 +547,7 @@ function initMap(){
       const count=cluster.getChildCount();
       const sz=count>50?48:count>20?42:36;
       return L.divIcon({
-        html:`<div style="width:${sz}px;height:${sz}px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:${count>99?'11':'13'}px;font-family:Outfit,sans-serif;color:#fff;background:var(--accent);border:2px solid rgba(255,255,255,0.3);box-shadow:0 2px 8px rgba(0,0,0,0.3);">${count}</div>`,
+        html:`<div style="width:${sz}px;height:${sz}px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:${count>99?'11':'13'}px;font-family:Outfit,sans-serif;color:#fff;background:#FF6B35;border:2px solid rgba(255,255,255,0.3);box-shadow:0 2px 8px rgba(0,0,0,0.3);">${count}</div>`,
         className:'',iconSize:[sz,sz]
       });
     }
@@ -534,20 +565,70 @@ function initMap(){
       iconSize:[14,14],iconAnchor:[7,7],popupAnchor:[0,-10]
     });
     const marker = L.marker([r.coordinates.lat, r.coordinates.lng],{icon});
+    marker._restaurantData = r;
     marker.on('click', ()=>openBottomSheet(r));
     markerCluster.addLayer(marker);
   });
+
+  // Show "List this area" button when map moves
+  map.on('moveend', ()=>{
+    document.getElementById('listAreaBtn').style.display = 'block';
+  });
 }
 
-// Bottom sheet
+// List restaurants in current map viewport
+function listThisArea(){
+  if(!map) return;
+  const bounds = map.getBounds();
+  const inView = DATA.filter(r=>{
+    if(!r.coordinates||!r.coordinates.lat||!r.coordinates.lng) return false;
+    return bounds.contains([r.coordinates.lat, r.coordinates.lng]);
+  });
+
+  // Switch to home screen with these results
+  activeFilter = 'all';
+  searchQuery = '';
+  document.getElementById('searchInput').value = '';
+  document.querySelectorAll('#filterPills .pill').forEach(p=>p.classList.remove('active','active-green'));
+  document.querySelector('#filterPills .pill[data-filter="all"]').classList.add('active');
+
+  // Temporarily override to show area results
+  loadedCount = 0;
+  const sorted = applySort(inView.slice());
+  currentFiltered = sorted;
+  const feed = document.getElementById('feed');
+  feed.innerHTML = sorted.slice(0, BATCH).map(renderCard).join('');
+  loadedCount = Math.min(BATCH, sorted.length);
+  document.getElementById('feedCount').textContent = `${sorted.length} restaurants in this area`;
+
+  switchScreen('home-screen', document.querySelector('.tab-item[data-screen="home-screen"]'));
+  document.getElementById('listAreaBtn').style.display = 'none';
+}
+
+// ═══════════════════════════════════════
+//  Bottom Sheet
+// ═══════════════════════════════════════
 function openBottomSheet(r){
+  currentBsRestaurant = r;
+
+  // Hero image
+  const heroEl = document.getElementById('bsHero');
+  const imgSrc = getImageSrc(r);
+  heroEl.innerHTML = `<img src="${imgSrc}" alt="${r.name}" onerror="this.parentElement.style.display='none'" style="width:100%;height:180px;object-fit:cover;border-radius:var(--radius) var(--radius) 0 0;">`;
+  heroEl.style.display = 'block';
+
   document.getElementById('bsName').textContent = r.name;
   document.getElementById('bsMeta').textContent = `${r.cuisine_type} · ${r.neighborhood} · ${r.menu_price_range||'—'}`;
+
+  // Fav button
+  const isFav = favorites.includes(r.id);
+  document.getElementById('bsFav').textContent = isFav ? '❤️' : '🤍';
+  document.getElementById('bsFav').className = 'card-fav' + (isFav ? ' active' : '');
 
   const tierBadge = r.menu_tier==='confirmed' ? '<span class="menu-badge confirmed">✅ Confirmed</span>' : r.menu_tier==='likely' ? '<span class="menu-badge likely">🟡 Likely</span>' : '';
   const openSt = getOpenStatus(r);
   const openBadge = openSt==='open' ? '<span class="open-badge open"><span class="pulse"></span>Open</span>' : openSt==='closed' ? '<span class="open-badge closed">Closed</span>' : '';
-  const ratingBadge = r.google_maps_rating ? `<span style="font-size:0.82rem;color:var(--gold);font-weight:600;">★ ${r.google_maps_rating} <span style="color:var(--text-muted);font-weight:400;">(${r.google_maps_review_count||0})</span></span>` : '';
+  const ratingBadge = r.google_maps_rating ? `<span style="font-size:0.82rem;color:var(--gold);font-weight:600;">★ ${r.google_maps_rating} <span style="color:var(--text-muted);font-weight:400;">(${(r.google_maps_review_count||0).toLocaleString()})</span></span>` : '';
   document.getElementById('bsBadges').innerHTML = [tierBadge, openBadge, ratingBadge].filter(Boolean).join('');
 
   document.getElementById('bsNotes').textContent = r.notes||'';
@@ -564,7 +645,47 @@ function openBottomSheet(r){
 function closeBottomSheet(){
   document.getElementById('bsOverlay').classList.remove('show');
   document.getElementById('bottomSheet').classList.remove('show');
+  currentBsRestaurant = null;
 }
+function toggleBsFav(){
+  if(!currentBsRestaurant) return;
+  const id = currentBsRestaurant.id;
+  const btn = document.getElementById('bsFav');
+  const idx = favorites.indexOf(id);
+  if(idx>-1){ favorites.splice(idx,1); btn.textContent='🤍'; btn.classList.remove('active'); }
+  else{ favorites.push(id); btn.textContent='❤️'; btn.classList.add('active'); }
+  localStorage.setItem('menuverso_favs', JSON.stringify(favorites));
+}
+
+// Swipe-to-dismiss bottom sheet
+(function(){
+  let startY = 0, currentY = 0, isDragging = false;
+  const threshold = 80;
+  const bs = document.getElementById('bottomSheet');
+  const handle = bs.querySelector('.bottom-sheet-handle');
+
+  handle.addEventListener('touchstart', e=>{
+    startY = e.touches[0].clientY;
+    isDragging = true;
+    bs.style.transition = 'none';
+  }, {passive:true});
+
+  document.addEventListener('touchmove', e=>{
+    if(!isDragging) return;
+    currentY = e.touches[0].clientY;
+    const diff = currentY - startY;
+    if(diff > 0) bs.style.transform = `translateY(${diff}px)`;
+  }, {passive:true});
+
+  document.addEventListener('touchend', ()=>{
+    if(!isDragging) return;
+    isDragging = false;
+    bs.style.transition = '';
+    const diff = currentY - startY;
+    if(diff > threshold) closeBottomSheet();
+    bs.style.transform = '';
+  });
+})();
 
 // ═══════════════════════════════════════
 //  Finder
@@ -590,16 +711,22 @@ function initFinder(){
 function toggleFinderChip(el){
   const pref = el.dataset.pref;
   const val = el.dataset.val;
-  // Single select per pref group
   const wasSelected = el.classList.contains('selected');
-  document.querySelectorAll(`.finder-chip[data-pref="${pref}"]`).forEach(c=>c.classList.remove('selected'));
-  if(!wasSelected){ el.classList.add('selected'); finderPrefs[pref]=val; }
-  else{ finderPrefs[pref]=null; }
+  // Single select per group (except toggles like openNow, menuConfirmed)
+  if(pref === 'openNow' || pref === 'menuConfirmed'){
+    el.classList.toggle('selected');
+    finderPrefs[pref] = el.classList.contains('selected') ? val : null;
+  } else {
+    document.querySelectorAll(`.finder-chip[data-pref="${pref}"]`).forEach(c=>c.classList.remove('selected'));
+    if(!wasSelected){ el.classList.add('selected'); finderPrefs[pref]=val; }
+    else{ finderPrefs[pref]=null; }
+  }
   computeFinderResults();
 }
 
 function computeFinderResults(){
-  if(!finderPrefs.hood && !finderPrefs.budget && !finderPrefs.cuisine){
+  const hasAny = finderPrefs.hood || finderPrefs.budget || finderPrefs.cuisine || finderPrefs.openNow || finderPrefs.menuConfirmed;
+  if(!hasAny){
     document.getElementById('finderResults').style.display='none';
     return;
   }
@@ -608,6 +735,8 @@ function computeFinderResults(){
   if(finderPrefs.hood) pool = pool.filter(r=>r.neighborhood===finderPrefs.hood);
   if(finderPrefs.budget) pool = pool.filter(r=>r.pricing_tier===finderPrefs.budget);
   if(finderPrefs.cuisine) pool = pool.filter(r=>r.cuisine_type===finderPrefs.cuisine);
+  if(finderPrefs.openNow) pool = pool.filter(r=>isOpen(r));
+  if(finderPrefs.menuConfirmed) pool = pool.filter(r=>r.menu_tier==='confirmed');
 
   // Score
   pool = pool.map(r=>{
@@ -617,12 +746,13 @@ function computeFinderResults(){
     if(r.google_maps_rating) score += r.google_maps_rating * 3;
     if(r.google_maps_review_count>500) score+=5;
     else if(r.google_maps_review_count>100) score+=3;
+    if(isOpen(r)) score+=10;
     return {...r, _score: Math.min(100,score)};
   }).sort((a,b)=>b._score-a._score);
 
   document.getElementById('finderResults').style.display='block';
   document.getElementById('finderResultsLabel').textContent=`${pool.length} matches found`;
-  document.getElementById('finderFeed').innerHTML = pool.slice(0,20).map(renderCard).join('') || '<div class="no-results">No matches. Try adjusting your filters.</div>';
+  document.getElementById('finderFeed').innerHTML = pool.slice(0,24).map(renderCard).join('') || '<div class="no-results">No matches. Try adjusting your filters.</div>';
 }
 
 // ═══════════════════════════════════════
@@ -640,55 +770,7 @@ function addCuisineFilters(){
     pill.textContent = name;
     container.appendChild(pill);
   });
-
-  // Re-bind click to handle cuisine filters
-  container.addEventListener('click', e=>{
-    const pill = e.target.closest('.pill');
-    if(!pill) return;
-    document.querySelectorAll('#filterPills .pill').forEach(p=>p.classList.remove('active','active-green'));
-    pill.classList.add(pill.dataset.filter==='open' ? 'active-green' : 'active');
-
-    const f = pill.dataset.filter;
-    if(f.startsWith('cuisine:')){
-      activeFilter = f;
-    } else {
-      activeFilter = f;
-    }
-    renderFeed(true);
-  }, {once:false});
 }
-
-// Patch getFiltered for cuisine filters
-const _origGetFiltered = getFiltered;
-function getFilteredPatched(){
-  if(activeFilter && activeFilter.startsWith('cuisine:')){
-    const cuisine = activeFilter.split(':')[1];
-    const q = searchQuery.toLowerCase();
-    let filtered = DATA.filter(r=>{
-      if(r.cuisine_type!==cuisine) return false;
-      if(q){
-        const haystack=[r.name,r.neighborhood,r.cuisine_type,r.notes||'',(r.tags||[]).join(' '),r.address_full||'',r.metro_station||''].join(' ').toLowerCase();
-        if(!haystack.includes(q)) return false;
-      }
-      return true;
-    });
-    if(sortMode==='rating') filtered.sort((a,b)=>(b.google_maps_rating||0)-(a.google_maps_rating||0));
-    else if(sortMode==='reviews') filtered.sort((a,b)=>(b.google_maps_review_count||0)-(a.google_maps_review_count||0));
-    else if(sortMode==='price-low') filtered.sort((a,b)=>(parsePrice(a.menu_price_range)||999)-(parsePrice(b.menu_price_range)||999));
-    else if(sortMode==='price-high') filtered.sort((a,b)=>(parsePrice(b.menu_price_range)||0)-(parsePrice(a.menu_price_range)||0));
-    else filtered.sort((a,b)=>a.name.localeCompare(b.name));
-    return filtered;
-  }
-  return _origGetFiltered();
-}
-// Override
-window._getFiltered = getFiltered;
-// We need to replace the reference in renderFeed
-// Simplest: just redefine getFiltered
-Object.defineProperty(window, '_filteredOverride', { get: ()=> getFilteredPatched });
-
-// Actually, let's just patch it cleanly:
-// Already have a reference to the original above, redefine the function used by renderFeed
 
 // ═══════════════════════════════════════
 //  Init
@@ -699,53 +781,9 @@ function init(){
   addCuisineFilters();
   initFinder();
 
-  // Override getFiltered for cuisine support
-  const origGF = getFiltered;
-  window.getFilteredFn = ()=>{
-    if(activeFilter && activeFilter.startsWith('cuisine:')){
-      const cuisine = activeFilter.split(':')[1];
-      const q = searchQuery.toLowerCase();
-      let filtered = DATA.filter(r=>{
-        if(r.cuisine_type!==cuisine) return false;
-        if(q){
-          const h=[r.name,r.neighborhood,r.cuisine_type,r.notes||'',(r.tags||[]).join(' '),r.address_full||'',r.metro_station||''].join(' ').toLowerCase();
-          if(!h.includes(q)) return false;
-        }
-        return true;
-      });
-      if(sortMode==='rating') filtered.sort((a,b)=>(b.google_maps_rating||0)-(a.google_maps_rating||0));
-      else if(sortMode==='reviews') filtered.sort((a,b)=>(b.google_maps_review_count||0)-(a.google_maps_review_count||0));
-      else if(sortMode==='price-low') filtered.sort((a,b)=>(parsePrice(a.menu_price_range)||999)-(parsePrice(b.menu_price_range)||999));
-      else if(sortMode==='price-high') filtered.sort((a,b)=>(parsePrice(b.menu_price_range)||0)-(parsePrice(a.menu_price_range)||0));
-      else filtered.sort((a,b)=>a.name.localeCompare(b.name));
-      return filtered;
-    }
-    return origGF();
-  };
-
   // Render initial feed after short delay for skeleton effect
   setTimeout(()=>{ renderFeed(true); }, 400);
 }
-
-// Patch renderFeed to use the overridden getFiltered
-const _origRenderFeed = renderFeed;
-renderFeed = function(reset){
-  if(reset){
-    loadedCount = 0;
-    currentFiltered = window.getFilteredFn ? window.getFilteredFn() : getFiltered();
-  }
-  const feed = document.getElementById('feed');
-  const slice = currentFiltered.slice(loadedCount, loadedCount + BATCH);
-  if(reset) feed.innerHTML = '';
-  if(!currentFiltered.length){
-    feed.innerHTML = '<div class="no-results">No restaurants match. Try different filters.</div>';
-    document.getElementById('feedCount').textContent = '0 restaurants';
-    return;
-  }
-  feed.innerHTML += slice.map(renderCard).join('');
-  loadedCount += slice.length;
-  document.getElementById('feedCount').textContent = `${currentFiltered.length.toLocaleString()} restaurants`;
-};
 
 if(DATA.length) init();
 else document.getElementById('feed').innerHTML='<div class="no-results">Error: restaurants_data.js not found.</div>';
