@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gràcia Restaurants — Menuverso Barcelona</title>
+<meta name="description" content="Gràcia: 123 restaurants, avg €13 menú del día, 50 confirmed. Best of Gràcia in Barcelona by Menuverso.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></' + 'script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#F8FAFC;--card:#FFF;--text:#1E293B;--sub:#64748B;--mut:#94A3B8;--border:#E2E8F0;--accent:#2563EB;--accent-sub:#DBEAFE;--green:#059669;--green-bg:#D1FAE5;--amber:#D97706;--red:#DC2626;--radius:12px;--shadow:0 2px 8px rgba(0,0,0,0.06);}
+:root.dark{--bg:#0F172A;--card:#1E293B;--text:#F1F5F9;--sub:#94A3B8;--mut:#64748B;--border:#334155;--accent:#3B82F6;--accent-sub:#1E3A5F;--green:#34D399;--green-bg:#064E3B;--shadow:0 2px 8px rgba(0,0,0,0.3);}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background 0.3s,color 0.3s;}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1.5rem;border-bottom:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+.nav-brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.1rem;}
+.nav-brand img{width:28px;height:28px;border-radius:8px;}
+.nav-links{display:flex;align-items:center;gap:1rem;}
+.nav-links a{color:var(--sub);text-decoration:none;font-size:0.82rem;font-weight:500;padding:0.3rem 0.5rem;border-radius:8px;transition:all 0.2s;}
+.nav-links a:hover{color:var(--text);}
+.controls-bar{display:flex;gap:0.5rem;align-items:center;}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:0.3rem 0.55rem;cursor:pointer;font-size:0.85rem;color:var(--sub);transition:all 0.2s;}
+.container{max-width:800px;margin:0 auto;padding:1.5rem;}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--sub);text-decoration:none;font-size:0.85rem;font-weight:500;margin-bottom:1rem;transition:color 0.2s;}
+.back:hover{color:var(--text);}
+.hero{text-align:center;margin-bottom:2rem;}
+.hero h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:0.25rem;}
+.hero p{color:var(--sub);font-size:0.9rem;}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0.75rem;margin-bottom:2rem;}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;text-align:center;box-shadow:var(--shadow);}
+.stat-num{font-size:1.3rem;font-weight:700;}
+.stat-label{font-size:0.7rem;color:var(--mut);text-transform:uppercase;letter-spacing:0.04em;margin-top:2px;}
+.green{color:var(--green);} .amber{color:var(--amber);} .red{color:var(--red);}
+.section{margin-bottom:2rem;}
+.section-title{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:600;color:var(--mut);margin-bottom:0.75rem;}
+.top-card{display:flex;gap:0.75rem;align-items:center;padding:0.75rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:0.5rem;text-decoration:none;color:var(--text);transition:all 0.2s;box-shadow:var(--shadow);}
+.top-card:hover{transform:translateY(-1px);border-color:var(--accent);}
+.rank{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.8rem;background:var(--accent-sub);color:var(--accent);flex-shrink:0;}
+.rank.gold{background:#FEF3C7;color:#D97706;} .rank.silver{background:#F1F5F9;color:#64748B;} .rank.bronze{background:#FED7AA;color:#C2410C;}
+.tc-body{flex:1;min-width:0;}
+.tc-name{font-weight:600;font-size:0.9rem;}
+.tc-meta{font-size:0.75rem;color:var(--sub);}
+#hood-map{width:100%;height:300px;border-radius:var(--radius);border:1px solid var(--border);margin-bottom:1rem;z-index:1;}
+:root.dark .leaflet-tile{filter:invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);}
+.cb-item{display:flex;justify-content:space-between;padding:0.4rem 0.75rem;font-size:0.85rem;border-bottom:1px solid var(--border);}
+.cb-item:last-child{border-bottom:none;}
+.cb-name{font-weight:500;} .cb-count{color:var(--sub);font-size:0.8rem;}
+.cuisine-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+.actions{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2rem;}
+.btn{padding:0.5rem 1rem;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:0.82rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all 0.2s;font-family:Inter,sans-serif;display:inline-flex;align-items:center;gap:4px;}
+.btn:hover{border-color:var(--accent);color:var(--accent);}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+.hood-links{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.hood-link{padding:0.3rem 0.65rem;border:1px solid var(--border);border-radius:16px;font-size:0.72rem;font-weight:500;color:var(--sub);text-decoration:none;transition:all 0.2s;}
+.hood-link:hover{border-color:var(--accent);color:var(--accent);}
+.hood-link span{color:var(--mut);}
+footer{text-align:center;padding:2rem;color:var(--mut);font-size:0.78rem;border-top:1px solid var(--border);}
+footer a{color:var(--sub);text-decoration:none;}
+img[src*="logo.png"]{mix-blend-mode:multiply;}
+:root.dark img[src*="logo.png"]{mix-blend-mode:normal;filter:brightness(1.2);}
+@media(max-width:640px){.stats{grid-template-columns:repeat(3,1fr);}.nav-links a span{display:none;}.actions{flex-direction:column;}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand"><img src="../assets/logo.png" alt="Menuverso"><span>Menuverso</span></a>
+  <div class="nav-links">
+    <a href="../index.html"><span>📋 </span>Database</a>
+    <a href="../finder.html"><span>🔍 </span>Finder</a>
+    <a href="../analytics.html"><span>📊 </span>Analytics</a>
+    <a href="../lists.html"><span>🏆 </span>Best Of</a>
+    <a href="../crawl.html"><span>🚶 </span>Crawl</a>
+  </div>
+  <div class="controls-bar"><button class="theme-btn" id="theme-toggle" onclick="toggleTheme()">🌙</button></div>
+</nav>
+<div class="container">
+  <a href="../index.html" class="back">← All Neighborhoods</a>
+  <div class="hero">
+    <h1>📍 Gràcia</h1>
+    <p>123 restaurants · 50 confirmed menú del día</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num">123</div><div class="stat-label">Restaurants</div></div>
+    <div class="stat"><div class="stat-num green">50</div><div class="stat-label">Confirmed</div></div>
+    <div class="stat"><div class="stat-num amber">52</div><div class="stat-label">Likely</div></div>
+    <div class="stat"><div class="stat-num">€13</div><div class="stat-label">Avg Price</div></div>
+    <div class="stat"><div class="stat-num">⭐ 4.2</div><div class="stat-label">Avg Rating</div></div>
+    <div class="stat"><div class="stat-num">122</div><div class="stat-label">On Map</div></div>
+  </div>
+
+  <div class="actions">
+    <a href="../index.html?hood=Gr%C3%A0cia" class="btn primary">📋 Browse All 123 in Database</a>
+    <a href="../lists/gracia.html" class="btn">🏆 Top 10 List</a>
+    <a href="../crawl.html" class="btn">🚶 Plan Lunch Crawl</a>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🏆 Top 5 Rated</div>
+    <a href="../r/1510.html" class="top-card">
+          <div class="rank gold">1</div>
+          <div class="tc-body">
+            <div class="tc-name">Ryu Ramen Gràcia</div>
+            <div class="tc-meta">🟢 Japanese · 14.50€ · ⭐ 5.0/5</div>
+          </div>
+        </a><a href="../r/11.html" class="top-card">
+          <div class="rank silver">2</div>
+          <div class="tc-body">
+            <div class="tc-name">La Pubilla</div>
+            <div class="tc-meta">🟢 Catalan · 14.75€ · ⭐ 4.7/5</div>
+          </div>
+        </a><a href="../r/164.html" class="top-card">
+          <div class="rank bronze">3</div>
+          <div class="tc-body">
+            <div class="tc-name">Contracorrent Bistro</div>
+            <div class="tc-meta">🔴 Italian ·  · ⭐ 4.7/5</div>
+          </div>
+        </a><a href="../r/143.html" class="top-card">
+          <div class="rank ">4</div>
+          <div class="tc-body">
+            <div class="tc-name">Con Gracia</div>
+            <div class="tc-meta">🔴 Mediterranean ·  · ⭐ 4.6/5</div>
+          </div>
+        </a><a href="../r/401.html" class="top-card">
+          <div class="rank ">5</div>
+          <div class="tc-body">
+            <div class="tc-name">Chivuo's</div>
+            <div class="tc-meta">🔴 Gastropub ·  · ⭐ 4.5/5</div>
+          </div>
+        </a>
+  </div>
+
+  <div class="section"><div class="section-title">🗺️ Neighborhood Map</div><div id="hood-map"></div></div>
+
+  <div class="section">
+    <div class="section-title">🍽️ Cuisine Breakdown</div>
+    <div class="cuisine-box"><div class="cb-item"><span class="cb-name">Spanish</span><span class="cb-count">27</span></div><div class="cb-item"><span class="cb-name">Mediterranean</span><span class="cb-count">26</span></div><div class="cb-item"><span class="cb-name">Catalan</span><span class="cb-count">25</span></div><div class="cb-item"><span class="cb-name">Japanese</span><span class="cb-count">8</span></div><div class="cb-item"><span class="cb-name">Seafood</span><span class="cb-count">5</span></div><div class="cb-item"><span class="cb-name">Italian</span><span class="cb-count">5</span></div><div class="cb-item"><span class="cb-name">Café</span><span class="cb-count">4</span></div><div class="cb-item"><span class="cb-name">Middle Eastern</span><span class="cb-count">3</span></div></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">💎 Price Tiers</div>
+    <div class="cuisine-box">
+      <div class="cb-item"><span class="cb-name">💚 Budget</span><span class="cb-count">42</span></div>
+      <div class="cb-item"><span class="cb-name">🧡 Mid-Range</span><span class="cb-count">74</span></div>
+      <div class="cb-item"><span class="cb-name">💎 Premium</span><span class="cb-count">7</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📍 Other Neighborhoods</div>
+    <div class="hood-links"><a href="barceloneta.html" class="hood-link">Barceloneta <span>(64)</span></a><a href="barri-gotic.html" class="hood-link">Barri Gòtic <span>(90)</span></a><a href="clot.html" class="hood-link">Clot <span>(41)</span></a><a href="eixample.html" class="hood-link">Eixample <span>(329)</span></a><a href="el-born.html" class="hood-link">El Born <span>(92)</span></a><a href="el-raval.html" class="hood-link">El Raval <span>(103)</span></a><a href="horta-guinardó.html" class="hood-link">Horta-Guinardó <span>(50)</span></a><a href="les-corts.html" class="hood-link">Les Corts <span>(60)</span></a><a href="nou-barris.html" class="hood-link">Nou Barris <span>(47)</span></a><a href="poble-sec.html" class="hood-link">Poble Sec <span>(84)</span></a><a href="poblenou.html" class="hood-link">Poblenou <span>(107)</span></a><a href="sagrada-familia.html" class="hood-link">Sagrada Família <span>(49)</span></a><a href="sant-andreu.html" class="hood-link">Sant Andreu <span>(46)</span></a><a href="sant-antoni.html" class="hood-link">Sant Antoni <span>(51)</span></a><a href="sant-marti.html" class="hood-link">Sant Martí <span>(47)</span></a><a href="sants.html" class="hood-link">Sants <span>(73)</span></a><a href="sarria-sant-gervasi.html" class="hood-link">Sarrià-Sant Gervasi <span>(64)</span></a></div>
+  </div>
+</div>
+<footer><a href="../index.html">Menuverso</a> · <a href="../lists.html">Best Of</a> · <a href="../analytics.html">Analytics</a></footer>
+<script>
+function initTheme(){var s=localStorage.getItem('menuverso_theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark');document.getElementById('theme-toggle').textContent='☀️';}};
+function toggleTheme(){var d=document.documentElement.classList.toggle('dark');localStorage.setItem('menuverso_theme',d?'dark':'light');document.getElementById('theme-toggle').textContent=d?'☀️':'🌙';};
+initTheme();
+</script>
+<script>
+var m=L.map('hood-map').setView([41.3995666,2.153683],15);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
+var pts=[[41.3995666, 2.153683, "La Pubilla", "confirmed", 11], [41.4026713, 2.1584373, "Fonda Pepa", "confirmed", 12], [41.4036, 2.1567, "Casa Lopez", "confirmed", 13], [41.4080466, 2.1593866, "El Far del Nord", "confirmed", 14], [41.4044546, 2.1576355, "Caf\u00e8 Salamb\u00f3", "confirmed", 15], [41.3998264, 2.1613352, "Casa Pages", "confirmed", 16], [41.4030436, 2.1591418, "Kibuka Ramen", "confirmed", 17], [41.4036, 2.1567, "Cal Boter", "confirmed", 18], [41.4038826, 2.1568811, "La Trini", "confirmed", 19], [41.4036, 2.1567, "La Caceta", "confirmed", 20], [41.3998206, 2.1606337, "Goliard", "none", 21], [41.4036, 2.1567, "Con Gracia", "none", 143], [41.4036, 2.1567, "Roig Rob\u00ed", "none", 144], [41.4036, 2.1567, "L'Arrosseria X\u00e0tiva", "likely", 145], [41.4036, 2.1567, "La Singular", "likely", 146], [41.4036, 2.1567, "Verdi Dinou", "likely", 147], [41.4036, 2.1567, "Beryti Bistro", "likely", 148], [41.4036, 2.1567, "Askadinya", "confirmed", 149], [41.4036, 2.1567, "Omu", "none", 150], [41.3984984, 2.1570532, "Lluritu", "likely", 151], [41.4052704, 2.161758, "Santa Gula", "likely", 152], [41.4071574, 2.1585034, "Cibulet", "likely", 153], [41.4042661, 2.1579181, "Antigua", "likely", 154], [41.4003274, 2.157786, "Gal\u00fa", "likely", 155], [41.4030399, 2.1565642, "Indian Herbs", "likely", 156], [41.4016246, 2.1567108, "Kibuka", "none", 157], [41.4087908, 2.1569467, "La Panxa del Bisbe", "likely", 158], [41.4037725, 2.1576976, "Berbena", "none", 159], [41.3979849, 2.1591579, "El Diset", "likely", 160], [41.4016246, 2.1567108, "Can Tosca", "likely", 161], [41.3981882, 2.1575808, "Gut", "none", 162], [41.4045382, 2.1604979, "Cantina Machito", "likely", 163], [41.4072231, 2.1535134, "Contracorrent Bistro", "none", 164], [41.4006979, 2.1592224, "Gasterea", "likely", 165], [41.4044152, 2.1561827, "La Xula Taper\u00eda", "likely", 166], [41.4059084, 2.1547111, "Extra Bar", "likely", 167], [41.3991014, 2.1606888, "Bodega Neus", "likely", 168], [41.4037725, 2.1576976, "Sol Soler", "likely", 169], [41.398699, 2.1603906, "Bar Bodega Quimet", "likely", 170], [41.4049488, 2.1577448, "Ca'l Pep", "likely", 171], [41.4037725, 2.1576976, "La Pepita", "likely", 172], [41.4078985, 2.1528045, "Bar Pietro", "likely", 173], [41.4049488, 2.1577448, "Caf\u00e9 Pag\u00e8s", "likely", 174], [41.4036, 2.1567, "Bar Canig\u00f3", "likely", 175], [41.4042738, 2.1549324, "Intr\u00e8pid de Gr\u00e0cia", "confirmed", 393], [41.4015808, 2.1579316, "L'olla del Torrent", "likely", 394], [41.401296, 2.1581846, "Bar Alegr\u00eda Gr\u00e0cia", "likely", 395], [41.4026635, 2.1581461, "Pepa Tomate", "confirmed", 396], [41.4004342, 2.1546349, "Botafumeiro", "none", 397], [41.4021778, 2.1580316, "La Llar dels Or\u00edgens", "confirmed", 398], [41.3995365, 2.1580831, "Ipar-Txoko", "likely", 399], [41.4017716, 2.1565106, "Caf\u00e9 del Sol", "likely", 400], [41.4033271, 2.1590779, "Chivuo's", "none", 401], [41.405108, 2.1554179, "Caf\u00e9 Camelia", "none", 513], [41.4018655, 2.1568319, "La Monroe", "likely", 514], [41.3999021, 2.1615831, "Cervecer\u00eda En Aparte", "likely", 515], [41.3866925, 2.132234, "Fragments Caf\u00e9", "likely", 516], [41.3996165, 2.1611735, "El Rac\u00f3 de la Vila", "confirmed", 517], [41.3910331, 2.1676635, "Thai Gardens", "likely", 518], [41.4035543, 2.1587088, "Vietnamita Gr\u00e0cia", "confirmed", 519], [41.3970725, 2.1529046, "Il Giardinetto", "likely", 520], [41.4036, 2.1567, "Can Vidalet", "confirmed", 521], [41.4036, 2.1567, "Mama Manouche", "none", 522], [41.4036, 2.1567, "Koku Kitchen Ramen", "confirmed", 523], [41.4036, 2.1567, "Bar Casi", "confirmed", 536], [41.3979088, 2.1590365, "Bo de Bernat", "confirmed", 575], [41.4036, 2.1567, "Caf\u00e9 Godot", "confirmed", 617], [41.4036, 2.1567, "Chido One", "likely", 618], [41.4036, 2.1567, "Himalaya", "none", 619], [41.3994509, 2.1582135, "Croq & Roll Croqueteria", "likely", 680], [41.4036, 2.1567, "Caf\u00e8 Pag\u00e8s", "likely", 681], [41.4036, 2.1567, "Can Punyetes", "likely", 682], [41.3979638, 2.1610245, "La Pepita Gr\u00e0cia", "likely", 683], [41.4049058, 2.159524, "El Glop", "confirmed", 684], [41.4036, 2.1567, "Bot\u00e0", "likely", 685], [41.4036, 2.1567, "Chivuo's Gr\u00e0cia", "none", 686], [41.3984285, 2.1602186, "Bottega Bernacca", "likely", 754], [41.4020023, 2.1493112, "L'Italiano Perso", "likely", 760], [41.4036, 2.1567, "Thai Noodles Gr\u00e0cia", "likely", 761], [41.4015907, 2.1594091, "Restaurant Emocionar", "likely", 762], [41.4132469, 2.1597743, "Restaurant La Salut", "confirmed", 836], [41.4036, 2.1567, "Salut! Bistro", "confirmed", 837], [41.4036, 2.1567, "Corgi Caf\u00e9", "none", 838], [41.4036, 2.1567, "Honest Greens Gr\u00e0cia", "likely", 893], [41.4036, 2.1567, "El Roble", "confirmed", 895], [41.4036, 2.1567, "Kibuka Gr\u00e0cia", "none", 896], [41.4036, 2.1567, "La Estrella del Born-Gr\u00e0cia", "likely", 897], [41.4036, 2.1567, "Sushi Ya", "none", 898], [41.3822966, 2.1719827, "Casa Guinart", "confirmed", 944], [41.3751001, 2.1409075, "La Parra", "confirmed", 950], [41.3998264, 2.1613352, "Casa Pag\u00e8s", "confirmed", 975], [41.4036, 2.1567, "Arume Gr\u00e0cia", "likely", 989], [41.4036, 2.1567, "Casa Rinc\u00f3n de Gr\u00e0cia", "likely", 1035], [41.4036, 2.1567, "Tangana Gr\u00e0cia", "likely", 1065], [41.4065767, 2.1582812, "El Disbarat", "confirmed", 1119], [41.4065767, 2.1582812, "La Nena Gr\u00e0cia", "none", 1151], [41.4004342, 2.1546349, "Botafumeiro Gr\u00e0cia", "none", 1152], [41.4065767, 2.1582812, "La Vermuter\u00eda del Tano", "likely", 1153], [41.4065767, 2.1582812, "Tunateca Balfeg\u00f3", "none", 1154], [41.4065767, 2.1582812, "El Rinc\u00f3n de Gr\u00e0cia", "confirmed", 1204], [41.3968928, 2.1562774, "Restaurant Roig Rob\u00ed", "confirmed", 1279], [41.4036, 2.1567, "Sarria Taverna Gr\u00e0cia", "confirmed", 1280], [41.4036, 2.1567, "Hummus Barcelona Gr\u00e0cia", "confirmed", 1281], [41.4036, 2.1567, "La Pepita Gr\u00e0cia 2", "confirmed", 1329], [41.4036, 2.1567, "Restaurant Pepa Tomate Gr\u00e0cia", "confirmed", 1330], [41.4036, 2.1567, "El Roble Gr\u00e0cia", "confirmed", 1331], [41.4036, 2.1567, "Caf\u00e9 Tramoia", "confirmed", 1332], [41.4036, 2.1567, "Restaurant Nomo", "likely", 1405], [41.4036, 2.1567, "La Colombiana Gr\u00e0cia", "confirmed", 1406], [41.4036, 2.1567, "La Punta Gr\u00e0cia", "confirmed", 1407], [41.4036, 2.1567, "Pepa i Cia", "confirmed", 1408], [41.4036, 2.1567, "La Bodega de Gr\u00e0cia", "confirmed", 1409], [41.4036, 2.1567, "El Bar de l'Oscar", "confirmed", 1410], [41.4036, 2.1567, "Sureny Gr\u00e0cia", "confirmed", 1411], [41.4083157, 2.1603344, "Lo de Flor", "likely", 1412], [41.4036, 2.1567, "Ch\u00f6k BCN Gr\u00e0cia", "none", 1413], [41.4036, 2.1567, "Bar Central Gr\u00e0cia", "confirmed", 1414], [41.4039493, 2.1579262, "Restaurant Bilbao Gr\u00e0cia", "confirmed", 1478], [41.4036, 2.1567, "La Cuina de l'Uribou", "confirmed", 1479], [41.4036, 2.1567, "El Nou Can Che", "confirmed", 1480], [41.4036, 2.1567, "Can Llu\u00eds Gr\u00e0cia", "confirmed", 1481], [41.4036, 2.1567, "Restaurante Nepal Gr\u00e0cia", "confirmed", 1482]];
+pts.forEach(function(p){
+  var c=p[3]==='confirmed'?'#059669':p[3]==='likely'?'#D97706':'#DC2626';
+  L.circleMarker([p[0],p[1]],{radius:6,fillColor:c,color:'#fff',weight:2,fillOpacity:0.9}).addTo(m).bindPopup('<b>'+p[2]+'</b><br><a href="../r/'+p[4]+'.html">View details</a>');
+});
+if(pts.length>1){m.fitBounds(pts.map(function(p){return[p[0],p[1]]}));}
+</script>
+</body>
+</html>

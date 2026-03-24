@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poblenou Restaurants — Menuverso Barcelona</title>
+<meta name="description" content="Poblenou: 107 restaurants, avg €13 menú del día, 37 confirmed. Best of Poblenou in Barcelona by Menuverso.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></' + 'script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#F8FAFC;--card:#FFF;--text:#1E293B;--sub:#64748B;--mut:#94A3B8;--border:#E2E8F0;--accent:#2563EB;--accent-sub:#DBEAFE;--green:#059669;--green-bg:#D1FAE5;--amber:#D97706;--red:#DC2626;--radius:12px;--shadow:0 2px 8px rgba(0,0,0,0.06);}
+:root.dark{--bg:#0F172A;--card:#1E293B;--text:#F1F5F9;--sub:#94A3B8;--mut:#64748B;--border:#334155;--accent:#3B82F6;--accent-sub:#1E3A5F;--green:#34D399;--green-bg:#064E3B;--shadow:0 2px 8px rgba(0,0,0,0.3);}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background 0.3s,color 0.3s;}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1.5rem;border-bottom:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+.nav-brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.1rem;}
+.nav-brand img{width:28px;height:28px;border-radius:8px;}
+.nav-links{display:flex;align-items:center;gap:1rem;}
+.nav-links a{color:var(--sub);text-decoration:none;font-size:0.82rem;font-weight:500;padding:0.3rem 0.5rem;border-radius:8px;transition:all 0.2s;}
+.nav-links a:hover{color:var(--text);}
+.controls-bar{display:flex;gap:0.5rem;align-items:center;}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:0.3rem 0.55rem;cursor:pointer;font-size:0.85rem;color:var(--sub);transition:all 0.2s;}
+.container{max-width:800px;margin:0 auto;padding:1.5rem;}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--sub);text-decoration:none;font-size:0.85rem;font-weight:500;margin-bottom:1rem;transition:color 0.2s;}
+.back:hover{color:var(--text);}
+.hero{text-align:center;margin-bottom:2rem;}
+.hero h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:0.25rem;}
+.hero p{color:var(--sub);font-size:0.9rem;}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0.75rem;margin-bottom:2rem;}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;text-align:center;box-shadow:var(--shadow);}
+.stat-num{font-size:1.3rem;font-weight:700;}
+.stat-label{font-size:0.7rem;color:var(--mut);text-transform:uppercase;letter-spacing:0.04em;margin-top:2px;}
+.green{color:var(--green);} .amber{color:var(--amber);} .red{color:var(--red);}
+.section{margin-bottom:2rem;}
+.section-title{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:600;color:var(--mut);margin-bottom:0.75rem;}
+.top-card{display:flex;gap:0.75rem;align-items:center;padding:0.75rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:0.5rem;text-decoration:none;color:var(--text);transition:all 0.2s;box-shadow:var(--shadow);}
+.top-card:hover{transform:translateY(-1px);border-color:var(--accent);}
+.rank{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.8rem;background:var(--accent-sub);color:var(--accent);flex-shrink:0;}
+.rank.gold{background:#FEF3C7;color:#D97706;} .rank.silver{background:#F1F5F9;color:#64748B;} .rank.bronze{background:#FED7AA;color:#C2410C;}
+.tc-body{flex:1;min-width:0;}
+.tc-name{font-weight:600;font-size:0.9rem;}
+.tc-meta{font-size:0.75rem;color:var(--sub);}
+#hood-map{width:100%;height:300px;border-radius:var(--radius);border:1px solid var(--border);margin-bottom:1rem;z-index:1;}
+:root.dark .leaflet-tile{filter:invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);}
+.cb-item{display:flex;justify-content:space-between;padding:0.4rem 0.75rem;font-size:0.85rem;border-bottom:1px solid var(--border);}
+.cb-item:last-child{border-bottom:none;}
+.cb-name{font-weight:500;} .cb-count{color:var(--sub);font-size:0.8rem;}
+.cuisine-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+.actions{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2rem;}
+.btn{padding:0.5rem 1rem;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:0.82rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all 0.2s;font-family:Inter,sans-serif;display:inline-flex;align-items:center;gap:4px;}
+.btn:hover{border-color:var(--accent);color:var(--accent);}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+.hood-links{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.hood-link{padding:0.3rem 0.65rem;border:1px solid var(--border);border-radius:16px;font-size:0.72rem;font-weight:500;color:var(--sub);text-decoration:none;transition:all 0.2s;}
+.hood-link:hover{border-color:var(--accent);color:var(--accent);}
+.hood-link span{color:var(--mut);}
+footer{text-align:center;padding:2rem;color:var(--mut);font-size:0.78rem;border-top:1px solid var(--border);}
+footer a{color:var(--sub);text-decoration:none;}
+img[src*="logo.png"]{mix-blend-mode:multiply;}
+:root.dark img[src*="logo.png"]{mix-blend-mode:normal;filter:brightness(1.2);}
+@media(max-width:640px){.stats{grid-template-columns:repeat(3,1fr);}.nav-links a span{display:none;}.actions{flex-direction:column;}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand"><img src="../assets/logo.png" alt="Menuverso"><span>Menuverso</span></a>
+  <div class="nav-links">
+    <a href="../index.html"><span>📋 </span>Database</a>
+    <a href="../finder.html"><span>🔍 </span>Finder</a>
+    <a href="../analytics.html"><span>📊 </span>Analytics</a>
+    <a href="../lists.html"><span>🏆 </span>Best Of</a>
+    <a href="../crawl.html"><span>🚶 </span>Crawl</a>
+  </div>
+  <div class="controls-bar"><button class="theme-btn" id="theme-toggle" onclick="toggleTheme()">🌙</button></div>
+</nav>
+<div class="container">
+  <a href="../index.html" class="back">← All Neighborhoods</a>
+  <div class="hero">
+    <h1>📍 Poblenou</h1>
+    <p>107 restaurants · 37 confirmed menú del día</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num">107</div><div class="stat-label">Restaurants</div></div>
+    <div class="stat"><div class="stat-num green">37</div><div class="stat-label">Confirmed</div></div>
+    <div class="stat"><div class="stat-num amber">45</div><div class="stat-label">Likely</div></div>
+    <div class="stat"><div class="stat-num">€13</div><div class="stat-label">Avg Price</div></div>
+    <div class="stat"><div class="stat-num">⭐ 4.3</div><div class="stat-label">Avg Rating</div></div>
+    <div class="stat"><div class="stat-num">100</div><div class="stat-label">On Map</div></div>
+  </div>
+
+  <div class="actions">
+    <a href="../index.html?hood=Poblenou" class="btn primary">📋 Browse All 107 in Database</a>
+    <a href="../lists/poblenou.html" class="btn">🏆 Top 10 List</a>
+    <a href="../crawl.html" class="btn">🚶 Plan Lunch Crawl</a>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🏆 Top 5 Rated</div>
+    <a href="../r/1522.html" class="top-card">
+          <div class="rank gold">1</div>
+          <div class="tc-body">
+            <div class="tc-name">Malhumor</div>
+            <div class="tc-meta">🔴 Café ·  · ⭐ 4.9/5</div>
+          </div>
+        </a><a href="../r/1512.html" class="top-card">
+          <div class="rank silver">2</div>
+          <div class="tc-body">
+            <div class="tc-name">Donde Tito Bar & Restaurante</div>
+            <div class="tc-meta">🟢 Mediterranean · ~14€ · ⭐ 4.9/5</div>
+          </div>
+        </a><a href="../r/272.html" class="top-card">
+          <div class="rank bronze">3</div>
+          <div class="tc-body">
+            <div class="tc-name">Els Pescadors</div>
+            <div class="tc-meta">🔴 Seafood ·  · ⭐ 4.7/5</div>
+          </div>
+        </a><a href="../r/274.html" class="top-card">
+          <div class="rank ">4</div>
+          <div class="tc-body">
+            <div class="tc-name">Xorús</div>
+            <div class="tc-meta">🟡 Spanish ·  · ⭐ 4.5/5</div>
+          </div>
+        </a><a href="../r/1298.html" class="top-card">
+          <div class="rank ">5</div>
+          <div class="tc-body">
+            <div class="tc-name">Nomad Coffee Lab Poblenou</div>
+            <div class="tc-meta">🟢 Café ·  · ⭐ 4.5/5</div>
+          </div>
+        </a>
+  </div>
+
+  <div class="section"><div class="section-title">🗺️ Neighborhood Map</div><div id="hood-map"></div></div>
+
+  <div class="section">
+    <div class="section-title">🍽️ Cuisine Breakdown</div>
+    <div class="cuisine-box"><div class="cb-item"><span class="cb-name">Mediterranean</span><span class="cb-count">20</span></div><div class="cb-item"><span class="cb-name">Spanish</span><span class="cb-count">18</span></div><div class="cb-item"><span class="cb-name">Vegetarian/Vegan</span><span class="cb-count">17</span></div><div class="cb-item"><span class="cb-name">Café</span><span class="cb-count">17</span></div><div class="cb-item"><span class="cb-name">Catalan</span><span class="cb-count">12</span></div><div class="cb-item"><span class="cb-name">Italian</span><span class="cb-count">6</span></div><div class="cb-item"><span class="cb-name">Seafood</span><span class="cb-count">4</span></div><div class="cb-item"><span class="cb-name">Fusion</span><span class="cb-count">3</span></div></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">💎 Price Tiers</div>
+    <div class="cuisine-box">
+      <div class="cb-item"><span class="cb-name">💚 Budget</span><span class="cb-count">25</span></div>
+      <div class="cb-item"><span class="cb-name">🧡 Mid-Range</span><span class="cb-count">79</span></div>
+      <div class="cb-item"><span class="cb-name">💎 Premium</span><span class="cb-count">3</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📍 Other Neighborhoods</div>
+    <div class="hood-links"><a href="barceloneta.html" class="hood-link">Barceloneta <span>(64)</span></a><a href="barri-gotic.html" class="hood-link">Barri Gòtic <span>(90)</span></a><a href="clot.html" class="hood-link">Clot <span>(41)</span></a><a href="eixample.html" class="hood-link">Eixample <span>(329)</span></a><a href="el-born.html" class="hood-link">El Born <span>(92)</span></a><a href="el-raval.html" class="hood-link">El Raval <span>(103)</span></a><a href="gracia.html" class="hood-link">Gràcia <span>(123)</span></a><a href="horta-guinardó.html" class="hood-link">Horta-Guinardó <span>(50)</span></a><a href="les-corts.html" class="hood-link">Les Corts <span>(60)</span></a><a href="nou-barris.html" class="hood-link">Nou Barris <span>(47)</span></a><a href="poble-sec.html" class="hood-link">Poble Sec <span>(84)</span></a><a href="sagrada-familia.html" class="hood-link">Sagrada Família <span>(49)</span></a><a href="sant-andreu.html" class="hood-link">Sant Andreu <span>(46)</span></a><a href="sant-antoni.html" class="hood-link">Sant Antoni <span>(51)</span></a><a href="sant-marti.html" class="hood-link">Sant Martí <span>(47)</span></a><a href="sants.html" class="hood-link">Sants <span>(73)</span></a><a href="sarria-sant-gervasi.html" class="hood-link">Sarrià-Sant Gervasi <span>(64)</span></a></div>
+  </div>
+</div>
+<footer><a href="../index.html">Menuverso</a> · <a href="../lists.html">Best Of</a> · <a href="../analytics.html">Analytics</a></footer>
+<script>
+function initTheme(){var s=localStorage.getItem('menuverso_theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark');document.getElementById('theme-toggle').textContent='☀️';}};
+function toggleTheme(){var d=document.documentElement.classList.toggle('dark');localStorage.setItem('menuverso_theme',d?'dark':'light');document.getElementById('theme-toggle').textContent=d?'☀️':'🌙';};
+initTheme();
+</script>
+<script>
+var m=L.map('hood-map').setView([41.3995635,2.2033999],15);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
+var pts=[[41.3995635, 2.2033999, "M\u00e9s de Vi", "confirmed", 51], [41.4017905, 2.2022938, "L'Artesana Poblenou", "confirmed", 52], [41.3985776, 2.194128, "Casa Cabo", "confirmed", 53], [41.4037559, 2.195601, "Morgentau", "confirmed", 54], [41.395741, 2.1998161, "Warike", "confirmed", 55], [41.4023416, 2.1952788, "Sopa", "confirmed", 56], [41.4015912, 2.2000796, "Els Pescadors", "none", 272], [41.3996678, 2.2058139, "Els Tres Porquets", "likely", 273], [41.400922, 2.2037105, "Xor\u00fas", "likely", 274], [41.3961483, 2.2003628, "Bar Nuri", "likely", 275], [41.395741, 2.1998161, "Restaurant Gegant", "likely", 276], [41.3980218, 2.1957031, "Aguaribay", "confirmed", 277], [41.40548, 2.1931552, "Vrutal", "likely", 278], [41.400922, 2.2037105, "Fet\u00e9n", "likely", 279], [41.3943549, 2.1978022, "La Tavernicola", "likely", 280], [41.4011067, 2.2033492, "Puerto Escondido", "confirmed", 281], [41.401599, 2.1968796, "Warike Project", "none", 282], [41.3997717, 2.19524, "Can Dende", "none", 283], [41.4002304, 2.2067283, "Lombarda", "likely", 284], [41.4028792, 2.196761, "Cal Cuc", "likely", 285], [41.3973049, 2.2013586, "El Menjador (Sala Beckett)", "likely", 286], [41.3948486, 2.1918545, "Balius", "likely", 287], [41.3943549, 2.1978022, "La Cervecita Nuestra de Cada D\u00eda", "none", 288], [41.4011141, 2.1990774, "Bodega Mendoza", "likely", 289], [41.4004209, 2.2022719, "El 58", "likely", 386], [41.3983471, 2.205045, "Batea", "likely", 387], [41.4043417, 2.2063904, "Atipical", "confirmed", 388], [41.4023743, 2.1975158, "Superlocal", "likely", 389], [41.403, 2.201, "Can Denn\u00eds", "confirmed", 390], [41.400922, 2.2037105, "La Pubilla del Poblenou", "confirmed", 391], [41.3946143, 2.1936541, "Parking Pizza", "likely", 392], [41.403, 2.201, "Zumzeig Cinecaf\u00e9", "none", 526], [41.403, 2.201, "La Pizzer\u00eda del Born Poblenou", "likely", 527], [41.403, 2.201, "Green Spot", "likely", 528], [41.403, 2.201, "Casa de Tapas Ca\u00f1ota", "likely", 529], [41.403, 2.201, "Rooftop Smoking Room Poblenou", "likely", 530], [41.403, 2.201, "Per Feina", "confirmed", 534], [41.3984763, 2.1873771, "Dagma", "likely", 570], [41.4021057, 2.2018074, "Atipical Casa de Menjars", "confirmed", 571], [41.403, 2.201, "T\u00edo Che", "likely", 621], [41.3941081, 2.1908557, "Le Cucine Mandarosso", "confirmed", 622], [41.4011067, 2.2033492, "Muns", "likely", 623], [41.4009039, 2.2040831, "Rascal", "none", 700], [41.4025465, 2.2011262, "Barkada BCN Burgers", "none", 701], [41.3979137, 2.1958962, "Regina Brunch Coffee", "none", 702], [41.4018484, 2.2022045, "La Piccolina Pizzeria", "likely", 703], [41.4054177, 2.2056401, "Finca Nebot", "none", 752], [41.403, 2.201, "Caf\u00e9 Labath", "none", 789], [41.403, 2.201, "New Lio", "none", 790], [41.403, 2.201, "Moku Healthy", "likely", 791], [41.4008041, 2.2038094, "Habana Vieja", "none", 842], [41.4014244, 2.2009519, "La Vermuter\u00eda del Poblenou", "likely", 843], [41.403, 2.201, "Can Dend\u00e9", "none", 899], [41.403, 2.201, "La Llesca", "confirmed", 900], [41.403, 2.201, "El Grillo", "likely", 901], [41.4036418, 2.2032751, "El Bon Lloc", "likely", 956], [41.4036418, 2.2032751, "Cerveser\u00eda Joana", "likely", 973], [41.4036418, 2.2032751, "Restaurant Morro Fi", "likely", 974], [41.403, 2.201, "El Rac\u00f3 del Poblenou", "confirmed", 991], [41.403, 2.201, "FoodBox Poblenou", "none", 992], [41.4012576, 2.20267, "Blubar", "likely", 1010], [41.4002757, 2.1990135, "Catacroquet", "likely", 1011], [41.4008254, 2.1997392, "Sopa Restaurant BCN", "likely", 1012], [41.4002439, 2.2046712, "Metl Barcelona", "likely", 1013], [41.4018791, 2.2011386, "Florentine BCN", "none", 1014], [41.3983294, 2.1942065, "Gegant", "likely", 1015], [41.4027916, 2.201945, "Gabby Brunch", "none", 1016], [41.3996972, 2.1953169, "Little Fern", "likely", 1017], [41.401029, 2.1978077, "CACHO Brunch", "none", 1018], [41.3845274, 2.1828248, "Nomad Frutas Selectas", "none", 1019], [41.4022631, 2.2013014, "CASA TAOS", "none", 1020], [41.4033063, 2.1984868, "The Miners Coffee", "none", 1021], [41.4023416, 2.1952788, "Sopa Boronat", "confirmed", 1022], [41.403, 2.201, "Padoca BCN", "none", 1037], [41.403, 2.201, "Magma Bakery Lab", "likely", 1038], [41.403, 2.201, "Mammamia Poblenou", "likely", 1039], [41.403, 2.201, "La Picanter\u00eda Escrib\u00e0", "none", 1040], [41.4036418, 2.2032751, "Dagma Restaurant", "likely", 1059], [41.403, 2.201, "Lombarda Poblenou", "none", 1098], [41.403, 2.201, "Siberia Poblenou", "confirmed", 1120], [41.403, 2.201, "Sopa Barcelona", "confirmed", 1121], [41.403, 2.201, "La Llesca del Born Poblenou", "confirmed", 1158], [41.403, 2.201, "Boo Restaurant", "likely", 1159], [41.403, 2.201, "The Green Spot", "likely", 1160], [41.403, 2.201, "Restaurant Els Quatre Gats Poblenou", "confirmed", 1294], [41.403, 2.201, "Flax & Kale Poblenou", "likely", 1295], [41.403, 2.201, "El Parc Poblenou", "confirmed", 1296], [41.403, 2.201, "Restaurant Amar Poblenou", "confirmed", 1297], [41.403, 2.201, "Nomad Coffee Lab Poblenou", "confirmed", 1298], [41.403, 2.201, "Els Pescadors Poblenou 2", "confirmed", 1355], [41.403, 2.201, "La Pubilla Poblenou", "confirmed", 1356], [41.403, 2.201, "Honest Greens Poblenou", "likely", 1357], [41.403, 2.201, "Nena Pastisseria", "none", 1428], [41.403, 2.201, "La Boqueria de Poblenou", "confirmed", 1429], [41.403, 2.201, "Bar Calders Poblenou", "confirmed", 1430], [41.403, 2.201, "Palo Santo Poblenou", "confirmed", 1431], [41.403, 2.201, "Can Gibert", "confirmed", 1432], [41.403, 2.201, "El Petit Poblenou", "confirmed", 1494], [41.403, 2.201, "La Taverna de Poblenou", "confirmed", 1495], [41.403, 2.201, "Restaurant Pujades 33", "confirmed", 1496]];
+pts.forEach(function(p){
+  var c=p[3]==='confirmed'?'#059669':p[3]==='likely'?'#D97706':'#DC2626';
+  L.circleMarker([p[0],p[1]],{radius:6,fillColor:c,color:'#fff',weight:2,fillOpacity:0.9}).addTo(m).bindPopup('<b>'+p[2]+'</b><br><a href="../r/'+p[4]+'.html">View details</a>');
+});
+if(pts.length>1){m.fitBounds(pts.map(function(p){return[p[0],p[1]]}));}
+</script>
+</body>
+</html>

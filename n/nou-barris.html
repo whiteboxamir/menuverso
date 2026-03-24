@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nou Barris Restaurants — Menuverso Barcelona</title>
+<meta name="description" content="Nou Barris: 47 restaurants, avg €11 menú del día, 30 confirmed. Best of Nou Barris in Barcelona by Menuverso.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></' + 'script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#F8FAFC;--card:#FFF;--text:#1E293B;--sub:#64748B;--mut:#94A3B8;--border:#E2E8F0;--accent:#2563EB;--accent-sub:#DBEAFE;--green:#059669;--green-bg:#D1FAE5;--amber:#D97706;--red:#DC2626;--radius:12px;--shadow:0 2px 8px rgba(0,0,0,0.06);}
+:root.dark{--bg:#0F172A;--card:#1E293B;--text:#F1F5F9;--sub:#94A3B8;--mut:#64748B;--border:#334155;--accent:#3B82F6;--accent-sub:#1E3A5F;--green:#34D399;--green-bg:#064E3B;--shadow:0 2px 8px rgba(0,0,0,0.3);}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background 0.3s,color 0.3s;}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1.5rem;border-bottom:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+.nav-brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.1rem;}
+.nav-brand img{width:28px;height:28px;border-radius:8px;}
+.nav-links{display:flex;align-items:center;gap:1rem;}
+.nav-links a{color:var(--sub);text-decoration:none;font-size:0.82rem;font-weight:500;padding:0.3rem 0.5rem;border-radius:8px;transition:all 0.2s;}
+.nav-links a:hover{color:var(--text);}
+.controls-bar{display:flex;gap:0.5rem;align-items:center;}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:0.3rem 0.55rem;cursor:pointer;font-size:0.85rem;color:var(--sub);transition:all 0.2s;}
+.container{max-width:800px;margin:0 auto;padding:1.5rem;}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--sub);text-decoration:none;font-size:0.85rem;font-weight:500;margin-bottom:1rem;transition:color 0.2s;}
+.back:hover{color:var(--text);}
+.hero{text-align:center;margin-bottom:2rem;}
+.hero h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:0.25rem;}
+.hero p{color:var(--sub);font-size:0.9rem;}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0.75rem;margin-bottom:2rem;}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;text-align:center;box-shadow:var(--shadow);}
+.stat-num{font-size:1.3rem;font-weight:700;}
+.stat-label{font-size:0.7rem;color:var(--mut);text-transform:uppercase;letter-spacing:0.04em;margin-top:2px;}
+.green{color:var(--green);} .amber{color:var(--amber);} .red{color:var(--red);}
+.section{margin-bottom:2rem;}
+.section-title{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:600;color:var(--mut);margin-bottom:0.75rem;}
+.top-card{display:flex;gap:0.75rem;align-items:center;padding:0.75rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:0.5rem;text-decoration:none;color:var(--text);transition:all 0.2s;box-shadow:var(--shadow);}
+.top-card:hover{transform:translateY(-1px);border-color:var(--accent);}
+.rank{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.8rem;background:var(--accent-sub);color:var(--accent);flex-shrink:0;}
+.rank.gold{background:#FEF3C7;color:#D97706;} .rank.silver{background:#F1F5F9;color:#64748B;} .rank.bronze{background:#FED7AA;color:#C2410C;}
+.tc-body{flex:1;min-width:0;}
+.tc-name{font-weight:600;font-size:0.9rem;}
+.tc-meta{font-size:0.75rem;color:var(--sub);}
+#hood-map{width:100%;height:300px;border-radius:var(--radius);border:1px solid var(--border);margin-bottom:1rem;z-index:1;}
+:root.dark .leaflet-tile{filter:invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);}
+.cb-item{display:flex;justify-content:space-between;padding:0.4rem 0.75rem;font-size:0.85rem;border-bottom:1px solid var(--border);}
+.cb-item:last-child{border-bottom:none;}
+.cb-name{font-weight:500;} .cb-count{color:var(--sub);font-size:0.8rem;}
+.cuisine-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+.actions{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2rem;}
+.btn{padding:0.5rem 1rem;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:0.82rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all 0.2s;font-family:Inter,sans-serif;display:inline-flex;align-items:center;gap:4px;}
+.btn:hover{border-color:var(--accent);color:var(--accent);}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+.hood-links{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.hood-link{padding:0.3rem 0.65rem;border:1px solid var(--border);border-radius:16px;font-size:0.72rem;font-weight:500;color:var(--sub);text-decoration:none;transition:all 0.2s;}
+.hood-link:hover{border-color:var(--accent);color:var(--accent);}
+.hood-link span{color:var(--mut);}
+footer{text-align:center;padding:2rem;color:var(--mut);font-size:0.78rem;border-top:1px solid var(--border);}
+footer a{color:var(--sub);text-decoration:none;}
+img[src*="logo.png"]{mix-blend-mode:multiply;}
+:root.dark img[src*="logo.png"]{mix-blend-mode:normal;filter:brightness(1.2);}
+@media(max-width:640px){.stats{grid-template-columns:repeat(3,1fr);}.nav-links a span{display:none;}.actions{flex-direction:column;}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand"><img src="../assets/logo.png" alt="Menuverso"><span>Menuverso</span></a>
+  <div class="nav-links">
+    <a href="../index.html"><span>📋 </span>Database</a>
+    <a href="../finder.html"><span>🔍 </span>Finder</a>
+    <a href="../analytics.html"><span>📊 </span>Analytics</a>
+    <a href="../lists.html"><span>🏆 </span>Best Of</a>
+    <a href="../crawl.html"><span>🚶 </span>Crawl</a>
+  </div>
+  <div class="controls-bar"><button class="theme-btn" id="theme-toggle" onclick="toggleTheme()">🌙</button></div>
+</nav>
+<div class="container">
+  <a href="../index.html" class="back">← All Neighborhoods</a>
+  <div class="hero">
+    <h1>📍 Nou Barris</h1>
+    <p>47 restaurants · 30 confirmed menú del día</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num">47</div><div class="stat-label">Restaurants</div></div>
+    <div class="stat"><div class="stat-num green">30</div><div class="stat-label">Confirmed</div></div>
+    <div class="stat"><div class="stat-num amber">12</div><div class="stat-label">Likely</div></div>
+    <div class="stat"><div class="stat-num">€11</div><div class="stat-label">Avg Price</div></div>
+    <div class="stat"><div class="stat-num">⭐ 4.2</div><div class="stat-label">Avg Rating</div></div>
+    <div class="stat"><div class="stat-num">47</div><div class="stat-label">On Map</div></div>
+  </div>
+
+  <div class="actions">
+    <a href="../index.html?hood=Nou+Barris" class="btn primary">📋 Browse All 47 in Database</a>
+    <a href="../lists/nou-barris.html" class="btn">🏆 Top 10 List</a>
+    <a href="../crawl.html" class="btn">🚶 Plan Lunch Crawl</a>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🏆 Top 5 Rated</div>
+    <a href="../r/556.html" class="top-card">
+          <div class="rank gold">1</div>
+          <div class="tc-body">
+            <div class="tc-name">Restaurante Casa Angelita</div>
+            <div class="tc-meta">🟡 Seafood ·  · ⭐ 4.3/5</div>
+          </div>
+        </a><a href="../r/549.html" class="top-card">
+          <div class="rank silver">2</div>
+          <div class="tc-body">
+            <div class="tc-name">La Cholita</div>
+            <div class="tc-meta">🔴 Fusion ·  · ⭐ 4.3/5</div>
+          </div>
+        </a><a href="../r/557.html" class="top-card">
+          <div class="rank bronze">3</div>
+          <div class="tc-body">
+            <div class="tc-name">Trattoria Italiana Nou Barris</div>
+            <div class="tc-meta">🟡 Italian ·  · ⭐ 4.3/5</div>
+          </div>
+        </a><a href="../r/635.html" class="top-card">
+          <div class="rank ">4</div>
+          <div class="tc-body">
+            <div class="tc-name">Más Que México</div>
+            <div class="tc-meta">🟡 Mexican ·  · ⭐ 4.3/5</div>
+          </div>
+        </a><a href="../r/638.html" class="top-card">
+          <div class="rank ">5</div>
+          <div class="tc-body">
+            <div class="tc-name">Buga Ramen Nou Barris</div>
+            <div class="tc-meta">🔴 Japanese ·  · ⭐ 4.3/5</div>
+          </div>
+        </a>
+  </div>
+
+  <div class="section"><div class="section-title">🗺️ Neighborhood Map</div><div id="hood-map"></div></div>
+
+  <div class="section">
+    <div class="section-title">🍽️ Cuisine Breakdown</div>
+    <div class="cuisine-box"><div class="cb-item"><span class="cb-name">Spanish</span><span class="cb-count">16</span></div><div class="cb-item"><span class="cb-name">Catalan</span><span class="cb-count">12</span></div><div class="cb-item"><span class="cb-name">Mediterranean</span><span class="cb-count">5</span></div><div class="cb-item"><span class="cb-name">Fusion</span><span class="cb-count">2</span></div><div class="cb-item"><span class="cb-name">Basque</span><span class="cb-count">2</span></div><div class="cb-item"><span class="cb-name">Chinese</span><span class="cb-count">2</span></div><div class="cb-item"><span class="cb-name">Gastropub</span><span class="cb-count">1</span></div><div class="cb-item"><span class="cb-name">Seafood</span><span class="cb-count">1</span></div></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">💎 Price Tiers</div>
+    <div class="cuisine-box">
+      <div class="cb-item"><span class="cb-name">💚 Budget</span><span class="cb-count">23</span></div>
+      <div class="cb-item"><span class="cb-name">🧡 Mid-Range</span><span class="cb-count">24</span></div>
+      <div class="cb-item"><span class="cb-name">💎 Premium</span><span class="cb-count">0</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📍 Other Neighborhoods</div>
+    <div class="hood-links"><a href="barceloneta.html" class="hood-link">Barceloneta <span>(64)</span></a><a href="barri-gotic.html" class="hood-link">Barri Gòtic <span>(90)</span></a><a href="clot.html" class="hood-link">Clot <span>(41)</span></a><a href="eixample.html" class="hood-link">Eixample <span>(329)</span></a><a href="el-born.html" class="hood-link">El Born <span>(92)</span></a><a href="el-raval.html" class="hood-link">El Raval <span>(103)</span></a><a href="gracia.html" class="hood-link">Gràcia <span>(123)</span></a><a href="horta-guinardó.html" class="hood-link">Horta-Guinardó <span>(50)</span></a><a href="les-corts.html" class="hood-link">Les Corts <span>(60)</span></a><a href="poble-sec.html" class="hood-link">Poble Sec <span>(84)</span></a><a href="poblenou.html" class="hood-link">Poblenou <span>(107)</span></a><a href="sagrada-familia.html" class="hood-link">Sagrada Família <span>(49)</span></a><a href="sant-andreu.html" class="hood-link">Sant Andreu <span>(46)</span></a><a href="sant-antoni.html" class="hood-link">Sant Antoni <span>(51)</span></a><a href="sant-marti.html" class="hood-link">Sant Martí <span>(47)</span></a><a href="sants.html" class="hood-link">Sants <span>(73)</span></a><a href="sarria-sant-gervasi.html" class="hood-link">Sarrià-Sant Gervasi <span>(64)</span></a></div>
+  </div>
+</div>
+<footer><a href="../index.html">Menuverso</a> · <a href="../lists.html">Best Of</a> · <a href="../analytics.html">Analytics</a></footer>
+<script>
+function initTheme(){var s=localStorage.getItem('menuverso_theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark');document.getElementById('theme-toggle').textContent='☀️';}};
+function toggleTheme(){var d=document.documentElement.classList.toggle('dark');localStorage.setItem('menuverso_theme',d?'dark':'light');document.getElementById('theme-toggle').textContent=d?'☀️':'🌙';};
+initTheme();
+</script>
+<script>
+var m=L.map('hood-map').setView([41.4432111,2.1762617],15);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
+var pts=[[41.4432111, 2.1762617, "La Forquilla", "confirmed", 66], [41.3966458, 2.1211163, "5 Hermanos", "confirmed", 67], [41.4432111, 2.1762617, "Can Ma\u00f1o Nou Barris", "confirmed", 465], [41.4392592, 2.166299, "El Mirador de Nou Barris", "likely", 466], [41.4431814, 2.1763203, "Restaurant La Llanterna", "confirmed", 467], [41.4395156, 2.1776672, "Bar Cal Jordi", "confirmed", 468], [41.4303841, 2.1776811, "La Cholita", "none", 549], [41.4427062, 2.1756001, "Ovante", "none", 550], [41.4428555, 2.1758403, "Cervecer\u00eda Conde Dr\u00e1cula", "likely", 552], [41.4282767, 2.2106995, "Los Tres Pinos", "likely", 553], [41.4397689, 2.1771593, "Bar Centro Nou Barris", "confirmed", 554], [41.4593833, 2.1763293, "El Barrilet", "likely", 555], [41.441, 2.177, "Restaurante Casa Angelita", "likely", 556], [41.4303853, 2.1784682, "Trattoria Italiana Nou Barris", "likely", 557], [41.4432111, 2.1762617, "Restaurante Pica-Pica", "none", 634], [41.4304056, 2.1770778, "M\u00e1s Que M\u00e9xico", "likely", 635], [41.3966458, 2.1211163, "El 23 Gastrobar", "likely", 636], [41.4303951, 2.1780111, "El Rebost d'en Xavi", "confirmed", 637], [41.4303982, 2.1765707, "Buga Ramen Nou Barris", "none", 638], [41.441, 2.177, "El Malevo Asador", "likely", 639], [41.4304324, 2.1752224, "Txapeldun Fabra i Puig", "likely", 774], [41.4301654, 2.1762411, "La Columna Nou Barris", "confirmed", 775], [41.441, 2.177, "Restaurante Casa Castro", "confirmed", 776], [41.441, 2.177, "L'antic Mediterrani", "confirmed", 777], [41.441, 2.177, "Restaurante Can Ros", "confirmed", 860], [41.441, 2.177, "El Fog\u00f3n de Roquetas", "likely", 861], [41.441, 2.177, "Bar El Padrino", "likely", 862], [41.441, 2.177, "Restaurante Xavi", "confirmed", 863], [41.43042, 2.1761167, "La Masia de Nou Barris", "confirmed", 921], [41.4392592, 2.166299, "Restaurante Chen Ji", "none", 922], [41.441, 2.177, "Restaurante El Cid Nou Barris", "confirmed", 998], [41.441, 2.177, "Txapeldun Egarri", "confirmed", 1086], [41.441, 2.177, "Restaurant Nou Barris", "confirmed", 1172], [41.441, 2.177, "El Cim del Nord", "confirmed", 1173], [41.441, 2.177, "Restaurant Can Verdaguer", "confirmed", 1254], [41.441, 2.177, "Bar La Creu Nou Barris", "confirmed", 1255], [41.441, 2.177, "Restaurant El Parc Nou Barris", "confirmed", 1256], [41.441, 2.177, "Kebab Palace Nou Barris", "confirmed", 1257], [41.441, 2.177, "La Caseta de Roquetes", "confirmed", 1258], [41.441, 2.177, "El Patio de Nou Barris", "confirmed", 1259], [41.441, 2.177, "China Garden Nou Barris", "confirmed", 1260], [41.441, 2.177, "Bar Restaurant La Prosperitat", "confirmed", 1261], [41.441, 2.177, "El Mussol Nou Barris", "confirmed", 1381], [41.441, 2.177, "Restaurant la Masia de Roquetes", "confirmed", 1382], [41.441, 2.177, "Bar Cal Toni Nou Barris", "confirmed", 1457], [41.441, 2.177, "Restaurant Can Pep Nou Barris", "confirmed", 1458], [41.441, 2.177, "Restaurant La Guineueta", "confirmed", 1502]];
+pts.forEach(function(p){
+  var c=p[3]==='confirmed'?'#059669':p[3]==='likely'?'#D97706':'#DC2626';
+  L.circleMarker([p[0],p[1]],{radius:6,fillColor:c,color:'#fff',weight:2,fillOpacity:0.9}).addTo(m).bindPopup('<b>'+p[2]+'</b><br><a href="../r/'+p[4]+'.html">View details</a>');
+});
+if(pts.length>1){m.fitBounds(pts.map(function(p){return[p[0],p[1]]}));}
+</script>
+</body>
+</html>

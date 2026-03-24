@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horta-Guinardó Restaurants — Menuverso Barcelona</title>
+<meta name="description" content="Horta-Guinardó: 50 restaurants, avg €13 menú del día, 29 confirmed. Best of Horta-Guinardó in Barcelona by Menuverso.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></' + 'script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#F8FAFC;--card:#FFF;--text:#1E293B;--sub:#64748B;--mut:#94A3B8;--border:#E2E8F0;--accent:#2563EB;--accent-sub:#DBEAFE;--green:#059669;--green-bg:#D1FAE5;--amber:#D97706;--red:#DC2626;--radius:12px;--shadow:0 2px 8px rgba(0,0,0,0.06);}
+:root.dark{--bg:#0F172A;--card:#1E293B;--text:#F1F5F9;--sub:#94A3B8;--mut:#64748B;--border:#334155;--accent:#3B82F6;--accent-sub:#1E3A5F;--green:#34D399;--green-bg:#064E3B;--shadow:0 2px 8px rgba(0,0,0,0.3);}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background 0.3s,color 0.3s;}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1.5rem;border-bottom:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+.nav-brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.1rem;}
+.nav-brand img{width:28px;height:28px;border-radius:8px;}
+.nav-links{display:flex;align-items:center;gap:1rem;}
+.nav-links a{color:var(--sub);text-decoration:none;font-size:0.82rem;font-weight:500;padding:0.3rem 0.5rem;border-radius:8px;transition:all 0.2s;}
+.nav-links a:hover{color:var(--text);}
+.controls-bar{display:flex;gap:0.5rem;align-items:center;}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:0.3rem 0.55rem;cursor:pointer;font-size:0.85rem;color:var(--sub);transition:all 0.2s;}
+.container{max-width:800px;margin:0 auto;padding:1.5rem;}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--sub);text-decoration:none;font-size:0.85rem;font-weight:500;margin-bottom:1rem;transition:color 0.2s;}
+.back:hover{color:var(--text);}
+.hero{text-align:center;margin-bottom:2rem;}
+.hero h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:0.25rem;}
+.hero p{color:var(--sub);font-size:0.9rem;}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0.75rem;margin-bottom:2rem;}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;text-align:center;box-shadow:var(--shadow);}
+.stat-num{font-size:1.3rem;font-weight:700;}
+.stat-label{font-size:0.7rem;color:var(--mut);text-transform:uppercase;letter-spacing:0.04em;margin-top:2px;}
+.green{color:var(--green);} .amber{color:var(--amber);} .red{color:var(--red);}
+.section{margin-bottom:2rem;}
+.section-title{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:600;color:var(--mut);margin-bottom:0.75rem;}
+.top-card{display:flex;gap:0.75rem;align-items:center;padding:0.75rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:0.5rem;text-decoration:none;color:var(--text);transition:all 0.2s;box-shadow:var(--shadow);}
+.top-card:hover{transform:translateY(-1px);border-color:var(--accent);}
+.rank{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.8rem;background:var(--accent-sub);color:var(--accent);flex-shrink:0;}
+.rank.gold{background:#FEF3C7;color:#D97706;} .rank.silver{background:#F1F5F9;color:#64748B;} .rank.bronze{background:#FED7AA;color:#C2410C;}
+.tc-body{flex:1;min-width:0;}
+.tc-name{font-weight:600;font-size:0.9rem;}
+.tc-meta{font-size:0.75rem;color:var(--sub);}
+#hood-map{width:100%;height:300px;border-radius:var(--radius);border:1px solid var(--border);margin-bottom:1rem;z-index:1;}
+:root.dark .leaflet-tile{filter:invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);}
+.cb-item{display:flex;justify-content:space-between;padding:0.4rem 0.75rem;font-size:0.85rem;border-bottom:1px solid var(--border);}
+.cb-item:last-child{border-bottom:none;}
+.cb-name{font-weight:500;} .cb-count{color:var(--sub);font-size:0.8rem;}
+.cuisine-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+.actions{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2rem;}
+.btn{padding:0.5rem 1rem;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:0.82rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all 0.2s;font-family:Inter,sans-serif;display:inline-flex;align-items:center;gap:4px;}
+.btn:hover{border-color:var(--accent);color:var(--accent);}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+.hood-links{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.hood-link{padding:0.3rem 0.65rem;border:1px solid var(--border);border-radius:16px;font-size:0.72rem;font-weight:500;color:var(--sub);text-decoration:none;transition:all 0.2s;}
+.hood-link:hover{border-color:var(--accent);color:var(--accent);}
+.hood-link span{color:var(--mut);}
+footer{text-align:center;padding:2rem;color:var(--mut);font-size:0.78rem;border-top:1px solid var(--border);}
+footer a{color:var(--sub);text-decoration:none;}
+img[src*="logo.png"]{mix-blend-mode:multiply;}
+:root.dark img[src*="logo.png"]{mix-blend-mode:normal;filter:brightness(1.2);}
+@media(max-width:640px){.stats{grid-template-columns:repeat(3,1fr);}.nav-links a span{display:none;}.actions{flex-direction:column;}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand"><img src="../assets/logo.png" alt="Menuverso"><span>Menuverso</span></a>
+  <div class="nav-links">
+    <a href="../index.html"><span>📋 </span>Database</a>
+    <a href="../finder.html"><span>🔍 </span>Finder</a>
+    <a href="../analytics.html"><span>📊 </span>Analytics</a>
+    <a href="../lists.html"><span>🏆 </span>Best Of</a>
+    <a href="../crawl.html"><span>🚶 </span>Crawl</a>
+  </div>
+  <div class="controls-bar"><button class="theme-btn" id="theme-toggle" onclick="toggleTheme()">🌙</button></div>
+</nav>
+<div class="container">
+  <a href="../index.html" class="back">← All Neighborhoods</a>
+  <div class="hero">
+    <h1>📍 Horta-Guinardó</h1>
+    <p>50 restaurants · 29 confirmed menú del día</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num">50</div><div class="stat-label">Restaurants</div></div>
+    <div class="stat"><div class="stat-num green">29</div><div class="stat-label">Confirmed</div></div>
+    <div class="stat"><div class="stat-num amber">18</div><div class="stat-label">Likely</div></div>
+    <div class="stat"><div class="stat-num">€13</div><div class="stat-label">Avg Price</div></div>
+    <div class="stat"><div class="stat-num">⭐ 4.3</div><div class="stat-label">Avg Rating</div></div>
+    <div class="stat"><div class="stat-num">49</div><div class="stat-label">On Map</div></div>
+  </div>
+
+  <div class="actions">
+    <a href="../index.html?hood=Horta-Guinard%C3%B3" class="btn primary">📋 Browse All 50 in Database</a>
+    <a href="../lists/horta-guinardó.html" class="btn">🏆 Top 10 List</a>
+    <a href="../crawl.html" class="btn">🚶 Plan Lunch Crawl</a>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🏆 Top 5 Rated</div>
+    <a href="../r/996.html" class="top-card">
+          <div class="rank gold">1</div>
+          <div class="tc-body">
+            <div class="tc-name">Can Panella</div>
+            <div class="tc-meta">🟢 Catalan · 13-15€ · ⭐ 4.5/5</div>
+          </div>
+        </a><a href="../r/1514.html" class="top-card">
+          <div class="rank silver">2</div>
+          <div class="tc-body">
+            <div class="tc-name">Forn Cafeteria La Parada</div>
+            <div class="tc-meta">🟢 Mediterranean · ~11€ · ⭐ 4.5/5</div>
+          </div>
+        </a><a href="../r/469.html" class="top-card">
+          <div class="rank bronze">3</div>
+          <div class="tc-body">
+            <div class="tc-name">Can Travi Vell</div>
+            <div class="tc-meta">🟢 Catalan · 15-18€ · ⭐ 4.4/5</div>
+          </div>
+        </a><a href="../r/1140.html" class="top-card">
+          <div class="rank ">4</div>
+          <div class="tc-body">
+            <div class="tc-name">Can Cortada Restaurant</div>
+            <div class="tc-meta">🟢 Catalan · 15-20€ · ⭐ 4.4/5</div>
+          </div>
+        </a><a href="../r/923.html" class="top-card">
+          <div class="rank ">5</div>
+          <div class="tc-body">
+            <div class="tc-name">Restaurant Can Rectoret</div>
+            <div class="tc-meta">🟢 Catalan · 15-18€ · ⭐ 4.4/5</div>
+          </div>
+        </a>
+  </div>
+
+  <div class="section"><div class="section-title">🗺️ Neighborhood Map</div><div id="hood-map"></div></div>
+
+  <div class="section">
+    <div class="section-title">🍽️ Cuisine Breakdown</div>
+    <div class="cuisine-box"><div class="cb-item"><span class="cb-name">Catalan</span><span class="cb-count">21</span></div><div class="cb-item"><span class="cb-name">Spanish</span><span class="cb-count">13</span></div><div class="cb-item"><span class="cb-name">Mediterranean</span><span class="cb-count">9</span></div><div class="cb-item"><span class="cb-name">Seafood</span><span class="cb-count">2</span></div><div class="cb-item"><span class="cb-name">Italian</span><span class="cb-count">2</span></div><div class="cb-item"><span class="cb-name">Asian</span><span class="cb-count">1</span></div><div class="cb-item"><span class="cb-name">Chinese</span><span class="cb-count">1</span></div><div class="cb-item"><span class="cb-name">Café</span><span class="cb-count">1</span></div></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">💎 Price Tiers</div>
+    <div class="cuisine-box">
+      <div class="cb-item"><span class="cb-name">💚 Budget</span><span class="cb-count">18</span></div>
+      <div class="cb-item"><span class="cb-name">🧡 Mid-Range</span><span class="cb-count">32</span></div>
+      <div class="cb-item"><span class="cb-name">💎 Premium</span><span class="cb-count">0</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📍 Other Neighborhoods</div>
+    <div class="hood-links"><a href="barceloneta.html" class="hood-link">Barceloneta <span>(64)</span></a><a href="barri-gotic.html" class="hood-link">Barri Gòtic <span>(90)</span></a><a href="clot.html" class="hood-link">Clot <span>(41)</span></a><a href="eixample.html" class="hood-link">Eixample <span>(329)</span></a><a href="el-born.html" class="hood-link">El Born <span>(92)</span></a><a href="el-raval.html" class="hood-link">El Raval <span>(103)</span></a><a href="gracia.html" class="hood-link">Gràcia <span>(123)</span></a><a href="les-corts.html" class="hood-link">Les Corts <span>(60)</span></a><a href="nou-barris.html" class="hood-link">Nou Barris <span>(47)</span></a><a href="poble-sec.html" class="hood-link">Poble Sec <span>(84)</span></a><a href="poblenou.html" class="hood-link">Poblenou <span>(107)</span></a><a href="sagrada-familia.html" class="hood-link">Sagrada Família <span>(49)</span></a><a href="sant-andreu.html" class="hood-link">Sant Andreu <span>(46)</span></a><a href="sant-antoni.html" class="hood-link">Sant Antoni <span>(51)</span></a><a href="sant-marti.html" class="hood-link">Sant Martí <span>(47)</span></a><a href="sants.html" class="hood-link">Sants <span>(73)</span></a><a href="sarria-sant-gervasi.html" class="hood-link">Sarrià-Sant Gervasi <span>(64)</span></a></div>
+  </div>
+</div>
+<footer><a href="../index.html">Menuverso</a> · <a href="../lists.html">Best Of</a> · <a href="../analytics.html">Analytics</a></footer>
+<script>
+function initTheme(){var s=localStorage.getItem('menuverso_theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark');document.getElementById('theme-toggle').textContent='☀️';}};
+function toggleTheme(){var d=document.documentElement.classList.toggle('dark');localStorage.setItem('menuverso_theme',d?'dark':'light');document.getElementById('theme-toggle').textContent=d?'☀️':'🌙';};
+initTheme();
+</script>
+<script>
+var m=L.map('hood-map').setView([41.4323947,2.1532795],15);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
+var pts=[[41.4323947, 2.1532795, "Can Cortada", "confirmed", 71], [41.4111347, 2.1401544, "Restaurant Mati's", "confirmed", 72], [41.4253602, 2.1534422, "El Taronger de l'Avi", "likely", 321], [41.4309351, 2.1515696, "Can Travi Nou", "confirmed", 411], [41.4309529, 2.1523521, "Can Travi Vell", "confirmed", 469], [41.4327115, 2.158067, "Restaurant La Masia de Horta", "confirmed", 470], [41.4114783, 2.140572, "El Rac\u00f3 d'en Paco", "confirmed", 471], [41.4288626, 2.1606324, "Bar La Font", "confirmed", 472], [41.4181302, 2.1578815, "Restaurant La Terrassa del Guinard\u00f3", "likely", 473], [41.418, 2.165, "El Rinc\u00f3n Sevillano", "confirmed", 539], [41.418, 2.165, "Quimet d'Horta", "likely", 541], [41.418, 2.165, "Vinomio", "confirmed", 542], [41.418, 2.165, "Destapa't", "likely", 543], [41.4246109, 2.1770628, "Maragall Tapas", "likely", 544], [41.431325, 2.1601828, "La Bodegueta d'Horta", "likely", 545], [41.4177147, 2.1584717, "Escaleta del Guinard\u00f3", "confirmed", 546], [41.431972, 2.1591223, "La Cuineta d'Horta", "likely", 547], [41.4335865, 2.1570756, "Thai & Green", "likely", 548], [41.4114783, 2.140572, "El Mirador del Carmelo", "likely", 551], [41.4315352, 2.1599123, "Can Xus Horta", "confirmed", 640], [41.4259515, 2.1655104, "Dorotea Restaurant", "likely", 641], [41.418, 2.165, "DVenus Restaurante", "confirmed", 642], [41.4307129, 2.1618668, "Casa Julia 1978", "confirmed", 643], [41.4338543, 2.1566305, "La Trobada Horta", "likely", 644], [41.418, 2.165, "L'Arrosseria X\u00e0tiva Horta", "likely", 778], [41.418, 2.165, "Sospechoso Bar Horta", "likely", 779], [41.418, 2.165, "Restaurante Brasas Vega's", "likely", 780], [41.418, 2.165, "Marisquer\u00eda A Estrela Galega", "likely", 781], [41.418, 2.165, "Restaurante SICHUAN", "none", 782], [41.418, 2.165, "L'art de la Pinsa", "likely", 783], [41.418, 2.165, "El Rinc\u00f3n del Guinard\u00f3", "confirmed", 864], [41.418, 2.165, "Restaurante El Portal", "likely", 865], [41.4307129, 2.1618668, "Restaurant Can Rectoret", "confirmed", 923], [41.418, 2.165, "L'Hogar Gallego", "likely", 924], [41.4317203, 2.1596399, "Zumo Bar Horta", "none", 925], [41.418, 2.165, "Can Panella", "confirmed", 996], [41.418, 2.165, "El Mes\u00f3n de Horta", "confirmed", 997], [41.418, 2.165, "La Botigueta Horta", "confirmed", 1084], [41.4323947, 2.1532795, "Can Cortada Restaurant", "confirmed", 1140], [41.4309351, 2.1515696, "Restaurant Can Travi Nou", "confirmed", 1262], [41.418, 2.165, "El Rac\u00f3 d'Horta", "confirmed", 1263], [41.418, 2.165, "La Torre de Horta", "confirmed", 1264], [41.418, 2.165, "Pizzer\u00eda G\u00fcell", "none", 1265], [41.418, 2.165, "Restaurant El Laberint", "confirmed", 1266], [41.418, 2.165, "Bar Restaurant Can Margarit Horta", "confirmed", 1267], [41.418, 2.165, "El Petit Horta", "confirmed", 1268], [41.418, 2.165, "Restaurant El Cingle", "confirmed", 1380], [41.418, 2.165, "Restaurant Can Cargolet Horta", "confirmed", 1456], [41.418, 2.165, "Restaurant Can Jordi Horta", "confirmed", 1504]];
+pts.forEach(function(p){
+  var c=p[3]==='confirmed'?'#059669':p[3]==='likely'?'#D97706':'#DC2626';
+  L.circleMarker([p[0],p[1]],{radius:6,fillColor:c,color:'#fff',weight:2,fillOpacity:0.9}).addTo(m).bindPopup('<b>'+p[2]+'</b><br><a href="../r/'+p[4]+'.html">View details</a>');
+});
+if(pts.length>1){m.fitBounds(pts.map(function(p){return[p[0],p[1]]}));}
+</script>
+</body>
+</html>

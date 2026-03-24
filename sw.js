@@ -1,4 +1,4 @@
-const CACHE_NAME = 'menuverso-v3';
+const CACHE_NAME = 'menuverso-v4';
 const CORE_ASSETS = [
   '/',
   '/index.html',
@@ -7,7 +7,10 @@ const CORE_ASSETS = [
   '/lists.html',
   '/collections.html',
   '/crawl.html',
+  '/compare.html',
+  '/claim.html',
   '/restaurants_data.js',
+  '/search_index.js',
   '/assets/logo.png',
   '/manifest.json'
 ];

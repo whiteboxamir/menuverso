@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eixample Restaurants — Menuverso Barcelona</title>
+<meta name="description" content="Eixample: 329 restaurants, avg €15 menú del día, 88 confirmed. Best of Eixample in Barcelona by Menuverso.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></' + 'script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#F8FAFC;--card:#FFF;--text:#1E293B;--sub:#64748B;--mut:#94A3B8;--border:#E2E8F0;--accent:#2563EB;--accent-sub:#DBEAFE;--green:#059669;--green-bg:#D1FAE5;--amber:#D97706;--red:#DC2626;--radius:12px;--shadow:0 2px 8px rgba(0,0,0,0.06);}
+:root.dark{--bg:#0F172A;--card:#1E293B;--text:#F1F5F9;--sub:#94A3B8;--mut:#64748B;--border:#334155;--accent:#3B82F6;--accent-sub:#1E3A5F;--green:#34D399;--green-bg:#064E3B;--shadow:0 2px 8px rgba(0,0,0,0.3);}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background 0.3s,color 0.3s;}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1.5rem;border-bottom:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+.nav-brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.1rem;}
+.nav-brand img{width:28px;height:28px;border-radius:8px;}
+.nav-links{display:flex;align-items:center;gap:1rem;}
+.nav-links a{color:var(--sub);text-decoration:none;font-size:0.82rem;font-weight:500;padding:0.3rem 0.5rem;border-radius:8px;transition:all 0.2s;}
+.nav-links a:hover{color:var(--text);}
+.controls-bar{display:flex;gap:0.5rem;align-items:center;}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:0.3rem 0.55rem;cursor:pointer;font-size:0.85rem;color:var(--sub);transition:all 0.2s;}
+.container{max-width:800px;margin:0 auto;padding:1.5rem;}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--sub);text-decoration:none;font-size:0.85rem;font-weight:500;margin-bottom:1rem;transition:color 0.2s;}
+.back:hover{color:var(--text);}
+.hero{text-align:center;margin-bottom:2rem;}
+.hero h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:0.25rem;}
+.hero p{color:var(--sub);font-size:0.9rem;}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0.75rem;margin-bottom:2rem;}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;text-align:center;box-shadow:var(--shadow);}
+.stat-num{font-size:1.3rem;font-weight:700;}
+.stat-label{font-size:0.7rem;color:var(--mut);text-transform:uppercase;letter-spacing:0.04em;margin-top:2px;}
+.green{color:var(--green);} .amber{color:var(--amber);} .red{color:var(--red);}
+.section{margin-bottom:2rem;}
+.section-title{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:600;color:var(--mut);margin-bottom:0.75rem;}
+.top-card{display:flex;gap:0.75rem;align-items:center;padding:0.75rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:0.5rem;text-decoration:none;color:var(--text);transition:all 0.2s;box-shadow:var(--shadow);}
+.top-card:hover{transform:translateY(-1px);border-color:var(--accent);}
+.rank{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.8rem;background:var(--accent-sub);color:var(--accent);flex-shrink:0;}
+.rank.gold{background:#FEF3C7;color:#D97706;} .rank.silver{background:#F1F5F9;color:#64748B;} .rank.bronze{background:#FED7AA;color:#C2410C;}
+.tc-body{flex:1;min-width:0;}
+.tc-name{font-weight:600;font-size:0.9rem;}
+.tc-meta{font-size:0.75rem;color:var(--sub);}
+#hood-map{width:100%;height:300px;border-radius:var(--radius);border:1px solid var(--border);margin-bottom:1rem;z-index:1;}
+:root.dark .leaflet-tile{filter:invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);}
+.cb-item{display:flex;justify-content:space-between;padding:0.4rem 0.75rem;font-size:0.85rem;border-bottom:1px solid var(--border);}
+.cb-item:last-child{border-bottom:none;}
+.cb-name{font-weight:500;} .cb-count{color:var(--sub);font-size:0.8rem;}
+.cuisine-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+.actions{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2rem;}
+.btn{padding:0.5rem 1rem;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:0.82rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all 0.2s;font-family:Inter,sans-serif;display:inline-flex;align-items:center;gap:4px;}
+.btn:hover{border-color:var(--accent);color:var(--accent);}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+.hood-links{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.hood-link{padding:0.3rem 0.65rem;border:1px solid var(--border);border-radius:16px;font-size:0.72rem;font-weight:500;color:var(--sub);text-decoration:none;transition:all 0.2s;}
+.hood-link:hover{border-color:var(--accent);color:var(--accent);}
+.hood-link span{color:var(--mut);}
+footer{text-align:center;padding:2rem;color:var(--mut);font-size:0.78rem;border-top:1px solid var(--border);}
+footer a{color:var(--sub);text-decoration:none;}
+img[src*="logo.png"]{mix-blend-mode:multiply;}
+:root.dark img[src*="logo.png"]{mix-blend-mode:normal;filter:brightness(1.2);}
+@media(max-width:640px){.stats{grid-template-columns:repeat(3,1fr);}.nav-links a span{display:none;}.actions{flex-direction:column;}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand"><img src="../assets/logo.png" alt="Menuverso"><span>Menuverso</span></a>
+  <div class="nav-links">
+    <a href="../index.html"><span>📋 </span>Database</a>
+    <a href="../finder.html"><span>🔍 </span>Finder</a>
+    <a href="../analytics.html"><span>📊 </span>Analytics</a>
+    <a href="../lists.html"><span>🏆 </span>Best Of</a>
+    <a href="../crawl.html"><span>🚶 </span>Crawl</a>
+  </div>
+  <div class="controls-bar"><button class="theme-btn" id="theme-toggle" onclick="toggleTheme()">🌙</button></div>
+</nav>
+<div class="container">
+  <a href="../index.html" class="back">← All Neighborhoods</a>
+  <div class="hero">
+    <h1>📍 Eixample</h1>
+    <p>329 restaurants · 88 confirmed menú del día</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num">329</div><div class="stat-label">Restaurants</div></div>
+    <div class="stat"><div class="stat-num green">88</div><div class="stat-label">Confirmed</div></div>
+    <div class="stat"><div class="stat-num amber">137</div><div class="stat-label">Likely</div></div>
+    <div class="stat"><div class="stat-num">€15</div><div class="stat-label">Avg Price</div></div>
+    <div class="stat"><div class="stat-num">⭐ 4.3</div><div class="stat-label">Avg Rating</div></div>
+    <div class="stat"><div class="stat-num">327</div><div class="stat-label">On Map</div></div>
+  </div>
+
+  <div class="actions">
+    <a href="../index.html?hood=Eixample" class="btn primary">📋 Browse All 329 in Database</a>
+    <a href="../lists/eixample.html" class="btn">🏆 Top 10 List</a>
+    <a href="../crawl.html" class="btn">🚶 Plan Lunch Crawl</a>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🏆 Top 5 Rated</div>
+    <a href="../r/1517.html" class="top-card">
+          <div class="rank gold">1</div>
+          <div class="tc-body">
+            <div class="tc-name">Restaurante Marés</div>
+            <div class="tc-meta">🟢 Mediterranean · ~14€ · ⭐ 5.0/5</div>
+          </div>
+        </a><a href="../r/73.html" class="top-card">
+          <div class="rank silver">2</div>
+          <div class="tc-body">
+            <div class="tc-name">Disfrutar</div>
+            <div class="tc-meta">🔴 Mediterranean ·  · ⭐ 4.8/5</div>
+          </div>
+        </a><a href="../r/81.html" class="top-card">
+          <div class="rank bronze">3</div>
+          <div class="tc-body">
+            <div class="tc-name">La Taverna del Clínic</div>
+            <div class="tc-meta">🔴 Spanish ·  · ⭐ 4.8/5</div>
+          </div>
+        </a><a href="../r/338.html" class="top-card">
+          <div class="rank ">4</div>
+          <div class="tc-body">
+            <div class="tc-name">Lasarte</div>
+            <div class="tc-meta">🔴 Basque ·  · ⭐ 4.7/5</div>
+          </div>
+        </a><a href="../r/138.html" class="top-card">
+          <div class="rank ">5</div>
+          <div class="tc-body">
+            <div class="tc-name">Osmosis</div>
+            <div class="tc-meta">🔴 Mediterranean ·  · ⭐ 4.7/5</div>
+          </div>
+        </a>
+  </div>
+
+  <div class="section"><div class="section-title">🗺️ Neighborhood Map</div><div id="hood-map"></div></div>
+
+  <div class="section">
+    <div class="section-title">🍽️ Cuisine Breakdown</div>
+    <div class="cuisine-box"><div class="cb-item"><span class="cb-name">Spanish</span><span class="cb-count">71</span></div><div class="cb-item"><span class="cb-name">Mediterranean</span><span class="cb-count">71</span></div><div class="cb-item"><span class="cb-name">Catalan</span><span class="cb-count">37</span></div><div class="cb-item"><span class="cb-name">Café</span><span class="cb-count">27</span></div><div class="cb-item"><span class="cb-name">Japanese</span><span class="cb-count">25</span></div><div class="cb-item"><span class="cb-name">Italian</span><span class="cb-count">17</span></div><div class="cb-item"><span class="cb-name">Fusion</span><span class="cb-count">12</span></div><div class="cb-item"><span class="cb-name">Asian</span><span class="cb-count">11</span></div></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">💎 Price Tiers</div>
+    <div class="cuisine-box">
+      <div class="cb-item"><span class="cb-name">💚 Budget</span><span class="cb-count">67</span></div>
+      <div class="cb-item"><span class="cb-name">🧡 Mid-Range</span><span class="cb-count">214</span></div>
+      <div class="cb-item"><span class="cb-name">💎 Premium</span><span class="cb-count">48</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📍 Other Neighborhoods</div>
+    <div class="hood-links"><a href="barceloneta.html" class="hood-link">Barceloneta <span>(64)</span></a><a href="barri-gotic.html" class="hood-link">Barri Gòtic <span>(90)</span></a><a href="clot.html" class="hood-link">Clot <span>(41)</span></a><a href="el-born.html" class="hood-link">El Born <span>(92)</span></a><a href="el-raval.html" class="hood-link">El Raval <span>(103)</span></a><a href="gracia.html" class="hood-link">Gràcia <span>(123)</span></a><a href="horta-guinardó.html" class="hood-link">Horta-Guinardó <span>(50)</span></a><a href="les-corts.html" class="hood-link">Les Corts <span>(60)</span></a><a href="nou-barris.html" class="hood-link">Nou Barris <span>(47)</span></a><a href="poble-sec.html" class="hood-link">Poble Sec <span>(84)</span></a><a href="poblenou.html" class="hood-link">Poblenou <span>(107)</span></a><a href="sagrada-familia.html" class="hood-link">Sagrada Família <span>(49)</span></a><a href="sant-andreu.html" class="hood-link">Sant Andreu <span>(46)</span></a><a href="sant-antoni.html" class="hood-link">Sant Antoni <span>(51)</span></a><a href="sant-marti.html" class="hood-link">Sant Martí <span>(47)</span></a><a href="sants.html" class="hood-link">Sants <span>(73)</span></a><a href="sarria-sant-gervasi.html" class="hood-link">Sarrià-Sant Gervasi <span>(64)</span></a></div>
+  </div>
+</div>
+<footer><a href="../index.html">Menuverso</a> · <a href="../lists.html">Best Of</a> · <a href="../analytics.html">Analytics</a></footer>
+<script>
+function initTheme(){var s=localStorage.getItem('menuverso_theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark');document.getElementById('theme-toggle').textContent='☀️';}};
+function toggleTheme(){var d=document.documentElement.classList.toggle('dark');localStorage.setItem('menuverso_theme',d?'dark':'light');document.getElementById('theme-toggle').textContent=d?'☀️':'🌙';};
+initTheme();
+</script>
+<script>
+var m=L.map('hood-map').setView([41.3859267,2.1590448],15);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
+var pts=[[41.3859267, 2.1590448, "Casa Jaime", "confirmed", 1], [41.3847852, 2.1485409, "La Flauta", "confirmed", 2], [41.3900845, 2.1641778, "Vivant", "confirmed", 3], [41.3936602, 2.1508488, "Ceviche 103", "confirmed", 4], [41.3924178, 2.1598951, "Baldomero", "confirmed", 5], [41.3896863, 2.1551318, "Maur", "confirmed", 6], [41.3925304, 2.1701036, "Boro Bar", "confirmed", 7], [41.3922984, 2.1701136, "Franca", "confirmed", 8], [41.3918546, 2.1551738, "Balthazar", "confirmed", 9], [41.3922384, 2.1679794, "Claris 118", "confirmed", 10], [41.387762, 2.1531722, "Disfrutar", "none", 73], [41.3848262, 2.1478995, "Moments", "none", 74], [41.3882509, 2.1599648, "Angle", "confirmed", 75], [41.3864491, 2.1510277, "Aleia", "none", 76], [41.3895576, 2.1544404, "Amar Barcelona", "likely", 77], [41.3882168, 2.1640784, "Cervecer\u00eda Catalana", "likely", 78], [41.3839157, 2.147543, "Vinitus", "likely", 79], [41.386228, 2.1616904, "Mont Bar", "confirmed", 80], [41.3945067, 2.1562322, "La Taverna del Cl\u00ednic", "none", 81], [41.3920067, 2.15343, "Tapas 24", "likely", 82], [41.391378, 2.157827, "Bar Tossa", "likely", 83], [41.39829, 2.1616944, "Bar Gelida", "likely", 84], [41.39612, 2.1673056, "Bar Anita", "likely", 85], [41.3913512, 2.1686154, "El Nou de Granados", "likely", 86], [41.3891855, 2.1558383, "Senyor Vermut", "likely", 87], [41.3841221, 2.1502547, "Atrapatapa", "likely", 88], [41.3924481, 2.1652334, "El Nacional", "none", 89], [41.3759016, 2.1446443, "Rac\u00f3 d'en Cesc", "likely", 90], [41.3962525, 2.1685646, "Casa Amalia", "confirmed", 91], [41.3816359, 2.1527047, "Vic Braseria", "likely", 92], [41.3888, 2.162, "Portol\u00e9s", "likely", 93], [41.3940151, 2.1723586, "Casa Masana", "likely", 94], [41.3888, 2.162, "El Cierzo", "likely", 95], [41.3955215, 2.1658499, "El Puestu", "likely", 96], [41.4365898, 2.183255, "Flamant", "likely", 97], [41.3871146, 2.1608392, "Contempo", "likely", 98], [41.3801063, 2.1549057, "Zafra", "likely", 99], [41.3888, 2.162, "Xamp\u00fa Xampany", "likely", 100], [41.3981509, 2.1623621, "Salmigondi", "likely", 101], [41.3920067, 2.15343, "Mixtel\u00b7la", "likely", 102], [41.3903021, 2.1543614, "Danzarama", "likely", 103], [41.3969661, 2.1759868, "An Embat", "confirmed", 104], [41.399408, 2.1648801, "Lateral Consell de Cent", "likely", 105], [41.3996862, 2.1645072, "Malpaso", "likely", 106], [41.388057, 2.1524148, "Boraz", "likely", 107], [41.3930251, 2.1579995, "Au Port de la Lune", "likely", 108], [41.3824739, 2.1623042, "Bistrot BCN", "confirmed", 109], [41.3872176, 2.1511748, "Ramen-Ya Hiro", "likely", 110], [41.3822057, 2.1562644, "Hot Pot de Sichuan", "likely", 111], [41.3888, 2.162, "Little Corea", "likely", 112], [41.3888, 2.162, "Chen Ji", "likely", 113], [41.3873617, 2.1512872, "Dionisos Urgell", "likely", 114], [41.3877531, 2.1520159, "Alb\u00e9 Barcelona", "likely", 115], [41.3997384, 2.1644376, "La Taquer\u00eda", "likely", 116], [41.3786871, 2.1631412, "Merqu\u00e9n Caf\u00e9-Bar", "likely", 117], [41.3836351, 2.1582415, "Amaltea", "confirmed", 118], [41.3811487, 2.15354, "La Tarter\u00eda Raw Food", "likely", 119], [41.3870967, 2.1605734, "Green&Burger", "confirmed", 120], [41.3893622, 2.1579106, "Veggie Garden", "confirmed", 121], [41.3926707, 2.154424, "Vegan Mount", "confirmed", 122], [41.3932142, 2.1576908, "Brera", "confirmed", 123], [41.4410991, 2.2125031, "Nostrum", "likely", 124], [41.3928806, 2.1532094, "Bacoa Universitat", "none", 125], [41.3806541, 2.153358, "Brunch and Cake", "none", 126], [41.3934644, 2.1569597, "Billy Brunch & Garden", "none", 127], [41.3980052, 2.1667402, "EatMyTrip", "none", 128], [41.3888, 2.162, "Oma Bistro", "likely", 129], [41.3872854, 2.1581141, "Zenith", "none", 130], [41.3930908, 2.1528869, "Faborit", "none", 131], [41.3888, 2.162, "Miss Simona", "likely", 132], [41.3888, 2.162, "Belliny by the Benedict", "none", 133], [41.3888, 2.162, "The Coffee House Barcelona", "none", 134], [41.3888, 2.162, "DeLaCrem", "likely", 135], [41.3888, 2.162, "Bar Paris", "likely", 136], [41.3888, 2.162, "EdeNova", "none", 137], [41.3888, 2.162, "Osmosis", "none", 138], [41.3888, 2.162, "Can Boneta", "likely", 139], [41.3888, 2.162, "Cremat Lounge", "likely", 140], [41.3888, 2.162, "Futami", "likely", 141], [41.3888, 2.162, "Tino", "none", 142], [41.3910779, 2.1519215, "Hawker 45", "likely", 322], [41.3957983, 2.1626961, "Bella Italia Eixample", "confirmed", 323], [41.3949068, 2.1634013, "Espacio Uma", "none", 324], [41.3888, 2.162, "Bembi", "confirmed", 325], [41.3963086, 2.1666656, "The Sopa Boba", "likely", 326], [41.3923492, 2.1603386, "El Mercader de l'Eixample", "confirmed", 327], [41.3883709, 2.1614586, "Corgi Cafe", "none", 328], [41.3931786, 2.1608204, "RAMBLA 92", "likely", 329], [41.3934683, 2.1554833, "Barcelona Steak House", "none", 330], [41.3848982, 2.1599233, "Little India", "confirmed", 331], [41.3930651, 2.1617176, "Gandhi", "confirmed", 332], [41.3892969, 2.1579555, "Jardinet d'Aribau", "confirmed", 333], [41.3946792, 2.157072, "Windsor", "none", 334], [41.3927442, 2.1539985, "Speakeasy", "none", 335], [41.386746, 2.1590623, "La Tarter\u00eda", "none", 336], [41.3848554, 2.16361, "Can Pizza Universidad", "likely", 337], [41.3936394, 2.162126, "Lasarte", "none", 338], [41.3825668, 2.1633965, "Alkimia", "none", 339], [41.394569, 2.1565496, "Xerta Restaurant", "none", 340], [41.3944846, 2.1480516, "Hisop", "none", 341], [41.3939947, 2.1693795, "Enigma by Albert Adri\u00e0", "none", 342], [41.3916963, 2.1577094, "Cervecer\u00eda Catalana 2", "likely", 343], [41.3973001, 2.1612785, "Bar Mut", "likely", 344], [41.3935425, 2.1603166, "La Bodegueta", "likely", 345], [41.4004186, 2.166339, "Can Kenji", "confirmed", 346], [41.383461, 2.1555646, "Somiatruites", "confirmed", 347], [41.3889311, 2.1581082, "El Rinc\u00f3n Maya", "confirmed", 348], [41.3849221, 2.1680834, "Teresa Carles", "confirmed", 349], [41.3818569, 2.1521914, "Fukamura", "none", 413], [41.3905732, 2.1467221, "Casa Fiero", "likely", 414], [41.3893318, 2.1614206, "Kay Kebab", "none", 415], [41.3923056, 2.1512877, "22:22 Cultura Dulce", "likely", 416], [41.3886399, 2.1591832, "Bar Universal", "likely", 417], [41.3911416, 2.1520066, "New Pause Coffee Bar", "none", 418], [41.3866173, 2.1592422, "Artchur", "likely", 419], [41.3840442, 2.1587863, "Wondmo", "none", 420], [41.3876815, 2.16234, "Mizzica", "none", 421], [41.389157, 2.1657244, "Ares Eixample", "likely", 422], [41.3954834, 2.1632356, "Babula Bar 1937", "likely", 423], [41.3910282, 2.1695236, "Jos\u00e9phine", "likely", 424], [41.3886056, 2.1557989, "Fugaz", "likely", 425], [41.3888, 2.162, "Glug Bar", "likely", 426], [41.3907528, 2.1661355, "Birika", "likely", 427], [41.4022384, 2.1692206, "Parda Steakhouse", "none", 428], [41.401803, 2.1757191, "Matcha Crew", "none", 429], [41.3970942, 2.1682789, "Generation B", "none", 430], [41.3888, 2.162, "Manifest", "none", 431], [41.3997251, 2.1644112, "Prima Salvaje", "none", 432], [41.4056602, 2.1824857, "Melodia", "likely", 433], [41.3997133, 2.1682638, "Moku", "none", 434], [41.3888, 2.162, "L'Artesana", "confirmed", 531], [41.3888, 2.162, "Bullanga", "confirmed", 532], [41.3888, 2.162, "Mi Tierra", "confirmed", 540], [41.3940501, 2.1696448, "Mara\u00f1a", "confirmed", 572], [41.3879554, 2.1552099, "L'Amoroso", "likely", 573], [41.394838, 2.1667893, "Jacqueline Barcelona", "none", 574], [41.39109, 2.1560106, "Uchu", "none", 579], [41.3888, 2.162, "Barra /M", "none", 580], [41.3888, 2.162, "Enigma", "none", 592], [41.3888, 2.162, "Cinc Sentits", "none", 593], [41.3888, 2.162, "Xerta", "none", 594], [41.3888, 2.162, "Sintonia", "none", 595], [41.3867943, 2.1597993, "El Bistur\u00ed del Doctor Lla\u00e7", "confirmed", 600], [41.3878056, 2.158038, "La Taqueria Eixample", "likely", 601], [41.3870046, 2.1564632, "Restaurante Galicia", "confirmed", 602], [41.3989642, 2.1672827, "La Mangala", "confirmed", 603], [41.3986961, 2.1738276, "El Jard\u00edn de Carmina", "confirmed", 604], [41.3907172, 2.1718683, "Lolita Eixample", "likely", 605], [41.3893145, 2.1635206, "City Bar", "confirmed", 606], [41.3912028, 2.1610862, "Cornelia and Co", "likely", 607], [41.3891939, 2.1646992, "Monv\u00ednic", "none", 608], [41.382504, 2.1632987, "F\u00e0brica Moritz", "likely", 609], [41.3969404, 2.1664905, "De Tapa Madre", "likely", 610], [41.3924032, 2.1609008, "Cerveseria Catalana", "likely", 629], [41.3908867, 2.1665369, "Honest Greens Passeig de Gr\u00e0cia", "likely", 646], [41.3921998, 2.1796214, "Nomad Coffee Lab & Shop", "none", 648], [41.3901375, 2.1707758, "Pudding Eixample", "none", 649], [41.391716, 2.1659599, "Tapa Tapa", "likely", 664], [41.3912082, 2.1715843, "Bar Bauma", "likely", 665], [41.39217, 2.1582811, "Faire Tapas & Wine", "likely", 666], [41.3917422, 2.1654245, "SOLC Majestic", "none", 667], [41.3877917, 2.1522401, "Restaurant Arume", "likely", 668], [41.392294, 2.1629847, "Re\u00f1\u00e9", "likely", 669], [41.3860999, 2.1679417, "Casa Agust\u00ed", "confirmed", 670], [41.3906813, 2.1642736, "Taperia Catalana", "likely", 675], [41.3934732, 2.1501597, "Bar Vel\u00f3dromo", "confirmed", 705], [41.3920738, 2.1591595, "Nostrum Eixample", "likely", 708], [41.3891624, 2.1401666, "Arrosseria X\u00e0tiva", "likely", 711], [41.3939387, 2.1606032, "Barra Oso", "likely", 734], [41.3955996, 2.1611452, "Circolo Popolare", "likely", 735], [41.3953194, 2.1624677, "Ippudo Barcelona", "none", 736], [41.3968741, 2.1667616, "Rakkan Barcelona", "none", 739], [41.3963974, 2.1707655, "Taberna Nardi", "likely", 740], [41.3912695, 2.1579681, "Petit Bleu", "likely", 741], [41.395953, 2.1655387, "Manta Nikkei", "none", 743], [41.3888, 2.162, "Can Bo", "likely", 745], [41.3888, 2.162, "Erre Barcelona", "none", 746], [41.3888, 2.162, "Le\u00f1a Barcelona", "none", 747], [41.39193, 2.1570949, "Zero Patatero", "likely", 748], [41.3943528, 2.1657398, "Jok Barcelona", "likely", 749], [41.4003902, 2.1668987, "Tamae BAR", "none", 750], [41.3908805, 2.1565657, "Batea Barcelona", "likely", 751], [41.3888, 2.162, "Superauto", "none", 756], [41.3894785, 2.1580849, "Kome Deli", "none", 757], [41.3960492, 2.1634011, "Ultrapaninos Marin", "likely", 758], [41.3964349, 2.1662057, "Fukamurabcn", "none", 759], [41.3905227, 2.1682552, "El Nacional Barcelona", "likely", 763], [41.3888, 2.162, "El Vel\u00f3dromo", "confirmed", 784], [41.3888, 2.162, "365 Bakery", "none", 786], [41.3949258, 2.1712207, "Betlem Miscell\u00e1nia", "likely", 798], [41.3935508, 2.1504554, "Bar Remedios", "likely", 799], [41.3809479, 2.1577335, "Bar Alegr\u00eda", "likely", 800], [41.392746, 2.1567906, "Bar Eixample", "likely", 801], [41.3791659, 2.160166, "Bar Malasang", "confirmed", 802], [41.3886092, 2.1545131, "Bar Morryssom", "likely", 803], [41.3893196, 2.1631462, "Tri Bite", "likely", 804], [41.3962536, 2.176187, "Il Ritrovo Itali", "likely", 805], [41.3888, 2.162, "Windsor Restaurant", "none", 867], [41.3888, 2.162, "Sumo Sushi", "none", 868], [41.3888, 2.162, "Wok to Walk", "likely", 869], [41.3854768, 2.1686128, "Udon", "none", 870], [41.3975238, 2.1587902, "Lateral", "likely", 871], [41.3948485, 2.1667002, "BoB\u00f3 Barcelona", "none", 872], [41.3913941, 2.1635108, "Distinto", "likely", 873], [41.3903624, 2.1592623, "Crusto Barcelona", "likely", 874], [41.3882834, 2.1615596, "Brunch & Cake", "none", 875], [41.3911271, 2.1713041, "Alsur Caf\u00e9 Eixample", "none", 876], [41.3894098, 2.1717886, "Bo de B Eixample", "likely", 877], [41.3910282, 2.1695236, "Goiko Eixample", "none", 878], [41.384527, 2.1557206, "Pegasus Gastropub", "none", 879], [41.3887456, 2.1545106, "Fresc Co Eixample", "confirmed", 880], [41.3828383, 2.1579092, "Wok Garden", "likely", 881], [41.389682, 2.1650907, "Wagamama", "likely", 882], [41.3921255, 2.1658062, "Pans & Company Pg Gr\u00e0cia", "likely", 883], [41.3924315, 2.1654957, "TGB The Good Burger", "none", 885], [41.3938965, 2.1599398, "Mauri", "none", 886], [41.3829395, 2.1603859, "Escrib\u00e0 Gran Via", "none", 887], [41.3926728, 2.164779, "Txapela", "likely", 888], [41.3956967, 2.169298, "Can Ravell", "confirmed", 889], [41.3888, 2.162, "Tragaluz", "likely", 890], [41.3888, 2.162, "Nectari", "none", 891], [41.3888, 2.162, "Via Emilia Eixample", "confirmed", 892], [41.3922421, 2.1566747, "Carlota Akaneya", "none", 930], [41.3931568, 2.1659406, "La Rita Eixample", "confirmed", 932], [41.3936322, 2.1692813, "\u00c1gape", "confirmed", 933], [41.3889463, 2.1669376, "Restaurant Ciudad Condal", "likely", 934], [41.3858504, 2.1694606, "Caf\u00e9 Z\u00fcrich", "none", 935], [41.3927442, 2.1539985, "Dry Martini", "none", 939], [41.3888297, 2.156682, "Sips Barcelona", "none", 940], [41.3999137, 2.1583155, "Bobby's Free", "none", 941], [41.3936885, 2.1636552, "Taller del Chef", "confirmed", 942], [41.3942784, 2.1701117, "PadThai WokBar", "likely", 945], [41.3742115, 2.1546082, "Restaurant R\u00edas de Galicia", "none", 951], [41.3936885, 2.1636552, "El Celler de Can Roca Pop-up", "none", 953], [41.3936885, 2.1636552, "El Portal\u00f3n", "likely", 960], [41.3936885, 2.1636552, "Taranna Caf\u00e9", "none", 965], [41.3936885, 2.1636552, "Nomad Roasters", "none", 966], [41.3867346, 2.1744184, "La Dol\u00e7a Herm\u00ednia", "confirmed", 967], [41.4158456, 2.157989, "Tibet", "confirmed", 968], [41.3888, 2.162, "Bodega Granados", "likely", 983], [41.3926876, 2.1631002, "Miu Eixample", "confirmed", 1026], [41.3888, 2.162, "Jiribilla Barcelona", "likely", 1036], [41.3888, 2.162, "Mineral Barcelona", "none", 1041], [41.3888, 2.162, "Gloria Osteria", "likely", 1042], [41.3936885, 2.1636552, "Uchu Barcelona", "none", 1050], [41.3936885, 2.1636552, "Can Bo Hotel", "likely", 1052], [41.3936885, 2.1636552, "Changui BCN", "none", 1053], [41.3936885, 2.1636552, "Zhonghua Noodles", "none", 1054], [41.3936885, 2.1636552, "Arko Restaurant", "none", 1056], [41.392084, 2.1546886, "Pepa Bar a Vins", "likely", 1060], [41.3935583, 2.1550086, "La Moderna Wine Bar", "likely", 1061], [41.395953, 2.1655387, "Cellarer", "likely", 1062], [41.3888, 2.162, "Amovino", "likely", 1063], [41.3888, 2.162, "Sin Mala Uva", "likely", 1064], [41.3888, 2.162, "Mordisco", "likely", 1067], [41.3888, 2.162, "Aylul", "likely", 1100], [41.3888, 2.162, "Parda Barcelona", "none", 1101], [41.3888, 2.162, "GueBar", "none", 1102], [41.3936885, 2.1636552, "Melodia Barcelona", "likely", 1103], [41.3936885, 2.1636552, "Aspero", "likely", 1104], [41.3936885, 2.1636552, "Hankook BBQ", "none", 1105], [41.3936885, 2.1636552, "Bar Dijous", "confirmed", 1106], [41.3936885, 2.1636552, "New Pamb", "none", 1107], [41.3936885, 2.1636552, "L'Actiu", "confirmed", 1108], [41.3936885, 2.1636552, "La Muscleria", "confirmed", 1109], [41.3936885, 2.1636552, "Bar Cop\u00e8rnic", "confirmed", 1110], [41.3888, 2.162, "Falamanki", "likely", 1129], [41.3888, 2.162, "Ramen House Barcelona", "none", 1130], [41.3888, 2.162, "Ikenoan", "none", 1131], [41.3888, 2.162, "Just Coffee BCN", "none", 1132], [41.3888, 2.162, "Mayombe Barcelona", "likely", 1134], [41.3888, 2.162, "Teresa Carles Eixample", "confirmed", 1137], [41.3924032, 2.1609008, "Cervecer\u00eda Catalana Eixample", "likely", 1139], [41.3936885, 2.1636552, "Bar Mut Eixample", "likely", 1142], [41.3936885, 2.1636552, "Ramen Ya Hiro", "none", 1143], [41.3936885, 2.1636552, "Gelato Lab", "none", 1144], [41.3936885, 2.1636552, "La Bodegueta Proven\u00e7a", "confirmed", 1145], [41.3936885, 2.1636552, "Casa Am\u00e0lia", "confirmed", 1146], [41.3936885, 2.1636552, "Les Truites", "confirmed", 1147], [41.3936885, 2.1636552, "Da Greco", "likely", 1148], [41.3936885, 2.1636552, "El Filete Ruso", "likely", 1149], [41.3936885, 2.1636552, "La Plassohla", "confirmed", 1150], [41.3888, 2.162, "Nectari Barcelona", "none", 1182], [41.3888, 2.162, "Roca Moo", "none", 1183], [41.3888, 2.162, "Pur Eixample", "likely", 1184], [41.3888, 2.162, "Speakeasy Barcelona", "none", 1185], [41.3909839, 2.1584795, "Estimar Barcelona", "none", 1198], [41.3889463, 2.1669376, "Cervecer\u00eda Ciudad Condal", "likely", 1269], [41.3888, 2.162, "Ramen-Ya Eixample", "confirmed", 1270], [41.3869111, 2.1611096, "La Flauta Diagonal", "confirmed", 1271], [41.3888, 2.162, "Taller de Tapas Passeig de Gr\u00e0cia", "likely", 1272], [41.3923045, 2.1558108, "Honest Greens Eixample", "likely", 1273], [41.3888, 2.162, "Foc i Oli", "confirmed", 1274], [41.3888, 2.162, "Restaurant Mesopotamia", "confirmed", 1275], [41.3888, 2.162, "La Piazzetta Eixample", "confirmed", 1276], [41.3888, 2.162, "Yakitoro Eixample", "none", 1277], [41.3888, 2.162, "El Bierzo Eixample", "confirmed", 1278], [41.3888, 2.162, "La Clara", "likely", 1317], [41.3888, 2.162, "Cervecer\u00eda Catalana Balmes", "likely", 1318], [41.3888, 2.162, "Vinitus Eixample", "likely", 1319], [41.3888, 2.162, "Restaurante Nepal", "confirmed", 1320], [41.3888, 2.162, "El Japones de Passeig de Gr\u00e0cia", "none", 1321], [41.3888, 2.162, "Cervecer\u00eda Catalana Enric Granados", "confirmed", 1322], [41.3888, 2.162, "Ca\u00f1ete Eixample", "confirmed", 1323], [41.3888, 2.162, "Can Culleretes Eixample", "confirmed", 1324], [41.3888, 2.162, "C\u00e9leri Restaurant", "confirmed", 1325], [41.3888, 2.162, "Kosmopolit", "confirmed", 1326], [41.3888, 2.162, "La Fonda del Port Ol\u00edmpic", "confirmed", 1327], [41.3888, 2.162, "Taktika Berri", "confirmed", 1328], [41.3911024, 2.1510665, "Maitea", "likely", 1391], [41.3911199, 2.170955, "Patagonia Beef & Wine", "none", 1392], [41.3910351, 2.152237, "Restaurant Gaig", "confirmed", 1393], [41.3951595, 2.1607634, "El Japon\u00e9s", "likely", 1394], [41.3888, 2.162, "Mango Thai", "confirmed", 1395], [41.3888, 2.162, "Rasoterra Eixample", "confirmed", 1396], [41.3993413, 2.173926, "Nairod Restaurant", "confirmed", 1397], [41.3888, 2.162, "Bao Bar Eixample", "none", 1398], [41.3888, 2.162, "Casa Delf\u00edn Eixample", "confirmed", 1399], [41.3888, 2.162, "Taktika Berri Eixample", "confirmed", 1470], [41.3888, 2.162, "La Cuina d'en Garriga", "confirmed", 1471], [41.3888, 2.162, "El Petit Cuiner", "confirmed", 1472], [41.3888, 2.162, "Wagokoro", "confirmed", 1473], [41.3888, 2.162, "Korokke Barcelona", "none", 1474], [41.3888, 2.162, "Restaurante Sibaris", "confirmed", 1475], [41.3979638, 2.1610245, "La Pepita Eixample", "likely", 1476], [41.393013, 2.1548767, "Koku Kitchen Buns", "none", 1477], [41.3888, 2.162, "Restaurant Nectari", "confirmed", 1487]];
+pts.forEach(function(p){
+  var c=p[3]==='confirmed'?'#059669':p[3]==='likely'?'#D97706':'#DC2626';
+  L.circleMarker([p[0],p[1]],{radius:6,fillColor:c,color:'#fff',weight:2,fillOpacity:0.9}).addTo(m).bindPopup('<b>'+p[2]+'</b><br><a href="../r/'+p[4]+'.html">View details</a>');
+});
+if(pts.length>1){m.fitBounds(pts.map(function(p){return[p[0],p[1]]}));}
+</script>
+</body>
+</html>

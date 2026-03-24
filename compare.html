@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menuverso — Compare Restaurants</title>
+<meta name="description" content="Compare Barcelona restaurants side-by-side. Price, rating, cuisine, location and more.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#F8FAFC;--card:#FFF;--text:#1E293B;--sub:#64748B;--mut:#94A3B8;--border:#E2E8F0;--accent:#2563EB;--accent-sub:#DBEAFE;--green:#059669;--green-bg:#D1FAE5;--amber:#D97706;--red:#DC2626;--radius:12px;--shadow:0 2px 8px rgba(0,0,0,0.06);}
+:root.dark{--bg:#0F172A;--card:#1E293B;--text:#F1F5F9;--sub:#94A3B8;--mut:#64748B;--border:#334155;--accent:#3B82F6;--accent-sub:#1E3A5F;--green:#34D399;--green-bg:#064E3B;--amber:#FBBF24;--red:#F87171;--shadow:0 2px 8px rgba(0,0,0,0.3);}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background 0.3s,color 0.3s;}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1.5rem;border-bottom:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+.nav-brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.1rem;}
+.nav-brand img{width:28px;height:28px;border-radius:8px;}
+.nav-links{display:flex;align-items:center;gap:1rem;}
+.nav-links a{color:var(--sub);text-decoration:none;font-size:0.82rem;font-weight:500;padding:0.3rem 0.5rem;border-radius:8px;transition:all 0.2s;}
+.nav-links a:hover{color:var(--text);}
+.nav-links a.active{color:var(--accent);font-weight:600;}
+.controls-bar{display:flex;gap:0.5rem;align-items:center;}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:0.3rem 0.55rem;cursor:pointer;font-size:0.85rem;color:var(--sub);transition:all 0.2s;}
+.container{max-width:1100px;margin:0 auto;padding:1.5rem;}
+h1{font-size:clamp(1.4rem,3vw,1.8rem);text-align:center;margin-bottom:0.25rem;}
+.subtitle{text-align:center;color:var(--sub);font-size:0.88rem;margin-bottom:1.5rem;}
+.slot-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-bottom:2rem;}
+.slot{background:var(--card);border:2px dashed var(--border);border-radius:var(--radius);padding:1.25rem;text-align:center;position:relative;transition:all 0.2s;min-height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.slot.filled{border-style:solid;text-align:left;align-items:stretch;justify-content:flex-start;}
+.slot-search{position:relative;width:100%;}
+.slot-search input{width:100%;padding:0.5rem 0.75rem;border:1px solid var(--border);border-radius:8px;font-size:0.82rem;font-family:Inter,sans-serif;background:var(--bg);color:var(--text);}
+.slot-search input:focus{outline:none;border-color:var(--accent);}
+.slot-dropdown{position:absolute;top:100%;left:0;right:0;background:var(--card);border:1px solid var(--border);border-radius:8px;max-height:200px;overflow-y:auto;z-index:50;box-shadow:0 8px 24px rgba(0,0,0,0.15);display:none;}
+.slot-dropdown.open{display:block;}
+.slot-dropdown-item{padding:0.5rem 0.75rem;cursor:pointer;font-size:0.82rem;transition:background 0.15s;}
+.slot-dropdown-item:hover{background:var(--accent-sub);}
+.slot-dropdown-item .sdi-name{font-weight:500;}
+.slot-dropdown-item .sdi-meta{color:var(--sub);font-size:0.72rem;}
+.slot-name{font-weight:700;font-size:1.05rem;margin-bottom:0.25rem;}
+.slot-cuisine{font-size:0.82rem;color:var(--sub);margin-bottom:0.5rem;}
+.slot-remove{position:absolute;top:8px;right:8px;background:none;border:none;color:var(--mut);cursor:pointer;font-size:0.85rem;padding:4px;border-radius:4px;}
+.slot-remove:hover{color:var(--red);}
+.empty-hint{color:var(--mut);font-size:0.85rem;}
+.compare-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+.compare-table th{background:var(--bg);padding:0.6rem 1rem;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:600;color:var(--mut);text-align:left;border-bottom:1px solid var(--border);}
+.compare-table td{padding:0.75rem 1rem;font-size:0.88rem;border-bottom:1px solid var(--border);vertical-align:top;}
+.compare-table tr:last-child td{border-bottom:none;}
+.compare-table .label{font-weight:600;color:var(--sub);font-size:0.8rem;width:140px;white-space:nowrap;}
+.winner{background:var(--green-bg);font-weight:600;color:var(--green);}
+.tag{font-size:0.68rem;padding:2px 6px;border-radius:4px;background:var(--accent-sub);color:var(--accent);font-weight:500;display:inline-block;margin:1px;}
+.bar-container{height:8px;background:var(--border);border-radius:4px;overflow:hidden;margin-top:4px;}
+.bar-fill{height:100%;border-radius:4px;transition:width 0.5s;}
+.verdict{margin-top:2rem;padding:1.5rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);text-align:center;box-shadow:var(--shadow);}
+.verdict h2{font-size:1rem;margin-bottom:0.5rem;}
+.verdict p{font-size:0.85rem;color:var(--sub);}
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:0.6rem 1.5rem;border-radius:999px;font-size:0.82rem;font-weight:500;z-index:200;opacity:0;transition:opacity 0.3s;pointer-events:none;}
+.toast.show{opacity:1;}
+footer{text-align:center;padding:2rem;color:var(--mut);font-size:0.78rem;border-top:1px solid var(--border);}
+footer a{color:var(--sub);text-decoration:none;}
+img[src*="logo.png"]{mix-blend-mode:multiply;}
+:root.dark img[src*="logo.png"]{mix-blend-mode:normal;filter:brightness(1.2);}
+@media(max-width:640px){.slot-row{grid-template-columns:1fr;}.compare-table{font-size:0.82rem;}.compare-table .label{width:100px;}.nav-links a span{display:none;}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a href="index.html" class="nav-brand"><img src="assets/logo.png" alt="Menuverso"><span>Menuverso</span></a>
+  <div class="nav-links">
+    <a href="index.html"><span>📋 </span>Database</a>
+    <a href="finder.html"><span>🔍 </span>Finder</a>
+    <a href="analytics.html"><span>📊 </span>Analytics</a>
+    <a href="lists.html"><span>🏆 </span>Best Of</a>
+    <a href="compare.html" class="active"><span>⚖️ </span>Compare</a>
+  </div>
+  <div class="controls-bar"><button class="theme-btn" id="theme-toggle" onclick="toggleTheme()">🌙</button></div>
+</nav>
+
+<div class="container">
+  <h1>⚖️ Compare Restaurants</h1>
+  <p class="subtitle">Pick 2-3 restaurants for a detailed side-by-side breakdown</p>
+
+  <div class="slot-row" id="slot-row"></div>
+  <div id="comparison" style="display:none;"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+<footer>Built with ❤️ by <a href="landing.html">Menuverso</a> · <a href="index.html">Database</a> · <a href="lists.html">Best Of</a></footer>
+
+<script src="restaurants_data.js"></script>
+<script>
+const DATA = window.RESTAURANT_DATA || [];
+let slots = [null, null, null];
+
+function parsePrice(s) {
+  if (!s) return null;
+  const nums = s.match(/[\d.]+/g);
+  return nums ? parseFloat(nums[0]) : null;
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+function renderSlots() {
+  const row = document.getElementById('slot-row');
+  row.innerHTML = slots.map((r, i) => {
+    if (r) {
+      const tier = r.menu_tier || 'none';
+      const tierE = {confirmed:'🟢',likely:'🟡',none:'🔴'}[tier]||'';
+      return `<div class="slot filled">
+        <button class="slot-remove" onclick="removeSlot(${i})">✕</button>
+        <div class="slot-name">${r.name}</div>
+        <div class="slot-cuisine">${tierE} ${r.cuisine_type} · ${r.neighborhood}</div>
+        <div style="font-size:0.82rem;"><strong>${r.menu_price_range||'—'}</strong> · ⭐ ${r.google_maps_rating||'—'}/5</div>
+      </div>`;
+    }
+    return `<div class="slot">
+      <div class="slot-search">
+        <input type="text" placeholder="🔍 Search restaurant ${i+1}..." oninput="onSlotSearch(this,${i})" onfocus="onSlotSearch(this,${i})">
+        <div class="slot-dropdown" id="sd-${i}"></div>
+      </div>
+      <p class="empty-hint" style="margin-top:0.5rem;">Pick a restaurant to compare</p>
+    </div>`;
+  }).join('');
+
+  const filled = slots.filter(Boolean);
+  if (filled.length >= 2) renderComparison(filled);
+  else document.getElementById('comparison').style.display = 'none';
+}
+
+function onSlotSearch(input, si) {
+  const q = input.value.toLowerCase().trim();
+  const dd = document.getElementById('sd-' + si);
+  if (!q || q.length < 2) { dd.classList.remove('open'); return; }
+
+  const existing = new Set(slots.filter(Boolean).map(r => r.id));
+  const matches = DATA.filter(r => !existing.has(r.id) && (r.name.toLowerCase().includes(q) || r.neighborhood.toLowerCase().includes(q))).slice(0, 6);
+  if (!matches.length) { dd.classList.remove('open'); return; }
+
+  dd.innerHTML = matches.map(r => `<div class="slot-dropdown-item" onclick="pickSlot(${si},${r.id})">
+    <div class="sdi-name">${r.name}</div>
+    <div class="sdi-meta">${r.cuisine_type} · ${r.neighborhood} · ${r.menu_price_range||'—'}</div>
+  </div>`).join('');
+  dd.classList.add('open');
+}
+
+function pickSlot(si, rid) {
+  slots[si] = DATA.find(r => r.id === rid);
+  renderSlots();
+}
+
+function removeSlot(si) {
+  slots[si] = null;
+  renderSlots();
+}
+
+function renderComparison(rs) {
+  const comp = document.getElementById('comparison');
+  comp.style.display = 'block';
+
+  const fields = [
+    {key:'neighborhood', label:'📍 Neighborhood'},
+    {key:'cuisine_type', label:'🍽️ Cuisine'},
+    {key:'pricing_tier', label:'💎 Tier'},
+    {key:'menu_price_range', label:'💰 Price', compare:'price'},
+    {key:'google_maps_rating', label:'⭐ Rating', compare:'higher'},
+    {key:'google_maps_review_count', label:'📊 Reviews', compare:'higher'},
+    {key:'menu_tier', label:'🟢 Menu Status'},
+    {key:'metro_station', label:'🚇 Metro'},
+    {key:'tags', label:'🏷️ Tags', format:'tags'},
+    {key:'notes', label:'📝 Notes'},
+  ];
+
+  const headers = rs.map(r => `<th style="text-align:center;font-size:0.85rem;color:var(--text);font-weight:700;">${r.name}</th>`).join('');
+
+  const rows = fields.map(f => {
+    const cells = rs.map(r => {
+      let val = r[f.key];
+      if (f.format === 'tags' && Array.isArray(val)) {
+        return val.map(t => `<span class="tag">${t}</span>`).join(' ');
+      }
+      if (f.key === 'menu_tier') {
+        return {confirmed:'🟢 Confirmed',likely:'🟡 Likely',none:'🔴 No Menú'}[val||'none']||val;
+      }
+      return val ?? '—';
+    });
+
+    // Determine winner
+    let winnerIdx = -1;
+    if (f.compare === 'higher') {
+      const nums = rs.map(r => parseFloat(r[f.key]) || 0);
+      const max = Math.max(...nums);
+      if (max > 0 && nums.filter(n => n === max).length === 1) winnerIdx = nums.indexOf(max);
+    }
+    if (f.compare === 'price') {
+      const nums = rs.map(r => parsePrice(r.menu_price_range));
+      const valid = nums.filter(Boolean);
+      if (valid.length >= 2) {
+        const min = Math.min(...valid);
+        if (valid.filter(n => n === min).length === 1) winnerIdx = nums.indexOf(min);
+      }
+    }
+
+    const tds = cells.map((c, i) => `<td${winnerIdx === i ? ' class="winner"' : ''}>${c}</td>`).join('');
+    return `<tr><td class="label">${f.label}</td>${tds}</tr>`;
+  }).join('');
+
+  // Rating comparison bar
+  const maxRating = 5;
+  const ratingBars = rs.map(r => {
+    const pct = ((r.google_maps_rating || 0) / maxRating * 100).toFixed(0);
+    return `<td><div style="display:flex;align-items:center;gap:0.5rem;"><span style="font-weight:700;">${r.google_maps_rating||'—'}</span><div class="bar-container" style="flex:1;"><div class="bar-fill" style="width:${pct}%;background:${pct > 85 ? 'var(--green)' : pct > 70 ? 'var(--amber)' : 'var(--red)'};"></div></div></div></td>`;
+  }).join('');
+
+  // Price comparison bar
+  const prices = rs.map(r => parsePrice(r.menu_price_range) || 0);
+  const maxPrice = Math.max(...prices, 20);
+  const priceBars = rs.map((r, i) => {
+    const p = prices[i];
+    const pct = (p / maxPrice * 100).toFixed(0);
+    return `<td><div style="display:flex;align-items:center;gap:0.5rem;"><span style="font-weight:700;">${r.menu_price_range || '—'}</span><div class="bar-container" style="flex:1;"><div class="bar-fill" style="width:${pct}%;background:${p <= 12 ? 'var(--green)' : p <= 15 ? 'var(--amber)' : 'var(--red)'};"></div></div></div></td>`;
+  }).join('');
+
+  // Verdict
+  let verdictHTML = '';
+  const ratings = rs.map(r => r.google_maps_rating || 0);
+  const pricesV = rs.map(r => parsePrice(r.menu_price_range) || 999);
+  const bestRating = rs[ratings.indexOf(Math.max(...ratings))];
+  const bestValue = rs[pricesV.indexOf(Math.min(...pricesV))];
+  
+  if (bestRating && bestValue) {
+    verdictHTML = `<div class="verdict">
+      <h2>📊 Quick Verdict</h2>
+      <p>🏆 <strong>Best rated:</strong> ${bestRating.name} (⭐ ${bestRating.google_maps_rating}/5)</p>
+      <p>💚 <strong>Best price:</strong> ${bestValue.name} (${bestValue.menu_price_range || '—'})</p>
+      ${bestRating.id === bestValue.id ? '<p style="margin-top:0.5rem;color:var(--green);font-weight:600;">🎯 Same restaurant wins both — clear winner!</p>' : ''}
+    </div>`;
+  }
+
+  comp.innerHTML = `
+    <table class="compare-table">
+      <thead><tr><th>ATTRIBUTE</th>${headers}</tr></thead>
+      <tbody>
+        <tr><td class="label">⭐ Rating Visual</td>${ratingBars}</tr>
+        <tr><td class="label">💰 Price Visual</td>${priceBars}</tr>
+        ${rows}
+      </tbody>
+    </table>
+    ${verdictHTML}
+  `;
+}
+
+// Close dropdowns on outside click
+document.addEventListener('click', e => {
+  if (!e.target.closest('.slot-search')) {
+    document.querySelectorAll('.slot-dropdown').forEach(d => d.classList.remove('open'));
+  }
+});
+
+// Theme
+function initTheme() {
+  const s = localStorage.getItem('menuverso_theme');
+  if (s === 'dark' || (!s && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
+    document.documentElement.classList.add('dark');
+    document.getElementById('theme-toggle').textContent = '☀️';
+  }
+}
+function toggleTheme() {
+  const d = document.documentElement.classList.toggle('dark');
+  localStorage.setItem('menuverso_theme', d ? 'dark' : 'light');
+  document.getElementById('theme-toggle').textContent = d ? '☀️' : '🌙';
+}
+
+// URL params
+function loadFromURL() {
+  const params = new URLSearchParams(location.search);
+  const ids = params.get('ids');
+  if (ids) {
+    ids.split(',').slice(0, 3).forEach((id, i) => {
+      const r = DATA.find(d => d.id == id);
+      if (r) slots[i] = r;
+    });
+  }
+}
+
+initTheme();
+loadFromURL();
+renderSlots();
+</script>
+</body>
+</html>

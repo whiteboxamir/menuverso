@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barri Gòtic Restaurants — Menuverso Barcelona</title>
+<meta name="description" content="Barri Gòtic: 90 restaurants, avg €13 menú del día, 29 confirmed. Best of Barri Gòtic in Barcelona by Menuverso.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></' + 'script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#F8FAFC;--card:#FFF;--text:#1E293B;--sub:#64748B;--mut:#94A3B8;--border:#E2E8F0;--accent:#2563EB;--accent-sub:#DBEAFE;--green:#059669;--green-bg:#D1FAE5;--amber:#D97706;--red:#DC2626;--radius:12px;--shadow:0 2px 8px rgba(0,0,0,0.06);}
+:root.dark{--bg:#0F172A;--card:#1E293B;--text:#F1F5F9;--sub:#94A3B8;--mut:#64748B;--border:#334155;--accent:#3B82F6;--accent-sub:#1E3A5F;--green:#34D399;--green-bg:#064E3B;--shadow:0 2px 8px rgba(0,0,0,0.3);}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background 0.3s,color 0.3s;}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1.5rem;border-bottom:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+.nav-brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.1rem;}
+.nav-brand img{width:28px;height:28px;border-radius:8px;}
+.nav-links{display:flex;align-items:center;gap:1rem;}
+.nav-links a{color:var(--sub);text-decoration:none;font-size:0.82rem;font-weight:500;padding:0.3rem 0.5rem;border-radius:8px;transition:all 0.2s;}
+.nav-links a:hover{color:var(--text);}
+.controls-bar{display:flex;gap:0.5rem;align-items:center;}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:0.3rem 0.55rem;cursor:pointer;font-size:0.85rem;color:var(--sub);transition:all 0.2s;}
+.container{max-width:800px;margin:0 auto;padding:1.5rem;}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--sub);text-decoration:none;font-size:0.85rem;font-weight:500;margin-bottom:1rem;transition:color 0.2s;}
+.back:hover{color:var(--text);}
+.hero{text-align:center;margin-bottom:2rem;}
+.hero h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:0.25rem;}
+.hero p{color:var(--sub);font-size:0.9rem;}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0.75rem;margin-bottom:2rem;}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;text-align:center;box-shadow:var(--shadow);}
+.stat-num{font-size:1.3rem;font-weight:700;}
+.stat-label{font-size:0.7rem;color:var(--mut);text-transform:uppercase;letter-spacing:0.04em;margin-top:2px;}
+.green{color:var(--green);} .amber{color:var(--amber);} .red{color:var(--red);}
+.section{margin-bottom:2rem;}
+.section-title{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:600;color:var(--mut);margin-bottom:0.75rem;}
+.top-card{display:flex;gap:0.75rem;align-items:center;padding:0.75rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:0.5rem;text-decoration:none;color:var(--text);transition:all 0.2s;box-shadow:var(--shadow);}
+.top-card:hover{transform:translateY(-1px);border-color:var(--accent);}
+.rank{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.8rem;background:var(--accent-sub);color:var(--accent);flex-shrink:0;}
+.rank.gold{background:#FEF3C7;color:#D97706;} .rank.silver{background:#F1F5F9;color:#64748B;} .rank.bronze{background:#FED7AA;color:#C2410C;}
+.tc-body{flex:1;min-width:0;}
+.tc-name{font-weight:600;font-size:0.9rem;}
+.tc-meta{font-size:0.75rem;color:var(--sub);}
+#hood-map{width:100%;height:300px;border-radius:var(--radius);border:1px solid var(--border);margin-bottom:1rem;z-index:1;}
+:root.dark .leaflet-tile{filter:invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);}
+.cb-item{display:flex;justify-content:space-between;padding:0.4rem 0.75rem;font-size:0.85rem;border-bottom:1px solid var(--border);}
+.cb-item:last-child{border-bottom:none;}
+.cb-name{font-weight:500;} .cb-count{color:var(--sub);font-size:0.8rem;}
+.cuisine-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+.actions{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2rem;}
+.btn{padding:0.5rem 1rem;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:0.82rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all 0.2s;font-family:Inter,sans-serif;display:inline-flex;align-items:center;gap:4px;}
+.btn:hover{border-color:var(--accent);color:var(--accent);}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+.hood-links{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.hood-link{padding:0.3rem 0.65rem;border:1px solid var(--border);border-radius:16px;font-size:0.72rem;font-weight:500;color:var(--sub);text-decoration:none;transition:all 0.2s;}
+.hood-link:hover{border-color:var(--accent);color:var(--accent);}
+.hood-link span{color:var(--mut);}
+footer{text-align:center;padding:2rem;color:var(--mut);font-size:0.78rem;border-top:1px solid var(--border);}
+footer a{color:var(--sub);text-decoration:none;}
+img[src*="logo.png"]{mix-blend-mode:multiply;}
+:root.dark img[src*="logo.png"]{mix-blend-mode:normal;filter:brightness(1.2);}
+@media(max-width:640px){.stats{grid-template-columns:repeat(3,1fr);}.nav-links a span{display:none;}.actions{flex-direction:column;}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand"><img src="../assets/logo.png" alt="Menuverso"><span>Menuverso</span></a>
+  <div class="nav-links">
+    <a href="../index.html"><span>📋 </span>Database</a>
+    <a href="../finder.html"><span>🔍 </span>Finder</a>
+    <a href="../analytics.html"><span>📊 </span>Analytics</a>
+    <a href="../lists.html"><span>🏆 </span>Best Of</a>
+    <a href="../crawl.html"><span>🚶 </span>Crawl</a>
+  </div>
+  <div class="controls-bar"><button class="theme-btn" id="theme-toggle" onclick="toggleTheme()">🌙</button></div>
+</nav>
+<div class="container">
+  <a href="../index.html" class="back">← All Neighborhoods</a>
+  <div class="hero">
+    <h1>📍 Barri Gòtic</h1>
+    <p>90 restaurants · 29 confirmed menú del día</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num">90</div><div class="stat-label">Restaurants</div></div>
+    <div class="stat"><div class="stat-num green">29</div><div class="stat-label">Confirmed</div></div>
+    <div class="stat"><div class="stat-num amber">39</div><div class="stat-label">Likely</div></div>
+    <div class="stat"><div class="stat-num">€13</div><div class="stat-label">Avg Price</div></div>
+    <div class="stat"><div class="stat-num">⭐ 4.2</div><div class="stat-label">Avg Rating</div></div>
+    <div class="stat"><div class="stat-num">89</div><div class="stat-label">On Map</div></div>
+  </div>
+
+  <div class="actions">
+    <a href="../index.html?hood=Barri+G%C3%B2tic" class="btn primary">📋 Browse All 90 in Database</a>
+    <a href="../lists/barri-gotic.html" class="btn">🏆 Top 10 List</a>
+    <a href="../crawl.html" class="btn">🚶 Plan Lunch Crawl</a>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🏆 Top 5 Rated</div>
+    <a href="../r/1188.html" class="top-card">
+          <div class="rank gold">1</div>
+          <div class="tc-body">
+            <div class="tc-name">Koy Shunka Gòtic</div>
+            <div class="tc-meta">🔴 Japanese ·  · ⭐ 4.6/5</div>
+          </div>
+        </a><a href="../r/182.html" class="top-card">
+          <div class="rank silver">2</div>
+          <div class="tc-body">
+            <div class="tc-name">Contraban</div>
+            <div class="tc-meta">🔴 Mediterranean ·  · ⭐ 4.6/5</div>
+          </div>
+        </a><a href="../r/1125.html" class="top-card">
+          <div class="rank bronze">3</div>
+          <div class="tc-body">
+            <div class="tc-name">Voro at Veraz</div>
+            <div class="tc-meta">🔴 Mediterranean ·  · ⭐ 4.6/5</div>
+          </div>
+        </a><a href="../r/180.html" class="top-card">
+          <div class="rank ">4</div>
+          <div class="tc-body">
+            <div class="tc-name">Cafè de l'Acadèmia</div>
+            <div class="tc-meta">🟢 Catalan · 14-16€ · ⭐ 4.5/5</div>
+          </div>
+        </a><a href="../r/184.html" class="top-card">
+          <div class="rank ">5</div>
+          <div class="tc-body">
+            <div class="tc-name">Arcano</div>
+            <div class="tc-meta">🟡 Mediterranean ·  · ⭐ 4.5/5</div>
+          </div>
+        </a>
+  </div>
+
+  <div class="section"><div class="section-title">🗺️ Neighborhood Map</div><div id="hood-map"></div></div>
+
+  <div class="section">
+    <div class="section-title">🍽️ Cuisine Breakdown</div>
+    <div class="cuisine-box"><div class="cb-item"><span class="cb-name">Mediterranean</span><span class="cb-count">24</span></div><div class="cb-item"><span class="cb-name">Spanish</span><span class="cb-count">22</span></div><div class="cb-item"><span class="cb-name">Catalan</span><span class="cb-count">20</span></div><div class="cb-item"><span class="cb-name">Café</span><span class="cb-count">8</span></div><div class="cb-item"><span class="cb-name">Vegetarian/Vegan</span><span class="cb-count">4</span></div><div class="cb-item"><span class="cb-name">Japanese</span><span class="cb-count">4</span></div><div class="cb-item"><span class="cb-name">Fusion</span><span class="cb-count">2</span></div><div class="cb-item"><span class="cb-name">Middle Eastern</span><span class="cb-count">1</span></div></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">💎 Price Tiers</div>
+    <div class="cuisine-box">
+      <div class="cb-item"><span class="cb-name">💚 Budget</span><span class="cb-count">11</span></div>
+      <div class="cb-item"><span class="cb-name">🧡 Mid-Range</span><span class="cb-count">72</span></div>
+      <div class="cb-item"><span class="cb-name">💎 Premium</span><span class="cb-count">7</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📍 Other Neighborhoods</div>
+    <div class="hood-links"><a href="barceloneta.html" class="hood-link">Barceloneta <span>(64)</span></a><a href="clot.html" class="hood-link">Clot <span>(41)</span></a><a href="eixample.html" class="hood-link">Eixample <span>(329)</span></a><a href="el-born.html" class="hood-link">El Born <span>(92)</span></a><a href="el-raval.html" class="hood-link">El Raval <span>(103)</span></a><a href="gracia.html" class="hood-link">Gràcia <span>(123)</span></a><a href="horta-guinardó.html" class="hood-link">Horta-Guinardó <span>(50)</span></a><a href="les-corts.html" class="hood-link">Les Corts <span>(60)</span></a><a href="nou-barris.html" class="hood-link">Nou Barris <span>(47)</span></a><a href="poble-sec.html" class="hood-link">Poble Sec <span>(84)</span></a><a href="poblenou.html" class="hood-link">Poblenou <span>(107)</span></a><a href="sagrada-familia.html" class="hood-link">Sagrada Família <span>(49)</span></a><a href="sant-andreu.html" class="hood-link">Sant Andreu <span>(46)</span></a><a href="sant-antoni.html" class="hood-link">Sant Antoni <span>(51)</span></a><a href="sant-marti.html" class="hood-link">Sant Martí <span>(47)</span></a><a href="sants.html" class="hood-link">Sants <span>(73)</span></a><a href="sarria-sant-gervasi.html" class="hood-link">Sarrià-Sant Gervasi <span>(64)</span></a></div>
+  </div>
+</div>
+<footer><a href="../index.html">Menuverso</a> · <a href="../lists.html">Best Of</a> · <a href="../analytics.html">Analytics</a></footer>
+<script>
+function initTheme(){var s=localStorage.getItem('menuverso_theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark');document.getElementById('theme-toggle').textContent='☀️';}};
+function toggleTheme(){var d=document.documentElement.classList.toggle('dark');localStorage.setItem('menuverso_theme',d?'dark':'light');document.getElementById('theme-toggle').textContent=d?'☀️':'🌙';};
+initTheme();
+</script>
+<script>
+var m=L.map('hood-map').setView([41.4080795,2.1881344],15);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
+var pts=[[41.4080795, 2.1881344, "Cometa Pla", "confirmed", 41], [41.383, 2.177, "BOSCO Restaurant", "confirmed", 42], [41.3807246, 2.1746052, "Granja Mabel", "confirmed", 43], [41.383, 2.177, "Grangels Mix", "confirmed", 44], [41.383, 2.177, "Caelis", "none", 176], [41.383, 2.177, "Els Quatre Gats", "likely", 177], [41.381215, 2.1744185, "Can Culleretes", "confirmed", 178], [41.3793598, 2.1762144, "La Fonda", "confirmed", 179], [41.383, 2.177, "Caf\u00e8 de l'Acad\u00e8mia", "confirmed", 180], [41.3816342, 2.1749146, "Colom Restaurant", "likely", 181], [41.3798937, 2.1766505, "Contraban", "none", 182], [41.3815693, 2.174519, "Bistro Levante", "likely", 183], [41.3820415, 2.1763221, "Arcano", "likely", 184], [41.3827518, 2.173018, "La Alcoba Barcino", "likely", 185], [41.3827518, 2.173018, "Honest Greens", "likely", 186], [41.3810114, 2.1750339, "Ca\u00f1ete", "none", 187], [41.38241, 2.1748529, "Mercer", "none", 188], [41.3791633, 2.1791112, "Mizuki", "none", 189], [41.38241, 2.1748529, "IRATI Taverna Basca", "likely", 190], [41.3835881, 2.1766716, "Antic Bocoi del Gotic", "likely", 191], [41.3835881, 2.1766548, "Gourmet Sensi", "likely", 192], [41.3812094, 2.1753772, "La Alcoba Azul", "likely", 193], [41.3815693, 2.174519, "Bar La Plata", "likely", 194], [41.38241, 2.1748529, "Bodega Biarritz 1881", "likely", 195], [41.3815693, 2.174519, "Bodega La Palma", "likely", 196], [41.3807071, 2.180802, "Pla B", "likely", 197], [41.3801171, 2.1753564, "Antic Tapas Ferran", "likely", 198], [41.382045, 2.1762578, "Tapeo", "likely", 199], [41.3824466, 2.1763705, "Milk Bar & Bistro", "none", 200], [41.3795887, 2.1798988, "Federal Cafe Gotic", "none", 201], [41.3791633, 2.1791112, "Gilda by Belgious", "none", 375], [41.3857903, 2.1738261, "Tapas del G\u00f2tic", "likely", 376], [41.383, 2.177, "Mercer Restaurant", "none", 377], [41.3825023, 2.1733787, "Granja Dulcinea", "none", 378], [41.3796584, 2.1765082, "Los Caracoles", "likely", 379], [41.380947, 2.1799439, "Agut", "confirmed", 380], [41.383, 2.177, "Federal Caf\u00e9 G\u00f2tic", "none", 485], [41.383, 2.177, "Rasoterra", "confirmed", 486], [41.383, 2.177, "Flax & Kale Passage", "likely", 487], [41.383, 2.177, "Satan's Coffee Corner", "none", 488], [41.383, 2.177, "Venus Delicatessen", "confirmed", 489], [41.3827003, 2.1756639, "La Vinateria del Call", "likely", 490], [41.3803407, 2.1799606, "Sensi Tapas", "likely", 491], [41.3801171, 2.1753564, "Oca\u00f1a", "likely", 492], [41.3820592, 2.1734611, "Irati", "likely", 612], [41.380947, 2.1799439, "Restaurante Agut", "confirmed", 614], [41.383, 2.177, "Caf\u00e9 de l'Acad\u00e8mia", "confirmed", 615], [41.3814218, 2.1734834, "Julivert Meu", "confirmed", 672], [41.383, 2.177, "La Taverneta Barcelona", "confirmed", 673], [41.383, 2.177, "Rambla Caf\u00e9", "likely", 674], [41.383, 2.177, "Cala del Vermut", "likely", 785], [41.3804049, 2.1805946, "La Plata", "likely", 806], [41.3838927, 2.174859, "L'Alcoba Azul", "likely", 807], [41.3857384, 2.1736392, "Els 4Gats", "likely", 808], [41.3824922, 2.1739624, "Bar del Pi", "likely", 809], [41.383, 2.177, "Le Bistro Sensi", "none", 810], [41.3836344, 2.1808494, "Brugarol", "none", 811], [41.3827003, 2.1756639, "Vinateria del Call", "likely", 812], [41.3808313, 2.1773411, "Petit Tapas", "likely", 813], [41.383, 2.177, "Bar Celta Pulper\u00eda", "likely", 814], [41.3869162, 2.1712047, "Hard Rock Cafe", "none", 884], [41.3833947, 2.1769119, "El Pintor", "likely", 948], [41.3813839, 2.1775054, "Restaurant Cervantes", "confirmed", 955], [41.3833947, 2.1769119, "Sensi Sushi", "none", 959], [41.3833947, 2.1769119, "El Bosc de les Fades", "likely", 963], [41.383, 2.177, "Lora SLS Barcelona", "none", 1124], [41.383, 2.177, "Voro at Veraz", "none", 1125], [41.383, 2.177, "El Tastet de la Rambla", "confirmed", 1135], [41.383, 2.177, "Can Culleretes G\u00f2tic", "confirmed", 1136], [41.383, 2.177, "Agut Barri G\u00f2tic", "confirmed", 1161], [41.383, 2.177, "Milk Bar G\u00f2tic", "none", 1162], [41.383, 2.177, "Koy Shunka G\u00f2tic", "none", 1188], [41.383, 2.177, "Sensi Bistro", "confirmed", 1190], [41.383, 2.177, "Ferrum Restaurant", "confirmed", 1191], [41.3813306, 2.1801063, "Milk Bar Gothic", "likely", 1306], [41.383, 2.177, "Restaurant Oca\u00f1a", "likely", 1307], [41.383, 2.177, "El Gran Caf\u00e9", "confirmed", 1308], [41.383, 2.177, "Taller de Tapas G\u00f2tic", "likely", 1309], [41.383, 2.177, "Ginger Bar", "likely", 1339], [41.383, 2.177, "Vinissim", "confirmed", 1415], [41.383, 2.177, "Restaurant La Casserola", "confirmed", 1416], [41.383, 2.177, "Taller 28", "confirmed", 1417], [41.38227, 2.1785761, "Pla Restaurant", "confirmed", 1418], [41.383, 2.177, "Cervantes Restaurant", "confirmed", 1419], [41.383, 2.177, "Casa Delf\u00edn G\u00f2tic", "confirmed", 1420], [41.383, 2.177, "El Mes\u00f3n del Caf\u00e9", "none", 1421], [41.3798512, 2.1801573, "Bar Celta", "likely", 1422], [41.383, 2.177, "Restaurant La Plassohla", "confirmed", 1485], [41.3858504, 2.1694606, "Caf\u00e9 Zurich", "none", 1486]];
+pts.forEach(function(p){
+  var c=p[3]==='confirmed'?'#059669':p[3]==='likely'?'#D97706':'#DC2626';
+  L.circleMarker([p[0],p[1]],{radius:6,fillColor:c,color:'#fff',weight:2,fillOpacity:0.9}).addTo(m).bindPopup('<b>'+p[2]+'</b><br><a href="../r/'+p[4]+'.html">View details</a>');
+});
+if(pts.length>1){m.fitBounds(pts.map(function(p){return[p[0],p[1]]}));}
+</script>
+</body>
+</html>

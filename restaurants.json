@@ -5620,7 +5620,7 @@
       "menú-del-día",
       "rice-dishes"
     ],
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
+    "metro_station": "El Carmel (L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -5699,7 +5699,7 @@
       "homemade",
       "menú-del-día"
     ],
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
+    "metro_station": "Penitents (L3)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -7416,7 +7416,7 @@
       ]
     },
     "tags": [],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Tetuan (L2)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -7568,7 +7568,7 @@
       ]
     },
     "tags": [],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Verdaguer (L4/L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -7644,7 +7644,7 @@
       ]
     },
     "tags": [],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Sant Andreu (L1)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -7799,7 +7799,7 @@
       "rice-dishes",
       "tapas"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Rocafort (L1)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -7951,7 +7951,7 @@
       ]
     },
     "tags": [],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Verdaguer (L4/L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -8029,7 +8029,7 @@
     "tags": [
       "tapas"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Hospital Clínic (L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -8108,7 +8108,7 @@
       "creative",
       "tapas"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Hospital Clínic (L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -8188,7 +8188,7 @@
       "market-fresh",
       "menú-del-día"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Tetuan (L2)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -8266,7 +8266,7 @@
     "tags": [
       "tapas"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Verdaguer (L4/L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -8344,7 +8344,7 @@
     "tags": [
       "tapas"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Verdaguer (L4/L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -8420,7 +8420,7 @@
       ]
     },
     "tags": [],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Hospital Clínic (L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -8496,7 +8496,7 @@
       ]
     },
     "tags": [],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Diagonal (L3/L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -8575,7 +8575,7 @@
       "market-fresh",
       "menú-del-día"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Sant Antoni (L2)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -8654,7 +8654,7 @@
       "budget-friendly",
       "ramen"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Urgell (L1)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -8730,7 +8730,7 @@
       ]
     },
     "tags": [],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Urgell (L1)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -8964,7 +8964,7 @@
       ]
     },
     "tags": [],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Hospital Clínic (L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -9043,7 +9043,7 @@
       "tapas",
       "vegetarian"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Hospital Clínic (L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -9123,7 +9123,7 @@
       "great-value",
       "tacos"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Verdaguer (L4/L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -9199,7 +9199,7 @@
       ]
     },
     "tags": [],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Sant Antoni (L2)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -9278,7 +9278,7 @@
       "menú-del-día",
       "vegetarian"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Urgell (L1)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -9356,7 +9356,7 @@
     "tags": [
       "vegetarian"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Rocafort (L1)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -9518,7 +9518,7 @@
       "menú-del-día",
       "vegetarian"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Urgell (L1)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -9600,7 +9600,7 @@
       "vegan",
       "vegetarian"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Diagonal (L3/L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -9680,7 +9680,7 @@
       "homemade",
       "menú-del-día"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Diagonal (L3/L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -9759,7 +9759,7 @@
       "budget-friendly",
       "chain"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Santa Coloma (L1)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -9840,7 +9840,7 @@
       "organic",
       "vegetarian"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Diagonal (L3/L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -9921,7 +9921,7 @@
       "vegan",
       "vegetarian"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Rocafort (L1)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -10000,7 +10000,7 @@
       "brunch",
       "terrace"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Diagonal (L3/L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -10080,7 +10080,7 @@
       "instagrammable",
       "views"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Verdaguer (L4/L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -10236,7 +10236,7 @@
     "tags": [
       "brunch"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Urgell (L1)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -10314,7 +10314,7 @@
     "tags": [
       "budget-friendly"
     ],
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Diagonal (L3/L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -19223,7 +19223,7 @@
       "brunch",
       "healthy"
     ],
-    "metro_station": "Sant Antoni (L2)",
+    "metro_station": "Urgell (L1)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -19301,7 +19301,7 @@
     "tags": [
       "tapas"
     ],
-    "metro_station": "Sant Antoni (L2)",
+    "metro_station": "Poble Sec (L3)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -20092,7 +20092,7 @@
       "rice-dishes",
       "seafood"
     ],
-    "metro_station": "Barceloneta (L4)",
+    "metro_station": "Santa Coloma (L1)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -20328,7 +20328,7 @@
       "budget-friendly",
       "seafood"
     ],
-    "metro_station": "Barceloneta (L4)",
+    "metro_station": "Drassanes (L3)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -22531,7 +22531,7 @@
     "tags": [
       "seafood"
     ],
-    "metro_station": "Clot (L1/L2)",
+    "metro_station": "Arc de Triomf (L1)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -22609,7 +22609,7 @@
     "tags": [
       "seafood"
     ],
-    "metro_station": "Clot (L1/L2)",
+    "metro_station": "Selva de Mar (L4)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -22767,7 +22767,7 @@
       "michelin",
       "tasting-menu"
     ],
-    "metro_station": "Vallcarca (L3)",
+    "metro_station": "Penitents (L3)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -22846,7 +22846,7 @@
       "creative",
       "michelin"
     ],
-    "metro_station": "Vallcarca (L3)",
+    "metro_station": "Maria Cristina (L3)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -22922,7 +22922,7 @@
       ]
     },
     "tags": [],
-    "metro_station": "Vallcarca (L3)",
+    "metro_station": "Urgell (L1)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -23001,7 +23001,7 @@
       "historic",
       "seafood"
     ],
-    "metro_station": "Vallcarca (L3)",
+    "metro_station": "Penitents (L3)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -23080,7 +23080,7 @@
       "creative",
       "tapas"
     ],
-    "metro_station": "Vallcarca (L3)",
+    "metro_station": "Penitents (L3)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -23158,7 +23158,7 @@
     "tags": [
       "budget-friendly"
     ],
-    "metro_station": "Vallcarca (L3)",
+    "metro_station": "Penitents (L3)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -23236,7 +23236,7 @@
     "tags": [
       "terrace"
     ],
-    "metro_station": "Vallcarca (L3)",
+    "metro_station": "Penitents (L3)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -23314,7 +23314,7 @@
     "tags": [
       "terrace"
     ],
-    "metro_station": "Vallcarca (L3)",
+    "metro_station": "Penitents (L3)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -23390,7 +23390,7 @@
       ]
     },
     "tags": [],
-    "metro_station": "Les Corts (L3)",
+    "metro_station": "Collblanc (L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -23466,7 +23466,7 @@
       ]
     },
     "tags": [],
-    "metro_station": "Les Corts (L3)",
+    "metro_station": "Collblanc (L5)",
     "last_verified": "2026-03-22",
     "reservation_required": false,
     "delivery_available": false,
@@ -26287,7 +26287,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "michelin"
     ],
@@ -26368,7 +26368,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [
       "creative",
       "michelin"
@@ -26450,7 +26450,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Diagonal (L3/L5)",
     "tags": [
       "michelin"
     ],
@@ -26531,7 +26531,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Diagonal (L3/L5)",
     "tags": [
       "michelin"
     ],
@@ -26612,7 +26612,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Girona (L4)",
     "tags": [
       "tasting-menu"
     ],
@@ -26693,7 +26693,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Hospital Clínic (L5)",
     "tags": [],
     "images": {
       "hero": "restaurants/343_cerveceria_catalana_2/hero.jpg",
@@ -26772,7 +26772,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Verdaguer (L4/L5)",
     "tags": [],
     "images": {
       "hero": "restaurants/344_bar_mut/hero.jpg",
@@ -26851,7 +26851,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [],
     "images": {
       "hero": "restaurants/345_la_bodegueta/hero.jpg",
@@ -26930,7 +26930,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Verdaguer (L4/L5)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -27012,7 +27012,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Urgell (L1)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -27094,7 +27094,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Urgell (L1)",
     "tags": [
       "budget-friendly",
       "menú-del-día"
@@ -27176,7 +27176,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Catalunya (L1/L3)",
     "tags": [
       "menú-del-día",
       "vegetarian",
@@ -27259,7 +27259,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Sant Antoni (L2)",
+    "metro_station": "Catalunya (L1/L3)",
     "tags": [
       "budget-friendly",
       "historic",
@@ -27584,7 +27584,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Sant Antoni (L2)",
+    "metro_station": "Liceu (L3)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -27829,7 +27829,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Sant Antoni (L2)",
+    "metro_station": "Liceu (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/357_bar_lobo/hero.jpg",
@@ -28561,7 +28561,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Poble Sec (L3)",
+    "metro_station": "Paral·lel (L2/L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/366_la_bella_napoli/hero.jpg",
@@ -28640,7 +28640,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Poble Sec (L3)",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [
       "brunch"
     ],
@@ -28721,7 +28721,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Poble Sec (L3)",
+    "metro_station": "Paral·lel (L2/L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/368_palo_cortao/hero.jpg",
@@ -29045,7 +29045,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Barceloneta (L4)",
+    "metro_station": "Bogatell (L4)",
     "tags": [
       "seafood"
     ],
@@ -29289,7 +29289,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Jaume I (L4)",
+    "metro_station": "Liceu (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/375_gilda_by_belgious/hero.jpg",
@@ -29526,7 +29526,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Jaume I (L4)",
+    "metro_station": "Liceu (L3)",
     "tags": [
       "budget-friendly",
       "historic"
@@ -29608,7 +29608,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Jaume I (L4)",
+    "metro_station": "Liceu (L3)",
     "tags": [
       "historic"
     ],
@@ -31961,7 +31961,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Vallcarca (L3)",
+    "metro_station": "Maria Cristina (L3)",
     "tags": [
       "creative"
     ],
@@ -32042,7 +32042,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Vallcarca (L3)",
+    "metro_station": "Penitents (L3)",
     "tags": [
       "creative"
     ],
@@ -32123,7 +32123,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Vallcarca (L3)",
+    "metro_station": "Maria Cristina (L3)",
     "tags": [
       "historic",
       "michelin"
@@ -32205,7 +32205,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
+    "metro_station": "El Carmel (L5)",
     "tags": [
       "menú-del-día"
     ],
@@ -32368,7 +32368,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Entença (L5)",
     "tags": [],
     "images": {
       "hero": "restaurants/413_fukamura/hero.jpg",
@@ -32447,7 +32447,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Hospital Clínic (L5)",
     "tags": [],
     "images": {
       "hero": "restaurants/414_casa_fiero/hero.jpg",
@@ -32607,7 +32607,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Hospital Clínic (L5)",
     "tags": [
       "tasting-menu"
     ],
@@ -32688,7 +32688,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Urgell (L1)",
     "tags": [],
     "images": {
       "hero": "restaurants/417_bar_universal/hero.jpg",
@@ -32767,7 +32767,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Hospital Clínic (L5)",
     "tags": [
       "brunch"
     ],
@@ -42975,7 +42975,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
+    "metro_station": "El Congrés (L5)",
     "tags": [
       "budget-friendly"
     ],
@@ -43056,7 +43056,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
+    "metro_station": "Horta (L5)",
     "tags": [
       "budget-friendly"
     ],
@@ -43137,7 +43137,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
+    "metro_station": "El Coll/La Teixonera (L5)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -43219,7 +43219,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
+    "metro_station": "Horta (L5)",
     "tags": [
       "budget-friendly"
     ],
@@ -43300,7 +43300,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
+    "metro_station": "Horta (L5)",
     "tags": [],
     "images": {
       "hero": "restaurants/548_thai_green/hero.jpg",
@@ -43379,7 +43379,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Via Júlia (L4)",
+    "metro_station": "Fabra i Puig (L1)",
     "tags": [],
     "images": {
       "hero": "restaurants/549_la_cholita/hero.jpg",
@@ -43541,7 +43541,7 @@
     "delivery_available": false,
     "outdoor_seating": true,
     "dog_friendly": false,
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
+    "metro_station": "Penitents (L3)",
     "tags": [
       "budget-friendly",
       "tapas",
@@ -43707,7 +43707,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Via Júlia (L4)",
+    "metro_station": "Artigues/Sant Adrià (L2)",
     "tags": [
       "budget-friendly"
     ],
@@ -43871,7 +43871,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Via Júlia (L4)",
+    "metro_station": "Trinitat Nova (L3/L4/L11)",
     "tags": [],
     "images": {
       "hero": "restaurants/555_el_barrilet/hero.jpg",
@@ -44031,7 +44031,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Via Júlia (L4)",
+    "metro_station": "Fabra i Puig (L1)",
     "tags": [
       "pizza"
     ],
@@ -44276,7 +44276,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Sant Andreu (L1)",
+    "metro_station": "Torras i Bages (L1)",
     "tags": [
       "creative",
       "menú-del-día",
@@ -44441,7 +44441,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Sant Andreu (L1)",
+    "metro_station": "Fabra i Puig (L1)",
     "tags": [
       "homemade",
       "menú-del-día",
@@ -46141,7 +46141,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Les Corts (L3)",
+    "metro_station": "Collblanc (L5)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -46223,7 +46223,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Les Corts (L3)",
+    "metro_station": "Plaça del Centre (L3)",
     "tags": [
       "budget-friendly",
       "great-value",
@@ -46308,7 +46308,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Les Corts (L3)",
+    "metro_station": "Plaça del Centre (L3)",
     "tags": [
       "family-run",
       "menú-del-día",
@@ -46392,7 +46392,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Les Corts (L3)",
+    "metro_station": "Badal (L5)",
     "tags": [
       "creative",
       "tapas"
@@ -46474,7 +46474,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Les Corts (L3)",
+    "metro_station": "Collblanc (L5)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -46638,7 +46638,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Poble Sec (L3)",
+    "metro_station": "Drassanes (L3)",
     "tags": [
       "rice-dishes",
       "seafood",
@@ -46721,7 +46721,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Poble Sec (L3)",
+    "metro_station": "Paral·lel (L2/L3)",
     "tags": [
       "menú-del-día",
       "tasting-menu"
@@ -49316,7 +49316,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Poblenou (L4)",
+    "metro_station": "Marina (L1)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -49479,7 +49479,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Santa Eulàlia (L1)",
+    "metro_station": "Collblanc (L5)",
     "tags": [
       "budget-friendly",
       "menú-del-día",
@@ -49562,7 +49562,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Santa Eulàlia (L1)",
+    "metro_station": "Mercat Nou (L1)",
     "tags": [
       "budget-friendly",
       "menú-del-día"
@@ -49644,7 +49644,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Santa Eulàlia (L1)",
+    "metro_station": "Mercat Nou (L1)",
     "tags": [
       "seafood"
     ],
@@ -49725,7 +49725,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Santa Eulàlia (L1)",
+    "metro_station": "Tarragona (L3)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -49807,7 +49807,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Santa Eulàlia (L1)",
+    "metro_station": "Collblanc (L5)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -49889,7 +49889,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "tapas"
     ],
@@ -50053,7 +50053,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Sagrada Família (L2/L5)",
+    "metro_station": "Monumental (L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/631_maitea_nikkei/hero.jpg",
@@ -50216,7 +50216,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Sant Andreu (L1)",
+    "metro_station": "Fabra i Puig (L1)",
     "tags": [
       "creative"
     ],
@@ -50378,7 +50378,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Via Júlia (L4)",
+    "metro_station": "Fabra i Puig (L1)",
     "tags": [
       "budget-friendly"
     ],
@@ -50459,7 +50459,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Via Júlia (L4)",
+    "metro_station": "Maria Cristina (L3)",
     "tags": [
       "creative"
     ],
@@ -50540,7 +50540,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Via Júlia (L4)",
+    "metro_station": "Fabra i Puig (L1)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -50622,7 +50622,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Via Júlia (L4)",
+    "metro_station": "Maragall (L4/L5)",
     "tags": [
       "budget-friendly",
       "ramen"
@@ -50783,7 +50783,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
+    "metro_station": "Horta (L5)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -51026,7 +51026,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
+    "metro_station": "Horta (L5)",
     "tags": [
       "historic",
       "menú-del-día"
@@ -51108,7 +51108,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
+    "metro_station": "Horta (L5)",
     "tags": [],
     "images": {
       "hero": "restaurants/644_la_trobada_horta/hero.jpg",
@@ -51187,7 +51187,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Sant Antoni (L2)",
+    "metro_station": "Catalunya (L1/L3)",
     "tags": [
       "vegetarian"
     ],
@@ -51268,7 +51268,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "healthy",
       "vegetarian"
@@ -51431,7 +51431,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Arc de Triomf (L1)",
     "tags": [],
     "images": {
       "hero": "restaurants/648_nomad_coffee_lab_shop/hero.jpg",
@@ -51510,7 +51510,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Urquinaona (L1/L4)",
     "tags": [
       "brunch"
     ],
@@ -51674,7 +51674,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Vallcarca (L3)",
+    "metro_station": "Maria Cristina (L3)",
     "tags": [
       "budget-friendly"
     ],
@@ -51755,7 +51755,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Poble Sec (L3)",
+    "metro_station": "Paral·lel (L2/L3)",
     "tags": [
       "budget-friendly",
       "tapas"
@@ -51837,7 +51837,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Poble Sec (L3)",
+    "metro_station": "Paral·lel (L2/L3)",
     "tags": [
       "budget-friendly",
       "tapas"
@@ -51919,7 +51919,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Poble Sec (L3)",
+    "metro_station": "Paral·lel (L2/L3)",
     "tags": [
       "budget-friendly",
       "tapas"
@@ -52001,7 +52001,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Poble Sec (L3)",
+    "metro_station": "Paral·lel (L2/L3)",
     "tags": [
       "budget-friendly"
     ],
@@ -52082,7 +52082,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Poble Sec (L3)",
+    "metro_station": "Paral·lel (L2/L3)",
     "tags": [
       "budget-friendly",
       "great-value"
@@ -54604,7 +54604,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Sant Antoni (L2)",
+    "metro_station": "Catalunya (L1/L3)",
     "tags": [
       "budget-friendly",
       "great-value",
@@ -57224,7 +57224,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Santa Eulàlia (L1)",
+    "metro_station": "Hostafrancs (L1)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -57306,7 +57306,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Santa Eulàlia (L1)",
+    "metro_station": "Mercat Nou (L1)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -57388,7 +57388,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Santa Eulàlia (L1)",
+    "metro_station": "Hostafrancs (L1)",
     "tags": [
       "budget-friendly"
     ],
@@ -57469,7 +57469,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Santa Eulàlia (L1)",
+    "metro_station": "Mercat Nou (L1)",
     "tags": [],
     "images": {
       "hero": "restaurants/722_mula_bar/hero.jpg",
@@ -57629,7 +57629,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Santa Eulàlia (L1)",
+    "metro_station": "Badal (L5)",
     "tags": [
       "budget-friendly"
     ],
@@ -59562,7 +59562,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Hospital Clínic (L5)",
     "tags": [
       "organic"
     ],
@@ -59643,7 +59643,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Verdaguer (L4/L5)",
     "tags": [],
     "images": {
       "hero": "restaurants/749_jok_barcelona/hero.jpg",
@@ -59722,7 +59722,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Verdaguer (L4/L5)",
     "tags": [
       "cozy",
       "sushi"
@@ -59804,7 +59804,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Hospital Clínic (L5)",
     "tags": [
       "seafood"
     ],
@@ -60122,7 +60122,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Sagrada Família (L2/L5)",
+    "metro_station": "Monumental (L2)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -60283,7 +60283,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Urgell (L1)",
     "tags": [
       "budget-friendly"
     ],
@@ -60364,7 +60364,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Verdaguer (L4/L5)",
     "tags": [],
     "images": {
       "hero": "restaurants/758_ultrapaninos_marin/hero.jpg",
@@ -60443,7 +60443,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Verdaguer (L4/L5)",
     "tags": [],
     "images": {
       "hero": "restaurants/759_fukamurabcn/hero.jpg",
@@ -60522,7 +60522,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Fontana (L3)",
+    "metro_station": "Lesseps (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/760_litaliano_perso/hero.jpg",
@@ -60765,7 +60765,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [],
     "images": {
       "hero": "restaurants/763_el_nacional_barcelona/hero.jpg",
@@ -60844,7 +60844,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Vallcarca (L3)",
+    "metro_station": "Maria Cristina (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/764_tres_torres_restaurant/hero.jpg",
@@ -61006,7 +61006,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Clot (L1/L2)",
+    "metro_station": "Navas (L1)",
     "tags": [],
     "images": {
       "hero": "restaurants/766_masa_vins/hero.jpg",
@@ -61569,7 +61569,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Sant Andreu (L1)",
+    "metro_station": "Torras i Bages (L1)",
     "tags": [
       "budget-friendly",
       "homemade"
@@ -61651,7 +61651,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Via Júlia (L4)",
+    "metro_station": "Maragall (L4/L5)",
     "tags": [
       "tapas"
     ],
@@ -61732,7 +61732,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Via Júlia (L4)",
+    "metro_station": "Maragall (L4/L5)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -69425,7 +69425,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Catalunya (L1/L3)",
     "tags": [
       "budget-friendly"
     ],
@@ -69506,7 +69506,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Diagonal (L3/L5)",
     "tags": [],
     "images": {
       "hero": "restaurants/871_lateral/hero.jpg",
@@ -69585,7 +69585,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Verdaguer (L4/L5)",
     "tags": [
       "creative",
       "tasting-menu"
@@ -69667,7 +69667,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [],
     "images": {
       "hero": "restaurants/873_distinto/hero.jpg",
@@ -69746,7 +69746,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Urgell (L1)",
     "tags": [
       "budget-friendly",
       "pizza"
@@ -69910,7 +69910,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Urquinaona (L1/L4)",
     "tags": [],
     "images": {
       "hero": "restaurants/876_alsur_cafe_eixample/hero.jpg",
@@ -69989,7 +69989,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Urquinaona (L1/L4)",
     "tags": [
       "budget-friendly"
     ],
@@ -70070,7 +70070,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Girona (L4)",
     "tags": [
       "burgers"
     ],
@@ -70151,7 +70151,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Urgell (L1)",
     "tags": [],
     "images": {
       "hero": "restaurants/879_pegasus_gastropub/hero.jpg",
@@ -70230,7 +70230,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Urgell (L1)",
     "tags": [
       "budget-friendly",
       "menú-del-día",
@@ -70313,7 +70313,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Urgell (L1)",
     "tags": [
       "budget-friendly"
     ],
@@ -70473,7 +70473,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "budget-friendly"
     ],
@@ -70554,7 +70554,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Jaume I (L4)",
+    "metro_station": "Catalunya (L1/L3)",
     "tags": [
       "burgers"
     ],
@@ -70635,7 +70635,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "budget-friendly",
       "burgers"
@@ -70717,7 +70717,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "historic"
     ],
@@ -70798,7 +70798,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/887_escriba_gran_via/hero.jpg",
@@ -70877,7 +70877,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "tapas"
     ],
@@ -70958,7 +70958,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Verdaguer (L4/L5)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -72671,7 +72671,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Clot (L1/L2)",
+    "metro_station": "Selva de Mar (L4)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -72753,7 +72753,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Clot (L1/L2)",
+    "metro_station": "Llacuna (L4)",
     "tags": [
       "menú-del-día",
       "weekday-lunch"
@@ -72835,7 +72835,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Clot (L1/L2)",
+    "metro_station": "Bogatell (L4)",
     "tags": [
       "rice-dishes"
     ],
@@ -75027,7 +75027,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Diagonal (L3/L5)",
     "tags": [],
     "images": {
       "hero": "restaurants/939_dry_martini/hero.jpg",
@@ -76339,7 +76339,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Jaume I (L4)",
+    "metro_station": "Arc de Triomf (L1)",
     "tags": [],
     "images": {
       "hero": "restaurants/957_el_pasaje/hero.jpg",
@@ -76554,7 +76554,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Universitat (L1/L2)",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "tapas"
     ],
@@ -79439,7 +79439,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Poble Sec (L3)",
+    "metro_station": "Paral·lel (L2/L3)",
     "tags": [
       "budget-friendly",
       "tapas"
@@ -79512,7 +79512,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "Poble Sec (L3)",
+    "metro_station": "Paral·lel (L2/L3)",
     "tags": [
       "budget-friendly",
       "historic",
@@ -79733,7 +79733,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Paral·lel (L2/L3)",
     "tags": [
       "budget-friendly",
       "seafood"
@@ -79806,7 +79806,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Paral·lel (L2/L3)",
     "tags": [
       "cozy"
     ],
@@ -79878,7 +79878,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poble Sec (L3)",
     "tags": [
       "budget-friendly",
       "cozy"
@@ -79951,7 +79951,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Paral·lel (L2/L3)",
     "tags": [
       "budget-friendly",
       "tapas"
@@ -80024,7 +80024,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/1008_cafe_cometa/hero.jpg",
@@ -80094,7 +80094,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poble Sec (L3)",
     "tags": [
       "brunch",
       "homemade"
@@ -80167,7 +80167,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [
       "budget-friendly",
       "vegan",
@@ -80241,7 +80241,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [
       "budget-friendly",
       "creative"
@@ -80314,7 +80314,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [
       "budget-friendly",
       "creative",
@@ -80388,7 +80388,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Bogatell (L4)",
     "tags": [],
     "images": {
       "hero": "restaurants/1013_metl_barcelona/hero.jpg",
@@ -80458,7 +80458,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [
       "brunch"
     ],
@@ -80530,7 +80530,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Llacuna (L4)",
     "tags": [],
     "images": {
       "hero": "restaurants/1015_gegant/hero.jpg",
@@ -80600,7 +80600,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [
       "brunch"
     ],
@@ -80672,7 +80672,7 @@
     "delivery_available": false,
     "outdoor_seating": true,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Llacuna (L4)",
     "tags": [
       "cozy",
       "terrace",
@@ -80747,7 +80747,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [
       "brunch",
       "gluten-free",
@@ -80821,7 +80821,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [],
     "images": {
       "hero": "restaurants/1019_nomad_frutas_selectas/hero.jpg",
@@ -80891,7 +80891,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [],
     "images": {
       "hero": "restaurants/1020_casa_taos/hero.jpg",
@@ -80961,7 +80961,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [
       "budget-friendly"
     ],
@@ -81033,7 +81033,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Llacuna (L4)",
     "tags": [
       "budget-friendly",
       "menú-del-día",
@@ -81107,7 +81107,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Maria Cristina (L3)",
     "tags": [
       "homemade",
       "menú-del-día"
@@ -81180,7 +81180,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
       "budget-friendly",
       "menú-del-día",
@@ -81254,7 +81254,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Liceu (L3)",
     "tags": [
       "budget-friendly",
       "menú-del-día",
@@ -81328,7 +81328,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "budget-friendly",
       "great-value",
@@ -81402,7 +81402,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "budget-friendly"
     ],
@@ -81474,7 +81474,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "budget-friendly"
     ],
@@ -81546,7 +81546,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "budget-friendly",
       "great-value"
@@ -81619,7 +81619,7 @@
     "delivery_available": false,
     "outdoor_seating": true,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poble Sec (L3)",
     "tags": [
       "terrace"
     ],
@@ -81691,7 +81691,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poble Sec (L3)",
     "tags": [
       "great-value",
       "menú-del-día"
@@ -81764,7 +81764,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poble Sec (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/1032_petit_hipica/hero.jpg",
@@ -81834,7 +81834,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [
       "budget-friendly"
     ],
@@ -81906,7 +81906,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Santa Eulàlia (L1)",
     "tags": [
       "menú-del-día"
     ],
@@ -81978,7 +81978,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Fontana (L3)",
     "tags": [
       "homemade",
       "rice-dishes",
@@ -82053,7 +82053,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [
       "tacos"
     ],
@@ -82125,7 +82125,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [
       "brunch"
     ],
@@ -82197,7 +82197,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [
       "budget-friendly",
       "vegan",
@@ -82271,7 +82271,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [],
     "images": {
       "hero": "restaurants/1039_mammamia_poblenou/hero.jpg",
@@ -82341,7 +82341,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [
       "creative"
     ],
@@ -82413,7 +82413,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [
       "market-fresh"
     ],
@@ -82485,7 +82485,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/1042_gloria_osteria/hero.jpg",
@@ -82555,7 +82555,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Vallcarca (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/1043_macambo/hero.jpg",
@@ -82625,7 +82625,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Vallcarca (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/1044_emii_experience/hero.jpg",
@@ -82695,7 +82695,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Vallcarca (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/1045_boka_house/hero.jpg",
@@ -82765,7 +82765,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Penitents (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/1046_jazminos/hero.jpg",
@@ -82835,7 +82835,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Penitents (L3)",
     "tags": [
       "menú-del-día"
     ],
@@ -82907,7 +82907,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Penitents (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/1048_feroz_barcelona/hero.jpg",
@@ -82977,7 +82977,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [],
     "images": {
       "hero": "restaurants/1049_volta_borneta/hero.jpg",
@@ -83047,7 +83047,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [],
     "images": {
       "hero": "restaurants/1050_uchu_barcelona/hero.jpg",
@@ -83117,7 +83117,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Plaça del Centre (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/1051_erre_urrechu/hero.jpg",
@@ -83187,7 +83187,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "tapas"
     ],
@@ -83259,7 +83259,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "cozy"
     ],
@@ -83331,7 +83331,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "budget-friendly"
     ],
@@ -83403,7 +83403,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
       "budget-friendly",
       "ramen"
@@ -83476,7 +83476,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [],
     "images": {
       "hero": "restaurants/1056_arko_restaurant/hero.jpg",
@@ -83546,7 +83546,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poble Sec (L3)",
     "tags": [
       "budget-friendly",
       "pizza"
@@ -83619,7 +83619,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/1058_guri_barcelona/hero.jpg",
@@ -83689,7 +83689,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [
       "creative"
     ],
@@ -83761,7 +83761,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Hospital Clínic (L5)",
     "tags": [],
     "images": {
       "hero": "restaurants/1060_pepa_bar_a_vins/hero.jpg",
@@ -83831,7 +83831,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Diagonal (L3/L5)",
     "tags": [
       "budget-friendly"
     ],
@@ -83903,7 +83903,7 @@
     "delivery_available": false,
     "outdoor_seating": true,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Verdaguer (L4/L5)",
     "tags": [
       "cozy",
       "terrace"
@@ -83976,7 +83976,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/1063_amovino/hero.jpg",
@@ -84046,7 +84046,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/1064_sin_mala_uva/hero.jpg",
@@ -84116,7 +84116,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Fontana (L3)",
     "tags": [
       "tapas"
     ],
@@ -84188,7 +84188,7 @@
     "delivery_available": false,
     "outdoor_seating": true,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [
       "budget-friendly",
       "tapas",
@@ -84262,7 +84262,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/1067_mordisco/hero.jpg",
@@ -84332,7 +84332,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "budget-friendly",
       "tapas"
@@ -84405,7 +84405,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Barceloneta (L4)",
     "tags": [
       "brunch"
     ],
@@ -84477,7 +84477,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [
       "budget-friendly",
       "tapas"
@@ -84550,7 +84550,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [
       "budget-friendly",
       "tapas"
@@ -84623,7 +84623,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Barceloneta (L4)",
     "tags": [
       "seafood",
       "views"
@@ -84696,7 +84696,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Santa Eulàlia (L1)",
     "tags": [
       "menú-del-día",
       "ramen"
@@ -84769,7 +84769,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Santa Eulàlia (L1)",
     "tags": [
       "budget-friendly",
       "cozy"
@@ -84842,7 +84842,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Santa Eulàlia (L1)",
     "tags": [
       "budget-friendly",
       "menú-del-día"
@@ -84915,7 +84915,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Santa Eulàlia (L1)",
     "tags": [
       "budget-friendly",
       "tapas"
@@ -84988,7 +84988,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Santa Eulàlia (L1)",
     "tags": [
       "budget-friendly",
       "tapas"
@@ -85061,7 +85061,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Santa Eulàlia (L1)",
     "tags": [
       "budget-friendly"
     ],
@@ -85133,7 +85133,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Les Corts (L3)",
     "tags": [
       "budget-friendly",
       "menú-del-día"
@@ -85206,7 +85206,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Les Corts (L3)",
     "tags": [
       "tasting-menu"
     ],
@@ -85278,7 +85278,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Les Corts (L3)",
     "tags": [
       "budget-friendly",
       "burgers"
@@ -85351,7 +85351,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Les Corts (L3)",
     "tags": [
       "budget-friendly",
       "menú-del-día",
@@ -85425,7 +85425,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Les Corts (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/1083_bar_manila_pedralbes/hero.jpg",
@@ -85495,7 +85495,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
     "tags": [
       "budget-friendly",
       "menú-del-día"
@@ -85568,7 +85568,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Andreu (L1)",
     "tags": [
       "historic",
       "menú-del-día",
@@ -85642,7 +85642,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Via Júlia (L4)",
     "tags": [
       "menú-del-día"
     ],
@@ -85714,7 +85714,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Clot (L1/L2)",
     "tags": [
       "michelin"
     ],
@@ -85786,7 +85786,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Clot (L1/L2)",
     "tags": [
       "creative",
       "michelin"
@@ -85859,7 +85859,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Clot (L1/L2)",
     "tags": [
       "budget-friendly",
       "menú-del-día"
@@ -85932,7 +85932,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Clot (L1/L2)",
     "tags": [
       "creative"
     ],
@@ -86004,7 +86004,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Clot (L1/L2)",
     "tags": [
       "michelin"
     ],
@@ -86076,7 +86076,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Clot (L1/L2)",
     "tags": [
       "michelin",
       "seafood"
@@ -86149,7 +86149,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Clot (L1/L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/1093_muysca_barcelona/hero.jpg",
@@ -86219,7 +86219,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Clot (L1/L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/1094_locanda_del_vulture/hero.jpg",
@@ -86289,7 +86289,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Vallcarca (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/1095_ultramarinos_marin/hero.jpg",
@@ -86359,7 +86359,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Vallcarca (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/1096_parfum_cocktail_bar/hero.jpg",
@@ -86429,7 +86429,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Vallcarca (L3)",
     "tags": [
       "budget-friendly"
     ],
@@ -86501,7 +86501,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [
       "vegetarian"
     ],
@@ -86573,7 +86573,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/1099_jiribilla_bcn/hero.jpg",
@@ -86643,7 +86643,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/1100_aylul/hero.jpg",
@@ -86713,7 +86713,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/1101_parda_barcelona/hero.jpg",
@@ -86783,7 +86783,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/1102_guebar/hero.jpg",
@@ -86853,7 +86853,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "homemade"
     ],
@@ -86925,7 +86925,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "pizza",
       "tapas"
@@ -86998,7 +86998,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "sushi"
     ],
@@ -87070,7 +87070,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "menú-del-día"
     ],
@@ -87142,7 +87142,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "budget-friendly"
     ],
@@ -87214,7 +87214,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "creative",
       "menú-del-día",
@@ -87289,7 +87289,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "budget-friendly",
       "menú-del-día",
@@ -87363,7 +87363,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "menú-del-día"
     ],
@@ -87435,7 +87435,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
       "budget-friendly",
       "family-run",
@@ -87510,7 +87510,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
       "creative",
       "tapas"
@@ -87583,7 +87583,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sagrada Família (L2/L5)",
     "tags": [],
     "images": {
       "hero": "restaurants/1113_papanato_sagrada_familia/hero.jpg",
@@ -87653,7 +87653,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Penitents (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/1114_umo_barcelona/hero.jpg",
@@ -87723,7 +87723,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Penitents (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/1115_la_marimandona/hero.jpg",
@@ -87793,7 +87793,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Penitents (L3)",
     "tags": [
       "budget-friendly"
     ],
@@ -87865,7 +87865,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Penitents (L3)",
     "tags": [
       "menú-del-día"
     ],
@@ -87937,7 +87937,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Penitents (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/1118_la_taverna_gallega_de_marcos/hero.jpg",
@@ -88007,7 +88007,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Joanic (L4)",
     "tags": [
       "creative",
       "menú-del-día"
@@ -88080,7 +88080,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [
       "brunch",
       "menú-del-día"
@@ -88153,7 +88153,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [
       "healthy",
       "menú-del-día",
@@ -88228,7 +88228,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [
       "budget-friendly",
       "tapas"
@@ -88301,7 +88301,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [
       "budget-friendly",
       "sushi",
@@ -88375,7 +88375,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [],
     "images": {
       "hero": "restaurants/1124_lora_sls_barcelona/hero.jpg",
@@ -88445,7 +88445,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [],
     "images": {
       "hero": "restaurants/1125_voro_at_veraz/hero.jpg",
@@ -88515,7 +88515,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "creative"
     ],
@@ -88587,7 +88587,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [
       "budget-friendly"
     ],
@@ -88659,7 +88659,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Les Corts (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/1128_lora_at_camp_nou/hero.jpg",
@@ -88729,7 +88729,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/1129_falamanki/hero.jpg",
@@ -88799,7 +88799,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [
       "budget-friendly",
       "ramen"
@@ -88872,7 +88872,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/1131_ikenoan/hero.jpg",
@@ -88942,7 +88942,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [
       "budget-friendly"
     ],
@@ -89014,7 +89014,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
       "budget-friendly"
     ],
@@ -89086,7 +89086,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/1134_mayombe_barcelona/hero.jpg",
@@ -89156,7 +89156,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "budget-friendly",
       "menú-del-día"
@@ -89229,7 +89229,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "menú-del-día"
     ],
@@ -89301,7 +89301,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [
       "creative",
       "menú-del-día",
@@ -89375,7 +89375,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [
       "creative",
       "healthy",
@@ -89449,7 +89449,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "reservations",
       "tapas"
@@ -89522,7 +89522,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "El Carmel (L5)",
     "tags": [
       "historic",
       "menú-del-día"
@@ -89595,7 +89595,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Penitents (L3)",
     "tags": [
       "menú-del-día",
       "views"
@@ -89668,7 +89668,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "tapas"
     ],
@@ -89740,7 +89740,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "budget-friendly",
       "ramen"
@@ -89813,7 +89813,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "budget-friendly"
     ],
@@ -89885,7 +89885,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "budget-friendly",
       "menú-del-día"
@@ -89958,7 +89958,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "menú-del-día"
     ],
@@ -90030,7 +90030,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "budget-friendly",
       "menú-del-día"
@@ -90103,7 +90103,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "homemade"
     ],
@@ -90175,7 +90175,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [],
     "images": {
       "hero": "restaurants/1149_el_filete_ruso/hero.jpg",
@@ -90245,7 +90245,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "menú-del-día"
     ],
@@ -90317,7 +90317,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Joanic (L4)",
     "tags": [
       "budget-friendly"
     ],
@@ -90389,7 +90389,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Fontana (L3)",
     "tags": [
       "seafood"
     ],
@@ -90461,7 +90461,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Joanic (L4)",
     "tags": [
       "budget-friendly",
       "tapas"
@@ -90534,7 +90534,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Joanic (L4)",
     "tags": [
       "seafood"
     ],
@@ -90606,7 +90606,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Liceu (L3)",
     "tags": [
       "historic",
       "menú-del-día"
@@ -90679,7 +90679,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [
       "menú-del-día"
     ],
@@ -90751,7 +90751,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [
       "historic"
     ],
@@ -90823,7 +90823,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [
       "budget-friendly",
       "menú-del-día"
@@ -90896,7 +90896,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [
       "creative"
     ],
@@ -90968,7 +90968,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poblenou (L4)",
     "tags": [
       "creative",
       "vegetarian"
@@ -91041,7 +91041,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "historic",
       "menú-del-día"
@@ -91114,7 +91114,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "brunch"
     ],
@@ -91186,7 +91186,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "reservations",
       "seafood",
@@ -91260,7 +91260,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "budget-friendly"
     ],
@@ -91332,7 +91332,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poble Sec (L3)",
     "tags": [
       "budget-friendly",
       "seafood",
@@ -91406,7 +91406,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poble Sec (L3)",
     "tags": [],
     "images": {
       "hero": "restaurants/1166_tickets_successor/hero.jpg",
@@ -91476,7 +91476,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Barceloneta (L4)",
     "tags": [
       "budget-friendly",
       "seafood"
@@ -91549,7 +91549,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Barceloneta (L4)",
     "tags": [
       "historic",
       "rice-dishes"
@@ -91622,7 +91622,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Barceloneta (L4)",
     "tags": [
       "budget-friendly",
       "tapas"
@@ -91695,7 +91695,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Santa Eulàlia (L1)",
     "tags": [
       "creative",
       "tapas"
@@ -91768,7 +91768,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Santa Eulàlia (L1)",
     "tags": [
       "budget-friendly",
       "menú-del-día"
@@ -91841,7 +91841,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Via Júlia (L4)",
     "tags": [
       "budget-friendly",
       "menú-del-día"
@@ -91914,7 +91914,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Via Júlia (L4)",
     "tags": [
       "menú-del-día"
     ],
@@ -91986,7 +91986,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Andreu (L1)",
     "tags": [
       "budget-friendly",
       "menú-del-día"
@@ -92059,7 +92059,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Andreu (L1)",
     "tags": [
       "budget-friendly",
       "cozy",
@@ -92133,7 +92133,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Clot (L1/L2)",
     "tags": [
       "menú-del-día"
     ],
@@ -92205,7 +92205,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
       "tapas"
     ],
@@ -92277,7 +92277,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
       "pizza"
     ],
@@ -92349,7 +92349,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
       "menú-del-día"
     ],
@@ -92421,7 +92421,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Barceloneta (L4)",
     "tags": [
       "budget-friendly"
     ],
@@ -92493,7 +92493,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [],
     "images": {
       "hero": "restaurants/1181_paradiso_barcelona/hero.jpg",
@@ -92563,7 +92563,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [
       "michelin"
     ],
@@ -92635,7 +92635,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [
       "michelin"
     ],
@@ -92707,7 +92707,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [
       "creative"
     ],
@@ -92779,7 +92779,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Universitat (L1/L2)",
     "tags": [],
     "images": {
       "hero": "restaurants/1185_speakeasy_barcelona/hero.jpg",
@@ -92849,7 +92849,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [
       "budget-friendly",
       "market-fresh"
@@ -92922,7 +92922,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [
       "tapas"
     ],
@@ -92994,7 +92994,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "michelin"
     ],
@@ -93066,7 +93066,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "tapas"
     ],
@@ -93138,7 +93138,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "menú-del-día"
     ],
@@ -93210,7 +93210,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "creative",
       "menú-del-día"
@@ -93283,7 +93283,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "menú-del-día",
       "vegetarian"
@@ -93356,7 +93356,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Santa Eulàlia (L1)",
     "tags": [
       "budget-friendly",
       "menú-del-día"
@@ -93429,7 +93429,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poble Sec (L3)",
     "tags": [
       "budget-friendly",
       "menú-del-día"
@@ -93502,7 +93502,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Poble Sec (L3)",
     "tags": [
       "views"
     ],
@@ -93574,7 +93574,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Barceloneta (L4)",
     "tags": [
       "rice-dishes",
       "seafood"
@@ -93647,7 +93647,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Barceloneta (L4)",
     "tags": [
       "seafood"
     ],
@@ -93719,7 +93719,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Urgell (L1)",
     "tags": [
       "seafood"
     ],
@@ -93791,7 +93791,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Barceloneta (L4)",
     "tags": [
       "budget-friendly",
       "tapas"
@@ -93864,7 +93864,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "cozy"
     ],
@@ -93936,7 +93936,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Jaume I (L4)",
     "tags": [
       "budget-friendly",
       "menú-del-día",
@@ -94010,7 +94010,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sant Antoni (L2)",
     "tags": [
       "budget-friendly",
       "menú-del-día"
@@ -94083,7 +94083,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
       "menú-del-día"
     ],
@@ -94155,7 +94155,7 @@
     "delivery_available": false,
     "outdoor_seating": false,
     "dog_friendly": false,
-    "metro_station": "",
+    "metro_station": "Joanic (L4)",
     "tags": [
       "budget-friendly",
       "menú-del-día"
@@ -94184,7 +94184,11 @@
         "restaurants/1204_el_rincon_de_gracia/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4065767,
+      "lng": 2.1582812
+    }
   },
   {
     "id": 1205,
@@ -94211,7 +94215,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1206,
@@ -94236,7 +94245,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1207,
@@ -94263,7 +94277,12 @@
       "seafood",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1208,
@@ -94289,7 +94308,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1209,
@@ -94314,7 +94338,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1210,
@@ -94338,7 +94367,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ca+la+Margarida+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1211,
@@ -94365,7 +94399,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1212,
@@ -94390,7 +94429,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1213,
@@ -94414,7 +94458,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Masia+de+Sant+Mart%C3%AD+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1214,
@@ -94440,7 +94489,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1215,
@@ -94464,7 +94518,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+Da+Michele+Sant+Mart%C3%AD+Barcelona",
     "tags": [
       "views"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1216,
@@ -94491,7 +94550,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1217,
@@ -94517,7 +94581,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1218,
@@ -94541,7 +94610,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Glorieta+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.409,
+      "lng": 2.187
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1219,
@@ -94566,7 +94640,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.409,
+      "lng": 2.187
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1220,
@@ -94593,7 +94672,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.409,
+      "lng": 2.187
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1221,
@@ -94619,7 +94703,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.409,
+      "lng": 2.187
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1222,
@@ -94646,7 +94735,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.409,
+      "lng": 2.187
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1223,
@@ -94671,7 +94765,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.409,
+      "lng": 2.187
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1224,
@@ -94696,7 +94795,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.409,
+      "lng": 2.187
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1225,
@@ -94720,7 +94824,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+Oberta+Clot+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.409,
+      "lng": 2.187
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1226,
@@ -94748,7 +94857,12 @@
       "ramen",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.409,
+      "lng": 2.187
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1227,
@@ -94773,7 +94887,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.409,
+      "lng": 2.187
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1228,
@@ -94801,7 +94920,12 @@
       "tacos",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1229,
@@ -94826,7 +94950,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1230,
@@ -94850,7 +94979,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Jordi+Sagrada+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1231,
@@ -94876,7 +95010,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1232,
@@ -94901,7 +95040,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1233,
@@ -94927,7 +95071,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1234,
@@ -94952,7 +95101,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1235,
@@ -94977,7 +95131,12 @@
     "tags": [
       "budget-friendly",
       "views"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1236,
@@ -95002,7 +95161,12 @@
     "tags": [
       "menú-del-día",
       "seafood"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1237,
@@ -95027,7 +95191,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1238,
@@ -95052,7 +95221,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.435,
+      "lng": 2.19
+    },
+    "metro_station": "Sant Andreu (L1)"
   },
   {
     "id": 1239,
@@ -95076,7 +95250,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Mol%C3%AD+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.435,
+      "lng": 2.19
+    },
+    "metro_station": "Sant Andreu (L1)"
   },
   {
     "id": 1240,
@@ -95101,7 +95280,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.435,
+      "lng": 2.19
+    },
+    "metro_station": "Sant Andreu (L1)"
   },
   {
     "id": 1241,
@@ -95126,7 +95310,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.435,
+      "lng": 2.19
+    },
+    "metro_station": "Sant Andreu (L1)"
   },
   {
     "id": 1242,
@@ -95153,7 +95342,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.435,
+      "lng": 2.19
+    },
+    "metro_station": "Sant Andreu (L1)"
   },
   {
     "id": 1243,
@@ -95179,7 +95373,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.435,
+      "lng": 2.19
+    },
+    "metro_station": "Sant Andreu (L1)"
   },
   {
     "id": 1244,
@@ -95204,7 +95403,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.435,
+      "lng": 2.19
+    },
+    "metro_station": "Sant Andreu (L1)"
   },
   {
     "id": 1245,
@@ -95229,7 +95433,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.435,
+      "lng": 2.19
+    },
+    "metro_station": "Sant Andreu (L1)"
   },
   {
     "id": 1246,
@@ -95253,7 +95462,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Japo+Sant+Andreu+Barcelona",
     "tags": [
       "views"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.435,
+      "lng": 2.19
+    },
+    "metro_station": "Sant Andreu (L1)"
   },
   {
     "id": 1247,
@@ -95279,7 +95493,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1248,
@@ -95304,7 +95523,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1249,
@@ -95329,7 +95553,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1250,
@@ -95355,7 +95584,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1251,
@@ -95380,7 +95614,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1252,
@@ -95404,7 +95643,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Parlament+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1253,
@@ -95430,7 +95674,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1254,
@@ -95455,7 +95704,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    },
+    "metro_station": "Via Júlia (L4)"
   },
   {
     "id": 1255,
@@ -95480,7 +95734,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    },
+    "metro_station": "Via Júlia (L4)"
   },
   {
     "id": 1256,
@@ -95505,7 +95764,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    },
+    "metro_station": "Via Júlia (L4)"
   },
   {
     "id": 1257,
@@ -95532,7 +95796,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    },
+    "metro_station": "Via Júlia (L4)"
   },
   {
     "id": 1258,
@@ -95557,7 +95826,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    },
+    "metro_station": "Via Júlia (L4)"
   },
   {
     "id": 1259,
@@ -95582,7 +95856,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    },
+    "metro_station": "Via Júlia (L4)"
   },
   {
     "id": 1260,
@@ -95609,7 +95888,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    },
+    "metro_station": "Via Júlia (L4)"
   },
   {
     "id": 1261,
@@ -95634,7 +95918,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    },
+    "metro_station": "Via Júlia (L4)"
   },
   {
     "id": 1262,
@@ -95658,7 +95947,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Travi+Nou+C%2F+de+Jorge+Manrique%2C+s%2Fn+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4309351,
+      "lng": 2.1515696
+    },
+    "metro_station": "El Carmel (L5)"
   },
   {
     "id": 1263,
@@ -95683,7 +95977,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.418,
+      "lng": 2.165
+    },
+    "metro_station": "Guinardó/Hospital de Sant Pau (L4)"
   },
   {
     "id": 1264,
@@ -95709,7 +96008,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.418,
+      "lng": 2.165
+    },
+    "metro_station": "Guinardó/Hospital de Sant Pau (L4)"
   },
   {
     "id": 1265,
@@ -95734,7 +96038,12 @@
     "tags": [
       "budget-friendly",
       "views"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.418,
+      "lng": 2.165
+    },
+    "metro_station": "Guinardó/Hospital de Sant Pau (L4)"
   },
   {
     "id": 1266,
@@ -95758,7 +96067,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Laberint+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.418,
+      "lng": 2.165
+    },
+    "metro_station": "Guinardó/Hospital de Sant Pau (L4)"
   },
   {
     "id": 1267,
@@ -95783,7 +96097,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.418,
+      "lng": 2.165
+    },
+    "metro_station": "Guinardó/Hospital de Sant Pau (L4)"
   },
   {
     "id": 1268,
@@ -95808,7 +96127,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.418,
+      "lng": 2.165
+    },
+    "metro_station": "Guinardó/Hospital de Sant Pau (L4)"
   },
   {
     "id": 1269,
@@ -95830,7 +96154,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cervecer%C3%ADa+Ciudad+Condal+Rambla+de+Catalunya%2C+18+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.3889463,
+      "lng": 2.1669376
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1270,
@@ -95858,7 +96187,12 @@
       "ramen",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1271,
@@ -95883,7 +96217,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3869111,
+      "lng": 2.1611096
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1272,
@@ -95905,7 +96244,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Taller+de+Tapas+Passeig+de+Gr%C3%A0cia+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1273,
@@ -95927,7 +96271,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Honest+Greens+Eixample+C%2F+del+Rossell%C3%B3%2C+197+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.3923045,
+      "lng": 2.1558108
+    },
+    "metro_station": "Diagonal (L3/L5)"
   },
   {
     "id": 1274,
@@ -95951,7 +96300,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Foc+i+Oli+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1275,
@@ -95976,7 +96330,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1276,
@@ -96002,7 +96361,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1277,
@@ -96026,7 +96390,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Yakitoro+Eixample+Barcelona",
     "tags": [
       "views"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1278,
@@ -96051,7 +96420,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1279,
@@ -96075,7 +96449,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Roig+Rob%C3%AD+C%2F+de+S%C3%A8neca%2C+20+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3968928,
+      "lng": 2.1562774
+    },
+    "metro_station": "Diagonal (L3/L5)"
   },
   {
     "id": 1280,
@@ -96101,7 +96480,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1281,
@@ -96128,7 +96512,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1282,
@@ -96155,7 +96544,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1283,
@@ -96179,7 +96573,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Cuina+del+Born+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1284,
@@ -96203,7 +96602,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Pla+Born+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1285,
@@ -96232,7 +96636,12 @@
       "vegetarian",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1286,
@@ -96256,7 +96665,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Suquet+de+l%27Almirall+Pg.+de+Joan+de+Borb%C3%B3%2C+65+Barcelona",
     "tags": [
       "seafood"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3762081,
+      "lng": 2.1891397
+    },
+    "metro_station": "Barceloneta (L4)"
   },
   {
     "id": 1287,
@@ -96283,7 +96697,12 @@
       "seafood",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.189
+    },
+    "metro_station": "Barceloneta (L4)"
   },
   {
     "id": 1288,
@@ -96310,7 +96729,12 @@
       "seafood",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.189
+    },
+    "metro_station": "Barceloneta (L4)"
   },
   {
     "id": 1289,
@@ -96332,7 +96756,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Via+Veneto+C%2F+de+Ganduxer%2C+10+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.392474,
+      "lng": 2.1391279
+    },
+    "metro_station": "Maria Cristina (L3)"
   },
   {
     "id": 1290,
@@ -96356,7 +96785,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Masia+Les+Corts+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.387,
+      "lng": 2.127
+    },
+    "metro_station": "Les Corts (L3)"
   },
   {
     "id": 1291,
@@ -96381,7 +96815,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.387,
+      "lng": 2.127
+    },
+    "metro_station": "Les Corts (L3)"
   },
   {
     "id": 1292,
@@ -96408,7 +96847,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.387,
+      "lng": 2.127
+    },
+    "metro_station": "Les Corts (L3)"
   },
   {
     "id": 1293,
@@ -96432,7 +96876,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sushi+Dream+Les+Corts+Barcelona",
     "tags": [
       "views"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.387,
+      "lng": 2.127
+    },
+    "metro_station": "Les Corts (L3)"
   },
   {
     "id": 1294,
@@ -96458,7 +96907,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    },
+    "metro_station": "Poblenou (L4)"
   },
   {
     "id": 1295,
@@ -96482,7 +96936,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Flax+%26+Kale+Poblenou+Barcelona",
     "tags": [
       "vegetarian"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    },
+    "metro_station": "Poblenou (L4)"
   },
   {
     "id": 1296,
@@ -96508,7 +96967,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    },
+    "metro_station": "Poblenou (L4)"
   },
   {
     "id": 1297,
@@ -96535,7 +96999,12 @@
       "seafood",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    },
+    "metro_station": "Poblenou (L4)"
   },
   {
     "id": 1298,
@@ -96561,7 +97030,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    },
+    "metro_station": "Poblenou (L4)"
   },
   {
     "id": 1299,
@@ -96586,7 +97060,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    },
+    "metro_station": "Santa Eulàlia (L1)"
   },
   {
     "id": 1300,
@@ -96611,7 +97090,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    },
+    "metro_station": "Santa Eulàlia (L1)"
   },
   {
     "id": 1301,
@@ -96636,7 +97120,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    },
+    "metro_station": "Santa Eulàlia (L1)"
   },
   {
     "id": 1302,
@@ -96662,7 +97151,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    },
+    "metro_station": "Santa Eulàlia (L1)"
   },
   {
     "id": 1303,
@@ -96687,7 +97181,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    },
+    "metro_station": "Santa Eulàlia (L1)"
   },
   {
     "id": 1304,
@@ -96712,7 +97211,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.168
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1305,
@@ -96738,7 +97242,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.168
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1306,
@@ -96760,7 +97269,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Milk+Bar+Gothic+Carrer+d%27en+Gign%C3%A0s%2C+21%2C+08002+Barcelona+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.3813306,
+      "lng": 2.1801063
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1307,
@@ -96782,7 +97296,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Oca%C3%B1a+Pla%C3%A7a+Reial%2C+13-15+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.383,
+      "lng": 2.177
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1308,
@@ -96806,7 +97325,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Gran+Caf%C3%A9+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.383,
+      "lng": 2.177
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1309,
@@ -96828,7 +97352,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Taller+de+Tapas+G%C3%B2tic+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.383,
+      "lng": 2.177
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1310,
@@ -96852,7 +97381,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Tram-Tram+C%2F+Major+de+Sarri%C3%A0%2C+121+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.401,
+      "lng": 2.135
+    },
+    "metro_station": "Vallcarca (L3)"
   },
   {
     "id": 1311,
@@ -96876,7 +97410,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Jard%C3%AD+de+l%27%C3%80pat+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.401,
+      "lng": 2.135
+    },
+    "metro_station": "Vallcarca (L3)"
   },
   {
     "id": 1312,
@@ -96901,7 +97440,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.401,
+      "lng": 2.135
+    },
+    "metro_station": "Vallcarca (L3)"
   },
   {
     "id": 1313,
@@ -96927,7 +97471,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.401,
+      "lng": 2.135
+    },
+    "metro_station": "Vallcarca (L3)"
   },
   {
     "id": 1314,
@@ -96952,7 +97501,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    },
+    "metro_station": "Poble Sec (L3)"
   },
   {
     "id": 1315,
@@ -96976,7 +97530,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Elche+C%2F+de+Vila+i+Vil%C3%A0%2C+71+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    },
+    "metro_station": "Poble Sec (L3)"
   },
   {
     "id": 1316,
@@ -97002,7 +97561,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    },
+    "metro_station": "Poble Sec (L3)"
   },
   {
     "id": 1317,
@@ -97024,7 +97588,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Clara+C%2F+del+Rossell%C3%B3%2C+235+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1318,
@@ -97046,7 +97615,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cervecer%C3%ADa+Catalana+Balmes+C%2F+de+Mallorca%2C+236%2C+08008+Barcelona+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1319,
@@ -97068,7 +97642,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Vinitus+Eixample+C%2F+del+Consell+de+Cent%2C+333+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1320,
@@ -97093,7 +97672,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1321,
@@ -97117,7 +97701,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Japones+de+Passeig+de+Gr%C3%A0cia+Barcelona",
     "tags": [
       "views"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1322,
@@ -97143,7 +97732,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1323,
@@ -97169,7 +97763,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1324,
@@ -97194,7 +97793,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1325,
@@ -97218,7 +97822,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=C%C3%A9leri+Restaurant+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1326,
@@ -97244,7 +97853,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1327,
@@ -97270,7 +97884,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1328,
@@ -97294,7 +97913,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Taktika+Berri+C%2F+de+Val%C3%A8ncia%2C+169+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1329,
@@ -97321,7 +97945,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1330,
@@ -97345,7 +97974,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Pepa+Tomate+Gr%C3%A0cia+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1331,
@@ -97369,7 +98003,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Roble+Gr%C3%A0cia+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1332,
@@ -97396,7 +98035,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1333,
@@ -97420,7 +98064,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Llu%C3%ADs+C%2F+de+la+Cera%2C+49+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.168
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1334,
@@ -97444,7 +98093,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Kasparo+Pla%C3%A7a+de+Vicen%C3%A7+Martorell%2C+4+Barcelona",
     "tags": [
       "budget-friendly"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.168
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1335,
@@ -97470,7 +98124,12 @@
       "budget-friendly",
       "menú-del-día",
       "vegetarian"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.168
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1336,
@@ -97495,7 +98154,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.168
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1337,
@@ -97522,7 +98186,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.168
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1338,
@@ -97547,7 +98216,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.168
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1339,
@@ -97569,7 +98243,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ginger+Bar+C%2F+de+Palma+de+Sant+Just%2C+1+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.383,
+      "lng": 2.177
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1340,
@@ -97593,7 +98272,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Atril+C%2F+dels+Carders%2C+23+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1341,
@@ -97618,7 +98302,12 @@
     "tags": [
       "seafood",
       "views"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1342,
@@ -97640,7 +98329,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Vinya+del+Senyor+Pla%C3%A7a+de+Santa+Maria%2C+5+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1343,
@@ -97667,7 +98361,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1344,
@@ -97692,7 +98391,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    },
+    "metro_station": "Poble Sec (L3)"
   },
   {
     "id": 1345,
@@ -97714,7 +98418,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Xemei+Pg.+de+l%27Exposici%C3%B3%2C+85+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    },
+    "metro_station": "Poble Sec (L3)"
   },
   {
     "id": 1346,
@@ -97740,7 +98449,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    },
+    "metro_station": "Poble Sec (L3)"
   },
   {
     "id": 1347,
@@ -97764,7 +98478,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rias+de+Galicia+Barceloneta+Barcelona",
     "tags": [
       "views"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.189
+    },
+    "metro_station": "Barceloneta (L4)"
   },
   {
     "id": 1348,
@@ -97790,7 +98509,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.189
+    },
+    "metro_station": "Barceloneta (L4)"
   },
   {
     "id": 1349,
@@ -97812,7 +98536,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pinotxo+Bar+Boqueria+Mercat+de+la+Boqueria%2C+Parada+466-467+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.189
+    },
+    "metro_station": "Barceloneta (L4)"
   },
   {
     "id": 1350,
@@ -97839,7 +98568,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.189
+    },
+    "metro_station": "Barceloneta (L4)"
   },
   {
     "id": 1351,
@@ -97863,7 +98597,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Llu%C3%A7an%C3%A8s+Barceloneta+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.189
+    },
+    "metro_station": "Barceloneta (L4)"
   },
   {
     "id": 1352,
@@ -97889,7 +98628,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    },
+    "metro_station": "Santa Eulàlia (L1)"
   },
   {
     "id": 1353,
@@ -97916,7 +98660,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    },
+    "metro_station": "Santa Eulàlia (L1)"
   },
   {
     "id": 1354,
@@ -97941,7 +98690,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    },
+    "metro_station": "Santa Eulàlia (L1)"
   },
   {
     "id": 1355,
@@ -97966,7 +98720,12 @@
     "tags": [
       "menú-del-día",
       "seafood"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    },
+    "metro_station": "Poblenou (L4)"
   },
   {
     "id": 1356,
@@ -97991,7 +98750,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    },
+    "metro_station": "Poblenou (L4)"
   },
   {
     "id": 1357,
@@ -98013,7 +98777,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Honest+Greens+Poblenou+C%2F+de+Pallars%2C+195+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    },
+    "metro_station": "Poblenou (L4)"
   },
   {
     "id": 1358,
@@ -98039,7 +98808,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.387,
+      "lng": 2.127
+    },
+    "metro_station": "Les Corts (L3)"
   },
   {
     "id": 1359,
@@ -98063,7 +98837,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Vivanda+C%2F+Major+de+Sarri%C3%A0%2C+134+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.387,
+      "lng": 2.127
+    },
+    "metro_station": "Les Corts (L3)"
   },
   {
     "id": 1360,
@@ -98088,7 +98867,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.387,
+      "lng": 2.127
+    },
+    "metro_station": "Les Corts (L3)"
   },
   {
     "id": 1361,
@@ -98114,7 +98898,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.387,
+      "lng": 2.127
+    },
+    "metro_station": "Les Corts (L3)"
   },
   {
     "id": 1362,
@@ -98138,7 +98927,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rinc%C3%B3n+Asturiano+Les+Corts+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.387,
+      "lng": 2.127
+    },
+    "metro_station": "Les Corts (L3)"
   },
   {
     "id": 1363,
@@ -98162,7 +98956,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Silvestre+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.401,
+      "lng": 2.135
+    },
+    "metro_station": "Vallcarca (L3)"
   },
   {
     "id": 1364,
@@ -98186,7 +98985,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=A+Contracorriente+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.401,
+      "lng": 2.135
+    },
+    "metro_station": "Vallcarca (L3)"
   },
   {
     "id": 1365,
@@ -98208,7 +99012,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Lomo+Alto+C%2F+d%27Arag%C3%B3%2C+283-285+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.401,
+      "lng": 2.135
+    },
+    "metro_station": "Vallcarca (L3)"
   },
   {
     "id": 1366,
@@ -98234,7 +99043,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.401,
+      "lng": 2.135
+    },
+    "metro_station": "Vallcarca (L3)"
   },
   {
     "id": 1367,
@@ -98256,7 +99070,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Granja+Petitbo+Passeig+de+Sant+Joan%2C+82%2C+08010+Barcelona+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1368,
@@ -98280,7 +99099,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Flax+%26+Kale+Mercat+de+Sant+Antoni+C%2F+del+Comte+d%27Urgell%2C+2+Barcelona",
     "tags": [
       "vegetarian"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1369,
@@ -98306,7 +99130,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1370,
@@ -98331,7 +99160,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1371,
@@ -98357,7 +99191,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1372,
@@ -98379,7 +99218,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Taller+de+Tapas+Sagrada+Fam%C3%ADlia+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1373,
@@ -98403,7 +99247,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Paradeta+Sagrada+Fam%C3%ADlia+Pg.+de+Sant+Joan%2C+65+Barcelona",
     "tags": [
       "seafood"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1374,
@@ -98429,7 +99278,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1375,
@@ -98454,7 +99308,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1376,
@@ -98479,7 +99338,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1377,
@@ -98503,7 +99367,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Filferro+Clot+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.409,
+      "lng": 2.187
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1378,
@@ -98528,7 +99397,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.409,
+      "lng": 2.187
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1379,
@@ -98552,7 +99426,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Masia+del+Clot+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.409,
+      "lng": 2.187
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1380,
@@ -98576,7 +99455,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Cingle+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.418,
+      "lng": 2.165
+    },
+    "metro_station": "Guinardó/Hospital de Sant Pau (L4)"
   },
   {
     "id": 1381,
@@ -98602,7 +99486,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    },
+    "metro_station": "Via Júlia (L4)"
   },
   {
     "id": 1382,
@@ -98626,7 +99515,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+la+Masia+de+Roquetes+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    },
+    "metro_station": "Via Júlia (L4)"
   },
   {
     "id": 1383,
@@ -98651,7 +99545,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.435,
+      "lng": 2.19
+    },
+    "metro_station": "Sant Andreu (L1)"
   },
   {
     "id": 1384,
@@ -98675,7 +99574,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Fabra+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.435,
+      "lng": 2.19
+    },
+    "metro_station": "Sant Andreu (L1)"
   },
   {
     "id": 1385,
@@ -98700,7 +99604,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.435,
+      "lng": 2.19
+    },
+    "metro_station": "Sant Andreu (L1)"
   },
   {
     "id": 1386,
@@ -98725,7 +99634,12 @@
     "tags": [
       "menú-del-día",
       "seafood"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1387,
@@ -98750,7 +99664,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1388,
@@ -98777,7 +99696,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1389,
@@ -98803,7 +99727,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1390,
@@ -98830,7 +99759,12 @@
       "seafood",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1391,
@@ -98852,7 +99786,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Maitea+C%2F+de+Casanova%2C+157%2C+08036+Barcelona+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.3911024,
+      "lng": 2.1510665
+    },
+    "metro_station": "Hospital Clínic (L5)"
   },
   {
     "id": 1392,
@@ -98874,7 +99813,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Patagonia+Beef+%26+Wine+Gran+Via+de+les+Corts+Catalanes%2C+660%2C+08007+Barcelona+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.3911199,
+      "lng": 2.170955
+    },
+    "metro_station": "Urquinaona (L1/L4)"
   },
   {
     "id": 1393,
@@ -98899,7 +99843,12 @@
     "tags": [
       "menú-del-día",
       "tasting-menu"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3910351,
+      "lng": 2.152237
+    },
+    "metro_station": "Hospital Clínic (L5)"
   },
   {
     "id": 1394,
@@ -98921,7 +99870,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Japon%C3%A9s+Passatge+de+la+Concepci%C3%B3%2C+2%2C+08008+Barcelona+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.3951595,
+      "lng": 2.1607634
+    },
+    "metro_station": "Passeig de Gràcia (L2/L3/L4)"
   },
   {
     "id": 1395,
@@ -98945,7 +99899,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mango+Thai+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1396,
@@ -98973,7 +99932,12 @@
       "vegetarian",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1397,
@@ -98997,7 +99961,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Nairod+Restaurant+Carrer+de+N%C3%A0pols%2C+207%2C+08013+Barcelona+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3993413,
+      "lng": 2.173926
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1398,
@@ -99022,7 +99991,12 @@
     "tags": [
       "budget-friendly",
       "views"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1399,
@@ -99046,7 +100020,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Casa+Delf%C3%ADn+Eixample+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1400,
@@ -99070,7 +100049,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Niu+Raval+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.168
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1401,
@@ -99094,7 +100078,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tantarantana+Born+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1402,
@@ -99118,7 +100107,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Peixerot+Carrer+del+Maquinista%2C+13%2C+08003+Barcelona+Barcelona",
     "tags": [
       "seafood"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.189
+    },
+    "metro_station": "Barceloneta (L4)"
   },
   {
     "id": 1403,
@@ -99145,7 +100139,12 @@
       "seafood",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.189
+    },
+    "metro_station": "Barceloneta (L4)"
   },
   {
     "id": 1404,
@@ -99170,7 +100169,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.189
+    },
+    "metro_station": "Barceloneta (L4)"
   },
   {
     "id": 1405,
@@ -99192,7 +100196,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Nomo+Torrent+d%27en+Vidalet%2C+35%2C+08012+Barcelona+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1406,
@@ -99217,7 +100226,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1407,
@@ -99243,7 +100257,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1408,
@@ -99267,7 +100286,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pepa+i+Cia+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1409,
@@ -99294,7 +100318,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1410,
@@ -99319,7 +100348,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1411,
@@ -99345,7 +100379,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1412,
@@ -99367,7 +100406,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Lo+de+Flor+C%2F+de+l%27Escorial%2C+66%2C+08024+Barcelona+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.4083157,
+      "lng": 2.1603344
+    },
+    "metro_station": "Joanic (L4)"
   },
   {
     "id": 1413,
@@ -99392,7 +100436,12 @@
     "tags": [
       "budget-friendly",
       "views"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1414,
@@ -99417,7 +100466,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1415,
@@ -99443,7 +100497,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.383,
+      "lng": 2.177
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1416,
@@ -99467,7 +100526,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Casserola+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.383,
+      "lng": 2.177
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1417,
@@ -99491,7 +100555,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Taller+28+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.383,
+      "lng": 2.177
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1418,
@@ -99515,7 +100584,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pla+Restaurant+C%2F+de+Bellafila%2C+5%2C+08002+Barcelona+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.38227,
+      "lng": 2.1785761
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1419,
@@ -99541,7 +100615,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.383,
+      "lng": 2.177
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1420,
@@ -99567,7 +100646,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.383,
+      "lng": 2.177
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1421,
@@ -99592,7 +100676,12 @@
     "tags": [
       "budget-friendly",
       "views"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.383,
+      "lng": 2.177
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1422,
@@ -99616,7 +100705,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Celta+C%2F+de+la+Merc%C3%A8%2C+16%2C+08002+Barcelona+Barcelona",
     "tags": [
       "budget-friendly"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3798512,
+      "lng": 2.1801573
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1423,
@@ -99643,7 +100737,12 @@
       "seafood",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1424,
@@ -99669,7 +100768,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1425,
@@ -99695,7 +100799,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1426,
@@ -99719,7 +100828,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Magatzem+del+Born+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1427,
@@ -99745,7 +100859,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1428,
@@ -99770,7 +100889,12 @@
     "tags": [
       "budget-friendly",
       "views"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    },
+    "metro_station": "Poblenou (L4)"
   },
   {
     "id": 1429,
@@ -99794,7 +100918,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Boqueria+de+Poblenou+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    },
+    "metro_station": "Poblenou (L4)"
   },
   {
     "id": 1430,
@@ -99820,7 +100949,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    },
+    "metro_station": "Poblenou (L4)"
   },
   {
     "id": 1431,
@@ -99846,7 +100980,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    },
+    "metro_station": "Poblenou (L4)"
   },
   {
     "id": 1432,
@@ -99871,7 +101010,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    },
+    "metro_station": "Poblenou (L4)"
   },
   {
     "id": 1433,
@@ -99898,7 +101042,12 @@
       "seafood",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1434,
@@ -99924,7 +101073,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1435,
@@ -99949,7 +101103,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1436,
@@ -99976,7 +101135,12 @@
       "seafood",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1437,
@@ -100001,7 +101165,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1438,
@@ -100025,7 +101194,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Rosell+Sants+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    },
+    "metro_station": "Santa Eulàlia (L1)"
   },
   {
     "id": 1439,
@@ -100052,7 +101226,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    },
+    "metro_station": "Santa Eulàlia (L1)"
   },
   {
     "id": 1440,
@@ -100076,7 +101255,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Pati+de+l%27Ermita+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    },
+    "metro_station": "Santa Eulàlia (L1)"
   },
   {
     "id": 1441,
@@ -100102,7 +101286,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    },
+    "metro_station": "Santa Eulàlia (L1)"
   },
   {
     "id": 1442,
@@ -100127,7 +101316,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    },
+    "metro_station": "Santa Eulàlia (L1)"
   },
   {
     "id": 1443,
@@ -100151,7 +101345,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Vies+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.387,
+      "lng": 2.127
+    },
+    "metro_station": "Les Corts (L3)"
   },
   {
     "id": 1444,
@@ -100178,7 +101377,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.387,
+      "lng": 2.127
+    },
+    "metro_station": "Les Corts (L3)"
   },
   {
     "id": 1445,
@@ -100204,7 +101408,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.401,
+      "lng": 2.135
+    },
+    "metro_station": "Vallcarca (L3)"
   },
   {
     "id": 1446,
@@ -100228,7 +101437,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Mol%C3%AD+de+Sarri%C3%A0+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.401,
+      "lng": 2.135
+    },
+    "metro_station": "Vallcarca (L3)"
   },
   {
     "id": 1447,
@@ -100254,7 +101468,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.401,
+      "lng": 2.135
+    },
+    "metro_station": "Vallcarca (L3)"
   },
   {
     "id": 1448,
@@ -100280,7 +101499,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1449,
@@ -100304,7 +101528,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Nou+Raval+Sant+Antoni+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1450,
@@ -100328,7 +101557,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+Cometa+Sant+Antoni+Barcelona",
     "tags": [
       "views"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1451,
@@ -100353,7 +101587,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1452,
@@ -100377,7 +101616,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+R%C3%ADas+de+Galicia+SF+Barcelona",
     "tags": [
       "views"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1453,
@@ -100401,7 +101645,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rac%C3%B3+de+la+Sagrada+Fam%C3%ADlia+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1454,
@@ -100425,7 +101674,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Marina+del+Clot+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.409,
+      "lng": 2.187
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1455,
@@ -100450,7 +101704,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.409,
+      "lng": 2.187
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1456,
@@ -100474,7 +101733,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Cargolet+Horta+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.418,
+      "lng": 2.165
+    },
+    "metro_station": "Guinardó/Hospital de Sant Pau (L4)"
   },
   {
     "id": 1457,
@@ -100499,7 +101763,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    },
+    "metro_station": "Via Júlia (L4)"
   },
   {
     "id": 1458,
@@ -100523,7 +101792,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Pep+Nou+Barris+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    },
+    "metro_station": "Via Júlia (L4)"
   },
   {
     "id": 1459,
@@ -100549,7 +101823,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.435,
+      "lng": 2.19
+    },
+    "metro_station": "Sant Andreu (L1)"
   },
   {
     "id": 1460,
@@ -100574,7 +101853,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.435,
+      "lng": 2.19
+    },
+    "metro_station": "Sant Andreu (L1)"
   },
   {
     "id": 1461,
@@ -100600,7 +101884,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    },
+    "metro_station": "Poble Sec (L3)"
   },
   {
     "id": 1462,
@@ -100627,7 +101916,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    },
+    "metro_station": "Poble Sec (L3)"
   },
   {
     "id": 1463,
@@ -100653,7 +101947,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    },
+    "metro_station": "Poble Sec (L3)"
   },
   {
     "id": 1464,
@@ -100678,7 +101977,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    },
+    "metro_station": "Poble Sec (L3)"
   },
   {
     "id": 1465,
@@ -100703,7 +102007,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    },
+    "metro_station": "Poble Sec (L3)"
   },
   {
     "id": 1466,
@@ -100729,7 +102038,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.168
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1467,
@@ -100756,7 +102070,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.168
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1468,
@@ -100780,7 +102099,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Mercat+Raval+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.168
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1469,
@@ -100804,7 +102128,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+del+Poble+Sec+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    },
+    "metro_station": "Poble Sec (L3)"
   },
   {
     "id": 1470,
@@ -100828,7 +102157,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Taktika+Berri+Eixample+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1471,
@@ -100852,7 +102186,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+d%27en+Garriga+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1472,
@@ -100877,7 +102216,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1473,
@@ -100901,7 +102245,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Wagokoro+C%2F+de+Comte+d%27Urgell%2C+56%2C+08011+Barcelona+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1474,
@@ -100926,7 +102275,12 @@
     "tags": [
       "budget-friendly",
       "views"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1475,
@@ -100950,7 +102304,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurante+Sibaris+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1476,
@@ -100972,7 +102331,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Pepita+Eixample+C%2F+de+C%C3%B2rsega%2C+343%2C+08037+Barcelona+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.3979638,
+      "lng": 2.1610245
+    },
+    "metro_station": "Verdaguer (L4/L5)"
   },
   {
     "id": 1477,
@@ -100996,7 +102360,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Koku+Kitchen+Buns+C%2F+de+C%C3%B2rsega%2C+242%2C+08036+Barcelona+Barcelona",
     "tags": [
       "budget-friendly"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.393013,
+      "lng": 2.1548767
+    },
+    "metro_station": "Diagonal (L3/L5)"
   },
   {
     "id": 1478,
@@ -101020,7 +102389,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Bilbao+Gr%C3%A0cia+C%2F+de+Perla%2C+33%2C+08012+Barcelona+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4039493,
+      "lng": 2.1579262
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1479,
@@ -101044,7 +102418,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+de+l%27Uribou+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1480,
@@ -101069,7 +102448,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1481,
@@ -101094,7 +102478,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1482,
@@ -101119,7 +102508,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    },
+    "metro_station": "Fontana (L3)"
   },
   {
     "id": 1483,
@@ -101143,7 +102537,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Celler+del+Born+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1484,
@@ -101169,7 +102568,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1485,
@@ -101193,7 +102597,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Plassohla+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.383,
+      "lng": 2.177
+    },
+    "metro_station": "Jaume I (L4)"
   },
   {
     "id": 1486,
@@ -101215,7 +102624,12 @@
     "last_verified": "2025-03-01",
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+Zurich+Pla%C3%A7a+de+Catalunya%2C+1%2C+08002+Barcelona+Barcelona",
-    "tags": []
+    "tags": [],
+    "coordinates": {
+      "lat": 41.3858504,
+      "lng": 2.1694606
+    },
+    "metro_station": "Catalunya (L1/L3)"
   },
   {
     "id": 1487,
@@ -101239,7 +102653,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Nectari+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    },
+    "metro_station": "Universitat (L1/L2)"
   },
   {
     "id": 1488,
@@ -101266,7 +102685,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.168
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1489,
@@ -101290,7 +102714,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Tertulia+Poble+Sec+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    },
+    "metro_station": "Poble Sec (L3)"
   },
   {
     "id": 1490,
@@ -101316,7 +102745,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.168
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1491,
@@ -101341,7 +102775,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    },
+    "metro_station": "Poble Sec (L3)"
   },
   {
     "id": 1492,
@@ -101365,7 +102804,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+del+Forum+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1493,
@@ -101391,7 +102835,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    },
+    "metro_station": "Clot (L1/L2)"
   },
   {
     "id": 1494,
@@ -101416,7 +102865,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    },
+    "metro_station": "Poblenou (L4)"
   },
   {
     "id": 1495,
@@ -101442,7 +102896,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    },
+    "metro_station": "Poblenou (L4)"
   },
   {
     "id": 1496,
@@ -101466,7 +102925,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Pujades+33+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    },
+    "metro_station": "Poblenou (L4)"
   },
   {
     "id": 1497,
@@ -101491,7 +102955,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    },
+    "metro_station": "Santa Eulàlia (L1)"
   },
   {
     "id": 1498,
@@ -101515,7 +102984,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Mol%C3%AD+de+Sants+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    },
+    "metro_station": "Santa Eulàlia (L1)"
   },
   {
     "id": 1499,
@@ -101539,7 +103013,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+de+les+Corts+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.387,
+      "lng": 2.127
+    },
+    "metro_station": "Les Corts (L3)"
   },
   {
     "id": 1500,
@@ -101563,7 +103042,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Ferran+Sarri%C3%A0+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.401,
+      "lng": 2.135
+    },
+    "metro_station": "Vallcarca (L3)"
   },
   {
     "id": 1501,
@@ -101589,7 +103073,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.401,
+      "lng": 2.135
+    },
+    "metro_station": "Vallcarca (L3)"
   },
   {
     "id": 1502,
@@ -101613,7 +103102,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Guineueta+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    },
+    "metro_station": "Via Júlia (L4)"
   },
   {
     "id": 1503,
@@ -101638,7 +103132,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    },
+    "metro_station": "Sagrada Família (L2/L5)"
   },
   {
     "id": 1504,
@@ -101662,7 +103161,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Jordi+Horta+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.418,
+      "lng": 2.165
+    },
+    "metro_station": "Guinardó/Hospital de Sant Pau (L4)"
   },
   {
     "id": 1505,
@@ -101687,7 +103191,12 @@
     "tags": [
       "budget-friendly",
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.435,
+      "lng": 2.19
+    },
+    "metro_station": "Sant Andreu (L1)"
   },
   {
     "id": 1506,
@@ -101711,7 +103220,12 @@
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ca+l%27Isidre+Sant+Antoni+Barcelona",
     "tags": [
       "menú-del-día"
-    ]
+    ],
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1507,
@@ -101737,7 +103251,12 @@
       "menú-del-día",
       "views"
     ],
-    "menu_evidence": "auto_diagnostic"
+    "menu_evidence": "auto_diagnostic",
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    },
+    "metro_station": "Sant Antoni (L2)"
   },
   {
     "id": 1508,
@@ -101758,7 +103277,7 @@
     "notes": "Tapas bar near Plaça Catalunya. Tortilla, bravas. Family-run since 1988. Menú del día 13-16h.",
     "last_verified": "2026-03-24",
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar%20APZ%20C/%20d%27Estruc%2C%2032%20Barcelona",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+APZ+C%2F+d%27Estruc%2C+32+Barcelona",
     "tags": [
       "menú-del-día",
       "budget-friendly",
@@ -101786,7 +103305,7 @@
     "notes": "Mediterranean with brunch. Near L'Auditori. 4 first + 4 second courses.",
     "last_verified": "2026-03-24",
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rebeka%20C/%20dels%20Almog%C3%A0vers%2C%20107%20Barcelona",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rebeka+C%2F+dels+Almog%C3%A0vers%2C+107+Barcelona",
     "tags": [
       "menú-del-día",
       "brunch"
@@ -101813,7 +103332,7 @@
     "notes": "Ryu Ramen Gràcia branch. Ramen menu starter+main+dessert. Cozy atmosphere.",
     "last_verified": "2026-03-24",
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ryu%20Ramen%20Gr%C3%A0cia%20C/%20de%20Ram%C3%B3n%20y%20Cajal%2C%2035%20Barcelona",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ryu+Ramen+Gr%C3%A0cia+C%2F+de+Ram%C3%B3n+y+Cajal%2C+35+Barcelona",
     "tags": [
       "menú-del-día",
       "ramen"
@@ -101840,7 +103359,7 @@
     "notes": "Traditional menú del día. Fideuá, homemade desserts. 100% casero.",
     "last_verified": "2026-03-24",
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar%20Carme%20C/%20de%20Llull%2C%2070%20Barcelona",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Carme+C%2F+de+Llull%2C+70+Barcelona",
     "tags": [
       "menú-del-día",
       "local-favorite"
@@ -101867,7 +103386,7 @@
     "notes": "25+ years. Paellas and rice dishes. Pet-friendly terrace. Cocina abierta todo el día.",
     "last_verified": "2026-03-24",
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Donde%20Tito%20Bar%20%26%20Restaurante%20C/%20de%20la%20Llacuna%2C%20124%20Barcelona",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Donde+Tito+Bar+%26+Restaurante+C%2F+de+la+Llacuna%2C+124+Barcelona",
     "tags": [
       "menú-del-día",
       "terrace",
@@ -101896,7 +103415,7 @@
     "notes": "Healthy, vegan/vegetarian. Brunch, specialty coffee. Near Sants station.",
     "last_verified": "2026-03-24",
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Verde%20Amore%20Healthy%20Food%20C/%20de%20Galileu%2C%20261%20Barcelona",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Verde+Amore+Healthy+Food+C%2F+de+Galileu%2C+261+Barcelona",
     "tags": [
       "menú-del-día",
       "vegan",
@@ -101926,7 +103445,7 @@
     "notes": "In Mercat del Guinardó. Bakery + café + daily menu. Homemade. 13-16h.",
     "last_verified": "2026-03-24",
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Forn%20Cafeteria%20La%20Parada%20Passatge%20de%20Ll%C3%ADvia%2C%2034%20Barcelona",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Forn+Cafeteria+La+Parada+Passatge+de+Ll%C3%ADvia%2C+34+Barcelona",
     "tags": [
       "menú-del-día",
       "budget-friendly",
@@ -101954,7 +103473,7 @@
     "notes": "Homemade food in @22. Menú with drink, bread, dessert. Group menus.",
     "last_verified": "2026-03-24",
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar%20Restaurante%20Felipe%20%4022%20C/%20de%20Llull%2C%20294%20Barcelona",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Restaurante+Felipe+%4022+C%2F+de+Llull%2C+294+Barcelona",
     "tags": [
       "menú-del-día"
     ],
@@ -101980,7 +103499,7 @@
     "notes": "40+ years. Arrocería, paellas, calçots, cochinillo. Group menus. Terraza.",
     "last_verified": "2026-03-24",
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Casa%20de%20Comidas%20Nogal%20C/%20de%20la%20Diputaci%C3%B3%2C%20412%20Barcelona",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Casa+de+Comidas+Nogal+C%2F+de+la+Diputaci%C3%B3%2C+412+Barcelona",
     "tags": [
       "menú-del-día",
       "terrace",
@@ -102009,7 +103528,7 @@
     "notes": "In Hotel Zenit Borrell. Cocktail menus, group events. Calamares a la andaluza.",
     "last_verified": "2026-03-24",
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurante%20Mar%C3%A9s%20C/%20del%20Comte%20Borrell%2C%20208%20Barcelona",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurante+Mar%C3%A9s+C%2F+del+Comte+Borrell%2C+208+Barcelona",
     "tags": [
       "menú-del-día"
     ],
@@ -102035,7 +103554,7 @@
     "notes": "Since 1960. Traditional Catalan. Fricandó, bacalao a la llauna. Near Picasso Museum.",
     "last_verified": "2026-03-24",
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Nou%20Celler%20C/%20de%20la%20Princesa%2C%2016%20Barcelona",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Nou+Celler+C%2F+de+la+Princesa%2C+16+Barcelona",
     "tags": [
       "menú-del-día",
       "historic",
@@ -102063,7 +103582,7 @@
     "notes": "Specialty coffee, brunch, tostadas. Pet friendly. Near Mercat de Sant Antoni.",
     "last_verified": "2026-03-24",
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9%20Solo%20C/%20de%20Floridablanca%2C%2024%20Barcelona",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+Solo+C%2F+de+Floridablanca%2C+24+Barcelona",
     "tags": [
       "brunch",
       "specialty-coffee"
@@ -102090,7 +103609,7 @@
     "notes": "Menú for @22 office workers. Tapas, burgers, bravas. Late kitchen Fridays.",
     "last_verified": "2026-03-24",
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Xiscarexantar%20C/%20de%20Pere%20IV%2C%2059%20Barcelona",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Xiscarexantar+C%2F+de+Pere+IV%2C+59+Barcelona",
     "tags": [
       "menú-del-día",
       "budget-friendly"
@@ -102117,7 +103636,7 @@
     "notes": "In Hotel Zenit Barcelona. Author cuisine. Bravas, croquetas, paellas.",
     "last_verified": "2026-03-24",
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant%20Mediterr%C3%A0nia%20C/%20de%20Santal%C3%B3%2C%208%20Barcelona",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Mediterr%C3%A0nia+C%2F+de+Santal%C3%B3%2C+8+Barcelona",
     "tags": [],
     "menu_evidence": "menuveo_competitor",
     "menu_del_dia_confirmed": false
@@ -102141,7 +103660,7 @@
     "notes": "Brunch in Poblenou. Acai bowl, café brasileño. Vegan options. Terraza, near Llacuna.",
     "last_verified": "2026-03-24",
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Malhumor%20C/%20de%20la%20Llacuna%2C%20128%20Barcelona",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Malhumor+C%2F+de+la+Llacuna%2C+128+Barcelona",
     "tags": [
       "brunch",
       "vegan",
@@ -102169,7 +103688,7 @@
     "notes": "Traditional Chinese. Generous portions. Group menus 2-7 people. Pato con almendras.",
     "last_verified": "2026-03-24",
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Chang%20Feng%20Av.%20Diagonal%2C%20145%20Barcelona",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Chang+Feng+Av.+Diagonal%2C+145+Barcelona",
     "tags": [],
     "menu_evidence": "menuveo_competitor",
     "menu_del_dia_confirmed": false

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poble Sec Restaurants — Menuverso Barcelona</title>
+<meta name="description" content="Poble Sec: 84 restaurants, avg €12 menú del día, 29 confirmed. Best of Poble Sec in Barcelona by Menuverso.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></' + 'script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#F8FAFC;--card:#FFF;--text:#1E293B;--sub:#64748B;--mut:#94A3B8;--border:#E2E8F0;--accent:#2563EB;--accent-sub:#DBEAFE;--green:#059669;--green-bg:#D1FAE5;--amber:#D97706;--red:#DC2626;--radius:12px;--shadow:0 2px 8px rgba(0,0,0,0.06);}
+:root.dark{--bg:#0F172A;--card:#1E293B;--text:#F1F5F9;--sub:#94A3B8;--mut:#64748B;--border:#334155;--accent:#3B82F6;--accent-sub:#1E3A5F;--green:#34D399;--green-bg:#064E3B;--shadow:0 2px 8px rgba(0,0,0,0.3);}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background 0.3s,color 0.3s;}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1.5rem;border-bottom:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+.nav-brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.1rem;}
+.nav-brand img{width:28px;height:28px;border-radius:8px;}
+.nav-links{display:flex;align-items:center;gap:1rem;}
+.nav-links a{color:var(--sub);text-decoration:none;font-size:0.82rem;font-weight:500;padding:0.3rem 0.5rem;border-radius:8px;transition:all 0.2s;}
+.nav-links a:hover{color:var(--text);}
+.controls-bar{display:flex;gap:0.5rem;align-items:center;}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:0.3rem 0.55rem;cursor:pointer;font-size:0.85rem;color:var(--sub);transition:all 0.2s;}
+.container{max-width:800px;margin:0 auto;padding:1.5rem;}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--sub);text-decoration:none;font-size:0.85rem;font-weight:500;margin-bottom:1rem;transition:color 0.2s;}
+.back:hover{color:var(--text);}
+.hero{text-align:center;margin-bottom:2rem;}
+.hero h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:0.25rem;}
+.hero p{color:var(--sub);font-size:0.9rem;}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0.75rem;margin-bottom:2rem;}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;text-align:center;box-shadow:var(--shadow);}
+.stat-num{font-size:1.3rem;font-weight:700;}
+.stat-label{font-size:0.7rem;color:var(--mut);text-transform:uppercase;letter-spacing:0.04em;margin-top:2px;}
+.green{color:var(--green);} .amber{color:var(--amber);} .red{color:var(--red);}
+.section{margin-bottom:2rem;}
+.section-title{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:600;color:var(--mut);margin-bottom:0.75rem;}
+.top-card{display:flex;gap:0.75rem;align-items:center;padding:0.75rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:0.5rem;text-decoration:none;color:var(--text);transition:all 0.2s;box-shadow:var(--shadow);}
+.top-card:hover{transform:translateY(-1px);border-color:var(--accent);}
+.rank{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.8rem;background:var(--accent-sub);color:var(--accent);flex-shrink:0;}
+.rank.gold{background:#FEF3C7;color:#D97706;} .rank.silver{background:#F1F5F9;color:#64748B;} .rank.bronze{background:#FED7AA;color:#C2410C;}
+.tc-body{flex:1;min-width:0;}
+.tc-name{font-weight:600;font-size:0.9rem;}
+.tc-meta{font-size:0.75rem;color:var(--sub);}
+#hood-map{width:100%;height:300px;border-radius:var(--radius);border:1px solid var(--border);margin-bottom:1rem;z-index:1;}
+:root.dark .leaflet-tile{filter:invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);}
+.cb-item{display:flex;justify-content:space-between;padding:0.4rem 0.75rem;font-size:0.85rem;border-bottom:1px solid var(--border);}
+.cb-item:last-child{border-bottom:none;}
+.cb-name{font-weight:500;} .cb-count{color:var(--sub);font-size:0.8rem;}
+.cuisine-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+.actions{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2rem;}
+.btn{padding:0.5rem 1rem;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:0.82rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all 0.2s;font-family:Inter,sans-serif;display:inline-flex;align-items:center;gap:4px;}
+.btn:hover{border-color:var(--accent);color:var(--accent);}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+.hood-links{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.hood-link{padding:0.3rem 0.65rem;border:1px solid var(--border);border-radius:16px;font-size:0.72rem;font-weight:500;color:var(--sub);text-decoration:none;transition:all 0.2s;}
+.hood-link:hover{border-color:var(--accent);color:var(--accent);}
+.hood-link span{color:var(--mut);}
+footer{text-align:center;padding:2rem;color:var(--mut);font-size:0.78rem;border-top:1px solid var(--border);}
+footer a{color:var(--sub);text-decoration:none;}
+img[src*="logo.png"]{mix-blend-mode:multiply;}
+:root.dark img[src*="logo.png"]{mix-blend-mode:normal;filter:brightness(1.2);}
+@media(max-width:640px){.stats{grid-template-columns:repeat(3,1fr);}.nav-links a span{display:none;}.actions{flex-direction:column;}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand"><img src="../assets/logo.png" alt="Menuverso"><span>Menuverso</span></a>
+  <div class="nav-links">
+    <a href="../index.html"><span>📋 </span>Database</a>
+    <a href="../finder.html"><span>🔍 </span>Finder</a>
+    <a href="../analytics.html"><span>📊 </span>Analytics</a>
+    <a href="../lists.html"><span>🏆 </span>Best Of</a>
+    <a href="../crawl.html"><span>🚶 </span>Crawl</a>
+  </div>
+  <div class="controls-bar"><button class="theme-btn" id="theme-toggle" onclick="toggleTheme()">🌙</button></div>
+</nav>
+<div class="container">
+  <a href="../index.html" class="back">← All Neighborhoods</a>
+  <div class="hero">
+    <h1>📍 Poble Sec</h1>
+    <p>84 restaurants · 29 confirmed menú del día</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num">84</div><div class="stat-label">Restaurants</div></div>
+    <div class="stat"><div class="stat-num green">29</div><div class="stat-label">Confirmed</div></div>
+    <div class="stat"><div class="stat-num amber">45</div><div class="stat-label">Likely</div></div>
+    <div class="stat"><div class="stat-num">€12</div><div class="stat-label">Avg Price</div></div>
+    <div class="stat"><div class="stat-num">⭐ 4.3</div><div class="stat-label">Avg Rating</div></div>
+    <div class="stat"><div class="stat-num">84</div><div class="stat-label">On Map</div></div>
+  </div>
+
+  <div class="actions">
+    <a href="../index.html?hood=Poble+Sec" class="btn primary">📋 Browse All 84 in Database</a>
+    <a href="../lists/poble-sec.html" class="btn">🏆 Top 10 List</a>
+    <a href="../crawl.html" class="btn">🚶 Plan Lunch Crawl</a>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🏆 Top 5 Rated</div>
+    <a href="../r/244.html" class="top-card">
+          <div class="rank gold">1</div>
+          <div class="tc-body">
+            <div class="tc-name">Tickets</div>
+            <div class="tc-meta">🔴 Spanish ·  · ⭐ 4.7/5</div>
+          </div>
+        </a><a href="../r/245.html" class="top-card">
+          <div class="rank silver">2</div>
+          <div class="tc-body">
+            <div class="tc-name">Pakta</div>
+            <div class="tc-meta">🔴 Fusion ·  · ⭐ 4.7/5</div>
+          </div>
+        </a><a href="../r/737.html" class="top-card">
+          <div class="rank bronze">3</div>
+          <div class="tc-body">
+            <div class="tc-name">Annare' Pizzeria</div>
+            <div class="tc-meta">🟡 Italian ·  · ⭐ 4.6/5</div>
+          </div>
+        </a><a href="../r/361.html" class="top-card">
+          <div class="rank ">4</div>
+          <div class="tc-body">
+            <div class="tc-name">Quimet & Quimet</div>
+            <div class="tc-meta">🟡 Spanish ·  · ⭐ 4.5/5</div>
+          </div>
+        </a><a href="../r/509.html" class="top-card">
+          <div class="rank ">5</div>
+          <div class="tc-body">
+            <div class="tc-name">Tickets Bar</div>
+            <div class="tc-meta">🔴 Spanish ·  · ⭐ 4.5/5</div>
+          </div>
+        </a>
+  </div>
+
+  <div class="section"><div class="section-title">🗺️ Neighborhood Map</div><div id="hood-map"></div></div>
+
+  <div class="section">
+    <div class="section-title">🍽️ Cuisine Breakdown</div>
+    <div class="cuisine-box"><div class="cb-item"><span class="cb-name">Spanish</span><span class="cb-count">40</span></div><div class="cb-item"><span class="cb-name">Mediterranean</span><span class="cb-count">15</span></div><div class="cb-item"><span class="cb-name">Catalan</span><span class="cb-count">10</span></div><div class="cb-item"><span class="cb-name">Italian</span><span class="cb-count">6</span></div><div class="cb-item"><span class="cb-name">Café</span><span class="cb-count">3</span></div><div class="cb-item"><span class="cb-name">Seafood</span><span class="cb-count">3</span></div><div class="cb-item"><span class="cb-name">Japanese</span><span class="cb-count">2</span></div><div class="cb-item"><span class="cb-name">Mexican</span><span class="cb-count">2</span></div></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">💎 Price Tiers</div>
+    <div class="cuisine-box">
+      <div class="cb-item"><span class="cb-name">💚 Budget</span><span class="cb-count">41</span></div>
+      <div class="cb-item"><span class="cb-name">🧡 Mid-Range</span><span class="cb-count">39</span></div>
+      <div class="cb-item"><span class="cb-name">💎 Premium</span><span class="cb-count">4</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📍 Other Neighborhoods</div>
+    <div class="hood-links"><a href="barceloneta.html" class="hood-link">Barceloneta <span>(64)</span></a><a href="barri-gotic.html" class="hood-link">Barri Gòtic <span>(90)</span></a><a href="clot.html" class="hood-link">Clot <span>(41)</span></a><a href="eixample.html" class="hood-link">Eixample <span>(329)</span></a><a href="el-born.html" class="hood-link">El Born <span>(92)</span></a><a href="el-raval.html" class="hood-link">El Raval <span>(103)</span></a><a href="gracia.html" class="hood-link">Gràcia <span>(123)</span></a><a href="horta-guinardó.html" class="hood-link">Horta-Guinardó <span>(50)</span></a><a href="les-corts.html" class="hood-link">Les Corts <span>(60)</span></a><a href="nou-barris.html" class="hood-link">Nou Barris <span>(47)</span></a><a href="poblenou.html" class="hood-link">Poblenou <span>(107)</span></a><a href="sagrada-familia.html" class="hood-link">Sagrada Família <span>(49)</span></a><a href="sant-andreu.html" class="hood-link">Sant Andreu <span>(46)</span></a><a href="sant-antoni.html" class="hood-link">Sant Antoni <span>(51)</span></a><a href="sant-marti.html" class="hood-link">Sant Martí <span>(47)</span></a><a href="sants.html" class="hood-link">Sants <span>(73)</span></a><a href="sarria-sant-gervasi.html" class="hood-link">Sarrià-Sant Gervasi <span>(64)</span></a></div>
+  </div>
+</div>
+<footer><a href="../index.html">Menuverso</a> · <a href="../lists.html">Best Of</a> · <a href="../analytics.html">Analytics</a></footer>
+<script>
+function initTheme(){var s=localStorage.getItem('menuverso_theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark');document.getElementById('theme-toggle').textContent='☀️';}};
+function toggleTheme(){var d=document.documentElement.classList.toggle('dark');localStorage.setItem('menuverso_theme',d?'dark':'light');document.getElementById('theme-toggle').textContent=d?'☀️':'🌙';};
+initTheme();
+</script>
+<script>
+var m=L.map('hood-map').setView([41.3682613,2.160125],15);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
+var pts=[[41.3682613, 2.160125, "El Rac\u00f3 de Montju\u00efc", "confirmed", 26], [41.3723297, 2.1671779, "Bagar\u00eda Barcelona", "confirmed", 27], [41.3751571, 2.1693814, "Antic Caf\u00e9 Espanyol", "confirmed", 28], [41.3743382, 2.1594512, "Brisas do Sil", "confirmed", 29], [41.372, 2.161, "Quimet y Quimet", "likely", 241], [41.372, 2.161, "La Bodega d'en Rafel", "likely", 242], [41.372, 2.161, "Bodega Montferry", "likely", 243], [41.372, 2.161, "Tickets", "none", 244], [41.372, 2.161, "Pakta", "none", 245], [41.3744231, 2.1625675, "Mano Rota", "likely", 246], [41.3725546, 2.1613778, "Lascar 74", "none", 247], [41.372, 2.161, "Quimet & Quimet", "likely", 361], [41.372, 2.161, "Bar Seco", "likely", 362], [41.372, 2.161, "Al Bistr\u00f3", "confirmed", 363], [41.372, 2.161, "La Tomaquera", "confirmed", 364], [41.372, 2.161, "Bodega Salt\u00f3", "likely", 365], [41.3741081, 2.163679, "La Bella Napoli", "likely", 366], [41.3768982, 2.1628879, "Federal Caf\u00e9 Poble Sec", "none", 367], [41.3718855, 2.1667336, "Palo Cortao", "likely", 368], [41.3724947, 2.1630694, "Celler Cal Marino", "confirmed", 505], [41.3675122, 2.1592167, "Bar Restaurant Mart\u00ednez", "likely", 506], [41.3730752, 2.1661095, "La Malandrina", "likely", 507], [41.3724681, 2.1620812, "El Sortidor", "confirmed", 508], [41.3752209, 2.156807, "Tickets Bar", "none", 509], [41.3695795, 2.1723024, "Terrassa Mart\u00ednez", "likely", 589], [41.3740462, 2.1633722, "CASA XICA", "confirmed", 590], [41.3731771, 2.1659708, "Koska Taverna", "likely", 652], [41.3730722, 2.1658539, "Blai 9", "likely", 653], [41.3733347, 2.1652358, "La Tasqueta de Blai", "likely", 654], [41.3734078, 2.1653416, "La Esquinita de Blai", "likely", 655], [41.3735656, 2.164687, "Blai Tonight", "likely", 656], [41.3742297, 2.1632306, "Es Xibiu", "likely", 657], [41.3742115, 2.1546082, "Ca\u00f1ota", "likely", 658], [41.3727493, 2.167178, "Gran Bodega Salt\u00f3", "likely", 659], [41.3752174, 2.1582392, "Ikibana Paral\u00b7lel", "none", 660], [41.3744951, 2.1667538, "La Federica", "likely", 661], [41.3749669, 2.1503263, "Ramen Shifu Paral\u00b7lel", "none", 662], [41.3751605, 2.1682873, "Can Lampazas", "likely", 663], [41.3584538, 2.1593183, "La Caseta del Migdia", "likely", 706], [41.3744526, 2.1626097, "Annare' Pizzeria", "likely", 737], [41.372, 2.161, "Tast Gastro Bar", "likely", 787], [41.372, 2.161, "El Rinc\u00f3n del Cava", "likely", 788], [41.3738296, 2.1642531, "O Carballi\u00f1o Blai", "likely", 832], [41.3738463, 2.1639417, "Pincho J.", "likely", 833], [41.374109, 2.1635705, "L'Atelier de Blai", "likely", 834], [41.3732911, 2.1656788, "Blai Tapas Bar", "likely", 835], [41.372, 2.161, "Tacos Tacos Poble Sec", "likely", 907], [41.372, 2.161, "Bella Napoli Poble Sec", "likely", 908], [41.3748304, 2.1558839, "Bodega Ampel\u00f3n", "likely", 909], [41.3760901, 2.1541438, "Hoja Santa", "none", 929], [41.372, 2.161, "Bar Joan", "confirmed", 994], [41.372, 2.161, "La Cuina del Paral\u00b7lel", "confirmed", 995], [41.3735391, 2.165033, "Taberna Blai Tonight", "likely", 1000], [41.3724234, 2.1645013, "Bar Mombiela", "confirmed", 1001], [41.3724681, 2.1620812, "El Sortidor de la Filomena Pag\u00e8s", "confirmed", 1002], [41.3769066, 2.1586879, "Casa Pepi", "confirmed", 1003], [41.373044, 2.1656013, "La Chana", "likely", 1004], [41.3732529, 2.1651252, "La Platilleria", "likely", 1005], [41.372, 2.161, "Bodega Vidal", "likely", 1006], [41.3728887, 2.1646832, "V de Vermut", "likely", 1007], [41.3758695, 2.1619988, "Caf\u00e9 Cometa", "none", 1008], [41.372, 2.161, "Cactus Caf\u00e9", "none", 1009], [41.372, 2.161, "Fundaci\u00f3 Mir\u00f3 Restaurant", "likely", 1030], [41.372, 2.161, "La Font del Gat", "confirmed", 1031], [41.372, 2.161, "Petit H\u00edpica", "likely", 1032], [41.3728061, 2.1619718, "Annar\u00e9 Pizzeria", "likely", 1057], [41.372, 2.161, "Quimet i Quimet Poble Sec", "likely", 1165], [41.372, 2.161, "Tickets Successor", "likely", 1166], [41.372, 2.161, "Bar Leo", "confirmed", 1194], [41.372, 2.161, "Oleum MNAC", "likely", 1195], [41.372, 2.161, "Bodega Quimet", "confirmed", 1314], [41.372, 2.161, "Restaurant Elche", "confirmed", 1315], [41.372, 2.161, "Mano Rota Poble Sec", "confirmed", 1316], [41.372, 2.161, "Quimet d'Horta Poble Sec", "confirmed", 1344], [41.372, 2.161, "Xemei", "likely", 1345], [41.372, 2.161, "Tapa Tapa Montju\u00efc", "confirmed", 1346], [41.372, 2.161, "La Mundana Poble Sec", "confirmed", 1461], [41.372, 2.161, "Bodega Montju\u00efc", "confirmed", 1462], [41.372, 2.161, "Restaurant La Terrassa Poble Sec", "confirmed", 1463], [41.372, 2.161, "El Nou Blai", "confirmed", 1464], [41.372, 2.161, "Can Llu\u00eds Poble Sec", "confirmed", 1465], [41.372, 2.161, "La Cuina del Poble Sec", "confirmed", 1469], [41.372, 2.161, "La Tertulia Poble Sec", "confirmed", 1489], [41.372, 2.161, "Restaurant La Esquina Poble Sec", "confirmed", 1491]];
+pts.forEach(function(p){
+  var c=p[3]==='confirmed'?'#059669':p[3]==='likely'?'#D97706':'#DC2626';
+  L.circleMarker([p[0],p[1]],{radius:6,fillColor:c,color:'#fff',weight:2,fillOpacity:0.9}).addTo(m).bindPopup('<b>'+p[2]+'</b><br><a href="../r/'+p[4]+'.html">View details</a>');
+});
+if(pts.length>1){m.fitBounds(pts.map(function(p){return[p[0],p[1]]}));}
+</script>
+</body>
+</html>

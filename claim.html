@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menuverso — Restaurant Owner Dashboard</title>
+<meta name="description" content="Restaurant owners: preview your Menuverso listing, see your neighborhood ranking, and download a printable QR poster.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#F8FAFC;--card:#FFF;--text:#1E293B;--sub:#64748B;--mut:#94A3B8;--border:#E2E8F0;--accent:#2563EB;--accent-sub:#DBEAFE;--green:#059669;--green-bg:#D1FAE5;--amber:#D97706;--red:#DC2626;--radius:12px;--shadow:0 2px 8px rgba(0,0,0,0.06);}
+:root.dark{--bg:#0F172A;--card:#1E293B;--text:#F1F5F9;--sub:#94A3B8;--mut:#64748B;--border:#334155;--accent:#3B82F6;--accent-sub:#1E3A5F;--green:#34D399;--green-bg:#064E3B;--amber:#FBBF24;--red:#F87171;--shadow:0 2px 8px rgba(0,0,0,0.3);}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background 0.3s,color 0.3s;}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1.5rem;border-bottom:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+.nav-brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.1rem;}
+.nav-brand img{width:28px;height:28px;border-radius:8px;}
+.nav-links{display:flex;align-items:center;gap:1rem;}
+.nav-links a{color:var(--sub);text-decoration:none;font-size:0.82rem;font-weight:500;padding:0.3rem 0.5rem;border-radius:8px;transition:all 0.2s;}
+.nav-links a:hover{color:var(--text);}
+.nav-links a.active{color:var(--accent);font-weight:600;}
+.controls-bar{display:flex;gap:0.5rem;align-items:center;}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:0.3rem 0.55rem;cursor:pointer;font-size:0.85rem;color:var(--sub);transition:all 0.2s;}
+.container{max-width:700px;margin:0 auto;padding:1.5rem;}
+h1{font-size:clamp(1.4rem,3vw,1.8rem);text-align:center;margin-bottom:0.25rem;}
+.subtitle{text-align:center;color:var(--sub);font-size:0.88rem;margin-bottom:2rem;}
+.search-section{margin-bottom:2rem;position:relative;}
+.search-section input{width:100%;padding:0.75rem 1rem;border:2px solid var(--border);border-radius:var(--radius);font-size:1rem;font-family:Inter,sans-serif;background:var(--card);color:var(--text);transition:border-color 0.2s;}
+.search-section input:focus{outline:none;border-color:var(--accent);}
+.search-dropdown{position:absolute;top:100%;left:0;right:0;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);max-height:250px;overflow-y:auto;z-index:50;box-shadow:0 8px 24px rgba(0,0,0,0.15);display:none;margin-top:4px;}
+.search-dropdown.open{display:block;}
+.sd-item{padding:0.6rem 1rem;cursor:pointer;transition:background 0.15s;border-bottom:1px solid var(--border);}
+.sd-item:last-child{border-bottom:none;}
+.sd-item:hover{background:var(--accent-sub);}
+.sd-name{font-weight:600;font-size:0.9rem;}
+.sd-meta{color:var(--sub);font-size:0.78rem;}
+.dashboard{display:none;}
+.dash-header{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;text-align:center;margin-bottom:1.5rem;box-shadow:var(--shadow);}
+.dash-header h2{font-size:1.3rem;margin-bottom:0.25rem;}
+.dash-badge{display:inline-flex;padding:4px 10px;border-radius:6px;font-size:0.75rem;font-weight:600;color:#fff;margin-bottom:0.5rem;}
+.dash-meta{font-size:0.85rem;color:var(--sub);}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.75rem;margin-bottom:1.5rem;}
+.metric{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;text-align:center;box-shadow:var(--shadow);}
+.metric-num{font-size:1.4rem;font-weight:700;}
+.metric-label{font-size:0.7rem;color:var(--mut);text-transform:uppercase;letter-spacing:0.04em;margin-top:2px;}
+.green{color:var(--green);}
+.section{margin-bottom:1.5rem;}
+.section-title{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:600;color:var(--mut);margin-bottom:0.75rem;}
+.info-row{display:flex;justify-content:space-between;padding:0.5rem 0.75rem;font-size:0.85rem;border-bottom:1px solid var(--border);}
+.info-row:last-child{border-bottom:none;}
+.info-label{color:var(--sub);font-weight:500;}
+.info-val{font-weight:600;}
+.info-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+.actions{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+.btn{padding:0.55rem 1.1rem;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:0.82rem;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
+.btn:hover{border-color:var(--accent);color:var(--accent);}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+.poster{background:#fff;border:2px solid var(--border);border-radius:var(--radius);padding:2rem;text-align:center;color:#1E293B;margin-bottom:1rem;}
+.poster h3{font-size:1.1rem;margin-bottom:0.25rem;}
+.poster p{font-size:0.8rem;color:#64748B;margin-bottom:1rem;}
+.poster #poster-qr{display:inline-block;margin-bottom:0.75rem;}
+.poster .poster-brand{font-size:0.72rem;color:#94A3B8;margin-top:0.5rem;}
+.tips-section{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;box-shadow:var(--shadow);}
+.tips-section h3{font-size:0.88rem;margin-bottom:0.75rem;}
+.tips-section ul{list-style:none;padding:0;}
+.tips-section li{padding:0.4rem 0;font-size:0.82rem;color:var(--sub);border-bottom:1px solid var(--border);}
+.tips-section li:last-child{border-bottom:none;}
+.tips-section li::before{content:'💡';margin-right:6px;}
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:0.6rem 1.5rem;border-radius:999px;font-size:0.82rem;font-weight:500;z-index:200;opacity:0;transition:opacity 0.3s;pointer-events:none;}
+.toast.show{opacity:1;}
+footer{text-align:center;padding:2rem;color:var(--mut);font-size:0.78rem;border-top:1px solid var(--border);}
+footer a{color:var(--sub);text-decoration:none;}
+img[src*="logo.png"]{mix-blend-mode:multiply;}
+:root.dark img[src*="logo.png"]{mix-blend-mode:normal;filter:brightness(1.2);}
+@media(max-width:640px){.metrics{grid-template-columns:repeat(2,1fr);}.actions{flex-direction:column;}.nav-links a span{display:none;}}
+@media print{.topnav,.search-section,.actions,.controls-bar,.dashboard>*:not(.poster),footer{display:none !important;}.poster{border:2px solid #333;page-break-inside:avoid;}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a href="index.html" class="nav-brand"><img src="assets/logo.png" alt="Menuverso"><span>Menuverso</span></a>
+  <div class="nav-links">
+    <a href="index.html"><span>📋 </span>Database</a>
+    <a href="finder.html"><span>🔍 </span>Finder</a>
+    <a href="analytics.html"><span>📊 </span>Analytics</a>
+    <a href="lists.html"><span>🏆 </span>Best Of</a>
+    <a href="claim.html" class="active"><span>🏪 </span>Owners</a>
+  </div>
+  <div class="controls-bar"><button class="theme-btn" id="theme-toggle" onclick="toggleTheme()">🌙</button></div>
+</nav>
+
+<div class="container">
+  <h1>🏪 Restaurant Owner Dashboard</h1>
+  <p class="subtitle">Find your restaurant, preview your listing, and download your QR poster</p>
+
+  <div class="search-section">
+    <input type="text" id="owner-search" placeholder="🔍 Search your restaurant name..." oninput="onSearch()" onfocus="onSearch()">
+    <div class="search-dropdown" id="search-dropdown"></div>
+  </div>
+
+  <div class="dashboard" id="dashboard"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+<footer>Built with ❤️ by <a href="landing.html">Menuverso</a> · <a href="index.html">Database</a></footer>
+
+<script src="restaurants_data.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+const DATA = window.RESTAURANT_DATA || [];
+let currentR = null;
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+function onSearch() {
+  const q = document.getElementById('owner-search').value.toLowerCase().trim();
+  const dd = document.getElementById('search-dropdown');
+  if (!q || q.length < 2) { dd.classList.remove('open'); return; }
+  
+  const matches = DATA.filter(r => r.name.toLowerCase().includes(q) || (r.address_full||'').toLowerCase().includes(q)).slice(0, 8);
+  if (!matches.length) { dd.innerHTML = '<div class="sd-item"><span class="sd-meta">No restaurants found</span></div>'; dd.classList.add('open'); return; }
+  
+  dd.innerHTML = matches.map(r => `<div class="sd-item" onclick="selectRestaurant(${r.id})">
+    <div class="sd-name">${r.name}</div>
+    <div class="sd-meta">${r.cuisine_type} · ${r.neighborhood} · ${r.address_full||'—'}</div>
+  </div>`).join('');
+  dd.classList.add('open');
+}
+
+function selectRestaurant(id) {
+  currentR = DATA.find(r => r.id === id);
+  if (!currentR) return;
+  document.getElementById('search-dropdown').classList.remove('open');
+  document.getElementById('owner-search').value = currentR.name;
+  renderDashboard();
+}
+
+function renderDashboard() {
+  const r = currentR;
+  if (!r) return;
+  const dash = document.getElementById('dashboard');
+  dash.style.display = 'block';
+
+  const tier = r.menu_tier || 'none';
+  const tierLabel = {confirmed:'🟢 Confirmed',likely:'🟡 Likely',none:'🔴 Not Listed'}[tier];
+  const tierColor = {confirmed:'#059669',likely:'#D97706',none:'#DC2626'}[tier];
+
+  // Neighborhood rank
+  const hoodRs = DATA.filter(d => d.neighborhood === r.neighborhood && d.google_maps_rating);
+  const sorted = [...hoodRs].sort((a,b) => (b.google_maps_rating||0) - (a.google_maps_rating||0));
+  const rank = sorted.findIndex(d => d.id === r.id) + 1;
+  const rankStr = rank ? `#${rank} of ${sorted.length}` : '—';
+
+  // Price position
+  const parsePrice = s => { if(!s) return null; const m=s.match(/[\d.]+/); return m?parseFloat(m[0]):null; };
+  const allPrices = DATA.filter(d => d.neighborhood === r.neighborhood).map(d => parsePrice(d.menu_price_range)).filter(Boolean);
+  const myPrice = parsePrice(r.menu_price_range);
+  const avgPrice = allPrices.length ? (allPrices.reduce((a,b)=>a+b,0)/allPrices.length).toFixed(1) : '—';
+  const pricePosition = myPrice && allPrices.length > 1 ? (myPrice <= parseFloat(avgPrice) ? '💚 Below average' : '🧡 Above average') : '—';
+
+  const pageUrl = `https://whiteboxamir.github.io/menuverso/r/${r.id}.html`;
+
+  dash.innerHTML = `
+    <div class="dash-header">
+      <div class="dash-badge" style="background:${tierColor}">${tierLabel}</div>
+      <h2>${r.name}</h2>
+      <div class="dash-meta">${r.cuisine_type} · ${r.neighborhood} · ${r.menu_price_range || '—'}</div>
+    </div>
+
+    <div class="metrics">
+      <div class="metric"><div class="metric-num">${r.google_maps_rating || '—'}<span style="font-size:0.7em">/5</span></div><div class="metric-label">Rating</div></div>
+      <div class="metric"><div class="metric-num">${(r.google_maps_review_count||0).toLocaleString()}</div><div class="metric-label">Reviews</div></div>
+      <div class="metric"><div class="metric-num green">${rankStr}</div><div class="metric-label">Rank in ${r.neighborhood}</div></div>
+      <div class="metric"><div class="metric-num">${pricePosition}</div><div class="metric-label">Price vs Avg €${avgPrice}</div></div>
+    </div>
+
+    <div class="actions">
+      <a href="r/${r.id}.html" class="btn primary" target="_blank">👁️ Preview Your Listing</a>
+      <a href="compare.html?ids=${r.id}" class="btn">⚖️ Compare with Competitors</a>
+      <a href="n/${r.neighborhood.toLowerCase().replace(/ /g,'-').replace(/'/g,'').replace(/ò/g,'o').replace(/à/g,'a').replace(/í/g,'i')}.html" class="btn">📍 ${r.neighborhood} Overview</a>
+      <button class="btn" onclick="window.print()">🖨️ Print QR Poster</button>
+    </div>
+
+    <div class="section">
+      <div class="section-title">📋 Your Listing Details</div>
+      <div class="info-box">
+        <div class="info-row"><span class="info-label">Address</span><span class="info-val">${r.address_full || '—'}</span></div>
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val">${r.phone || '❌ Not listed'}</span></div>
+        <div class="info-row"><span class="info-label">Website</span><span class="info-val">${r.website ? '<a href="'+r.website+'" target="_blank" style="color:var(--accent)">'+r.website.replace(/https?:\/\//,'').slice(0,30)+'</a>' : '❌ Not listed'}</span></div>
+        <div class="info-row"><span class="info-label">Instagram</span><span class="info-val">${r.instagram || '❌ Not listed'}</span></div>
+        <div class="info-row"><span class="info-label">Metro</span><span class="info-val">${r.metro_station || '—'}</span></div>
+        <div class="info-row"><span class="info-label">Tags</span><span class="info-val">${(r.tags||[]).join(', ') || '—'}</span></div>
+        <div class="info-row"><span class="info-label">Notes</span><span class="info-val">${r.notes || '—'}</span></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">📱 Printable QR Poster</div>
+      <div class="poster">
+        <h3>📍 ${r.name}</h3>
+        <p>${r.cuisine_type} · ${r.neighborhood}</p>
+        <div id="poster-qr"></div>
+        <p style="font-size:0.85rem;font-weight:600;margin-bottom:0.25rem;">Scan to see our listing on Menuverso</p>
+        <p style="font-size:0.75rem;color:#64748B;">${r.menu_price_range ? 'Menú del día: ' + r.menu_price_range : ''} ${r.google_maps_rating ? '· ⭐ ' + r.google_maps_rating + '/5' : ''}</p>
+        <div class="poster-brand">menuverso.com</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="tips-section">
+        <h3>💡 How to Improve Your Listing</h3>
+        <ul>
+          ${!r.phone ? '<li>Add your phone number to help customers reach you</li>' : ''}
+          ${!r.website ? '<li>Add your website URL for more visibility</li>' : ''}
+          ${!r.instagram ? '<li>Connect your Instagram for social proof</li>' : ''}
+          ${tier === 'none' ? '<li>Confirm your menú del día to appear in Best Of lists</li>' : ''}
+          ${!(r.tags||[]).length ? '<li>Add tags to help foodies discover your restaurant</li>' : ''}
+          ${!r.notes ? '<li>Add a description to tell customers what makes you special</li>' : ''}
+          <li>Print your QR poster and display it in your window</li>
+          <li>Share your listing link on social media for more reviews</li>
+        </ul>
+      </div>
+    </div>
+  `;
+
+  // Generate QR
+  try {
+    new QRCode(document.getElementById('poster-qr'), {
+      text: pageUrl, width: 180, height: 180,
+      colorDark: '#1E293B', colorLight: '#ffffff',
+      correctLevel: QRCode.CorrectLevel.M
+    });
+  } catch(e){}
+}
+
+document.addEventListener('click', e => {
+  if (!e.target.closest('.search-section')) document.getElementById('search-dropdown').classList.remove('open');
+});
+
+function initTheme() {
+  const s = localStorage.getItem('menuverso_theme');
+  if (s === 'dark' || (!s && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
+    document.documentElement.classList.add('dark');
+    document.getElementById('theme-toggle').textContent = '☀️';
+  }
+}
+function toggleTheme() {
+  const d = document.documentElement.classList.toggle('dark');
+  localStorage.setItem('menuverso_theme', d ? 'dark' : 'light');
+  document.getElementById('theme-toggle').textContent = d ? '☀️' : '🌙';
+}
+
+// Load from URL param
+const params = new URLSearchParams(location.search);
+const rid = params.get('id');
+if (rid) { selectRestaurant(parseInt(rid)); }
+
+initTheme();
+</script>
+</body>
+</html>

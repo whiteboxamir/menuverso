@@ -83,6 +83,12 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-main);
 .tag.clickable{cursor:pointer;}
 .tag.clickable:hover{background:#E2E8F0;color:#1E293B;}
 .card-detail{font-size:0.82rem;color:var(--text-sub);margin-bottom:0.3rem;display:flex;align-items:flex-start;}
+/* Open Now */
+.open-pill{display:inline-flex;align-items:center;gap:4px;padding:0.15rem 0.5rem;border-radius:12px;font-size:0.68rem;font-weight:600;margin-bottom:0.5rem;}
+.open-pill.open{background:var(--green-bg);color:var(--green);}
+.open-pill.closed{background:var(--red-bg);color:var(--red);}
+.open-pill .pulse{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse-dot 2s infinite;}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.4);}}
 .card-notes{font-size:0.82rem;color:var(--text-sub);margin-top:0.5rem;line-height:1.5;padding-top:0.5rem;border-top:1px solid #F1F5F9;flex-grow:1;}
 .card-links{margin-top:0.75rem;display:flex;gap:0.75rem;flex-wrap:wrap;padding-top:0.75rem;border-top:1px solid #F1F5F9;}
 .card-links a{font-size:0.78rem;font-weight:500;color:var(--accent);text-decoration:none;transition:color 0.2s;}
@@ -232,6 +238,7 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
   <span class="chip y" data-filter="mtier" data-value="likely">🟡 <span data-i18n="likely">Likely</span></span>
   <span class="chip r" data-filter="mtier" data-value="none">🔴 <span data-i18n="no_menu">No Menú</span></span>
   <span class="chip" data-filter="fav" data-value="yes">⭐ <span data-i18n="favorites">Favorites</span> <span id="fav-count" style="font-size:0.65rem;opacity:0.7;"></span></span>
+  <span class="chip g" data-filter="openNow" data-value="yes">🟢 <span data-i18n="open_now">Open Now</span></span>
   <span class="pipe">|</span>
   <span class="chip" data-filter="tier" data-value="budget">💚 <span data-i18n="budget">Budget</span></span>
   <span class="chip" data-filter="tier" data-value="mid-range">🧡 <span data-i18n="mid_range">Mid-Range</span></span>
@@ -432,6 +439,7 @@ function getFiltered(){
     if(activeFilters.tier&&r.pricing_tier!==activeFilters.tier)return false;
     if(activeFilters.cuisine&&r.cuisine_type!==activeFilters.cuisine)return false;
     if(activeFilters.fav&&!favorites.includes(r.id))return false;
+    if(activeFilters.openNow&&!isRestaurantOpen(r))return false;
     if(activeFilters.tag&&!(r.tags||[]).includes(activeFilters.tag))return false;
     if(q){const s=[r.name,r.neighborhood,r.cuisine_type,r.notes||'',(r.tags||[]).join(' '),r.address_full||'',r.metro_station||''].join(' ').toLowerCase();if(!s.includes(q))return false}
     return true;
@@ -480,12 +488,15 @@ function renderList(filtered){
     if(r.phone)links+=`<a href="tel:${r.phone}">📞 ${t('call')}</a>`;
     if(r.instagram)links+=`<a href="https://instagram.com/${r.instagram.replace('@','')}" target="_blank">📸 IG</a>`;
     const rating=r.google_maps_rating?`⭐ ${r.google_maps_rating} (${r.google_maps_review_count||0})`:'';
+    const openStatus=getOpenStatus(r);
+    const openHtml=openStatus==='open'?'<div class="open-pill open"><span class="pulse"></span> Open</div>':openStatus==='closed'?'<div class="open-pill closed">Closed</div>':'';
     const tagHtml=(r.tags||[]).map(t=>`<span class="tag clickable" onclick="filterByTag('${t}')">${t}</span>`).join('');
     const isFav=favorites.includes(r.id);
     return `<div class="card">
       <button class="fav-btn ${isFav?'active':''}" onclick="toggleFav(${r.id},this)" title="${isFav?'Remove from':'Add to'} favorites">${isFav?'❤️':'🩶'}</button>
       <div class="card-header"><span class="card-name">${r.name}</span><span class="card-price">${r.menu_price_range||'—'}</span></div>
       <span class="badge ${tier}">${tier==='confirmed'?'🟢 Confirmed':tier==='likely'?'🟡 Likely':'🔴 No Menú'}</span>
+      ${openHtml}
       <div class="tags"><span class="tag">${r.neighborhood}</span><span class="tag">${r.cuisine_type}</span><span class="tag">${r.pricing_tier}</span>${tagHtml}</div>
       ${rating?`<div class="card-detail">${rating}</div>`:''}
       ${r.address_full?`<div class="card-detail">📍 ${r.address_full}${r.postal_code?' · '+r.postal_code:''}</div>`:''}
@@ -761,6 +772,45 @@ function toggleTheme(){
   document.getElementById('theme-toggle').textContent=isDark?'☀️':'🌙';
 }
 initTheme();
+
+// Open Now computation
+function parseHoursStatus(hoursStr){
+  if(!hoursStr||!hoursStr.trim()) return 'unknown';
+  var now=new Date();
+  var h=now.getHours(),m=now.getMinutes();
+  var nowMin=h*60+m;
+  var dayOfWeek=now.getDay();
+  var dayMatch=hoursStr.match(/\(([^)]+)\)/);
+  if(dayMatch){
+    var dayStr=dayMatch[1].toLowerCase();
+    var dayAbbr=['sun','mon','tue','wed','thu','fri','sat'];
+    var dayAbbr2=['dom','lun','mar','mie','jue','vie','sab'];
+    var rangeM=dayStr.match(/(\w+)-(\w+)/);
+    if(rangeM){
+      var s=-1,e=-1;
+      [dayAbbr,dayAbbr2].forEach(function(arr){
+        arr.forEach(function(d,i){if(rangeM[1].startsWith(d))s=i;if(rangeM[2].startsWith(d))e=i;});
+      });
+      if(s>=0&&e>=0){
+        var inR=s<=e?(dayOfWeek>=s&&dayOfWeek<=e):(dayOfWeek>=s||dayOfWeek<=e);
+        if(!inR) return 'closed';
+      }
+    }
+  }
+  var timeRanges=hoursStr.replace(/\([^)]+\)/g,'').match(/\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2}/g);
+  if(!timeRanges) return 'unknown';
+  var isOpen=false;
+  timeRanges.forEach(function(range){
+    var parts=range.split('-').map(function(s){return s.trim();});
+    var sP=parts[0].split(':'),eP=parts[1].split(':');
+    var sMin=parseInt(sP[0])*60+parseInt(sP[1]);
+    var eMin=parseInt(eP[0])*60+parseInt(eP[1]);
+    if(nowMin>=sMin&&nowMin<eMin) isOpen=true;
+  });
+  return isOpen?'open':'closed';
+}
+function getOpenStatus(r){ return parseHoursStatus(r.opening_hours_lunch||''); }
+function isRestaurantOpen(r){ return getOpenStatus(r)==='open'; }
 
 // Service Worker registration + PWA Install Prompt
 let deferredPrompt;
