@@ -211,7 +211,7 @@ function init(){
   const confirmed=DATA.filter(r=>r.menu_tier==='confirmed').length;
   const likely=DATA.filter(r=>r.menu_tier==='likely').length;
   const none=DATA.length-confirmed-likely;
-  const mapped=DATA.filter(r=>r.coordinates&&r.coordinates.lat&&r.coordinates.lng).length;
+  const mapped=DATA.filter(r=>{if(!r.coordinates||!r.coordinates.lat||!r.coordinates.lng)return false;const d=String(r.coordinates.lat).split('.')[1]||'';return d.length>=5;}).length;
   const tagged=DATA.filter(r=>r.tags&&r.tags.length>0).length;
 
   document.getElementById('subtitle').textContent=`Exhaustive Barcelona restaurant database. ${DATA.length} restaurants across ${hoods.length} neighborhoods with menú del día tracking.`;
