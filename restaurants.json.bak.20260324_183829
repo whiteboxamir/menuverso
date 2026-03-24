@@ -1,4 +1,4 @@
-var RESTAURANT_DATA = [
+[
   {
     "id": 1,
     "name": "Casa Jaime",
@@ -132,8 +132,7 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.3847852,
       "lng": 2.1485409
-    },
-    "image_url": "assets/photos/2_hero.webp"
+    }
   },
   {
     "id": 3,
@@ -10938,8 +10937,7 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.4037725,
       "lng": 2.1576976
-    },
-    "image_url": "assets/photos/172_hero.webp"
+    }
   },
   {
     "id": 173,
@@ -16383,8 +16381,7 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.38,
       "lng": 2.189
-    },
-    "image_url": "assets/photos/261_hero.webp"
+    }
   },
   {
     "id": 262,
@@ -22697,8 +22694,7 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.38,
       "lng": 2.168
-    },
-    "image_url": "assets/photos/359_hero.webp"
+    }
   },
   {
     "id": 360,
@@ -25664,8 +25660,7 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.3749589,
       "lng": 2.1731513
-    },
-    "image_url": "assets/photos/404_hero.webp"
+    }
   },
   {
     "id": 405,
@@ -77284,8 +77279,7 @@ var RESTAURANT_DATA = [
     "coordinates": {
       "lat": 41.38,
       "lng": 2.168
-    },
-    "image_url": "assets/photos/1186_hero.webp"
+    }
   },
   {
     "id": 1187,
@@ -81236,8 +81230,7 @@ var RESTAURANT_DATA = [
       "sunday": "13:00-16:00",
       "closed_days": []
     },
-    "outdoor_seating": true,
-    "image_url": "assets/photos/1269_hero.webp"
+    "outdoor_seating": true
   },
   {
     "id": 1270,
@@ -81329,8 +81322,7 @@ var RESTAURANT_DATA = [
       "closed_days": [
         "sunday"
       ]
-    },
-    "image_url": "assets/photos/1271_hero.webp"
+    }
   },
   {
     "id": 1272,
@@ -81972,8 +81964,7 @@ var RESTAURANT_DATA = [
       "saturday": "13:30-16:00, 20:30-23:00",
       "sunday": "13:30-15:30, 20:30-23:30",
       "closed_days": []
-    },
-    "image_url": "assets/photos/1286_hero.webp"
+    }
   },
   {
     "id": 1287,
@@ -83329,8 +83320,7 @@ var RESTAURANT_DATA = [
       "saturday": "13:00-16:00, 20:00-23:30",
       "sunday": "13:00-16:00, 20:00-23:00",
       "closed_days": []
-    },
-    "image_url": "assets/photos/1318_hero.webp"
+    }
   },
   {
     "id": 1319,
@@ -91931,4 +91921,4 @@ var RESTAURANT_DATA = [
     },
     "outdoor_seating": true
   }
-];
+]
