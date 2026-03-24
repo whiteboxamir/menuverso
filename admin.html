@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menuverso — Data Quality Admin</title>
+<meta name="robots" content="noindex,nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#F8FAFC;--card:#FFFFFF;--text-main:#1E293B;--text-sub:#64748B;--text-mut:#94A3B8;--border:#E2E8F0;--radius:10px;--shadow:0 1px 3px rgba(0,0,0,0.06);--green:#059669;--amber:#D97706;--red:#DC2626;--accent:#2563EB;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-main);min-height:100vh;}
+.container{max-width:1100px;margin:0 auto;padding:2rem 1.5rem;}
+h1{font-size:1.5rem;text-align:center;margin-bottom:0.5rem;}
+.subtitle{text-align:center;color:var(--text-sub);margin-bottom:2rem;font-size:0.85rem;}
+.subtitle a{color:var(--accent);text-decoration:none;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem;margin-bottom:2rem;}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;box-shadow:var(--shadow);}
+.panel h2{font-size:0.95rem;font-weight:600;margin-bottom:1rem;}
+.meter{margin-bottom:0.75rem;}
+.meter-label{display:flex;justify-content:space-between;font-size:0.82rem;margin-bottom:0.3rem;}
+.meter-label .field{font-weight:500;color:var(--text-main);}
+.meter-label .pct{font-weight:600;}
+.meter-bar{height:8px;background:#F1F5F9;border-radius:4px;overflow:hidden;}
+.meter-fill{height:100%;border-radius:4px;transition:width 0.6s ease;}
+.issue{padding:0.5rem 0.75rem;margin-bottom:0.4rem;border-radius:6px;font-size:0.78rem;border-left:3px solid;}
+.issue.warn{background:#FEF3C7;border-color:var(--amber);color:#92400E;}
+.issue.error{background:#FEE2E2;border-color:var(--red);color:#991B1B;}
+.issue.info{background:#DBEAFE;border-color:var(--accent);color:#1E40AF;}
+table{width:100%;border-collapse:collapse;font-size:0.8rem;}
+th{text-align:left;padding:0.4rem;border-bottom:2px solid var(--border);color:var(--text-sub);font-weight:600;font-size:0.75rem;}
+td{padding:0.4rem;border-bottom:1px solid #F1F5F9;}
+td:not(:first-child){text-align:right;}
+.badge{display:inline-block;padding:2px 6px;border-radius:4px;font-size:0.65rem;font-weight:600;}
+.badge.g{background:#D1FAE5;color:#059669;}
+.badge.y{background:#FEF3C7;color:#D97706;}
+.badge.r{background:#FEE2E2;color:#DC2626;}
+footer{text-align:center;padding:1.5rem;color:var(--text-mut);font-size:0.78rem;border-top:1px solid var(--border);}
+footer a{color:var(--text-sub);text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🔧 Data Quality Dashboard</h1>
+  <p class="subtitle">Internal admin view · <a href="index.html">← Back to Database</a> · <a href="analytics.html">Analytics</a></p>
+
+  <div class="grid" id="completeness"></div>
+  
+  <div class="grid">
+    <div class="panel">
+      <h2>⚠️ Data Issues</h2>
+      <div id="issues"></div>
+    </div>
+    <div class="panel">
+      <h2>📋 Enrichment Priority Queue</h2>
+      <div id="priority"></div>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-bottom:2rem;">
+    <h2>📊 Per-Neighborhood Completeness</h2>
+    <table id="hood-table">
+      <thead><tr><th>Neighborhood</th><th>Total</th><th>Confirmed</th><th>Website</th><th>Phone</th><th>Coords</th><th>Tags</th><th>Score</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+<footer>Menuverso Admin · Not indexed</footer>
+
+<script src="restaurants_data.js"></script>
+<script>
+const DATA=window.RESTAURANT_DATA||[];
+
+function init(){
+  const total=DATA.length;
+  
+  // Field completeness
+  const fields=[
+    {name:'Name',key:'name',icon:'📝'},
+    {name:'Neighborhood',key:'neighborhood',icon:'🏘️'},
+    {name:'Cuisine',key:'cuisine_type',icon:'🍽️'},
+    {name:'Address',key:'address_full',icon:'📍'},
+    {name:'Postal Code',key:'postal_code',icon:'📮'},
+    {name:'Menu Tier',key:'menu_tier',icon:'🎯'},
+    {name:'Price Range',key:'menu_price_range',icon:'💰'},
+    {name:'Rating',key:'google_maps_rating',icon:'⭐'},
+    {name:'Coordinates',fn:r=>r.coordinates&&r.coordinates.lat,icon:'🗺️'},
+    {name:'Precise Coords',fn:r=>{if(!r.coordinates||!r.coordinates.lat)return false;return String(r.coordinates.lat).split('.')[1]?.length>=5},icon:'📌'},
+    {name:'Website',key:'website',icon:'🌐'},
+    {name:'Phone',key:'phone',icon:'📞'},
+    {name:'Instagram',key:'instagram',icon:'📸'},
+    {name:'Google Maps URL',key:'google_maps_url',icon:'🔗'},
+    {name:'Tags',fn:r=>r.tags&&r.tags.length>0,icon:'🏷️'},
+    {name:'Metro Station',key:'metro_station',icon:'🚇'},
+    {name:'Notes',key:'notes',icon:'📝'},
+  ];
+
+  const grid=document.getElementById('completeness');
+  let html='<div class="panel"><h2>📊 Field Completeness</h2>';
+  fields.forEach(f=>{
+    const count=DATA.filter(r=>{
+      if(f.fn)return f.fn(r);
+      const v=r[f.key];
+      return v!==undefined&&v!==null&&v!=='';
+    }).length;
+    const pct=Math.round(count/total*100);
+    const color=pct>80?'var(--green)':pct>50?'var(--amber)':'var(--red)';
+    html+=`<div class="meter">
+      <div class="meter-label"><span class="field">${f.icon} ${f.name}</span><span class="pct" style="color:${color}">${count}/${total} (${pct}%)</span></div>
+      <div class="meter-bar"><div class="meter-fill" style="width:${pct}%;background:${color}"></div></div>
+    </div>`;
+  });
+  html+='</div>';
+  
+  // Tier breakdown
+  const confirmed=DATA.filter(r=>r.menu_tier==='confirmed').length;
+  const likely=DATA.filter(r=>r.menu_tier==='likely').length;
+  const none=total-confirmed-likely;
+  html+=`<div class="panel"><h2>🎯 Menu Tier Distribution</h2>
+    <div class="meter"><div class="meter-label"><span class="field">🟢 Confirmed</span><span class="pct" style="color:var(--green)">${confirmed} (${Math.round(confirmed/total*100)}%)</span></div>
+    <div class="meter-bar"><div class="meter-fill" style="width:${confirmed/total*100}%;background:var(--green)"></div></div></div>
+    <div class="meter"><div class="meter-label"><span class="field">🟡 Likely</span><span class="pct" style="color:var(--amber)">${likely} (${Math.round(likely/total*100)}%)</span></div>
+    <div class="meter-bar"><div class="meter-fill" style="width:${likely/total*100}%;background:var(--amber)"></div></div></div>
+    <div class="meter"><div class="meter-label"><span class="field">🔴 None</span><span class="pct" style="color:var(--red)">${none} (${Math.round(none/total*100)}%)</span></div>
+    <div class="meter-bar"><div class="meter-fill" style="width:${none/total*100}%;background:var(--red)"></div></div></div>
+  </div>`;
+  grid.innerHTML=html;
+
+  // Issues
+  const issues=[];
+  const noAddr=DATA.filter(r=>!r.address_full).length;
+  if(noAddr>0)issues.push({type:'warn',text:`${noAddr} restaurants missing address`});
+  const noPrice=DATA.filter(r=>!r.menu_price_range&&r.menu_tier==='confirmed').length;
+  if(noPrice>0)issues.push({type:'warn',text:`${noPrice} confirmed restaurants missing price`});
+  const noWeb=DATA.filter(r=>!r.website&&r.menu_tier==='confirmed').length;
+  if(noWeb>0)issues.push({type:'info',text:`${noWeb} confirmed restaurants missing website`});
+  const noPhone=DATA.filter(r=>!r.phone&&r.menu_tier==='confirmed').length;
+  if(noPhone>0)issues.push({type:'info',text:`${noPhone} confirmed restaurants missing phone`});
+  const centroidCoords=DATA.filter(r=>{if(!r.coordinates||!r.coordinates.lat)return false;return String(r.coordinates.lat).split('.')[1]?.length<5}).length;
+  if(centroidCoords>0)issues.push({type:'warn',text:`${centroidCoords} restaurants have neighborhood-centroid coordinates (not precise)`});
+  const noCoords=DATA.filter(r=>!r.coordinates||!r.coordinates.lat).length;
+  if(noCoords>0)issues.push({type:'error',text:`${noCoords} restaurants missing coordinates entirely`});
+
+  document.getElementById('issues').innerHTML=issues.length?
+    issues.map(i=>`<div class="issue ${i.type}">${i.text}</div>`).join(''):
+    '<p style="color:var(--green);font-size:0.85rem;">✅ No critical issues!</p>';
+
+  // Priority queue
+  const queue=DATA.filter(r=>r.menu_tier==='confirmed'&&(!r.website||!r.phone))
+    .sort((a,b)=>(b.google_maps_rating||0)-(a.google_maps_rating||0))
+    .slice(0,15);
+  document.getElementById('priority').innerHTML='<table><thead><tr><th>ID</th><th>Name</th><th>Rating</th><th>Missing</th></tr></thead><tbody>'+
+    queue.map(r=>{
+      const missing=[];
+      if(!r.website)missing.push('🌐');
+      if(!r.phone)missing.push('📞');
+      if(!r.instagram)missing.push('📸');
+      return `<tr><td>#${r.id}</td><td>${r.name}</td><td>${r.google_maps_rating||'—'}</td><td>${missing.join(' ')}</td></tr>`;
+    }).join('')+'</tbody></table>';
+
+  // Per-neighborhood table
+  const hoods={};
+  DATA.forEach(r=>{
+    const h=r.neighborhood;
+    if(!hoods[h])hoods[h]={total:0,confirmed:0,website:0,phone:0,coords:0,tags:0};
+    hoods[h].total++;
+    if(r.menu_tier==='confirmed')hoods[h].confirmed++;
+    if(r.website)hoods[h].website++;
+    if(r.phone)hoods[h].phone++;
+    if(r.coordinates&&r.coordinates.lat)hoods[h].coords++;
+    if(r.tags&&r.tags.length>0)hoods[h].tags++;
+  });
+
+  const tbody=document.querySelector('#hood-table tbody');
+  tbody.innerHTML=Object.entries(hoods).sort((a,b)=>b[1].total-a[1].total).map(([name,d])=>{
+    const score=Math.round((d.confirmed+d.website+d.phone+d.coords+d.tags)/(d.total*5)*100);
+    const badge=score>60?'g':score>30?'y':'r';
+    return `<tr><td>${name}</td><td>${d.total}</td><td>${d.confirmed} (${Math.round(d.confirmed/d.total*100)}%)</td><td>${d.website} (${Math.round(d.website/d.total*100)}%)</td><td>${d.phone} (${Math.round(d.phone/d.total*100)}%)</td><td>${d.coords} (${Math.round(d.coords/d.total*100)}%)</td><td>${d.tags} (${Math.round(d.tags/d.total*100)}%)</td><td><span class="badge ${badge}">${score}%</span></td></tr>`;
+  }).join('');
+}
+
+init();
+</script>
+</body>
+</html>

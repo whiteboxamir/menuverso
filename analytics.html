@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menuverso — Price Analytics</title>
+<meta name="description" content="Price analytics and insights for Barcelona's menú del día restaurants.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#F8FAFC;--card:#FFFFFF;--text-main:#1E293B;--text-sub:#64748B;--text-mut:#94A3B8;--border:#E2E8F0;--radius:10px;--shadow:0 1px 3px rgba(0,0,0,0.06);--green:#059669;--amber:#D97706;--red:#DC2626;--accent:#2563EB;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-main);min-height:100vh;}
+.container{max-width:1100px;margin:0 auto;padding:2rem 1.5rem;}
+h1{font-size:clamp(1.5rem,3vw,2rem);text-align:center;margin-bottom:0.5rem;}
+.subtitle{text-align:center;color:var(--text-sub);margin-bottom:2rem;font-size:0.9rem;}
+.subtitle a{color:var(--accent);text-decoration:none;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;margin-bottom:2rem;}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow);}
+.panel h2{font-size:1rem;font-weight:600;margin-bottom:1rem;color:var(--text-main);}
+.panel h3{font-size:0.85rem;font-weight:600;margin:1rem 0 0.5rem;color:var(--text-sub);}
+.bar-row{display:flex;align-items:center;margin-bottom:0.5rem;font-size:0.82rem;}
+.bar-label{width:140px;flex-shrink:0;font-weight:500;color:var(--text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.bar-track{flex:1;height:20px;background:#F1F5F9;border-radius:4px;margin:0 0.75rem;overflow:hidden;position:relative;}
+.bar-fill{height:100%;border-radius:4px;transition:width 0.6s ease;display:flex;align-items:center;justify-content:flex-end;padding-right:6px;font-size:0.68rem;font-weight:600;color:#fff;}
+.bar-val{width:50px;text-align:right;color:var(--text-sub);font-size:0.78rem;font-weight:500;}
+.stat-row{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+.stat-card{flex:1;min-width:120px;padding:1rem;background:var(--bg);border-radius:var(--radius);text-align:center;border:1px solid var(--border);}
+.stat-card .num{font-size:1.5rem;font-weight:700;color:var(--text-main);}
+.stat-card .label{font-size:0.72rem;color:var(--text-sub);margin-top:0.25rem;}
+table{width:100%;border-collapse:collapse;font-size:0.82rem;}
+th{text-align:left;padding:0.5rem;border-bottom:2px solid var(--border);color:var(--text-sub);font-weight:600;}
+td{padding:0.5rem;border-bottom:1px solid #F1F5F9;}
+td:not(:first-child){text-align:right;}
+.badge{display:inline-block;padding:2px 6px;border-radius:4px;font-size:0.7rem;font-weight:600;text-transform:uppercase;}
+.badge.cheap{background:#D1FAE5;color:#059669;}
+.badge.mid{background:#FEF3C7;color:#D97706;}
+.badge.exp{background:#FEE2E2;color:#DC2626;}
+footer{text-align:center;padding:2rem 1.5rem;color:var(--text-mut);font-size:0.78rem;border-top:1px solid var(--border);}
+footer a{color:var(--text-sub);text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>📊 Price Analytics</h1>
+  <p class="subtitle">Pricing insights from <strong id="total">—</strong> Barcelona restaurants · <a href="index.html">← Back to Database</a></p>
+
+  <div class="stat-row" id="top-stats"></div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>💰 Price by Neighborhood</h2>
+      <div id="hood-prices"></div>
+    </div>
+    <div class="panel">
+      <h2>🍽️ Price by Cuisine</h2>
+      <div id="cuisine-prices"></div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>📈 Price Distribution</h2>
+      <div id="price-dist"></div>
+    </div>
+    <div class="panel">
+      <h2>🏆 Best Value (High Rating + Low Price)</h2>
+      <div id="best-value"></div>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-bottom:2rem;">
+    <h2>📋 Full Neighborhood Breakdown</h2>
+    <table id="hood-table">
+      <thead><tr><th>Neighborhood</th><th>Count</th><th>Avg Price</th><th>Min</th><th>Max</th><th>Confirmed %</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+<footer>Built with ❤️ by <a href="landing.html">Menuverso</a> · <a href="index.html">Database</a> · <a href="analytics.html">Analytics</a></footer>
+
+<script src="restaurants_data.js"></script>
+<script>
+const DATA=window.RESTAURANT_DATA||[];
+
+function parsePrice(s){
+  if(!s)return null;
+  const nums=s.match(/[\d.]+/g);
+  if(!nums)return null;
+  return parseFloat(nums[0]);
+}
+
+function init(){
+  const priced=DATA.filter(r=>parsePrice(r.menu_price_range));
+  const prices=priced.map(r=>parsePrice(r.menu_price_range));
+  const avg=(prices.reduce((a,b)=>a+b,0)/prices.length).toFixed(1);
+  const min=Math.min(...prices).toFixed(1);
+  const max=Math.max(...prices).toFixed(1);
+  const median=prices.sort((a,b)=>a-b)[Math.floor(prices.length/2)].toFixed(1);
+
+  document.getElementById('total').textContent=DATA.length;
+
+  // Top stats
+  document.getElementById('top-stats').innerHTML=`
+    <div class="stat-card"><div class="num">€${avg}</div><div class="label">Average Price</div></div>
+    <div class="stat-card"><div class="num">€${median}</div><div class="label">Median Price</div></div>
+    <div class="stat-card"><div class="num">€${min}</div><div class="label">Cheapest</div></div>
+    <div class="stat-card"><div class="num">€${max}</div><div class="label">Most Expensive</div></div>
+    <div class="stat-card"><div class="num">${priced.length}</div><div class="label">With Price Data</div></div>
+  `;
+
+  // By neighborhood
+  const hoods={};
+  DATA.forEach(r=>{
+    const h=r.neighborhood;
+    if(!hoods[h])hoods[h]={prices:[],confirmed:0,total:0};
+    hoods[h].total++;
+    if(r.menu_tier==='confirmed')hoods[h].confirmed++;
+    const p=parsePrice(r.menu_price_range);
+    if(p)hoods[h].prices.push(p);
+  });
+
+  const hoodAvgs=Object.entries(hoods)
+    .filter(([,d])=>d.prices.length>=3)
+    .map(([name,d])=>({name,avg:d.prices.reduce((a,b)=>a+b,0)/d.prices.length,count:d.prices.length,min:Math.min(...d.prices),max:Math.max(...d.prices),confirmed:d.confirmed,total:d.total}))
+    .sort((a,b)=>a.avg-b.avg);
+  
+  const maxAvg=Math.max(...hoodAvgs.map(h=>h.avg));
+  document.getElementById('hood-prices').innerHTML=hoodAvgs.map(h=>{
+    const color=h.avg<13?'var(--green)':h.avg<16?'var(--amber)':'var(--red)';
+    return `<div class="bar-row">
+      <span class="bar-label">${h.name}</span>
+      <div class="bar-track"><div class="bar-fill" style="width:${h.avg/maxAvg*100}%;background:${color}">€${h.avg.toFixed(1)}</div></div>
+      <span class="bar-val">(${h.count})</span>
+    </div>`;
+  }).join('');
+
+  // By cuisine
+  const cuisines={};
+  DATA.forEach(r=>{
+    const c=r.cuisine_type;
+    if(!cuisines[c])cuisines[c]={prices:[],total:0};
+    cuisines[c].total++;
+    const p=parsePrice(r.menu_price_range);
+    if(p)cuisines[c].prices.push(p);
+  });
+
+  const cuisineAvgs=Object.entries(cuisines)
+    .filter(([,d])=>d.prices.length>=5)
+    .map(([name,d])=>({name,avg:d.prices.reduce((a,b)=>a+b,0)/d.prices.length,count:d.prices.length}))
+    .sort((a,b)=>a.avg-b.avg);
+  
+  const maxCAvg=Math.max(...cuisineAvgs.map(c=>c.avg));
+  document.getElementById('cuisine-prices').innerHTML=cuisineAvgs.map(c=>{
+    const color=c.avg<13?'var(--green)':c.avg<16?'var(--amber)':'var(--red)';
+    return `<div class="bar-row">
+      <span class="bar-label">${c.name}</span>
+      <div class="bar-track"><div class="bar-fill" style="width:${c.avg/maxCAvg*100}%;background:${color}">€${c.avg.toFixed(1)}</div></div>
+      <span class="bar-val">(${c.count})</span>
+    </div>`;
+  }).join('');
+
+  // Price distribution
+  const buckets={'Under €10':0,'€10-12':0,'€12-14':0,'€14-16':0,'€16-18':0,'€18-20':0,'Over €20':0};
+  prices.forEach(p=>{
+    if(p<10)buckets['Under €10']++;
+    else if(p<12)buckets['€10-12']++;
+    else if(p<14)buckets['€12-14']++;
+    else if(p<16)buckets['€14-16']++;
+    else if(p<18)buckets['€16-18']++;
+    else if(p<20)buckets['€18-20']++;
+    else buckets['Over €20']++;
+  });
+  const maxBucket=Math.max(...Object.values(buckets));
+  const colors=['#059669','#10B981','#34D399','#D97706','#F59E0B','#EF4444','#DC2626'];
+  document.getElementById('price-dist').innerHTML=Object.entries(buckets).map(([label,count],i)=>{
+    return `<div class="bar-row">
+      <span class="bar-label">${label}</span>
+      <div class="bar-track"><div class="bar-fill" style="width:${count/maxBucket*100}%;background:${colors[i]}">${count}</div></div>
+      <span class="bar-val">${(count/prices.length*100).toFixed(0)}%</span>
+    </div>`;
+  }).join('');
+
+  // Best value
+  const bestValue=DATA.filter(r=>r.google_maps_rating>=4.3&&parsePrice(r.menu_price_range)&&parsePrice(r.menu_price_range)<=14)
+    .sort((a,b)=>(b.google_maps_rating||0)-(a.google_maps_rating||0))
+    .slice(0,10);
+  document.getElementById('best-value').innerHTML=bestValue.length?
+    '<table><thead><tr><th>Restaurant</th><th>Price</th><th>Rating</th><th>Area</th></tr></thead><tbody>'+
+    bestValue.map(r=>`<tr><td>${r.name}</td><td>€${parsePrice(r.menu_price_range).toFixed(0)}</td><td>⭐${r.google_maps_rating}</td><td>${r.neighborhood}</td></tr>`).join('')+
+    '</tbody></table>'
+    :'<p style="color:var(--text-sub);font-size:0.85rem;">No restaurants match criteria.</p>';
+
+  // Full table
+  document.querySelector('#hood-table tbody').innerHTML=hoodAvgs.map(h=>{
+    const badge=h.avg<13?'cheap':h.avg<16?'mid':'exp';
+    return `<tr><td>${h.name}</td><td>${h.total}</td><td><span class="badge ${badge}">€${h.avg.toFixed(1)}</span></td><td>€${h.min.toFixed(0)}</td><td>€${h.max.toFixed(0)}</td><td>${(h.confirmed/h.total*100).toFixed(0)}%</td></tr>`;
+  }).join('');
+}
+
+init();
+</script>
+</body>
+</html>

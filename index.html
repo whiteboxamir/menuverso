@@ -136,6 +136,18 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-main);
 .action-btn.danger:hover{background:var(--red-bg);border-color:var(--red);}
 .action-btn .badge-count{background:var(--accent);color:#fff;font-size:0.65rem;padding:1px 5px;border-radius:8px;font-weight:600;}
 
+/* Favorites */
+.fav-btn{position:absolute;top:0.75rem;right:0.75rem;background:none;border:none;font-size:1.2rem;cursor:pointer;opacity:0.4;transition:all 0.2s;z-index:2;padding:0;line-height:1;}
+.fav-btn:hover{opacity:0.8;transform:scale(1.15);}
+.fav-btn.active{opacity:1;}
+.card{position:relative;}
+
+/* Language toggle */
+.lang-toggle{position:fixed;bottom:1.25rem;right:1.25rem;z-index:1000;display:flex;border-radius:20px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);font-size:0.75rem;font-weight:600;}
+.lang-toggle button{padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;}
+.lang-toggle button.active{background:var(--text-main);color:#fff;}
+.lang-toggle button:not(.active){background:var(--card);color:var(--text-sub);}
+
 footer{text-align:center;padding:1.5rem;color:var(--text-mut);font-size:0.78rem;border-top:1px solid var(--border);}
 footer a{color:var(--text-sub);text-decoration:none;font-weight:500;}
 footer a:hover{color:var(--text-main);}
@@ -175,7 +187,8 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
 <div class="filters" id="filters">
   <span class="chip g" data-filter="mtier" data-value="confirmed">🟢 Confirmed</span>
   <span class="chip y" data-filter="mtier" data-value="likely">🟡 Likely</span>
-  <span class="chip r" data-filter="mtier" data-value="none">🔴 No Menú</span>
+  <span class="chip r" data-filter="mtier" data-value="none">🔴 <span data-i18n="no_menu">No Menú</span></span>
+  <span class="chip" data-filter="fav" data-value="yes">⭐ <span data-i18n="favorites">Favorites</span> <span id="fav-count" style="font-size:0.65rem;opacity:0.7;"></span></span>
   <span class="pipe">|</span>
   <span class="chip" data-filter="tier" data-value="budget">💚 Budget</span>
   <span class="chip" data-filter="tier" data-value="mid-range">🧡 Mid-Range</span>
@@ -209,6 +222,10 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
 <div class="grid" id="grid"><div class="loading">⏳ Loading restaurants...</div></div>
 <div id="map-container"><div id="map"></div></div>
 <footer id="footer">Built with ❤️ by <a href="landing.html">Menuverso</a> · March 2026</footer>
+<div class="lang-toggle">
+  <button data-lang="es" class="active" onclick="setLang('es')">ES</button>
+  <button data-lang="en" onclick="setLang('en')">EN</button>
+</div>
 <script src="restaurants_data.js"></script>
 <script>
 let DATA=window.RESTAURANT_DATA||[];
@@ -217,6 +234,35 @@ let currentView='list';
 let map=null;
 let markerCluster=null;
 let allMarkers=[];
+let favorites=JSON.parse(localStorage.getItem('menuverso_favs')||'[]');
+let currentLang=localStorage.getItem('menuverso_lang')||'es';
+
+const I18N={
+  es:{subtitle:'Base de datos exhaustiva de restaurantes de Barcelona. {total} restaurantes en {hoods} barrios con seguimiento de menú del día.',
+    search_placeholder:'🔍 Buscar por nombre, cocina, barrio, notas...',
+    all_hoods:'Todos los Barrios',all_cuisines:'Todas las Cocinas',
+    confirmed:'Confirmado',likely:'Probable',no_menu:'Sin Menú',favorites:'Favoritos',
+    budget:'Económico',mid_range:'Medio',premium:'Premium',
+    sort_name:'Orden: Nombre A→Z',sort_rating:'Orden: Rating ↓',sort_price_low:'Orden: Precio ↑',sort_price_high:'Orden: Precio ↓',sort_reviews:'Orden: Reseñas ↓',
+    showing:'Mostrando {n} de {t} restaurantes',
+    no_results:'No hay restaurantes que coincidan. Prueba otros filtros.',
+    clear:'Limpiar Filtros',export_csv:'Exportar CSV',dashboard:'Panel de Barrios',
+    web:'Web',maps:'Maps',call:'Llamar',
+    on_map:'En Mapa',tagged:'Etiquetados',neighborhoods:'Barrios',total:'Total Restaurantes',
+    confirmed_menu:'Menú Confirmado',likely_menu:'Menú Probable',no_menu_stat:'Sin Menú'},
+  en:{subtitle:'Exhaustive Barcelona restaurant database. {total} restaurants across {hoods} neighborhoods with menú del día tracking.',
+    search_placeholder:'🔍 Search by name, cuisine, neighborhood, notes...',
+    all_hoods:'All Neighborhoods',all_cuisines:'All Cuisines',
+    confirmed:'Confirmed',likely:'Likely',no_menu:'No Menú',favorites:'Favorites',
+    budget:'Budget',mid_range:'Mid-Range',premium:'Premium',
+    sort_name:'Sort: Name A→Z',sort_rating:'Sort: Rating ↓',sort_price_low:'Sort: Price ↑',sort_price_high:'Sort: Price ↓',sort_reviews:'Sort: Reviews ↓',
+    showing:'Showing {n} of {t} restaurants',
+    no_results:'No restaurants match. Try different filters.',
+    clear:'Clear Filters',export_csv:'Export CSV',dashboard:'Neighborhood Dashboard',
+    web:'Web',maps:'Maps',call:'Call',
+    on_map:'On Map',tagged:'Tagged',neighborhoods:'Neighborhoods',total:'Total Restaurants',
+    confirmed_menu:'Confirmed Menú',likely_menu:'Likely Menú',no_menu_stat:'No Menú'}
+};
 
 if(DATA.length){init()}else{document.getElementById('grid').innerHTML='<div class="no-results">Error: restaurants_data.js not found.</div>'}
 
@@ -311,6 +357,7 @@ function getFiltered(){
     if(activeFilters.hood&&r.neighborhood!==activeFilters.hood)return false;
     if(activeFilters.tier&&r.pricing_tier!==activeFilters.tier)return false;
     if(activeFilters.cuisine&&r.cuisine_type!==activeFilters.cuisine)return false;
+    if(activeFilters.fav&&!favorites.includes(r.id))return false;
     if(activeFilters.tag&&!(r.tags||[]).includes(activeFilters.tag))return false;
     if(q){const s=[r.name,r.neighborhood,r.cuisine_type,r.notes||'',(r.tags||[]).join(' '),r.address_full||'',r.metro_station||''].join(' ').toLowerCase();if(!s.includes(q))return false}
     return true;
@@ -354,13 +401,15 @@ function renderList(filtered){
   grid.innerHTML=filtered.slice(0,300).map(r=>{
     const tier=r.menu_tier||'none';
     let links='';
-    if(r.website)links+=`<a href="${r.website}" target="_blank">🌐 Web</a>`;
-    if(r.google_maps_url)links+=`<a href="${r.google_maps_url}" target="_blank">📍 Maps</a>`;
-    if(r.phone)links+=`<a href="tel:${r.phone}">📞 Call</a>`;
+    if(r.website)links+=`<a href="${r.website}" target="_blank">🌐 ${t('web')}</a>`;
+    if(r.google_maps_url)links+=`<a href="${r.google_maps_url}" target="_blank">📍 ${t('maps')}</a>`;
+    if(r.phone)links+=`<a href="tel:${r.phone}">📞 ${t('call')}</a>`;
     if(r.instagram)links+=`<a href="https://instagram.com/${r.instagram.replace('@','')}" target="_blank">📸 IG</a>`;
     const rating=r.google_maps_rating?`⭐ ${r.google_maps_rating} (${r.google_maps_review_count||0})`:'';
     const tagHtml=(r.tags||[]).map(t=>`<span class="tag clickable" onclick="filterByTag('${t}')">${t}</span>`).join('');
+    const isFav=favorites.includes(r.id);
     return `<div class="card">
+      <button class="fav-btn ${isFav?'active':''}" onclick="toggleFav(${r.id},this)" title="${isFav?'Remove from':'Add to'} favorites">${isFav?'❤️':'🩶'}</button>
       <div class="card-header"><span class="card-name">${r.name}</span><span class="card-price">${r.menu_price_range||'—'}</span></div>
       <span class="badge ${tier}">${tier==='confirmed'?'🟢 Confirmed':tier==='likely'?'🟡 Likely':'🔴 No Menú'}</span>
       <div class="tags"><span class="tag">${r.neighborhood}</span><span class="tag">${r.cuisine_type}</span><span class="tag">${r.pricing_tier}</span>${tagHtml}</div>
@@ -572,6 +621,30 @@ function exportCSV(){
   a.href=URL.createObjectURL(blob);
   a.download=`menuverso_${filtered.length}_restaurants.csv`;
   a.click();
+}
+
+function toggleFav(id,btn){
+  const idx=favorites.indexOf(id);
+  if(idx>-1){favorites.splice(idx,1);btn.classList.remove('active');btn.textContent='🩶';}
+  else{favorites.push(id);btn.classList.add('active');btn.textContent='❤️';}
+  localStorage.setItem('menuverso_favs',JSON.stringify(favorites));
+  document.getElementById('fav-count').textContent=favorites.length||'';
+}
+
+function t(key){return I18N[currentLang][key]||key;}
+
+function setLang(lang){
+  currentLang=lang;
+  localStorage.setItem('menuverso_lang',lang);
+  document.querySelectorAll('.lang-toggle button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+  document.getElementById('search').placeholder=t('search_placeholder');
+  document.getElementById('dash-toggle').textContent='📊 '+t('dashboard');
+  // Update filter labels
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.dataset.i18n;
+    if(I18N[lang][key])el.textContent=I18N[lang][key];
+  });
+  render();
 }
 
 // Service Worker registration
