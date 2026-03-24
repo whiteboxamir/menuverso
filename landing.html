@@ -11,29 +11,52 @@
   <style>
     :root {
       /* Lovely Vibrant Palette (Light) */
-      --olive-deep: #FFFFFF; /* Pure clean white canvas */
-      --olive-dark: #FFD1FF; /* Vibrant candy pink */
-      --olive: #A0E8FF;      /* Vibrant bright cyan */
-      --olive-light: #FFC4A3;/* Vibrant sunset peach */
-      --olive-muted: #DAB6FC;/* Vibrant bright lilac */
+      --olive-deep: #FFFFFF;
+      --olive-dark: #FFD1FF;
+      --olive: #A0E8FF;
+      --olive-light: #FFC4A3;
+      --olive-muted: #DAB6FC;
       
-      --terra: #FF5277;      /* Lovely punchy pink-red */
+      --terra: #FF5277;
       --terra-light: #FF829E;
       --terra-glow: rgba(255, 82, 119, 0.15);
       
-      /* Vibrant deep navy for text */
       --text-primary: rgba(34, 34, 50, 0.95);
       --text-secondary: rgba(34, 34, 50, 0.70);
       --text-tertiary: rgba(34, 34, 50, 0.45);
       --text-accent: var(--terra);
       
-      /* White glassmorphism */
       --glass: rgba(255, 255, 255, 0.65);
       --glass-border: rgba(255, 255, 255, 0.95);
       --glass-hover: rgba(255, 255, 255, 0.85);
 
       --shadow-sm: 0 4px 12px rgba(0,0,0,0.03);
       --shadow-md: 0 12px 32px rgba(0,0,0,0.05);
+      --border: rgba(0,0,0,0.06);
+    }
+    :root.dark {
+      --olive-deep: #0F172A;
+      --olive-dark: #1A0A2E;
+      --olive: #0C1A2E;
+      --olive-light: #1E1A0F;
+      --olive-muted: #1A1030;
+      
+      --terra: #FF6B8A;
+      --terra-light: #FF829E;
+      --terra-glow: rgba(255, 107, 138, 0.2);
+      
+      --text-primary: rgba(241, 245, 249, 0.95);
+      --text-secondary: rgba(148, 163, 184, 0.9);
+      --text-tertiary: rgba(100, 116, 139, 0.7);
+      --text-accent: var(--terra);
+      
+      --glass: rgba(30, 41, 59, 0.7);
+      --glass-border: rgba(51, 65, 85, 0.8);
+      --glass-hover: rgba(30, 41, 59, 0.9);
+
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.2);
+      --shadow-md: 0 12px 32px rgba(0,0,0,0.3);
+      --border: rgba(255,255,255,0.06);
     }
     
     *{margin:0;padding:0;box-sizing:border-box;}
@@ -49,7 +72,8 @@
     .label{font-family:'Outfit',sans-serif;font-weight:600;font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--text-accent);margin-bottom:12px;}
 
     /* ═══ NAV ═══ */
-    .topnav{position:fixed;top:0;left:0;right:0;height:72px;background:rgba(252,250,248,0.85);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:space-between;padding:0 40px;z-index:100;}
+    .topnav{position:fixed;top:0;left:0;right:0;height:72px;background:rgba(252,250,248,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 40px;z-index:100;}
+    :root.dark .topnav{background:rgba(15,23,42,0.85);}
     .topnav .nav-brand{display:flex;align-items:center;gap:6px;font-family:'Outfit',sans-serif;font-weight:800;font-size:1.4rem;text-decoration:none;color:var(--text-primary);}
     .topnav .nav-brand img{width:32px;height:32px;border-radius:8px;}
     .topnav .nav-links{display:flex;align-items:center;gap:24px;}
@@ -129,7 +153,15 @@
       .hero{padding:120px 24px 80px;}
       .hero-stats{flex-direction:column;gap:20px;}
     }
+    .controls-bar-landing{display:flex;gap:8px;align-items:center;}
+    .theme-btn-landing{background:none;border:1px solid var(--border);border-radius:20px;padding:6px 10px;cursor:pointer;font-size:0.9rem;color:var(--text-secondary);transition:all 0.2s;}
+    .theme-btn-landing:hover{color:var(--text-primary);}
   img[src*="logo.png"] { mix-blend-mode: multiply; }
+  :root.dark img[src*="logo.png"] { mix-blend-mode: normal; filter: brightness(1.2); }
+    .lang-toggle{position:fixed;bottom:1.25rem;left:1.25rem;z-index:1000;display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 4px 12px rgba(0,0,0,0.03);font-size:0.75rem;font-weight:600;}
+    .lang-toggle button{padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;}
+    .lang-toggle button.active{background:var(--terra);color:#fff;}
+    .lang-toggle button:not(.active){background:var(--glass);color:var(--text-secondary);}
 </style>
 </head>
 <body>
@@ -143,7 +175,10 @@
     <a href="#features">Características</a>
     <a href="#tiers">Niveles de Precio</a>
     <a href="analytics.html">Analytics</a>
-    <a href="index.html" class="btn-nav">Ver Base de Datos</a>
+    <a href="landing.html" class="btn-nav" style="font-size:0.85rem;">Sobre</a>
+  </div>
+  <div class="controls-bar-landing">
+    <button class="theme-btn-landing" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
   </div>
 </nav>
 
@@ -262,6 +297,12 @@
   <p>&copy; 2026 Menuverso. Todos los derechos reservados.</p>
 </footer>
 
+<div class="lang-toggle">
+  <button data-lang="es" class="active" onclick="setLang('es')">ES</button>
+  <button data-lang="ca" onclick="setLang('ca')">CA</button>
+  <button data-lang="en" onclick="setLang('en')">EN</button>
+</div>
+
 <script>
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -276,6 +317,125 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Theme
+  function initTheme(){
+    const saved=localStorage.getItem('menuverso_theme');
+    if(saved==='dark'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches)){
+      document.documentElement.classList.add('dark');
+      document.getElementById('theme-toggle').textContent='☀️';
+    }
+  }
+  function toggleTheme(){
+    const isDark=document.documentElement.classList.toggle('dark');
+    localStorage.setItem('menuverso_theme',isDark?'dark':'light');
+    document.getElementById('theme-toggle').textContent=isDark?'☀️':'🌙';
+  }
+  initTheme();
+
+  // === TRILINGUAL i18n ===
+  const LI={
+    es:{
+      nav_features:'Características',nav_tiers:'Niveles de Precio',nav_analytics:'Analytics',nav_about:'Sobre',
+      hero_pill:'🚀\u00a0 La plataforma definitiva para comer en Barcelona',
+      hero_title:'Encontrar un buen Menú del Día ',hero_accent:'no debería ser tan difícil.',
+      hero_tagline:'Hemos centralizado la oferta gastronómica de la ciudad. Descubre, filtra y compara menús diarios de 1.504 restaurantes en una base de datos impecablemente organizada.',
+      cta_db:'Explorar Base de Datos',cta_more:'Saber Más',
+      stat1:'Restaurantes Monitorizados',stat2:'Barrios en Barcelona',stat3:'Tipos de Cocina',
+      feat_label:'La Solución',feat_title:'Toda la oferta gastronómica en un solo lugar',
+      feat_desc:'Deja de dar vueltas buscando pizarras en la calle. Menuverso lleva las mejores opciones de la ciudad directamente a tu pantalla.',
+      f1_t:'Búsqueda Potente',f1_d:'Filtra por barrio, cocina, menú del día, nivel de precios, etiquetas, y metro más cercano. Exporta resultados a CSV.',
+      f2_t:'Favoritos y Offline',f2_d:'Guarda tus restaurantes favoritos. Funciona sin conexión gracias a nuestra Progressive Web App. Instálalo en tu móvil.',
+      f3_t:'Analytics de Precios',f3_d:'Compara precios por barrio y tipo de cocina. Descubre las mejores relaciones calidad-precio con nuestro panel de analytics.',
+      tiers_label:'Elige tu Nivel',tiers_title:'Entiende tus opciones',
+      tiers_desc:'Clasificamos los menús en tres niveles de precios claros, desde comidas rápidas y económicas hasta almuerzos de negocios y alta cocina.',
+      t1:'Económico',t2:'Gama Media',t3:'Premium',
+      cta_final:'¿Listo para encontrar tu próximo lugar favorito?',
+      cta_final_d:'Únete a miles de personas que ya disfrutan de los mejores menús del día en Barcelona.',
+      cta_final_btn:'Explorar Restaurantes',
+      footer_copy:'© 2026 Menuverso. Todos los derechos reservados.'
+    },
+    ca:{
+      nav_features:'Característiques',nav_tiers:'Nivells de Preu',nav_analytics:'Analytics',nav_about:'Sobre',
+      hero_pill:'🚀\u00a0 La plataforma definitiva per menjar a Barcelona',
+      hero_title:'Trobar un bon Menú del Dia ',hero_accent:'no hauria de ser tan difícil.',
+      hero_tagline:'Hem centralitzat l\'oferta gastronòmica de la ciutat. Descobreix, filtra i compara menús diaris de 1.504 restaurants en una base de dades impecablement organitzada.',
+      cta_db:'Explorar Base de Dades',cta_more:'Saber Més',
+      stat1:'Restaurants Monitoritzats',stat2:'Barris a Barcelona',stat3:'Tipus de Cuina',
+      feat_label:'La Solució',feat_title:'Tota l\'oferta gastronòmica en un sol lloc',
+      feat_desc:'Deixa de donar voltes buscant pissarres al carrer. Menuverso porta les millors opcions de la ciutat directament a la teva pantalla.',
+      f1_t:'Cerca Potent',f1_d:'Filtra per barri, cuina, menú del dia, nivell de preus, etiquetes i metro més proper. Exporta resultats a CSV.',
+      f2_t:'Preferits i Offline',f2_d:'Guarda els teus restaurants preferits. Funciona sense connexió gràcies a la nostra Progressive Web App.',
+      f3_t:'Analytics de Preus',f3_d:'Compara preus per barri i tipus de cuina. Descobreix les millors relacions qualitat-preu.',
+      tiers_label:'Tria el teu Nivell',tiers_title:'Entén les teves opcions',
+      tiers_desc:'Classifiquem els menús en tres nivells de preus clars.',
+      t1:'Econòmic',t2:'Gamma Mitjana',t3:'Premium',
+      cta_final:'Preparat per trobar el teu proper lloc preferit?',
+      cta_final_d:'Uneix-te a milers de persones que ja gaudeixen dels millors menús del dia a Barcelona.',
+      cta_final_btn:'Explorar Restaurants',
+      footer_copy:'© 2026 Menuverso. Tots els drets reservats.'
+    },
+    en:{
+      nav_features:'Features',nav_tiers:'Price Tiers',nav_analytics:'Analytics',nav_about:'About',
+      hero_pill:'🚀\u00a0 The definitive platform for eating in Barcelona',
+      hero_title:'Finding a good Menú del Día ',hero_accent:'shouldn\'t be this hard.',
+      hero_tagline:'We\'ve centralized the city\'s dining scene. Discover, filter, and compare daily menus from 1,504 restaurants in a beautifully organized database.',
+      cta_db:'Explore Database',cta_more:'Learn More',
+      stat1:'Restaurants Monitored',stat2:'Barcelona Neighborhoods',stat3:'Cuisine Types',
+      feat_label:'The Solution',feat_title:'All dining options in one place',
+      feat_desc:'Stop wandering the streets looking for chalkboards. Menuverso brings the city\'s best options directly to your screen.',
+      f1_t:'Powerful Search',f1_d:'Filter by neighborhood, cuisine, menú del día, price tier, tags, and nearest metro. Export results to CSV.',
+      f2_t:'Favorites & Offline',f2_d:'Save your favorite restaurants. Works offline thanks to our Progressive Web App. Install it on your phone.',
+      f3_t:'Price Analytics',f3_d:'Compare prices by neighborhood and cuisine type. Discover the best value with our analytics dashboard.',
+      tiers_label:'Choose Your Tier',tiers_title:'Understand your options',
+      tiers_desc:'We classify menus into three clear price tiers, from quick budget meals to business lunches and fine dining.',
+      t1:'Budget',t2:'Mid-Range',t3:'Premium',
+      cta_final:'Ready to find your next favorite spot?',
+      cta_final_d:'Join thousands of people already enjoying the best menús del día in Barcelona.',
+      cta_final_btn:'Explore Restaurants',
+      footer_copy:'© 2026 Menuverso. All rights reserved.'
+    }
+  };
+  let currentLang=localStorage.getItem('menuverso_lang')||'es';
+  function setLang(lang){
+    currentLang=lang;
+    localStorage.setItem('menuverso_lang',lang);
+    document.querySelectorAll('.lang-toggle button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+    const t=LI[lang];
+    // Nav
+    const nl=document.querySelectorAll('.topnav .nav-links a');
+    nl[0].textContent=t.nav_features;nl[1].textContent=t.nav_tiers;nl[2].textContent=t.nav_analytics;nl[3].textContent=t.nav_about;
+    // Hero
+    document.querySelector('.hero .pill').innerHTML=t.hero_pill;
+    document.querySelector('.hero h1').innerHTML=t.hero_title+'<span class="accent">'+t.hero_accent+'</span>';
+    document.querySelector('.hero .tagline').textContent=t.hero_tagline;
+    const ctaBtns=document.querySelectorAll('.hero-cta a');
+    ctaBtns[0].textContent=t.cta_db;ctaBtns[1].textContent=t.cta_more;
+    const stats=document.querySelectorAll('.hero .stat-card .desc');
+    stats[0].textContent=t.stat1;stats[1].textContent=t.stat2;stats[2].textContent=t.stat3;
+    // Features
+    document.querySelectorAll('#features .label')[0].textContent=t.feat_label;
+    document.querySelector('#features h2').textContent=t.feat_title;
+    document.querySelector('#features .section-header p').textContent=t.feat_desc;
+    const cards=document.querySelectorAll('#features .card');
+    cards[0].querySelector('h3').textContent=t.f1_t;cards[0].querySelector('p').textContent=t.f1_d;
+    cards[1].querySelector('h3').textContent=t.f2_t;cards[1].querySelector('p').textContent=t.f2_d;
+    cards[2].querySelector('h3').textContent=t.f3_t;cards[2].querySelector('p').textContent=t.f3_d;
+    // Tiers
+    document.querySelectorAll('#tiers .label')[0].textContent=t.tiers_label;
+    document.querySelector('#tiers h2').textContent=t.tiers_title;
+    document.querySelector('#tiers .section-header p').textContent=t.tiers_desc;
+    const tiers=document.querySelectorAll('.tier-card .tier-name');
+    tiers[0].textContent=t.t1;tiers[1].textContent=t.t2;tiers[2].textContent=t.t3;
+    // CTA
+    document.querySelectorAll('section')[2].querySelector('h2').textContent=t.cta_final;
+    document.querySelectorAll('section')[2].querySelector('p').textContent=t.cta_final_d;
+    document.querySelectorAll('section')[2].querySelector('a').textContent=t.cta_final_btn;
+    // Footer
+    document.querySelector('.footer p').textContent=t.footer_copy;
+  }
+  document.querySelectorAll('.lang-toggle button').forEach(b=>b.classList.toggle('active',b.dataset.lang===currentLang));
+  setLang(currentLang);
 </script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Menuverso</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(155deg,#FFD1FF 0%,#A0E8FF 55%,#DAB6FC 100%);color:rgba(34,34,50,0.95);text-align:center;padding:2rem;}
+.container{max-width:500px;}
+.emoji{font-size:4rem;margin-bottom:1rem;animation:float 3s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+h1{font-family:'Outfit',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:800;margin-bottom:0.5rem;}
+h1 span{color:#FF5277;}
+p{color:rgba(34,34,50,0.7);font-size:1rem;margin-bottom:2rem;line-height:1.6;}
+.links{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.links a{padding:12px 24px;border-radius:100px;font-family:'Outfit',sans-serif;font-weight:600;font-size:0.9rem;text-decoration:none;transition:all 0.3s;}
+.btn-primary{background:#FF5277;color:#fff;box-shadow:0 8px 24px rgba(255,82,119,0.25);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(255,82,119,0.35);}
+.btn-ghost{background:rgba(255,255,255,0.65);color:rgba(34,34,50,0.95);border:1px solid rgba(255,255,255,0.95);}
+.btn-ghost:hover{background:rgba(255,255,255,0.85);transform:translateY(-2px);}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="emoji">🍽️</div>
+  <h1>¡Ups! Página <span>no encontrada</span></h1>
+  <p>Parece que este menú no está en la carta. Pero no te preocupes, tenemos 1.504 restaurantes esperándote.</p>
+  <div class="links">
+    <a href="index.html" class="btn-primary">🗂️ Base de Datos</a>
+    <a href="landing.html" class="btn-ghost">🏠 Inicio</a>
+  </div>
+</div>
+</body>
+</html>
