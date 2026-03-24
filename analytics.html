@@ -9,7 +9,8 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{--bg:#F8FAFC;--card:#FFFFFF;--text-main:#1E293B;--text-sub:#64748B;--text-mut:#94A3B8;--border:#E2E8F0;--radius:10px;--shadow:0 1px 3px rgba(0,0,0,0.06);--green:#059669;--amber:#D97706;--red:#DC2626;--accent:#2563EB;}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-main);min-height:100vh;}
+:root.dark{--bg:#0F172A;--card:#1E293B;--text-main:#F1F5F9;--text-sub:#94A3B8;--text-mut:#64748B;--border:#334155;--radius:10px;--shadow:0 1px 3px rgba(0,0,0,0.3);--green:#34D399;--amber:#FBBF24;--red:#F87171;--accent:#3B82F6;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-main);min-height:100vh;transition:background 0.3s,color 0.3s;}
 .container{max-width:1100px;margin:0 auto;padding:2rem 1.5rem;}
 h1{font-size:clamp(1.5rem,3vw,2rem);text-align:center;margin-bottom:0.5rem;}
 .subtitle{text-align:center;color:var(--text-sub);margin-bottom:2rem;font-size:0.9rem;}
@@ -39,11 +40,39 @@ footer{text-align:center;padding:2rem 1.5rem;color:var(--text-mut);font-size:0.7
 footer a{color:var(--text-sub);text-decoration:none;}
 .lang-toggle{position:fixed;bottom:1.25rem;right:1.25rem;z-index:1000;display:flex;border-radius:20px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);font-size:0.75rem;font-weight:600;}
 .lang-toggle button{padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;}
-.lang-toggle button.active{background:var(--text-main);color:#fff;}
+.lang-toggle button.active{background:var(--text-main);color:var(--bg);}
 .lang-toggle button:not(.active){background:var(--card);color:var(--text-sub);}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1.5rem;border-bottom:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+.nav-brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text-main);font-weight:700;font-size:1.1rem;}
+.nav-brand img{width:28px;height:28px;border-radius:8px;}
+.nav-links{display:flex;align-items:center;gap:1rem;}
+.nav-links a{color:var(--text-sub);text-decoration:none;font-size:0.82rem;font-weight:500;padding:0.3rem 0.5rem;border-radius:8px;transition:all 0.2s;}
+.nav-links a:hover{color:var(--text-main);}
+.nav-links a.active{color:var(--accent);font-weight:600;}
+.controls-bar{display:flex;gap:0.5rem;align-items:center;}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:0.3rem 0.55rem;cursor:pointer;font-size:0.85rem;color:var(--text-sub);transition:all 0.2s;}
+.theme-btn:hover{border-color:var(--text-sub);color:var(--text-main);}
+img[src*="logo.png"]{mix-blend-mode:multiply;}
+:root.dark img[src*="logo.png"]{mix-blend-mode:normal;filter:brightness(1.2);}
+@media(max-width:640px){.nav-links a span{display:none;}}
 </style>
 </head>
 <body>
+<nav class="topnav">
+  <a href="index.html" class="nav-brand">
+    <img src="assets/logo.png" alt="Menuverso">
+    <span>Menuverso</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html"><span>📋 </span>Database</a>
+    <a href="finder.html"><span>🔍 </span>Finder</a>
+    <a href="analytics.html" class="active"><span>📊 </span>Analytics</a>
+    <a href="landing.html"><span>🏠 </span>About</a>
+  </div>
+  <div class="controls-bar">
+    <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
+  </div>
+</nav>
 <div class="container">
   <h1>📊 Price Analytics</h1>
   <p class="subtitle">Pricing insights from <strong id="total">—</strong> Barcelona restaurants · <a href="index.html">← Back to Database</a></p>
@@ -81,7 +110,7 @@ footer a{color:var(--text-sub);text-decoration:none;}
   </div>
 </div>
 <footer>Built with ❤️ by <a href="landing.html">Menuverso</a> · <a href="index.html">Database</a> · <a href="analytics.html">Analytics</a></footer>
-<div class="lang-toggle">
+<div class="lang-toggle" style="position:fixed;bottom:1.25rem;right:1.25rem;z-index:1000;">
   <button data-lang="es" onclick="setLang('es')">ES</button>
   <button data-lang="ca" onclick="setLang('ca')">CA</button>
   <button data-lang="en" class="active" onclick="setLang('en')">EN</button>
@@ -252,6 +281,22 @@ function init(){
 
 // Init lang toggle
 document.querySelectorAll('.lang-toggle button').forEach(b=>b.classList.toggle('active',b.dataset.lang===currentLang));
+
+// Theme
+function initTheme(){
+  const saved=localStorage.getItem('menuverso_theme');
+  if(saved==='dark'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches)){
+    document.documentElement.classList.add('dark');
+    document.getElementById('theme-toggle').textContent='☀️';
+  }
+}
+function toggleTheme(){
+  const isDark=document.documentElement.classList.toggle('dark');
+  localStorage.setItem('menuverso_theme',isDark?'dark':'light');
+  document.getElementById('theme-toggle').textContent=isDark?'☀️':'🌙';
+}
+initTheme();
+
 init();
 </script>
 </body>

@@ -27,6 +27,16 @@
   --shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -2px rgba(0,0,0,0.1);
   --radius:12px;
 }
+:root.dark{
+  --bg:#0F172A;--card:#1E293B;--border:#334155;--border-hover:#475569;
+  --text-main:#F1F5F9;--text-sub:#94A3B8;--text-mut:#64748B;
+  --accent:#3B82F6;--accent-sub:#1E3A5F;
+  --green:#34D399;--green-bg:#064E3B;
+  --amber:#FBBF24;--amber-bg:#78350F;
+  --red:#F87171;--red-bg:#7F1D1D;
+  --shadow-sm:0 1px 2px 0 rgba(0,0,0,0.3);
+  --shadow:0 4px 6px -1px rgba(0,0,0,0.3),0 2px 4px -2px rgba(0,0,0,0.2);
+}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-main);line-height:1.5;overflow-x:hidden;}
 .hero{padding:3rem 1.5rem 1.5rem;text-align:center;}
 .hero h1{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:700;color:var(--text-main);letter-spacing:-0.02em;margin-bottom:0.5rem;}
@@ -148,14 +158,42 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-main);
 .lang-toggle button.active{background:var(--text-main);color:#fff;}
 .lang-toggle button:not(.active){background:var(--card);color:var(--text-sub);}
 
+/* Navigation bar */
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1.5rem;border-bottom:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+.nav-brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text-main);font-weight:700;font-size:1.1rem;}
+.nav-brand img{width:28px;height:28px;border-radius:8px;}
+.nav-links{display:flex;align-items:center;gap:1rem;}
+.nav-links a{color:var(--text-sub);text-decoration:none;font-size:0.82rem;font-weight:500;padding:0.3rem 0.5rem;border-radius:8px;transition:all 0.2s;}
+.nav-links a:hover{color:var(--text-main);background:var(--accent-sub);}
+.nav-links a.active{color:var(--accent);font-weight:600;}
+.controls-bar{display:flex;gap:0.5rem;align-items:center;}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:0.3rem 0.55rem;cursor:pointer;font-size:0.85rem;color:var(--text-sub);transition:all 0.2s;}
+.theme-btn:hover{border-color:var(--border-hover);color:var(--text-main);}
 footer{text-align:center;padding:1.5rem;color:var(--text-mut);font-size:0.78rem;border-top:1px solid var(--border);}
 footer a{color:var(--text-sub);text-decoration:none;font-weight:500;}
 footer a:hover{color:var(--text-main);}
-@media(max-width:640px){.grid{grid-template-columns:1fr;}.stats{gap:0.75rem;}.stat{padding:0.75rem;min-width:calc(50% - 0.5rem);}.search-row{flex-direction:column;}.filters{flex-direction:column;align-items:stretch;}.action-bar{justify-content:center;}}
+@media(max-width:640px){.grid{grid-template-columns:1fr;}.stats{gap:0.75rem;}.stat{padding:0.75rem;min-width:calc(50% - 0.5rem);}.search-row{flex-direction:column;}.filters{flex-direction:column;align-items:stretch;}.action-bar{justify-content:center;}.nav-links a span{display:none;}}
 img[src*="logo.png"] { mix-blend-mode: multiply; }
+:root.dark img[src*="logo.png"] { mix-blend-mode: normal; filter: brightness(1.2); }
+:root.dark .leaflet-tile{filter:invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);}
 </style>
 </head>
 <body>
+<nav class="topnav">
+  <a href="index.html" class="nav-brand">
+    <img src="assets/logo.png" alt="Menuverso">
+    <span>Menuverso</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" class="active"><span>📋 </span>Database</a>
+    <a href="finder.html"><span>🔍 </span>Finder</a>
+    <a href="analytics.html"><span>📊 </span>Analytics</a>
+    <a href="landing.html"><span>🏠 </span>About</a>
+  </div>
+  <div class="controls-bar">
+    <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
+  </div>
+</nav>
 <div class="hero">
 <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:0.5rem;">
   <img src="assets/logo.png" alt="Menuverso Logo" style="width:40px; height:40px; border-radius:10px; box-shadow:var(--shadow-sm);">
@@ -222,10 +260,10 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
 <div class="grid" id="grid"><div class="loading">⏳ Loading restaurants...</div></div>
 <div id="map-container"><div id="map"></div></div>
 <footer id="footer">Built with ❤️ by <a href="landing.html">Menuverso</a> · March 2026</footer>
-<div class="lang-toggle">
-  <button data-lang="es" class="active" onclick="setLang('es')">ES</button>
-  <button data-lang="ca" onclick="setLang('ca')">CA</button>
-  <button data-lang="en" onclick="setLang('en')">EN</button>
+<div class="lang-toggle" style="position:fixed;bottom:1.25rem;right:1.25rem;z-index:1000;display:flex;border-radius:20px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);font-size:0.75rem;font-weight:600;">
+  <button data-lang="es" class="active" onclick="setLang('es')" style="padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;">ES</button>
+  <button data-lang="ca" onclick="setLang('ca')" style="padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;">CA</button>
+  <button data-lang="en" onclick="setLang('en')" style="padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;">EN</button>
 </div>
 <script src="restaurants_data.js"></script>
 <script>
@@ -659,6 +697,21 @@ function setLang(lang){
   });
   render();
 }
+
+// Theme
+function initTheme(){
+  const saved=localStorage.getItem('menuverso_theme');
+  if(saved==='dark'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches)){
+    document.documentElement.classList.add('dark');
+    document.getElementById('theme-toggle').textContent='☀️';
+  }
+}
+function toggleTheme(){
+  const isDark=document.documentElement.classList.toggle('dark');
+  localStorage.setItem('menuverso_theme',isDark?'dark':'light');
+  document.getElementById('theme-toggle').textContent=isDark?'☀️':'🌙';
+}
+initTheme();
 
 // Service Worker registration
 if('serviceWorker' in navigator){

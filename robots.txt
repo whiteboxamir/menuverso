@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /*.py$
+
+Sitemap: https://whiteboxamir.github.io/menuverso/sitemap.xml
