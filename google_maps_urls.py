@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Menuverso Google Maps URL Generator — Creates Google Maps URLs for geocoded restaurants.
-Also generates search URLs for restaurants without coordinates using name + address.
+Menuverso Google Maps URL Generator — Creates Google Maps URLs for all restaurants.
+Always uses restaurant name + address for the search query so Google Maps finds the
+actual business listing rather than dropping a pin at raw coordinates.
 """
 
 import json
@@ -15,26 +16,27 @@ def main():
         restaurants = json.load(f)
 
     total = len(restaurants)
-    from_coords = 0
-    from_search = 0
+    generated = 0
 
     for r in restaurants:
-        coords = r.get("coordinates", {})
-        lat = coords.get("lat")
-        lng = coords.get("lng")
         name = r.get("name", "")
         addr = r.get("address_full", "")
         city = r.get("city", "Barcelona")
+        hood = r.get("neighborhood", "")
 
-        if lat and lng:
-            # Direct coordinate URL
-            r["google_maps_url"] = f"https://www.google.com/maps/search/?api=1&query={lat},{lng}"
-            from_coords += 1
-        elif name:
-            # Search-based URL
-            query = f"{name} {addr} {city}".strip()
-            r["google_maps_url"] = f"https://www.google.com/maps/search/?api=1&query={quote_plus(query)}"
-            from_search += 1
+        if not name:
+            continue
+
+        # Always use name-based search so Google Maps finds the business listing
+        # Include address if available for disambiguation
+        parts = [name]
+        if addr:
+            parts.append(addr)
+        parts.append(city)
+
+        query = " ".join(parts).strip()
+        r["google_maps_url"] = f"https://www.google.com/maps/search/?api=1&query={quote_plus(query)}"
+        generated += 1
 
     # Save
     with open(INPUT, "w") as f:
@@ -45,9 +47,12 @@ def main():
         json.dump(restaurants, f, indent=2, ensure_ascii=False)
         f.write(";\n")
 
-    print(f"🗺️  Generated Google Maps URLs for {from_coords + from_search}/{total} restaurants")
-    print(f"   From coordinates: {from_coords}")
-    print(f"   From search query: {from_search}")
+    print(f"🗺️  Generated Google Maps URLs for {generated}/{total} restaurants")
+    print(f"   All URLs use name-based search (finds business listing, not raw pin)")
+
+    # Verify a few examples
+    for r in restaurants[:3]:
+        print(f"   #{r['id']} {r['name']}: {r['google_maps_url'][:80]}...")
 
 
 if __name__ == "__main__":

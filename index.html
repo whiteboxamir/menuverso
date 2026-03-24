@@ -107,6 +107,24 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-main);
 .marker-cluster-large{background:rgba(37,99,235,0.2);}
 .marker-cluster-large div{background:rgba(37,99,235,0.7);color:#fff;}
 
+/* Neighborhood dashboard */
+.dashboard-toggle{display:flex;justify-content:center;padding:0 1.5rem 1rem;}
+.dashboard-toggle button{padding:0.5rem 1.25rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--card);color:var(--text-sub);font-size:0.82rem;font-weight:500;cursor:pointer;transition:all 0.2s;box-shadow:var(--shadow-sm);}
+.dashboard-toggle button:hover{border-color:var(--border-hover);color:var(--text-main);}
+.dashboard-toggle button.active{background:var(--text-main);color:#fff;border-color:var(--text-main);}
+.hood-dashboard{max-width:1200px;margin:0 auto;padding:0 1.5rem 1.5rem;display:none;}
+.hood-dashboard.visible{display:block;}
+.hood-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:0.75rem;}
+.hood-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.25rem;box-shadow:var(--shadow-sm);cursor:pointer;transition:all 0.2s;}
+.hood-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--border-hover);}
+.hood-card-name{font-weight:600;font-size:0.95rem;color:var(--text-main);margin-bottom:0.4rem;display:flex;justify-content:space-between;align-items:center;}
+.hood-card-name .count{font-size:0.8rem;color:var(--text-mut);font-weight:500;}
+.hood-bar{height:4px;border-radius:2px;background:var(--bg);margin-bottom:0.5rem;overflow:hidden;}
+.hood-bar-fill{height:100%;border-radius:2px;transition:width 0.6s ease;}
+.hood-meta{display:flex;gap:0.75rem;flex-wrap:wrap;}
+.hood-meta span{font-size:0.72rem;color:var(--text-sub);}
+.hood-meta .accent-val{color:var(--green);font-weight:600;}
+
 footer{text-align:center;padding:1.5rem;color:var(--text-mut);font-size:0.78rem;border-top:1px solid var(--border);}
 footer a{color:var(--text-sub);text-decoration:none;font-weight:500;}
 footer a:hover{color:var(--text-main);}
@@ -131,6 +149,10 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
 <div class="stat"><div class="stat-num" id="s-mapped" style="color:var(--accent)">—</div><div class="stat-label">📍 On Map</div></div>
 <div class="stat"><div class="stat-num" id="s-tagged" style="color:#7C3AED">—</div><div class="stat-label">🏷️ Tagged</div></div>
 </div>
+<div class="dashboard-toggle">
+  <button id="dash-toggle" onclick="toggleDashboard()">📊 Neighborhood Dashboard</button>
+</div>
+<div class="hood-dashboard" id="hood-dashboard"><div class="hood-grid" id="hood-grid"></div></div>
 <div class="controls">
 <div class="search-row">
   <input type="text" class="search" id="search" placeholder="🔍 Search by name, cuisine, neighborhood, notes..." autocomplete="off">
@@ -431,6 +453,55 @@ function filterByTag(tag){
   else{activeFilters.tag=tag;}
   document.querySelectorAll('.tag-chip').forEach(c=>c.classList.toggle('active',c.dataset.tag===activeFilters.tag));
   render();
+}
+
+function toggleDashboard(){
+  const dash=document.getElementById('hood-dashboard');
+  const btn=document.getElementById('dash-toggle');
+  const visible=dash.classList.toggle('visible');
+  btn.classList.toggle('active',visible);
+  if(visible&&!dash.dataset.built){buildDashboard();dash.dataset.built='1';}
+}
+
+function buildDashboard(){
+  const hoods={};
+  DATA.forEach(r=>{
+    const h=r.neighborhood;
+    if(!hoods[h])hoods[h]={total:0,confirmed:0,prices:[],cuisines:{}};
+    hoods[h].total++;
+    if(r.menu_tier==='confirmed')hoods[h].confirmed++;
+    const p=parsePrice(r.menu_price_range);
+    if(p)hoods[h].prices.push(p);
+    const c=r.cuisine_type;
+    hoods[h].cuisines[c]=(hoods[h].cuisines[c]||0)+1;
+  });
+  const maxTotal=Math.max(...Object.values(hoods).map(h=>h.total));
+  const grid=document.getElementById('hood-grid');
+  const sorted=Object.entries(hoods).sort((a,b)=>b[1].total-a[1].total);
+  grid.innerHTML=sorted.map(([name,d])=>{
+    const pct=d.total?Math.round(d.confirmed/d.total*100):0;
+    const avg=d.prices.length?'€'+( d.prices.reduce((a,b)=>a+b,0)/d.prices.length).toFixed(1):'—';
+    const topCuisine=Object.entries(d.cuisines).sort((a,b)=>b[1]-a[1])[0]?.[0]||'—';
+    const barW=Math.round(d.total/maxTotal*100);
+    const barColor=pct>50?'var(--green)':pct>25?'var(--amber)':'var(--red)';
+    return `<div class="hood-card" onclick="filterByHood('${name}')">
+      <div class="hood-card-name">${name}<span class="count">${d.total}</span></div>
+      <div class="hood-bar"><div class="hood-bar-fill" style="width:${barW}%;background:${barColor}"></div></div>
+      <div class="hood-meta">
+        <span>🟢 <span class="accent-val">${pct}%</span> confirmed</span>
+        <span>💰 ${avg} avg</span>
+        <span>🍽️ ${topCuisine}</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function filterByHood(hood){
+  activeFilters.hood=hood;
+  document.getElementById('hood-select').value=hood;
+  render();
+  document.getElementById('hood-dashboard').classList.remove('visible');
+  document.getElementById('dash-toggle').classList.remove('active');
 }
 </script>
 </body>

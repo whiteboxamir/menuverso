@@ -62318,7 +62318,11 @@
         "restaurants/804_tri_bite/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3893196,
+      "lng": 2.1631462
+    }
   },
   {
     "id": 805,
@@ -62393,7 +62397,11 @@
         "restaurants/805_il_ritrovo_itali/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3962536,
+      "lng": 2.176187
+    }
   },
   {
     "id": 806,
@@ -62468,7 +62476,11 @@
         "restaurants/806_la_plata/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3804049,
+      "lng": 2.1805946
+    }
   },
   {
     "id": 807,
@@ -62543,7 +62555,11 @@
         "restaurants/807_lalcoba_azul/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3838927,
+      "lng": 2.174859
+    }
   },
   {
     "id": 808,
@@ -62618,7 +62634,11 @@
         "restaurants/808_els_4gats/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3857384,
+      "lng": 2.1736392
+    }
   },
   {
     "id": 809,
@@ -62693,7 +62713,11 @@
         "restaurants/809_bar_del_pi/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3824922,
+      "lng": 2.1739624
+    }
   },
   {
     "id": 810,
@@ -62768,7 +62792,11 @@
         "restaurants/810_le_bistro_sensi/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.383,
+      "lng": 2.177
+    }
   },
   {
     "id": 811,
@@ -62843,7 +62871,11 @@
         "restaurants/811_brugarol/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3836344,
+      "lng": 2.1808494
+    }
   },
   {
     "id": 812,
@@ -62918,7 +62950,11 @@
         "restaurants/812_vinateria_del_call/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3827003,
+      "lng": 2.1756639
+    }
   },
   {
     "id": 813,
@@ -62993,7 +63029,11 @@
         "restaurants/813_petit_tapas/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3808313,
+      "lng": 2.1773411
+    }
   },
   {
     "id": 814,
@@ -63068,7 +63108,11 @@
         "restaurants/814_bar_celta_pulperia/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.383,
+      "lng": 2.177
+    }
   },
   {
     "id": 815,
@@ -63143,7 +63187,11 @@
         "restaurants/815_quillo_bar/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    }
   },
   {
     "id": 816,
@@ -63218,7 +63266,11 @@
         "restaurants/816_tens_tapas/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    }
   },
   {
     "id": 817,
@@ -63293,7 +63345,11 @@
         "restaurants/817_euskal_etxea_taberna/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4632308,
+      "lng": 2.1702555
+    }
   },
   {
     "id": 818,
@@ -63368,7 +63424,11 @@
         "restaurants/818_cuines_santa_caterina/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3863594,
+      "lng": 2.1781611
+    }
   },
   {
     "id": 819,
@@ -63443,7 +63503,11 @@
         "restaurants/819_rao/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3852201,
+      "lng": 2.1646698
+    }
   },
   {
     "id": 820,
@@ -63518,7 +63582,11 @@
         "restaurants/820_anardi/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3830902,
+      "lng": 2.165259
+    }
   },
   {
     "id": 821,
@@ -63593,7 +63661,11 @@
         "restaurants/821_superclassic/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3835237,
+      "lng": 2.1646643
+    }
   },
   {
     "id": 822,
@@ -63668,7 +63740,11 @@
         "restaurants/822_bellvitja/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3780993,
+      "lng": 2.165206
+    }
   },
   {
     "id": 823,
@@ -63743,7 +63819,11 @@
         "restaurants/823_mimi_tapas/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3830817,
+      "lng": 2.1680986
+    }
   },
   {
     "id": 824,
@@ -63818,7 +63898,11 @@
         "restaurants/824_bodega_den_ruben/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3759415,
+      "lng": 2.1675696
+    }
   },
   {
     "id": 825,
@@ -63893,7 +63977,11 @@
         "restaurants/825_bianco_noir/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.384943,
+      "lng": 2.1671274
+    }
   },
   {
     "id": 826,
@@ -63968,7 +64056,11 @@
         "restaurants/826_bar_atlanta/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3780762,
+      "lng": 2.1684852
+    }
   },
   {
     "id": 827,
@@ -64043,7 +64135,11 @@
         "restaurants/827_la_morera/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3819482,
+      "lng": 2.1695795
+    }
   },
   {
     "id": 828,
@@ -64118,7 +64214,11 @@
         "restaurants/828_la_ravala/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3788918,
+      "lng": 2.1661774
+    }
   },
   {
     "id": 829,
@@ -64193,7 +64293,11 @@
         "restaurants/829_mendizabal/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3791424,
+      "lng": 2.1710738
+    }
   },
   {
     "id": 830,
@@ -64268,7 +64372,11 @@
         "restaurants/830_bar_marsella/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3782418,
+      "lng": 2.1712432
+    }
   },
   {
     "id": 831,
@@ -64343,7 +64451,11 @@
         "restaurants/831_biocenter/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3825676,
+      "lng": 2.1693128
+    }
   },
   {
     "id": 832,
@@ -64418,7 +64530,11 @@
         "restaurants/832_o_carballino_blai/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3738296,
+      "lng": 2.1642531
+    }
   },
   {
     "id": 833,
@@ -64493,7 +64609,11 @@
         "restaurants/833_pincho_j/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3738463,
+      "lng": 2.1639417
+    }
   },
   {
     "id": 834,
@@ -64568,7 +64688,11 @@
         "restaurants/834_latelier_de_blai/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.374109,
+      "lng": 2.1635705
+    }
   },
   {
     "id": 835,
@@ -64643,7 +64767,11 @@
         "restaurants/835_blai_tapas_bar/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3732911,
+      "lng": 2.1656788
+    }
   },
   {
     "id": 836,
@@ -64718,7 +64846,11 @@
         "restaurants/836_restaurant_la_salut/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4132469,
+      "lng": 2.1597743
+    }
   },
   {
     "id": 837,
@@ -64793,7 +64925,11 @@
         "restaurants/837_salut_bistro/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    }
   },
   {
     "id": 838,
@@ -64868,7 +65004,11 @@
         "restaurants/838_corgi_cafe/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    }
   },
   {
     "id": 839,
@@ -64943,7 +65083,11 @@
         "restaurants/839_can_manel_la_puda/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.189
+    }
   },
   {
     "id": 840,
@@ -65018,7 +65162,11 @@
         "restaurants/840_bodega_1900/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3755417,
+      "lng": 2.1566504
+    }
   },
   {
     "id": 841,
@@ -65093,7 +65241,11 @@
         "restaurants/841_el_guinardo/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3816959,
+      "lng": 2.1885258
+    }
   },
   {
     "id": 842,
@@ -65168,7 +65320,11 @@
         "restaurants/842_habana_vieja/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4008041,
+      "lng": 2.2038094
+    }
   },
   {
     "id": 843,
@@ -65243,7 +65399,11 @@
         "restaurants/843_la_vermuteria_del_poblenou/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4014244,
+      "lng": 2.2009519
+    }
   },
   {
     "id": 844,
@@ -65318,7 +65478,11 @@
         "restaurants/844_la_esquina/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3769946,
+      "lng": 2.1635673
+    }
   },
   {
     "id": 845,
@@ -65393,7 +65557,11 @@
         "restaurants/845_rooftop_smoke_bar/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3775102,
+      "lng": 2.1625964
+    }
   },
   {
     "id": 846,
@@ -65468,7 +65636,11 @@
         "restaurants/846_cerveceria_jazz/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3766221,
+      "lng": 2.1608338
+    }
   },
   {
     "id": 847,
@@ -65543,7 +65715,11 @@
         "restaurants/847_osmosis_restaurant/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3903366,
+      "lng": 2.1571934
+    }
   },
   {
     "id": 848,
@@ -65618,7 +65794,11 @@
         "restaurants/848_meson_del_cafe/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3978323,
+      "lng": 2.1833349
+    }
   },
   {
     "id": 849,
@@ -65693,7 +65873,11 @@
         "restaurants/849_casa_delfin/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3852382,
+      "lng": 2.1833685
+    }
   },
   {
     "id": 850,
@@ -65768,7 +65952,11 @@
         "restaurants/850_restaurante_badal/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3724235,
+      "lng": 2.1302864
+    }
   },
   {
     "id": 851,
@@ -65843,7 +66031,11 @@
         "restaurants/851_marisqueria_la_estrella/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3775738,
+      "lng": 2.1340229
+    }
   },
   {
     "id": 852,
@@ -65918,7 +66110,11 @@
         "restaurants/852_piazza_navona/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3755608,
+      "lng": 2.1324763
+    }
   },
   {
     "id": 853,
@@ -65993,7 +66189,11 @@
         "restaurants/853_el_rinconcillo_de_sants/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3755619,
+      "lng": 2.1279425
+    }
   },
   {
     "id": 854,
@@ -66068,7 +66268,11 @@
         "restaurants/854_la_cuina_del_clot/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4117265,
+      "lng": 2.1896639
+    }
   },
   {
     "id": 855,
@@ -66143,7 +66347,11 @@
         "restaurants/855_restaurant_sa_brasa/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4095127,
+      "lng": 2.1843839
+    }
   },
   {
     "id": 856,
@@ -66218,7 +66426,11 @@
         "restaurants/856_caballito_de_mar_clot/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4093357,
+      "lng": 2.1834056
+    }
   },
   {
     "id": 857,
@@ -66293,7 +66505,11 @@
         "restaurants/857_la_cuina_de_landreuenc/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4320416,
+      "lng": 2.1893226
+    }
   },
   {
     "id": 858,
@@ -66368,7 +66584,11 @@
         "restaurants/858_restaurante_paco/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4377194,
+      "lng": 2.1927771
+    }
   },
   {
     "id": 859,
@@ -66443,7 +66663,11 @@
         "restaurants/859_el_meson_de_la_muela/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.435,
+      "lng": 2.19
+    }
   },
   {
     "id": 860,
@@ -66518,7 +66742,11 @@
         "restaurants/860_restaurante_can_ros/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    }
   },
   {
     "id": 861,
@@ -66593,7 +66821,11 @@
         "restaurants/861_el_fogon_de_roquetas/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    }
   },
   {
     "id": 862,
@@ -66668,7 +66900,11 @@
         "restaurants/862_bar_el_padrino/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    }
   },
   {
     "id": 863,
@@ -66743,7 +66979,11 @@
         "restaurants/863_restaurante_xavi/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    }
   },
   {
     "id": 864,
@@ -66818,7 +67058,11 @@
         "restaurants/864_el_rincon_del_guinardo/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.418,
+      "lng": 2.165
+    }
   },
   {
     "id": 865,
@@ -66893,7 +67137,11 @@
         "restaurants/865_restaurante_el_portal/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.418,
+      "lng": 2.165
+    }
   },
   {
     "id": 866,
@@ -66968,7 +67216,11 @@
         "restaurants/866_acontraluz/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.387,
+      "lng": 2.127
+    }
   },
   {
     "id": 867,
@@ -67043,7 +67295,11 @@
         "restaurants/867_windsor_restaurant/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 868,
@@ -67118,7 +67374,11 @@
         "restaurants/868_sumo_sushi/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 869,
@@ -67193,7 +67453,11 @@
         "restaurants/869_wok_to_walk/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 870,
@@ -67268,7 +67532,11 @@
         "restaurants/870_udon/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 871,
@@ -67343,7 +67611,11 @@
         "restaurants/871_lateral/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 872,
@@ -67418,7 +67690,11 @@
         "restaurants/872_bobo_barcelona/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 873,
@@ -67493,7 +67769,11 @@
         "restaurants/873_distinto/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 874,
@@ -67568,7 +67848,11 @@
         "restaurants/874_crusto_barcelona/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 875,
@@ -67643,7 +67927,11 @@
         "restaurants/875_brunch_cake/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 876,
@@ -67718,7 +68006,11 @@
         "restaurants/876_alsur_cafe_eixample/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 877,
@@ -67793,7 +68085,11 @@
         "restaurants/877_bo_de_b_eixample/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 878,
@@ -67868,7 +68164,11 @@
         "restaurants/878_goiko_eixample/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 879,
@@ -67943,7 +68243,11 @@
         "restaurants/879_pegasus_gastropub/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 880,
@@ -68018,7 +68322,11 @@
         "restaurants/880_fresc_co_eixample/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 881,
@@ -68093,7 +68401,11 @@
         "restaurants/881_wok_garden/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 882,
@@ -68168,7 +68480,11 @@
         "restaurants/882_wagamama/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 883,
@@ -68243,7 +68559,11 @@
         "restaurants/883_pans_company_pg_gracia/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 884,
@@ -68318,7 +68638,11 @@
         "restaurants/884_hard_rock_cafe/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.383,
+      "lng": 2.177
+    }
   },
   {
     "id": 885,
@@ -68393,7 +68717,11 @@
         "restaurants/885_tgb_the_good_burger/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 886,
@@ -68468,7 +68796,11 @@
         "restaurants/886_mauri/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 887,
@@ -68543,7 +68875,11 @@
         "restaurants/887_escriba_gran_via/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 888,
@@ -68618,7 +68954,11 @@
         "restaurants/888_txapela/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 889,
@@ -68693,7 +69033,11 @@
         "restaurants/889_can_ravell/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 890,
@@ -68768,7 +69112,11 @@
         "restaurants/890_tragaluz/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 891,
@@ -68843,7 +69191,11 @@
         "restaurants/891_nectari/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 892,
@@ -68918,7 +69270,11 @@
         "restaurants/892_via_emilia_eixample/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 893,
@@ -68993,7 +69349,11 @@
         "restaurants/893_honest_greens_gracia/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    }
   },
   {
     "id": 894,
@@ -69068,7 +69428,11 @@
         "restaurants/894_la_boqueria_stall_1/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.168
+    }
   },
   {
     "id": 895,
@@ -69143,7 +69507,11 @@
         "restaurants/895_el_roble/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    }
   },
   {
     "id": 896,
@@ -69218,7 +69586,11 @@
         "restaurants/896_kibuka_gracia/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    }
   },
   {
     "id": 897,
@@ -69293,7 +69665,11 @@
         "restaurants/897_la_estrella_del_born_gracia/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    }
   },
   {
     "id": 898,
@@ -69368,7 +69744,11 @@
         "restaurants/898_sushi_ya/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    }
   },
   {
     "id": 899,
@@ -69443,7 +69823,11 @@
         "restaurants/899_can_dende/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    }
   },
   {
     "id": 900,
@@ -69518,7 +69902,11 @@
         "restaurants/900_la_llesca/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    }
   },
   {
     "id": 901,
@@ -69593,7 +69981,11 @@
         "restaurants/901_el_grillo/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    }
   },
   {
     "id": 902,
@@ -69668,7 +70060,11 @@
         "restaurants/902_set_portes/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.189
+    }
   },
   {
     "id": 903,
@@ -69743,7 +70139,11 @@
         "restaurants/903_la_mar_bella_chiringuito/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.189
+    }
   },
   {
     "id": 904,
@@ -69818,7 +70218,11 @@
         "restaurants/904_can_viada/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    }
   },
   {
     "id": 905,
@@ -69893,7 +70297,11 @@
         "restaurants/905_la_cuina_de_sants/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    }
   },
   {
     "id": 906,
@@ -69968,7 +70376,11 @@
         "restaurants/906_el_tomaquet_de_sants/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.374,
+      "lng": 2.134
+    }
   },
   {
     "id": 907,
@@ -70043,7 +70455,11 @@
         "restaurants/907_tacos_tacos_poble_sec/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    }
   },
   {
     "id": 908,
@@ -70118,7 +70534,11 @@
         "restaurants/908_bella_napoli_poble_sec/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    }
   },
   {
     "id": 909,
@@ -70193,7 +70613,11 @@
         "restaurants/909_bodega_ampelon/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    }
   },
   {
     "id": 910,
@@ -70268,7 +70692,11 @@
         "restaurants/910_restaurant_el_foro/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    }
   },
   {
     "id": 911,
@@ -70343,7 +70771,11 @@
         "restaurants/911_la_forquilla_sant_marti/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    }
   },
   {
     "id": 912,
@@ -70418,7 +70850,11 @@
         "restaurants/912_xiringuito_mar_bella/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.41,
+      "lng": 2.191
+    }
   },
   {
     "id": 913,
@@ -70493,7 +70929,11 @@
         "restaurants/913_can_manes/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.396488,
+      "lng": 2.1925662
+    }
   },
   {
     "id": 914,
@@ -70568,7 +71008,11 @@
         "restaurants/914_el_glop_sant_marti/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.395377,
+      "lng": 2.1901343
+    }
   },
   {
     "id": 915,
@@ -70643,7 +71087,11 @@
         "restaurants/915_el_rebost_del_clot/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4058636,
+      "lng": 2.1872626
+    }
   },
   {
     "id": 916,
@@ -70718,7 +71166,11 @@
         "restaurants/916_el_born_basic/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.398635,
+      "lng": 2.179801
+    }
   },
   {
     "id": 917,
@@ -70793,7 +71245,11 @@
         "restaurants/917_pizzeria_da_michele/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4026616,
+      "lng": 2.172034
+    }
   },
   {
     "id": 918,
@@ -70868,7 +71324,11 @@
         "restaurants/918_bar_mut_sagrada_familia/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3989687,
+      "lng": 2.1793428
+    }
   },
   {
     "id": 919,
@@ -70943,7 +71403,11 @@
         "restaurants/919_la_cuina_del_9/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4320416,
+      "lng": 2.1893226
+    }
   },
   {
     "id": 920,
@@ -71018,7 +71482,11 @@
         "restaurants/920_bar_manolo_sant_andreu/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4320416,
+      "lng": 2.1893226
+    }
   },
   {
     "id": 921,
@@ -71093,7 +71561,11 @@
         "restaurants/921_la_masia_de_nou_barris/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.43042,
+      "lng": 2.1761167
+    }
   },
   {
     "id": 922,
@@ -71168,7 +71640,11 @@
         "restaurants/922_restaurante_chen_ji/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4392592,
+      "lng": 2.166299
+    }
   },
   {
     "id": 923,
@@ -71243,7 +71719,11 @@
         "restaurants/923_restaurant_can_rectoret/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4307129,
+      "lng": 2.1618668
+    }
   },
   {
     "id": 924,
@@ -71318,7 +71798,11 @@
         "restaurants/924_lhogar_gallego/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.418,
+      "lng": 2.165
+    }
   },
   {
     "id": 925,
@@ -71393,7 +71877,11 @@
         "restaurants/925_zumo_bar_horta/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4317203,
+      "lng": 2.1596399
+    }
   },
   {
     "id": 926,
@@ -71468,7 +71956,11 @@
         "restaurants/926_can_culleres_les_corts/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3840219,
+      "lng": 2.1306028
+    }
   },
   {
     "id": 927,
@@ -71543,7 +72035,11 @@
         "restaurants/927_el_japones_de_pedralbes/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3914546,
+      "lng": 2.1174687
+    }
   },
   {
     "id": 928,
@@ -71618,7 +72114,11 @@
         "restaurants/928_bodega_1900_sant_antoni/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3755417,
+      "lng": 2.1566504
+    }
   },
   {
     "id": 929,
@@ -71693,7 +72193,11 @@
         "restaurants/929_hoja_santa/team_01.jpg"
       ]
     },
-    "status": "permanently_closed"
+    "status": "permanently_closed",
+    "coordinates": {
+      "lat": 41.3760901,
+      "lng": 2.1541438
+    }
   },
   {
     "id": 930,
@@ -71768,7 +72272,11 @@
         "restaurants/930_carlota_akaneya/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3922421,
+      "lng": 2.1566747
+    }
   },
   {
     "id": 931,
@@ -71843,7 +72351,11 @@
         "restaurants/931_perikete/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3799145,
+      "lng": 2.1893886
+    }
   },
   {
     "id": 932,
@@ -71918,7 +72430,11 @@
         "restaurants/932_la_rita_eixample/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3931568,
+      "lng": 2.1659406
+    }
   },
   {
     "id": 933,
@@ -71993,7 +72509,11 @@
         "restaurants/933_agape/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3936322,
+      "lng": 2.1692813
+    }
   },
   {
     "id": 934,
@@ -72068,7 +72588,11 @@
         "restaurants/934_restaurant_ciudad_condal/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3889463,
+      "lng": 2.1669376
+    }
   },
   {
     "id": 935,
@@ -72143,7 +72667,11 @@
         "restaurants/935_cafe_zurich/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3858504,
+      "lng": 2.1694606
+    }
   },
   {
     "id": 936,
@@ -72218,7 +72746,11 @@
         "restaurants/936_flax_kale_born/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3854856,
+      "lng": 2.1819386
+    }
   },
   {
     "id": 937,
@@ -72293,7 +72825,11 @@
         "restaurants/937_can_paixano_barceloneta/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3817757,
+      "lng": 2.1834268
+    }
   },
   {
     "id": 938,
@@ -72368,7 +72904,11 @@
         "restaurants/938_paradiso/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    }
   },
   {
     "id": 939,
@@ -72443,7 +72983,11 @@
         "restaurants/939_dry_martini/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 940,
@@ -72518,7 +73062,11 @@
         "restaurants/940_sips_barcelona/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888297,
+      "lng": 2.156682
+    }
   },
   {
     "id": 941,
@@ -72593,7 +73141,11 @@
         "restaurants/941_bobbys_free/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3999137,
+      "lng": 2.1583155
+    }
   },
   {
     "id": 942,
@@ -72659,7 +73211,11 @@
         "restaurants/942_taller_del_chef/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3936885,
+      "lng": 2.1636552
+    }
   },
   {
     "id": 943,
@@ -72725,7 +73281,11 @@
         "restaurants/943_la_pepita_born/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3848426,
+      "lng": 2.1828745
+    }
   },
   {
     "id": 944,
@@ -72791,7 +73351,11 @@
         "restaurants/944_casa_guinart/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3822966,
+      "lng": 2.1719827
+    }
   },
   {
     "id": 945,
@@ -72857,7 +73421,11 @@
         "restaurants/945_padthai_wokbar/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3942784,
+      "lng": 2.1701117
+    }
   },
   {
     "id": 946,
@@ -72923,7 +73491,11 @@
         "restaurants/946_kibuka_born/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3848426,
+      "lng": 2.1828745
+    }
   },
   {
     "id": 947,
@@ -72989,7 +73561,11 @@
         "restaurants/947_la_cuina_de_can_simon/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3754355,
+      "lng": 2.1431764
+    }
   },
   {
     "id": 948,
@@ -73055,7 +73631,11 @@
         "restaurants/948_el_pintor/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3833947,
+      "lng": 2.1769119
+    }
   },
   {
     "id": 949,
@@ -73121,7 +73701,11 @@
         "restaurants/949_gat_blau/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3818725,
+      "lng": 2.1568973
+    }
   },
   {
     "id": 950,
@@ -73187,7 +73771,11 @@
         "restaurants/950_la_parra/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3751001,
+      "lng": 2.1409075
+    }
   },
   {
     "id": 951,
@@ -73253,7 +73841,11 @@
         "restaurants/951_restaurant_rias_de_galicia/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3742115,
+      "lng": 2.1546082
+    }
   },
   {
     "id": 952,
@@ -73319,7 +73911,11 @@
         "restaurants/952_mandarosso/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3868966,
+      "lng": 2.1761916
+    }
   },
   {
     "id": 953,
@@ -73385,7 +73981,11 @@
         "restaurants/953_el_celler_de_can_roca_pop_up/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3936885,
+      "lng": 2.1636552
+    }
   },
   {
     "id": 954,
@@ -73451,7 +74051,11 @@
         "restaurants/954_can_culleretes_born/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3848426,
+      "lng": 2.1828745
+    }
   },
   {
     "id": 955,
@@ -73517,7 +74121,11 @@
         "restaurants/955_restaurant_cervantes/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3813839,
+      "lng": 2.1775054
+    }
   },
   {
     "id": 956,
@@ -73583,7 +74191,11 @@
         "restaurants/956_el_bon_lloc/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4036418,
+      "lng": 2.2032751
+    }
   },
   {
     "id": 957,
@@ -73649,7 +74261,11 @@
         "restaurants/957_el_pasaje/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    }
   },
   {
     "id": 958,
@@ -73715,7 +74331,11 @@
         "restaurants/958_celler_de_la_ribera/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    }
   },
   {
     "id": 959,
@@ -73781,7 +74401,11 @@
         "restaurants/959_sensi_sushi/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.383,
+      "lng": 2.177
+    }
   },
   {
     "id": 960,
@@ -73847,7 +74471,11 @@
         "restaurants/960_el_portalon/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 961,
@@ -73913,7 +74541,11 @@
         "restaurants/961_la_bota_fumeiro/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3805654,
+      "lng": 2.1879189
+    }
   },
   {
     "id": 962,
@@ -73979,7 +74611,11 @@
         "restaurants/962_sants_bbq/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3753288,
+      "lng": 2.1349117
+    }
   },
   {
     "id": 963,
@@ -74045,7 +74681,11 @@
         "restaurants/963_el_bosc_de_les_fades/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3833947,
+      "lng": 2.1769119
+    }
   },
   {
     "id": 964,
@@ -74111,7 +74751,11 @@
         "restaurants/964_milk_bar_born/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3848426,
+      "lng": 2.1828745
+    }
   },
   {
     "id": 965,
@@ -74177,7 +74821,11 @@
         "restaurants/965_taranna_cafe/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3936885,
+      "lng": 2.1636552
+    }
   },
   {
     "id": 966,
@@ -74243,7 +74891,11 @@
         "restaurants/966_nomad_roasters/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3936885,
+      "lng": 2.1636552
+    }
   },
   {
     "id": 967,
@@ -74309,7 +74961,11 @@
         "restaurants/967_la_dolca_herminia/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3867346,
+      "lng": 2.1744184
+    }
   },
   {
     "id": 968,
@@ -74375,7 +75031,11 @@
         "restaurants/968_tibet/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4158456,
+      "lng": 2.157989
+    }
   },
   {
     "id": 969,
@@ -74441,7 +75101,11 @@
         "restaurants/969_govinda/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.384138,
+      "lng": 2.1724092
+    }
   },
   {
     "id": 970,
@@ -74507,7 +75171,11 @@
         "restaurants/970_los_pinchitos/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3795176,
+      "lng": 2.1683678
+    }
   },
   {
     "id": 971,
@@ -74573,7 +75241,11 @@
         "restaurants/971_el_salon/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3848426,
+      "lng": 2.1828745
+    }
   },
   {
     "id": 972,
@@ -74639,7 +75311,11 @@
         "restaurants/972_miramelindo/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3845753,
+      "lng": 2.1825436
+    }
   },
   {
     "id": 973,
@@ -74705,7 +75381,11 @@
         "restaurants/973_cerveseria_joana/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4036418,
+      "lng": 2.2032751
+    }
   },
   {
     "id": 974,
@@ -74771,7 +75451,11 @@
         "restaurants/974_restaurant_morro_fi/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4036418,
+      "lng": 2.2032751
+    }
   },
   {
     "id": 975,
@@ -74837,7 +75521,11 @@
         "restaurants/975_casa_pages/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3998264,
+      "lng": 2.1613352
+    }
   },
   {
     "id": 976,
@@ -74903,7 +75591,11 @@
         "restaurants/976_el_xiringo/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4084102,
+      "lng": 2.2031889
+    }
   },
   {
     "id": 977,
@@ -74969,7 +75661,11 @@
         "restaurants/977_la_cuina_del_bo/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4093552,
+      "lng": 2.1887554
+    }
   },
   {
     "id": 978,
@@ -75035,7 +75731,11 @@
         "restaurants/978_el_taller_clot/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4076681,
+      "lng": 2.1880457
+    }
   },
   {
     "id": 979,
@@ -75101,7 +75801,11 @@
         "restaurants/979_can_batllo/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3854514,
+      "lng": 2.1355306
+    }
   },
   {
     "id": 980,
@@ -75167,7 +75871,11 @@
         "restaurants/980_el_reco_de_sant_antoni/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3784116,
+      "lng": 2.1617677
+    }
   },
   {
     "id": 981,
@@ -75233,7 +75941,11 @@
         "restaurants/981_restaurante_el_cid/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.189
+    }
   },
   {
     "id": 982,
@@ -75299,7 +76011,11 @@
         "restaurants/982_la_pepita_sant_antoni/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.379,
+      "lng": 2.159
+    }
   },
   {
     "id": 983,
@@ -75365,7 +76081,11 @@
         "restaurants/983_bodega_granados/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.3888,
+      "lng": 2.162
+    }
   },
   {
     "id": 984,
@@ -75431,7 +76151,11 @@
         "restaurants/984_la_formatgeria_de_sarria/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.401,
+      "lng": 2.135
+    }
   },
   {
     "id": 985,
@@ -75497,7 +76221,11 @@
         "restaurants/985_el_cau_de_sarria/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.401,
+      "lng": 2.135
+    }
   },
   {
     "id": 986,
@@ -75563,7 +76291,11 @@
         "restaurants/986_restaurante_bambu/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    }
   },
   {
     "id": 987,
@@ -75629,7 +76361,11 @@
         "restaurants/987_meson_can_pepe/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1744
+    }
   },
   {
     "id": 988,
@@ -75695,7 +76431,11 @@
         "restaurants/988_el_vergel_veggie/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.385,
+      "lng": 2.183
+    }
   },
   {
     "id": 989,
@@ -75761,7 +76501,11 @@
         "restaurants/989_arume_gracia/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4036,
+      "lng": 2.1567
+    }
   },
   {
     "id": 990,
@@ -75827,7 +76571,11 @@
         "restaurants/990_la_masia_de_les_corts/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.387,
+      "lng": 2.127
+    }
   },
   {
     "id": 991,
@@ -75893,7 +76641,11 @@
         "restaurants/991_el_raco_del_poblenou/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    }
   },
   {
     "id": 992,
@@ -75959,7 +76711,11 @@
         "restaurants/992_foodbox_poblenou/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.403,
+      "lng": 2.201
+    }
   },
   {
     "id": 993,
@@ -76025,7 +76781,11 @@
         "restaurants/993_l_hamburguesa/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.38,
+      "lng": 2.168
+    }
   },
   {
     "id": 994,
@@ -76091,7 +76851,11 @@
         "restaurants/994_bar_joan/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    }
   },
   {
     "id": 995,
@@ -76157,7 +76921,11 @@
         "restaurants/995_la_cuina_del_parallel/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    }
   },
   {
     "id": 996,
@@ -76223,7 +76991,11 @@
         "restaurants/996_can_panella/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.418,
+      "lng": 2.165
+    }
   },
   {
     "id": 997,
@@ -76289,7 +77061,11 @@
         "restaurants/997_el_meson_de_horta/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.418,
+      "lng": 2.165
+    }
   },
   {
     "id": 998,
@@ -76355,7 +77131,11 @@
         "restaurants/998_restaurante_el_cid_nou_barris/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.441,
+      "lng": 2.177
+    }
   },
   {
     "id": 999,
@@ -76421,7 +77201,11 @@
         "restaurants/999_la_taberna_de_sant_andreu/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.435,
+      "lng": 2.19
+    }
   },
   {
     "id": 1000,
@@ -76487,7 +77271,11 @@
         "restaurants/1000_taberna_blai_tonight/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    }
   },
   {
     "id": 1001,
@@ -76553,7 +77341,11 @@
         "restaurants/1001_bar_mombiela/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    }
   },
   {
     "id": 1002,
@@ -76619,7 +77411,11 @@
         "restaurants/1002_el_sortidor_de_la_filomena_pages/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    }
   },
   {
     "id": 1003,
@@ -76685,7 +77481,11 @@
         "restaurants/1003_casa_pepi/team_01.jpg"
       ]
     },
-    "status": "active"
+    "status": "active",
+    "coordinates": {
+      "lat": 41.372,
+      "lng": 2.161
+    }
   },
   {
     "id": 1004,
