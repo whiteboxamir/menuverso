@@ -791,8 +791,20 @@ else document.getElementById('feed').innerHTML='<div class="no-results">Error: r
 // Service Worker
 if('serviceWorker' in navigator){
   window.addEventListener('load',()=>{
-    navigator.serviceWorker.register('/sw.js').catch(()=>{});
+    // Register from same directory for GitHub Pages compatibility
+    navigator.serviceWorker.register('sw.js').catch(()=>{});
   });
+}
+
+// Handle hash-based deep links from PWA shortcuts
+if(window.location.hash){
+  const screenMap = {'#map':'map-screen','#find':'find-screen','#saved':'saved-screen'};
+  const target = screenMap[window.location.hash];
+  if(target){
+    setTimeout(()=>{
+      switchScreen(target, document.querySelector(`.tab-item[data-screen="${target}"]`));
+    }, 500);
+  }
 }
 </script>
 </body>
