@@ -251,6 +251,16 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
       <div class="pref-chips" id="vibe-chips"></div>
     </div>
 
+    <div class="pref-section">
+      <div class="pref-label" id="label-amenities">Amenities</div>
+      <div class="pref-chips" id="amenity-chips">
+        <span class="pref-chip" data-pref="amenity" data-value="terrace" onclick="toggleAmenity(this)">🏡 Terraza</span>
+        <span class="pref-chip" data-pref="amenity" data-value="dog" onclick="toggleAmenity(this)">🐕 Dog-Friendly</span>
+        <span class="pref-chip" data-pref="amenity" data-value="waterfront" onclick="toggleAmenity(this)">🌊 Waterfront</span>
+        <span class="pref-chip" data-pref="amenity" data-value="open_now" onclick="toggleAmenity(this)">⏰ Open Now</span>
+      </div>
+    </div>
+
     <div class="step-nav">
       <button class="btn btn-secondary" onclick="goStep(1)">
         <span id="back2-text">← Atrás</span>
@@ -308,6 +318,7 @@ const DATA = window.RESTAURANT_DATA || [];
 let currentStep = 1;
 let selectedHood = null;
 let prefs = { budget: null, menu: null, cuisine: null, vibe: null };
+let amenityFilters = new Set();
 let currentLang = localStorage.getItem('menuverso_lang') || 'es';
 let results = [];
 
@@ -320,7 +331,8 @@ const I18N = {
     gps: 'Usar mi ubicación', gps_loading: 'Localizando...', gps_found: 'Ubicación encontrada',
     next: 'Siguiente →',
     s2_title: '✨ ¿Qué buscas?', s2_sub: 'Selecciona tus preferencias. Todo es opcional.',
-    budget_label: 'Presupuesto', menu_label: 'Menú del Día', cuisine_label: 'Cocina', vibes_label: 'Vibes',
+    budget_label: 'Presupuesto', menu_label: 'Menú del Día', cuisine_label: 'Cocina', vibes_label: 'Vibes', amenities_label: 'Amenidades',
+    am_terrace: '🏡 Terraza', am_dog: '🐕 Dog-Friendly', am_waterfront: '🌊 Waterfront', am_open: '⏰ Abierto Ahora',
     budget_b: '💚 Económico (≤12€)', budget_m: '🧡 Medio (12-18€)', budget_p: '💜 Premium (18€+)',
     menu_c: '🟢 Confirmado', menu_l: '🟡 Probable',
     back: '← Atrás', see_results: 'Ver Resultados →',
@@ -337,7 +349,8 @@ const I18N = {
     gps: 'Use my location', gps_loading: 'Locating...', gps_found: 'Location found',
     next: 'Next →',
     s2_title: '✨ What are you looking for?', s2_sub: 'Select your preferences. Everything is optional.',
-    budget_label: 'Budget', menu_label: 'Menú del Día', cuisine_label: 'Cuisine', vibes_label: 'Vibes',
+    budget_label: 'Budget', menu_label: 'Menú del Día', cuisine_label: 'Cuisine', vibes_label: 'Vibes', amenities_label: 'Amenities',
+    am_terrace: '🏡 Terrace', am_dog: '🐕 Dog-Friendly', am_waterfront: '🌊 Waterfront', am_open: '⏰ Open Now',
     budget_b: '💚 Budget (≤12€)', budget_m: '🧡 Mid-Range (12-18€)', budget_p: '💜 Premium (18€+)',
     menu_c: '🟢 Confirmed', menu_l: '🟡 Likely',
     back: '← Back', see_results: 'See Results →',
@@ -354,7 +367,8 @@ const I18N = {
     gps: 'Utilitzar la meva ubicació', gps_loading: 'Localitzant...', gps_found: 'Ubicació trobada',
     next: 'Següent →',
     s2_title: '✨ Què busques?', s2_sub: 'Selecciona les teves preferències. Tot és opcional.',
-    budget_label: 'Pressupost', menu_label: 'Menú del Dia', cuisine_label: 'Cuina', vibes_label: 'Vibes',
+    budget_label: 'Pressupost', menu_label: 'Menú del Dia', cuisine_label: 'Cuina', vibes_label: 'Vibes', amenities_label: 'Comoditats',
+    am_terrace: '🏡 Terrassa', am_dog: '🐕 Dog-Friendly', am_waterfront: '🌊 Waterfront', am_open: '⏰ Obert Ara',
     budget_b: '💚 Econòmic (≤12€)', budget_m: '🧡 Mitjà (12-18€)', budget_p: '💜 Premium (18€+)',
     menu_c: '🟢 Confirmat', menu_l: '🟡 Probable',
     back: '← Enrere', see_results: 'Veure Resultats →',
@@ -389,6 +403,14 @@ function applyI18N() {
   document.getElementById('label-menu').textContent = t('menu_label');
   document.getElementById('label-cuisine').textContent = t('cuisine_label');
   document.getElementById('label-vibes').textContent = t('vibes_label');
+  document.getElementById('label-amenities').textContent = t('amenities_label');
+
+  // Update amenity chip labels
+  const amenityChips = document.querySelectorAll('#amenity-chips .pref-chip');
+  if (amenityChips[0]) amenityChips[0].textContent = t('am_terrace');
+  if (amenityChips[1]) amenityChips[1].textContent = t('am_dog');
+  if (amenityChips[2]) amenityChips[2].textContent = t('am_waterfront');
+  if (amenityChips[3]) amenityChips[3].textContent = t('am_open');
   document.getElementById('back2-text').textContent = t('back');
   document.getElementById('next2-text').textContent = t('see_results');
   document.getElementById('s3-title').textContent = t('s3_title');
@@ -556,9 +578,22 @@ function togglePref(el) {
   }
 }
 
+function toggleAmenity(el) {
+  el.classList.toggle('selected');
+  const val = el.dataset.value;
+  if (amenityFilters.has(val)) amenityFilters.delete(val);
+  else amenityFilters.add(val);
+}
+
 // === COMPUTE RESULTS ===
 function computeResults() {
   let pool = DATA.filter(r => r.neighborhood === selectedHood);
+
+  // Apply amenity hard filters
+  if (amenityFilters.has('terrace')) pool = pool.filter(r => r.outdoor_seating);
+  if (amenityFilters.has('dog')) pool = pool.filter(r => r.dog_friendly || (r.tags || []).includes('dog-friendly'));
+  if (amenityFilters.has('waterfront')) pool = pool.filter(r => (r.tags || []).includes('waterfront'));
+  if (amenityFilters.has('open_now')) pool = pool.filter(r => isOpenNow(r));
 
   // Score each restaurant
   results = pool.map(r => {
@@ -590,6 +625,9 @@ function computeResults() {
     // Review count bonus (popularity)
     if (r.google_maps_review_count > 500) score += 5;
     else if (r.google_maps_review_count > 100) score += 3;
+
+    // Amenity bonuses (soft)
+    if (r.outdoor_seating) score += 2;
 
     // Cap at 100
     score = Math.min(100, Math.max(0, score));
@@ -662,6 +700,27 @@ function closeSurprise(e) {
   if (e.target === document.getElementById('surprise-overlay')) {
     document.getElementById('surprise-overlay').classList.remove('show');
   }
+}
+
+// === OPEN NOW CHECK ===
+function isOpenNow(r) {
+  const hours = r.opening_hours_full;
+  if (!hours) return true; // Don't filter out unknowns
+  const now = new Date();
+  const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+  const day = dayNames[now.getDay()];
+  const todayHours = hours[day];
+  if (!todayHours || todayHours === 'Closed') return false;
+  const h = now.getHours(), m = now.getMinutes();
+  const nowMin = h * 60 + m;
+  const ranges = todayHours.match(/\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2}/g);
+  if (!ranges) return true;
+  return ranges.some(range => {
+    const parts = range.split('-').map(s => s.trim());
+    const [sh, sm] = parts[0].split(':').map(Number);
+    const [eh, em] = parts[1].split(':').map(Number);
+    return nowMin >= sh * 60 + sm && nowMin < eh * 60 + em;
+  });
 }
 
 // === INIT ===

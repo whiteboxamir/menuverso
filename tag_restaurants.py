@@ -111,6 +111,91 @@ def detect_tags(r):
     if "mon-fri" in hours.lower() or "tue-fri" in hours.lower():
         tags.add("weekday-lunch")
     
+    # === EXPANDED TAGS ===
+    hood = (r.get("neighborhood", "") or "")
+    address = (r.get("address_full", "") or "").lower()
+    
+    # Wine bar
+    if any(w in notes for w in ["wine bar", "wine list", "wine selection", "natural wine",
+                                  "vinos", "wine pairing", "sommelier", "bodega"]):
+        tags.add("wine-bar")
+    if any(w in name for w in ["bodega", "vinoteca", "vins", "celler"]):
+        tags.add("wine-bar")
+    
+    # Date night
+    if any(w in notes for w in ["romantic", "intimate", "candlelit", "date",
+                                  "special occasion", "elegant", "fine dining"]):
+        tags.add("date-night")
+    if tier == "premium" and any(w in notes for w in ["tasting", "ambiance", "atmosphere"]):
+        tags.add("date-night")
+    
+    # Business lunch
+    if any(w in notes for w in ["business", "corporate", "professional",
+                                  "executive", "working lunch", "working day"]):
+        tags.add("business-lunch")
+    if "menú-del-día" in tags and hood in ("Eixample", "Les Corts", "Sarrià-Sant Gervasi"):
+        if tier in ("mid-range", "premium"):
+            tags.add("business-lunch")
+    
+    # Solo-friendly
+    if any(w in notes for w in ["counter", "bar seating", "bar service",
+                                  "standing", "stand-up", "solo"]):
+        tags.add("solo-friendly")
+    if "pintxos" in notes or "tapas bar" in notes:
+        tags.add("solo-friendly")
+    
+    # Late night
+    if any(w in notes for w in ["late night", "late-night", "until 2", "until 3",
+                                  "midnight", "cocktail bar", "opens late"]):
+        tags.add("late-night")
+    
+    # Waterfront
+    if any(w in notes for w in ["sea view", "port", "marina", "harbor",
+                                  "waterfront", "beachside", "seafront", "overlooking port"]):
+        tags.add("waterfront")
+    if hood == "Barceloneta" and ("port" in notes or "sea" in notes or "beach" in notes):
+        tags.add("waterfront")
+    if "passeig de joan de borbó" in address or "pg. marítim" in address:
+        tags.add("waterfront")
+    
+    # Rooftop
+    if any(w in notes for w in ["rooftop", "top floor", "azotea", "terraza superior"]):
+        tags.add("rooftop")
+    
+    # Kid-friendly
+    if any(w in notes for w in ["family", "families", "kids", "children", "child-friendly"]):
+        tags.add("kid-friendly")
+    
+    # Group dining
+    if any(w in notes for w in ["group", "sharing", "for sharing", "large groups",
+                                  "communal", "banquet", "party"]):
+        tags.add("group-dining")
+    
+    # Breakfast
+    if any(w in notes for w in ["breakfast", "desayuno", "morning"]):
+        tags.add("breakfast")
+    if cuisine == "Café" and "brunch" not in tags:
+        tags.add("breakfast")
+    
+    # Craft beer
+    if any(w in notes for w in ["craft beer", "cerveza artesanal", "microbrewery",
+                                  "draft beer", "craft beers", "cerveseria"]):
+        tags.add("craft-beer")
+    if "cervecería" in name or "cerveseria" in name:
+        tags.add("craft-beer")
+    
+    # Cocktails
+    if any(w in notes for w in ["cocktail", "cocktails", "mixology", "mixologist"]):
+        tags.add("cocktails")
+    
+    # Natural wine
+    if any(w in notes for w in ["natural wine", "natural wines", "vi natural", "vins naturals"]):
+        tags.add("natural-wine")
+    
+    # Churros
+    if any(w in notes for w in ["churros", "chocolate caliente", "xocolata"]):
+        tags.add("churros")
+    
     return sorted(tags)
 
 
