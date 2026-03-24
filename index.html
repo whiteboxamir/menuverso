@@ -318,28 +318,25 @@ let DATA=window.RESTAURANT_DATA||[];
 // Profile completeness score — used for sorting fully-profiled restaurants first
 function getCompleteness(r){
   let score=0;
+  if(r.image_url) score+=25; // Real photo = highest priority
   if(r.name) score+=10;
   if(r.google_maps_rating) score+=15;
   if(r.google_maps_review_count>50) score+=10;
-  if(r.website) score+=15;
-  if(r.phone) score+=10;
+  if(r.website) score+=10;
+  if(r.phone) score+=5;
   if(r.instagram) score+=5;
-  if(r.address_full) score+=10;
-  if(r.menu_price_range) score+=10;
+  if(r.address_full) score+=5;
+  if(r.menu_price_range) score+=5;
   if(r.notes && r.notes.length>20) score+=5;
-  if(r.metro_station) score+=5;
-  if(r.coordinates && r.coordinates.lat) score+=5;
+  if(r.metro_station) score+=3;
+  if(r.coordinates && r.coordinates.lat) score+=2;
   return score;
 }
 
-// Card image: per-restaurant photo → cuisine stock → CSS gradient fallback
-const CUISINE_SLUGS={};
+// Card image: real scraped photo or clean placeholder
 function getCardImage(r){
-  // Per-restaurant image (from OG scrape)
   if(r.image_url) return r.image_url;
-  // Cuisine stock fallback
-  const slug=(r.cuisine_type||'other').toLowerCase().replace(/\//g,'_').replace(/ /g,'_');
-  return 'assets/cuisine/'+slug+'_hero.webp';
+  return 'assets/no-image.svg';
 }
 
 let activeFilters={};

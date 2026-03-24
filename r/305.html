@@ -155,11 +155,11 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
     <span>Menuverso</span>
   </a>
   <div class="nav-links">
+    <a href="../app.html"><span>🏠 </span>Discover</a>
     <a href="../index.html"><span>📋 </span>Database</a>
     <a href="../finder.html"><span>🔍 </span>Finder</a>
     <a href="../analytics.html"><span>📊 </span>Analytics</a>
     <a href="../lists.html"><span>🏆 </span>Best Of</a>
-    <a href="../crawl.html"><span>🚶 </span>Crawl</a>
   </div>
   <div>
     <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
@@ -168,7 +168,7 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
 <!-- Hero Section -->
 <div class="hero">
-  <img src="../assets/cuisine/asian_hero.webp" alt="Asian cuisine" loading="eager">
+  <img src="../assets/no-image.svg" alt="Asian cuisine" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <a href="../index.html?hood=Les+Corts" class="hero-back">← Les Corts</a>
@@ -193,6 +193,9 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
     
     <div class="deal-desc">Les Corts · Plaça del Centre (L3)</div>
   </div>
+
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Bangkok+Cafe+Travessera+de+les+Corts%2C+123+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
+    <button class="share-btn" style="flex:1;justify-content:center;" onclick="toggleFav(305)">❤️ Save</button></div>
 
   <!-- Tabs -->
   <div class="tabs">
@@ -356,7 +359,11 @@ function copyLink(btn){
 var visitKey='menuverso_visited';
 function getVisited(){return JSON.parse(localStorage.getItem(visitKey)||'{}');}
 function toggleVisited(id){var v=getVisited();if(v[id]){delete v[id]}else{v[id]=new Date().toISOString().slice(0,10)};localStorage.setItem(visitKey,JSON.stringify(v));renderVisited(id);}
-function renderVisited(id){var v=getVisited();var btn=document.getElementById('visit-btn');if(v[id]){btn.classList.add('checked');btn.textContent='✅ Visited on '+v[id]}else{btn.classList.remove('checked');btn.textContent='☐ I\'ve been here'}}
+function renderVisited(id){var v=getVisited();var btn=document.getElementById('visit-btn');if(v[id]){btn.classList.add('checked');btn.textContent='✅ Visited on '+v[id]}else{btn.classList.remove('checked');btn.textContent='☐ I have been here'}}
+
+// Favorites (shared with app.html)
+function toggleFav(id){var favs=JSON.parse(localStorage.getItem('menuverso_favs')||'[]');var idx=favs.indexOf(id);if(idx>-1)favs.splice(idx,1);else favs.push(id);localStorage.setItem('menuverso_favs',JSON.stringify(favs));event.target.textContent=favs.includes(id)?'❤️ Saved':'❤️ Save';}
+(function(){var favs=JSON.parse(localStorage.getItem('menuverso_favs')||'[]');var btns=document.querySelectorAll('[onclick*="toggleFav"]');btns.forEach(function(b){if(favs.includes(305))b.textContent='❤️ Saved';});})();
 
 initTheme();
 renderVisited(305);

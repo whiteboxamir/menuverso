@@ -80,19 +80,16 @@ def generate_page(r, all_restaurants, total_count):
     hours_lunch = r.get("opening_hours_lunch", "")
     cuisine_emoji = get_cuisine_emoji(cuisine)
 
-    # Hero image: per-restaurant → cuisine stock → placeholder
+    # Hero image: only real scraped photos — no fake stock images
     hero_img = None
-    restaurant_hero = r.get("images", {}).get("hero", "")
-    if restaurant_hero and os.path.exists(restaurant_hero):
-        hero_img = f"../{restaurant_hero}"
-    else:
-        cuisine_slug = cuisine.lower().replace("/", "_").replace(" ", "_")
-        cuisine_hero = f"assets/cuisine/{cuisine_slug}_hero.webp"
-        if os.path.exists(cuisine_hero):
-            hero_img = f"../{cuisine_hero}"
+    # Check for per-restaurant scraped photo
+    scraped_hero = f"assets/photos/{r['id']}_hero.webp"
+    if os.path.exists(scraped_hero):
+        hero_img = f"../{scraped_hero}"
+    elif r.get("image_url") and os.path.exists(r["image_url"]):
+        hero_img = f"../{r['image_url']}"
     if not hero_img:
-        # SVG gradient placeholder with cuisine emoji
-        hero_img = f"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%231E293B'/%3E%3Cstop offset='100%25' stop-color='%23334155'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='600' fill='url(%23g)'/%3E%3Ctext x='600' y='320' text-anchor='middle' font-size='120' fill='rgba(255,255,255,0.15)'%3E{cuisine_emoji}%3C/text%3E%3C/svg%3E"
+        hero_img = "../assets/no-image.svg"
 
     # Profile completeness
     completeness = 0
@@ -214,6 +211,17 @@ if(document.documentElement.classList.contains('dark')){{document.querySelectorA
         reviews_content = '''<div class="tab-content" id="tab-reviews">
       <p class="empty-msg">No reviews data available yet.</p>
     </div>'''
+
+    # Quick actions bar
+    quick_btns = []
+    if maps_url:
+        quick_btns.append(f'<a href="{maps_url}" target="_blank" class="share-btn" style="flex:1;justify-content:center;">\U0001F4CD Directions</a>')
+    if phone:
+        quick_btns.append(f'<a href="tel:{phone}" class="share-btn" style="flex:1;justify-content:center;">\U0001F4DE Call</a>')
+    if website:
+        quick_btns.append(f'<a href="{website}" target="_blank" class="share-btn" style="flex:1;justify-content:center;">\U0001F310 Website</a>')
+    quick_btns.append(f'<button class="share-btn" style="flex:1;justify-content:center;" onclick="toggleFav({r["id"]})">{chr(10084)}{chr(65039)} Save</button>')
+    quick_actions_html = '<div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;">' + '\n    '.join(quick_btns) + '</div>'
 
     return f"""<!DOCTYPE html>
 <html lang="es">
@@ -372,11 +380,11 @@ img[src*="logo.png"]{{mix-blend-mode:multiply;}}
     <span>Menuverso</span>
   </a>
   <div class="nav-links">
+    <a href="../app.html"><span>🏠 </span>Discover</a>
     <a href="../index.html"><span>📋 </span>Database</a>
     <a href="../finder.html"><span>🔍 </span>Finder</a>
     <a href="../analytics.html"><span>📊 </span>Analytics</a>
     <a href="../lists.html"><span>🏆 </span>Best Of</a>
-    <a href="../crawl.html"><span>🚶 </span>Crawl</a>
   </div>
   <div>
     <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
@@ -410,6 +418,8 @@ img[src*="logo.png"]{{mix-blend-mode:multiply;}}
     {f'<div class="deal-price">{price}</div>' if price else ''}
     <div class="deal-desc">{'Menú del día price range · ' + hood if price else hood}{f' · {metro}' if metro else ''}</div>
   </div>
+
+  {quick_actions_html}
 
   <!-- Tabs -->
   <div class="tabs">
@@ -537,7 +547,11 @@ function copyLink(btn){{
 var visitKey='menuverso_visited';
 function getVisited(){{return JSON.parse(localStorage.getItem(visitKey)||'{{}}');}}
 function toggleVisited(id){{var v=getVisited();if(v[id]){{delete v[id]}}else{{v[id]=new Date().toISOString().slice(0,10)}};localStorage.setItem(visitKey,JSON.stringify(v));renderVisited(id);}}
-function renderVisited(id){{var v=getVisited();var btn=document.getElementById('visit-btn');if(v[id]){{btn.classList.add('checked');btn.textContent='✅ Visited on '+v[id]}}else{{btn.classList.remove('checked');btn.textContent='☐ I\\'ve been here'}}}}
+function renderVisited(id){{var v=getVisited();var btn=document.getElementById('visit-btn');if(v[id]){{btn.classList.add('checked');btn.textContent='✅ Visited on '+v[id]}}else{{btn.classList.remove('checked');btn.textContent='☐ I have been here'}}}}
+
+// Favorites (shared with app.html)
+function toggleFav(id){{var favs=JSON.parse(localStorage.getItem('menuverso_favs')||'[]');var idx=favs.indexOf(id);if(idx>-1)favs.splice(idx,1);else favs.push(id);localStorage.setItem('menuverso_favs',JSON.stringify(favs));event.target.textContent=favs.includes(id)?'❤️ Saved':'❤️ Save';}}
+(function(){{var favs=JSON.parse(localStorage.getItem('menuverso_favs')||'[]');var btns=document.querySelectorAll('[onclick*="toggleFav"]');btns.forEach(function(b){{if(favs.includes({r['id']}))b.textContent='❤️ Saved';}});}})();
 
 initTheme();
 renderVisited({r['id']});
@@ -563,6 +577,7 @@ def main():
     # Generate sitemap
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/</loc><priority>1.0</priority></url>\n'
+    sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/app.html</loc><priority>1.0</priority></url>\n'
     sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/finder.html</loc><priority>0.9</priority></url>\n'
     sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/analytics.html</loc><priority>0.8</priority></url>\n'
     sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/lists.html</loc><priority>0.9</priority></url>\n'
