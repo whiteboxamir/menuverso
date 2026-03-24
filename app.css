@@ -150,10 +150,10 @@ body{
 /* ─── Restaurant Cards Grid ─── */
 .feed{
   max-width:var(--max-w);margin:0 auto;
-  padding:1rem;
+  padding:1rem 1rem;
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-  gap:1rem;
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:1.25rem;
 }
 .card{
   background:var(--surface);
@@ -187,8 +187,8 @@ body{
 .card:hover .card-img img{transform:scale(1.06);}
 .card-img::after{
   content:'';position:absolute;bottom:0;left:0;right:0;
-  height:40%;
-  background:linear-gradient(transparent,rgba(0,0,0,0.25));
+  height:35%;
+  background:linear-gradient(transparent,rgba(0,0,0,0.15));
   pointer-events:none;
 }
 /* Overlay info on image */
@@ -225,19 +225,19 @@ body{
 .card-fav.active{color:#FF4D6D;background:rgba(255,255,255,0.9);}
 
 /* Card Body */
-.card-body{padding:0.75rem;}
+.card-body{padding:0.85rem;}
 .card-name{
   font-family:'Outfit',sans-serif;
-  font-weight:700;font-size:1rem;
-  letter-spacing:-0.01em;
+  font-weight:700;font-size:1.15rem;
+  letter-spacing:-0.015em;
   color:var(--text);
-  margin-bottom:0.25rem;
+  margin-bottom:0.3rem;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
 .card-meta{
-  display:flex;align-items:center;gap:0.35rem;flex-wrap:wrap;
-  font-size:0.78rem;color:var(--text-sub);
-  margin-bottom:0.35rem;
+  display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;
+  font-size:0.8rem;color:var(--text-sub);
+  margin-bottom:0.4rem;
 }
 .card-meta .dot{color:var(--text-muted);font-size:0.5rem;}
 .card-status{
@@ -334,20 +334,25 @@ body{
   padding-bottom:env(safe-area-inset-bottom,0);
 }
 .tab-item{
-  display:flex;flex-direction:column;align-items:center;gap:2px;
-  cursor:pointer;padding:6px 16px;
+  display:flex;flex-direction:column;align-items:center;gap:3px;
+  cursor:pointer;padding:8px 16px;
   border:none;background:none;
   transition:all 0.2s;
   -webkit-tap-highlight-color:transparent;
 }
-.tab-item .tab-icon{font-size:1.3rem;transition:transform 0.15s;}
+.tab-item .tab-icon{
+  width:22px;height:22px;
+  display:flex;align-items:center;justify-content:center;
+  transition:transform 0.15s;
+}
+.tab-item .tab-icon svg{width:22px;height:22px;stroke:var(--text-muted);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:all 0.2s;}
+.tab-item.active .tab-icon svg{stroke:var(--accent);}
 .tab-item .tab-label{
   font-size:0.62rem;font-weight:600;
   color:var(--text-muted);letter-spacing:0.02em;
   font-family:'Inter',sans-serif;
   transition:color 0.2s;
 }
-.tab-item.active .tab-icon{transform:scale(1.08);}
 .tab-item.active .tab-label{color:var(--accent);}
 .tab-item:active .tab-icon{transform:scale(0.9);}
 
@@ -492,10 +497,9 @@ body{
 
 /* ─── Responsive ─── */
 @media(max-width:640px){
-  .feed{grid-template-columns:repeat(2,1fr);gap:0.65rem;padding:0.65rem;}
-  .card-body{padding:0.55rem;}
-  .card-name{font-size:0.88rem;}
-  .card-meta{font-size:0.72rem;}
+  .feed{grid-template-columns:1fr;gap:0.85rem;padding:0.85rem 1rem;}
+  .card-name{font-size:1.1rem;}
+  .card-meta{font-size:0.78rem;}
   .app-nav-location{display:none;}
   .search-container{padding:0.5rem 0.75rem;}
 }

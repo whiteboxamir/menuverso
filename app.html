@@ -44,12 +44,12 @@
     </div>
     <!-- Filter Pills -->
     <div class="filter-pills" id="filterPills">
-      <span class="pill active" data-filter="all">🍽️ All</span>
-      <span class="pill" data-filter="open">🟢 Open Now</span>
-      <span class="pill" data-filter="confirmed">✅ Menú Confirmed</span>
-      <span class="pill" data-filter="budget">💚 Budget</span>
-      <span class="pill" data-filter="mid-range">🧡 Mid-Range</span>
-      <span class="pill" data-filter="premium">💜 Premium</span>
+      <span class="pill active" data-filter="all">All</span>
+      <span class="pill" data-filter="open">Open Now</span>
+      <span class="pill" data-filter="confirmed">Menú Verified</span>
+      <span class="pill" data-filter="budget">Budget</span>
+      <span class="pill" data-filter="mid-range">Mid-Range</span>
+      <span class="pill" data-filter="premium">Premium</span>
     </div>
   </div>
 
@@ -166,19 +166,19 @@
 <!-- ═══ Bottom Tab Bar ═══ -->
 <div class="tab-bar">
   <button class="tab-item active" data-screen="home-screen" onclick="switchScreen('home-screen',this)">
-    <span class="tab-icon">🏠</span>
+    <span class="tab-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
     <span class="tab-label">Home</span>
   </button>
   <button class="tab-item" data-screen="map-screen" onclick="switchScreen('map-screen',this)">
-    <span class="tab-icon">🗺️</span>
+    <span class="tab-icon"><svg viewBox="0 0 24 24"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></span>
     <span class="tab-label">Map</span>
   </button>
   <button class="tab-item" data-screen="find-screen" onclick="switchScreen('find-screen',this)">
-    <span class="tab-icon">🔍</span>
+    <span class="tab-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
     <span class="tab-label">Find</span>
   </button>
   <button class="tab-item" data-screen="saved-screen" onclick="switchScreen('saved-screen',this)">
-    <span class="tab-icon">❤️</span>
+    <span class="tab-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
     <span class="tab-label">Saved</span>
   </button>
 </div>
@@ -372,17 +372,14 @@ function renderCard(r){
   const openSt = getOpenStatus(r);
   const isFav = favorites.includes(r.id);
   const imgSrc = getImageSrc(r);
-  const tags = (r.tags||[]).slice(0,2);
 
   let openHtml = '';
   if(openSt==='open') openHtml = '<span class="open-badge open"><span class="pulse"></span>Open</span>';
   else if(openSt==='closed') openHtml = '<span class="open-badge closed">Closed</span>';
 
   let menuHtml = '';
-  if(tier==='confirmed') menuHtml = '<span class="menu-badge confirmed">✅ Menú</span>';
-  else if(tier==='likely') menuHtml = '<span class="menu-badge likely">🟡 Likely</span>';
-
-  const tagHtml = tags.map(t=>`<span class="card-tag">${t}</span>`).join('');
+  if(tier==='confirmed') menuHtml = '<span class="menu-badge confirmed">Verified</span>';
+  else if(tier==='likely') menuHtml = '<span class="menu-badge likely">Likely</span>';
 
   return `<div class="card" onclick="window.location.href='r/${r.id}.html'" data-id="${r.id}">
     <button class="card-fav ${isFav?'active':''}" onclick="event.stopPropagation();toggleFav(${r.id},this)" title="Save">
@@ -390,7 +387,7 @@ function renderCard(r){
     </button>
     <div class="card-img">
       <img src="${imgSrc}" alt="${r.name}" loading="lazy"
-           onerror="this.parentElement.innerHTML='<div class=\\'placeholder-img ${getCuisineClass(r.cuisine_type)}\\'>${getInitials(r.name)}</div>'">
+           onerror="this.parentElement.innerHTML='<div class=\\'placeholder-img cuisine-default\\'>${getInitials(r.name)}</div>'">
       <div class="card-img-overlay">
         ${r.google_maps_rating ? `<span class="card-rating"><span class="star">★</span>${r.google_maps_rating}<span class="count">(${(r.google_maps_review_count||0).toLocaleString()})</span></span>` : ''}
         ${r.menu_price_range ? `<span class="card-price">${r.menu_price_range}</span>` : ''}
@@ -399,15 +396,13 @@ function renderCard(r){
     <div class="card-body">
       <div class="card-name">${r.name}</div>
       <div class="card-meta">
-        <span>🍽️ ${r.cuisine_type}</span>
+        <span>${r.cuisine_type}</span>
         <span class="dot">•</span>
-        <span>📍 ${r.neighborhood}</span>
-        ${r.metro_station ? `<span class="dot">•</span><span>🚇 ${r.metro_station.split('(')[0].trim()}</span>` : ''}
+        <span>${r.neighborhood}</span>
       </div>
       <div class="card-status">
         ${openHtml}${menuHtml}
       </div>
-      ${tagHtml ? `<div class="card-tags">${tagHtml}</div>` : ''}
     </div>
   </div>`;
 }
