@@ -4,10 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Menuverso — Barcelona Restaurant Database</title>
-<meta name="description" content="Exhaustive Barcelona restaurant database. 1201 restaurants across 18 neighborhoods with menú del día tracking.">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<meta name="description" content="Exhaustive Barcelona restaurant database. 1500+ restaurants across 18 neighborhoods with menú del día tracking and interactive map.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
   --bg:#F8FAFC;--card:#FFFFFF;--border:#E2E8F0;--border-hover:#CBD5E1;
@@ -21,57 +25,99 @@
   --radius:12px;
 }
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-main);line-height:1.5;overflow-x:hidden;}
-.hero{padding:4rem 1.5rem 2rem;text-align:center;}
-.hero h1{font-size:clamp(2rem,4vw,2.5rem);font-weight:700;color:var(--text-main);letter-spacing:-0.02em;margin-bottom:0.75rem;}
-.hero p{color:var(--text-sub);max-width:600px;margin:0 auto;font-size:1rem;}
-.stats{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;padding:0 1.5rem 2.5rem;}
-.stat{text-align:center;background:var(--card);padding:1rem 1.5rem;border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow-sm);min-width:140px;}
-.stat-num{font-size:1.75rem;font-weight:700;color:var(--text-main);margin-bottom:0.25rem;}
-.stat-label{font-size:0.75rem;color:var(--text-sub);text-transform:uppercase;font-weight:600;letter-spacing:0.05em;}
+.hero{padding:3rem 1.5rem 1.5rem;text-align:center;}
+.hero h1{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:700;color:var(--text-main);letter-spacing:-0.02em;margin-bottom:0.5rem;}
+.hero p{color:var(--text-sub);max-width:600px;margin:0 auto;font-size:0.95rem;}
+.stats{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;padding:0 1.5rem 1.5rem;}
+.stat{text-align:center;background:var(--card);padding:0.75rem 1.25rem;border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow-sm);min-width:120px;}
+.stat-num{font-size:1.5rem;font-weight:700;color:var(--text-main);margin-bottom:0.15rem;}
+.stat-label{font-size:0.7rem;color:var(--text-sub);text-transform:uppercase;font-weight:600;letter-spacing:0.05em;}
 .stat-num.green{color:var(--green);}.stat-num.yellow{color:var(--amber);}.stat-num.red{color:var(--red);}
-.controls{max-width:1200px;margin:0 auto;padding:0 1.5rem 1.5rem;}
-.search{width:100%;padding:0.875rem 1.25rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);color:var(--text-main);font-size:1rem;outline:none;transition:all 0.2s;box-shadow:var(--shadow-sm);}
+.controls{max-width:1200px;margin:0 auto;padding:0 1.5rem 1rem;}
+.search-row{display:flex;gap:0.75rem;align-items:center;}
+.search{flex:1;padding:0.75rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);color:var(--text-main);font-size:0.95rem;outline:none;transition:all 0.2s;box-shadow:var(--shadow-sm);}
 .search::placeholder{color:var(--text-mut);}
 .search:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-sub);}
-.filters{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.25rem;}
-.section-label{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-sub);padding:0.5rem 0 0.25rem;font-weight:600;width:100%;}
-.chip{padding:0.4rem 0.875rem;border-radius:20px;background:var(--bg);border:1px solid var(--border);color:var(--text-sub);font-size:0.8rem;font-weight:500;cursor:pointer;transition:all 0.2s;user-select:none;}
+.view-toggle{display:flex;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--card);box-shadow:var(--shadow-sm);}
+.view-btn{padding:0.6rem 1rem;background:none;border:none;cursor:pointer;font-size:1.1rem;color:var(--text-mut);transition:all 0.2s;display:flex;align-items:center;gap:4px;font-weight:500;font-size:0.85rem;}
+.view-btn:hover{color:var(--text-main);background:#F1F5F9;}
+.view-btn.active{background:var(--text-main);color:#FFF;}
+.filters{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.75rem;align-items:center;}
+.chip{padding:0.35rem 0.75rem;border-radius:20px;background:var(--bg);border:1px solid var(--border);color:var(--text-sub);font-size:0.78rem;font-weight:500;cursor:pointer;transition:all 0.2s;user-select:none;}
 .chip:hover{border-color:var(--border-hover);color:var(--text-main);}
 .chip.active{background:var(--text-main);color:#FFF;border-color:var(--text-main);}
 .chip.g.active{background:var(--green);border-color:var(--green);}
 .chip.y.active{background:var(--amber);border-color:var(--amber);}
 .chip.r.active{background:var(--red);border-color:var(--red);}
-.count-display{text-align:left;padding:0 1.5rem;color:var(--text-sub);font-size:0.875rem;font-weight:500;margin-bottom:1rem;max-width:1200px;margin-left:auto;margin-right:auto;}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;max-width:1200px;margin:0 auto;padding:0 1.5rem 4rem;}
-.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;transition:all 0.2s;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;}
+.pipe{color:var(--border);margin:0 0.35rem;}
+.count-display{text-align:left;padding:0 1.5rem;color:var(--text-sub);font-size:0.85rem;font-weight:500;margin-bottom:0.75rem;max-width:1200px;margin-left:auto;margin-right:auto;display:flex;justify-content:space-between;align-items:center;}
+.sort-select{padding:0.35rem 0.75rem;border:1px solid var(--border);border-radius:8px;font-size:0.8rem;color:var(--text-sub);background:var(--card);cursor:pointer;outline:none;}
+
+/* Grid view */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.25rem;max-width:1200px;margin:0 auto;padding:0 1.5rem 3rem;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;transition:all 0.2s;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;}
 .card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--border-hover);}
-.card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;}
-.card-name{font-weight:600;font-size:1.1rem;color:var(--text-main);line-height:1.3;padding-right:1rem;}
-.card-price{color:var(--text-main);font-weight:600;font-size:1.05rem;white-space:nowrap;background:var(--bg);padding:0.25rem 0.5rem;border-radius:6px;border:1px solid var(--border);}
-.badge{display:inline-flex;align-items:center;font-size:0.7rem;padding:0.25rem 0.6rem;border-radius:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;margin-bottom:0.75rem;width:fit-content;}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem;}
+.card-name{font-weight:600;font-size:1.05rem;color:var(--text-main);line-height:1.3;padding-right:0.75rem;}
+.card-price{color:var(--text-main);font-weight:600;font-size:0.95rem;white-space:nowrap;background:var(--bg);padding:0.2rem 0.5rem;border-radius:6px;border:1px solid var(--border);}
+.badge{display:inline-flex;align-items:center;font-size:0.68rem;padding:0.2rem 0.5rem;border-radius:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;margin-bottom:0.5rem;width:fit-content;}
 .badge.confirmed{background:var(--green-bg);color:var(--green);}
 .badge.likely{background:var(--amber-bg);color:var(--amber);}
 .badge.none{background:var(--red-bg);color:var(--red);}
-.tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem;}
-.tag{font-size:0.7rem;padding:0.2rem 0.5rem;border-radius:6px;font-weight:500;background:#F1F5F9;color:#475569;border:1px solid #E2E8F0;}
-.card-detail{font-size:0.85rem;color:var(--text-sub);margin-bottom:0.4rem;display:flex;align-items:flex-start;}
-.card-notes{font-size:0.85rem;color:var(--text-sub);margin-top:0.75rem;line-height:1.5;padding-top:0.75rem;border-top:1px solid #F1F5F9;flex-grow:1;}
-.card-links{margin-top:1rem;display:flex;gap:1rem;padding-top:1rem;border-top:1px solid #F1F5F9;}
-.card-links a{font-size:0.8rem;font-weight:500;color:var(--accent);text-decoration:none;transition:color 0.2s;}
+.tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.75rem;}
+.tag{font-size:0.68rem;padding:0.15rem 0.45rem;border-radius:6px;font-weight:500;background:#F1F5F9;color:#475569;border:1px solid #E2E8F0;cursor:default;transition:all 0.15s;}
+.tag.clickable{cursor:pointer;}
+.tag.clickable:hover{background:#E2E8F0;color:#1E293B;}
+.card-detail{font-size:0.82rem;color:var(--text-sub);margin-bottom:0.3rem;display:flex;align-items:flex-start;}
+.card-notes{font-size:0.82rem;color:var(--text-sub);margin-top:0.5rem;line-height:1.5;padding-top:0.5rem;border-top:1px solid #F1F5F9;flex-grow:1;}
+.card-links{margin-top:0.75rem;display:flex;gap:0.75rem;flex-wrap:wrap;padding-top:0.75rem;border-top:1px solid #F1F5F9;}
+.card-links a{font-size:0.78rem;font-weight:500;color:var(--accent);text-decoration:none;transition:color 0.2s;}
 .card-links a:hover{color:#1D4ED8;text-decoration:underline;}
-.loading{text-align:center;padding:4rem;color:var(--text-sub);font-size:1.1rem;}
-.no-results{grid-column:1/-1;text-align:center;padding:4rem;color:var(--text-sub);font-size:1rem;background:var(--card);border:1px dashed var(--border);border-radius:var(--radius);}
-footer{text-align:center;padding:2rem;color:var(--text-mut);font-size:0.8rem;border-top:1px solid var(--border);}
+.loading{text-align:center;padding:3rem;color:var(--text-sub);font-size:1rem;}
+.no-results{grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-sub);font-size:0.95rem;background:var(--card);border:1px dashed var(--border);border-radius:var(--radius);}
+.tag-filters{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.5rem;align-items:center;}
+.tag-filters .label{font-size:0.72rem;font-weight:600;color:var(--text-mut);text-transform:uppercase;letter-spacing:0.04em;margin-right:0.25rem;}
+.tag-chip{padding:0.3rem 0.65rem;border-radius:16px;background:var(--bg);border:1px solid var(--border);color:var(--text-sub);font-size:0.73rem;font-weight:500;cursor:pointer;transition:all 0.2s;user-select:none;}
+.tag-chip:hover{border-color:var(--border-hover);color:var(--text-main);}
+.tag-chip.active{background:var(--accent);color:#FFF;border-color:var(--accent);}
+
+/* Map view */
+#map-container{max-width:1200px;margin:0 auto;padding:0 1.5rem 3rem;display:none;}
+#map{width:100%;height:70vh;border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);z-index:1;}
+.map-popup .popup-name{font-weight:700;font-size:1rem;margin-bottom:4px;color:var(--text-main);}
+.map-popup .popup-badge{display:inline-block;font-size:0.65rem;padding:2px 6px;border-radius:4px;font-weight:600;text-transform:uppercase;margin-bottom:6px;}
+.map-popup .popup-badge.confirmed{background:#D1FAE5;color:#059669;}
+.map-popup .popup-badge.likely{background:#FEF3C7;color:#D97706;}
+.map-popup .popup-badge.none{background:#FEE2E2;color:#DC2626;}
+.map-popup .popup-meta{font-size:0.8rem;color:#64748B;margin-bottom:2px;}
+.map-popup .popup-notes{font-size:0.78rem;color:#64748B;margin-top:6px;border-top:1px solid #E2E8F0;padding-top:6px;max-width:250px;}
+.map-popup .popup-links{margin-top:6px;display:flex;gap:8px;}
+.map-popup .popup-links a{font-size:0.75rem;color:#2563EB;text-decoration:none;font-weight:500;}
+
+/* Custom marker styles */
+.marker-confirmed{background:#059669;border:2px solid #fff;border-radius:50%;width:12px;height:12px;box-shadow:0 1px 3px rgba(0,0,0,0.3);}
+.marker-likely{background:#D97706;border:2px solid #fff;border-radius:50%;width:12px;height:12px;box-shadow:0 1px 3px rgba(0,0,0,0.3);}
+.marker-none{background:#DC2626;border:2px solid #fff;border-radius:50%;width:12px;height:12px;box-shadow:0 1px 3px rgba(0,0,0,0.3);}
+
+/* Cluster styling overrides */
+.marker-cluster-small{background:rgba(5,150,105,0.2);}
+.marker-cluster-small div{background:rgba(5,150,105,0.7);color:#fff;}
+.marker-cluster-medium{background:rgba(217,119,6,0.2);}
+.marker-cluster-medium div{background:rgba(217,119,6,0.7);color:#fff;}
+.marker-cluster-large{background:rgba(37,99,235,0.2);}
+.marker-cluster-large div{background:rgba(37,99,235,0.7);color:#fff;}
+
+footer{text-align:center;padding:1.5rem;color:var(--text-mut);font-size:0.78rem;border-top:1px solid var(--border);}
 footer a{color:var(--text-sub);text-decoration:none;font-weight:500;}
 footer a:hover{color:var(--text-main);}
-@media(max-width:640px){.grid{grid-template-columns:1fr;}.stats{gap:1rem;}.stat{padding:1rem;min-width:calc(50% - 0.5rem);}}
+@media(max-width:640px){.grid{grid-template-columns:1fr;}.stats{gap:0.75rem;}.stat{padding:0.75rem;min-width:calc(50% - 0.5rem);}.search-row{flex-direction:column;}}
 img[src*="logo.png"] { mix-blend-mode: multiply; }
 </style>
 </head>
 <body>
 <div class="hero">
-<div style="display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:0.75rem;">
-  <img src="assets/logo.png" alt="Menuverso Logo" style="width:44px; height:44px; border-radius:10px; box-shadow:var(--shadow-sm);">
+<div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:0.5rem;">
+  <img src="assets/logo.png" alt="Menuverso Logo" style="width:40px; height:40px; border-radius:10px; box-shadow:var(--shadow-sm);">
   <h1 style="margin-bottom:0;">Menuverso</h1>
 </div>
 <p id="subtitle">Loading Barcelona restaurant database...</p>
@@ -82,40 +128,69 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
 <div class="stat"><div class="stat-num yellow" id="s-likely">—</div><div class="stat-label">🟡 Likely Menú</div></div>
 <div class="stat"><div class="stat-num red" id="s-none">—</div><div class="stat-label">🔴 No Menú</div></div>
 <div class="stat"><div class="stat-num" id="s-hoods">—</div><div class="stat-label">Neighborhoods</div></div>
+<div class="stat"><div class="stat-num" id="s-mapped" style="color:var(--accent)">—</div><div class="stat-label">📍 On Map</div></div>
+<div class="stat"><div class="stat-num" id="s-tagged" style="color:#7C3AED">—</div><div class="stat-label">🏷️ Tagged</div></div>
 </div>
 <div class="controls">
-<input type="text" class="search" id="search" placeholder="🔍 Search by name, cuisine, notes..." autocomplete="off">
-<div class="filters" id="filters" style="display:flex; align-items:center; gap:1.5rem; justify-content:space-between; flex-wrap:wrap;">
-  <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;">
-    <span class="chip g" data-filter="mtier" data-value="confirmed">🟢 Confirmed</span>
-    <span class="chip y" data-filter="mtier" data-value="likely">🟡 Likely</span>
-    <span class="chip r" data-filter="mtier" data-value="none">🔴 No Menú</span>
-    <span style="color:var(--border); margin:0 0.5rem;">|</span>
-    <span class="chip" data-filter="tier" data-value="budget">💚 Budget</span>
-    <span class="chip" data-filter="tier" data-value="mid-range">🧡 Mid-Range</span>
-    <span class="chip" data-filter="tier" data-value="premium">💜 Premium</span>
+<div class="search-row">
+  <input type="text" class="search" id="search" placeholder="🔍 Search by name, cuisine, neighborhood, notes..." autocomplete="off">
+  <div class="view-toggle">
+    <button class="view-btn active" id="btn-list" onclick="setView('list')" title="List view">📋 List</button>
+    <button class="view-btn" id="btn-map" onclick="setView('map')" title="Map view">🗺️ Map</button>
   </div>
-  <select id="hood-select" class="search" style="width:auto; min-width:200px; padding:0.5rem 1rem;">
+</div>
+<div class="filters" id="filters">
+  <span class="chip g" data-filter="mtier" data-value="confirmed">🟢 Confirmed</span>
+  <span class="chip y" data-filter="mtier" data-value="likely">🟡 Likely</span>
+  <span class="chip r" data-filter="mtier" data-value="none">🔴 No Menú</span>
+  <span class="pipe">|</span>
+  <span class="chip" data-filter="tier" data-value="budget">💚 Budget</span>
+  <span class="chip" data-filter="tier" data-value="mid-range">🧡 Mid-Range</span>
+  <span class="chip" data-filter="tier" data-value="premium">💜 Premium</span>
+  <span class="pipe">|</span>
+  <select id="hood-select" class="sort-select" style="min-width:160px;padding:0.4rem 0.75rem;">
     <option value="">All Neighborhoods</option>
   </select>
+  <select id="cuisine-select" class="sort-select" style="min-width:140px;padding:0.4rem 0.75rem;">
+    <option value="">All Cuisines</option>
+  </select>
+</div>
+<div class="tag-filters" id="tag-filters">
+  <span class="label">Tags:</span>
 </div>
 </div>
-<div class="count-display" id="count"></div>
+<div class="count-display" id="count">
+  <span id="count-text"></span>
+  <select id="sort-select" class="sort-select">
+    <option value="name">Sort: Name A→Z</option>
+    <option value="rating">Sort: Rating ↓</option>
+    <option value="price-low">Sort: Price ↑</option>
+    <option value="price-high">Sort: Price ↓</option>
+    <option value="reviews">Sort: Reviews ↓</option>
+  </select>
+</div>
 <div class="grid" id="grid"><div class="loading">⏳ Loading restaurants...</div></div>
-<footer id="footer">Built with ❤️ by <a href="#">Menuverso</a> · March 2026</footer>
+<div id="map-container"><div id="map"></div></div>
+<footer id="footer">Built with ❤️ by <a href="landing.html">Menuverso</a> · March 2026</footer>
 <script src="restaurants_data.js"></script>
 <script>
 let DATA=window.RESTAURANT_DATA||[];
 let activeFilters={};
+let currentView='list';
+let map=null;
+let markerCluster=null;
+let allMarkers=[];
 
-// Data loaded from restaurants_data.js via script tag (avoids CORS for file://)
-if(DATA.length){init()}else{document.getElementById('grid').innerHTML='<div class="no-results">Error: restaurants_data.js not found. Run the build script to generate it.</div>'}
+if(DATA.length){init()}else{document.getElementById('grid').innerHTML='<div class="no-results">Error: restaurants_data.js not found.</div>'}
 
 function init(){
   const hoods=[...new Set(DATA.map(r=>r.neighborhood))].sort();
+  const cuisines=[...new Set(DATA.map(r=>r.cuisine_type))].sort();
   const confirmed=DATA.filter(r=>r.menu_tier==='confirmed').length;
   const likely=DATA.filter(r=>r.menu_tier==='likely').length;
   const none=DATA.length-confirmed-likely;
+  const mapped=DATA.filter(r=>r.coordinates&&r.coordinates.lat&&r.coordinates.lng).length;
+  const tagged=DATA.filter(r=>r.tags&&r.tags.length>0).length;
 
   document.getElementById('subtitle').textContent=`Exhaustive Barcelona restaurant database. ${DATA.length} restaurants across ${hoods.length} neighborhoods with menú del día tracking.`;
   document.getElementById('s-total').textContent=DATA.length;
@@ -123,59 +198,239 @@ function init(){
   document.getElementById('s-likely').textContent=likely;
   document.getElementById('s-none').textContent=none;
   document.getElementById('s-hoods').textContent=hoods.length;
-  document.getElementById('footer').innerHTML=`Built with ❤️ by <a href="#">Menuverso</a> · March 2026 · ${DATA.length} restaurants across ${hoods.length} neighborhoods`;
+  document.getElementById('s-mapped').textContent=mapped;
+  document.getElementById('s-tagged').textContent=tagged;
 
-  // Build hood select
+  // Build tag filter chips from top tags
+  const tagCounts={};
+  DATA.forEach(r=>(r.tags||[]).forEach(t=>{tagCounts[t]=(tagCounts[t]||0)+1}));
+  const topTags=Object.entries(tagCounts).sort((a,b)=>b[1]-a[1]).slice(0,14).map(e=>e[0]);
+  const tagContainer=document.getElementById('tag-filters');
+  topTags.forEach(tag=>{
+    const chip=document.createElement('span');
+    chip.className='tag-chip';
+    chip.dataset.tag=tag;
+    chip.textContent=tag;
+    chip.addEventListener('click',function(){
+      if(activeFilters.tag===tag){delete activeFilters.tag;this.classList.remove('active')}
+      else{document.querySelectorAll('.tag-chip').forEach(x=>x.classList.remove('active'));activeFilters.tag=tag;this.classList.add('active')}
+      render();
+    });
+    tagContainer.appendChild(chip);
+  });
+  document.getElementById('footer').innerHTML=`Built with ❤️ by <a href="landing.html">Menuverso</a> · March 2026 · ${DATA.length} restaurants across ${hoods.length} neighborhoods`;
+
+  // Hood select
   const hoodSelect=document.getElementById('hood-select');
   hoodSelect.innerHTML='<option value="">All Neighborhoods</option>'+hoods.map(h=>`<option value="${h}">${h}</option>`).join('');
   hoodSelect.addEventListener('change', function(){
-    if(this.value) activeFilters['hood']=this.value;
-    else delete activeFilters['hood'];
+    if(this.value) activeFilters['hood']=this.value; else delete activeFilters['hood'];
     render();
   });
 
-  // Attach events
+  // Cuisine select
+  const cuisineSelect=document.getElementById('cuisine-select');
+  cuisineSelect.innerHTML='<option value="">All Cuisines</option>'+cuisines.map(c=>`<option value="${c}">${c}</option>`).join('');
+  cuisineSelect.addEventListener('change', function(){
+    if(this.value) activeFilters['cuisine']=this.value; else delete activeFilters['cuisine'];
+    render();
+  });
+
+  // Chip filters
   document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',function(){
     const f=this.dataset.filter,v=this.dataset.value;
     if(!f)return;
     if(activeFilters[f]===v){delete activeFilters[f];this.classList.remove('active')}
     else{document.querySelectorAll(`.chip[data-filter="${f}"]`).forEach(x=>x.classList.remove('active'));activeFilters[f]=v;this.classList.add('active')}
-    render()
+    render();
   }));
+
   document.getElementById('search').addEventListener('input',render);
-  render()
+  document.getElementById('sort-select').addEventListener('change',render);
+
+  // URL params
+  const params=new URLSearchParams(window.location.search);
+  if(params.get('hood')){activeFilters['hood']=params.get('hood');hoodSelect.value=params.get('hood');}
+  if(params.get('cuisine')){activeFilters['cuisine']=params.get('cuisine');cuisineSelect.value=params.get('cuisine');}
+  if(params.get('tier')){activeFilters['tier']=params.get('tier');document.querySelector(`.chip[data-filter="tier"][data-value="${params.get('tier')}"]`)?.classList.add('active');}
+  if(params.get('mtier')){activeFilters['mtier']=params.get('mtier');document.querySelector(`.chip[data-filter="mtier"][data-value="${params.get('mtier')}"]`)?.classList.add('active');}
+  if(params.get('view')==='map') setView('map');
+  if(params.get('q')){document.getElementById('search').value=params.get('q');}
+
+  render();
 }
 
-function render(){
+function parsePrice(s){
+  if(!s) return null;
+  const nums=s.match(/[\d.]+/g);
+  if(!nums) return null;
+  return parseFloat(nums[0]);
+}
+
+function getFiltered(){
   const q=document.getElementById('search').value.toLowerCase();
   let filtered=DATA.filter(r=>{
     if(activeFilters.mtier&&r.menu_tier!==activeFilters.mtier)return false;
     if(activeFilters.hood&&r.neighborhood!==activeFilters.hood)return false;
     if(activeFilters.tier&&r.pricing_tier!==activeFilters.tier)return false;
-    if(q){const s=[r.name,r.neighborhood,r.cuisine_type,r.notes||'',r.address_full||''].join(' ').toLowerCase();if(!s.includes(q))return false}
-    return true
+    if(activeFilters.cuisine&&r.cuisine_type!==activeFilters.cuisine)return false;
+    if(activeFilters.tag&&!(r.tags||[]).includes(activeFilters.tag))return false;
+    if(q){const s=[r.name,r.neighborhood,r.cuisine_type,r.notes||'',(r.tags||[]).join(' '),r.address_full||'',r.metro_station||''].join(' ').toLowerCase();if(!s.includes(q))return false}
+    return true;
   });
-  document.getElementById('count').textContent=`Showing ${filtered.length} of ${DATA.length} restaurants`;
+
+  // Sort
+  const sort=document.getElementById('sort-select').value;
+  if(sort==='rating') filtered.sort((a,b)=>(b.google_maps_rating||0)-(a.google_maps_rating||0));
+  else if(sort==='price-low') filtered.sort((a,b)=>(parsePrice(a.menu_price_range)||999)-(parsePrice(b.menu_price_range)||999));
+  else if(sort==='price-high') filtered.sort((a,b)=>(parsePrice(b.menu_price_range)||0)-(parsePrice(a.menu_price_range)||0));
+  else if(sort==='reviews') filtered.sort((a,b)=>(b.google_maps_review_count||0)-(a.google_maps_review_count||0));
+  else filtered.sort((a,b)=>a.name.localeCompare(b.name));
+
+  return filtered;
+}
+
+function render(){
+  const filtered=getFiltered();
+  document.getElementById('count-text').textContent=`Showing ${filtered.length} of ${DATA.length} restaurants`;
+
+  // Update URL
+  const params=new URLSearchParams();
+  if(activeFilters.hood) params.set('hood',activeFilters.hood);
+  if(activeFilters.cuisine) params.set('cuisine',activeFilters.cuisine);
+  if(activeFilters.tier) params.set('tier',activeFilters.tier);
+  if(activeFilters.mtier) params.set('mtier',activeFilters.mtier);
+  if(activeFilters.tag) params.set('tag',activeFilters.tag);
+  if(currentView==='map') params.set('view','map');
+  const q=document.getElementById('search').value;
+  if(q) params.set('q',q);
+  const qs=params.toString();
+  history.replaceState(null,'',qs?`?${qs}`:location.pathname);
+
+  if(currentView==='list') renderList(filtered);
+  else renderMap(filtered);
+}
+
+function renderList(filtered){
   const grid=document.getElementById('grid');
   if(!filtered.length){grid.innerHTML='<div class="no-results">No restaurants match. Try different filters.</div>';return}
-  grid.innerHTML=filtered.slice(0,200).map(r=>{
+  grid.innerHTML=filtered.slice(0,300).map(r=>{
     const tier=r.menu_tier||'none';
     let links='';
-    if(r.website)links+=`<a href="${r.website}" target="_blank">🌐 Website</a>`;
-    if(r.phone)links+=`<a href="tel:${r.phone}">📞 ${r.phone}</a>`;
+    if(r.website)links+=`<a href="${r.website}" target="_blank">🌐 Web</a>`;
+    if(r.google_maps_url)links+=`<a href="${r.google_maps_url}" target="_blank">📍 Maps</a>`;
+    if(r.phone)links+=`<a href="tel:${r.phone}">📞 Call</a>`;
     if(r.instagram)links+=`<a href="https://instagram.com/${r.instagram.replace('@','')}" target="_blank">📸 IG</a>`;
-    const rating=r.google_maps_rating?`⭐ ${r.google_maps_rating} (${r.google_maps_review_count||0} rev)`:'';
+    const rating=r.google_maps_rating?`⭐ ${r.google_maps_rating} (${r.google_maps_review_count||0})`:'';
+    const tagHtml=(r.tags||[]).map(t=>`<span class="tag clickable" onclick="filterByTag('${t}')">${t}</span>`).join('');
     return `<div class="card">
-      <div class="card-header"><span class="card-name">${r.name}</span><span class="card-price">${r.menu_price_range||''}</span></div>
+      <div class="card-header"><span class="card-name">${r.name}</span><span class="card-price">${r.menu_price_range||'—'}</span></div>
       <span class="badge ${tier}">${tier==='confirmed'?'🟢 Confirmed':tier==='likely'?'🟡 Likely':'🔴 No Menú'}</span>
-      <div class="tags"><span class="tag hood">${r.neighborhood}</span><span class="tag cuisine">${r.cuisine_type}</span><span class="tag ${r.pricing_tier}">${r.pricing_tier}</span></div>
+      <div class="tags"><span class="tag">${r.neighborhood}</span><span class="tag">${r.cuisine_type}</span><span class="tag">${r.pricing_tier}</span>${tagHtml}</div>
       ${rating?`<div class="card-detail">${rating}</div>`:''}
       ${r.address_full?`<div class="card-detail">📍 ${r.address_full}${r.postal_code?' · '+r.postal_code:''}</div>`:''}
+      ${r.metro_station?`<div class="card-detail">🚇 ${r.metro_station}</div>`:''}
       ${r.notes?`<div class="card-notes">${r.notes}</div>`:''}
       ${links?`<div class="card-links">${links}</div>`:''}
     </div>`
   }).join('');
-  if(filtered.length>200)grid.innerHTML+=`<div class="no-results">Showing first 200 of ${filtered.length} results. Use search to refine.</div>`;
+  if(filtered.length>300)grid.innerHTML+=`<div class="no-results">Showing first 300 of ${filtered.length}. Refine your search.</div>`;
+}
+
+function renderMap(filtered){
+  if(!map) initMap();
+  markerCluster.clearLayers();
+  allMarkers=[];
+  
+  const withCoords=filtered.filter(r=>r.coordinates&&r.coordinates.lat&&r.coordinates.lng);
+  
+  if(!withCoords.length){
+    document.getElementById('count-text').textContent=`No geocoded restaurants found. ${filtered.length} match filters but lack coordinates.`;
+    return;
+  }
+
+  withCoords.forEach(r=>{
+    const tier=r.menu_tier||'none';
+    const color=tier==='confirmed'?'#059669':tier==='likely'?'#D97706':'#DC2626';
+    const icon=L.divIcon({
+      className:'',
+      html:`<div style="background:${color};width:10px;height:10px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,0.3);"></div>`,
+      iconSize:[14,14],
+      iconAnchor:[7,7],
+      popupAnchor:[0,-10]
+    });
+
+    const marker=L.marker([r.coordinates.lat, r.coordinates.lng],{icon});
+    
+    let links='';
+    if(r.website) links+=`<a href="${r.website}" target="_blank">🌐 Web</a> `;
+    if(r.phone) links+=`<a href="tel:${r.phone}">📞</a> `;
+    
+    marker.bindPopup(`<div class="map-popup">
+      <div class="popup-name">${r.name}</div>
+      <span class="popup-badge ${tier}">${tier==='confirmed'?'🟢 Confirmed':tier==='likely'?'🟡 Likely':'🔴 No Menú'}</span>
+      <div class="popup-meta">${r.cuisine_type} · ${r.pricing_tier}${r.menu_price_range?' · '+r.menu_price_range:''}</div>
+      <div class="popup-meta">⭐ ${r.google_maps_rating||'?'} (${r.google_maps_review_count||0} rev)</div>
+      ${r.address_full?`<div class="popup-meta">📍 ${r.address_full}</div>`:''}
+      ${r.notes?`<div class="popup-notes">${r.notes}</div>`:''}
+      ${links?`<div class="popup-links">${links}</div>`:''}
+    </div>`,{maxWidth:280});
+    
+    allMarkers.push(marker);
+    markerCluster.addLayer(marker);
+  });
+
+  // Fit bounds to markers
+  if(allMarkers.length){
+    const group=L.featureGroup(allMarkers);
+    map.fitBounds(group.getBounds().pad(0.1));
+  }
+
+  document.getElementById('count-text').textContent=`Showing ${withCoords.length} of ${filtered.length} on map (${filtered.length-withCoords.length} unmapped)`;
+}
+
+function initMap(){
+  map=L.map('map',{zoomControl:true}).setView([41.3888,2.1700],13);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    maxZoom:19
+  }).addTo(map);
+  
+  markerCluster=L.markerClusterGroup({
+    maxClusterRadius:50,
+    spiderfyOnMaxZoom:true,
+    showCoverageOnHover:false,
+    zoomToBoundsOnClick:true,
+    iconCreateFunction:function(cluster){
+      const count=cluster.getChildCount();
+      let size='small',sz=36;
+      if(count>50){size='large';sz=48;}
+      else if(count>20){size='medium';sz=42;}
+      return L.divIcon({
+        html:`<div style="width:${sz}px;height:${sz}px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:${count>99?'11':'13'}px;font-family:Inter,sans-serif;color:#fff;background:rgba(37,99,235,0.85);border:2px solid rgba(255,255,255,0.9);box-shadow:0 2px 8px rgba(0,0,0,0.2);">${count}</div>`,
+        className:'',
+        iconSize:[sz,sz]
+      });
+    }
+  });
+  map.addLayer(markerCluster);
+}
+
+function setView(v){
+  currentView=v;
+  document.getElementById('btn-list').classList.toggle('active',v==='list');
+  document.getElementById('btn-map').classList.toggle('active',v==='map');
+  document.getElementById('grid').style.display=v==='list'?'grid':'none';
+  document.getElementById('map-container').style.display=v==='map'?'block':'none';
+  if(v==='map'&&map) setTimeout(()=>map.invalidateSize(),100);
+  render();
+}
+
+function filterByTag(tag){
+  if(activeFilters.tag===tag){delete activeFilters.tag;}
+  else{activeFilters.tag=tag;}
+  document.querySelectorAll('.tag-chip').forEach(c=>c.classList.toggle('active',c.dataset.tag===activeFilters.tag));
+  render();
 }
 </script>
 </body>
