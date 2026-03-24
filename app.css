@@ -341,11 +341,11 @@ body{
   -webkit-tap-highlight-color:transparent;
 }
 .tab-item .tab-icon{
-  width:22px;height:22px;
+  width:24px;height:24px;
   display:flex;align-items:center;justify-content:center;
   transition:transform 0.15s;
 }
-.tab-item .tab-icon svg{width:22px;height:22px;stroke:var(--text-muted);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:all 0.2s;}
+.tab-item .tab-icon svg{width:24px;height:24px;min-width:24px;min-height:24px;stroke:var(--text-muted);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:all 0.2s;display:block;}
 .tab-item.active .tab-icon svg{stroke:var(--accent);}
 .tab-item .tab-label{
   font-size:0.62rem;font-weight:600;
@@ -497,7 +497,7 @@ body{
 
 /* ─── Responsive ─── */
 @media(max-width:640px){
-  .feed{grid-template-columns:1fr;gap:0.85rem;padding:0.85rem 1rem;}
+  .feed{grid-template-columns:1fr !important;gap:0.85rem;padding:0.85rem 1rem;}
   .card-name{font-size:1.1rem;}
   .card-meta{font-size:0.78rem;}
   .app-nav-location{display:none;}
