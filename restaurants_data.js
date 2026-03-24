@@ -1,4 +1,4 @@
-const restaurantsData = [
+var RESTAURANT_DATA = [
   {
     "id": 1,
     "name": "Casa Jaime",
