@@ -3,7 +3,7 @@
 Menuverso Geocoder — Batch geocode all restaurants using Nominatim (free, no API key).
 Uses address_full + postal_code + "Barcelona" to get lat/lng coordinates.
 Respects Nominatim's 1 request/second rate limit.
-Writes results back to restaurants.json with coordinates field populated.
+MERGES only coordinates back into restaurants.json — does NOT overwrite other fields.
 """
 
 import json
@@ -114,12 +114,32 @@ def save_progress(progress):
         json.dump(progress, f)
 
 
+def merge_coordinates_into_file(coord_map):
+    """Re-read the CURRENT restaurants.json and only update coordinates.
+    This preserves tags, metro_station, google_maps_url, menu_tier, etc."""
+    with open(INPUT) as f:
+        current = json.load(f)
+    for r in current:
+        rid = str(r["id"])
+        if rid in coord_map and coord_map[rid] is not None:
+            r["coordinates"] = {"lat": coord_map[rid][0], "lng": coord_map[rid][1]}
+    with open(OUTPUT, "w") as f:
+        json.dump(current, f, indent=2, ensure_ascii=False)
+    with open("restaurants_data.js", "w") as f:
+        f.write("var RESTAURANT_DATA = ")
+        json.dump(current, f, indent=2, ensure_ascii=False)
+        f.write(";\n")
+
+
 def main():
     with open(INPUT) as f:
         restaurants = json.load(f)
     
     total = len(restaurants)
     progress = load_progress()
+    
+    # Build a map of ALL coordinates (existing + new)
+    coord_map = {}  # id -> [lat, lng] or None
     
     success = 0
     failed = 0
@@ -128,7 +148,8 @@ def main():
     already_done = 0
     
     print(f"🗺️  Geocoding {total} restaurants...")
-    print(f"   Previous progress: {len(progress)} cached results\n")
+    print(f"   Previous progress: {len(progress)} cached results")
+    print(f"   ⚠️  Safe mode: will ONLY merge coordinates, not overwrite other fields\n")
     
     for i, r in enumerate(restaurants):
         rid = str(r["id"])
@@ -137,22 +158,27 @@ def main():
         postal = r.get("postal_code", "")
         neighborhood = r.get("neighborhood", "")
         
-        # Already has coordinates?
-        if r.get("coordinates", {}).get("lat"):
-            already_done += 1
-            continue
+        # Already has precise coordinates (5+ decimal places)?
+        existing_lat = r.get("coordinates", {}).get("lat")
+        if existing_lat:
+            lat_str = str(existing_lat)
+            decimals = len(lat_str.split('.')[-1]) if '.' in lat_str else 0
+            if decimals >= 5:
+                coord_map[rid] = [existing_lat, r["coordinates"]["lng"]]
+                already_done += 1
+                continue
         
         # Check progress cache
         if rid in progress:
             cached = progress[rid]
             if cached:
-                r["coordinates"] = {"lat": cached[0], "lng": cached[1]}
+                coord_map[rid] = cached
                 success += 1
             else:
                 # Use neighborhood centroid as fallback
                 if neighborhood in NEIGHBORHOOD_CENTROIDS:
                     centroid = NEIGHBORHOOD_CENTROIDS[neighborhood]
-                    r["coordinates"] = {"lat": centroid[0], "lng": centroid[1]}
+                    coord_map[rid] = [centroid[0], centroid[1]]
                     fallback += 1
                 else:
                     failed += 1
@@ -163,7 +189,7 @@ def main():
             # No address — use neighborhood centroid
             if neighborhood in NEIGHBORHOOD_CENTROIDS:
                 centroid = NEIGHBORHOOD_CENTROIDS[neighborhood]
-                r["coordinates"] = {"lat": centroid[0], "lng": centroid[1]}
+                coord_map[rid] = [centroid[0], centroid[1]]
                 progress[rid] = None  # Mark as centroid fallback
                 fallback += 1
             else:
@@ -175,14 +201,14 @@ def main():
         
         if result:
             lat, lng = result
-            r["coordinates"] = {"lat": lat, "lng": lng}
+            coord_map[rid] = [lat, lng]
             progress[rid] = [lat, lng]
             success += 1
         else:
             # Fallback to neighborhood centroid
             if neighborhood in NEIGHBORHOOD_CENTROIDS:
                 centroid = NEIGHBORHOOD_CENTROIDS[neighborhood]
-                r["coordinates"] = {"lat": centroid[0], "lng": centroid[1]}
+                coord_map[rid] = [centroid[0], centroid[1]]
                 fallback += 1
             else:
                 failed += 1
@@ -195,29 +221,22 @@ def main():
             print(f"   [{done}/{total}] ({pct:.0f}%) — ✅ {success} geocoded, 📍 {fallback} centroid, ❌ {failed} failed")
             save_progress(progress)
             
-            # Save intermediate results every 100
+            # Merge intermediate results every 100 (safe merge, not overwrite)
             if done % 100 == 0:
-                with open(OUTPUT, "w") as f:
-                    json.dump(restaurants, f, indent=2, ensure_ascii=False)
+                merge_coordinates_into_file(coord_map)
+                print(f"   💾 Saved (coordinates only, other fields preserved)")
     
-    # Final save
-    with open(OUTPUT, "w") as f:
-        json.dump(restaurants, f, indent=2, ensure_ascii=False)
-    
-    # Regenerate restaurants_data.js
-    with open("restaurants_data.js", "w") as f:
-        f.write("var RESTAURANT_DATA = ")
-        json.dump(restaurants, f, indent=2, ensure_ascii=False)
-        f.write(";\n")
+    # Final safe merge
+    merge_coordinates_into_file(coord_map)
     
     print(f"\n{'='*50}")
     print(f"✅ Geocoding complete!")
-    print(f"   Already had coords:  {already_done}")
-    print(f"   Successfully geocoded: {success}")
-    print(f"   Centroid fallback:     {fallback}")
-    print(f"   Failed:                {failed}")
-    print(f"   Total with coords:     {success + fallback + already_done}/{total}")
-    print(f"\n   Output: {OUTPUT}")
+    print(f"   Already had precise coords: {already_done}")
+    print(f"   Successfully geocoded:      {success}")
+    print(f"   Centroid fallback:          {fallback}")
+    print(f"   Failed:                     {failed}")
+    print(f"   Total with coords:          {len(coord_map)}/{total}")
+    print(f"\n   Output: {OUTPUT} (coordinates merged safely)")
     print(f"   JS data: restaurants_data.js")
 
 
