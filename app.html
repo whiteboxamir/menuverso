@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Menuverso — Discover Barcelona Restaurants</title>
+<meta name="description" content="Discover Barcelona's best restaurants. 1,500+ spots with menú del día tracking, ratings, photos, and an interactive map.">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+</head>
+<body>
+
+<!-- ═══ Top Nav ═══ -->
+<nav class="app-nav">
+  <a href="app.html" class="app-nav-brand">
+    <img src="assets/logo.png" alt="Menuverso">
+    <span>Menuverso</span>
+  </a>
+  <div class="app-nav-links">
+    <a href="app.html" class="app-nav-link" style="color:var(--accent);">Discover</a>
+    <a href="index.html" class="app-nav-link">Database</a>
+    <a href="analytics.html" class="app-nav-link">Analytics</a>
+    <a href="lists.html" class="app-nav-link">Best Of</a>
+  </div>
+  <div class="app-nav-actions">
+    <button class="app-nav-btn" id="themeToggle" onclick="toggleTheme()" title="Toggle theme">🌙</button>
+    <div style="display:flex;border-radius:var(--radius-pill);overflow:hidden;border:1px solid var(--surface-border);font-size:0.72rem;font-weight:600;">
+      <button data-lang="es" class="active" onclick="setLang('es')" style="padding:0.3rem 0.5rem;border:none;cursor:pointer;font-family:Inter,sans-serif;background:var(--accent);color:#fff;transition:all 0.2s;">ES</button>
+      <button data-lang="ca" onclick="setLang('ca')" style="padding:0.3rem 0.5rem;border:none;cursor:pointer;font-family:Inter,sans-serif;background:var(--surface);color:var(--text-sub);transition:all 0.2s;">CA</button>
+      <button data-lang="en" onclick="setLang('en')" style="padding:0.3rem 0.5rem;border:none;cursor:pointer;font-family:Inter,sans-serif;background:var(--surface);color:var(--text-sub);transition:all 0.2s;">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ SCREEN: Discover (Home) ═══ -->
+<div class="screen active" id="home-screen">
+  <!-- Search -->
+  <div class="search-container">
+    <div class="search-bar">
+      <span class="icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Search Barcelona restaurants..." autocomplete="off">
+    </div>
+    <!-- Filter Pills -->
+    <div class="filter-pills" id="filterPills">
+      <span class="pill active" data-filter="all">🍽️ All</span>
+      <span class="pill" data-filter="open">🟢 Open Now</span>
+      <span class="pill" data-filter="confirmed">✅ Menú Confirmed</span>
+      <span class="pill" data-filter="budget">💚 Budget</span>
+      <span class="pill" data-filter="mid-range">🧡 Mid-Range</span>
+      <span class="pill" data-filter="premium">💜 Premium</span>
+    </div>
+  </div>
+
+  <!-- Feed Header -->
+  <div class="feed-header">
+    <span class="feed-count" id="feedCount">Loading...</span>
+    <select class="feed-sort" id="feedSort">
+      <option value="rating">★ Top Rated</option>
+      <option value="reviews">🔥 Most Reviewed</option>
+      <option value="price-low">💰 Price ↑</option>
+      <option value="price-high">💰 Price ↓</option>
+      <option value="name">A→Z Name</option>
+    </select>
+  </div>
+
+  <!-- Restaurant Grid -->
+  <div class="feed" id="feed">
+    <!-- Skeleton cards while loading -->
+    <div class="skeleton"><div class="skeleton-img"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-line xs"></div></div>
+    <div class="skeleton"><div class="skeleton-img"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-line xs"></div></div>
+    <div class="skeleton"><div class="skeleton-img"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-line xs"></div></div>
+    <div class="skeleton"><div class="skeleton-img"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-line xs"></div></div>
+    <div class="skeleton"><div class="skeleton-img"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-line xs"></div></div>
+    <div class="skeleton"><div class="skeleton-img"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-line xs"></div></div>
+  </div>
+
+  <footer class="app-footer">
+    Built with ❤️ by <a href="landing.html">Menuverso</a> · <a href="index.html">Database View</a>
+  </footer>
+</div>
+
+<!-- ═══ SCREEN: Map ═══ -->
+<div class="screen" id="map-screen">
+  <div class="map-wrap">
+    <div id="appMap"></div>
+  </div>
+</div>
+
+<!-- ═══ SCREEN: Finder ═══ -->
+<div class="screen" id="find-screen">
+  <div class="finder-wrap">
+    <div class="finder-title" id="finderTitle">🍽️ Encuentra tu Almuerzo</div>
+    <div class="finder-sub" id="finderSub">Tell us what you're looking for and we'll find the perfect spot.</div>
+
+    <!-- Neighborhood -->
+    <div class="finder-section">
+      <div class="finder-label">Neighborhood</div>
+      <div class="finder-chips" id="finderHoods"></div>
+    </div>
+    <!-- Budget -->
+    <div class="finder-section">
+      <div class="finder-label">Budget</div>
+      <div class="finder-chips" id="finderBudget">
+        <span class="finder-chip" data-pref="budget" data-val="budget" onclick="toggleFinderChip(this)">💚 Budget (≤12€)</span>
+        <span class="finder-chip" data-pref="budget" data-val="mid-range" onclick="toggleFinderChip(this)">🧡 Mid-Range (12-18€)</span>
+        <span class="finder-chip" data-pref="budget" data-val="premium" onclick="toggleFinderChip(this)">💜 Premium (18€+)</span>
+      </div>
+    </div>
+    <!-- Cuisine -->
+    <div class="finder-section">
+      <div class="finder-label">Cuisine</div>
+      <div class="finder-chips" id="finderCuisines"></div>
+    </div>
+    <!-- Results -->
+    <div class="finder-section" id="finderResults" style="display:none;">
+      <div class="finder-label" id="finderResultsLabel">Results</div>
+      <div class="feed" id="finderFeed" style="padding:0;max-width:none;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SCREEN: Saved ═══ -->
+<div class="screen" id="saved-screen">
+  <div style="max-width:var(--max-w);margin:0 auto;padding:1rem;">
+    <h2 style="font-family:Outfit,sans-serif;font-weight:800;font-size:1.5rem;letter-spacing:-0.02em;margin-bottom:1rem;">❤️ Saved Restaurants</h2>
+    <div class="feed" id="savedFeed" style="max-width:none;padding:0;">
+      <div class="saved-empty" id="savedEmpty">
+        <div class="icon">❤️</div>
+        <p>Tap the heart on any restaurant to save it here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ Bottom Sheet (Map) ═══ -->
+<div class="bottom-sheet-overlay" id="bsOverlay" onclick="closeBottomSheet()"></div>
+<div class="bottom-sheet" id="bottomSheet">
+  <div class="bottom-sheet-handle"></div>
+  <div class="bottom-sheet-content">
+    <div class="bs-name" id="bsName"></div>
+    <div class="bs-meta" id="bsMeta"></div>
+    <div id="bsBadges" style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:0.5rem;"></div>
+    <div class="bs-meta" id="bsNotes" style="font-size:0.82rem;"></div>
+    <div class="bs-actions" id="bsActions"></div>
+  </div>
+</div>
+
+<!-- ═══ Bottom Tab Bar ═══ -->
+<div class="tab-bar">
+  <button class="tab-item active" data-screen="home-screen" onclick="switchScreen('home-screen',this)">
+    <span class="tab-icon">🏠</span>
+    <span class="tab-label">Home</span>
+  </button>
+  <button class="tab-item" data-screen="map-screen" onclick="switchScreen('map-screen',this)">
+    <span class="tab-icon">🗺️</span>
+    <span class="tab-label">Map</span>
+  </button>
+  <button class="tab-item" data-screen="find-screen" onclick="switchScreen('find-screen',this)">
+    <span class="tab-icon">🔍</span>
+    <span class="tab-label">Find</span>
+  </button>
+  <button class="tab-item" data-screen="saved-screen" onclick="switchScreen('saved-screen',this)">
+    <span class="tab-icon">❤️</span>
+    <span class="tab-label">Saved</span>
+  </button>
+</div>
+
+<!-- ═══ Scripts ═══ -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="restaurants_data.js"></script>
+<script>
+// ═══════════════════════════════════════
+//  State
+// ═══════════════════════════════════════
+const DATA = window.RESTAURANT_DATA || [];
+let activeFilter = 'all';
+let searchQuery = '';
+let sortMode = 'rating';
+let favorites = JSON.parse(localStorage.getItem('menuverso_favs') || '[]');
+let currentLang = localStorage.getItem('menuverso_lang') || 'es';
+let map = null, markerCluster = null;
+let loadedCount = 0;
+const BATCH = 24;
+let currentFiltered = [];
+let finderPrefs = { hood: null, budget: null, cuisine: null };
+
+// Cuisine type → image slug mapping
+const CUISINE_MAP = {
+  'Spanish':'spanish','Mediterranean':'mediterranean','Catalan':'catalan',
+  'Italian':'italian','Japanese':'japanese','Peruvian':'peruvian',
+  'French':'french','Asian':'asian','Chinese':'chinese','Korean':'korean',
+  'Indian':'indian','Mexican':'mexican','Thai':'thai','Greek':'greek',
+  'Turkish':'turkish','Lebanese':'lebanese','Fusion':'fusion',
+  'Gastropub':'gastropub','Café':'café','Seafood':'seafood',
+  'Argentine':'argentine','Colombian':'colombian','Cuban':'cuban',
+  'Ethiopian':'ethiopian','Middle Eastern':'middle_eastern',
+  'Basque':'basque','Vegetarian/Vegan':'vegetarian_vegan'
+};
+
+// ═══════════════════════════════════════
+//  Utilities
+// ═══════════════════════════════════════
+function parsePrice(s){
+  if(!s) return null;
+  const nums = s.match(/[\d.]+/g);
+  return nums ? parseFloat(nums[0]) : null;
+}
+
+function getImageSrc(r) {
+  // Try real hero image first
+  if (r.images && r.images.hero) {
+    return r.images.hero;
+  }
+  // Cuisine fallback
+  const slug = CUISINE_MAP[r.cuisine_type];
+  if (slug) return `assets/cuisine/${slug}_card.webp`;
+  return `assets/cuisine/other_card.webp`;
+}
+
+function getCuisineClass(cuisine) {
+  const slug = CUISINE_MAP[cuisine];
+  return slug ? `cuisine-${slug}` : 'cuisine-default';
+}
+
+function getInitials(name) {
+  return name.split(/\s+/).slice(0,2).map(w=>w[0]).join('').toUpperCase();
+}
+
+// Open Now
+function parseHoursStatus(hoursStr){
+  if(!hoursStr||!hoursStr.trim()) return 'unknown';
+  const now=new Date();
+  const h=now.getHours(),m=now.getMinutes();
+  const nowMin=h*60+m;
+  const dayOfWeek=now.getDay();
+  const dayMatch=hoursStr.match(/\(([^)]+)\)/);
+  if(dayMatch){
+    const dayStr=dayMatch[1].toLowerCase();
+    const dayAbbr=['sun','mon','tue','wed','thu','fri','sat'];
+    const dayAbbr2=['dom','lun','mar','mie','jue','vie','sab'];
+    const rangeM=dayStr.match(/(\w+)-(\w+)/);
+    if(rangeM){
+      let s=-1,e=-1;
+      [dayAbbr,dayAbbr2].forEach(arr=>{
+        arr.forEach((d,i)=>{if(rangeM[1].startsWith(d))s=i;if(rangeM[2].startsWith(d))e=i;});
+      });
+      if(s>=0&&e>=0){
+        const inR=s<=e?(dayOfWeek>=s&&dayOfWeek<=e):(dayOfWeek>=s||dayOfWeek<=e);
+        if(!inR) return 'closed';
+      }
+    }
+  }
+  const timeRanges=hoursStr.replace(/\([^)]+\)/g,'').match(/\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2}/g);
+  if(!timeRanges) return 'unknown';
+  let isOpen=false;
+  timeRanges.forEach(range=>{
+    const parts=range.split('-').map(s=>s.trim());
+    const sP=parts[0].split(':'),eP=parts[1].split(':');
+    const sMin=parseInt(sP[0])*60+parseInt(sP[1]);
+    const eMin=parseInt(eP[0])*60+parseInt(eP[1]);
+    if(nowMin>=sMin&&nowMin<eMin) isOpen=true;
+  });
+  return isOpen?'open':'closed';
+}
+function getOpenStatus(r){ return parseHoursStatus(r.opening_hours_lunch||''); }
+function isOpen(r){ return getOpenStatus(r)==='open'; }
+
+// ═══════════════════════════════════════
+//  Theme
+// ═══════════════════════════════════════
+function initTheme(){
+  const saved = localStorage.getItem('menuverso_theme');
+  // Default to dark (our primary design)
+  if(saved==='light'){
+    document.documentElement.classList.add('light');
+    document.getElementById('themeToggle').textContent='☀️';
+  }
+}
+function toggleTheme(){
+  const isLight = document.documentElement.classList.toggle('light');
+  localStorage.setItem('menuverso_theme', isLight?'light':'dark');
+  document.getElementById('themeToggle').textContent = isLight?'☀️':'🌙';
+}
+
+// ═══════════════════════════════════════
+//  Language
+// ═══════════════════════════════════════
+function setLang(lang){
+  currentLang = lang;
+  localStorage.setItem('menuverso_lang', lang);
+  document.querySelectorAll('[data-lang]').forEach(b=>{
+    const isActive = b.dataset.lang===lang;
+    b.classList.toggle('active', isActive);
+    b.style.background = isActive ? 'var(--accent)' : 'var(--surface)';
+    b.style.color = isActive ? '#fff' : 'var(--text-sub)';
+  });
+  updateI18N();
+}
+function updateI18N(){
+  const t = {
+    es: { search:'Buscar restaurantes en Barcelona...', title:'🍽️ Encuentra tu Almuerzo', sub:'Dinos qué buscas y encontramos el lugar perfecto.' },
+    en: { search:'Search Barcelona restaurants...', title:'🍽️ Find Your Lunch', sub:'Tell us what you\'re looking for and we\'ll find the perfect spot.' },
+    ca: { search:'Cercar restaurants a Barcelona...', title:'🍽️ Troba el teu Dinar', sub:'Digue\'ns què busques i trobarem el lloc perfecte.' }
+  }[currentLang] || {};
+  if(t.search) document.getElementById('searchInput').placeholder = t.search;
+  if(t.title) document.getElementById('finderTitle').textContent = t.title;
+  if(t.sub) document.getElementById('finderSub').textContent = t.sub;
+}
+
+// ═══════════════════════════════════════
+//  Screen Switching
+// ═══════════════════════════════════════
+function switchScreen(id, tabEl){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.tab-item').forEach(t=>t.classList.remove('active'));
+  if(tabEl) tabEl.classList.add('active');
+
+  if(id==='map-screen' && !map) initMap();
+  if(id==='map-screen' && map) setTimeout(()=>map.invalidateSize(),100);
+  if(id==='saved-screen') renderSaved();
+}
+
+// ═══════════════════════════════════════
+//  Filtering & Sorting
+// ═══════════════════════════════════════
+function getFiltered(){
+  const q = searchQuery.toLowerCase();
+  let filtered = DATA.filter(r=>{
+    if(activeFilter==='open' && !isOpen(r)) return false;
+    if(activeFilter==='confirmed' && r.menu_tier!=='confirmed') return false;
+    if(activeFilter==='budget' && r.pricing_tier!=='budget') return false;
+    if(activeFilter==='mid-range' && r.pricing_tier!=='mid-range') return false;
+    if(activeFilter==='premium' && r.pricing_tier!=='premium') return false;
+    if(q){
+      const haystack = [r.name, r.neighborhood, r.cuisine_type, r.notes||'', (r.tags||[]).join(' '), r.address_full||'', r.metro_station||''].join(' ').toLowerCase();
+      if(!haystack.includes(q)) return false;
+    }
+    return true;
+  });
+
+  if(sortMode==='rating') filtered.sort((a,b)=>(b.google_maps_rating||0)-(a.google_maps_rating||0));
+  else if(sortMode==='reviews') filtered.sort((a,b)=>(b.google_maps_review_count||0)-(a.google_maps_review_count||0));
+  else if(sortMode==='price-low') filtered.sort((a,b)=>(parsePrice(a.menu_price_range)||999)-(parsePrice(b.menu_price_range)||999));
+  else if(sortMode==='price-high') filtered.sort((a,b)=>(parsePrice(b.menu_price_range)||0)-(parsePrice(a.menu_price_range)||0));
+  else filtered.sort((a,b)=>a.name.localeCompare(b.name));
+
+  return filtered;
+}
+
+// ═══════════════════════════════════════
+//  Card Rendering
+// ═══════════════════════════════════════
+function renderCard(r){
+  const tier = r.menu_tier || 'none';
+  const openSt = getOpenStatus(r);
+  const isFav = favorites.includes(r.id);
+  const imgSrc = getImageSrc(r);
+  const tags = (r.tags||[]).slice(0,2);
+
+  let openHtml = '';
+  if(openSt==='open') openHtml = '<span class="open-badge open"><span class="pulse"></span>Open</span>';
+  else if(openSt==='closed') openHtml = '<span class="open-badge closed">Closed</span>';
+
+  let menuHtml = '';
+  if(tier==='confirmed') menuHtml = '<span class="menu-badge confirmed">✅ Menú</span>';
+  else if(tier==='likely') menuHtml = '<span class="menu-badge likely">🟡 Likely</span>';
+
+  const tagHtml = tags.map(t=>`<span class="card-tag">${t}</span>`).join('');
+
+  return `<div class="card" onclick="window.location.href='r/${r.id}.html'" data-id="${r.id}">
+    <button class="card-fav ${isFav?'active':''}" onclick="event.stopPropagation();toggleFav(${r.id},this)" title="Save">
+      ${isFav?'❤️':'🤍'}
+    </button>
+    <div class="card-img">
+      <img src="${imgSrc}" alt="${r.name}" loading="lazy"
+           onerror="this.parentElement.innerHTML='<div class=\\'placeholder-img ${getCuisineClass(r.cuisine_type)}\\'>${getInitials(r.name)}</div>'">
+      <div class="card-img-overlay">
+        ${r.google_maps_rating ? `<span class="card-rating"><span class="star">★</span>${r.google_maps_rating}<span class="count">(${(r.google_maps_review_count||0).toLocaleString()})</span></span>` : ''}
+        ${r.menu_price_range ? `<span class="card-price">${r.menu_price_range}</span>` : ''}
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">${r.name}</div>
+      <div class="card-meta">
+        <span>🍽️ ${r.cuisine_type}</span>
+        <span class="dot">•</span>
+        <span>📍 ${r.neighborhood}</span>
+        ${r.metro_station ? `<span class="dot">•</span><span>🚇 ${r.metro_station.split('(')[0].trim()}</span>` : ''}
+      </div>
+      <div class="card-status">
+        ${openHtml}${menuHtml}
+      </div>
+      ${tagHtml ? `<div class="card-tags">${tagHtml}</div>` : ''}
+    </div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════
+//  Feed Rendering (Infinite Scroll)
+// ═══════════════════════════════════════
+function renderFeed(reset){
+  if(reset){
+    loadedCount = 0;
+    currentFiltered = getFiltered();
+  }
+
+  const feed = document.getElementById('feed');
+  const slice = currentFiltered.slice(loadedCount, loadedCount + BATCH);
+
+  if(reset) feed.innerHTML = '';
+
+  if(!currentFiltered.length){
+    feed.innerHTML = '<div class="no-results">No restaurants match. Try different filters.</div>';
+    document.getElementById('feedCount').textContent = '0 restaurants';
+    return;
+  }
+
+  feed.innerHTML += slice.map(renderCard).join('');
+  loadedCount += slice.length;
+
+  document.getElementById('feedCount').textContent = `${currentFiltered.length.toLocaleString()} restaurants`;
+}
+
+// Infinite scroll
+let scrollThrottle = false;
+window.addEventListener('scroll', ()=>{
+  if(scrollThrottle) return;
+  if(!document.getElementById('home-screen').classList.contains('active')) return;
+  if(loadedCount >= currentFiltered.length) return;
+
+  const scrollBottom = window.innerHeight + window.scrollY;
+  const docHeight = document.documentElement.scrollHeight;
+
+  if(scrollBottom >= docHeight - 600){
+    scrollThrottle = true;
+    renderFeed(false);
+    setTimeout(()=>{ scrollThrottle = false; }, 200);
+  }
+});
+
+// ═══════════════════════════════════════
+//  Filter Pills
+// ═══════════════════════════════════════
+document.getElementById('filterPills').addEventListener('click', e=>{
+  const pill = e.target.closest('.pill');
+  if(!pill) return;
+  document.querySelectorAll('#filterPills .pill').forEach(p=>p.classList.remove('active','active-green'));
+  pill.classList.add(pill.dataset.filter==='open' ? 'active-green' : 'active');
+  activeFilter = pill.dataset.filter;
+  renderFeed(true);
+});
+
+// Search
+let searchTimer;
+document.getElementById('searchInput').addEventListener('input', e=>{
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(()=>{
+    searchQuery = e.target.value;
+    renderFeed(true);
+  }, 250);
+});
+
+// Sort
+document.getElementById('feedSort').addEventListener('change', e=>{
+  sortMode = e.target.value;
+  renderFeed(true);
+});
+
+// ═══════════════════════════════════════
+//  Favorites
+// ═══════════════════════════════════════
+function toggleFav(id, btn){
+  const idx = favorites.indexOf(id);
+  if(idx>-1){ favorites.splice(idx,1); btn.classList.remove('active'); btn.textContent='🤍'; }
+  else{ favorites.push(id); btn.classList.add('active'); btn.textContent='❤️'; }
+  localStorage.setItem('menuverso_favs', JSON.stringify(favorites));
+}
+
+function renderSaved(){
+  const feed = document.getElementById('savedFeed');
+  const empty = document.getElementById('savedEmpty');
+  if(!favorites.length){
+    feed.innerHTML = '';
+    feed.appendChild(empty);
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+  const saved = DATA.filter(r=>favorites.includes(r.id));
+  feed.innerHTML = saved.map(renderCard).join('');
+}
+
+// ═══════════════════════════════════════
+//  Map
+// ═══════════════════════════════════════
+function initMap(){
+  map = L.map('appMap',{zoomControl:true}).setView([41.3888,2.1700],13);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    maxZoom:19
+  }).addTo(map);
+
+  markerCluster = L.markerClusterGroup({
+    maxClusterRadius:50,
+    spiderfyOnMaxZoom:true,
+    showCoverageOnHover:false,
+    zoomToBoundsOnClick:true,
+    iconCreateFunction:function(cluster){
+      const count=cluster.getChildCount();
+      const sz=count>50?48:count>20?42:36;
+      return L.divIcon({
+        html:`<div style="width:${sz}px;height:${sz}px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:${count>99?'11':'13'}px;font-family:Outfit,sans-serif;color:#fff;background:var(--accent);border:2px solid rgba(255,255,255,0.3);box-shadow:0 2px 8px rgba(0,0,0,0.3);">${count}</div>`,
+        className:'',iconSize:[sz,sz]
+      });
+    }
+  });
+  map.addLayer(markerCluster);
+
+  // Add markers
+  const withCoords = DATA.filter(r=>r.coordinates&&r.coordinates.lat&&r.coordinates.lng);
+  withCoords.forEach(r=>{
+    const tier = r.menu_tier||'none';
+    const color = tier==='confirmed'?'#22C55E':tier==='likely'?'#F59E0B':'#A1A1AA';
+    const icon = L.divIcon({
+      className:'',
+      html:`<div style="background:${color};width:10px;height:10px;border-radius:50%;border:2px solid rgba(255,255,255,0.8);box-shadow:0 1px 4px rgba(0,0,0,0.4);"></div>`,
+      iconSize:[14,14],iconAnchor:[7,7],popupAnchor:[0,-10]
+    });
+    const marker = L.marker([r.coordinates.lat, r.coordinates.lng],{icon});
+    marker.on('click', ()=>openBottomSheet(r));
+    markerCluster.addLayer(marker);
+  });
+}
+
+// Bottom sheet
+function openBottomSheet(r){
+  document.getElementById('bsName').textContent = r.name;
+  document.getElementById('bsMeta').textContent = `${r.cuisine_type} · ${r.neighborhood} · ${r.menu_price_range||'—'}`;
+
+  const tierBadge = r.menu_tier==='confirmed' ? '<span class="menu-badge confirmed">✅ Confirmed</span>' : r.menu_tier==='likely' ? '<span class="menu-badge likely">🟡 Likely</span>' : '';
+  const openSt = getOpenStatus(r);
+  const openBadge = openSt==='open' ? '<span class="open-badge open"><span class="pulse"></span>Open</span>' : openSt==='closed' ? '<span class="open-badge closed">Closed</span>' : '';
+  const ratingBadge = r.google_maps_rating ? `<span style="font-size:0.82rem;color:var(--gold);font-weight:600;">★ ${r.google_maps_rating} <span style="color:var(--text-muted);font-weight:400;">(${r.google_maps_review_count||0})</span></span>` : '';
+  document.getElementById('bsBadges').innerHTML = [tierBadge, openBadge, ratingBadge].filter(Boolean).join('');
+
+  document.getElementById('bsNotes').textContent = r.notes||'';
+
+  let actions = `<a href="r/${r.id}.html" class="bs-action primary">View Detail</a>`;
+  if(r.google_maps_url) actions += `<a href="${r.google_maps_url}" target="_blank" class="bs-action">📍 Directions</a>`;
+  if(r.phone) actions += `<a href="tel:${r.phone}" class="bs-action">📞 Call</a>`;
+  if(r.website) actions += `<a href="${r.website}" target="_blank" class="bs-action">🌐 Web</a>`;
+  document.getElementById('bsActions').innerHTML = actions;
+
+  document.getElementById('bsOverlay').classList.add('show');
+  document.getElementById('bottomSheet').classList.add('show');
+}
+function closeBottomSheet(){
+  document.getElementById('bsOverlay').classList.remove('show');
+  document.getElementById('bottomSheet').classList.remove('show');
+}
+
+// ═══════════════════════════════════════
+//  Finder
+// ═══════════════════════════════════════
+function initFinder(){
+  // Neighborhoods
+  const hoodCounts = {};
+  DATA.forEach(r=>{ hoodCounts[r.neighborhood]=(hoodCounts[r.neighborhood]||0)+1; });
+  const sorted = Object.entries(hoodCounts).sort((a,b)=>b[1]-a[1]);
+  document.getElementById('finderHoods').innerHTML = sorted.map(([name,count])=>
+    `<span class="finder-chip" data-pref="hood" data-val="${name}" onclick="toggleFinderChip(this)">${name} <span style="font-size:0.68rem;color:var(--text-muted);">(${count})</span></span>`
+  ).join('');
+
+  // Top cuisines
+  const cuisineCounts = {};
+  DATA.forEach(r=>{ cuisineCounts[r.cuisine_type]=(cuisineCounts[r.cuisine_type]||0)+1; });
+  const topCuisines = Object.entries(cuisineCounts).sort((a,b)=>b[1]-a[1]).slice(0,12);
+  document.getElementById('finderCuisines').innerHTML = topCuisines.map(([name])=>
+    `<span class="finder-chip" data-pref="cuisine" data-val="${name}" onclick="toggleFinderChip(this)">${name}</span>`
+  ).join('');
+}
+
+function toggleFinderChip(el){
+  const pref = el.dataset.pref;
+  const val = el.dataset.val;
+  // Single select per pref group
+  const wasSelected = el.classList.contains('selected');
+  document.querySelectorAll(`.finder-chip[data-pref="${pref}"]`).forEach(c=>c.classList.remove('selected'));
+  if(!wasSelected){ el.classList.add('selected'); finderPrefs[pref]=val; }
+  else{ finderPrefs[pref]=null; }
+  computeFinderResults();
+}
+
+function computeFinderResults(){
+  if(!finderPrefs.hood && !finderPrefs.budget && !finderPrefs.cuisine){
+    document.getElementById('finderResults').style.display='none';
+    return;
+  }
+
+  let pool = DATA.slice();
+  if(finderPrefs.hood) pool = pool.filter(r=>r.neighborhood===finderPrefs.hood);
+  if(finderPrefs.budget) pool = pool.filter(r=>r.pricing_tier===finderPrefs.budget);
+  if(finderPrefs.cuisine) pool = pool.filter(r=>r.cuisine_type===finderPrefs.cuisine);
+
+  // Score
+  pool = pool.map(r=>{
+    let score = 50;
+    if(r.menu_tier==='confirmed') score+=15;
+    else if(r.menu_tier==='likely') score+=5;
+    if(r.google_maps_rating) score += r.google_maps_rating * 3;
+    if(r.google_maps_review_count>500) score+=5;
+    else if(r.google_maps_review_count>100) score+=3;
+    return {...r, _score: Math.min(100,score)};
+  }).sort((a,b)=>b._score-a._score);
+
+  document.getElementById('finderResults').style.display='block';
+  document.getElementById('finderResultsLabel').textContent=`${pool.length} matches found`;
+  document.getElementById('finderFeed').innerHTML = pool.slice(0,20).map(renderCard).join('') || '<div class="no-results">No matches. Try adjusting your filters.</div>';
+}
+
+// ═══════════════════════════════════════
+//  Dynamic Cuisine Filter Pills
+// ═══════════════════════════════════════
+function addCuisineFilters(){
+  const cuisineCounts = {};
+  DATA.forEach(r=>{ cuisineCounts[r.cuisine_type]=(cuisineCounts[r.cuisine_type]||0)+1; });
+  const top = Object.entries(cuisineCounts).sort((a,b)=>b[1]-a[1]).slice(0,8);
+  const container = document.getElementById('filterPills');
+  top.forEach(([name])=>{
+    const pill = document.createElement('span');
+    pill.className = 'pill';
+    pill.dataset.filter = `cuisine:${name}`;
+    pill.textContent = name;
+    container.appendChild(pill);
+  });
+
+  // Re-bind click to handle cuisine filters
+  container.addEventListener('click', e=>{
+    const pill = e.target.closest('.pill');
+    if(!pill) return;
+    document.querySelectorAll('#filterPills .pill').forEach(p=>p.classList.remove('active','active-green'));
+    pill.classList.add(pill.dataset.filter==='open' ? 'active-green' : 'active');
+
+    const f = pill.dataset.filter;
+    if(f.startsWith('cuisine:')){
+      activeFilter = f;
+    } else {
+      activeFilter = f;
+    }
+    renderFeed(true);
+  }, {once:false});
+}
+
+// Patch getFiltered for cuisine filters
+const _origGetFiltered = getFiltered;
+function getFilteredPatched(){
+  if(activeFilter && activeFilter.startsWith('cuisine:')){
+    const cuisine = activeFilter.split(':')[1];
+    const q = searchQuery.toLowerCase();
+    let filtered = DATA.filter(r=>{
+      if(r.cuisine_type!==cuisine) return false;
+      if(q){
+        const haystack=[r.name,r.neighborhood,r.cuisine_type,r.notes||'',(r.tags||[]).join(' '),r.address_full||'',r.metro_station||''].join(' ').toLowerCase();
+        if(!haystack.includes(q)) return false;
+      }
+      return true;
+    });
+    if(sortMode==='rating') filtered.sort((a,b)=>(b.google_maps_rating||0)-(a.google_maps_rating||0));
+    else if(sortMode==='reviews') filtered.sort((a,b)=>(b.google_maps_review_count||0)-(a.google_maps_review_count||0));
+    else if(sortMode==='price-low') filtered.sort((a,b)=>(parsePrice(a.menu_price_range)||999)-(parsePrice(b.menu_price_range)||999));
+    else if(sortMode==='price-high') filtered.sort((a,b)=>(parsePrice(b.menu_price_range)||0)-(parsePrice(a.menu_price_range)||0));
+    else filtered.sort((a,b)=>a.name.localeCompare(b.name));
+    return filtered;
+  }
+  return _origGetFiltered();
+}
+// Override
+window._getFiltered = getFiltered;
+// We need to replace the reference in renderFeed
+// Simplest: just redefine getFiltered
+Object.defineProperty(window, '_filteredOverride', { get: ()=> getFilteredPatched });
+
+// Actually, let's just patch it cleanly:
+// Already have a reference to the original above, redefine the function used by renderFeed
+
+// ═══════════════════════════════════════
+//  Init
+// ═══════════════════════════════════════
+function init(){
+  initTheme();
+  setLang(currentLang);
+  addCuisineFilters();
+  initFinder();
+
+  // Override getFiltered for cuisine support
+  const origGF = getFiltered;
+  window.getFilteredFn = ()=>{
+    if(activeFilter && activeFilter.startsWith('cuisine:')){
+      const cuisine = activeFilter.split(':')[1];
+      const q = searchQuery.toLowerCase();
+      let filtered = DATA.filter(r=>{
+        if(r.cuisine_type!==cuisine) return false;
+        if(q){
+          const h=[r.name,r.neighborhood,r.cuisine_type,r.notes||'',(r.tags||[]).join(' '),r.address_full||'',r.metro_station||''].join(' ').toLowerCase();
+          if(!h.includes(q)) return false;
+        }
+        return true;
+      });
+      if(sortMode==='rating') filtered.sort((a,b)=>(b.google_maps_rating||0)-(a.google_maps_rating||0));
+      else if(sortMode==='reviews') filtered.sort((a,b)=>(b.google_maps_review_count||0)-(a.google_maps_review_count||0));
+      else if(sortMode==='price-low') filtered.sort((a,b)=>(parsePrice(a.menu_price_range)||999)-(parsePrice(b.menu_price_range)||999));
+      else if(sortMode==='price-high') filtered.sort((a,b)=>(parsePrice(b.menu_price_range)||0)-(parsePrice(a.menu_price_range)||0));
+      else filtered.sort((a,b)=>a.name.localeCompare(b.name));
+      return filtered;
+    }
+    return origGF();
+  };
+
+  // Render initial feed after short delay for skeleton effect
+  setTimeout(()=>{ renderFeed(true); }, 400);
+}
+
+// Patch renderFeed to use the overridden getFiltered
+const _origRenderFeed = renderFeed;
+renderFeed = function(reset){
+  if(reset){
+    loadedCount = 0;
+    currentFiltered = window.getFilteredFn ? window.getFilteredFn() : getFiltered();
+  }
+  const feed = document.getElementById('feed');
+  const slice = currentFiltered.slice(loadedCount, loadedCount + BATCH);
+  if(reset) feed.innerHTML = '';
+  if(!currentFiltered.length){
+    feed.innerHTML = '<div class="no-results">No restaurants match. Try different filters.</div>';
+    document.getElementById('feedCount').textContent = '0 restaurants';
+    return;
+  }
+  feed.innerHTML += slice.map(renderCard).join('');
+  loadedCount += slice.length;
+  document.getElementById('feedCount').textContent = `${currentFiltered.length.toLocaleString()} restaurants`;
+};
+
+if(DATA.length) init();
+else document.getElementById('feed').innerHTML='<div class="no-results">Error: restaurants_data.js not found.</div>';
+
+// Service Worker
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('/sw.js').catch(()=>{});
+  });
+}
+</script>
+</body>
+</html>

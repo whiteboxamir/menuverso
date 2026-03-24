@@ -1,0 +1,114 @@
+{
+  "Argentine": {
+    "hero": "argentine_hero.webp",
+    "card": "argentine_card.webp"
+  },
+  "Asian": {
+    "hero": "asian_hero.webp",
+    "card": "asian_card.webp"
+  },
+  "Basque": {
+    "hero": "basque_hero.webp",
+    "card": "basque_card.webp"
+  },
+  "Café": {
+    "hero": "café_hero.webp",
+    "card": "café_card.webp"
+  },
+  "Catalan": {
+    "hero": "catalan_hero.webp",
+    "card": "catalan_card.webp"
+  },
+  "Chinese": {
+    "hero": "chinese_hero.webp",
+    "card": "chinese_card.webp"
+  },
+  "Colombian": {
+    "hero": "colombian_hero.webp",
+    "card": "colombian_card.webp"
+  },
+  "Cuban": {
+    "hero": "cuban_hero.webp",
+    "card": "cuban_card.webp"
+  },
+  "Ethiopian": {
+    "hero": "ethiopian_hero.webp",
+    "card": "ethiopian_card.webp"
+  },
+  "French": {
+    "hero": "french_hero.webp",
+    "card": "french_card.webp"
+  },
+  "Fusion": {
+    "hero": "fusion_hero.webp",
+    "card": "fusion_card.webp"
+  },
+  "Gastropub": {
+    "hero": "gastropub_hero.webp",
+    "card": "gastropub_card.webp"
+  },
+  "Greek": {
+    "hero": "greek_hero.webp",
+    "card": "greek_card.webp"
+  },
+  "Indian": {
+    "hero": "indian_hero.webp",
+    "card": "indian_card.webp"
+  },
+  "Italian": {
+    "hero": "italian_hero.webp",
+    "card": "italian_card.webp"
+  },
+  "Japanese": {
+    "hero": "japanese_hero.webp",
+    "card": "japanese_card.webp"
+  },
+  "Korean": {
+    "hero": "korean_hero.webp",
+    "card": "korean_card.webp"
+  },
+  "Lebanese": {
+    "hero": "lebanese_hero.webp",
+    "card": "lebanese_card.webp"
+  },
+  "Mediterranean": {
+    "hero": "mediterranean_hero.webp",
+    "card": "mediterranean_card.webp"
+  },
+  "Mexican": {
+    "hero": "mexican_hero.webp",
+    "card": "mexican_card.webp"
+  },
+  "Middle Eastern": {
+    "hero": "middle_eastern_hero.webp",
+    "card": "middle_eastern_card.webp"
+  },
+  "Other": {
+    "hero": "other_hero.webp",
+    "card": "other_card.webp"
+  },
+  "Peruvian": {
+    "hero": "peruvian_hero.webp",
+    "card": "peruvian_card.webp"
+  },
+  "Seafood": {
+    "hero": "seafood_hero.webp",
+    "card": "seafood_card.webp"
+  },
+  "Spanish": {
+    "hero": "spanish_hero.webp",
+    "card": "spanish_card.webp"
+  },
+  "Thai": {
+    "hero": "thai_hero.webp",
+    "card": "thai_card.webp"
+  },
+  "Turkish": {
+    "hero": "turkish_hero.webp",
+    "card": "turkish_card.webp"
+  },
+  "Vegetarian/Vegan": {
+    "hero": "vegetarian_vegan_hero.webp",
+    "card": "vegetarian_vegan_card.webp"
+  }
+}

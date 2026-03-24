@@ -69,27 +69,44 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-main);
 
 /* Grid view */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.25rem;max-width:1200px;margin:0 auto;padding:0 1.5rem 3rem;}
-.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;transition:all 0.2s;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;}
-.card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--border-hover);}
-.card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem;}
-.card-name{font-weight:600;font-size:1.05rem;color:var(--text-main);line-height:1.3;padding-right:0.75rem;}
-.card-price{color:var(--text-main);font-weight:600;font-size:0.95rem;white-space:nowrap;background:var(--bg);padding:0.2rem 0.5rem;border-radius:6px;border:1px solid var(--border);}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all 0.25s;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;position:relative;cursor:pointer;text-decoration:none;color:var(--text-main);}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 24px -8px rgba(0,0,0,0.15);border-color:var(--border-hover);}
+.card-img{width:100%;height:160px;object-fit:cover;display:block;border-bottom:1px solid var(--border);background:linear-gradient(135deg,#1E293B,#334155);}
+.card-body{padding:1rem 1.15rem 1rem;flex-grow:1;display:flex;flex-direction:column;}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.35rem;}
+.card-name{font-weight:700;font-size:1.05rem;color:var(--text-main);line-height:1.3;padding-right:0.5rem;}
+.card-price{color:var(--text-main);font-weight:700;font-size:0.92rem;white-space:nowrap;background:var(--bg);padding:0.2rem 0.55rem;border-radius:8px;border:1px solid var(--border);}
+.card-tier-row{display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem;flex-wrap:wrap;}
+.card-rating{display:flex;align-items:center;gap:3px;font-size:0.82rem;font-weight:600;color:var(--text-main);white-space:nowrap;}
+.card-rating .star{color:#FBBF24;font-size:0.9rem;}
+.card-rating .review-ct{font-size:0.72rem;color:var(--text-mut);font-weight:400;}
+.card-meta{font-size:0.78rem;color:var(--text-sub);margin-bottom:0.5rem;display:flex;flex-wrap:wrap;gap:0.35rem;}
+.card-meta-item{display:inline-flex;align-items:center;gap:3px;}
+.completeness-bar{height:3px;border-radius:2px;background:var(--border);margin-bottom:0.5rem;overflow:hidden;}
+.completeness-fill{height:100%;border-radius:2px;transition:width 0.4s ease;}
+.profile-cta{font-size:0.72rem;color:var(--text-mut);font-style:italic;margin-top:auto;padding-top:0.5rem;}
 .badge{display:inline-flex;align-items:center;font-size:0.68rem;padding:0.2rem 0.5rem;border-radius:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;margin-bottom:0.5rem;width:fit-content;}
 .badge.confirmed{background:var(--green-bg);color:var(--green);}
 .badge.likely{background:var(--amber-bg);color:var(--amber);}
 .badge.none{background:var(--red-bg);color:var(--red);}
-.tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.75rem;}
-.tag{font-size:0.68rem;padding:0.15rem 0.45rem;border-radius:6px;font-weight:500;background:#F1F5F9;color:#475569;border:1px solid #E2E8F0;cursor:default;transition:all 0.15s;}
+.tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.5rem;}
+.tag{font-size:0.65rem;padding:0.15rem 0.45rem;border-radius:20px;font-weight:500;background:#F1F5F9;color:#475569;border:1px solid #E2E8F0;cursor:default;transition:all 0.15s;}
 .tag.clickable{cursor:pointer;}
 .tag.clickable:hover{background:#E2E8F0;color:#1E293B;}
-.card-detail{font-size:0.82rem;color:var(--text-sub);margin-bottom:0.3rem;display:flex;align-items:flex-start;}
+:root.dark .tag{background:var(--card);color:var(--text-sub);border-color:var(--border);}
+.card-detail{font-size:0.8rem;color:var(--text-sub);margin-bottom:0.25rem;display:flex;align-items:flex-start;}
 /* Open Now */
 .open-pill{display:inline-flex;align-items:center;gap:4px;padding:0.15rem 0.5rem;border-radius:12px;font-size:0.68rem;font-weight:600;margin-bottom:0.5rem;}
 .open-pill.open{background:var(--green-bg);color:var(--green);}
 .open-pill.closed{background:var(--red-bg);color:var(--red);}
 .open-pill .pulse{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse-dot 2s infinite;}
 @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.4);}}
-.card-notes{font-size:0.82rem;color:var(--text-sub);margin-top:0.5rem;line-height:1.5;padding-top:0.5rem;border-top:1px solid #F1F5F9;flex-grow:1;}
+.card-notes{font-size:0.78rem;color:var(--text-sub);margin-top:0.35rem;line-height:1.5;padding-top:0.5rem;border-top:1px solid var(--border);max-height:3em;overflow:hidden;text-overflow:ellipsis;flex-grow:1;}
+.card-footer{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.65rem;padding-top:0.65rem;border-top:1px solid var(--border);align-items:center;}
+.card-footer a{font-size:0.72rem;font-weight:600;color:var(--accent);text-decoration:none;padding:0.25rem 0.5rem;border-radius:8px;border:1px solid var(--border);transition:all 0.2s;}
+.card-footer a:hover{background:var(--accent-sub);border-color:var(--accent);}
+.card-profile-link{margin-left:auto;font-size:0.75rem;font-weight:600;color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:3px;transition:all 0.2s;}
+.card-profile-link:hover{gap:6px;}
 .card-links{margin-top:0.75rem;display:flex;gap:0.75rem;flex-wrap:wrap;padding-top:0.75rem;border-top:1px solid #F1F5F9;}
 .card-links a{font-size:0.78rem;font-weight:500;color:var(--accent);text-decoration:none;transition:color 0.2s;}
 .card-links a:hover{color:#1D4ED8;text-decoration:underline;}
@@ -266,6 +283,7 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
       <option value="price-low">Sort: Price ↑</option>
       <option value="price-high">Sort: Price ↓</option>
       <option value="reviews">Sort: Reviews ↓</option>
+      <option value="completeness" selected>Sort: Best Profiles First</option>
     </select>
   </div>
 </div>
@@ -296,6 +314,34 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
 <script src="restaurants_data.js"></script>
 <script>
 let DATA=window.RESTAURANT_DATA||[];
+
+// Profile completeness score — used for sorting fully-profiled restaurants first
+function getCompleteness(r){
+  let score=0;
+  if(r.name) score+=10;
+  if(r.google_maps_rating) score+=15;
+  if(r.google_maps_review_count>50) score+=10;
+  if(r.website) score+=15;
+  if(r.phone) score+=10;
+  if(r.instagram) score+=5;
+  if(r.address_full) score+=10;
+  if(r.menu_price_range) score+=10;
+  if(r.notes && r.notes.length>20) score+=5;
+  if(r.metro_station) score+=5;
+  if(r.coordinates && r.coordinates.lat) score+=5;
+  return score;
+}
+
+// Card image: per-restaurant photo → cuisine stock → CSS gradient fallback
+const CUISINE_SLUGS={};
+function getCardImage(r){
+  // Per-restaurant image (from OG scrape)
+  if(r.image_url) return r.image_url;
+  // Cuisine stock fallback
+  const slug=(r.cuisine_type||'other').toLowerCase().replace(/\//g,'_').replace(/ /g,'_');
+  return 'assets/cuisine/'+slug+'_hero.webp';
+}
+
 let activeFilters={};
 let currentView='list';
 let map=null;
@@ -451,6 +497,7 @@ function getFiltered(){
   else if(sort==='price-low') filtered.sort((a,b)=>(parsePrice(a.menu_price_range)||999)-(parsePrice(b.menu_price_range)||999));
   else if(sort==='price-high') filtered.sort((a,b)=>(parsePrice(b.menu_price_range)||0)-(parsePrice(a.menu_price_range)||0));
   else if(sort==='reviews') filtered.sort((a,b)=>(b.google_maps_review_count||0)-(a.google_maps_review_count||0));
+  else if(sort==='completeness') filtered.sort((a,b)=>getCompleteness(b)-getCompleteness(a));
   else filtered.sort((a,b)=>a.name.localeCompare(b.name));
 
   return filtered;
@@ -482,27 +529,47 @@ function renderList(filtered){
   if(!filtered.length){grid.innerHTML='<div class="no-results">No restaurants match. Try different filters.</div>';return}
   grid.innerHTML=filtered.slice(0,300).map(r=>{
     const tier=r.menu_tier||'none';
-    let links='';
-    if(r.website)links+=`<a href="${r.website}" target="_blank">🌐 ${t('web')}</a>`;
-    if(r.google_maps_url)links+=`<a href="${r.google_maps_url}" target="_blank">📍 ${t('maps')}</a>`;
-    if(r.phone)links+=`<a href="tel:${r.phone}">📞 ${t('call')}</a>`;
-    if(r.instagram)links+=`<a href="https://instagram.com/${r.instagram.replace('@','')}" target="_blank">📸 IG</a>`;
-    const rating=r.google_maps_rating?`⭐ ${r.google_maps_rating} (${r.google_maps_review_count||0})`:'';
+    const comp=getCompleteness(r);
+    const compPct=Math.min(Math.round(comp/100*100),100);
+    const compColor=compPct>=70?'var(--green)':compPct>=40?'var(--amber)':'var(--red)';
+    let links=[];
+    if(r.website)links.push(`<a href="${r.website}" target="_blank" onclick="event.stopPropagation()">🌐 ${t('web')}</a>`);
+    if(r.google_maps_url)links.push(`<a href="${r.google_maps_url}" target="_blank" onclick="event.stopPropagation()">📍 ${t('maps')}</a>`);
+    if(r.phone)links.push(`<a href="tel:${r.phone}" onclick="event.stopPropagation()">📞 ${t('call')}</a>`);
+    const tierBadge=tier==='confirmed'?'<span class="badge confirmed">🟢 Confirmed</span>':tier==='likely'?'<span class="badge likely">🟡 Likely</span>':'<span class="badge none">🔴 No Menú</span>';
     const openStatus=getOpenStatus(r);
     const openHtml=openStatus==='open'?'<div class="open-pill open"><span class="pulse"></span> Open</div>':openStatus==='closed'?'<div class="open-pill closed">Closed</div>':'';
-    const tagHtml=(r.tags||[]).map(t=>`<span class="tag clickable" onclick="filterByTag('${t}')">${t}</span>`).join('');
+    const ratingHtml=r.google_maps_rating?`<span class="card-rating"><span class="star">★</span> ${r.google_maps_rating}<span class="review-ct">(${(r.google_maps_review_count||0).toLocaleString()})</span></span>`:'';
     const isFav=favorites.includes(r.id);
-    return `<div class="card">
-      <button class="fav-btn ${isFav?'active':''}" onclick="toggleFav(${r.id},this)" title="${isFav?'Remove from':'Add to'} favorites">${isFav?'❤️':'🩶'}</button>
-      <div class="card-header"><span class="card-name">${r.name}</span><span class="card-price">${r.menu_price_range||'—'}</span></div>
-      <span class="badge ${tier}">${tier==='confirmed'?'🟢 Confirmed':tier==='likely'?'🟡 Likely':'🔴 No Menú'}</span>
-      ${openHtml}
-      <div class="tags"><span class="tag">${r.neighborhood}</span><span class="tag">${r.cuisine_type}</span><span class="tag">${r.pricing_tier}</span>${tagHtml}</div>
-      ${rating?`<div class="card-detail">${rating}</div>`:''}
-      ${r.address_full?`<div class="card-detail">📍 ${r.address_full}${r.postal_code?' · '+r.postal_code:''}</div>`:''}
-      ${r.metro_station?`<div class="card-detail">🚇 ${r.metro_station}</div>`:''}
-      ${r.notes?`<div class="card-notes">${r.notes}</div>`:''}
-      ${links?`<div class="card-links">${links}</div>`:''}
+    const tagHtml=(r.tags||[]).slice(0,3).map(t=>`<span class="tag clickable" onclick="event.stopPropagation();filterByTag('${t}')">${t}</span>`).join('');
+    const missingFields=[];
+    if(!r.website) missingFields.push('website');
+    if(!r.phone) missingFields.push('phone');
+    if(!r.google_maps_rating) missingFields.push('rating');
+    const ctaHtml=missingFields.length>=2?`<div class="profile-cta">📋 ${missingFields.length} fields missing — <strong>owners can claim this listing</strong></div>`:'';
+    const imgUrl=getCardImage(r);
+    return `<div class="card" onclick="window.location.href='r/${r.id}.html'">
+      <button class="fav-btn ${isFav?'active':''}" onclick="event.stopPropagation();toggleFav(${r.id},this)" title="${isFav?'Remove from':'Add to'} favorites">${isFav?'❤️':'🩶'}</button>
+      <img class="card-img" src="${imgUrl}" alt="${r.name}" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-body">
+        <div class="card-header"><span class="card-name">${r.name}</span><span class="card-price">${r.menu_price_range||'—'}</span></div>
+        <div class="card-tier-row">
+          ${tierBadge}
+          ${openHtml}
+          ${ratingHtml}
+        </div>
+        <div class="card-meta">
+          <span class="card-meta-item">📍 ${r.neighborhood}</span>
+          <span class="card-meta-item">🍽️ ${r.cuisine_type}</span>
+          ${r.metro_station?`<span class="card-meta-item">🚇 ${r.metro_station.split('(')[0].trim()}</span>`:''}
+        </div>
+        <div class="tags">${tagHtml}</div>
+        ${r.notes?`<div class="card-notes">${r.notes}</div>`:''}
+        <div class="card-footer">
+          ${links.join('')}
+          <span class="card-profile-link">View Profile →</span>
+        </div>
+      </div>
     </div>`
   }).join('');
   if(filtered.length>300)grid.innerHTML+=`<div class="no-results">Showing first 300 of ${filtered.length}. Refine your search.</div>`;

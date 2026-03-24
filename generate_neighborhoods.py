@@ -79,6 +79,8 @@ def generate_neighborhood_page(hood, restaurants, all_hoods, total_count):
         for h, c, s in other_hoods_items
     )
 
+    sc = '</scr' + 'ipt>'
+
     return f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -88,7 +90,7 @@ def generate_neighborhood_page(hood, restaurants, all_hoods, total_count):
 <meta name="description" content="{hood}: {total} restaurants, avg €{avg_price:.0f} menú del día, {confirmed} confirmed. Best of {hood} in Barcelona by Menuverso.">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></' + 'script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">{sc}
 <style>
 *{{margin:0;padding:0;box-sizing:border-box;}}
 :root{{--bg:#F8FAFC;--card:#FFF;--text:#1E293B;--sub:#64748B;--mut:#94A3B8;--border:#E2E8F0;--accent:#2563EB;--accent-sub:#DBEAFE;--green:#059669;--green-bg:#D1FAE5;--amber:#D97706;--red:#DC2626;--radius:12px;--shadow:0 2px 8px rgba(0,0,0,0.06);}}

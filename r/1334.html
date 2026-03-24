@@ -4,107 +4,148 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bar Kasparo — Menú del Día Barcelona | Menuverso</title>
-<meta name="description" content="Bar Kasparo in El Raval, Barcelona. Mediterranean cuisine.  menú del día. 🟡 Likely Menú del Día. Rating: 4.1/5 (1500 reviews).">
+<meta name="description" content="Bar Kasparo in El Raval, Barcelona. Mediterranean cuisine.  menú del día. Likely Menú del Día. Rating: 4.1/5 (1392 reviews).">
 <meta property="og:title" content="Bar Kasparo — Menú del Día | Menuverso">
 <meta property="og:description" content="Mediterranean in El Raval.  menú del día. ⭐ 4.1/5">
 <meta property="og:url" content="https://whiteboxamir.github.io/menuverso/r/1334.html">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:site_name" content="Menuverso">
-<meta name="twitter:card" content="summary">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Bar Kasparo", "address": {"@type": "PostalAddress", "streetAddress": "Plaça de Vicenç Martorell, 4", "addressLocality": "Barcelona", "postalCode": "08001", "addressCountry": "ES"}, "servesCuisine": "Mediterranean", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.1, "reviewCount": 1500}, "geo": {"@type": "GeoCoordinates", "latitude": 41.38, "longitude": 2.168}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Bar Kasparo", "address": {"@type": "PostalAddress", "streetAddress": "Plaça de Vicenç Martorell, 4", "addressLocality": "Barcelona", "postalCode": "08001", "addressCountry": "ES"}, "servesCuisine": "Mediterranean", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.1, "reviewCount": 1392}, "geo": {"@type": "GeoCoordinates", "latitude": 41.38, "longitude": 2.168}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-:root{--bg:#F8FAFC;--card:#FFF;--text:#1E293B;--sub:#64748B;--mut:#94A3B8;--border:#E2E8F0;--accent:#2563EB;--accent-sub:#DBEAFE;--radius:12px;--shadow:0 2px 8px rgba(0,0,0,0.06);}
-:root.dark{--bg:#0F172A;--card:#1E293B;--text:#F1F5F9;--sub:#94A3B8;--mut:#64748B;--border:#334155;--accent:#3B82F6;--accent-sub:#1E3A5F;--shadow:0 2px 8px rgba(0,0,0,0.3);}
+:root{
+  --bg:#F8FAFC;--card:#FFFFFF;--text:#0F172A;--sub:#475569;--mut:#94A3B8;
+  --border:#E2E8F0;--accent:#059669;--accent-bg:#D1FAE5;--accent-dark:#047857;
+  --radius:16px;--radius-lg:24px;
+  --shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -2px rgba(0,0,0,0.1);
+  --shadow-lg:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -4px rgba(0,0,0,0.1);
+}
+:root.dark{
+  --bg:#0F172A;--card:#1E293B;--text:#F1F5F9;--sub:#94A3B8;--mut:#64748B;
+  --border:#334155;--accent:#34D399;--accent-bg:#064E3B;--accent-dark:#6EE7B7;
+  --shadow:0 4px 6px -1px rgba(0,0,0,0.3);--shadow-lg:0 10px 15px -3px rgba(0,0,0,0.4);
+}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background 0.3s,color 0.3s;}
+
+/* Nav */
 .topnav{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1.5rem;border-bottom:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
 .nav-brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.1rem;}
 .nav-brand img{width:28px;height:28px;border-radius:8px;}
 .nav-links{display:flex;align-items:center;gap:1rem;}
 .nav-links a{color:var(--sub);text-decoration:none;font-size:0.82rem;font-weight:500;padding:0.3rem 0.5rem;border-radius:8px;transition:all 0.2s;}
-.nav-links a:hover{color:var(--text);background:var(--accent-sub);}
-.controls-bar{display:flex;gap:0.5rem;align-items:center;}
+.nav-links a:hover{color:var(--text);background:var(--accent-bg);}
 .theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:0.3rem 0.55rem;cursor:pointer;font-size:0.85rem;color:var(--sub);transition:all 0.2s;}
 .theme-btn:hover{border-color:var(--sub);color:var(--text);}
-.container{max-width:700px;margin:0 auto;padding:1.5rem;}
-.back{display:inline-flex;align-items:center;gap:6px;color:var(--sub);text-decoration:none;font-size:0.85rem;font-weight:500;margin-bottom:1.5rem;transition:color 0.2s;}
-.back:hover{color:var(--text);}
-.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);}
-h1{font-size:clamp(1.3rem,3vw,1.8rem);margin-bottom:0.5rem;}
-.badge{display:inline-flex;padding:4px 10px;border-radius:6px;font-size:0.75rem;font-weight:600;margin-bottom:1rem;color:#fff;background:#D97706;}
-.meta{margin-bottom:1.5rem;}
-.meta-row{display:flex;gap:0.5rem;align-items:center;font-size:0.88rem;color:var(--sub);margin-bottom:0.4rem;}
-.tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:1.25rem;}
-.tag{font-size:0.72rem;padding:3px 8px;border-radius:6px;background:var(--accent-sub);color:var(--accent);border:1px solid var(--border);font-weight:500;}
-.price{font-size:1.5rem;font-weight:700;color:var(--text);margin-bottom:0.25rem;}
-.notes{font-size:0.88rem;color:var(--sub);line-height:1.6;padding:1rem;background:var(--bg);border-radius:8px;border:1px solid var(--border);margin-bottom:1.25rem;}
-.links{display:flex;flex-wrap:wrap;gap:0.75rem;margin-bottom:1.25rem;}
-.links a{padding:0.5rem 1rem;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--accent);font-size:0.85rem;font-weight:500;transition:all 0.2s;}
-.links a:hover{background:var(--accent-sub);border-color:var(--accent);}
-/* Open Now badge */
-.open-status{display:inline-flex;align-items:center;gap:5px;padding:0.35rem 0.85rem;border-radius:20px;font-size:0.78rem;font-weight:600;transition:all 0.3s;}
-.open-status.open{background:#D1FAE5;color:#059669;border:1px solid #A7F3D0;}
-.open-status.closed{background:#FEE2E2;color:#DC2626;border:1px solid #FECACA;}
-.open-status.unknown{background:var(--bg);color:var(--sub);border:1px solid var(--border);}
-:root.dark .open-status.open{background:#064E3B;color:#34D399;border-color:#065F46;}
-:root.dark .open-status.closed{background:#7F1D1D;color:#F87171;border-color:#991B1B;}
-.open-dot{width:8px;height:8px;border-radius:50%;}
+
+/* Hero */
+.hero{position:relative;width:100%;height:320px;overflow:hidden;}
+.hero img{width:100%;height:100%;object-fit:cover;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.1) 50%,rgba(0,0,0,0.0) 100%);}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:1.5rem 2rem;color:#fff;}
+.hero-back{display:inline-flex;align-items:center;gap:4px;color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.82rem;font-weight:500;margin-bottom:0.75rem;transition:color 0.2s;}
+.hero-back:hover{color:#fff;}
+.hero h1{font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;margin-bottom:0.4rem;text-shadow:0 2px 8px rgba(0,0,0,0.3);}
+.hero-meta{display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;font-size:0.88rem;opacity:0.9;}
+
+/* Container */
+.container{max-width:720px;margin:-40px auto 0;padding:0 1rem 2rem;position:relative;z-index:2;}
+
+/* Deal Card (Neotaste-style) */
+.deal-card{background:#FEF3C7;border:2px solid #D9770622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
+.deal-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}
+.deal-emoji{font-size:1.5rem;}
+.deal-title{font-size:1.1rem;font-weight:700;color:#D97706;}
+.deal-price{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:0.25rem;}
+.deal-desc{font-size:0.82rem;color:var(--sub);}
+:root.dark .deal-card{background:var(--card);border-color:#D9770644;}
+
+/* Open Status */
+.open-status{display:inline-flex;align-items:center;gap:5px;padding:0.3rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:600;}
+.open-status.open{background:#D1FAE5;color:#059669;}
+.open-status.closed{background:#FEE2E2;color:#DC2626;}
+.open-status.unknown{background:#F1F5F9;color:#94A3B8;}
+:root.dark .open-status.open{background:#064E3B;color:#34D399;}
+:root.dark .open-status.closed{background:#7F1D1D;color:#F87171;}
+:root.dark .open-status.unknown{background:#1E293B;color:#64748B;}
+.open-dot{width:7px;height:7px;border-radius:50%;display:inline-block;}
 .open .open-dot{background:#059669;animation:pulse-green 2s infinite;}
 .closed .open-dot{background:#DC2626;}
-@keyframes pulse-green{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.6;transform:scale(1.3);}}
-/* Google Reviews card */
-.reviews-card{padding:1.25rem;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:1.25rem;}
-.reviews-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}
-.reviews-score{font-size:2rem;font-weight:700;color:var(--text);line-height:1;}
-.reviews-stars{display:flex;gap:1px;}
-.reviews-stars .star{color:#FBBF24;font-size:1.1rem;}
-.reviews-stars .star.empty{color:var(--border);}
-.reviews-count{font-size:0.82rem;color:var(--sub);font-weight:500;}
-.reviews-source{font-size:0.72rem;color:var(--mut);margin-top:0.5rem;display:flex;align-items:center;gap:4px;}
-/* Share */
-.share{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;}
-.share-btn{padding:0.45rem 0.9rem;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--sub);font-size:0.8rem;font-weight:500;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;display:inline-flex;align-items:center;gap:4px;}
-.share-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-sub);}
-.share-btn.whatsapp:hover{border-color:#25D366;color:#25D366;}
-/* QR Code */
-.qr-section{margin-top:1.25rem;padding:1.25rem;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);text-align:center;}
-.qr-section h3{font-size:0.82rem;color:var(--sub);font-weight:600;margin-bottom:0.75rem;}
-#qrcode{display:inline-block;padding:12px;background:#fff;border-radius:8px;margin-bottom:0.5rem;}
-.qr-section small{display:block;color:var(--mut);font-size:0.72rem;}
-/* Visited & Tips */
-.community{margin-top:1.25rem;display:flex;flex-direction:column;gap:0.75rem;}
-.visited-btn{padding:0.6rem 1rem;border:2px solid var(--border);border-radius:8px;background:var(--card);color:var(--sub);font-size:0.85rem;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;display:flex;align-items:center;gap:8px;width:100%;}
-.visited-btn:hover{border-color:var(--green);}
-.visited-btn.checked{border-color:var(--green);background:var(--green-bg);color:var(--green);}
-.tips-box{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;}
-.tips-box h3{font-size:0.82rem;color:var(--sub);font-weight:600;margin-bottom:0.5rem;}
-.tip-list{display:flex;flex-direction:column;gap:0.4rem;margin-bottom:0.5rem;}
-.tip-item{font-size:0.82rem;padding:0.4rem 0.6rem;background:var(--card);border-radius:6px;border:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
-.tip-text{flex:1;}
-.tip-delete{background:none;border:none;color:var(--mut);cursor:pointer;font-size:0.7rem;padding:2px;}
-.tip-delete:hover{color:var(--red);}
-.tip-input{display:flex;gap:0.4rem;}
-.tip-input input{flex:1;padding:0.4rem 0.6rem;border:1px solid var(--border);border-radius:6px;font-size:0.8rem;font-family:Inter,sans-serif;background:var(--card);color:var(--text);}
-.tip-input input:focus{outline:none;border-color:var(--accent);}
-.tip-input button{padding:0.4rem 0.8rem;border:1px solid var(--accent);border-radius:6px;background:var(--accent);color:#fff;font-size:0.78rem;font-weight:600;cursor:pointer;font-family:Inter,sans-serif;}
-/* Mini map */
-#minimap{width:100%;height:200px;border-radius:var(--radius);border:1px solid var(--border);margin-bottom:1.25rem;z-index:1;}
+@keyframes pulse-green{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.6;transform:scale(1.4);}}
+
+/* Tabs */
+.tabs{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:1.25rem;overflow-x:auto;}
+.tab-btn{padding:0.75rem 1.25rem;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-2px;font-family:Inter,sans-serif;font-size:0.88rem;font-weight:600;color:var(--mut);cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+.tab-btn:hover{color:var(--text);}
+.tab-btn.active{color:var(--accent);border-bottom-color:var(--accent);}
+.tab-content{display:none;animation:fadeIn 0.3s ease;}
+.tab-content.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+/* Info Section */
+.info-section{margin-bottom:1.5rem;}
+.info-section h3{font-size:0.78rem;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.75rem;}
+.info-row{display:flex;gap:0.5rem;align-items:center;font-size:0.9rem;color:var(--sub);margin-bottom:0.5rem;}
+.link-icon{font-size:1rem;flex-shrink:0;}
+.tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:1.25rem;}
+.tag{font-size:0.72rem;padding:4px 10px;border-radius:20px;background:var(--accent-bg);color:var(--accent);font-weight:600;border:1px solid var(--accent)22;}
+.notes{font-size:0.88rem;color:var(--sub);line-height:1.7;padding:1rem 1.25rem;background:var(--bg);border-radius:var(--radius);border:1px solid var(--border);margin-bottom:1.25rem;}
+.contact-links{display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:1.25rem;}
+.contact-link{padding:0.6rem 1.1rem;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none;color:var(--accent);font-size:0.85rem;font-weight:600;transition:all 0.2s;display:inline-flex;align-items:center;gap:6px;background:var(--card);}
+.contact-link:hover{background:var(--accent-bg);border-color:var(--accent);transform:translateY(-1px);box-shadow:var(--shadow);}
+
+/* Reviews */
+.review-card{display:flex;align-items:center;gap:1rem;padding:1.5rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:1rem;}
+.review-score{font-size:2.5rem;font-weight:800;color:var(--text);line-height:1;}
+.review-count{font-size:0.85rem;color:var(--sub);font-weight:500;margin-top:0.25rem;}
+.stars{display:inline-flex;gap:1px;}
+.star{color:var(--border);font-size:1.2rem;}
+.star.filled{color:#FBBF24;}
+.maps-review-link{display:inline-block;color:var(--accent);text-decoration:none;font-size:0.85rem;font-weight:600;}
+.maps-review-link:hover{text-decoration:underline;}
+
+/* Map */
+#minimap{width:100%;height:280px;border-radius:var(--radius);border:1px solid var(--border);margin-bottom:1rem;z-index:1;}
 :root.dark .leaflet-tile{filter:invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);}
+.map-address{font-size:0.88rem;color:var(--sub);line-height:1.6;}
+
 /* Nearby */
-.nearby{margin-top:0.5rem;}
-.nearby h2{font-size:0.9rem;font-weight:600;color:var(--sub);margin-bottom:0.75rem;}
-.nearby-card{display:block;padding:0.75rem 1rem;border:1px solid var(--border);border-radius:8px;margin-bottom:0.5rem;text-decoration:none;color:var(--text);transition:all 0.2s;}
-.nearby-card:hover{border-color:var(--accent);transform:translateX(4px);background:var(--accent-sub);}
-.nearby-name{font-weight:600;font-size:0.9rem;margin-bottom:2px;}
+.nearby-card{display:flex;gap:1rem;padding:0.75rem;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:0.6rem;text-decoration:none;color:var(--text);transition:all 0.2s;background:var(--card);}
+.nearby-card:hover{border-color:var(--accent);transform:translateX(4px);box-shadow:var(--shadow);}
+.nearby-img{width:80px;height:60px;border-radius:12px;object-fit:cover;flex-shrink:0;}
+.nearby-info{display:flex;flex-direction:column;justify-content:center;}
+.nearby-name{font-weight:700;font-size:0.9rem;margin-bottom:3px;}
 .nearby-meta{font-size:0.78rem;color:var(--sub);}
+.empty-msg{color:var(--mut);font-size:0.88rem;padding:2rem;text-align:center;}
+
+/* Share */
+.share-section{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;}
+.share-btn{padding:0.5rem 1rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--card);color:var(--sub);font-size:0.82rem;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;display:inline-flex;align-items:center;gap:5px;text-decoration:none;}
+.share-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-bg);transform:translateY(-1px);}
+
+/* Community */
+.community{margin-top:0.5rem;}
+.visited-btn{padding:0.7rem 1.25rem;border:2px solid var(--border);border-radius:var(--radius);background:var(--card);color:var(--sub);font-size:0.88rem;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;display:flex;align-items:center;gap:8px;width:100%;margin-bottom:0.75rem;}
+.visited-btn:hover{border-color:var(--accent);}
+.visited-btn.checked{border-color:var(--accent);background:var(--accent-bg);color:var(--accent);}
+
+/* Footer */
 footer{text-align:center;padding:2rem;color:var(--mut);font-size:0.78rem;}
 footer a{color:var(--sub);text-decoration:none;}
+
 img[src*="logo.png"]{mix-blend-mode:multiply;}
 :root.dark img[src*="logo.png"]{mix-blend-mode:normal;filter:brightness(1.2);}
-@media(max-width:640px){.nav-links a span{display:none;}}
+@media(max-width:640px){
+  .hero{height:240px;}
+  .hero h1{font-size:1.4rem;}
+  .container{margin-top:-30px;}
+  .nav-links a span{display:none;}
+  .tabs{gap:0;}
+  .tab-btn{padding:0.6rem 0.8rem;font-size:0.8rem;}
+}
 </style>
 </head>
 <body>
@@ -120,79 +161,126 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
     <a href="../lists.html"><span>🏆 </span>Best Of</a>
     <a href="../crawl.html"><span>🚶 </span>Crawl</a>
   </div>
-  <div class="controls-bar">
+  <div>
     <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
   </div>
 </nav>
-<div class="container">
-  <a href="../index.html?hood=El+Raval" class="back">← El Raval restaurants</a>
-  <div class="card">
+
+<!-- Hero Section -->
+<div class="hero">
+  <img src="../assets/cuisine/mediterranean_hero.webp" alt="Mediterranean cuisine" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <a href="../index.html?hood=El+Raval" class="hero-back">← El Raval</a>
     <h1>Bar Kasparo</h1>
-    <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-bottom:0.75rem;">
-      <div class="badge">🟡 Likely Menú del Día</div>
+    <div class="hero-meta">
+      <span>Mediterranean</span>
+      <span>·</span><span><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span> 4.1</span>
+      
+      <span>·</span>
       <div class="open-status unknown" id="open-status"><span class="open-dot"></span> <span id="open-text">Checking...</span></div>
-    </div>
-    <div class="meta">
-      <div class="meta-row">📍 El Raval · Plaça de Vicenç Martorell, 4 · 08001</div>
-      <div class="meta-row">🍽️ Mediterranean · budget</div>
-      <div class="meta-row">🕐 13:00-16:00</div>
-      <div class="meta-row">🚇 Sant Antoni (L2)</div>
-    </div>
-    
-    <div class="tags"><span class="tag">budget-friendly</span></div>
-    <div class="reviews-card">
-      <div class="reviews-header">
-        <div class="reviews-score">4.1</div>
-        <div>
-          <div class="reviews-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span></div>
-          <div class="reviews-count">1,500 Google reviews</div>
-        </div>
-      </div>
-      <div class="reviews-source">📍 Source: Google Maps <a href="https://www.google.com/maps/search/?api=1&query=Bar+Kasparo+Pla%C3%A7a+de+Vicen%C3%A7+Martorell%2C+4+Barcelona" target="_blank" style="color:var(--accent);font-size:0.72rem;text-decoration:none;font-weight:500;">View on Google Maps →</a></div>
-    </div>
-    
-    <div class="links"><a href="https://www.google.com/maps/search/?api=1&query=Bar+Kasparo+Pla%C3%A7a+de+Vicen%C3%A7+Martorell%2C+4+Barcelona" target="_blank">📍 Google Maps</a></div>
-    <div class="share">
-      <button class="share-btn" onclick="shareNative()">📤 Share</button>
-      <button class="share-btn" onclick="copyLink()">🔗 Copy Link</button>
-      <a class="share-btn whatsapp" href="https://wa.me/?text=Check%20out%20Bar%20Kasparo%20in%20El%20Raval%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/1334.html" target="_blank">💬 WhatsApp</a>
-    </div>
-    <div id="minimap"></div>
-    <div class="qr-section">
-      <h3>📱 QR Code — Scan to Share</h3>
-      <div id="qrcode"></div>
-      <small>Print this on your restaurant window or share with friends</small>
-    </div>
-    <div class="nearby">
-      <h2>📍 Nearby Restaurants</h2>
-      <a href="221.html" class="nearby-card">
-          <div class="nearby-name">Ca l'Estevet</div>
-          <div class="nearby-meta">🟡 Catalan ·  · 0m</div>
-        </a><a href="222.html" class="nearby-card">
-          <div class="nearby-name">Suculent</div>
-          <div class="nearby-meta">🔴 Catalan ·  · 0m</div>
-        </a><a href="223.html" class="nearby-card">
-          <div class="nearby-name">Ca l'Isidre</div>
-          <div class="nearby-meta">🔴 Catalan ·  · 0m</div>
-        </a>
-    </div>
-    <div class="community">
-      <button class="visited-btn" id="visit-btn" onclick="toggleVisited(1334)">☐ I've been here</button>
-      <div class="tips-box">
-        <h3>💡 Quick Tips</h3>
-        <div class="tip-list" id="tip-list"></div>
-        <div class="tip-input">
-          <input type="text" id="tip-input" placeholder="Add a tip... e.g. 'Ask for the paella!'" maxlength="120">
-          <button onclick="addTip(1334)">Add</button>
-        </div>
-      </div>
     </div>
   </div>
 </div>
+
+<div class="container">
+  <!-- Menú del Día Deal Card -->
+  <div class="deal-card">
+    <div class="deal-header">
+      <span class="deal-emoji">🟡</span>
+      <span class="deal-title">Likely Menú del Día</span>
+    </div>
+    
+    <div class="deal-desc">El Raval · Sant Antoni (L2)</div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('info')">Info</button>
+    <button class="tab-btn" onclick="switchTab('map')">Map</button>
+    <button class="tab-btn" onclick="switchTab('reviews')">Reviews (4.1)</button>
+    <button class="tab-btn" onclick="switchTab('nearby')">Nearby</button>
+  </div>
+
+  <!-- Tab: Info -->
+  <div class="tab-content active" id="tab-info">
+    <div class="tags"><span class="tag">budget-friendly</span></div>
+
+    <div class="info-section">
+      <h3>Details</h3>
+      <div class="info-row"><span class="link-icon">📍</span> El Raval · Plaça de Vicenç Martorell, 4 · 08001</div>
+      <div class="info-row"><span class="link-icon">🍽️</span> Mediterranean · budget</div>
+      <div class="info-row"><span class="link-icon">🕐</span> 13:00-16:00</div>
+      <div class="info-row"><span class="link-icon">🚇</span> Sant Antoni (L2)</div>
+    </div>
+
+    
+
+    <div class="contact-links"><a href="https://www.google.com/maps/search/?api=1&query=Bar+Kasparo+Pla%C3%A7a+de+Vicen%C3%A7+Martorell%2C+4+Barcelona" target="_blank" class="contact-link"><span class="link-icon">📍</span> Google Maps</a></div>
+
+    <div class="share-section">
+      <button class="share-btn" onclick="shareNative()">📤 Share</button>
+      <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
+      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Bar%20Kasparo%20in%20El%20Raval%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/1334.html" target="_blank">💬 WhatsApp</a>
+    </div>
+
+    <div class="community">
+      <button class="visited-btn" id="visit-btn" onclick="toggleVisited(1334)">☐ I've been here</button>
+    </div>
+  </div>
+
+  <!-- Tab: Map -->
+  <div class="tab-content" id="tab-map">
+      <div id="minimap"></div>
+      <div class="map-address">
+        <span class="link-icon">📍</span> Plaça de Vicenç Martorell, 4, 08001, Barcelona
+        <br><span class="link-icon">🚇</span> Sant Antoni (L2)
+      </div>
+    </div>
+
+  <!-- Tab: Reviews -->
+  <div class="tab-content" id="tab-reviews">
+      <div class="review-card">
+        <div class="review-score">4.1</div>
+        <div class="review-details">
+          <div><span class="stars"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></span></div>
+          <div class="review-count">1,392 Google reviews</div>
+        </div>
+      </div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Bar+Kasparo+Pla%C3%A7a+de+Vicen%C3%A7+Martorell%2C+4+Barcelona" target="_blank" class="maps-review-link">View all reviews on Google Maps →</a>
+    </div>
+
+  <!-- Tab: Nearby -->
+  <div class="tab-content" id="tab-nearby">
+      <h2>📍 Nearby Restaurants</h2>
+      <a href="221.html" class="nearby-card">
+          <div class="nearby-icon">🌶️</div>
+          <div class="nearby-info">
+            <div class="nearby-name">Ca l'Estevet</div>
+            <div class="nearby-meta">🟡 Catalan ·  · 0m</div>
+          </div>
+        </a><a href="222.html" class="nearby-card">
+          <div class="nearby-icon">🌶️</div>
+          <div class="nearby-info">
+            <div class="nearby-name">Suculent</div>
+            <div class="nearby-meta">🔴 Catalan ·  · 0m</div>
+          </div>
+        </a><a href="223.html" class="nearby-card">
+          <div class="nearby-icon">🌶️</div>
+          <div class="nearby-info">
+            <div class="nearby-name">Ca l'Isidre</div>
+            <div class="nearby-meta">🔴 Catalan ·  · 0m</div>
+          </div>
+        </a>
+    </div>
+</div>
+
 <footer>
   <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #1334 of 1,520
 </footer>
+
 <script>
+// Theme
 function initTheme(){
   var s=localStorage.getItem('menuverso_theme');
   if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)){
@@ -205,26 +293,35 @@ function toggleTheme(){
   localStorage.setItem('menuverso_theme',d?'dark':'light');
   document.getElementById('theme-toggle').textContent=d?'☀️':'🌙';
 }
+
+// Tabs
+function switchTab(id){
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  event.target.classList.add('active');
+  if(id==='map'&&window.m){setTimeout(()=>m.invalidateSize(),100);}
+}
+
+// Share
 function shareNative(){
   if(navigator.share){navigator.share({title:'Bar Kasparo — Menuverso',text:'Mediterranean in El Raval.  menú del día.',url:window.location.href})}
-  else{copyLink()}
+  else{copyLink(document.querySelector('.share-btn'))}
 }
-function copyLink(){
+function copyLink(btn){
   navigator.clipboard.writeText(window.location.href).then(function(){
-    var b=event.target;b.textContent='✅ Copied!';setTimeout(function(){b.textContent='🔗 Copy Link'},1500);
+    btn.textContent='✅ Copied!';setTimeout(function(){btn.textContent='🔗 Copy Link'},1500);
   })
 }
-// Open Now logic
+
+// Open Now
 (function(){
   var hoursStr='13:00-16:00';
   var el=document.getElementById('open-status');
   var txt=document.getElementById('open-text');
   if(!hoursStr||!hoursStr.trim()){el.className='open-status unknown';txt.textContent='Hours unavailable';return;}
   function checkOpen(){
-    var now=new Date();
-    var h=now.getHours(),m=now.getMinutes();
-    var nowMin=h*60+m;
-    var dayOfWeek=now.getDay();
+    var now=new Date();var h=now.getHours(),m=now.getMinutes();var nowMin=h*60+m;var dayOfWeek=now.getDay();
     var dayMatch=hoursStr.match(/\(([^)]+)\)/);
     if(dayMatch){
       var dayStr=dayMatch[1].toLowerCase();
@@ -233,9 +330,7 @@ function copyLink(){
       var rangeM=dayStr.match(/(\w+)-(\w+)/);
       if(rangeM){
         var s=-1,e=-1;
-        [dayAbbr,dayAbbr2].forEach(function(arr){
-          arr.forEach(function(d,i){if(rangeM[1].startsWith(d))s=i;if(rangeM[2].startsWith(d))e=i;});
-        });
+        [dayAbbr,dayAbbr2].forEach(function(arr){arr.forEach(function(d,i){if(rangeM[1].startsWith(d))s=i;if(rangeM[2].startsWith(d))e=i;});});
         if(s>=0&&e>=0){
           var inR=s<=e?(dayOfWeek>=s&&dayOfWeek<=e):(dayOfWeek>=s||dayOfWeek<=e);
           if(!inR){el.className='open-status closed';txt.textContent='Closed today';return;}
@@ -244,71 +339,32 @@ function copyLink(){
     }
     var timeRanges=hoursStr.replace(/\([^)]+\)/g,'').match(/\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2}/g);
     if(!timeRanges){el.className='open-status unknown';txt.textContent='Hours unclear';return;}
-    var isOpen=false,closesAt=null,nextOpen=null;
+    var isOpen=false,closesAt=null;
     timeRanges.forEach(function(range){
       var parts=range.split('-').map(function(s){return s.trim();});
       var sP=parts[0].split(':'),eP=parts[1].split(':');
-      var sMin=parseInt(sP[0])*60+parseInt(sP[1]);
-      var eMin=parseInt(eP[0])*60+parseInt(eP[1]);
+      var sMin=parseInt(sP[0])*60+parseInt(sP[1]);var eMin=parseInt(eP[0])*60+parseInt(eP[1]);
       if(nowMin>=sMin&&nowMin<eMin){isOpen=true;closesAt=parts[1];}
-      else if(nowMin<sMin&&(!nextOpen||sMin<nextOpen)){nextOpen=sMin;}
     });
-    if(isOpen){el.className='open-status open';txt.textContent='Open now · closes '+closesAt;}
-    else{el.className='open-status closed';if(nextOpen){var nh=Math.floor(nextOpen/60),nm=nextOpen%60;txt.textContent='Closed · opens '+(nh<10?'0':'')+nh+':'+(nm<10?'0':'')+nm;}else{txt.textContent='Closed now';}}
+    if(isOpen){el.className='open-status open';txt.textContent='Open · closes '+closesAt;}
+    else{el.className='open-status closed';txt.textContent='Closed';}
   }
-  checkOpen();
-  setInterval(checkOpen,60000);
+  checkOpen();setInterval(checkOpen,60000);
 })();
-initTheme();
-// Visited tracker
+
+// Visited
 var visitKey='menuverso_visited';
 function getVisited(){return JSON.parse(localStorage.getItem(visitKey)||'{}');}
-function toggleVisited(id){
-  var v=getVisited();
-  if(v[id]){delete v[id];}else{v[id]=new Date().toISOString().slice(0,10);}
-  localStorage.setItem(visitKey,JSON.stringify(v));
-  renderVisited(id);
-}
-function renderVisited(id){
-  var v=getVisited();
-  var btn=document.getElementById('visit-btn');
-  if(v[id]){btn.classList.add('checked');btn.textContent='✅ Visited on '+v[id];}
-  else{btn.classList.remove('checked');btn.textContent='☐ I've been here';}
-}
-// Tips
-var tipKey='menuverso_tips';
-function getTips(){return JSON.parse(localStorage.getItem(tipKey)||'{}');}
-function addTip(id){
-  var inp=document.getElementById('tip-input');
-  var text=inp.value.trim();
-  if(!text)return;
-  var tips=getTips();
-  if(!tips[id])tips[id]=[];
-  tips[id].push(text);
-  localStorage.setItem(tipKey,JSON.stringify(tips));
-  inp.value='';
-  renderTips(id);
-}
-function deleteTip(id,i){
-  var tips=getTips();
-  if(tips[id]){tips[id].splice(i,1);localStorage.setItem(tipKey,JSON.stringify(tips));}
-  renderTips(id);
-}
-function renderTips(id){
-  var tips=getTips();
-  var list=document.getElementById('tip-list');
-  var items=tips[id]||[];
-  list.innerHTML=items.map(function(t,i){return '<div class="tip-item"><span class="tip-text">💡 '+t+'</span><button class="tip-delete" onclick="deleteTip('+id+','+i+')">✕</button></div>'}).join('');
-}
+function toggleVisited(id){var v=getVisited();if(v[id]){delete v[id]}else{v[id]=new Date().toISOString().slice(0,10)};localStorage.setItem(visitKey,JSON.stringify(v));renderVisited(id);}
+function renderVisited(id){var v=getVisited();var btn=document.getElementById('visit-btn');if(v[id]){btn.classList.add('checked');btn.textContent='✅ Visited on '+v[id]}else{btn.classList.remove('checked');btn.textContent='☐ I\'ve been here'}}
+
+initTheme();
 renderVisited(1334);
-renderTips(1334);
 </script>
-<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-<script>try{new QRCode(document.getElementById('qrcode'),{text:'https://whiteboxamir.github.io/menuverso/r/1334.html',width:128,height:128,colorDark:'#1E293B',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M})}catch(e){}</script>
 <script>
-var m=L.map('minimap',{zoomControl:false,scrollWheelZoom:false,dragging:false}).setView([41.38,2.168],16);
+var m=L.map('minimap',{zoomControl:true,scrollWheelZoom:false}).setView([41.38,2.168],16);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
-L.circleMarker([41.38,2.168],{radius:8,fillColor:'#D97706',color:'#fff',weight:2,fillOpacity:1}).addTo(m);
+L.circleMarker([41.38,2.168],{radius:10,fillColor:'#D97706',color:'#fff',weight:3,fillOpacity:1}).addTo(m);
 if(document.documentElement.classList.contains('dark')){document.querySelectorAll('.leaflet-tile').forEach(t=>t.style.filter='invert(1) hue-rotate(180deg) brightness(0.9)');};
 </script>
 </body>
