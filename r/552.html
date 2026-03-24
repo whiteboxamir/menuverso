@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Cervecería Conde Drácula", "address": {"@type": "PostalAddress", "streetAddress": "C/ de Viladrosa, 60", "addressLocality": "Barcelona", "postalCode": "08042", "addressCountry": "ES"}, "servesCuisine": "Spanish", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.1, "reviewCount": 300}, "geo": {"@type": "GeoCoordinates", "latitude": 41.441, "longitude": 2.177}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Cervecería Conde Drácula", "address": {"@type": "PostalAddress", "streetAddress": "C/ de Viladrosa, 60", "addressLocality": "Barcelona", "postalCode": "08042", "addressCountry": "ES"}, "servesCuisine": "Spanish", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.1, "reviewCount": 300}, "geo": {"@type": "GeoCoordinates", "latitude": 41.4428555, "longitude": 2.1758403}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{--bg:#F8FAFC;--card:#FFF;--text:#1E293B;--sub:#64748B;--mut:#94A3B8;--border:#E2E8F0;--accent:#2563EB;--accent-sub:#DBEAFE;--radius:12px;--shadow:0 2px 8px rgba(0,0,0,0.06);}
@@ -49,6 +49,11 @@ h1{font-size:clamp(1.3rem,3vw,1.8rem);margin-bottom:0.5rem;}
 .share-btn{padding:0.45rem 0.9rem;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--sub);font-size:0.8rem;font-weight:500;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;display:inline-flex;align-items:center;gap:4px;}
 .share-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-sub);}
 .share-btn.whatsapp:hover{border-color:#25D366;color:#25D366;}
+/* QR Code */
+.qr-section{margin-top:1.25rem;padding:1.25rem;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);text-align:center;}
+.qr-section h3{font-size:0.82rem;color:var(--sub);font-weight:600;margin-bottom:0.75rem;}
+#qrcode{display:inline-block;padding:12px;background:#fff;border-radius:8px;margin-bottom:0.5rem;}
+.qr-section small{display:block;color:var(--mut);font-size:0.72rem;}
 /* Mini map */
 #minimap{width:100%;height:200px;border-radius:var(--radius);border:1px solid var(--border);margin-bottom:1.25rem;z-index:1;}
 :root.dark .leaflet-tile{filter:invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);}
@@ -76,7 +81,8 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
     <a href="../index.html"><span>📋 </span>Database</a>
     <a href="../finder.html"><span>🔍 </span>Finder</a>
     <a href="../analytics.html"><span>📊 </span>Analytics</a>
-    <a href="../landing.html"><span>🏠 </span>About</a>
+    <a href="../lists.html"><span>🏆 </span>Best Of</a>
+    <a href="../crawl.html"><span>🚶 </span>Crawl</a>
   </div>
   <div class="controls-bar">
     <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
@@ -103,23 +109,28 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
       <a class="share-btn whatsapp" href="https://wa.me/?text=Check%20out%20Cervecer%C3%ADa%20Conde%20Dr%C3%A1cula%20in%20Nou%20Barris%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/552.html" target="_blank">💬 WhatsApp</a>
     </div>
     <div id="minimap"></div>
+    <div class="qr-section">
+      <h3>📱 QR Code — Scan to Share</h3>
+      <div id="qrcode"></div>
+      <small>Print this on your restaurant window or share with friends</small>
+    </div>
     <div class="nearby">
       <h2>📍 Nearby Restaurants</h2>
-      <a href="549.html" class="nearby-card">
-          <div class="nearby-name">La Cholita</div>
-          <div class="nearby-meta">🔴 Fusion ·  · 0m</div>
-        </a><a href="550.html" class="nearby-card">
+      <a href="550.html" class="nearby-card">
           <div class="nearby-name">Ovante</div>
-          <div class="nearby-meta">🔴 Gastropub ·  · 0m</div>
-        </a><a href="553.html" class="nearby-card">
-          <div class="nearby-name">Los Tres Pinos</div>
-          <div class="nearby-meta">🟡 Spanish ·  · 0m</div>
+          <div class="nearby-meta">🔴 Gastropub ·  · 26m</div>
+        </a><a href="66.html" class="nearby-card">
+          <div class="nearby-name">La Forquilla</div>
+          <div class="nearby-meta">🟢 Fusion · 17€ · 52m</div>
+        </a><a href="465.html" class="nearby-card">
+          <div class="nearby-name">Can Maño Nou Barris</div>
+          <div class="nearby-meta">🟢 Catalan · 10-12€ · 52m</div>
         </a>
     </div>
   </div>
 </div>
 <footer>
-  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #552 of 1,504
+  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #552 of 1,520
 </footer>
 <script>
 function initTheme(){
@@ -145,10 +156,12 @@ function copyLink(){
 }
 initTheme();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>try{new QRCode(document.getElementById('qrcode'),{text:'https://whiteboxamir.github.io/menuverso/r/552.html',width:128,height:128,colorDark:'#1E293B',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M})}catch(e){}</script>
 <script>
-var m=L.map('minimap',{zoomControl:false,scrollWheelZoom:false,dragging:false}).setView([41.441,2.177],16);
+var m=L.map('minimap',{zoomControl:false,scrollWheelZoom:false,dragging:false}).setView([41.4428555,2.1758403],16);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(m);
-L.circleMarker([41.441,2.177],{radius:8,fillColor:'#D97706',color:'#fff',weight:2,fillOpacity:1}).addTo(m);
+L.circleMarker([41.4428555,2.1758403],{radius:8,fillColor:'#D97706',color:'#fff',weight:2,fillOpacity:1}).addTo(m);
 if(document.documentElement.classList.contains('dark')){document.querySelectorAll('.leaflet-tile').forEach(t=>t.style.filter='invert(1) hue-rotate(180deg) brightness(0.9)');};
 </script>
 </body>

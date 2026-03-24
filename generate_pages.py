@@ -194,6 +194,11 @@ h1{{font-size:clamp(1.3rem,3vw,1.8rem);margin-bottom:0.5rem;}}
 .share-btn{{padding:0.45rem 0.9rem;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--sub);font-size:0.8rem;font-weight:500;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;display:inline-flex;align-items:center;gap:4px;}}
 .share-btn:hover{{border-color:var(--accent);color:var(--accent);background:var(--accent-sub);}}
 .share-btn.whatsapp:hover{{border-color:#25D366;color:#25D366;}}
+/* QR Code */
+.qr-section{{margin-top:1.25rem;padding:1.25rem;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);text-align:center;}}
+.qr-section h3{{font-size:0.82rem;color:var(--sub);font-weight:600;margin-bottom:0.75rem;}}
+#qrcode{{display:inline-block;padding:12px;background:#fff;border-radius:8px;margin-bottom:0.5rem;}}
+.qr-section small{{display:block;color:var(--mut);font-size:0.72rem;}}
 /* Mini map */
 #minimap{{width:100%;height:200px;border-radius:var(--radius);border:1px solid var(--border);margin-bottom:1.25rem;z-index:1;}}
 :root.dark .leaflet-tile{{filter:invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);}}
@@ -221,7 +226,8 @@ img[src*="logo.png"]{{mix-blend-mode:multiply;}}
     <a href="../index.html"><span>📋 </span>Database</a>
     <a href="../finder.html"><span>🔍 </span>Finder</a>
     <a href="../analytics.html"><span>📊 </span>Analytics</a>
-    <a href="../landing.html"><span>🏠 </span>About</a>
+    <a href="../lists.html"><span>🏆 </span>Best Of</a>
+    <a href="../crawl.html"><span>🚶 </span>Crawl</a>
   </div>
   <div class="controls-bar">
     <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
@@ -248,6 +254,11 @@ img[src*="logo.png"]{{mix-blend-mode:multiply;}}
       <a class="share-btn whatsapp" href="https://wa.me/?text={whatsapp_text}" target="_blank">💬 WhatsApp</a>
     </div>
     {map_html}
+    <div class="qr-section">
+      <h3>📱 QR Code — Scan to Share</h3>
+      <div id="qrcode"></div>
+      <small>Print this on your restaurant window or share with friends</small>
+    </div>
     {nearby_html}
   </div>
 </div>
@@ -278,6 +289,8 @@ function copyLink(){{
 }}
 initTheme();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>try{{new QRCode(document.getElementById('qrcode'),{{text:'{page_url}',width:128,height:128,colorDark:'#1E293B',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M}})}}catch(e){{}}</script>
 {map_script}
 </body>
 </html>"""
@@ -301,6 +314,9 @@ def main():
     sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/</loc><priority>1.0</priority></url>\n'
     sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/finder.html</loc><priority>0.9</priority></url>\n'
     sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/analytics.html</loc><priority>0.8</priority></url>\n'
+    sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/lists.html</loc><priority>0.9</priority></url>\n'
+    sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/collections.html</loc><priority>0.7</priority></url>\n'
+    sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/crawl.html</loc><priority>0.7</priority></url>\n'
     sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/landing.html</loc><priority>0.9</priority></url>\n'
     for r in restaurants:
         sitemap += f'  <url><loc>https://whiteboxamir.github.io/menuverso/r/{r["id"]}.html</loc><priority>0.6</priority></url>\n'
@@ -310,8 +326,8 @@ def main():
         f.write(sitemap)
 
     print(f"🏗️  Generated {total} enhanced restaurant pages in /{OUTPUT_DIR}/")
-    print(f"   Features: mini-map, nearby restaurants, share buttons, dark mode, OG tags")
-    print(f"📋 Generated sitemap.xml with {total + 4} URLs")
+    print(f"   Features: mini-map, nearby restaurants, share + QR, dark mode, OG tags")
+    print(f"📋 Generated sitemap.xml with {total + 7} URLs")
     print(f"   Example: /r/1.html (Casa Jaime)")
 
 

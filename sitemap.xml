@@ -3,6 +3,9 @@
   <url><loc>https://whiteboxamir.github.io/menuverso/</loc><priority>1.0</priority></url>
   <url><loc>https://whiteboxamir.github.io/menuverso/finder.html</loc><priority>0.9</priority></url>
   <url><loc>https://whiteboxamir.github.io/menuverso/analytics.html</loc><priority>0.8</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/lists.html</loc><priority>0.9</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/collections.html</loc><priority>0.7</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/crawl.html</loc><priority>0.7</priority></url>
   <url><loc>https://whiteboxamir.github.io/menuverso/landing.html</loc><priority>0.9</priority></url>
   <url><loc>https://whiteboxamir.github.io/menuverso/r/1.html</loc><priority>0.6</priority></url>
   <url><loc>https://whiteboxamir.github.io/menuverso/r/2.html</loc><priority>0.6</priority></url>
@@ -1508,4 +1511,20 @@
   <url><loc>https://whiteboxamir.github.io/menuverso/r/1505.html</loc><priority>0.6</priority></url>
   <url><loc>https://whiteboxamir.github.io/menuverso/r/1506.html</loc><priority>0.6</priority></url>
   <url><loc>https://whiteboxamir.github.io/menuverso/r/1507.html</loc><priority>0.6</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/r/1508.html</loc><priority>0.6</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/r/1509.html</loc><priority>0.6</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/r/1510.html</loc><priority>0.6</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/r/1511.html</loc><priority>0.6</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/r/1512.html</loc><priority>0.6</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/r/1513.html</loc><priority>0.6</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/r/1514.html</loc><priority>0.6</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/r/1515.html</loc><priority>0.6</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/r/1516.html</loc><priority>0.6</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/r/1517.html</loc><priority>0.6</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/r/1518.html</loc><priority>0.6</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/r/1519.html</loc><priority>0.6</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/r/1520.html</loc><priority>0.6</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/r/1521.html</loc><priority>0.6</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/r/1522.html</loc><priority>0.6</priority></url>
+  <url><loc>https://whiteboxamir.github.io/menuverso/r/1523.html</loc><priority>0.6</priority></url>
 </urlset>

@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 <style>
@@ -172,6 +173,9 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-main);
 footer{text-align:center;padding:1.5rem;color:var(--text-mut);font-size:0.78rem;border-top:1px solid var(--border);}
 footer a{color:var(--text-sub);text-decoration:none;font-weight:500;}
 footer a:hover{color:var(--text-main);}
+.map-mode-btn{padding:0.3rem 0.7rem;border:1px solid var(--border);border-radius:16px;background:var(--card);color:var(--text-sub);font-size:0.72rem;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;}
+.map-mode-btn:hover{border-color:var(--accent);color:var(--accent);}
+.map-mode-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);}
 @media(max-width:640px){.grid{grid-template-columns:1fr;}.stats{gap:0.75rem;}.stat{padding:0.75rem;min-width:calc(50% - 0.5rem);}.search-row{flex-direction:column;}.filters{flex-direction:column;align-items:stretch;}.action-bar{justify-content:center;}.nav-links a span{display:none;}}
 img[src*="logo.png"] { mix-blend-mode: multiply; }
 :root.dark img[src*="logo.png"] { mix-blend-mode: normal; filter: brightness(1.2); }
@@ -188,7 +192,8 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
     <a href="index.html" class="active"><span>📋 </span>Database</a>
     <a href="finder.html"><span>🔍 </span>Finder</a>
     <a href="analytics.html"><span>📊 </span>Analytics</a>
-    <a href="landing.html"><span>🏠 </span>About</a>
+    <a href="lists.html"><span>🏆 </span>Best Of</a>
+    <a href="crawl.html"><span>🚶 </span>Crawl</a>
   </div>
   <div class="controls-bar">
     <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
@@ -258,7 +263,23 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
   </div>
 </div>
 <div class="grid" id="grid"><div class="loading">⏳ Loading restaurants...</div></div>
-<div id="map-container"><div id="map"></div></div>
+<div id="map-container">
+  <div id="map-mode-bar" style="display:none;padding:0.5rem 1rem;background:var(--card);border-bottom:1px solid var(--border);">
+    <div style="display:flex;gap:0.4rem;flex-wrap:wrap;align-items:center;">
+      <span style="font-size:0.75rem;font-weight:600;color:var(--text-mut);margin-right:0.25rem;">MAP MODE:</span>
+      <button class="map-mode-btn active" data-mode="markers" onclick="setMapMode('markers')">📍 Markers</button>
+      <button class="map-mode-btn" data-mode="heat-density" onclick="setMapMode('heat-density')">🔥 Density</button>
+      <button class="map-mode-btn" data-mode="heat-price" onclick="setMapMode('heat-price')">💰 Price Heat</button>
+      <button class="map-mode-btn" data-mode="heat-confirmed" onclick="setMapMode('heat-confirmed')">🟢 Confirmed</button>
+    </div>
+  </div>
+  <div id="map"></div>
+</div>
+<div id="install-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;padding:0.75rem 1.5rem;background:var(--accent);color:#fff;font-size:0.85rem;font-weight:500;display:flex;align-items:center;justify-content:center;gap:1rem;font-family:Inter,sans-serif;box-shadow:0 -2px 12px rgba(0,0,0,0.15);">
+  <span>📱 Install Menuverso for instant access — works offline!</span>
+  <button onclick="installPWA()" style="padding:0.4rem 1rem;border:2px solid #fff;border-radius:8px;background:transparent;color:#fff;font-weight:700;cursor:pointer;font-size:0.82rem;font-family:Inter,sans-serif;">Install</button>
+  <button onclick="dismissInstall()" style="background:none;border:none;color:#fff;cursor:pointer;font-size:1.1rem;opacity:0.7;">✕</button>
+</div>
 <footer id="footer">Built with ❤️ by <a href="landing.html">Menuverso</a> · March 2026</footer>
 <div class="lang-toggle" style="position:fixed;bottom:1.25rem;right:1.25rem;z-index:1000;display:flex;border-radius:20px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);font-size:0.75rem;font-weight:600;">
   <button data-lang="es" class="active" onclick="setLang('es')" style="padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;">ES</button>
@@ -272,6 +293,8 @@ let activeFilters={};
 let currentView='list';
 let map=null;
 let markerCluster=null;
+let heatLayer=null;
+let mapMode='markers';
 let allMarkers=[];
 let favorites=JSON.parse(localStorage.getItem('menuverso_favs')||'[]');
 let currentLang=localStorage.getItem('menuverso_lang')||'es';
@@ -477,6 +500,7 @@ function renderList(filtered){
 function renderMap(filtered){
   if(!map) initMap();
   markerCluster.clearLayers();
+  if(heatLayer){ map.removeLayer(heatLayer); heatLayer=null; }
   allMarkers=[];
   
   const withCoords=filtered.filter(r=>r.coordinates&&r.coordinates.lat&&r.coordinates.lng);
@@ -486,41 +510,59 @@ function renderMap(filtered){
     return;
   }
 
-  withCoords.forEach(r=>{
-    const tier=r.menu_tier||'none';
-    const color=tier==='confirmed'?'#059669':tier==='likely'?'#D97706':'#DC2626';
-    const icon=L.divIcon({
-      className:'',
-      html:`<div style="background:${color};width:10px;height:10px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,0.3);"></div>`,
-      iconSize:[14,14],
-      iconAnchor:[7,7],
-      popupAnchor:[0,-10]
-    });
+  if(mapMode==='markers'){
+    withCoords.forEach(r=>{
+      const tier=r.menu_tier||'none';
+      const color=tier==='confirmed'?'#059669':tier==='likely'?'#D97706':'#DC2626';
+      const icon=L.divIcon({
+        className:'',
+        html:`<div style="background:${color};width:10px;height:10px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,0.3);"></div>`,
+        iconSize:[14,14],
+        iconAnchor:[7,7],
+        popupAnchor:[0,-10]
+      });
 
-    const marker=L.marker([r.coordinates.lat, r.coordinates.lng],{icon});
-    
-    let links='';
-    if(r.website) links+=`<a href="${r.website}" target="_blank">🌐 Web</a> `;
-    if(r.phone) links+=`<a href="tel:${r.phone}">📞</a> `;
-    
-    marker.bindPopup(`<div class="map-popup">
-      <div class="popup-name">${r.name}</div>
-      <span class="popup-badge ${tier}">${tier==='confirmed'?'🟢 Confirmed':tier==='likely'?'🟡 Likely':'🔴 No Menú'}</span>
-      <div class="popup-meta">${r.cuisine_type} · ${r.pricing_tier}${r.menu_price_range?' · '+r.menu_price_range:''}</div>
-      <div class="popup-meta">⭐ ${r.google_maps_rating||'?'} (${r.google_maps_review_count||0} rev)</div>
-      ${r.address_full?`<div class="popup-meta">📍 ${r.address_full}</div>`:''}
-      ${r.notes?`<div class="popup-notes">${r.notes}</div>`:''}
-      ${links?`<div class="popup-links">${links}</div>`:''}
-    </div>`,{maxWidth:280});
-    
-    allMarkers.push(marker);
-    markerCluster.addLayer(marker);
-  });
+      const marker=L.marker([r.coordinates.lat, r.coordinates.lng],{icon});
+      
+      let links='';
+      if(r.website) links+=`<a href="${r.website}" target="_blank">🌐 Web</a> `;
+      if(r.phone) links+=`<a href="tel:${r.phone}">📞</a> `;
+      
+      marker.bindPopup(`<div class="map-popup">
+        <div class="popup-name">${r.name}</div>
+        <span class="popup-badge ${tier}">${tier==='confirmed'?'🟢 Confirmed':tier==='likely'?'🟡 Likely':'🔴 No Menú'}</span>
+        <div class="popup-meta">${r.cuisine_type} · ${r.pricing_tier}${r.menu_price_range?' · '+r.menu_price_range:''}</div>
+        <div class="popup-meta">⭐ ${r.google_maps_rating||'?'} (${r.google_maps_review_count||0} rev)</div>
+        ${r.address_full?`<div class="popup-meta">📍 ${r.address_full}</div>`:''}
+        ${r.notes?`<div class="popup-notes">${r.notes}</div>`:''}
+        ${links?`<div class="popup-links">${links}</div>`:''}
+      </div>`,{maxWidth:280});
+      
+      allMarkers.push(marker);
+      markerCluster.addLayer(marker);
+    });
+  } else {
+    // Heatmap modes
+    let heatData;
+    if(mapMode==='heat-density'){
+      heatData=withCoords.map(r=>[r.coordinates.lat, r.coordinates.lng, 0.5]);
+    } else if(mapMode==='heat-price'){
+      const prices=withCoords.map(r=>{const n=(r.menu_price_range||'').match(/[\d.]+/); return n?parseFloat(n[0]):null;}).filter(Boolean);
+      const maxP=Math.max(...prices,20);
+      heatData=withCoords.filter(r=>{const n=(r.menu_price_range||'').match(/[\d.]+/); return n;}).map(r=>{
+        const p=parseFloat(r.menu_price_range.match(/[\d.]+/)[0]);
+        return [r.coordinates.lat, r.coordinates.lng, p/maxP];
+      });
+    } else if(mapMode==='heat-confirmed'){
+      heatData=withCoords.map(r=>[r.coordinates.lat, r.coordinates.lng, r.menu_tier==='confirmed'?1:r.menu_tier==='likely'?0.5:0.15]);
+    }
+    heatLayer=L.heatLayer(heatData,{radius:25,blur:20,maxZoom:17,max:1.0,gradient:{0.2:'#3B82F6',0.4:'#10B981',0.6:'#F59E0B',0.8:'#F97316',1.0:'#EF4444'}}).addTo(map);
+  }
 
   // Fit bounds to markers
-  if(allMarkers.length){
-    const group=L.featureGroup(allMarkers);
-    map.fitBounds(group.getBounds().pad(0.1));
+  if(withCoords.length){
+    const bounds=L.latLngBounds(withCoords.map(r=>[r.coordinates.lat,r.coordinates.lng]));
+    map.fitBounds(bounds.pad(0.1));
   }
 
   document.getElementById('count-text').textContent=`Showing ${withCoords.length} of ${filtered.length} on map (${filtered.length-withCoords.length} unmapped)`;
@@ -559,7 +601,14 @@ function setView(v){
   document.getElementById('btn-map').classList.toggle('active',v==='map');
   document.getElementById('grid').style.display=v==='list'?'grid':'none';
   document.getElementById('map-container').style.display=v==='map'?'block':'none';
+  document.getElementById('map-mode-bar').style.display=v==='map'?'block':'none';
   if(v==='map'&&map) setTimeout(()=>map.invalidateSize(),100);
+  render();
+}
+
+function setMapMode(mode){
+  mapMode=mode;
+  document.querySelectorAll('.map-mode-btn').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));
   render();
 }
 
@@ -713,11 +762,31 @@ function toggleTheme(){
 }
 initTheme();
 
-// Service Worker registration
+// Service Worker registration + PWA Install Prompt
+let deferredPrompt;
 if('serviceWorker' in navigator){
   window.addEventListener('load',()=>{
     navigator.serviceWorker.register('/sw.js').catch(()=>{});
   });
+}
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  deferredPrompt = e;
+  if(!localStorage.getItem('menuverso_install_dismissed')){
+    document.getElementById('install-banner').style.display='flex';
+  }
+});
+function installPWA(){
+  if(!deferredPrompt) return;
+  deferredPrompt.prompt();
+  deferredPrompt.userChoice.then(result => {
+    document.getElementById('install-banner').style.display='none';
+    deferredPrompt = null;
+  });
+}
+function dismissInstall(){
+  document.getElementById('install-banner').style.display='none';
+  localStorage.setItem('menuverso_install_dismissed','1');
 }
 </script>
 <script type="application/ld+json">

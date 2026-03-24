@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menuverso — Lunch Crawl Planner</title>
+<meta name="description" content="Plan a walking lunch crawl through Barcelona's best menú del día restaurants with interactive maps.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#F8FAFC;--card:#FFF;--text:#1E293B;--sub:#64748B;--mut:#94A3B8;--border:#E2E8F0;--accent:#2563EB;--accent-sub:#DBEAFE;--green:#059669;--green-bg:#D1FAE5;--amber:#D97706;--red:#DC2626;--radius:12px;--shadow:0 2px 8px rgba(0,0,0,0.06);}
+:root.dark{--bg:#0F172A;--card:#1E293B;--text:#F1F5F9;--sub:#94A3B8;--mut:#64748B;--border:#334155;--accent:#3B82F6;--accent-sub:#1E3A5F;--green:#34D399;--green-bg:#064E3B;--amber:#FBBF24;--red:#F87171;--shadow:0 2px 8px rgba(0,0,0,0.3);}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background 0.3s,color 0.3s;}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1.5rem;border-bottom:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+.nav-brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.1rem;}
+.nav-brand img{width:28px;height:28px;border-radius:8px;}
+.nav-links{display:flex;align-items:center;gap:1rem;}
+.nav-links a{color:var(--sub);text-decoration:none;font-size:0.82rem;font-weight:500;padding:0.3rem 0.5rem;border-radius:8px;transition:all 0.2s;}
+.nav-links a:hover{color:var(--text);}
+.nav-links a.active{color:var(--accent);font-weight:600;}
+.controls-bar{display:flex;gap:0.5rem;align-items:center;}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:0.3rem 0.55rem;cursor:pointer;font-size:0.85rem;color:var(--sub);transition:all 0.2s;}
+.layout{display:grid;grid-template-columns:360px 1fr;height:calc(100vh - 49px);}
+.sidebar{overflow-y:auto;padding:1rem;border-right:1px solid var(--border);background:var(--card);}
+.sidebar h2{font-size:1.1rem;font-weight:700;margin-bottom:0.25rem;}
+.sidebar .sub{font-size:0.82rem;color:var(--sub);margin-bottom:1rem;}
+#crawl-map{width:100%;height:100%;}
+.search-box{position:relative;margin-bottom:1rem;}
+.search-box input{width:100%;padding:0.5rem 0.75rem;border:1px solid var(--border);border-radius:8px;font-size:0.82rem;font-family:Inter,sans-serif;background:var(--bg);color:var(--text);}
+.search-box input:focus{outline:none;border-color:var(--accent);}
+.search-dropdown{position:absolute;top:100%;left:0;right:0;background:var(--card);border:1px solid var(--border);border-radius:8px;max-height:200px;overflow-y:auto;z-index:50;box-shadow:0 8px 24px rgba(0,0,0,0.15);display:none;}
+.search-dropdown.open{display:block;}
+.sd-item{padding:0.5rem 0.75rem;cursor:pointer;font-size:0.82rem;display:flex;justify-content:space-between;align-items:center;transition:background 0.15s;}
+.sd-item:hover{background:var(--accent-sub);}
+.sd-name{font-weight:500;}
+.sd-meta{color:var(--sub);font-size:0.72rem;}
+.sd-add{color:var(--green);font-weight:700;font-size:1rem;}
+.stop-list{display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1rem;}
+.stop{display:flex;align-items:flex-start;gap:0.6rem;padding:0.75rem;background:var(--bg);border-radius:8px;border:1px solid var(--border);transition:all 0.2s;}
+.stop:hover{border-color:var(--accent);}
+.stop-num{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.8rem;flex-shrink:0;}
+.stop-info{flex:1;min-width:0;}
+.stop-name{font-weight:600;font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.stop-meta{font-size:0.72rem;color:var(--sub);}
+.stop-distance{font-size:0.72rem;color:var(--amber);font-weight:500;margin-top:2px;}
+.stop-remove{background:none;border:none;color:var(--mut);cursor:pointer;font-size:0.75rem;padding:4px;border-radius:4px;}
+.stop-remove:hover{color:var(--red);}
+.stop-arrows{display:flex;flex-direction:column;gap:2px;}
+.stop-arrows button{background:none;border:none;color:var(--sub);cursor:pointer;font-size:0.7rem;padding:1px 4px;border-radius:4px;}
+.stop-arrows button:hover{color:var(--accent);background:var(--accent-sub);}
+.summary{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;margin-bottom:1rem;}
+.summary-row{display:flex;justify-content:space-between;font-size:0.82rem;margin-bottom:0.25rem;}
+.summary-row span:last-child{font-weight:600;}
+.btn{padding:0.45rem 1rem;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:0.8rem;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;display:inline-flex;align-items:center;gap:6px;width:100%;justify-content:center;}
+.btn:hover{border-color:var(--accent);color:var(--accent);}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+.btn-row{display:flex;gap:0.5rem;flex-direction:column;}
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:0.6rem 1.5rem;border-radius:999px;font-size:0.82rem;font-weight:500;z-index:200;opacity:0;transition:opacity 0.3s;pointer-events:none;}
+.toast.show{opacity:1;}
+img[src*="logo.png"]{mix-blend-mode:multiply;}
+:root.dark img[src*="logo.png"]{mix-blend-mode:normal;filter:brightness(1.2);}
+:root.dark .leaflet-tile{filter:brightness(0.7) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.8);}
+.empty-sidebar{text-align:center;padding:2rem 1rem;color:var(--sub);}
+.empty-sidebar .emoji{font-size:2.5rem;margin-bottom:0.75rem;}
+@media(max-width:768px){.layout{grid-template-columns:1fr;grid-template-rows:auto 350px;}.sidebar{border-right:none;border-bottom:1px solid var(--border);max-height:50vh;}.nav-links a span{display:none;}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a href="index.html" class="nav-brand"><img src="assets/logo.png" alt="Menuverso"><span>Menuverso</span></a>
+  <div class="nav-links">
+    <a href="index.html"><span>📋 </span>Database</a>
+    <a href="finder.html"><span>🔍 </span>Finder</a>
+    <a href="analytics.html"><span>📊 </span>Analytics</a>
+    <a href="lists.html"><span>🏆 </span>Best Of</a>
+    <a href="crawl.html" class="active"><span>🚶 </span>Crawl</a>
+  </div>
+  <div class="controls-bar"><button class="theme-btn" id="theme-toggle" onclick="toggleTheme()">🌙</button></div>
+</nav>
+
+<div class="layout">
+  <div class="sidebar">
+    <h2>🚶 Lunch Crawl</h2>
+    <p class="sub">Pick 2-5 restaurants and plan your walking route</p>
+    
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="🔍 Search restaurants to add..." oninput="onSearch()" onfocus="onSearch()">
+      <div class="search-dropdown" id="search-dropdown"></div>
+    </div>
+
+    <div class="stop-list" id="stop-list">
+      <div class="empty-sidebar" id="empty-msg">
+        <div class="emoji">🗺️</div>
+        <p>Search above to add stops to your route</p>
+      </div>
+    </div>
+
+    <div id="crawl-summary" style="display:none;">
+      <div class="summary">
+        <div class="summary-row"><span>🚶 Total distance</span><span id="total-dist">—</span></div>
+        <div class="summary-row"><span>⏱️ Walking time</span><span id="total-time">—</span></div>
+        <div class="summary-row"><span>💰 Total cost (avg)</span><span id="total-cost">—</span></div>
+        <div class="summary-row"><span>📍 Stops</span><span id="total-stops">0</span></div>
+      </div>
+      <div class="btn-row">
+        <button class="btn primary" onclick="shareCrawl()">🔗 Share Crawl</button>
+        <button class="btn" onclick="copyItinerary()">📋 Copy Itinerary</button>
+        <button class="btn" onclick="openInMaps()">🗺️ Open in Google Maps</button>
+        <button class="btn" onclick="clearAll()" style="color:var(--red);">🗑️ Clear All</button>
+      </div>
+    </div>
+  </div>
+  <div id="crawl-map"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="restaurants_data.js"></script>
+<script>
+const DATA = window.RESTAURANT_DATA || [];
+const withCoords = DATA.filter(r => r.coordinates && r.coordinates.lat && r.coordinates.lng);
+let stops = [];
+let map, routeLine, markers = [];
+
+// === Map Init ===
+function initMap() {
+  map = L.map('crawl-map').setView([41.3888, 2.1700], 14);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    maxZoom: 19
+  }).addTo(map);
+}
+
+// === Haversine ===
+function haversine(lat1, lon1, lat2, lon2) {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) * Math.sin(dLon/2) * Math.sin(dLon/2);
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+
+function parsePrice(s) {
+  if (!s) return null;
+  const nums = s.match(/[\d.]+/g);
+  return nums ? parseFloat(nums[0]) : null;
+}
+
+// === Search ===
+function onSearch() {
+  const q = document.getElementById('search-input').value.toLowerCase().trim();
+  const dd = document.getElementById('search-dropdown');
+  if (!q || q.length < 2) { dd.classList.remove('open'); return; }
+  
+  const existing = new Set(stops.map(s => s.id));
+  const results = withCoords.filter(r => !existing.has(r.id) && (r.name.toLowerCase().includes(q) || r.neighborhood.toLowerCase().includes(q) || r.cuisine_type.toLowerCase().includes(q))).slice(0, 8);
+  
+  if (!results.length) { dd.innerHTML = '<div class="sd-item"><span class="sd-meta">No matches found</span></div>'; dd.classList.add('open'); return; }
+  
+  dd.innerHTML = results.map(r => `<div class="sd-item" onclick="addStop(${r.id})">
+    <div><div class="sd-name">${r.name}</div><div class="sd-meta">${r.cuisine_type} · ${r.neighborhood}${r.menu_price_range ? ' · ' + r.menu_price_range : ''}</div></div>
+    <span class="sd-add">+</span>
+  </div>`).join('');
+  dd.classList.add('open');
+}
+
+// === Stops ===
+function addStop(id) {
+  if (stops.length >= 5) { showToast('Maximum 5 stops'); return; }
+  const r = DATA.find(d => d.id === id);
+  if (!r || !r.coordinates) return;
+  stops.push(r);
+  document.getElementById('search-input').value = '';
+  document.getElementById('search-dropdown').classList.remove('open');
+  renderRoute();
+  showToast(`📍 Added: ${r.name}`);
+}
+
+function removeStop(i) {
+  stops.splice(i, 1);
+  renderRoute();
+}
+
+function moveStop(from, to) {
+  if (to < 0 || to >= stops.length) return;
+  const item = stops.splice(from, 1)[0];
+  stops.splice(to, 0, item);
+  renderRoute();
+}
+
+function clearAll() {
+  stops = [];
+  renderRoute();
+}
+
+// === Render ===
+function renderRoute() {
+  // Clear map
+  markers.forEach(m => map.removeLayer(m));
+  markers = [];
+  if (routeLine) { map.removeLayer(routeLine); routeLine = null; }
+
+  const list = document.getElementById('stop-list');
+  const summary = document.getElementById('crawl-summary');
+  const empty = document.getElementById('empty-msg');
+
+  if (!stops.length) {
+    list.innerHTML = '';
+    list.appendChild(empty);
+    empty.style.display = 'block';
+    summary.style.display = 'none';
+    return;
+  }
+
+  empty.style.display = 'none';
+  
+  // Calculate distances between consecutive stops
+  const distances = [];
+  for (let i = 1; i < stops.length; i++) {
+    const d = haversine(stops[i-1].coordinates.lat, stops[i-1].coordinates.lng, stops[i].coordinates.lat, stops[i].coordinates.lng);
+    distances.push(d);
+  }
+
+  const colors = ['#2563EB', '#059669', '#D97706', '#DC2626', '#8B5CF6'];
+
+  // Render stop cards
+  list.innerHTML = stops.map((r, i) => {
+    const dist = i > 0 ? distances[i-1] : null;
+    const walkMin = dist ? Math.round(dist / 0.08) : null; // ~5 km/h = 80m/min
+    return `${i > 0 ? `<div style="text-align:center;font-size:0.72rem;color:var(--amber);font-weight:500;">↓ ${(dist*1000).toFixed(0)}m · ~${walkMin} min walking</div>` : ''}
+    <div class="stop">
+      <div class="stop-num" style="background:${colors[i]}">${i + 1}</div>
+      <div class="stop-info">
+        <div class="stop-name">${r.name}</div>
+        <div class="stop-meta">${r.cuisine_type} · ${r.neighborhood}${r.menu_price_range ? ' · ' + r.menu_price_range : ''}</div>
+      </div>
+      <div class="stop-arrows">
+        ${i > 0 ? `<button onclick="moveStop(${i},${i-1})">▲</button>` : ''}
+        ${i < stops.length - 1 ? `<button onclick="moveStop(${i},${i+1})">▼</button>` : ''}
+      </div>
+      <button class="stop-remove" onclick="removeStop(${i})">✕</button>
+    </div>`;
+  }).join('');
+
+  // Map markers + route line
+  const latlngs = stops.map((r, i) => {
+    const ll = [r.coordinates.lat, r.coordinates.lng];
+    const marker = L.marker(ll, {
+      icon: L.divIcon({
+        className: '',
+        html: `<div style="background:${colors[i]};width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;color:#fff;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,0.3);font-family:Inter,sans-serif;">${i+1}</div>`,
+        iconSize: [28, 28],
+        iconAnchor: [14, 14],
+        popupAnchor: [0, -18]
+      })
+    }).addTo(map);
+    marker.bindPopup(`<b>${r.name}</b><br>${r.cuisine_type} · ${r.menu_price_range || '—'}`);
+    markers.push(marker);
+    return ll;
+  });
+
+  if (latlngs.length > 1) {
+    routeLine = L.polyline(latlngs, { color: '#2563EB', weight: 3, opacity: 0.7, dashArray: '8 6' }).addTo(map);
+  }
+
+  map.fitBounds(L.latLngBounds(latlngs).pad(0.15));
+
+  // Summary
+  const totalDist = distances.reduce((s, d) => s + d, 0);
+  const totalWalk = Math.round(totalDist / 0.08);
+  const totalCost = stops.reduce((s, r) => s + (parsePrice(r.menu_price_range) || 0), 0);
+
+  document.getElementById('total-dist').textContent = totalDist < 1 ? `${(totalDist * 1000).toFixed(0)}m` : `${totalDist.toFixed(1)}km`;
+  document.getElementById('total-time').textContent = `~${totalWalk} min`;
+  document.getElementById('total-cost').textContent = totalCost ? `€${totalCost.toFixed(0)}` : '—';
+  document.getElementById('total-stops').textContent = stops.length;
+  summary.style.display = 'block';
+}
+
+// === Actions ===
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+function shareCrawl() {
+  const payload = btoa(JSON.stringify({ ids: stops.map(s => s.id) }));
+  const url = `${location.origin}${location.pathname}?route=${payload}`;
+  if (navigator.share) {
+    navigator.share({ title: 'Lunch Crawl — Menuverso', text: `Check out my ${stops.length}-stop lunch crawl in Barcelona!`, url });
+  } else {
+    navigator.clipboard.writeText(url);
+    showToast('🔗 Route link copied!');
+  }
+}
+
+function copyItinerary() {
+  const distances = [];
+  for (let i = 1; i < stops.length; i++) {
+    distances.push(haversine(stops[i-1].coordinates.lat, stops[i-1].coordinates.lng, stops[i].coordinates.lat, stops[i].coordinates.lng));
+  }
+  
+  let text = `🚶 Lunch Crawl — ${stops.length} Stops\n\n`;
+  stops.forEach((r, i) => {
+    text += `${i+1}. ${r.name} — ${r.cuisine_type}, ${r.neighborhood}`;
+    if (r.menu_price_range) text += ` (${r.menu_price_range})`;
+    text += '\n';
+    if (i < stops.length - 1) {
+      const d = distances[i];
+      text += `   ↓ ${(d*1000).toFixed(0)}m · ~${Math.round(d/0.08)} min walk\n`;
+    }
+  });
+  text += '\n🔗 menuverso.com';
+  navigator.clipboard.writeText(text);
+  showToast('📋 Itinerary copied!');
+}
+
+function openInMaps() {
+  if (!stops.length) return;
+  const waypoints = stops.map(s => `${s.coordinates.lat},${s.coordinates.lng}`);
+  const origin = waypoints[0];
+  const dest = waypoints[waypoints.length - 1];
+  const via = waypoints.slice(1, -1).join('|');
+  let url = `https://www.google.com/maps/dir/${origin}`;
+  waypoints.slice(1).forEach(w => url += `/${w}`);
+  window.open(url, '_blank');
+}
+
+// === Load shared route ===
+function loadSharedRoute() {
+  const params = new URLSearchParams(location.search);
+  const route = params.get('route');
+  if (!route) return;
+  try {
+    const data = JSON.parse(atob(route));
+    (data.ids || []).forEach(id => {
+      const r = withCoords.find(d => d.id === id);
+      if (r && stops.length < 5) stops.push(r);
+    });
+    renderRoute();
+  } catch(e) {}
+}
+
+// === Close dropdown on outside click ===
+document.addEventListener('click', e => {
+  if (!e.target.closest('.search-box')) document.getElementById('search-dropdown').classList.remove('open');
+});
+
+// === Theme ===
+function initTheme() {
+  const s = localStorage.getItem('menuverso_theme');
+  if (s === 'dark' || (!s && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
+    document.documentElement.classList.add('dark');
+    document.getElementById('theme-toggle').textContent = '☀️';
+  }
+}
+function toggleTheme() {
+  const d = document.documentElement.classList.toggle('dark');
+  localStorage.setItem('menuverso_theme', d ? 'dark' : 'light');
+  document.getElementById('theme-toggle').textContent = d ? '☀️' : '🌙';
+}
+
+// === Init ===
+initTheme();
+initMap();
+loadSharedRoute();
+</script>
+</body>
+</html>

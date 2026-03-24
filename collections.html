@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menuverso — My Collections</title>
+<meta name="description" content="Create and share curated restaurant collections from Menuverso's Barcelona database.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#F8FAFC;--card:#FFF;--text:#1E293B;--sub:#64748B;--mut:#94A3B8;--border:#E2E8F0;--accent:#2563EB;--accent-sub:#DBEAFE;--green:#059669;--green-bg:#D1FAE5;--amber:#D97706;--red:#DC2626;--radius:12px;--shadow:0 2px 8px rgba(0,0,0,0.06);}
+:root.dark{--bg:#0F172A;--card:#1E293B;--text:#F1F5F9;--sub:#94A3B8;--mut:#64748B;--border:#334155;--accent:#3B82F6;--accent-sub:#1E3A5F;--green:#34D399;--green-bg:#064E3B;--amber:#FBBF24;--red:#F87171;--shadow:0 2px 8px rgba(0,0,0,0.3);}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background 0.3s,color 0.3s;}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1.5rem;border-bottom:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+.nav-brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.1rem;}
+.nav-brand img{width:28px;height:28px;border-radius:8px;}
+.nav-links{display:flex;align-items:center;gap:1rem;}
+.nav-links a{color:var(--sub);text-decoration:none;font-size:0.82rem;font-weight:500;padding:0.3rem 0.5rem;border-radius:8px;transition:all 0.2s;}
+.nav-links a:hover{color:var(--text);}
+.nav-links a.active{color:var(--accent);font-weight:600;}
+.controls-bar{display:flex;gap:0.5rem;align-items:center;}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:0.3rem 0.55rem;cursor:pointer;font-size:0.85rem;color:var(--sub);transition:all 0.2s;}
+.container{max-width:800px;margin:0 auto;padding:1.5rem;}
+h1{font-size:clamp(1.4rem,3vw,1.8rem);text-align:center;margin-bottom:0.5rem;}
+.subtitle{text-align:center;color:var(--sub);font-size:0.88rem;margin-bottom:2rem;}
+.section{margin-bottom:2rem;}
+.section-title{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:600;color:var(--mut);margin-bottom:0.75rem;display:flex;align-items:center;justify-content:space-between;}
+.btn{padding:0.45rem 1rem;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:0.8rem;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;display:inline-flex;align-items:center;gap:6px;}
+.btn:hover{border-color:var(--accent);color:var(--accent);}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+.btn.primary:hover{background:#1D4ED8;}
+.btn.danger{color:var(--red);border-color:var(--red);}
+.btn.small{padding:0.3rem 0.6rem;font-size:0.72rem;}
+.create-form{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;margin-bottom:1.5rem;box-shadow:var(--shadow);}
+.create-form input{width:100%;padding:0.6rem 0.75rem;border:1px solid var(--border);border-radius:8px;font-size:0.88rem;font-family:Inter,sans-serif;background:var(--bg);color:var(--text);margin-bottom:0.75rem;transition:border-color 0.2s;}
+.create-form input:focus{outline:none;border-color:var(--accent);}
+.create-form textarea{width:100%;padding:0.6rem 0.75rem;border:1px solid var(--border);border-radius:8px;font-size:0.82rem;font-family:Inter,sans-serif;background:var(--bg);color:var(--text);margin-bottom:0.75rem;resize:vertical;min-height:60px;}
+.collection-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;margin-bottom:0.75rem;box-shadow:var(--shadow);transition:all 0.2s;}
+.collection-card:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+.collection-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem;}
+.collection-name{font-weight:700;font-size:1.05rem;cursor:pointer;color:var(--accent);}
+.collection-desc{font-size:0.82rem;color:var(--sub);margin-bottom:0.75rem;}
+.collection-stats{display:flex;gap:0.75rem;font-size:0.72rem;color:var(--mut);margin-bottom:0.75rem;}
+.collection-items{display:flex;flex-direction:column;gap:0.4rem;}
+.mini-card{display:flex;align-items:center;gap:0.75rem;padding:0.6rem 0.75rem;background:var(--bg);border-radius:8px;text-decoration:none;color:var(--text);transition:all 0.2s;border:1px solid transparent;}
+.mini-card:hover{border-color:var(--accent);background:var(--accent-sub);}
+.mini-rank{width:24px;height:24px;border-radius:50%;background:var(--accent-sub);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;flex-shrink:0;}
+.mini-info{flex:1;min-width:0;}
+.mini-name{font-weight:600;font-size:0.85rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.mini-meta{font-size:0.72rem;color:var(--sub);}
+.mini-remove{background:none;border:none;color:var(--mut);cursor:pointer;font-size:0.8rem;padding:4px;border-radius:4px;transition:color 0.2s;}
+.mini-remove:hover{color:var(--red);}
+.collection-actions{display:flex;gap:0.5rem;margin-top:0.75rem;flex-wrap:wrap;}
+.search-add{position:relative;margin-bottom:0.5rem;}
+.search-add input{width:100%;padding:0.5rem 0.75rem;border:1px solid var(--border);border-radius:8px;font-size:0.82rem;font-family:Inter,sans-serif;background:var(--bg);color:var(--text);}
+.search-add input:focus{outline:none;border-color:var(--accent);}
+.search-results{position:absolute;top:100%;left:0;right:0;background:var(--card);border:1px solid var(--border);border-radius:8px;max-height:200px;overflow-y:auto;z-index:50;box-shadow:0 8px 24px rgba(0,0,0,0.15);display:none;}
+.search-results.open{display:block;}
+.search-result{padding:0.5rem 0.75rem;cursor:pointer;font-size:0.82rem;display:flex;justify-content:space-between;transition:background 0.15s;}
+.search-result:hover{background:var(--accent-sub);}
+.search-result .sr-name{font-weight:500;}
+.search-result .sr-meta{color:var(--sub);font-size:0.72rem;}
+.shared-banner{background:var(--green-bg);border:1px solid var(--green);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:1.5rem;text-align:center;}
+.shared-banner h2{font-size:1.1rem;color:var(--green);margin-bottom:0.25rem;}
+.shared-banner p{font-size:0.82rem;color:var(--sub);}
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:0.6rem 1.5rem;border-radius:999px;font-size:0.82rem;font-weight:500;z-index:200;opacity:0;transition:opacity 0.3s;pointer-events:none;}
+.toast.show{opacity:1;}
+.empty{text-align:center;padding:3rem 1rem;color:var(--sub);}
+.empty-emoji{font-size:3rem;margin-bottom:1rem;}
+.empty p{font-size:0.9rem;margin-bottom:1rem;}
+footer{text-align:center;padding:2rem;color:var(--mut);font-size:0.78rem;border-top:1px solid var(--border);}
+footer a{color:var(--sub);text-decoration:none;}
+img[src*="logo.png"]{mix-blend-mode:multiply;}
+:root.dark img[src*="logo.png"]{mix-blend-mode:normal;filter:brightness(1.2);}
+@media(max-width:640px){.nav-links a span{display:none;}.collection-actions{flex-direction:column;}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a href="index.html" class="nav-brand"><img src="assets/logo.png" alt="Menuverso"><span>Menuverso</span></a>
+  <div class="nav-links">
+    <a href="index.html"><span>📋 </span>Database</a>
+    <a href="finder.html"><span>🔍 </span>Finder</a>
+    <a href="analytics.html"><span>📊 </span>Analytics</a>
+    <a href="lists.html"><span>🏆 </span>Best Of</a>
+    <a href="collections.html" class="active"><span>📂 </span>Collections</a>
+  </div>
+  <div class="controls-bar"><button class="theme-btn" id="theme-toggle" onclick="toggleTheme()">🌙</button></div>
+</nav>
+
+<div class="container">
+  <h1 id="page-title">📂 My Collections</h1>
+  <p class="subtitle" id="page-subtitle">Create, curate, and share your favorite restaurant lists</p>
+
+  <div id="shared-view" style="display:none;"></div>
+
+  <div id="my-collections">
+    <div class="create-form" id="create-form">
+      <input type="text" id="new-name" placeholder="Collection name, e.g. 'Friday lunch spots'" maxlength="60">
+      <textarea id="new-desc" placeholder="Optional description..." maxlength="140"></textarea>
+      <button class="btn primary" onclick="createCollection()">✨ Create Collection</button>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span>MY COLLECTIONS</span></div>
+      <div id="collections-list"></div>
+    </div>
+  </div>
+
+  <div id="import-favs" style="display:none;margin-bottom:1.5rem;">
+    <div class="collection-card" style="text-align:center;border-style:dashed;">
+      <p style="font-size:0.85rem;color:var(--sub);margin-bottom:0.5rem;">You have <strong id="fav-count">0</strong> saved favorites</p>
+      <button class="btn" onclick="importFavorites()">⭐ Import Favorites as Collection</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<footer>Built with ❤️ by <a href="landing.html">Menuverso</a> · <a href="index.html">Database</a> · <a href="lists.html">Best Of</a></footer>
+
+<script src="restaurants_data.js"></script>
+<script>
+const DATA = window.RESTAURANT_DATA || [];
+const STORAGE_KEY = 'menuverso_collections';
+
+// === State ===
+let collections = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+
+function save() { localStorage.setItem(STORAGE_KEY, JSON.stringify(collections)); }
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+function getRestaurant(id) { return DATA.find(r => r.id == id); }
+
+// === Check for shared collection in URL ===
+function checkSharedURL() {
+  const params = new URLSearchParams(window.location.search);
+  const shared = params.get('share');
+  if (!shared) return false;
+  
+  try {
+    const decoded = JSON.parse(atob(shared));
+    renderSharedView(decoded);
+    return true;
+  } catch(e) { return false; }
+}
+
+function renderSharedView(data) {
+  document.getElementById('my-collections').style.display = 'none';
+  document.getElementById('page-title').textContent = `📂 ${data.name}`;
+  document.getElementById('page-subtitle').textContent = data.desc || 'A curated Menuverso collection';
+  
+  const items = (data.ids || []).map((id, i) => {
+    const r = getRestaurant(id);
+    if (!r) return '';
+    return `<a href="r/${r.id}.html" class="mini-card">
+      <div class="mini-rank">${i + 1}</div>
+      <div class="mini-info">
+        <div class="mini-name">${r.name}</div>
+        <div class="mini-meta">${r.cuisine_type} · ${r.neighborhood}${r.menu_price_range ? ' · ' + r.menu_price_range : ''}</div>
+      </div>
+    </a>`;
+  }).join('');
+
+  document.getElementById('shared-view').style.display = 'block';
+  document.getElementById('shared-view').innerHTML = `
+    <div class="shared-banner">
+      <h2>🔗 Shared Collection</h2>
+      <p>${data.ids.length} restaurants curated by a fellow foodie</p>
+    </div>
+    <div class="collection-items">${items}</div>
+    <div class="collection-actions" style="margin-top:1.5rem;justify-content:center;">
+      <button class="btn primary" onclick="saveSharedCollection()">💾 Save to My Collections</button>
+      <button class="btn" onclick="location.href='collections.html'">← Browse My Collections</button>
+    </div>
+  `;
+  
+  window._sharedData = data;
+}
+
+function saveSharedCollection() {
+  const data = window._sharedData;
+  if (!data) return;
+  collections.push({
+    id: Date.now(),
+    name: data.name,
+    desc: data.desc || '',
+    ids: data.ids,
+    created: new Date().toISOString()
+  });
+  save();
+  showToast('✅ Collection saved!');
+}
+
+// === Create Collection ===
+function createCollection() {
+  const name = document.getElementById('new-name').value.trim();
+  if (!name) { showToast('Please enter a name'); return; }
+  
+  collections.push({
+    id: Date.now(),
+    name: name,
+    desc: document.getElementById('new-desc').value.trim(),
+    ids: [],
+    created: new Date().toISOString()
+  });
+  save();
+  document.getElementById('new-name').value = '';
+  document.getElementById('new-desc').value = '';
+  renderCollections();
+  showToast('✨ Collection created!');
+}
+
+// === Import Favorites ===
+function importFavorites() {
+  const favs = JSON.parse(localStorage.getItem('menuverso_favs') || '[]');
+  if (!favs.length) return;
+  collections.push({
+    id: Date.now(),
+    name: '⭐ My Favorites',
+    desc: 'Imported from saved favorites',
+    ids: favs.map(id => parseInt(id)),
+    created: new Date().toISOString()
+  });
+  save();
+  renderCollections();
+  showToast(`⭐ Imported ${favs.length} favorites!`);
+}
+
+// === Render ===
+function renderCollections() {
+  const container = document.getElementById('collections-list');
+  
+  if (!collections.length) {
+    container.innerHTML = `<div class="empty">
+      <div class="empty-emoji">📂</div>
+      <p>No collections yet. Create one above!</p>
+    </div>`;
+    return;
+  }
+
+  container.innerHTML = collections.map((c, ci) => {
+    const items = c.ids.map((id, i) => {
+      const r = getRestaurant(id);
+      if (!r) return '';
+      return `<a href="r/${r.id}.html" class="mini-card">
+        <div class="mini-rank">${i + 1}</div>
+        <div class="mini-info">
+          <div class="mini-name">${r.name}</div>
+          <div class="mini-meta">${r.cuisine_type} · ${r.neighborhood}${r.menu_price_range ? ' · ' + r.menu_price_range : ''}</div>
+        </div>
+        <button class="mini-remove" onclick="event.preventDefault();removeFromCollection(${ci},${id})" title="Remove">✕</button>
+      </a>`;
+    }).join('');
+
+    return `<div class="collection-card" id="col-${c.id}">
+      <div class="collection-header">
+        <div class="collection-name">${c.name}</div>
+        <button class="btn small danger" onclick="deleteCollection(${ci})">🗑️</button>
+      </div>
+      ${c.desc ? `<div class="collection-desc">${c.desc}</div>` : ''}
+      <div class="collection-stats">
+        <span>📋 ${c.ids.length} restaurants</span>
+        <span>📅 ${new Date(c.created).toLocaleDateString()}</span>
+      </div>
+      <div class="search-add">
+        <input type="text" placeholder="🔍 Search to add restaurants..." oninput="searchForCollection(this,${ci})" onfocus="searchForCollection(this,${ci})">
+        <div class="search-results" id="sr-${ci}"></div>
+      </div>
+      ${items ? `<div class="collection-items">${items}</div>` : '<p style="color:var(--sub);font-size:0.82rem;text-align:center;padding:1rem;">Empty — search above to add restaurants</p>'}
+      <div class="collection-actions">
+        <button class="btn" onclick="shareCollection(${ci})">🔗 Share Link</button>
+        <button class="btn" onclick="copyCollectionText(${ci})">📋 Copy as Text</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function searchForCollection(input, ci) {
+  const q = input.value.toLowerCase().trim();
+  const sr = document.getElementById('sr-' + ci);
+  if (!q || q.length < 2) { sr.classList.remove('open'); return; }
+  
+  const existing = new Set(collections[ci].ids);
+  const matches = DATA.filter(r => !existing.has(r.id) && (r.name.toLowerCase().includes(q) || r.neighborhood.toLowerCase().includes(q) || r.cuisine_type.toLowerCase().includes(q))).slice(0, 8);
+  
+  if (!matches.length) { sr.classList.remove('open'); return; }
+  
+  sr.innerHTML = matches.map(r => `<div class="search-result" onclick="addToCollection(${ci},${r.id})">
+    <span class="sr-name">${r.name}</span>
+    <span class="sr-meta">${r.cuisine_type} · ${r.neighborhood}</span>
+  </div>`).join('');
+  sr.classList.add('open');
+}
+
+function addToCollection(ci, rid) {
+  if (collections[ci].ids.includes(rid)) return;
+  collections[ci].ids.push(rid);
+  save();
+  renderCollections();
+  showToast('✅ Added!');
+}
+
+function removeFromCollection(ci, rid) {
+  collections[ci].ids = collections[ci].ids.filter(id => id !== rid);
+  save();
+  renderCollections();
+}
+
+function deleteCollection(ci) {
+  if (!confirm('Delete this collection?')) return;
+  collections.splice(ci, 1);
+  save();
+  renderCollections();
+  showToast('🗑️ Collection deleted');
+}
+
+function shareCollection(ci) {
+  const c = collections[ci];
+  const payload = btoa(JSON.stringify({ name: c.name, desc: c.desc, ids: c.ids }));
+  const url = `${location.origin}${location.pathname}?share=${payload}`;
+  
+  if (navigator.share) {
+    navigator.share({ title: c.name + ' — Menuverso', text: `Check out my collection: ${c.name}`, url: url });
+  } else {
+    navigator.clipboard.writeText(url);
+    showToast('🔗 Share link copied!');
+  }
+}
+
+function copyCollectionText(ci) {
+  const c = collections[ci];
+  const text = `🍽️ ${c.name}\n${c.desc ? c.desc + '\n' : ''}\n` +
+    c.ids.map((id, i) => {
+      const r = getRestaurant(id);
+      return r ? `${i+1}. ${r.name} — ${r.cuisine_type}, ${r.neighborhood}${r.menu_price_range ? ' (' + r.menu_price_range + ')' : ''}` : '';
+    }).filter(Boolean).join('\n') +
+    `\n\n🔗 menuverso.com`;
+  navigator.clipboard.writeText(text);
+  showToast('📋 Copied as text!');
+}
+
+// Close search dropdowns on outside click
+document.addEventListener('click', e => {
+  if (!e.target.closest('.search-add')) {
+    document.querySelectorAll('.search-results').forEach(sr => sr.classList.remove('open'));
+  }
+});
+
+// === Theme ===
+function initTheme() {
+  const s = localStorage.getItem('menuverso_theme');
+  if (s === 'dark' || (!s && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
+    document.documentElement.classList.add('dark');
+    document.getElementById('theme-toggle').textContent = '☀️';
+  }
+}
+function toggleTheme() {
+  const d = document.documentElement.classList.toggle('dark');
+  localStorage.setItem('menuverso_theme', d ? 'dark' : 'light');
+  document.getElementById('theme-toggle').textContent = d ? '☀️' : '🌙';
+}
+
+// === Init ===
+initTheme();
+const favs = JSON.parse(localStorage.getItem('menuverso_favs') || '[]');
+if (favs.length) {
+  document.getElementById('import-favs').style.display = 'block';
+  document.getElementById('fav-count').textContent = favs.length;
+}
+if (!checkSharedURL()) renderCollections();
+</script>
+</body>
+</html>

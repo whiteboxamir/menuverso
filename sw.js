@@ -1,7 +1,12 @@
-const CACHE_NAME = 'menuverso-v1';
-const ASSETS = [
+const CACHE_NAME = 'menuverso-v3';
+const CORE_ASSETS = [
   '/',
   '/index.html',
+  '/finder.html',
+  '/analytics.html',
+  '/lists.html',
+  '/collections.html',
+  '/crawl.html',
   '/restaurants_data.js',
   '/assets/logo.png',
   '/manifest.json'
@@ -11,7 +16,7 @@ const ASSETS = [
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(ASSETS))
+      .then(cache => cache.addAll(CORE_ASSETS))
       .then(() => self.skipWaiting())
   );
 });
@@ -25,9 +30,12 @@ self.addEventListener('activate', e => {
   );
 });
 
-// Fetch: network-first for data, cache-first for assets
+// Fetch: network-first for data, stale-while-revalidate for pages, cache-first for assets
 self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
+  
+  // Skip non-GET requests
+  if (e.request.method !== 'GET') return;
   
   // Network-first for restaurant data (always get latest)
   if (url.pathname.includes('restaurants_data.js')) {
@@ -43,15 +51,34 @@ self.addEventListener('fetch', e => {
     return;
   }
   
-  // Cache-first for everything else
+  // Stale-while-revalidate for HTML pages
+  if (e.request.headers.get('Accept')?.includes('text/html')) {
+    e.respondWith(
+      caches.match(e.request).then(cached => {
+        const fetchPromise = fetch(e.request).then(resp => {
+          if (resp.status === 200) {
+            const clone = resp.clone();
+            caches.open(CACHE_NAME).then(cache => cache.put(e.request, clone));
+          }
+          return resp;
+        }).catch(() => cached);
+        
+        return cached || fetchPromise;
+      })
+    );
+    return;
+  }
+
+  // Cache-first for everything else (CSS, JS, images, fonts)
   e.respondWith(
     caches.match(e.request)
       .then(cached => cached || fetch(e.request).then(resp => {
-        if (resp.status === 200) {
+        if (resp.status === 200 && !url.href.includes('chrome-extension')) {
           const clone = resp.clone();
           caches.open(CACHE_NAME).then(cache => cache.put(e.request, clone));
         }
         return resp;
       }))
+      .catch(() => new Response('Offline', { status: 503 }))
   );
 });

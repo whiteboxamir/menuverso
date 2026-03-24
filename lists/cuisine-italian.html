@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Italian Restaurants | Menuverso — Barcelona</title>
+<meta name="description" content="Best Italian Restaurants. Top-rated Italian restaurants in Barcelona.. Curated by Menuverso from 1,504 Barcelona restaurants.">
+<meta property="og:title" content="Best Italian Restaurants | Menuverso">
+<meta property="og:description" content="Top-rated Italian restaurants in Barcelona.">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#F8FAFC;--card:#FFF;--text:#1E293B;--sub:#64748B;--mut:#94A3B8;--border:#E2E8F0;--accent:#2563EB;--accent-sub:#DBEAFE;--green:#059669;--radius:12px;--shadow:0 2px 8px rgba(0,0,0,0.06);}
+:root.dark{--bg:#0F172A;--card:#1E293B;--text:#F1F5F9;--sub:#94A3B8;--mut:#64748B;--border:#334155;--accent:#3B82F6;--accent-sub:#1E3A5F;--green:#34D399;--shadow:0 2px 8px rgba(0,0,0,0.3);}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background 0.3s,color 0.3s;}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1.5rem;border-bottom:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+.nav-brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.1rem;}
+.nav-brand img{width:28px;height:28px;border-radius:8px;}
+.nav-links{display:flex;align-items:center;gap:1rem;}
+.nav-links a{color:var(--sub);text-decoration:none;font-size:0.82rem;font-weight:500;padding:0.3rem 0.5rem;border-radius:8px;transition:all 0.2s;}
+.nav-links a:hover{color:var(--text);background:var(--accent-sub);}
+.nav-links a.active{color:var(--accent);font-weight:600;}
+.controls-bar{display:flex;gap:0.5rem;align-items:center;}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:0.3rem 0.55rem;cursor:pointer;font-size:0.85rem;color:var(--sub);transition:all 0.2s;}
+.container{max-width:700px;margin:0 auto;padding:1.5rem;}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--sub);text-decoration:none;font-size:0.85rem;font-weight:500;margin-bottom:1.5rem;transition:color 0.2s;}
+.back:hover{color:var(--text);}
+.list-header{text-align:center;margin-bottom:2rem;}
+.list-header h1{font-size:clamp(1.4rem,3vw,2rem);margin-bottom:0.5rem;}
+.list-header p{color:var(--sub);font-size:0.9rem;max-width:500px;margin:0 auto;}
+.list-card{display:flex;gap:1rem;align-items:flex-start;padding:1.25rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:0.75rem;text-decoration:none;color:var(--text);transition:all 0.2s;box-shadow:var(--shadow);}
+.list-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,0.1);border-color:var(--accent);}
+.rank{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;background:var(--accent-sub);color:var(--accent);flex-shrink:0;}
+.rank.gold{background:#FEF3C7;color:#D97706;}
+.rank.silver{background:#F1F5F9;color:#64748B;}
+.rank.bronze{background:#FED7AA;color:#C2410C;}
+.card-body{flex:1;min-width:0;}
+.card-name{font-weight:600;font-size:1rem;margin-bottom:0.25rem;}
+.card-meta{font-size:0.82rem;color:var(--sub);margin-bottom:0.15rem;}
+.card-notes{font-size:0.8rem;color:var(--mut);margin-top:0.3rem;}
+.card-tags{display:flex;gap:0.25rem;margin-top:0.35rem;flex-wrap:wrap;}
+.list-tag{font-size:0.68rem;padding:2px 6px;border-radius:4px;background:var(--accent-sub);color:var(--accent);font-weight:500;}
+.card-score{font-weight:700;font-size:1.2rem;color:var(--green);flex-shrink:0;text-align:center;}
+.card-score small{display:block;font-size:0.6rem;color:var(--mut);font-weight:500;}
+footer{text-align:center;padding:2rem;color:var(--mut);font-size:0.78rem;}
+footer a{color:var(--sub);text-decoration:none;}
+img[src*="logo.png"]{mix-blend-mode:multiply;}
+:root.dark img[src*="logo.png"]{mix-blend-mode:normal;filter:brightness(1.2);}
+@media(max-width:640px){.list-card{flex-direction:column;gap:0.75rem;}.nav-links a span{display:none;}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a href="../index.html" class="nav-brand"><img src="../assets/logo.png" alt="Menuverso"><span>Menuverso</span></a>
+  <div class="nav-links">
+    <a href="../index.html"><span>📋 </span>Database</a>
+    <a href="../finder.html"><span>🔍 </span>Finder</a>
+    <a href="../analytics.html"><span>📊 </span>Analytics</a>
+    <a href="../lists.html" class="active"><span>🏆 </span>Best Of</a>
+  </div>
+  <div class="controls-bar"><button class="theme-btn" id="theme-toggle" onclick="toggleTheme()">🌙</button></div>
+</nav>
+<div class="container">
+  <a href="../lists.html" class="back">← All Curated Lists</a>
+  <div class="list-header">
+    <h1>🍽️ Best Italian Restaurants</h1>
+    <p>Top-rated Italian restaurants in Barcelona.</p>
+  </div>
+  <a href="../r/164.html" class="list-card">
+      <div class="rank gold">1</div>
+      <div class="card-body">
+        <div class="card-name">Contracorrent Bistro</div>
+        <div class="card-meta">🔴 Italian · Gràcia · </div>
+        <div class="card-meta">⭐ 4.7/5 (1990 reviews) · 🚇 Fontana (L3)</div>
+        <div class="card-notes">Catalan-Italian. Tasting menus.</div>
+        <div class="card-tags"><span class="list-tag">tasting-menu</span></div>
+      </div>
+      <div class="card-score"><small>menú</small></div>
+    </a><a href="../r/737.html" class="list-card">
+      <div class="rank silver">2</div>
+      <div class="card-body">
+        <div class="card-name">Annare' Pizzeria</div>
+        <div class="card-meta">🟡 Italian · Poble Sec · </div>
+        <div class="card-meta">⭐ 4.6/5 (300 reviews) · 🚇 Poble Sec (L3)</div>
+        <div class="card-notes">Neapolitan pizzeria. Award-winning octopus pizza.</div>
+        <div class="card-tags"><span class="list-tag">budget-friendly</span><span class="list-tag">pizza</span></div>
+      </div>
+      <div class="card-score"><small>menú</small></div>
+    </a><a href="../r/317.html" class="list-card">
+      <div class="rank bronze">3</div>
+      <div class="card-body">
+        <div class="card-name">La Briciola</div>
+        <div class="card-meta">🟡 Italian · Sants · </div>
+        <div class="card-meta">⭐ 4.5/5 (1678 reviews) · 🚇 Tarragona (L3)</div>
+        <div class="card-notes">Italian restaurant.</div>
+        
+      </div>
+      <div class="card-score"><small>menú</small></div>
+    </a><a href="../r/1215.html" class="list-card">
+      <div class="rank ">4</div>
+      <div class="card-body">
+        <div class="card-name">Pizzería Da Michele Sant Martí</div>
+        <div class="card-meta">🔴 Italian · Sant Martí · </div>
+        <div class="card-meta">⭐ 4.5/5 (1200 reviews)</div>
+        <div class="card-notes">Italian restaurant. in Sant Martí. Highly rated (4.5★, 1,200 reviews)</div>
+        <div class="card-tags"><span class="list-tag">views</span></div>
+      </div>
+      <div class="card-score"><small>menú</small></div>
+    </a><a href="../r/22.html" class="list-card">
+      <div class="rank ">5</div>
+      <div class="card-body">
+        <div class="card-name">Ristorante Gravin</div>
+        <div class="card-meta">🟢 Italian · El Born · 12.90€</div>
+        <div class="card-meta">⭐ 4.5/5 (800 reviews) · 🚇 Jaume I (L4)</div>
+        <div class="card-notes">Authentic Italian from Puglia. Handmade pasta. Daily changing menu.</div>
+        <div class="card-tags"><span class="list-tag">menú-del-día</span></div>
+      </div>
+      <div class="card-score">12.90€<small>menú</small></div>
+    </a><a href="../r/771.html" class="list-card">
+      <div class="rank ">6</div>
+      <div class="card-body">
+        <div class="card-name">Il Duomo & La Mole</div>
+        <div class="card-meta">🟡 Italian · Sant Andreu · </div>
+        <div class="card-meta">⭐ 4.5/5 (600 reviews) · 🚇 Sant Andreu (L1)</div>
+        <div class="card-notes">Sensational Italian pizzas.</div>
+        <div class="card-tags"><span class="list-tag">pizza</span></div>
+      </div>
+      <div class="card-score"><small>menú</small></div>
+    </a><a href="../r/703.html" class="list-card">
+      <div class="rank ">7</div>
+      <div class="card-body">
+        <div class="card-name">La Piccolina Pizzeria</div>
+        <div class="card-meta">🟡 Italian · Poblenou · </div>
+        <div class="card-meta">⭐ 4.5/5 (500 reviews) · 🚇 Poblenou (L4)</div>
+        <div class="card-notes">Authentic Neapolitan pizzeria</div>
+        <div class="card-tags"><span class="list-tag">budget-friendly</span></div>
+      </div>
+      <div class="card-score"><small>menú</small></div>
+    </a><a href="../r/483.html" class="list-card">
+      <div class="rank ">8</div>
+      <div class="card-body">
+        <div class="card-name">Agreste Mar</div>
+        <div class="card-meta">🟡 Italian · Sant Martí · </div>
+        <div class="card-meta">⭐ 4.5/5 (400 reviews) · 🚇 Clot (L1/L2)</div>
+        <div class="card-notes">Italo-Catalan. In hotel The Serras. Fresh pasta.</div>
+        
+      </div>
+      <div class="card-score"><small>menú</small></div>
+    </a><a href="../r/571.html" class="list-card">
+      <div class="rank ">9</div>
+      <div class="card-body">
+        <div class="card-name">Atipical Casa de Menjars</div>
+        <div class="card-meta">🟢 Italian · Poblenou · 14-17€</div>
+        <div class="card-meta">⭐ 4.5/5 (400 reviews) · 🚇 Poblenou (L4)</div>
+        <div class="card-notes">Small Italian bistro. 100% seasonal. Modest prices.</div>
+        <div class="card-tags"><span class="list-tag">cozy</span><span class="list-tag">menú-del-día</span><span class="list-tag">rice-dishes</span></div>
+      </div>
+      <div class="card-score">14-17€<small>menú</small></div>
+    </a><a href="../r/633.html" class="list-card">
+      <div class="rank ">10</div>
+      <div class="card-body">
+        <div class="card-name">V Modern Italian Sant Andreu</div>
+        <div class="card-meta">🟡 Italian · Sant Andreu · </div>
+        <div class="card-meta">⭐ 4.5/5 (400 reviews) · 🚇 Sant Andreu (L1)</div>
+        <div class="card-notes">Spectacular modern Italian</div>
+        <div class="card-tags"><span class="list-tag">creative</span></div>
+      </div>
+      <div class="card-score"><small>menú</small></div>
+    </a>
+</div>
+<footer><a href="../index.html">Menuverso</a> · <a href="../lists.html">All Lists</a> · <a href="../analytics.html">Analytics</a></footer>
+<script>
+function initTheme(){var s=localStorage.getItem('menuverso_theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark');document.getElementById('theme-toggle').textContent='☀️';}}
+function toggleTheme(){var d=document.documentElement.classList.toggle('dark');localStorage.setItem('menuverso_theme',d?'dark':'light');document.getElementById('theme-toggle').textContent=d?'☀️':'🌙';}
+initTheme();
+</script>
+</body>
+</html>

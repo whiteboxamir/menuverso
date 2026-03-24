@@ -1,8 +1,9 @@
 {
   "name": "Menuverso",
   "short_name": "Menuverso",
-  "description": "Exhaustive Barcelona restaurant database with menú del día tracking",
+  "description": "Barcelona's definitive menú del día database. 1,504 restaurants with smart finder, analytics, and lunch crawl planner.",
   "start_url": "/index.html",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#F8FAFC",
   "theme_color": "#1E293B",
@@ -15,7 +16,30 @@
       "purpose": "any maskable"
     }
   ],
-  "categories": ["food", "lifestyle"],
+  "categories": ["food", "lifestyle", "navigation"],
   "lang": "es",
-  "dir": "ltr"
+  "dir": "ltr",
+  "shortcuts": [
+    {
+      "name": "Find Lunch",
+      "short_name": "Finder",
+      "description": "Smart lunch recommendation wizard",
+      "url": "/finder.html",
+      "icons": [{"src": "assets/logo.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "Best Of Barcelona",
+      "short_name": "Best Of",
+      "description": "Curated Top 10 restaurant lists",
+      "url": "/lists.html",
+      "icons": [{"src": "assets/logo.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "Lunch Crawl",
+      "short_name": "Crawl",
+      "description": "Plan a walking restaurant route",
+      "url": "/crawl.html",
+      "icons": [{"src": "assets/logo.png", "sizes": "96x96"}]
+    }
+  ]
 }
