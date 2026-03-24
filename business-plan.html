@@ -161,6 +161,10 @@
       .hero{padding:100px 20px 60px;}
     }
   img[src*="logo.png"] { mix-blend-mode: multiply; }
+    .lang-toggle{position:fixed;bottom:1.25rem;right:1.25rem;z-index:1000;display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:var(--shadow-sm);font-size:0.75rem;font-weight:600;}
+    .lang-toggle button{padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;}
+    .lang-toggle button.active{background:var(--terra);color:#fff;}
+    .lang-toggle button:not(.active){background:var(--glass);color:var(--text-secondary);}
 </style>
 </head>
 <body>
@@ -468,12 +472,137 @@
   <p>Menuverso — Startup Business Plan · March 2026</p>
 </div>
 
+<div class="lang-toggle">
+  <button data-lang="es" class="active" onclick="setLang('es')">ES</button>
+  <button data-lang="ca" onclick="setLang('ca')">CA</button>
+  <button data-lang="en" onclick="setLang('en')">EN</button>
+</div>
+
 <script>
 // Intersection Observer for scroll animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
 }, { threshold: 0.15 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// === TRILINGUAL i18n ===
+const BP_I18N={
+  es:{
+    nav_strategy:'Estrategia',nav_swot:'DAFO',nav_gtm:'Lanzamiento',nav_financials:'Finanzas',nav_risks:'Riesgos',nav_funding:'Inversión',
+    hero_pill:'🚀\u00a0 Plan de Negocio Startup · Marzo 2026',
+    hero_title:'La Plataforma Definitiva para la ',hero_accent:'Economía del Almuerzo de €15B+ en España',
+    hero_tagline:'Empezando como el mayor directorio de menú del día, evolucionando hacia un marketplace de ofertas por suscripción tipo NeoTaste.',
+    stat1:'Restaurantes Catalogados',stat2:'Total Restaurantes BCN',stat3:'Menú del Día Medio',stat4:'Turistas Anuales',
+    s_strategy:'La Estrategia',s_strategy_t:'Dos Fases hacia el Dominio del Mercado',s_strategy_d:'Primero construir la barrera (datos), luego monetizar (ofertas). Manual clásico de marketplace.',
+    phase1_badge:'📚 Fase 1 · Meses 0–9',phase1_t:'El Directorio Definitivo',
+    phase1_d:'Base de datos gratuita y buscable de cada restaurante en Barcelona con menú del día. Agregar demanda, dominar SEO, ser la respuesta por defecto para almorzar.',
+    phase2_badge:'💎 Fase 2 · Meses 6–18+',phase2_t:'Marketplace de Ofertas por Suscripción',
+    phase2_d:'Suscripción tipo NeoTaste (€5.99–6.99/mes) con ofertas exclusivas 2x1. Los restaurantes no pagan — obtienen adquisición de clientes gratuita.',
+    s_problem:'El Problema',s_problem_t:'El Descubrimiento Está Roto para el Mayor Hábito Diario de España',
+    s_competition:'Competencia',s_competition_t:'Por Qué las Soluciones Existentes Fallan',
+    s_swot:'Análisis DAFO',s_swot_t:'Evaluación Estratégica',
+    s_gtm:'Lanzamiento',s_gtm_t:'Hoja de Ruta de 12 Meses',
+    s_financials:'Proyecciones Financieras',s_financials_t:'Escenario Conservador',
+    s_risks:'Riesgos',s_risks_t:'Mitigación de Riesgos',
+    s_funding:'Inversión',s_funding_t:'Estrategia de Financiación',
+    s_ask:'La Petición',
+    s_ask_t:'Hemos construido la mayor base de datos de menú del día de Barcelona. ',s_ask_accent:'Ahora lo convertimos en negocio.',
+    s_ask_d:'1.504 restaurantes, totalmente estructurados. Directorio gratuito lanzando ahora. Ofertas por suscripción tipo NeoTaste en 6 meses. NeoTaste recaudó €21M haciendo esto en Alemania. Nadie lo hace en España.',
+    s_ask_btn:'€150K para llegar a 15K usuarios y 50 restaurantes partner'
+  },
+  ca:{
+    nav_strategy:'Estratègia',nav_swot:'DAFO',nav_gtm:'Llançament',nav_financials:'Finances',nav_risks:'Riscos',nav_funding:'Inversió',
+    hero_pill:'🚀\u00a0 Pla de Negoci Startup · Març 2026',
+    hero_title:'La Plataforma Definitiva per a l\'',hero_accent:'Economia del Dinar de €15B+ a Espanya',
+    hero_tagline:'Començant com el directori més gran de menú del dia, evolucionant cap a un marketplace d\'ofertes per subscripció tipus NeoTaste.',
+    stat1:'Restaurants Catalogats',stat2:'Total Restaurants BCN',stat3:'Menú del Dia Mitjà',stat4:'Turistes Anuals',
+    s_strategy:'L\'Estratègia',s_strategy_t:'Dues Fases cap al Domini del Mercat',s_strategy_d:'Primer construir la barrera (dades), després monetitzar (ofertes). Manual clàssic de marketplace.',
+    phase1_badge:'📚 Fase 1 · Mesos 0–9',phase1_t:'El Directori Definitiu',
+    phase1_d:'Base de dades gratuïta i cercable de cada restaurant a Barcelona amb menú del dia.',
+    phase2_badge:'💎 Fase 2 · Mesos 6–18+',phase2_t:'Marketplace d\'Ofertes per Subscripció',
+    phase2_d:'Subscripció tipus NeoTaste (€5.99–6.99/mes) amb ofertes exclusives 2x1.',
+    s_problem:'El Problema',s_problem_t:'El Descobriment Està Trencat per al Major Hàbit Diari d\'Espanya',
+    s_competition:'Competència',s_competition_t:'Per Què les Solucions Existents Fallen',
+    s_swot:'Anàlisi DAFO',s_swot_t:'Avaluació Estratègica',
+    s_gtm:'Llançament',s_gtm_t:'Full de Ruta de 12 Mesos',
+    s_financials:'Projeccions Financeres',s_financials_t:'Escenari Conservador',
+    s_risks:'Riscos',s_risks_t:'Mitigació de Riscos',
+    s_funding:'Inversió',s_funding_t:'Estratègia de Finançament',
+    s_ask:'La Petició',
+    s_ask_t:'Hem construït la major base de dades de menú del dia de Barcelona. ',s_ask_accent:'Ara ho convertim en negoci.',
+    s_ask_d:'1.504 restaurants, totalment estructurats. Directori gratuït llançant ara. Ofertes per subscripció tipus NeoTaste en 6 mesos.',
+    s_ask_btn:'€150K per arribar a 15K usuaris i 50 restaurants partner'
+  },
+  en:{
+    nav_strategy:'Strategy',nav_swot:'SWOT',nav_gtm:'Go-to-Market',nav_financials:'Financials',nav_risks:'Risks',nav_funding:'Funding',
+    hero_pill:'🚀\u00a0 YC-Style Business Plan · March 2026',
+    hero_title:'The Definitive Platform for Spain\'s ',hero_accent:'€15B+ Lunch Economy',
+    hero_tagline:'Starting as the largest menú del día directory, evolving into a NeoTaste-style subscription deals marketplace.',
+    stat1:'Restaurants Catalogued',stat2:'Total BCN Restaurants',stat3:'Avg Menú del Día',stat4:'Annual Tourists',
+    s_strategy:'The Strategy',s_strategy_t:'Two Phases to Market Dominance',s_strategy_d:'Build the moat first (data), then monetize (deals). Classic marketplace playbook.',
+    phase1_badge:'📚 Phase 1 · Months 0–9',phase1_t:'The Definitive Directory',
+    phase1_d:'Free, searchable database of every restaurant in Barcelona offering menú del día. Aggregate demand, build SEO dominance, become the default lunch answer.',
+    phase2_badge:'💎 Phase 2 · Months 6–18+',phase2_t:'Subscription Deals Marketplace',
+    phase2_d:'NeoTaste-style subscription (€5.99–6.99/mo) offering exclusive 2-for-1 deals. Restaurants pay nothing — they get free customer acquisition.',
+    s_problem:'The Problem',s_problem_t:'Discovery Is Broken for Spain\'s Biggest Daily Habit',
+    s_competition:'Competition',s_competition_t:'Why Existing Solutions Fail',
+    s_swot:'SWOT Analysis',s_swot_t:'Strategic Assessment',
+    s_gtm:'Go-to-Market',s_gtm_t:'12-Month Roadmap',
+    s_financials:'Financial Projections',s_financials_t:'Conservative Scenario',
+    s_risks:'Risks',s_risks_t:'Risk Mitigation',
+    s_funding:'Funding',s_funding_t:'Fundraising Strategy',
+    s_ask:'The Ask',
+    s_ask_t:'We\'ve built the largest menú del día database in Barcelona. ',s_ask_accent:'Now we\'re turning it into a business.',
+    s_ask_d:'1,504 restaurants, fully structured. Free directory launching now. NeoTaste-style subscription deals in 6 months. NeoTaste raised €21M doing this in Germany. Nobody\'s doing it in Spain.',
+    s_ask_btn:'€150K to reach 15K users & 50 restaurant partners'
+  }
+};
+let currentLang=localStorage.getItem('menuverso_lang')||'es';
+function setLang(lang){
+  currentLang=lang;
+  localStorage.setItem('menuverso_lang',lang);
+  document.querySelectorAll('.lang-toggle button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+  const t=BP_I18N[lang];
+  // Nav
+  const navLinks=document.querySelectorAll('.topnav .nav-links a');
+  navLinks[0].textContent=t.nav_strategy;navLinks[1].textContent=t.nav_swot;navLinks[2].textContent=t.nav_gtm;
+  navLinks[3].textContent=t.nav_financials;navLinks[4].textContent=t.nav_risks;navLinks[5].textContent=t.nav_funding;
+  // Hero
+  document.querySelector('.hero .pill').innerHTML=t.hero_pill;
+  document.querySelector('.hero h1').innerHTML=t.hero_title+'<span class="accent">'+t.hero_accent+'</span>';
+  document.querySelector('.hero .tagline').textContent=t.hero_tagline;
+  const stats=document.querySelectorAll('.hero .stat .desc');
+  stats[0].textContent=t.stat1;stats[1].textContent=t.stat2;stats[2].textContent=t.stat3;stats[3].textContent=t.stat4;
+  // Sections
+  const labels=document.querySelectorAll('.label');
+  const h2s=document.querySelectorAll('.section-header h2');
+  const descs=document.querySelectorAll('.section-header p');
+  // Strategy
+  labels[0].textContent=t.s_strategy;h2s[0].textContent=t.s_strategy_t;descs[0].textContent=t.s_strategy_d;
+  document.querySelectorAll('.phase-badge')[0].textContent=t.phase1_badge;
+  document.querySelectorAll('.phase-badge')[1].textContent=t.phase2_badge;
+  // Problem
+  labels[1].textContent=t.s_problem;h2s[1].textContent=t.s_problem_t;
+  // Competition
+  labels[2].textContent=t.s_competition;h2s[2].textContent=t.s_competition_t;
+  // SWOT
+  labels[3].textContent=t.s_swot;h2s[3].textContent=t.s_swot_t;
+  // GTM
+  labels[4].textContent=t.s_gtm;h2s[4].textContent=t.s_gtm_t;
+  // Financials
+  labels[5].textContent=t.s_financials;h2s[5].textContent=t.s_financials_t;
+  // Risks
+  labels[6].textContent=t.s_risks;h2s[6].textContent=t.s_risks_t;
+  // Funding
+  labels[7].textContent=t.s_funding;h2s[7].textContent=t.s_funding_t;
+  // The Ask
+  labels[8].textContent=t.s_ask;
+  document.querySelector('#funding ~ section h2').innerHTML=t.s_ask_t+'<span class="accent">'+t.s_ask_accent+'</span>';
+}
+// Init
+document.querySelectorAll('.lang-toggle button').forEach(b=>b.classList.toggle('active',b.dataset.lang===currentLang));
+if(currentLang!=='en') setLang(currentLang);
+setLang(currentLang);
 </script>
 </body>
 </html>
