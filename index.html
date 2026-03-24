@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Menuverso — Barcelona Restaurant Database</title>
-<meta name="description" content="Exhaustive Barcelona restaurant database. 1500+ restaurants across 18 neighborhoods with menú del día tracking and interactive map.">
+<meta name="description" content="1,504 Barcelona restaurants across 18 neighborhoods with menú del día tracking, ratings, metro stations, and interactive map.">
+<meta name="theme-color" content="#1E293B">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="assets/logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -125,10 +128,18 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-main);
 .hood-meta span{font-size:0.72rem;color:var(--text-sub);}
 .hood-meta .accent-val{color:var(--green);font-weight:600;}
 
+/* Action buttons */
+.action-bar{display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;}
+.action-btn{padding:0.4rem 0.9rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--card);color:var(--text-sub);font-size:0.78rem;font-weight:500;cursor:pointer;transition:all 0.2s;box-shadow:var(--shadow-sm);display:inline-flex;align-items:center;gap:0.3rem;}
+.action-btn:hover{border-color:var(--border-hover);color:var(--text-main);}
+.action-btn.danger{color:var(--red);}
+.action-btn.danger:hover{background:var(--red-bg);border-color:var(--red);}
+.action-btn .badge-count{background:var(--accent);color:#fff;font-size:0.65rem;padding:1px 5px;border-radius:8px;font-weight:600;}
+
 footer{text-align:center;padding:1.5rem;color:var(--text-mut);font-size:0.78rem;border-top:1px solid var(--border);}
 footer a{color:var(--text-sub);text-decoration:none;font-weight:500;}
 footer a:hover{color:var(--text-main);}
-@media(max-width:640px){.grid{grid-template-columns:1fr;}.stats{gap:0.75rem;}.stat{padding:0.75rem;min-width:calc(50% - 0.5rem);}.search-row{flex-direction:column;}}
+@media(max-width:640px){.grid{grid-template-columns:1fr;}.stats{gap:0.75rem;}.stat{padding:0.75rem;min-width:calc(50% - 0.5rem);}.search-row{flex-direction:column;}.filters{flex-direction:column;align-items:stretch;}.action-bar{justify-content:center;}}
 img[src*="logo.png"] { mix-blend-mode: multiply; }
 </style>
 </head>
@@ -183,13 +194,17 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
 </div>
 <div class="count-display" id="count">
   <span id="count-text"></span>
-  <select id="sort-select" class="sort-select">
-    <option value="name">Sort: Name A→Z</option>
-    <option value="rating">Sort: Rating ↓</option>
-    <option value="price-low">Sort: Price ↑</option>
-    <option value="price-high">Sort: Price ↓</option>
-    <option value="reviews">Sort: Reviews ↓</option>
-  </select>
+  <div class="action-bar">
+    <button class="action-btn danger" id="clear-filters-btn" onclick="clearAllFilters()" style="display:none;">✕ Clear Filters <span class="badge-count" id="filter-count">0</span></button>
+    <button class="action-btn" onclick="exportCSV()">📥 Export CSV</button>
+    <select id="sort-select" class="sort-select">
+      <option value="name">Sort: Name A→Z</option>
+      <option value="rating">Sort: Rating ↓</option>
+      <option value="price-low">Sort: Price ↑</option>
+      <option value="price-high">Sort: Price ↓</option>
+      <option value="reviews">Sort: Reviews ↓</option>
+    </select>
+  </div>
 </div>
 <div class="grid" id="grid"><div class="loading">⏳ Loading restaurants...</div></div>
 <div id="map-container"><div id="map"></div></div>
@@ -502,6 +517,81 @@ function filterByHood(hood){
   render();
   document.getElementById('hood-dashboard').classList.remove('visible');
   document.getElementById('dash-toggle').classList.remove('active');
+}
+
+function clearAllFilters(){
+  activeFilters={};
+  document.querySelectorAll('.chip.active,.tag-chip.active').forEach(c=>c.classList.remove('active'));
+  document.getElementById('hood-select').value='';
+  document.getElementById('cuisine-select').value='';
+  document.getElementById('search').value='';
+  render();
+}
+
+function updateFilterBadge(){
+  const count=Object.keys(activeFilters).length+(document.getElementById('search').value?1:0);
+  const btn=document.getElementById('clear-filters-btn');
+  const badge=document.getElementById('filter-count');
+  btn.style.display=count>0?'inline-flex':'none';
+  badge.textContent=count;
+}
+
+// Patch render to update filter badge
+const _origRender=render;
+render=function(){
+  _origRender();
+  updateFilterBadge();
+}
+
+function exportCSV(){
+  const filtered=getFiltered();
+  const headers=['ID','Name','Neighborhood','Cuisine','Menu Tier','Price Range','Pricing Tier','Rating','Reviews','Address','Postal Code','Metro','Phone','Website','Instagram','Google Maps','Notes','Tags'];
+  const rows=filtered.map(r=>[
+    r.id,
+    '"'+(r.name||"").replace(/"/g,'""')+'"',
+    '"'+(r.neighborhood||"").replace(/"/g,'""')+'"',
+    '"'+(r.cuisine_type||"").replace(/"/g,'""')+'"',
+    r.menu_tier||'',
+    '"'+(r.menu_price_range||"").replace(/"/g,'""')+'"',
+    r.pricing_tier||'',
+    r.google_maps_rating||'',
+    r.google_maps_review_count||'',
+    '"'+(r.address_full||"").replace(/"/g,'""')+'"',
+    r.postal_code||'',
+    '"'+(r.metro_station||"").replace(/"/g,'""')+'"',
+    r.phone||'',
+    r.website||'',
+    r.instagram||'',
+    r.google_maps_url||'',
+    '"'+(r.notes||"").replace(/"/g,'""')+'"',
+    '"'+((r.tags||[]).join(', ')).replace(/"/g,'""')+'"'
+  ]);
+  const csv='\uFEFF'+headers.join(',')+"\n"+rows.map(r=>r.join(',')).join("\n");
+  const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=`menuverso_${filtered.length}_restaurants.csv`;
+  a.click();
+}
+
+// Service Worker registration
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('/sw.js').catch(()=>{});
+  });
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Menuverso",
+  "url": "https://whiteboxamir.github.io/menuverso/",
+  "description": "1,504 Barcelona restaurants with menú del día tracking, ratings, and interactive map",
+  "applicationCategory": "FoodEstablishment",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+  "author": {"@type": "Organization", "name": "Menuverso"}
 }
 </script>
 </body>

@@ -5628,8 +5628,8 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "status": "active",
     "coordinates": {
-      "lat": 41.418,
-      "lng": 2.165
+      "lat": 41.4323947,
+      "lng": 2.1532795
     }
   },
   {
@@ -5707,8 +5707,8 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "status": "active",
     "coordinates": {
-      "lat": 41.418,
-      "lng": 2.165
+      "lat": 41.4111347,
+      "lng": 2.1401544
     }
   },
   {
@@ -7424,8 +7424,8 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "status": "active",
     "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
+      "lat": 41.3940151,
+      "lng": 2.1723586
     }
   },
   {
@@ -7576,8 +7576,8 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "status": "active",
     "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
+      "lat": 41.3955215,
+      "lng": 2.1658499
     }
   },
   {
@@ -7652,8 +7652,8 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "status": "active",
     "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
+      "lat": 41.4365898,
+      "lng": 2.183255
     }
   },
   {
@@ -7728,8 +7728,8 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "status": "active",
     "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
+      "lat": 41.3871146,
+      "lng": 2.1608392
     }
   },
   {
@@ -7807,8 +7807,8 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "status": "active",
     "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
+      "lat": 41.3801063,
+      "lng": 2.1549057
     }
   },
   {
