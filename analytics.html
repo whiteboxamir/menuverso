@@ -37,6 +37,10 @@ td:not(:first-child){text-align:right;}
 .badge.exp{background:#FEE2E2;color:#DC2626;}
 footer{text-align:center;padding:2rem 1.5rem;color:var(--text-mut);font-size:0.78rem;border-top:1px solid var(--border);}
 footer a{color:var(--text-sub);text-decoration:none;}
+.lang-toggle{position:fixed;bottom:1.25rem;right:1.25rem;z-index:1000;display:flex;border-radius:20px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);font-size:0.75rem;font-weight:600;}
+.lang-toggle button{padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;}
+.lang-toggle button.active{background:var(--text-main);color:#fff;}
+.lang-toggle button:not(.active){background:var(--card);color:var(--text-sub);}
 </style>
 </head>
 <body>
@@ -77,10 +81,44 @@ footer a{color:var(--text-sub);text-decoration:none;}
   </div>
 </div>
 <footer>Built with ❤️ by <a href="landing.html">Menuverso</a> · <a href="index.html">Database</a> · <a href="analytics.html">Analytics</a></footer>
+<div class="lang-toggle">
+  <button data-lang="es" onclick="setLang('es')">ES</button>
+  <button data-lang="ca" onclick="setLang('ca')">CA</button>
+  <button data-lang="en" class="active" onclick="setLang('en')">EN</button>
+</div>
 
 <script src="restaurants_data.js"></script>
 <script>
 const DATA=window.RESTAURANT_DATA||[];
+let currentLang=localStorage.getItem('menuverso_lang')||'es';
+
+const L={
+  es:{title:'📊 Análisis de Precios',subtitle:'Insights de precios de',restaurants:'restaurantes de Barcelona',back:'← Volver a la Base de Datos',
+    avg:'Precio Medio',median:'Mediana',cheapest:'Más Barato',expensive:'Más Caro',with_price:'Con Precio',
+    hood_price:'💰 Precio por Barrio',cuisine_price:'🍽️ Precio por Cocina',distribution:'📈 Distribución de Precios',
+    best_value:'🏆 Mejor Relación Calidad-Precio',full_breakdown:'📋 Desglose por Barrio',
+    hood:'Barrio',count:'Total',avg_p:'Precio Medio',min:'Mín',max:'Máx',confirmed_pct:'% Confirmado',
+    restaurant:'Restaurante',price:'Precio',rating:'Valoración',area:'Zona',under:'Menos de',over:'Más de'},
+  ca:{title:'📊 Anàlisi de Preus',subtitle:'Insights de preus de',restaurants:'restaurants de Barcelona',back:'← Tornar a la Base de Dades',
+    avg:'Preu Mitjà',median:'Mediana',cheapest:'Més Barat',expensive:'Més Car',with_price:'Amb Preu',
+    hood_price:'💰 Preu per Barri',cuisine_price:'🍽️ Preu per Cuina',distribution:'📈 Distribució de Preus',
+    best_value:'🏆 Millor Relació Qualitat-Preu',full_breakdown:'📋 Desglossament per Barri',
+    hood:'Barri',count:'Total',avg_p:'Preu Mitjà',min:'Mín',max:'Màx',confirmed_pct:'% Confirmat',
+    restaurant:'Restaurant',price:'Preu',rating:'Valoració',area:'Zona',under:'Menys de',over:'Més de'},
+  en:{title:'📊 Price Analytics',subtitle:'Pricing insights from',restaurants:'Barcelona restaurants',back:'← Back to Database',
+    avg:'Average Price',median:'Median Price',cheapest:'Cheapest',expensive:'Most Expensive',with_price:'With Price Data',
+    hood_price:'💰 Price by Neighborhood',cuisine_price:'🍽️ Price by Cuisine',distribution:'📈 Price Distribution',
+    best_value:'🏆 Best Value (High Rating + Low Price)',full_breakdown:'📋 Full Neighborhood Breakdown',
+    hood:'Neighborhood',count:'Count',avg_p:'Avg Price',min:'Min',max:'Max',confirmed_pct:'Confirmed %',
+    restaurant:'Restaurant',price:'Price',rating:'Rating',area:'Area',under:'Under',over:'Over'}
+};
+function t(k){return L[currentLang][k]||k;}
+function setLang(lang){
+  currentLang=lang;
+  localStorage.setItem('menuverso_lang',lang);
+  document.querySelectorAll('.lang-toggle button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+  init();
+}
 
 function parsePrice(s){
   if(!s)return null;
@@ -97,15 +135,16 @@ function init(){
   const max=Math.max(...prices).toFixed(1);
   const median=prices.sort((a,b)=>a-b)[Math.floor(prices.length/2)].toFixed(1);
 
-  document.getElementById('total').textContent=DATA.length;
+  document.querySelector('h1').textContent=t('title');
+  document.querySelector('.subtitle').innerHTML=`${t('subtitle')} <strong id="total">${DATA.length}</strong> ${t('restaurants')} · <a href="index.html">${t('back')}</a>`;
 
   // Top stats
   document.getElementById('top-stats').innerHTML=`
-    <div class="stat-card"><div class="num">€${avg}</div><div class="label">Average Price</div></div>
-    <div class="stat-card"><div class="num">€${median}</div><div class="label">Median Price</div></div>
-    <div class="stat-card"><div class="num">€${min}</div><div class="label">Cheapest</div></div>
-    <div class="stat-card"><div class="num">€${max}</div><div class="label">Most Expensive</div></div>
-    <div class="stat-card"><div class="num">${priced.length}</div><div class="label">With Price Data</div></div>
+    <div class="stat-card"><div class="num">€${avg}</div><div class="label">${t('avg')}</div></div>
+    <div class="stat-card"><div class="num">€${median}</div><div class="label">${t('median')}</div></div>
+    <div class="stat-card"><div class="num">€${min}</div><div class="label">${t('cheapest')}</div></div>
+    <div class="stat-card"><div class="num">€${max}</div><div class="label">${t('expensive')}</div></div>
+    <div class="stat-card"><div class="num">${priced.length}</div><div class="label">${t('with_price')}</div></div>
   `;
 
   // By neighborhood
@@ -195,8 +234,24 @@ function init(){
     const badge=h.avg<13?'cheap':h.avg<16?'mid':'exp';
     return `<tr><td>${h.name}</td><td>${h.total}</td><td><span class="badge ${badge}">€${h.avg.toFixed(1)}</span></td><td>€${h.min.toFixed(0)}</td><td>€${h.max.toFixed(0)}</td><td>${(h.confirmed/h.total*100).toFixed(0)}%</td></tr>`;
   }).join('');
+  // Panel headings
+  document.querySelectorAll('.panel h2')[0].textContent=t('hood_price');
+  document.querySelectorAll('.panel h2')[1].textContent=t('cuisine_price');
+  document.querySelectorAll('.panel h2')[2].textContent=t('distribution');
+  document.querySelectorAll('.panel h2')[3].textContent=t('best_value');
+  document.querySelectorAll('.panel h2')[4].textContent=t('full_breakdown');
+
+  // Table headers
+  document.querySelector('#hood-table thead').innerHTML=`<tr><th>${t('hood')}</th><th>${t('count')}</th><th>${t('avg_p')}</th><th>${t('min')}</th><th>${t('max')}</th><th>${t('confirmed_pct')}</th></tr>`;
+
+  // Best value table headers
+  if(bestValue.length){
+    document.querySelector('#best-value table thead').innerHTML=`<tr><th>${t('restaurant')}</th><th>${t('price')}</th><th>${t('rating')}</th><th>${t('area')}</th></tr>`;
+  }
 }
 
+// Init lang toggle
+document.querySelectorAll('.lang-toggle button').forEach(b=>b.classList.toggle('active',b.dataset.lang===currentLang));
 init();
 </script>
 </body>

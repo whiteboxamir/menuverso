@@ -185,14 +185,14 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
   </div>
 </div>
 <div class="filters" id="filters">
-  <span class="chip g" data-filter="mtier" data-value="confirmed">🟢 Confirmed</span>
-  <span class="chip y" data-filter="mtier" data-value="likely">🟡 Likely</span>
+  <span class="chip g" data-filter="mtier" data-value="confirmed">🟢 <span data-i18n="confirmed">Confirmed</span></span>
+  <span class="chip y" data-filter="mtier" data-value="likely">🟡 <span data-i18n="likely">Likely</span></span>
   <span class="chip r" data-filter="mtier" data-value="none">🔴 <span data-i18n="no_menu">No Menú</span></span>
   <span class="chip" data-filter="fav" data-value="yes">⭐ <span data-i18n="favorites">Favorites</span> <span id="fav-count" style="font-size:0.65rem;opacity:0.7;"></span></span>
   <span class="pipe">|</span>
-  <span class="chip" data-filter="tier" data-value="budget">💚 Budget</span>
-  <span class="chip" data-filter="tier" data-value="mid-range">🧡 Mid-Range</span>
-  <span class="chip" data-filter="tier" data-value="premium">💜 Premium</span>
+  <span class="chip" data-filter="tier" data-value="budget">💚 <span data-i18n="budget">Budget</span></span>
+  <span class="chip" data-filter="tier" data-value="mid-range">🧡 <span data-i18n="mid_range">Mid-Range</span></span>
+  <span class="chip" data-filter="tier" data-value="premium">💜 <span data-i18n="premium">Premium</span></span>
   <span class="pipe">|</span>
   <select id="hood-select" class="sort-select" style="min-width:160px;padding:0.4rem 0.75rem;">
     <option value="">All Neighborhoods</option>
@@ -224,6 +224,7 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
 <footer id="footer">Built with ❤️ by <a href="landing.html">Menuverso</a> · March 2026</footer>
 <div class="lang-toggle">
   <button data-lang="es" class="active" onclick="setLang('es')">ES</button>
+  <button data-lang="ca" onclick="setLang('ca')">CA</button>
   <button data-lang="en" onclick="setLang('en')">EN</button>
 </div>
 <script src="restaurants_data.js"></script>
@@ -261,7 +262,19 @@ const I18N={
     clear:'Clear Filters',export_csv:'Export CSV',dashboard:'Neighborhood Dashboard',
     web:'Web',maps:'Maps',call:'Call',
     on_map:'On Map',tagged:'Tagged',neighborhoods:'Neighborhoods',total:'Total Restaurants',
-    confirmed_menu:'Confirmed Menú',likely_menu:'Likely Menú',no_menu_stat:'No Menú'}
+    confirmed_menu:'Confirmed Menú',likely_menu:'Likely Menú',no_menu_stat:'No Menú'},
+  ca:{subtitle:'Base de dades exhaustiva de restaurants de Barcelona. {total} restaurants en {hoods} barris amb seguiment del menú del dia.',
+    search_placeholder:'🔍 Cercar per nom, cuina, barri, notes...',
+    all_hoods:'Tots els Barris',all_cuisines:'Totes les Cuines',
+    confirmed:'Confirmat',likely:'Probable',no_menu:'Sense Menú',favorites:'Preferits',
+    budget:'Econòmic',mid_range:'Mitjà',premium:'Premium',
+    sort_name:'Ordre: Nom A→Z',sort_rating:'Ordre: Valoració ↓',sort_price_low:'Ordre: Preu ↑',sort_price_high:'Ordre: Preu ↓',sort_reviews:'Ordre: Ressenyes ↓',
+    showing:'Mostrant {n} de {t} restaurants',
+    no_results:'Cap restaurant coincideix. Prova altres filtres.',
+    clear:'Netejar Filtres',export_csv:'Exportar CSV',dashboard:'Panell de Barris',
+    web:'Web',maps:'Maps',call:'Trucar',
+    on_map:'Al Mapa',tagged:'Etiquetats',neighborhoods:'Barris',total:'Total Restaurants',
+    confirmed_menu:'Menú Confirmat',likely_menu:'Menú Probable',no_menu_stat:'Sense Menú'}
 };
 
 if(DATA.length){init()}else{document.getElementById('grid').innerHTML='<div class="no-results">Error: restaurants_data.js not found.</div>'}
