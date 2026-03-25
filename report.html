@@ -3,522 +3,381 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menuverso — Barcelona Restaurant Partnership Intelligence</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Menuverso — Barcelona Market Entry Intelligence for Subscription Dining</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  
   :root {
-    --bg: #FFFFFF;
-    --text: #1E293B;
-    --sub: #64748B;
-    --mut: #94A3B8;
-    --border: #E2E8F0;
-    --accent: #2563EB;
-    --green: #059669;
-    --amber: #D97706;
-    --red: #DC2626;
-    --card: #F8FAFC;
+    --bg: #FFFFFF; --text: #1E293B; --sub: #475569; --mut: #94A3B8;
+    --border: #E2E8F0; --accent: #2563EB; --green: #059669; --amber: #D97706;
+    --red: #DC2626; --card: #F8FAFC; --purple: #7C3AED;
   }
-  
-  body {
-    font-family: 'Inter', -apple-system, sans-serif;
-    color: var(--text);
-    line-height: 1.6;
-    background: var(--bg);
-  }
-  
-  @page {
-    margin: 0.6in 0.7in;
-    size: A4;
-  }
-  
+  body { font-family: 'Inter', -apple-system, sans-serif; color: var(--text); line-height: 1.55; background: var(--bg); }
+  @page { margin: 0.55in 0.65in; size: A4; }
   @media print {
-    body { font-size: 9.5pt; }
+    body { font-size: 9pt; }
     .page-break { page-break-before: always; }
     .no-break { page-break-inside: avoid; }
     .cover { page-break-after: always; }
     h2 { page-break-after: avoid; }
     table { page-break-inside: avoid; }
+    .callout { page-break-inside: avoid; }
   }
-  
   /* Cover */
-  .cover {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    text-align: center;
-    padding: 60px 40px;
-  }
-  .cover-logo {
-    width: 80px; height: 80px;
-    border-radius: 20px;
-    margin-bottom: 32px;
-  }
-  .cover h1 {
-    font-size: 2.4rem;
-    font-weight: 800;
-    line-height: 1.15;
-    margin-bottom: 16px;
-    letter-spacing: -0.02em;
-  }
+  .cover { display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:92vh; text-align:center; padding:60px 40px; }
+  .cover-logo { width:72px; height:72px; border-radius:18px; margin-bottom:28px; }
+  .cover h1 { font-size:2.3rem; font-weight:900; line-height:1.12; margin-bottom:12px; letter-spacing:-0.03em; }
   .cover h1 .accent { color: var(--accent); }
-  .cover .subtitle {
-    font-size: 1.1rem;
-    color: var(--sub);
-    max-width: 520px;
-    margin-bottom: 48px;
-  }
-  .cover-stats {
-    display: flex;
-    gap: 32px;
-    margin-bottom: 48px;
-  }
-  .cover-stat {
-    text-align: center;
-  }
-  .cover-stat .num {
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--accent);
-  }
-  .cover-stat .label {
-    font-size: 0.72rem;
-    color: var(--sub);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-weight: 600;
-  }
-  .cover-meta {
-    font-size: 0.8rem;
-    color: var(--mut);
-  }
-  
+  .cover .subtitle { font-size:1.05rem; color:var(--sub); max-width:540px; margin-bottom:40px; line-height:1.5; }
+  .cover-stats { display:flex; gap:36px; margin-bottom:40px; }
+  .cover-stat { text-align:center; }
+  .cover-stat .num { font-size:2rem; font-weight:900; color:var(--accent); }
+  .cover-stat .label { font-size:0.68rem; color:var(--sub); text-transform:uppercase; letter-spacing:0.07em; font-weight:700; margin-top:2px; }
+  .cover-meta { font-size:0.78rem; color:var(--mut); }
+  .cover-badge { display:inline-block; background:#DBEAFE; color:#1D4ED8; padding:6px 16px; border-radius:20px; font-size:0.75rem; font-weight:700; margin-bottom:24px; letter-spacing:0.03em; }
   /* Content */
-  .content {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  h2 {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin: 2.5rem 0 0.75rem;
-    color: var(--text);
-    border-bottom: 2px solid var(--accent);
-    padding-bottom: 6px;
-  }
-  h2:first-of-type { margin-top: 0; }
-  
-  h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 1.5rem 0 0.5rem;
-    color: var(--text);
-  }
-  
-  p, li {
-    font-size: 0.9rem;
-    color: var(--sub);
-    margin-bottom: 0.5rem;
-  }
-  
-  ul { padding-left: 1.2rem; }
-  li { margin-bottom: 0.3rem; }
-  
-  strong { color: var(--text); }
-  
-  /* Callout */
-  .callout {
-    background: #FEF3C7;
-    border-left: 4px solid var(--amber);
-    padding: 12px 16px;
-    border-radius: 0 8px 8px 0;
-    margin: 1rem 0;
-    font-size: 0.85rem;
-    color: #92400E;
-  }
-  .callout.blue {
-    background: #DBEAFE;
-    border-left-color: var(--accent);
-    color: #1E40AF;
-  }
-  .callout.green {
-    background: #D1FAE5;
-    border-left-color: var(--green);
-    color: #065F46;
-  }
-  .callout.red {
-    background: #FEE2E2;
-    border-left-color: var(--red);
-    color: #991B1B;
-  }
-  
-  /* Tables */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0.75rem 0 1.25rem;
-    font-size: 0.82rem;
-  }
-  th {
-    background: var(--card);
-    font-weight: 600;
-    text-align: left;
-    padding: 8px 10px;
-    border-bottom: 2px solid var(--border);
-    color: var(--text);
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-  td {
-    padding: 7px 10px;
-    border-bottom: 1px solid var(--border);
-    color: var(--sub);
-  }
-  tr:hover { background: #F8FAFC; }
-  
-  /* Quote */
-  blockquote {
-    background: linear-gradient(135deg, #EEF2FF, #DBEAFE);
-    border-left: 4px solid var(--accent);
-    padding: 16px 20px;
-    border-radius: 0 12px 12px 0;
-    margin: 1.5rem 0;
-    font-size: 0.92rem;
-    font-weight: 500;
-    color: #1E40AF;
-    font-style: italic;
-  }
-  
-  /* Matrix */
-  .matrix {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin: 1rem 0;
-  }
-  .matrix-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 14px 16px;
-  }
-  .matrix-card .title {
-    font-weight: 700;
-    font-size: 0.82rem;
-    margin-bottom: 4px;
-  }
-  .matrix-card .desc {
-    font-size: 0.75rem;
-    color: var(--sub);
-  }
-  
-  .footer {
-    text-align: center;
-    padding: 40px 20px;
-    color: var(--mut);
-    font-size: 0.78rem;
-    border-top: 1px solid var(--border);
-    margin-top: 3rem;
-  }
+  .content { max-width:700px; margin:0 auto; padding:0 16px; }
+  h2 { font-size:1.15rem; font-weight:800; margin:2.2rem 0 0.6rem; color:var(--text); border-bottom:2px solid var(--accent); padding-bottom:5px; letter-spacing:-0.01em; }
+  h2:first-of-type { margin-top:0; }
+  h3 { font-size:0.92rem; font-weight:700; margin:1.3rem 0 0.4rem; color:var(--text); }
+  p, li { font-size:0.84rem; color:var(--sub); margin-bottom:0.4rem; }
+  ul { padding-left:1.1rem; }
+  li { margin-bottom:0.25rem; }
+  strong { color:var(--text); }
+  .callout { padding:10px 14px; border-radius:0 8px 8px 0; margin:0.8rem 0; font-size:0.82rem; }
+  .callout.blue { background:#DBEAFE; border-left:3px solid var(--accent); color:#1E40AF; }
+  .callout.green { background:#D1FAE5; border-left:3px solid var(--green); color:#065F46; }
+  .callout.amber { background:#FEF3C7; border-left:3px solid var(--amber); color:#92400E; }
+  .callout.red { background:#FEE2E2; border-left:3px solid var(--red); color:#991B1B; }
+  .callout.purple { background:#EDE9FE; border-left:3px solid var(--purple); color:#5B21B6; }
+  table { width:100%; border-collapse:collapse; margin:0.6rem 0 1rem; font-size:0.78rem; }
+  th { background:var(--card); font-weight:700; text-align:left; padding:6px 8px; border-bottom:2px solid var(--border); color:var(--text); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.05em; }
+  td { padding:5px 8px; border-bottom:1px solid var(--border); color:var(--sub); }
+  blockquote { background:linear-gradient(135deg,#EEF2FF,#DBEAFE); border-left:3px solid var(--accent); padding:14px 18px; border-radius:0 10px 10px 0; margin:1.2rem 0; font-size:0.88rem; font-weight:500; color:#1E40AF; font-style:italic; }
+  .kpi-row { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:0.8rem 0; }
+  .kpi { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; text-align:center; }
+  .kpi .val { font-size:1.5rem; font-weight:900; }
+  .kpi .lbl { font-size:0.65rem; color:var(--sub); text-transform:uppercase; letter-spacing:0.06em; font-weight:700; margin-top:2px; }
+  .footer { text-align:center; padding:30px 16px; color:var(--mut); font-size:0.72rem; border-top:1px solid var(--border); margin-top:2.5rem; }
+  .highlight { background:#FEF3C7; padding:1px 4px; border-radius:3px; font-weight:600; }
+  .section-num { color:var(--accent); font-weight:900; }
 </style>
 </head>
 <body>
 
-<!-- COVER -->
+<!-- ══════════════ COVER ══════════════ -->
 <div class="cover">
   <img src="assets/logo.png" alt="Menuverso" class="cover-logo">
-  <h1>Barcelona Restaurant<br><span class="accent">Partnership Intelligence</span></h1>
-  <p class="subtitle">Market analysis and competitive landscape for launching a subscription dining club in Spain's largest restaurant market.</p>
-  
+  <div class="cover-badge">CONFIDENTIAL · MARCH 2026</div>
+  <h1>Barcelona Market Entry<br><span class="accent">Intelligence Brief</span></h1>
+  <p class="subtitle">Supply-side infrastructure, competitive landscape, and go-to-market analysis for launching a subscription dining club in Spain's largest restaurant market.</p>
   <div class="cover-stats">
-    <div class="cover-stat">
-      <div class="num">1,458</div>
-      <div class="label">Restaurants Mapped</div>
-    </div>
-    <div class="cover-stat">
-      <div class="num">18</div>
-      <div class="label">Neighborhoods</div>
-    </div>
-    <div class="cover-stat">
-      <div class="num">28</div>
-      <div class="label">Cuisine Types</div>
-    </div>
-    <div class="cover-stat">
-      <div class="num">0</div>
-      <div class="label">Competitors</div>
-    </div>
+    <div class="cover-stat"><div class="num">1,458</div><div class="label">Restaurants Mapped</div></div>
+    <div class="cover-stat"><div class="num">18</div><div class="label">Neighborhoods</div></div>
+    <div class="cover-stat"><div class="num">€67B</div><div class="label">ES Foodservice Market</div></div>
+    <div class="cover-stat"><div class="num">0</div><div class="label">Competitors</div></div>
   </div>
-  
-  <p class="cover-meta">Menuverso · March 2026 · Confidential</p>
+  <p class="cover-meta">Prepared by Menuverso · <a href="https://whiteboxamir.github.io/menuverso/" style="color:var(--accent);text-decoration:none;">whiteboxamir.github.io/menuverso</a></p>
 </div>
 
-<!-- PAGE 1: MARKET OPPORTUNITY -->
+<!-- ══════════════ EXECUTIVE SUMMARY ══════════════ -->
 <div class="content">
 
-<h2>🎯 The Opportunity</h2>
+<h2><span class="section-num">01</span> · Executive Summary</h2>
 
 <div class="callout green">
-  <strong>Spain has zero subscription dining clubs.</strong> No 2-for-1 platforms. No consumer dining subscriptions. The entire Southern European restaurant deal market is uncontested.
+  <strong>Spain has zero subscription dining clubs.</strong> No 2-for-1 platforms. No consumer dining subscriptions. The €67B Spanish foodservice market — with Europe's highest dine-out frequency — is completely uncontested in the subscription dining category.
 </div>
 
-<p>Barcelona is Europe's 4th most-visited city with <strong>32M+ annual tourists</strong> and a metro population of <strong>5.6M</strong>. The restaurant landscape includes <strong>7,500+ establishments</strong>, with dining out deeply embedded in the culture. Yet no platform offers the subscription dining club model that has scaled rapidly in Germany, the UK, and the Netherlands.</p>
+<p>Barcelona offers a uniquely favorable combination for a subscription dining club launch: <strong>32M annual tourists</strong> generating continuous rotating demand, <strong>5.6M metro population</strong> with 50% dining out weekly, an average meal spend of <strong>€27</strong> in the sweet spot for 2-for-1 economics, and <strong>zero competitive presence</strong> in the subscription deals category.</p>
 
-<p>Menuverso has built the supply-side intelligence infrastructure: <strong>1,458 restaurants</strong> across 18 neighborhoods, profiled with ratings, pricing, contact data, cuisine taxonomy, and geo-coordinates. This is the launchpad for Spain's first restaurant deal subscription.</p>
+<p>Menuverso has mapped <strong>1,458 restaurants</strong> across 18 core neighborhoods with ratings, pricing, cuisine taxonomy, contact data, and geo-coordinates — the supply-side intelligence required to launch.</p>
 
-<h2>🏆 How Barcelona Compares</h2>
 
+<!-- ══════════════ WHY BCN ══════════════ -->
+<h2 class="page-break"><span class="section-num">02</span> · Why Barcelona Is the Ideal Launch Market</h2>
+
+<h3>Spain's Dining Economy</h3>
+<div class="kpi-row">
+  <div class="kpi"><div class="val" style="color:var(--accent);">€67B</div><div class="lbl">Foodservice Market (2024)</div></div>
+  <div class="kpi"><div class="val" style="color:var(--green);">50%</div><div class="lbl">Dine Out Weekly</div></div>
+  <div class="kpi"><div class="val" style="color:var(--amber);">€27</div><div class="lbl">Avg Spend / Meal</div></div>
+  <div class="kpi"><div class="val" style="color:var(--purple);">+13.5%</div><div class="lbl">BCN F&B Growth '24</div></div>
+</div>
+
+<ul>
+  <li><strong>Highest dine-out frequency in Europe.</strong> 50% of Spanish consumers dine out at least once per week — a 28% increase over 2023.</li>
+  <li><strong>55.7% of diners</strong> spend between €15 and €30 per meal — directly in the 2-for-1 sweet spot.</li>
+  <li><strong>Tourist spending:</strong> €101/day average in Barcelona, with 45.4% going to food & beverage. International tourists spend 15% more (€31/meal avg).</li>
+  <li><strong>Bar and restaurant spending in Barcelona grew 13.5%</strong> in Q2 2024 vs pre-pandemic baseline.</li>
+</ul>
+
+<h3>Barcelona vs. Established Markets</h3>
 <table>
-  <thead>
-    <tr>
-      <th>Metric</th>
-      <th>Berlin</th>
-      <th>Hamburg</th>
-      <th>Munich</th>
-      <th style="color:#2563EB;">Barcelona</th>
-    </tr>
-  </thead>
+  <thead><tr><th>Metric</th><th>Berlin</th><th>Hamburg</th><th>Munich</th><th style="color:#2563EB;">Barcelona</th></tr></thead>
   <tbody>
-    <tr>
-      <td>Restaurant Deals / Mapped</td>
-      <td>1,526</td>
-      <td>626</td>
-      <td>630</td>
-      <td style="color:#2563EB;font-weight:700;">1,458</td>
-    </tr>
-    <tr>
-      <td>Population (Metro)</td>
-      <td>3.6M</td>
-      <td>1.9M</td>
-      <td>1.5M</td>
-      <td>5.6M</td>
-    </tr>
-    <tr>
-      <td>Annual Tourists</td>
-      <td>14M</td>
-      <td>7M</td>
-      <td>8M</td>
-      <td style="color:#059669;font-weight:700;">32M</td>
-    </tr>
-    <tr>
-      <td>Existing Deal Platforms</td>
-      <td>Established</td>
-      <td>Established</td>
-      <td>Established</td>
-      <td style="color:#059669;font-weight:700;">None</td>
-    </tr>
-    <tr>
-      <td>Avg Restaurant Rating</td>
-      <td>4.1</td>
-      <td>4.0</td>
-      <td>4.2</td>
-      <td style="color:#2563EB;font-weight:700;">4.25</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 class="page-break">📊 Competitive Landscape</h2>
-
-<p>Restaurants in Barcelona currently use these platforms for customer acquisition and deals. <strong>None offer the subscription dining club model.</strong></p>
-
-<h3>Subscription Dining Clubs (The Neotaste Category)</h3>
-<table>
-  <thead>
-    <tr><th>Platform</th><th>Markets</th><th>Model</th><th>Cost to Restaurant</th><th>Scale</th></tr>
-  </thead>
-  <tbody>
-    <tr><td><strong>Neotaste</strong></td><td>🇩🇪 🇳🇱 🇬🇧 (48+ cities)</td><td>€4.99/mo sub, 2-for-1</td><td style="color:#059669;font-weight:600;">Free</td><td>5,000+ partners, 1M+ users</td></tr>
-    <tr><td><strong>Tastecard</strong></td><td>🇬🇧 UK</td><td>~£5/mo sub, 2-for-1 or 50% off</td><td style="color:#059669;font-weight:600;">Free</td><td>6,000+ restaurants</td></tr>
-    <tr><td><strong>Dine Club</strong></td><td>🇬🇧 UK</td><td>Sub, 2-for-1 + 25-50% off</td><td style="color:#059669;font-weight:600;">Free</td><td>~2,000+</td></tr>
-    <tr><td><strong>Hi-Life</strong></td><td>🇬🇧 🇮🇪 UK/Ireland</td><td>Classic/Platinum, 2-for-1</td><td style="color:#059669;font-weight:600;">Free</td><td>5,000+</td></tr>
-    <tr><td><strong>Spain</strong></td><td>🇪🇸</td><td>—</td><td>—</td><td style="color:#DC2626;font-weight:600;">Nobody.</td></tr>
-  </tbody>
-</table>
-
-<h3>Booking & Discount Platforms (Different Model)</h3>
-<table>
-  <thead>
-    <tr><th>Platform</th><th>Spain Presence</th><th>Model</th><th>Cost to Restaurant</th></tr>
-  </thead>
-  <tbody>
-    <tr><td><strong>TheFork / ElTenedor</strong></td><td>🟢 Dominant (12,000+ ES)</td><td>Commission per booking</td><td style="color:#D97706;">€2-3 per cover</td></tr>
-    <tr><td><strong>Groupon</strong></td><td>🟡 Active</td><td>Deep discount coupons</td><td style="color:#DC2626;">50% revenue share</td></tr>
-    <tr><td><strong>DiscoEat</strong></td><td>🟡 Moderate</td><td>30% off at off-peak hours</td><td style="color:#D97706;">Revenue share</td></tr>
-    <tr><td><strong>Too Good To Go</strong></td><td>🟢 Active in BCN</td><td>Surplus food boxes</td><td>Voluntary</td></tr>
+    <tr><td>Restaurant Deals / Mapped</td><td>1,524</td><td>626</td><td>628</td><td style="color:#2563EB;font-weight:700;">1,458</td></tr>
+    <tr><td>Metro Population</td><td>3.6M</td><td>1.9M</td><td>1.5M</td><td style="font-weight:600;">5.6M</td></tr>
+    <tr><td>Annual Tourists</td><td>14M</td><td>7M</td><td>8M</td><td style="color:#059669;font-weight:700;">32M</td></tr>
+    <tr><td>Avg Meal Spend</td><td>€24</td><td>€22</td><td>€26</td><td style="font-weight:600;">€27</td></tr>
+    <tr><td>Subscription Dining Clubs</td><td>Established</td><td>Established</td><td>Established</td><td style="color:#DC2626;font-weight:700;">None</td></tr>
   </tbody>
 </table>
 
 <div class="callout blue">
-  <strong>The critical difference:</strong> TheFork charges restaurants per booking. Groupon takes 50% of revenue. The subscription club model (Neotaste, Tastecard) charges <strong>nothing</strong> to restaurants — the consumer pays the subscription. No platform in Spain offers this.
+  <strong>The key insight:</strong> Barcelona has comparable restaurant density to Berlin (1,458 vs 1,524), nearly 4× the metro population, over 2× the tourist traffic, and higher meal spend — yet zero competition in the subscription dining space.
 </div>
+
+
+<!-- ══════════════ COMPETITIVE LANDSCAPE ══════════════ -->
+<h2 class="page-break"><span class="section-num">03</span> · Competitive Landscape: What Restaurants Currently Use</h2>
+
+<p>Barcelona restaurants rely on several platforms for customer acquisition — but none offer the subscription club model.</p>
+
+<h3>The Playing Field</h3>
+<table>
+  <thead><tr><th>Platform</th><th>Model</th><th>Cost to Restaurant</th><th>Spain Presence</th></tr></thead>
+  <tbody>
+    <tr><td><strong>TheFork / ElTenedor</strong></td><td>Commission per booking</td><td style="color:#D97706;font-weight:600;">€2-3 per cover</td><td>🟢 12,000+ partners</td></tr>
+    <tr><td><strong>Groupon</strong></td><td>Deep discount coupons</td><td style="color:#DC2626;font-weight:600;">50% revenue share</td><td>🟡 Active</td></tr>
+    <tr><td><strong>DiscoEat</strong></td><td>30% off at off-peak hours</td><td style="color:#D97706;">Revenue share</td><td>🟡 Moderate</td></tr>
+    <tr><td><strong>Too Good To Go</strong></td><td>Surplus food anti-waste</td><td>Voluntary</td><td>🟢 Active</td></tr>
+    <tr><td><strong>Subscription Dining Club</strong></td><td>€4.99/mo consumer sub, 2-for-1</td><td style="color:#059669;font-weight:700;">Free</td><td style="color:#DC2626;font-weight:700;">❌ Nobody</td></tr>
+  </tbody>
+</table>
 
 <h3>Why the Subscription Model Wins for Restaurants</h3>
 <table>
-  <thead>
-    <tr><th></th><th>TheFork</th><th>Groupon</th><th>Subscription Club</th></tr>
-  </thead>
+  <thead><tr><th></th><th>TheFork</th><th>Groupon</th><th>Subscription Club</th></tr></thead>
   <tbody>
-    <tr><td><strong>Cost to restaurant</strong></td><td>€2-3/booking</td><td>50% revenue share</td><td style="color:#059669;font-weight:600;">Free</td></tr>
-    <tr><td><strong>Consumer model</strong></td><td>Free app, full price</td><td>Prepaid coupons</td><td>€4.99/mo subscription</td></tr>
+    <tr><td><strong>Cost to restaurant</strong></td><td>€2-3/booking</td><td>50% rev share</td><td style="color:#059669;font-weight:700;">Free</td></tr>
     <tr><td><strong>Deal type</strong></td><td>% off bill</td><td>Deep discount coupons</td><td>2-for-1 main courses</td></tr>
-    <tr><td><strong>Margin impact</strong></td><td>Moderate</td><td style="color:#DC2626;">Devastating</td><td style="color:#059669;">Preserved</td></tr>
-    <tr><td><strong>Customer quality</strong></td><td>Mixed</td><td>Bargain hunters</td><td style="color:#059669;">Repeat subscribers</td></tr>
-    <tr><td><strong>Spain presence</strong></td><td>✅ Dominant</td><td>✅ Active</td><td style="color:#DC2626;font-weight:600;">❌ Nobody</td></tr>
+    <tr><td><strong>Restaurant margin impact</strong></td><td>Moderate</td><td style="color:#DC2626;">Devastating</td><td style="color:#059669;">Preserved</td></tr>
+    <tr><td><strong>Customer type</strong></td><td>Mixed one-time</td><td>Bargain hunters</td><td style="color:#059669;">Repeat subscribers</td></tr>
+    <tr><td><strong>Off-peak optimization</strong></td><td>Limited</td><td>None</td><td style="color:#059669;">Built-in (time slots)</td></tr>
   </tbody>
 </table>
 
-
-<h2 class="page-break">📈 Menuverso Database Intelligence</h2>
-
-<p>Menuverso has built a comprehensive restaurant intelligence database covering Barcelona's core dining landscape.</p>
-
-<h3>Database Coverage</h3>
-<table>
-  <thead>
-    <tr><th>Data Field</th><th>Coverage</th><th>Significance</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Google Ratings</td><td style="color:#059669;font-weight:600;">100% (1,458)</td><td>Quality filter — 94% rated 4.0+</td></tr>
-    <tr><td>Cuisine Taxonomy</td><td style="color:#059669;font-weight:600;">100% (1,458)</td><td>28 types, enables category-based discovery</td></tr>
-    <tr><td>Geo-coordinates</td><td style="color:#059669;font-weight:600;">99% (1,442)</td><td>Map-based app discovery ready</td></tr>
-    <tr><td>Google Maps Links</td><td style="color:#059669;font-weight:600;">100% (1,458)</td><td>Direct verification of every listing</td></tr>
-    <tr><td>Addresses</td><td>79% (1,149)</td><td>Walk-in and logistics</td></tr>
-    <tr><td>Pricing Data</td><td>34% (497)</td><td>Deal economics modeling</td></tr>
-    <tr><td>Phone Numbers</td><td>22% (324)</td><td>Direct outreach capability</td></tr>
-    <tr><td>Websites</td><td>21% (302)</td><td>Digital presence validation</td></tr>
-    <tr><td>Photos</td><td>26% (380)</td><td>App listing visual assets</td></tr>
-  </tbody>
-</table>
-
-<h3>Restaurant Quality</h3>
-<table>
-  <thead>
-    <tr><th>Rating Threshold</th><th>Count</th><th>% of Database</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Rating ≥ 4.5 (Excellent)</td><td>173</td><td>12%</td></tr>
-    <tr><td>Rating ≥ 4.0 (Strong)</td><td style="color:#059669;font-weight:600;">1,372</td><td style="color:#059669;font-weight:600;">94%</td></tr>
-    <tr><td>Avg Rating</td><td colspan="2" style="color:#2563EB;font-weight:600;">4.25 ★</td></tr>
-  </tbody>
-</table>
-
-<h3>Price Sweet Spot Analysis</h3>
-<p>Of the 497 restaurants with pricing data:</p>
-<table>
-  <thead>
-    <tr><th>Price Range</th><th>Count</th><th>Deal Viability</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>€12-25 (Sweet Spot)</td><td style="color:#059669;font-weight:600;">321 (65%)</td><td>✅ Ideal for 2-for-1 deals — enough margin to absorb</td></tr>
-    <tr><td>Under €12</td><td>112 (22%)</td><td>⚠️ Margins too thin for 2-for-1</td></tr>
-    <tr><td>Over €25</td><td>64 (13%)</td><td>🟡 Premium segment — possible with modified deals</td></tr>
-  </tbody>
-</table>
-
-<div class="callout">
-  <strong>Average price: €12.70.</strong> If the 65% sweet-spot ratio holds across the full database, Barcelona has ~950 restaurants where 2-for-1 deal economics work.
+<div class="callout amber">
+  <strong>The pitch to restaurants:</strong> "TheFork charges you €2-3 for every diner we send. Groupon takes 50% of your revenue. We charge you nothing. You offer a 2-for-1 deal, we bring you subscribers who become regulars. You only 'pay' when customers actually walk through the door."
 </div>
 
 
-<h2 class="page-break">🚀 Launch Readiness</h2>
+<!-- ══════════════ GTM: UNIT ECONOMICS ══════════════ -->
+<h2 class="page-break"><span class="section-num">04</span> · Go-to-Market: Unit Economics & Revenue Model</h2>
 
-<h3>Pipeline Tiers (Honest Assessment)</h3>
+<h3>Subscriber Revenue Model (Barcelona)</h3>
 <table>
-  <thead>
-    <tr><th>Tier</th><th>Count</th><th>Definition</th><th>Status</th></tr>
-  </thead>
+  <thead><tr><th>Metric</th><th>Conservative</th><th>Base Case</th><th>Aggressive</th></tr></thead>
   <tbody>
-    <tr>
-      <td style="color:#059669;font-weight:700;">🟢 Deal-Viable</td>
-      <td style="font-weight:700;">80</td>
-      <td>Phone + rating ≥4.0 + pricing + web/IG</td>
-      <td>Can model the deal AND contact today</td>
-    </tr>
-    <tr>
-      <td style="color:#D97706;font-weight:700;">🟡 Contactable</td>
-      <td style="font-weight:700;">313</td>
-      <td>Phone + rating ≥4.0</td>
-      <td>Can cold-call, need more data to model</td>
-    </tr>
-    <tr>
-      <td style="color:#F97316;font-weight:700;">🟠 In Pipeline</td>
-      <td style="font-weight:700;">674</td>
-      <td>Have at least one enrichment signal</td>
-      <td>In funnel, need enrichment pass</td>
-    </tr>
-    <tr>
-      <td>⚪ Mapped</td>
-      <td style="font-weight:700;">1,458</td>
-      <td>Total database</td>
-      <td>Market coverage breadth</td>
-    </tr>
+    <tr><td><strong>Subscribers (Month 12)</strong></td><td>5,000</td><td style="font-weight:700;">15,000</td><td>30,000</td></tr>
+    <tr><td>ARPU (monthly)</td><td>€4.99</td><td>€4.49</td><td>€3.99</td></tr>
+    <tr><td><strong>Monthly Recurring Revenue</strong></td><td>€24,950</td><td style="color:#059669;font-weight:700;">€67,350</td><td>€119,700</td></tr>
+    <tr><td><strong>Annual Run Rate</strong></td><td>€299K</td><td style="color:#059669;font-weight:700;">€808K</td><td>€1.44M</td></tr>
+    <tr><td>Active restaurant partners</td><td>150</td><td>350</td><td>600</td></tr>
+    <tr><td>Deals per subscriber/mo</td><td>1.5</td><td>2.0</td><td>2.5</td></tr>
   </tbody>
 </table>
 
-<h3>Enrichment Potential</h3>
-<p>A Google Maps batch extraction pass can significantly boost the pipeline:</p>
+<div class="callout purple">
+  <strong>Reference benchmark:</strong> Neotaste reached 750K+ users and ~3,000 restaurant partners across 27 German cities in 2.5 years, generating an estimated ~€20M annual revenue. Barcelona — a single city with 5.6M metro pop + 32M tourists — is a comparable TAM to Neotaste's top 3 German cities combined.
+</div>
+
+<h3>Consumer Acquisition</h3>
 <table>
-  <thead>
-    <tr><th>Field</th><th>Current</th><th>Post-Enrichment (est.)</th><th>Source</th></tr>
-  </thead>
+  <thead><tr><th>Channel</th><th>Estimated CAC</th><th>Notes</th></tr></thead>
   <tbody>
-    <tr><td>Phone Numbers</td><td>324 (22%)</td><td style="color:#059669;">~1,000+ (70%)</td><td>Google Maps structured data</td></tr>
-    <tr><td>Opening Hours</td><td>0 (0%)</td><td style="color:#059669;">~1,200+ (80%)</td><td>Google Maps structured data</td></tr>
-    <tr><td>Instagram</td><td>12 (1%)</td><td style="color:#059669;">~250+ (17%)</td><td>Google Maps social links</td></tr>
-    <tr><td>Websites</td><td>302 (21%)</td><td style="color:#059669;">~800+ (55%)</td><td>Google Maps business info</td></tr>
+    <tr><td>Organic / Instagram</td><td style="color:#059669;">€0-5</td><td>Food content travels virally in BCN; tourist + local audience</td></tr>
+    <tr><td>Google Ads (local)</td><td>€8-15</td><td>"Restaurant deals Barcelona" — zero competitors bidding</td></tr>
+    <tr><td>Referral program</td><td style="color:#059669;">€3-6</td><td>Free month for referrer + referred; proven in Germany</td></tr>
+    <tr><td>Tourism partnerships</td><td>€2-8</td><td>Hotel concierge cards, hostel partnerships, airport kiosks</td></tr>
+    <tr><td>Influencer seeding</td><td>€5-12</td><td>BCN food influencer scene is massive; micro-influencers</td></tr>
+  </tbody>
+</table>
+
+<div class="callout blue">
+  <strong>Blended CAC target: €8-12.</strong> At €4.99/mo with an average subscription lifetime of 8 months (industry avg for dining apps, 12.7% monthly churn), the LTV per subscriber is ~€40. This yields a healthy <strong>LTV:CAC ratio of 3-5×.</strong>
+</div>
+
+<h3>Restaurant Acquisition (Supply Side)</h3>
+<table>
+  <thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead>
+  <tbody>
+    <tr><td>Total restaurants mapped</td><td style="font-weight:700;">1,458</td><td>Menuverso database</td></tr>
+    <tr><td>Contactable today (phone + rated 4.0+)</td><td style="font-weight:700;">313</td><td>Menuverso data</td></tr>
+    <tr><td>Expected conversion (cold outreach)</td><td>25-40%</td><td>Industry benchmarks for free-to-join platforms</td></tr>
+    <tr><td>Cost per restaurant signed</td><td style="color:#059669;font-weight:600;">€0</td><td>Free to join — no commissions, no fees</td></tr>
+    <tr><td>Est. signed partners (Month 3)</td><td style="font-weight:700;">80-125</td><td>313 contactable × 25-40% conversion</td></tr>
   </tbody>
 </table>
 
 <div class="callout green">
-  <strong>Post-enrichment pipeline projection:</strong> Deal-Viable restaurants would jump from 80 → ~300-400. Contactable from 313 → ~800+. The database is one enrichment pass away from being launch-ready.
+  <strong>Key advantage:</strong> Because the subscription model is <strong>free for restaurants</strong>, the conversion rate from cold outreach is dramatically higher than paid platforms (TheFork: restaurants must agree to pay commission). Expected 25-40% sign-up rate based on Neotaste/Tastecard onboarding data.
 </div>
 
-<h3>Modeled Launch Timeline</h3>
+
+<!-- ══════════════ GTM: LAUNCH PLAYBOOK ══════════════ -->
+<h2 class="page-break"><span class="section-num">05</span> · Launch Playbook: 6-Month Barcelona GTM</h2>
+
 <table>
-  <thead>
-    <tr><th>Phase</th><th>Timeline</th><th>Target</th></tr>
-  </thead>
+  <thead><tr><th>Phase</th><th>Timeline</th><th>Actions</th><th>Target</th></tr></thead>
   <tbody>
-    <tr><td>Data enrichment (phones, hours, IG)</td><td>Week 1-2</td><td>Boost Deal-Viable to 300+</td></tr>
-    <tr><td>Sign first partners (cold-call top 80)</td><td>Week 2-4</td><td>50+ signed restaurants</td></tr>
-    <tr><td>Expand outreach to enriched pipeline</td><td>Month 2</td><td>200+ active partners</td></tr>
-    <tr><td>Consumer launch with 200+ restaurants</td><td>Month 3</td><td>First subscribers</td></tr>
-    <tr><td>Scale to 500+ partners</td><td>Month 4-6</td><td>Full BCN coverage</td></tr>
+    <tr>
+      <td style="font-weight:700;color:var(--accent);">Phase 0<br><small>Data Enrichment</small></td>
+      <td>Week 1-2</td>
+      <td>Batch extract phone, hours, Instagram from Google Maps for all 1,458 restaurants</td>
+      <td>Contactable pipeline: 313 → 800+</td>
+    </tr>
+    <tr>
+      <td style="font-weight:700;color:var(--green);">Phase 1<br><small>Partner Signing</small></td>
+      <td>Week 3-6</td>
+      <td>Cold-call top 200 Deal-Viable restaurants. Focus on Eixample, Gràcia, Barri Gòtic (highest density)</td>
+      <td>100+ signed restaurant partners</td>
+    </tr>
+    <tr>
+      <td style="font-weight:700;color:var(--amber);">Phase 2<br><small>Soft Launch</small></td>
+      <td>Month 2-3</td>
+      <td>Beta launch with 100+ restaurants. Instagram seeding, micro-influencer campaigns, referral program</td>
+      <td>1,000-3,000 subscribers</td>
+    </tr>
+    <tr>
+      <td style="font-weight:700;color:var(--purple);">Phase 3<br><small>Scale</small></td>
+      <td>Month 4-6</td>
+      <td>Paid acquisition (Google, Meta). Tourism partnerships. Expand to remaining neighborhoods</td>
+      <td>10,000+ subs, 300+ restaurants</td>
+    </tr>
+    <tr>
+      <td style="font-weight:700;color:var(--red);">Phase 4<br><small>Expansion</small></td>
+      <td>Month 7-12</td>
+      <td>Madrid market entry. Menuverso methodology replicable. Corporate dining programs</td>
+      <td>25,000+ subs multi-city</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Zone Prioritization (Where to Launch First)</h3>
+<table>
+  <thead><tr><th>Priority</th><th>Neighborhood</th><th>Restaurants</th><th>Partner-Ready</th><th>Why First</th></tr></thead>
+  <tbody>
+    <tr><td style="color:var(--green);font-weight:700;">1</td><td><strong>Eixample</strong></td><td>316</td><td>23</td><td>Highest density, residential + tourist mix</td></tr>
+    <tr><td style="color:var(--green);font-weight:700;">2</td><td><strong>Gràcia</strong></td><td>118</td><td>14</td><td>Local foodie hub, strong word-of-mouth</td></tr>
+    <tr><td style="color:var(--green);font-weight:700;">3</td><td><strong>Barri Gòtic</strong></td><td>77</td><td>10</td><td>Tourist epicenter, high footfall</td></tr>
+    <tr><td style="color:var(--amber);">4</td><td>El Born</td><td>84</td><td>6</td><td>Trendy dining scene, experience-seekers</td></tr>
+    <tr><td style="color:var(--amber);">5</td><td>Poblenou</td><td>104</td><td>5</td><td>Tech/startup hub, young early adopter demographic</td></tr>
   </tbody>
 </table>
 
 
-<h2>📍 Zone Intelligence</h2>
+<!-- ══════════════ SUPPLY SIDE INTELLIGENCE ══════════════ -->
+<h2 class="page-break"><span class="section-num">06</span> · Supply-Side Intelligence: The Menuverso Database</h2>
 
-<p>Top neighborhoods by partner-ready density:</p>
+<h3>Data Coverage</h3>
 <table>
-  <thead>
-    <tr><th>Neighborhood</th><th>Total Restaurants</th><th>Partner-Ready</th><th>Key Cuisines</th></tr>
-  </thead>
+  <thead><tr><th>Data Field</th><th>Coverage</th><th>GTM Relevance</th></tr></thead>
   <tbody>
-    <tr><td><strong>Eixample</strong></td><td>316</td><td style="color:#059669;font-weight:600;">23</td><td>Spanish, Mediterranean, Catalan</td></tr>
-    <tr><td><strong>Gràcia</strong></td><td>118</td><td style="color:#059669;font-weight:600;">14</td><td>Mediterranean, Fusion, Café</td></tr>
-    <tr><td><strong>Barri Gòtic</strong></td><td>77</td><td style="color:#059669;font-weight:600;">10</td><td>Spanish, Seafood, Tapas</td></tr>
-    <tr><td><strong>El Born</strong></td><td>84</td><td>6</td><td>Mediterranean, Catalan, Fusion</td></tr>
-    <tr><td><strong>Poblenou</strong></td><td>104</td><td>5</td><td>Mediterranean, Spanish, Asian</td></tr>
-    <tr><td><strong>Barceloneta</strong></td><td>57</td><td>4</td><td>Seafood, Spanish, Mediterranean</td></tr>
+    <tr><td>Google Ratings</td><td style="color:#059669;font-weight:600;">100% (1,458)</td><td>Quality filter — 94% rated 4.0+</td></tr>
+    <tr><td>Cuisine Taxonomy</td><td style="color:#059669;font-weight:600;">100% (28 types)</td><td>Category-based discovery + deal curation</td></tr>
+    <tr><td>Geo-coordinates</td><td style="color:#059669;font-weight:600;">99% (1,442)</td><td>Map-based app ready</td></tr>
+    <tr><td>Addresses</td><td>79% (1,149)</td><td>Walk-in navigation</td></tr>
+    <tr><td>Pricing Data</td><td>34% (497)</td><td>Deal economics modeling — 65% in €12-25 sweet spot</td></tr>
+    <tr><td>Phone Numbers</td><td>22% (324)</td><td>Direct outreach — enrichable to ~70% via Google Maps</td></tr>
+    <tr><td>Websites</td><td>21% (302)</td><td>Digital presence validation</td></tr>
+    <tr><td>Photos</td><td>26% (380)</td><td>App listing visuals</td></tr>
+  </tbody>
+</table>
+
+<h3>Pipeline Tiers (Honest Assessment)</h3>
+<table>
+  <thead><tr><th>Tier</th><th>Count</th><th>Definition</th><th>Action Required</th></tr></thead>
+  <tbody>
+    <tr>
+      <td style="color:#059669;font-weight:700;">🟢 Deal-Viable</td><td style="font-weight:700;">80</td>
+      <td>Phone + rating ≥4.0 + pricing + web/IG</td>
+      <td>Ready for outreach today</td>
+    </tr>
+    <tr>
+      <td style="color:#D97706;font-weight:700;">🟡 Contactable</td><td style="font-weight:700;">313</td>
+      <td>Phone + rating ≥4.0</td>
+      <td>Need pricing/hours to model deal</td>
+    </tr>
+    <tr>
+      <td style="color:#F97316;font-weight:700;">🟠 In Pipeline</td><td style="font-weight:700;">674</td>
+      <td>≥1 enrichment signal</td>
+      <td>Google Maps enrichment pass</td>
+    </tr>
+    <tr>
+      <td>⚪ Mapped</td><td style="font-weight:700;">1,458</td>
+      <td>Total database coverage</td>
+      <td>Market breadth validation</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Post-Enrichment Projection</h3>
+<p>A single Google Maps batch extraction transforms the pipeline:</p>
+<table>
+  <thead><tr><th>Field</th><th>Current</th><th>Post-Enrichment (est.)</th></tr></thead>
+  <tbody>
+    <tr><td>Phone Numbers</td><td>324 (22%)</td><td style="color:#059669;font-weight:600;">~1,000+ (70%)</td></tr>
+    <tr><td>Opening Hours</td><td>0 (0%)</td><td style="color:#059669;font-weight:600;">~1,200+ (80%)</td></tr>
+    <tr><td>Instagram</td><td>12 (1%)</td><td style="color:#059669;font-weight:600;">~250+ (17%)</td></tr>
+    <tr><td><strong>Deal-Viable Pipeline</strong></td><td><strong>80</strong></td><td style="color:#059669;font-weight:700;"><strong>~300-400</strong></td></tr>
   </tbody>
 </table>
 
 
+<!-- ══════════════ RISK + STRATEGIC FIT ══════════════ -->
+<h2 class="page-break"><span class="section-num">07</span> · Strategic Fit & Risk Assessment</h2>
+
+<h3>Why This Market, Why Now</h3>
+<table>
+  <thead><tr><th>Factor</th><th>Assessment</th></tr></thead>
+  <tbody>
+    <tr><td><strong>First-mover advantage</strong></td><td style="color:#059669;">Total. No subscription dining clubs in Spain. TheFork dominates booking but different model entirely.</td></tr>
+    <tr><td><strong>Consumer readiness</strong></td><td style="color:#059669;">Spain has Europe's highest dine-out frequency. 50% eat out weekly. €27 avg = perfect 2-for-1 economics.</td></tr>
+    <tr><td><strong>Restaurant willingness</strong></td><td style="color:#059669;">12,000+ already on TheFork (paying commissions). A free alternative with subscriber traffic = easy pitch.</td></tr>
+    <tr><td><strong>Tourism flywheel</strong></td><td style="color:#059669;">32M annual tourists = continuous new user acquisition funnel. No other European market has this dual dynamic.</td></tr>
+    <tr><td><strong>Expansion path</strong></td><td style="color:#059669;">Madrid (3.3M), Valencia (0.8M), Seville, Malaga → Spain has 8+ viable cities. Methodology replicable.</td></tr>
+  </tbody>
+</table>
+
+<h3>Risk Factors</h3>
+<table>
+  <thead><tr><th>Risk</th><th>Severity</th><th>Mitigation</th></tr></thead>
+  <tbody>
+    <tr><td>TheFork launches a subscription product</td><td style="color:#D97706;">Medium</td><td>TheFork is TripAdvisor-owned, focused on booking commission model. Subscription = cannibalization risk for them.</td></tr>
+    <tr><td>Restaurant fatigue with deal platforms</td><td style="color:#D97706;">Medium</td><td>Groupon burned restaurants. The "free for you" message + 2-for-1 (not deep discount) differentiates.</td></tr>
+    <tr><td>Subscriber churn (12.7% avg in F&B subs)</td><td style="color:#D97706;">Medium</td><td>Focus on restaurant variety. Tourism base provides non-churning demand (new users replace lapsed).</td></tr>
+    <tr><td>Regulatory / cultural differences</td><td style="color:#059669;">Low</td><td>No regulatory barriers to restaurant deals in Spain. Dining culture is strong — deals enhance, not cheapen.</td></tr>
+    <tr><td>Data quality for launch readiness</td><td style="color:#059669;">Low</td><td>80 Deal-Viable today, 300+ post-enrichment. Enrichment is a 1-week automated process.</td></tr>
+  </tbody>
+</table>
+
+<h3>What Menuverso Brings to the Table</h3>
+<table>
+  <thead><tr><th>Asset</th><th>Value</th></tr></thead>
+  <tbody>
+    <tr><td>1,458-restaurant database</td><td>6+ months of scraping, profiling, and scoring — recreating this takes significant time and cost</td></tr>
+    <tr><td>Neighborhood intelligence</td><td>Zone-level readiness scoring, cuisine mapping, pricing analysis across 18 neighborhoods</td></tr>
+    <tr><td>Local market knowledge</td><td>Cultural nuances of Barcelona dining scene, seasonal patterns, tourist flow dynamics</td></tr>
+    <tr><td>Operational playbook</td><td>Proven scraping, enrichment, and profiling methodology — replicable for Madrid, Valencia</td></tr>
+    <tr><td>Existing digital infrastructure</td><td>Live platform at menuverso.com — database, analytics, market intel all functional</td></tr>
+  </tbody>
+</table>
+
+
+<!-- ══════════════ FINAL CTA ══════════════ -->
 <blockquote>
-  "TheFork charges restaurants €2-3 per cover. Groupon takes 50% of revenue. In Spain, there is no free-for-restaurants subscription dining model.<br><br>Menuverso has mapped 1,458 restaurants across Barcelona — the supply side is ready for whoever moves first."
+  "TheFork charges restaurants €2-3 per cover. Groupon takes 50% of revenue. In Spain, there is no free-for-restaurants subscription dining model.<br><br>
+  Menuverso has mapped 1,458 restaurants across Barcelona. The supply side is built. The market is uncontested.<br><br>
+  <strong>The question isn't whether subscription dining will arrive in Spain. It's who gets there first.</strong>"
 </blockquote>
 
 
 <div class="footer">
-  <strong>Menuverso</strong> · Barcelona Restaurant Partnership Intelligence<br>
-  March 2026 · Confidential · <a href="https://whiteboxamir.github.io/menuverso/" style="color:var(--accent);text-decoration:none;">whiteboxamir.github.io/menuverso</a>
+  <strong>Menuverso</strong> · Barcelona Market Entry Intelligence Brief<br>
+  March 2026 · Confidential<br>
+  Live platform: <a href="https://whiteboxamir.github.io/menuverso/" style="color:var(--accent);text-decoration:none;">whiteboxamir.github.io/menuverso</a>
 </div>
 
 </div>
