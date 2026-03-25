@@ -103,13 +103,8 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
     <a href="lists.html"><span>🎯 </span>Target Lists</a>
     <a href="landing.html"><span>💰 </span>Opportunity</a>
   </div>
-  <div class="controls-bar">
+  <div>
     <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
-    <div class="lang-toggle">
-      <button data-lang="es" class="active" onclick="setLang('es')">ES</button>
-      <button data-lang="ca" onclick="setLang('ca')">CA</button>
-      <button data-lang="en" onclick="setLang('en')">EN</button>
-    </div>
   </div>
 </nav>
 
@@ -227,7 +222,7 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 <script src="restaurants_data.js"></script>
 <script>
 const DATA = window.RESTAURANT_DATA || [];
-let currentLang = localStorage.getItem('menuverso_lang') || 'es';
+let currentLang = localStorage.getItem('menuverso_lang') || (navigator.language && navigator.language.startsWith('de') ? 'de' : 'es');
 let charts = {};
 
 // === PARTNER READINESS SCORE ===
@@ -680,5 +675,11 @@ document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.toggle
 initTheme();
 init();
 </script>
+<div class="lang-toggle" style="position:fixed;bottom:1.25rem;right:1.25rem;z-index:1000;display:flex;border-radius:20px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);font-size:0.75rem;font-weight:600;">
+  <button data-lang="es" class="active" onclick="setLang('es')" style="padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;">ES</button>
+  <button data-lang="ca" onclick="setLang('ca')" style="padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;">CA</button>
+  <button data-lang="en" onclick="setLang('en')" style="padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;">EN</button>
+  <button data-lang="de" onclick="setLang('de')" style="padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;">DE</button>
+</div>
 </body>
 </html>

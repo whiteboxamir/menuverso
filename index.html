@@ -305,6 +305,7 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
   <button data-lang="es" class="active" onclick="setLang('es')" style="padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;">ES</button>
   <button data-lang="ca" onclick="setLang('ca')" style="padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;">CA</button>
   <button data-lang="en" onclick="setLang('en')" style="padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;">EN</button>
+  <button data-lang="de" onclick="setLang('de')" style="padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;">DE</button>
 </div>
 <script src="restaurants_data.js"></script>
 <script>
@@ -342,7 +343,7 @@ let heatLayer=null;
 let mapMode='markers';
 let allMarkers=[];
 let favorites=JSON.parse(localStorage.getItem('menuverso_favs')||'[]');
-let currentLang=localStorage.getItem('menuverso_lang')||'es';
+let currentLang=localStorage.getItem('menuverso_lang')||(navigator.language&&navigator.language.startsWith('de')?'de':'es');
 
 const I18N={
   es:{subtitle:'Pipeline de partnerships de restaurantes en Barcelona. {total} restaurantes en {hoods} barrios evaluados para deal readiness.',
@@ -380,7 +381,19 @@ const I18N={
     clear:'Netejar Filtres',export_csv:'Exportar CSV',dashboard:'Panell de Barris',
     web:'Web',maps:'Maps',call:'Trucar',
     on_map:'Al Mapa',tagged:'Etiquetats',neighborhoods:'Barris',total:'Total Restaurants',
-    confirmed_menu:'Deal-Ready',likely_menu:'Alt Potencial',no_menu_stat:'Prospecte',open_now:'Obert'}
+    confirmed_menu:'Deal-Ready',likely_menu:'Alt Potencial',no_menu_stat:'Prospecte',open_now:'Obert'},
+  de:{subtitle:'Partnerschafts-Pipeline für Restaurants in Barcelona. {total} Restaurants in {hoods} Vierteln nach Dealbereitschaft bewertet.',
+    search_placeholder:'🔍 Suche nach Name, Küche, Viertel, Notizen...',
+    all_hoods:'Alle Viertel',all_cuisines:'Alle Küchen',
+    confirmed:'Deal-Ready',likely:'Hohes Potenzial',no_menu:'Interessent',favorites:'Favoriten',
+    budget:'Günstig',mid_range:'Mittelklasse',premium:'Premium',
+    sort_name:'Sortierung: Name A→Z',sort_rating:'Sortierung: Bewertung ↓',sort_price_low:'Sortierung: Preis ↑',sort_price_high:'Sortierung: Preis ↓',sort_reviews:'Sortierung: Rezensionen ↓',
+    showing:'{n} von {t} Restaurants',
+    no_results:'Keine Restaurants gefunden. Versuche andere Filter.',
+    clear:'Filter zurücksetzen',export_csv:'CSV Export',dashboard:'Viertel-Übersicht',
+    web:'Web',maps:'Karte',call:'Anrufen',
+    on_map:'Auf Karte',tagged:'Markiert',neighborhoods:'Viertel',total:'Restaurants gesamt',
+    confirmed_menu:'Deal-Ready',likely_menu:'Hohes Potenzial',no_menu_stat:'Interessent',open_now:'Jetzt geöffnet'}
 };
 
 if(DATA.length){init()}else{document.getElementById('grid').innerHTML='<div class="no-results">Error: restaurants_data.js not found.</div>'}
