@@ -407,7 +407,7 @@ img[src*="logo.png"]{{mix-blend-mode:multiply;}}
     <a href="../index.html"><span>📋 </span>Database</a>
     <a href="../analytics.html"><span>📊 </span>Market Intel</a>
     <a href="../lists.html"><span>🎯 </span>Target Lists</a>
-    <a href="../landing.html"><span>💰 </span>Pitch</a>
+    <a href="../landing.html"><span>💰 </span>Opportunity</a>
   </div>
   <div>
     <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>

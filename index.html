@@ -215,7 +215,7 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
     <a href="index.html" class="active"><span>📋 </span>Database</a>
     <a href="analytics.html"><span>📊 </span>Market Intel</a>
     <a href="lists.html"><span>🎯 </span>Target Lists</a>
-    <a href="landing.html"><span>💰 </span>Pitch</a>
+    <a href="landing.html"><span>💰 </span>Opportunity</a>
   </div>
   <div class="controls-bar">
     <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
@@ -299,11 +299,7 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
   </div>
   <div id="map"></div>
 </div>
-<div id="install-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;padding:0.75rem 1.5rem;background:var(--accent);color:#fff;font-size:0.85rem;font-weight:500;display:flex;align-items:center;justify-content:center;gap:1rem;font-family:Inter,sans-serif;box-shadow:0 -2px 12px rgba(0,0,0,0.15);">
-  <span>📱 Install Menuverso for instant access — works offline!</span>
-  <button onclick="installPWA()" style="padding:0.4rem 1rem;border:2px solid #fff;border-radius:8px;background:transparent;color:#fff;font-weight:700;cursor:pointer;font-size:0.82rem;font-family:Inter,sans-serif;">Install</button>
-  <button onclick="dismissInstall()" style="background:none;border:none;color:#fff;cursor:pointer;font-size:1.1rem;opacity:0.7;">✕</button>
-</div>
+
 <footer id="footer">Built with ❤️ by <a href="landing.html">Menuverso</a> · March 2026</footer>
 <div class="lang-toggle" style="position:fixed;bottom:1.25rem;right:1.25rem;z-index:1000;display:flex;border-radius:20px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);font-size:0.75rem;font-weight:600;">
   <button data-lang="es" class="active" onclick="setLang('es')" style="padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;">ES</button>
@@ -882,25 +878,7 @@ if('serviceWorker' in navigator){
     navigator.serviceWorker.register('/sw.js').catch(()=>{});
   });
 }
-window.addEventListener('beforeinstallprompt', e => {
-  e.preventDefault();
-  deferredPrompt = e;
-  if(!localStorage.getItem('menuverso_install_dismissed')){
-    document.getElementById('install-banner').style.display='flex';
-  }
-});
-function installPWA(){
-  if(!deferredPrompt) return;
-  deferredPrompt.prompt();
-  deferredPrompt.userChoice.then(result => {
-    document.getElementById('install-banner').style.display='none';
-    deferredPrompt = null;
-  });
-}
-function dismissInstall(){
-  document.getElementById('install-banner').style.display='none';
-  localStorage.setItem('menuverso_install_dismissed','1');
-}
+
 </script>
 <script type="application/ld+json">
 {
