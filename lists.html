@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menuverso — Best Of Barcelona</title>
-<meta name="description" content="Curated lists of the best restaurants in Barcelona for menú del día. Top rated, best value, by neighborhood, by cuisine.">
+<title>Menuverso — Target Lists</title>
+<meta name="description" content="Curated outreach target lists for Menuverso partnership pipeline. Top prospects by readiness, neighborhood, and cuisine.">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -47,53 +47,52 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <a href="index.html" class="nav-brand"><img src="assets/logo.png" alt="Menuverso"><span>Menuverso</span></a>
   <div class="nav-links">
     <a href="index.html"><span>📋 </span>Database</a>
-    <a href="finder.html"><span>🔍 </span>Finder</a>
-    <a href="analytics.html"><span>📊 </span>Analytics</a>
-    <a href="lists.html" class="active"><span>🏆 </span>Best Of</a>
-    <a href="landing.html"><span>🏠 </span>About</a>
+    <a href="analytics.html"><span>📊 </span>Market Intel</a>
+    <a href="lists.html" class="active"><span>🎯 </span>Target Lists</a>
+    <a href="landing.html"><span>💰 </span>Pitch</a>
   </div>
   <div class="controls-bar"><button class="theme-btn" id="theme-toggle" onclick="toggleTheme()">🌙</button></div>
 </nav>
 
 <div class="container">
   <div class="page-header">
-    <h1>🏆 Best Of Barcelona</h1>
-    <p>Curated lists from 1,504 restaurants. Find the perfect menú del día.</p>
+    <h1>🎯 Target Lists</h1>
+    <p>Curated outreach targets from 1,458 restaurants. Sorted by partnership readiness.</p>
   </div>
 
   <div class="section">
-    <div class="section-title">Featured Lists</div>
+    <div class="section-title">Priority Outreach Lists</div>
     <div class="list-grid">
       <a href="lists/best-value.html" class="list-item">
         <span class="list-emoji">🏆</span>
-        <div class="list-info"><div class="list-name">Best Value</div><div class="list-desc">Rating 4.3+ & under €14</div></div>
+        <div class="list-info"><div class="list-name">Ideal First Partners</div><div class="list-desc">Rating 4.3+ & mid-range pricing</div></div>
         <span class="list-count">Top 10</span>
       </a>
       <a href="lists/top-rated.html" class="list-item">
         <span class="list-emoji">⭐</span>
-        <div class="list-info"><div class="list-name">Top Rated</div><div class="list-desc">Highest Google ratings</div></div>
+        <div class="list-info"><div class="list-name">Highest Rated</div><div class="list-desc">Top Google ratings = strong social proof</div></div>
         <span class="list-count">Top 10</span>
       </a>
       <a href="lists/budget.html" class="list-item">
-        <span class="list-emoji">💚</span>
-        <div class="list-info"><div class="list-name">Budget Friendly</div><div class="list-desc">Cheapest menú del día</div></div>
+        <span class="list-emoji">💡</span>
+        <div class="list-info"><div class="list-name">Quick Wins</div><div class="list-desc">Full contact info + photos ready</div></div>
         <span class="list-count">Top 10</span>
       </a>
       <a href="lists/premium.html" class="list-item">
         <span class="list-emoji">💎</span>
-        <div class="list-info"><div class="list-name">Premium Dining</div><div class="list-desc">Best premium-tier restaurants</div></div>
+        <div class="list-info"><div class="list-name">Premium Segment</div><div class="list-desc">High-end restaurants for flagship deals</div></div>
         <span class="list-count">Top 10</span>
       </a>
       <a href="lists/confirmed-best.html" class="list-item">
         <span class="list-emoji">🟢</span>
-        <div class="list-info"><div class="list-name">Confirmed Menú</div><div class="list-desc">Verified menus, top rated</div></div>
+        <div class="list-info"><div class="list-name">Deal-Ready</div><div class="list-desc">Already offering deals, top rated</div></div>
         <span class="list-count">Top 10</span>
       </a>
     </div>
   </div>
 
   <div class="section">
-    <div class="section-title">By Neighborhood</div>
+    <div class="section-title">By Zone (Neighborhood Outreach)</div>
     <div class="list-grid" id="hood-lists"></div>
   </div>
 
@@ -103,7 +102,7 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   </div>
 </div>
 
-<footer>Built with ❤️ by <a href="landing.html">Menuverso</a> · <a href="index.html">Database</a> · <a href="analytics.html">Analytics</a></footer>
+<footer>Built with ❤️ by <a href="landing.html">Menuverso</a> · <a href="index.html">Database</a> · <a href="analytics.html">Market Intel</a></footer>
 
 <script src="restaurants_data.js"></script>
 <script>
@@ -116,7 +115,7 @@ const hoodItems = Object.entries(hoods).sort((a,b) => b[1] - a[1]).map(([name, c
   const slug = name.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '');
   return `<a href="lists/${slug}.html" class="list-item">
     <span class="list-emoji">📍</span>
-    <div class="list-info"><div class="list-name">Best of ${name}</div><div class="list-desc">${count} restaurants</div></div>
+    <div class="list-info"><div class="list-name">${name} Zone</div><div class="list-desc">${count} prospects</div></div>
     <span class="list-count">Top 10</span>
   </a>`;
 });

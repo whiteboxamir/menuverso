@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menuverso — Analytics Dashboard</title>
-<meta name="description" content="Interactive analytics dashboard for Barcelona's menú del día restaurants. Price insights, cuisine breakdowns, and data visualizations.">
+<title>Menuverso — Market Intelligence</title>
+<meta name="description" content="Biz dev intelligence dashboard for Barcelona's restaurant landscape. Partner readiness scoring, contact coverage, outreach targeting, and market analytics.">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <style>
@@ -15,9 +15,9 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-main);
 .container{max-width:1200px;margin:0 auto;padding:1.5rem;}
 h1{font-size:clamp(1.5rem,3vw,2rem);text-align:center;margin-bottom:0.5rem;}
 .subtitle{text-align:center;color:var(--text-sub);margin-bottom:2rem;font-size:0.9rem;}
-.subtitle a{color:var(--accent);text-decoration:none;}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.25rem;margin-bottom:1.25rem;}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:1.25rem;}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.25rem;}
 .panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;box-shadow:var(--shadow);transition:background 0.3s,border-color 0.3s;}
 .panel h2{font-size:0.9rem;font-weight:600;margin-bottom:0.75rem;color:var(--text-main);display:flex;align-items:center;gap:6px;}
 .panel.full{grid-column:1/-1;}
@@ -28,6 +28,13 @@ h1{font-size:clamp(1.5rem,3vw,2rem);text-align:center;margin-bottom:0.5rem;}
 .stat-card .label{font-size:0.72rem;color:var(--text-sub);margin-top:0.25rem;text-transform:uppercase;letter-spacing:0.04em;font-weight:500;}
 .chart-container{position:relative;width:100%;max-height:320px;}
 .chart-container canvas{width:100%!important;}
+
+/* Section headers */
+.section-divider{margin:2rem 0 1.25rem;padding-bottom:0.5rem;border-bottom:2px solid var(--border);}
+.section-divider h2{font-size:1.1rem;font-weight:700;display:flex;align-items:center;gap:8px;}
+.section-divider p{color:var(--text-sub);font-size:0.82rem;margin-top:4px;}
+
+/* Tables */
 table{width:100%;border-collapse:collapse;font-size:0.82rem;}
 th{text-align:left;padding:0.5rem;border-bottom:2px solid var(--border);color:var(--text-sub);font-weight:600;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.04em;}
 td{padding:0.5rem;border-bottom:1px solid var(--border);}
@@ -37,9 +44,32 @@ tr:hover td{background:var(--bg);}
 .badge.cheap{background:#D1FAE5;color:#059669;}
 .badge.mid{background:#FEF3C7;color:#D97706;}
 .badge.exp{background:#FEE2E2;color:#DC2626;}
+.badge.high{background:#DBEAFE;color:#2563EB;}
+.badge.good{background:#D1FAE5;color:#059669;}
+.badge.low{background:#FEE2E2;color:#DC2626;}
 :root.dark .badge.cheap{background:#064E3B;color:#34D399;}
 :root.dark .badge.mid{background:#78350F;color:#FBBF24;}
 :root.dark .badge.exp{background:#7F1D1D;color:#F87171;}
+:root.dark .badge.high{background:#1E3A5F;color:#60A5FA;}
+:root.dark .badge.good{background:#064E3B;color:#34D399;}
+:root.dark .badge.low{background:#7F1D1D;color:#F87171;}
+
+/* Progress bars */
+.progress-row{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
+.progress-label{font-size:0.82rem;font-weight:500;min-width:120px;color:var(--text-main);}
+.progress-bar{flex:1;height:24px;background:var(--bg);border-radius:6px;overflow:hidden;position:relative;}
+.progress-fill{height:100%;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:0.7rem;font-weight:700;color:white;transition:width 0.6s ease;}
+.progress-pct{font-size:0.78rem;font-weight:600;min-width:45px;text-align:right;color:var(--text-sub);}
+
+/* Score pill */
+.score-pill{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:20px;font-size:0.75rem;font-weight:700;}
+.score-pill.s-high{background:#D1FAE5;color:#059669;}
+.score-pill.s-mid{background:#FEF3C7;color:#D97706;}
+.score-pill.s-low{background:#FEE2E2;color:#DC2626;}
+:root.dark .score-pill.s-high{background:#064E3B;color:#34D399;}
+:root.dark .score-pill.s-mid{background:#78350F;color:#FBBF24;}
+:root.dark .score-pill.s-low{background:#7F1D1D;color:#F87171;}
+
 footer{text-align:center;padding:1.5rem;color:var(--text-mut);font-size:0.78rem;border-top:1px solid var(--border);}
 footer a{color:var(--text-sub);text-decoration:none;}
 .topnav{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1.5rem;border-bottom:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
@@ -57,8 +87,8 @@ footer a{color:var(--text-sub);text-decoration:none;}
 .lang-toggle button.active{background:var(--text-main);color:var(--bg);}
 img[src*="logo.png"]{mix-blend-mode:multiply;}
 :root.dark img[src*="logo.png"]{mix-blend-mode:normal;filter:brightness(1.2);}
-@media(max-width:768px){.grid{grid-template-columns:1fr;}.grid-3{grid-template-columns:1fr;}.nav-links a span{display:none;}.stat-row{grid-template-columns:repeat(3,1fr);}}
-@media(max-width:480px){.stat-row{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:768px){.grid{grid-template-columns:1fr;}.grid-3,.grid-4{grid-template-columns:1fr 1fr;}.nav-links a span{display:none;}.stat-row{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:480px){.stat-row{grid-template-columns:repeat(2,1fr);}.grid-3,.grid-4{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -69,10 +99,9 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   </a>
   <div class="nav-links">
     <a href="index.html"><span>📋 </span>Database</a>
-    <a href="finder.html"><span>🔍 </span>Finder</a>
-    <a href="analytics.html" class="active"><span>📊 </span>Analytics</a>
-    <a href="lists.html"><span>🏆 </span>Best Of</a>
-    <a href="landing.html"><span>🏠 </span>About</a>
+    <a href="analytics.html" class="active"><span>📊 </span>Market Intel</a>
+    <a href="lists.html"><span>🎯 </span>Target Lists</a>
+    <a href="landing.html"><span>💰 </span>Pitch</a>
   </div>
   <div class="controls-bar">
     <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
@@ -85,66 +114,115 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 </nav>
 
 <div class="container">
-  <h1 id="page-title">📊 Analytics Dashboard</h1>
-  <p class="subtitle" id="page-subtitle">Interactive insights from <strong id="total">—</strong> Barcelona restaurants</p>
+  <h1 id="page-title">📊 Market Intelligence</h1>
+  <p class="subtitle" id="page-subtitle">Biz dev intelligence from <strong id="total">—</strong> Barcelona restaurants</p>
 
+  <!-- ═══ TOP STATS ═══ -->
   <div class="stat-row" id="top-stats"></div>
 
-  <!-- Row 1: Scatter + Donut -->
+  <!-- ═══ SECTION 1: PARTNER READINESS ═══ -->
+  <div class="section-divider">
+    <h2>🎯 Partner Readiness</h2>
+    <p>Composite score based on contact availability, online presence, photos, and pricing sweet spot</p>
+  </div>
+
+  <div class="grid-4" id="readiness-stats"></div>
+
   <div class="grid">
     <div class="panel">
-      <h2>🎯 Price vs Rating</h2>
-      <div class="chart-container"><canvas id="chart-scatter"></canvas></div>
+      <h2>📊 Readiness Score Distribution</h2>
+      <div class="chart-container"><canvas id="chart-readiness"></canvas></div>
     </div>
     <div class="panel">
-      <h2>🍽️ Cuisine Distribution</h2>
-      <div class="chart-container"><canvas id="chart-cuisine-donut"></canvas></div>
+      <h2>📞 Contact & Outreach Coverage</h2>
+      <div id="contact-coverage"></div>
     </div>
   </div>
 
-  <!-- Row 2: Price Distribution + Neighborhood bars -->
-  <div class="grid">
-    <div class="panel">
-      <h2>📈 Price Distribution</h2>
-      <div class="chart-container"><canvas id="chart-price-hist"></canvas></div>
-    </div>
-    <div class="panel">
-      <h2>🏘️ Avg Price by Neighborhood</h2>
-      <div class="chart-container"><canvas id="chart-hood-bars"></canvas></div>
+  <!-- ═══ SECTION 2: FIRST-ROUND TARGETS ═══ -->
+  <div class="section-divider">
+    <h2>🏆 First-Round Targets</h2>
+    <p>Top 25 restaurants to approach first — highest readiness score, best fit for launch partnerships</p>
+  </div>
+
+  <div class="panel full" style="margin-bottom:1.25rem;">
+    <div style="max-height:520px;overflow-y:auto;">
+      <table id="targets-table">
+        <thead><tr><th>#</th><th>Restaurant</th><th>Neighborhood</th><th>Cuisine</th><th>Rating</th><th>Price</th><th>Contacts</th><th>Score</th></tr></thead>
+        <tbody></tbody>
+      </table>
     </div>
   </div>
 
-  <!-- Row 3: Menu tier donut + Cuisine avg price radar -->
-  <div class="grid">
-    <div class="panel">
-      <h2>🎯 Menu Status Breakdown</h2>
-      <div class="chart-container"><canvas id="chart-tier-donut"></canvas></div>
-    </div>
-    <div class="panel">
-      <h2>💰 Cuisine Price Comparison</h2>
-      <div class="chart-container"><canvas id="chart-cuisine-price"></canvas></div>
-    </div>
+  <!-- ═══ SECTION 3: ZONE OUTREACH PLAN ═══ -->
+  <div class="section-divider">
+    <h2>📍 Zone Outreach Plan</h2>
+    <p>Which neighborhoods have the richest cluster of partner-ready restaurants to hit first</p>
   </div>
 
-  <!-- Row 4: Best value table + Neighborhood table -->
   <div class="grid">
     <div class="panel">
-      <h2>🏆 Best Value Restaurants</h2>
-      <div id="best-value"></div>
+      <h2>🗺️ Readiness by Zone</h2>
+      <div class="chart-container"><canvas id="chart-zone-readiness"></canvas></div>
     </div>
     <div class="panel">
-      <h2>📋 Neighborhood Breakdown</h2>
+      <h2>📋 Zone Breakdown</h2>
       <div style="max-height:380px;overflow-y:auto;">
-        <table id="hood-table">
-          <thead><tr><th>Neighborhood</th><th>Count</th><th>Avg Price</th><th>Min</th><th>Max</th><th>Confirmed</th></tr></thead>
+        <table id="zone-table">
+          <thead><tr><th>Zone</th><th>Total</th><th>Ready</th><th>Contacts</th><th>Avg Score</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
     </div>
   </div>
+
+  <!-- ═══ SECTION 4: PRICING SWEET SPOT ═══ -->
+  <div class="section-divider">
+    <h2>💰 Pricing Sweet Spot</h2>
+    <p>Mid-range restaurants (€12-25) are the ideal first partners — enough margin for 2-for-1 deals</p>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>📈 Price Distribution (Deal Viability)</h2>
+      <div class="chart-container"><canvas id="chart-price-sweet"></canvas></div>
+    </div>
+    <div class="panel">
+      <h2>🎯 Market Quality Map</h2>
+      <div class="chart-container"><canvas id="chart-scatter"></canvas></div>
+    </div>
+  </div>
+
+  <!-- ═══ SECTION 5: MARKET OVERVIEW ═══ -->
+  <div class="section-divider">
+    <h2>🍽️ Market Overview</h2>
+    <p>Cuisine and pipeline composition across the BCN restaurant landscape</p>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>🍽️ Cuisine Distribution</h2>
+      <div class="chart-container"><canvas id="chart-cuisine-donut"></canvas></div>
+    </div>
+    <div class="panel">
+      <h2>🎯 Pipeline Status</h2>
+      <div class="chart-container"><canvas id="chart-tier-donut"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>💰 Cuisine Price Comparison</h2>
+      <div class="chart-container"><canvas id="chart-cuisine-price"></canvas></div>
+    </div>
+    <div class="panel">
+      <h2>🏘️ Avg Price by Zone</h2>
+      <div class="chart-container"><canvas id="chart-hood-bars"></canvas></div>
+    </div>
+  </div>
 </div>
 
-<footer>Built with ❤️ by <a href="landing.html">Menuverso</a> · <a href="index.html">Database</a> · <a href="finder.html">Finder</a> · <a href="lists.html">Best Of</a></footer>
+<footer>Built with ❤️ by <a href="landing.html">Menuverso</a> · <a href="index.html">Database</a> · <a href="lists.html">Target Lists</a></footer>
 
 <script src="restaurants_data.js"></script>
 <script>
@@ -152,41 +230,25 @@ const DATA = window.RESTAURANT_DATA || [];
 let currentLang = localStorage.getItem('menuverso_lang') || 'es';
 let charts = {};
 
-// === I18N ===
-const L = {
-  es: { title: '📊 Panel de Analytics', subtitle: 'Insights interactivos de', restaurants: 'restaurantes de Barcelona',
-    avg: 'Precio Medio', median: 'Mediana', cheapest: 'Más Barato', expensive: 'Más Caro', with_price: 'Con Precio', confirmed_stat: 'Confirmados',
-    price_vs_rating: '🎯 Precio vs Valoración', cuisine_dist: '🍽️ Distribución por Cocina',
-    price_dist: '📈 Distribución de Precios', hood_price: '🏘️ Precio Medio por Barrio',
-    menu_status: '🎯 Estado del Menú', cuisine_price: '💰 Comparación Precios por Cocina',
-    best_value: '🏆 Mejor Relación Calidad-Precio', hood_breakdown: '📋 Desglose por Barrio',
-    restaurant: 'Restaurante', price: 'Precio', rating: 'Rating', area: 'Zona',
-    hood: 'Barrio', count: 'Total', avg_p: 'Precio Med.', min: 'Mín', max: 'Máx', confirmed_pct: 'Confirmados' },
-  ca: { title: '📊 Panell d\'Analytics', subtitle: 'Insights interactius de', restaurants: 'restaurants de Barcelona',
-    avg: 'Preu Mitjà', median: 'Mediana', cheapest: 'Més Barat', expensive: 'Més Car', with_price: 'Amb Preu', confirmed_stat: 'Confirmats',
-    price_vs_rating: '🎯 Preu vs Valoració', cuisine_dist: '🍽️ Distribució per Cuina',
-    price_dist: '📈 Distribució de Preus', hood_price: '🏘️ Preu Mitjà per Barri',
-    menu_status: '🎯 Estat del Menú', cuisine_price: '💰 Comparació Preus per Cuina',
-    best_value: '🏆 Millor Relació Qualitat-Preu', hood_breakdown: '📋 Desglossament per Barri',
-    restaurant: 'Restaurant', price: 'Preu', rating: 'Rating', area: 'Zona',
-    hood: 'Barri', count: 'Total', avg_p: 'Preu Mit.', min: 'Mín', max: 'Màx', confirmed_pct: 'Confirmats' },
-  en: { title: '📊 Analytics Dashboard', subtitle: 'Interactive insights from', restaurants: 'Barcelona restaurants',
-    avg: 'Average Price', median: 'Median', cheapest: 'Cheapest', expensive: 'Most Expensive', with_price: 'With Price', confirmed_stat: 'Confirmed',
-    price_vs_rating: '🎯 Price vs Rating', cuisine_dist: '🍽️ Cuisine Distribution',
-    price_dist: '📈 Price Distribution', hood_price: '🏘️ Avg Price by Neighborhood',
-    menu_status: '🎯 Menu Status Breakdown', cuisine_price: '💰 Cuisine Price Comparison',
-    best_value: '🏆 Best Value Restaurants', hood_breakdown: '📋 Neighborhood Breakdown',
-    restaurant: 'Restaurant', price: 'Price', rating: 'Rating', area: 'Area',
-    hood: 'Neighborhood', count: 'Count', avg_p: 'Avg Price', min: 'Min', max: 'Max', confirmed_pct: 'Confirmed' }
-};
-function t(k) { return L[currentLang][k] || k; }
+// === PARTNER READINESS SCORE ===
+// Weights: phone(20) + website(20) + instagram(15) + photo(10) + rating>=4.0(15) + sweet-spot-price(20)
+function getReadinessScore(r) {
+  let score = 0;
+  if (r.phone) score += 20;
+  if (r.website) score += 20;
+  if (r.instagram) score += 15;
+  if (r.has_photo || (r.images && (r.images.hero || r.images.card))) score += 10;
+  if (r.google_maps_rating && r.google_maps_rating >= 4.0) score += 15;
+  const price = parsePrice(r.menu_price_range);
+  if (price && price >= 12 && price <= 25) score += 20;
+  else if (price && price > 25) score += 10; // premium still viable
+  return score;
+}
 
-function setLang(lang) {
-  currentLang = lang;
-  localStorage.setItem('menuverso_lang', lang);
-  document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
-  destroyCharts();
-  init();
+function getReadinessTier(score) {
+  if (score >= 70) return 'high';
+  if (score >= 40) return 'mid';
+  return 'low';
 }
 
 function parsePrice(s) {
@@ -206,65 +268,255 @@ function getChartColors() {
   };
 }
 
-function destroyCharts() {
-  Object.values(charts).forEach(c => c.destroy());
-  charts = {};
-}
+function destroyCharts() { Object.values(charts).forEach(c => c.destroy()); charts = {}; }
 
 const PALETTE = ['#3B82F6','#10B981','#F59E0B','#EF4444','#8B5CF6','#EC4899','#06B6D4','#F97316','#14B8A6','#6366F1',
   '#84CC16','#E11D48','#0EA5E9','#D946EF','#22D3EE','#A855F7','#FB923C','#2DD4BF','#F43F5E','#818CF8'];
 
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('menuverso_lang', lang);
+  document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  destroyCharts();
+  init();
+}
+
 function init() {
+  const cc = getChartColors();
   const priced = DATA.filter(r => parsePrice(r.menu_price_range));
   const prices = priced.map(r => parsePrice(r.menu_price_range));
-  const avg = (prices.reduce((a, b) => a + b, 0) / prices.length).toFixed(1);
-  const sortedP = [...prices].sort((a, b) => a - b);
-  const median = sortedP[Math.floor(sortedP.length / 2)].toFixed(1);
-  const minP = Math.min(...prices).toFixed(1);
-  const maxP = Math.max(...prices).toFixed(1);
+  const avg = prices.length ? (prices.reduce((a, b) => a + b, 0) / prices.length).toFixed(1) : '—';
+
+  // Compute readiness for all
+  const scored = DATA.map(r => ({ ...r, readiness: getReadinessScore(r) }));
+  const highReady = scored.filter(r => r.readiness >= 70).length;
+  const midReady = scored.filter(r => r.readiness >= 40 && r.readiness < 70).length;
+  const lowReady = scored.filter(r => r.readiness < 40).length;
+  const withPhone = DATA.filter(r => r.phone).length;
+  const withWebsite = DATA.filter(r => r.website).length;
+  const withInstagram = DATA.filter(r => r.instagram).length;
+  const withPhoto = DATA.filter(r => r.has_photo || (r.images && (r.images.hero || r.images.card))).length;
+  const sweetSpot = priced.filter(r => { const p = parsePrice(r.menu_price_range); return p >= 12 && p <= 25; }).length;
   const confirmed = DATA.filter(r => r.menu_tier === 'confirmed').length;
-  const cc = getChartColors();
 
-  // Update headings
-  document.getElementById('page-title').textContent = t('title');
-  document.getElementById('page-subtitle').innerHTML = `${t('subtitle')} <strong>${DATA.length}</strong> ${t('restaurants')}`;
+  document.getElementById('total').textContent = DATA.length;
 
-  // Top stats
+  // === TOP STATS ===
   document.getElementById('top-stats').innerHTML = `
-    <div class="stat-card"><div class="num">€${avg}</div><div class="label">${t('avg')}</div></div>
-    <div class="stat-card"><div class="num">€${median}</div><div class="label">${t('median')}</div></div>
-    <div class="stat-card"><div class="num">€${minP}</div><div class="label">${t('cheapest')}</div></div>
-    <div class="stat-card"><div class="num">€${maxP}</div><div class="label">${t('expensive')}</div></div>
-    <div class="stat-card"><div class="num">${priced.length}</div><div class="label">${t('with_price')}</div></div>
-    <div class="stat-card"><div class="num" style="color:var(--green)">${confirmed}</div><div class="label">${t('confirmed_stat')}</div></div>
+    <div class="stat-card"><div class="num">${DATA.length}</div><div class="label">Total Mapped</div></div>
+    <div class="stat-card"><div class="num" style="color:var(--green)">${highReady}</div><div class="label">Partner-Ready</div></div>
+    <div class="stat-card"><div class="num" style="color:var(--amber)">${midReady}</div><div class="label">High Potential</div></div>
+    <div class="stat-card"><div class="num">${sweetSpot}</div><div class="label">Sweet Spot (€12-25)</div></div>
+    <div class="stat-card"><div class="num">${withPhone}</div><div class="label">Have Phone</div></div>
+    <div class="stat-card"><div class="num">€${avg}</div><div class="label">Avg Price</div></div>
   `;
 
-  // Update panel headings
-  const panels = document.querySelectorAll('.panel h2');
-  const headingKeys = ['price_vs_rating','cuisine_dist','price_dist','hood_price','menu_status','cuisine_price','best_value','hood_breakdown'];
-  panels.forEach((p, i) => { if (headingKeys[i]) p.textContent = t(headingKeys[i]); });
+  // === READINESS STATS (4 cards) ===
+  document.getElementById('readiness-stats').innerHTML = `
+    <div class="panel" style="text-align:center;">
+      <div style="font-size:2.2rem;font-weight:800;color:var(--green);">${highReady}</div>
+      <div style="font-size:0.78rem;color:var(--text-sub);font-weight:600;">PARTNER-READY</div>
+      <div style="font-size:0.72rem;color:var(--text-mut);margin-top:4px;">Score ≥70 — full contact info + good profile</div>
+    </div>
+    <div class="panel" style="text-align:center;">
+      <div style="font-size:2.2rem;font-weight:800;color:var(--amber);">${midReady}</div>
+      <div style="font-size:0.78rem;color:var(--text-sub);font-weight:600;">HIGH POTENTIAL</div>
+      <div style="font-size:0.72rem;color:var(--text-mut);margin-top:4px;">Score 40-69 — some gaps, enrichable</div>
+    </div>
+    <div class="panel" style="text-align:center;">
+      <div style="font-size:2.2rem;font-weight:800;">${sweetSpot}</div>
+      <div style="font-size:0.78rem;color:var(--text-sub);font-weight:600;">SWEET SPOT PRICING</div>
+      <div style="font-size:0.72rem;color:var(--text-mut);margin-top:4px;">€12-25 range — ideal for 2-for-1</div>
+    </div>
+    <div class="panel" style="text-align:center;">
+      <div style="font-size:2.2rem;font-weight:800;color:var(--accent);">${(withPhone/DATA.length*100).toFixed(0)}%</div>
+      <div style="font-size:0.78rem;color:var(--text-sub);font-weight:600;">CONTACTABLE</div>
+      <div style="font-size:0.72rem;color:var(--text-mut);margin-top:4px;">${withPhone} restaurants with phone numbers</div>
+    </div>
+  `;
 
-  // === CHART 1: Scatter — Price vs Rating ===
+  // === CONTACT COVERAGE ===
+  const coverageData = [
+    { label: 'Phone Number', count: withPhone, color: '#10B981' },
+    { label: 'Website', count: withWebsite, color: '#3B82F6' },
+    { label: 'Instagram', count: withInstagram, color: '#8B5CF6' },
+    { label: 'Real Photos', count: withPhoto, color: '#F59E0B' },
+    { label: 'Google Rating ≥4.0', count: DATA.filter(r => r.google_maps_rating >= 4.0).length, color: '#EC4899' },
+    { label: 'Has Coordinates', count: DATA.filter(r => r.coordinates && r.coordinates.lat).length, color: '#06B6D4' },
+  ];
+  document.getElementById('contact-coverage').innerHTML = coverageData.map(d => `
+    <div class="progress-row">
+      <div class="progress-label">${d.label}</div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width:${(d.count/DATA.length*100).toFixed(0)}%;background:${d.color};">${d.count}</div>
+      </div>
+      <div class="progress-pct">${(d.count/DATA.length*100).toFixed(0)}%</div>
+    </div>
+  `).join('');
+
+  // === READINESS DISTRIBUTION CHART ===
+  const readinessBuckets = [
+    { label: '90-100', min: 90, max: 101 },
+    { label: '70-89', min: 70, max: 90 },
+    { label: '50-69', min: 50, max: 70 },
+    { label: '30-49', min: 30, max: 50 },
+    { label: '0-29', min: 0, max: 30 }
+  ];
+  const readinessCounts = readinessBuckets.map(b => scored.filter(r => r.readiness >= b.min && r.readiness < b.max).length);
+  const readinessColors = ['#059669','#10B981','#F59E0B','#F97316','#EF4444'];
+
+  charts.readiness = new Chart(document.getElementById('chart-readiness'), {
+    type: 'bar',
+    data: {
+      labels: readinessBuckets.map(b => b.label),
+      datasets: [{ data: readinessCounts, backgroundColor: readinessColors, borderRadius: 6, borderSkipped: false }]
+    },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: cc.tooltipBg, borderColor: cc.tooltipBorder, borderWidth: 1, titleColor: cc.tooltipText, bodyColor: cc.text,
+          callbacks: { label: ctx => `${ctx.raw} restaurants (${(ctx.raw/DATA.length*100).toFixed(0)}%)` } }
+      },
+      scales: {
+        x: { grid: { color: cc.grid }, ticks: { color: cc.text } },
+        y: { grid: { display: false }, ticks: { color: cc.text, font: { size: 12, weight: '600' } } }
+      }
+    }
+  });
+
+  // === FIRST-ROUND TARGETS TABLE ===
+  const top25 = scored.sort((a, b) => b.readiness - a.readiness).slice(0, 25);
+  document.querySelector('#targets-table tbody').innerHTML = top25.map((r, i) => {
+    const tier = getReadinessTier(r.readiness);
+    const tierClass = tier === 'high' ? 's-high' : tier === 'mid' ? 's-mid' : 's-low';
+    const contacts = [r.phone ? '📞' : '', r.website ? '🌐' : '', r.instagram ? '📸' : ''].filter(Boolean).join(' ');
+    const price = parsePrice(r.menu_price_range);
+    const priceStr = price ? `€${price.toFixed(0)}` : '—';
+    return `<tr>
+      <td style="font-weight:700;color:var(--text-mut);">${i+1}</td>
+      <td><a href="r/${r.id}.html" style="color:var(--accent);text-decoration:none;font-weight:600;">${r.name}</a></td>
+      <td>${r.neighborhood}</td>
+      <td>${r.cuisine_type}</td>
+      <td>${r.google_maps_rating ? '⭐' + r.google_maps_rating : '—'}</td>
+      <td>${priceStr}</td>
+      <td style="text-align:center;">${contacts}</td>
+      <td><span class="score-pill ${tierClass}">${r.readiness}</span></td>
+    </tr>`;
+  }).join('');
+
+  // === ZONE OUTREACH PLAN ===
+  const zones = {};
+  scored.forEach(r => {
+    const z = r.neighborhood;
+    if (!zones[z]) zones[z] = { total: 0, ready: 0, withContact: 0, scores: [], prices: [] };
+    zones[z].total++;
+    if (r.readiness >= 70) zones[z].ready++;
+    if (r.phone || r.website) zones[z].withContact++;
+    zones[z].scores.push(r.readiness);
+    const p = parsePrice(r.menu_price_range);
+    if (p) zones[z].prices.push(p);
+  });
+  const zoneArr = Object.entries(zones)
+    .map(([name, d]) => ({ name, ...d, avgScore: d.scores.reduce((a,b) => a+b, 0) / d.scores.length, avgPrice: d.prices.length ? d.prices.reduce((a,b) => a+b, 0) / d.prices.length : 0 }))
+    .sort((a, b) => b.ready - a.ready);
+
+  // Zone bar chart
+  charts.zoneReadiness = new Chart(document.getElementById('chart-zone-readiness'), {
+    type: 'bar',
+    data: {
+      labels: zoneArr.slice(0, 15).map(z => z.name),
+      datasets: [
+        { label: 'Partner-Ready', data: zoneArr.slice(0, 15).map(z => z.ready), backgroundColor: '#10B981', borderRadius: 4 },
+        { label: 'Total', data: zoneArr.slice(0, 15).map(z => z.total - z.ready), backgroundColor: cc.grid, borderRadius: 4 }
+      ]
+    },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { labels: { color: cc.text, font: { size: 11 }, usePointStyle: true, pointStyleWidth: 10 } },
+        tooltip: { backgroundColor: cc.tooltipBg, borderColor: cc.tooltipBorder, borderWidth: 1, titleColor: cc.tooltipText, bodyColor: cc.text }
+      },
+      scales: {
+        x: { stacked: true, grid: { color: cc.grid }, ticks: { color: cc.text } },
+        y: { stacked: true, grid: { display: false }, ticks: { color: cc.text, font: { size: 11 } } }
+      }
+    }
+  });
+
+  // Zone table
+  document.querySelector('#zone-table tbody').innerHTML = zoneArr.map(z => {
+    const scoreBadge = z.avgScore >= 60 ? 'good' : z.avgScore >= 40 ? 'mid' : 'low';
+    return `<tr>
+      <td><a href="index.html?hood=${encodeURIComponent(z.name)}" style="color:var(--accent);text-decoration:none;font-weight:500;">${z.name}</a></td>
+      <td>${z.total}</td>
+      <td style="color:var(--green);font-weight:600;">${z.ready}</td>
+      <td>${(z.withContact/z.total*100).toFixed(0)}%</td>
+      <td><span class="badge ${scoreBadge}">${z.avgScore.toFixed(0)}</span></td>
+    </tr>`;
+  }).join('');
+
+  // === PRICING SWEET SPOT ===
+  const priceBuckets = [
+    { label: '<€10', min: 0, max: 10, color: '#94A3B8' },
+    { label: '€10-12', min: 10, max: 12, color: '#F59E0B' },
+    { label: '€12-15', min: 12, max: 15, color: '#10B981' },
+    { label: '€15-18', min: 15, max: 18, color: '#059669' },
+    { label: '€18-25', min: 18, max: 25, color: '#10B981' },
+    { label: '€25-35', min: 25, max: 35, color: '#F59E0B' },
+    { label: '€35+', min: 35, max: 999, color: '#94A3B8' }
+  ];
+  const pBucketCounts = priceBuckets.map(b => prices.filter(p => p >= b.min && p < b.max).length);
+
+  charts.priceSweet = new Chart(document.getElementById('chart-price-sweet'), {
+    type: 'bar',
+    data: {
+      labels: priceBuckets.map(b => b.label),
+      datasets: [{
+        data: pBucketCounts,
+        backgroundColor: priceBuckets.map(b => b.color),
+        borderRadius: 6, borderSkipped: false
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: cc.tooltipBg, borderColor: cc.tooltipBorder, borderWidth: 1, titleColor: cc.tooltipText, bodyColor: cc.text,
+          callbacks: {
+            title: ctx => ctx[0].label + (ctx[0].label.includes('12') || ctx[0].label.includes('15') || ctx[0].label.includes('18') ? ' ⭐ SWEET SPOT' : ''),
+            label: ctx => `${ctx.raw} restaurants (${(ctx.raw/prices.length*100).toFixed(0)}%)`
+          }
+        }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { color: cc.text } },
+        y: { grid: { color: cc.grid }, ticks: { color: cc.text } }
+      }
+    }
+  });
+
+  // === SCATTER: PRICE vs RATING ===
   const scatterData = DATA.filter(r => parsePrice(r.menu_price_range) && r.google_maps_rating)
-    .map(r => ({ x: parsePrice(r.menu_price_range), y: r.google_maps_rating, name: r.name, hood: r.neighborhood, cuisine: r.cuisine_type }));
+    .map(r => ({ x: parsePrice(r.menu_price_range), y: r.google_maps_rating, name: r.name, hood: r.neighborhood, cuisine: r.cuisine_type, readiness: getReadinessScore(r) }));
 
   charts.scatter = new Chart(document.getElementById('chart-scatter'), {
     type: 'scatter',
     data: { datasets: [{
       data: scatterData.map(d => ({ x: d.x, y: d.y })),
       backgroundColor: scatterData.map(d => {
-        if (d.x <= 12) return 'rgba(16,185,129,0.6)';
-        if (d.x <= 18) return 'rgba(245,158,11,0.6)';
-        return 'rgba(239,68,68,0.6)';
+        const tier = getReadinessTier(d.readiness);
+        if (tier === 'high') return 'rgba(16,185,129,0.7)';
+        if (tier === 'mid') return 'rgba(245,158,11,0.5)';
+        return 'rgba(148,163,184,0.3)';
       }),
       borderColor: scatterData.map(d => {
-        if (d.x <= 12) return '#10B981';
-        if (d.x <= 18) return '#F59E0B';
-        return '#EF4444';
+        const tier = getReadinessTier(d.readiness);
+        if (tier === 'high') return '#10B981';
+        if (tier === 'mid') return '#F59E0B';
+        return '#94A3B8';
       }),
-      borderWidth: 1,
-      pointRadius: 4,
-      pointHoverRadius: 7,
+      borderWidth: 1, pointRadius: 4, pointHoverRadius: 7,
     }] },
     options: {
       responsive: true, maintainAspectRatio: false,
@@ -274,10 +526,10 @@ function init() {
           backgroundColor: cc.tooltipBg, borderColor: cc.tooltipBorder, borderWidth: 1,
           titleColor: cc.tooltipText, bodyColor: cc.text,
           callbacks: {
-            title: function(ctx) { return scatterData[ctx[0].dataIndex].name; },
-            label: function(ctx) {
+            title: ctx => scatterData[ctx[0].dataIndex].name,
+            label: ctx => {
               const d = scatterData[ctx.dataIndex];
-              return [`€${d.x} · ⭐${d.y}`, `${d.cuisine} · ${d.hood}`];
+              return [`€${d.x} · ⭐${d.y} · Score: ${d.readiness}`, `${d.cuisine} · ${d.hood}`];
             }
           }
         }
@@ -289,7 +541,7 @@ function init() {
     }
   });
 
-  // === CHART 2: Donut — Cuisine Distribution ===
+  // === CUISINE DONUT ===
   const cuisineCounts = {};
   DATA.forEach(r => { cuisineCounts[r.cuisine_type] = (cuisineCounts[r.cuisine_type] || 0) + 1; });
   const top10Cuisines = Object.entries(cuisineCounts).sort((a, b) => b[1] - a[1]).slice(0, 10);
@@ -311,82 +563,14 @@ function init() {
     }
   });
 
-  // === CHART 3: Bar — Price Distribution ===
-  const buckets = [
-    { label: '<€10', min: 0, max: 10 }, { label: '€10-12', min: 10, max: 12 },
-    { label: '€12-14', min: 12, max: 14 }, { label: '€14-16', min: 14, max: 16 },
-    { label: '€16-18', min: 16, max: 18 }, { label: '€18-20', min: 18, max: 20 },
-    { label: '€20+', min: 20, max: 999 }
-  ];
-  const bucketCounts = buckets.map(b => prices.filter(p => p >= b.min && p < b.max).length);
-  const bucketColors = ['#059669','#10B981','#34D399','#D97706','#F59E0B','#EF4444','#DC2626'];
-
-  charts.priceHist = new Chart(document.getElementById('chart-price-hist'), {
-    type: 'bar',
-    data: {
-      labels: buckets.map(b => b.label),
-      datasets: [{ data: bucketCounts, backgroundColor: bucketColors, borderRadius: 6, borderSkipped: false }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: {
-        legend: { display: false },
-        tooltip: { backgroundColor: cc.tooltipBg, borderColor: cc.tooltipBorder, borderWidth: 1, titleColor: cc.tooltipText, bodyColor: cc.text,
-          callbacks: { label: ctx => `${ctx.raw} restaurants (${(ctx.raw/prices.length*100).toFixed(0)}%)` } }
-      },
-      scales: {
-        x: { grid: { display: false }, ticks: { color: cc.text } },
-        y: { grid: { color: cc.grid }, ticks: { color: cc.text } }
-      }
-    }
-  });
-
-  // === CHART 4: Horizontal Bar — Neighborhood avg prices ===
-  const hoods = {};
-  DATA.forEach(r => {
-    const h = r.neighborhood;
-    if (!hoods[h]) hoods[h] = { prices: [], confirmed: 0, total: 0 };
-    hoods[h].total++;
-    if (r.menu_tier === 'confirmed') hoods[h].confirmed++;
-    const p = parsePrice(r.menu_price_range);
-    if (p) hoods[h].prices.push(p);
-  });
-  const hoodAvgs = Object.entries(hoods).filter(([, d]) => d.prices.length >= 3)
-    .map(([name, d]) => ({ name, avg: d.prices.reduce((a, b) => a + b, 0) / d.prices.length, count: d.prices.length, min: Math.min(...d.prices), max: Math.max(...d.prices), confirmed: d.confirmed, total: d.total }))
-    .sort((a, b) => a.avg - b.avg);
-
-  charts.hoodBars = new Chart(document.getElementById('chart-hood-bars'), {
-    type: 'bar',
-    data: {
-      labels: hoodAvgs.map(h => h.name),
-      datasets: [{
-        data: hoodAvgs.map(h => parseFloat(h.avg.toFixed(1))),
-        backgroundColor: hoodAvgs.map(h => h.avg < 13 ? '#10B981' : h.avg < 16 ? '#F59E0B' : '#EF4444'),
-        borderRadius: 4, borderSkipped: false
-      }]
-    },
-    options: {
-      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-      plugins: {
-        legend: { display: false },
-        tooltip: { backgroundColor: cc.tooltipBg, borderColor: cc.tooltipBorder, borderWidth: 1, titleColor: cc.tooltipText, bodyColor: cc.text,
-          callbacks: { label: ctx => `€${ctx.raw} avg (${hoodAvgs[ctx.dataIndex].count} restaurants)` } }
-      },
-      scales: {
-        x: { grid: { color: cc.grid }, ticks: { color: cc.text, callback: v => '€' + v } },
-        y: { grid: { display: false }, ticks: { color: cc.text, font: { size: 11 } } }
-      }
-    }
-  });
-
-  // === CHART 5: Donut — Menu Tier ===
+  // === PIPELINE STATUS DONUT ===
   const likely = DATA.filter(r => r.menu_tier === 'likely').length;
   const none = DATA.length - confirmed - likely;
 
   charts.tierDonut = new Chart(document.getElementById('chart-tier-donut'), {
     type: 'doughnut',
     data: {
-      labels: ['Confirmed', 'Likely', 'No Menú'],
+      labels: ['Deal-Ready', 'High Potential', 'Prospect'],
       datasets: [{ data: [confirmed, likely, none], backgroundColor: ['#10B981', '#F59E0B', '#EF4444'], borderWidth: 0, hoverOffset: 8 }]
     },
     options: {
@@ -399,7 +583,7 @@ function init() {
     }
   });
 
-  // === CHART 6: Bar — Cuisine avg price ===
+  // === CUISINE PRICE BAR ===
   const cuisines = {};
   DATA.forEach(r => {
     const c = r.cuisine_type;
@@ -436,22 +620,43 @@ function init() {
     }
   });
 
-  // === Best Value table ===
-  const bestValue = DATA.filter(r => r.google_maps_rating >= 4.3 && parsePrice(r.menu_price_range) && parsePrice(r.menu_price_range) <= 14)
-    .sort((a, b) => (b.google_maps_rating || 0) - (a.google_maps_rating || 0)).slice(0, 10);
+  // === HOOD PRICE BAR ===
+  const hoods = {};
+  DATA.forEach(r => {
+    const h = r.neighborhood;
+    if (!hoods[h]) hoods[h] = { prices: [], confirmed: 0, total: 0 };
+    hoods[h].total++;
+    if (r.menu_tier === 'confirmed') hoods[h].confirmed++;
+    const p = parsePrice(r.menu_price_range);
+    if (p) hoods[h].prices.push(p);
+  });
+  const hoodAvgs = Object.entries(hoods).filter(([, d]) => d.prices.length >= 3)
+    .map(([name, d]) => ({ name, avg: d.prices.reduce((a, b) => a + b, 0) / d.prices.length, count: d.prices.length }))
+    .sort((a, b) => a.avg - b.avg);
 
-  document.getElementById('best-value').innerHTML = bestValue.length ?
-    `<table><thead><tr><th>${t('restaurant')}</th><th>${t('price')}</th><th>${t('rating')}</th><th>${t('area')}</th></tr></thead><tbody>` +
-    bestValue.map(r => `<tr><td><a href="r/${r.id}.html" style="color:var(--accent);text-decoration:none;font-weight:500;">${r.name}</a></td><td>€${parsePrice(r.menu_price_range).toFixed(0)}</td><td>⭐${r.google_maps_rating}</td><td>${r.neighborhood}</td></tr>`).join('') +
-    '</tbody></table>' : '<p style="color:var(--text-sub);font-size:0.85rem;">No restaurants match criteria.</p>';
-
-  // === Neighborhood table ===
-  const thead = document.querySelector('#hood-table thead');
-  thead.innerHTML = `<tr><th>${t('hood')}</th><th>${t('count')}</th><th>${t('avg_p')}</th><th>${t('min')}</th><th>${t('max')}</th><th>${t('confirmed_pct')}</th></tr>`;
-  document.querySelector('#hood-table tbody').innerHTML = hoodAvgs.map(h => {
-    const badge = h.avg < 13 ? 'cheap' : h.avg < 16 ? 'mid' : 'exp';
-    return `<tr><td><a href="index.html?hood=${encodeURIComponent(h.name)}" style="color:var(--accent);text-decoration:none;font-weight:500;">${h.name}</a></td><td>${h.total}</td><td><span class="badge ${badge}">€${h.avg.toFixed(1)}</span></td><td>€${h.min.toFixed(0)}</td><td>€${h.max.toFixed(0)}</td><td>${(h.confirmed / h.total * 100).toFixed(0)}%</td></tr>`;
-  }).join('');
+  charts.hoodBars = new Chart(document.getElementById('chart-hood-bars'), {
+    type: 'bar',
+    data: {
+      labels: hoodAvgs.map(h => h.name),
+      datasets: [{
+        data: hoodAvgs.map(h => parseFloat(h.avg.toFixed(1))),
+        backgroundColor: hoodAvgs.map(h => h.avg < 13 ? '#10B981' : h.avg < 16 ? '#F59E0B' : '#EF4444'),
+        borderRadius: 4, borderSkipped: false
+      }]
+    },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: cc.tooltipBg, borderColor: cc.tooltipBorder, borderWidth: 1, titleColor: cc.tooltipText, bodyColor: cc.text,
+          callbacks: { label: ctx => `€${ctx.raw} avg (${hoodAvgs[ctx.dataIndex].count} restaurants)` } }
+      },
+      scales: {
+        x: { grid: { color: cc.grid }, ticks: { color: cc.text, callback: v => '€' + v } },
+        y: { grid: { display: false }, ticks: { color: cc.text, font: { size: 11 } } }
+      }
+    }
+  });
 }
 
 // === Theme ===

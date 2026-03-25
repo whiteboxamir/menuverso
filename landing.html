@@ -1,110 +1,77 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menuverso — La Guía Definitiva del Menú del Día</title>
-  <meta name="description" content="Exhaustiva base de datos de restaurantes en Barcelona. Descubre, filtra y compara más de 1500 restaurantes con Menú del Día en 18 barrios.">
+  <title>Menuverso — Barcelona's Restaurant Deal Infrastructure</title>
+  <meta name="description" content="Menuverso has mapped 1,458 Barcelona restaurants for deal readiness. The Neotaste-model partnership infrastructure for Spain's top dining market.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      /* Lovely Vibrant Palette (Light) */
-      --olive-deep: #FFFFFF;
-      --olive-dark: #FFD1FF;
-      --olive: #A0E8FF;
-      --olive-light: #FFC4A3;
-      --olive-muted: #DAB6FC;
-      
-      --terra: #FF5277;
-      --terra-light: #FF829E;
-      --terra-glow: rgba(255, 82, 119, 0.15);
-      
-      --text-primary: rgba(34, 34, 50, 0.95);
-      --text-secondary: rgba(34, 34, 50, 0.70);
-      --text-tertiary: rgba(34, 34, 50, 0.45);
-      --text-accent: var(--terra);
-      
-      --glass: rgba(255, 255, 255, 0.65);
-      --glass-border: rgba(255, 255, 255, 0.95);
-      --glass-hover: rgba(255, 255, 255, 0.85);
-
-      --shadow-sm: 0 4px 12px rgba(0,0,0,0.03);
-      --shadow-md: 0 12px 32px rgba(0,0,0,0.05);
-      --border: rgba(0,0,0,0.06);
-    }
-    :root.dark {
-      --olive-deep: #0F172A;
-      --olive-dark: #1A0A2E;
-      --olive: #0C1A2E;
-      --olive-light: #1E1A0F;
-      --olive-muted: #1A1030;
-      
-      --terra: #FF6B8A;
-      --terra-light: #FF829E;
-      --terra-glow: rgba(255, 107, 138, 0.2);
-      
+      --bg-deep: #0F172A;
+      --bg-card: #1E293B;
+      --bg-elevated: #273548;
+      --border: rgba(255,255,255,0.08);
+      --border-accent: rgba(59,130,246,0.4);
       --text-primary: rgba(241, 245, 249, 0.95);
       --text-secondary: rgba(148, 163, 184, 0.9);
       --text-tertiary: rgba(100, 116, 139, 0.7);
-      --text-accent: var(--terra);
-      
-      --glass: rgba(30, 41, 59, 0.7);
-      --glass-border: rgba(51, 65, 85, 0.8);
-      --glass-hover: rgba(30, 41, 59, 0.9);
-
+      --accent: #3B82F6;
+      --accent-glow: rgba(59,130,246,0.15);
+      --green: #10B981;
+      --green-glow: rgba(16,185,129,0.15);
+      --amber: #F59E0B;
+      --amber-glow: rgba(245,158,11,0.12);
+      --red: #EF4444;
       --shadow-sm: 0 4px 12px rgba(0,0,0,0.2);
       --shadow-md: 0 12px 32px rgba(0,0,0,0.3);
-      --border: rgba(255,255,255,0.06);
     }
-    
     *{margin:0;padding:0;box-sizing:border-box;}
     html{scroll-behavior:smooth;}
-    body{font-family:'Inter',-apple-system,sans-serif;background:var(--olive-deep);color:var(--text-primary);line-height:1.6;overflow-x:hidden;}
-    
+    body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg-deep);color:var(--text-primary);line-height:1.6;overflow-x:hidden;}
     h1,h2,h3,h4{font-family:'Outfit',sans-serif;line-height:1.2;}
     h1{font-weight:800;font-size:clamp(2.5rem,5.5vw,4.5rem);letter-spacing:-0.02em;}
     h2{font-weight:700;font-size:clamp(1.8rem,3vw,2.5rem);letter-spacing:-0.01em;}
     h3{font-weight:600;font-size:clamp(1.1rem,1.4vw,1.25rem);}
     p{color:var(--text-secondary);font-size:clamp(0.95rem,1.1vw,1.1rem);}
-    .accent{color:var(--text-accent);}
-    .label{font-family:'Outfit',sans-serif;font-weight:600;font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--text-accent);margin-bottom:12px;}
+    .accent{color:var(--accent);}
+    .green{color:var(--green);}
+    .label{font-family:'Outfit',sans-serif;font-weight:600;font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;}
 
     /* ═══ NAV ═══ */
-    .topnav{position:fixed;top:0;left:0;right:0;height:72px;background:rgba(252,250,248,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 40px;z-index:100;}
-    :root.dark .topnav{background:rgba(15,23,42,0.85);}
+    .topnav{position:fixed;top:0;left:0;right:0;height:72px;background:rgba(15,23,42,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 40px;z-index:100;}
     .topnav .nav-brand{display:flex;align-items:center;gap:6px;font-family:'Outfit',sans-serif;font-weight:800;font-size:1.4rem;text-decoration:none;color:var(--text-primary);}
     .topnav .nav-brand img{width:32px;height:32px;border-radius:8px;}
     .topnav .nav-links{display:flex;align-items:center;gap:24px;}
     .topnav .nav-links a{color:var(--text-secondary);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.3s;}
     .topnav .nav-links a:hover{color:var(--text-primary);}
-    .topnav .btn-nav{display:inline-flex;align-items:center;padding:10px 24px;background:var(--terra);color:white !important;border-radius:100px;font-family:'Outfit',sans-serif;font-weight:600;font-size:0.9rem;box-shadow:0 6px 16px rgba(196,99,63,0.25);transition:all 0.3s;}
-    .topnav .btn-nav:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(196,99,63,0.35);background:#A04D2E;}
+    .topnav .nav-links a.active{color:var(--accent);font-weight:600;}
 
     /* ═══ HERO ═══ */
-    .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:140px 40px 100px;position:relative;background:linear-gradient(145deg,var(--olive-dark) 0%,var(--olive) 55%,var(--olive-light) 100%);}
-    .hero::before{content:'';position:absolute;width:800px;height:800px;border-radius:50%;background:var(--terra);opacity:0.04;top:-300px;right:-250px;}
-    .hero::after{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:var(--olive-muted);bottom:-200px;left:-150px;opacity:0.6;}
-    .hero .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;background:var(--glass);border:1px solid var(--glass-border);border-radius:100px;color:var(--text-secondary);font-size:0.85rem;margin-bottom:24px;box-shadow:var(--shadow-sm);backdrop-filter:blur(8px);}
+    .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:140px 40px 100px;position:relative;background:linear-gradient(160deg,#0F172A 0%,#1A1040 40%,#0F172A 100%);}
+    .hero::before{content:'';position:absolute;width:800px;height:800px;border-radius:50%;background:var(--accent);opacity:0.03;top:-300px;right:-250px;}
+    .hero::after{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:#8B5CF6;opacity:0.03;bottom:-200px;left:-150px;}
+    .hero .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;background:var(--accent-glow);border:1px solid var(--border-accent);border-radius:100px;color:var(--accent);font-size:0.85rem;font-weight:600;margin-bottom:24px;box-shadow:var(--shadow-sm);}
     .hero h1{max-width:900px;margin-bottom:24px;line-height:1.15;}
-    .hero .tagline{font-size:clamp(1.1rem,1.8vw,1.3rem);color:var(--text-secondary);max-width:700px;margin-bottom:40px;font-weight:400;}
+    .hero .tagline{font-size:clamp(1.1rem,1.8vw,1.3rem);color:var(--text-secondary);max-width:750px;margin-bottom:40px;font-weight:400;}
     .hero-cta{display:flex;gap:16px;margin-bottom:60px;position:relative;z-index:10;}
-    .hero-cta .btn-primary{display:inline-flex;align-items:center;padding:16px 36px;background:var(--terra);color:white;border-radius:100px;font-family:'Outfit',sans-serif;font-weight:600;font-size:1.05rem;text-decoration:none;box-shadow:0 12px 32px rgba(196,99,63,0.3);transition:all 0.3s;}
-    .hero-cta .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(196,99,63,0.4);background:#A04D2E;}
-    .hero-cta .btn-ghost{display:inline-flex;align-items:center;padding:16px 36px;background:var(--glass);color:var(--text-primary);border:1px solid var(--glass-border);border-radius:100px;font-family:'Outfit',sans-serif;font-weight:600;font-size:1.05rem;text-decoration:none;backdrop-filter:blur(12px);transition:all 0.3s;}
-    .hero-cta .btn-ghost:hover{background:var(--glass-hover);transform:translateY(-3px);}
-    
-    /* ═══ STATS ═══ */
-    .hero-stats{display:flex;justify-content:center;gap:40px;width:100%;max-width:900px;flex-wrap:wrap;position:relative;z-index:10;}
-    .stat-card{background:var(--glass);border:1px solid var(--glass-border);border-radius:20px;padding:24px 32px;text-align:center;backdrop-filter:blur(12px);box-shadow:var(--shadow-sm);flex:1;min-width:200px;}
-    .stat-card .num{font-family:'Outfit',sans-serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--text-accent);margin-bottom:4px;line-height:1;}
+    .hero-cta .btn-primary{display:inline-flex;align-items:center;padding:16px 36px;background:var(--accent);color:white;border-radius:100px;font-family:'Outfit',sans-serif;font-weight:600;font-size:1.05rem;text-decoration:none;box-shadow:0 12px 32px rgba(59,130,246,0.3);transition:all 0.3s;}
+    .hero-cta .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(59,130,246,0.4);background:#2563EB;}
+    .hero-cta .btn-ghost{display:inline-flex;align-items:center;padding:16px 36px;background:var(--bg-card);color:var(--text-primary);border:1px solid var(--border);border-radius:100px;font-family:'Outfit',sans-serif;font-weight:600;font-size:1.05rem;text-decoration:none;transition:all 0.3s;}
+    .hero-cta .btn-ghost:hover{background:var(--bg-elevated);transform:translateY(-3px);}
+
+    .hero-stats{display:flex;justify-content:center;gap:40px;width:100%;max-width:1000px;flex-wrap:wrap;position:relative;z-index:10;}
+    .stat-card{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:24px 32px;text-align:center;box-shadow:var(--shadow-sm);flex:1;min-width:200px;transition:all 0.3s;}
+    .stat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--border-accent);}
+    .stat-card .num{font-family:'Outfit',sans-serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--accent);margin-bottom:4px;line-height:1;}
     .stat-card .desc{font-size:0.9rem;color:var(--text-secondary);font-weight:500;}
 
     /* ═══ SECTIONS ═══ */
     section{padding:120px 40px;position:relative;}
-    section:nth-of-type(odd){background:linear-gradient(160deg,var(--olive-deep) 0%,var(--olive-dark) 80%);}
-    section:nth-of-type(even){background:linear-gradient(150deg,var(--olive-dark) 0%,var(--olive-deep) 80%);}
+    section:nth-of-type(odd){background:var(--bg-deep);}
+    section:nth-of-type(even){background:linear-gradient(160deg,var(--bg-card) 0%,var(--bg-deep) 100%);}
     .container{max-width:1100px;margin:0 auto;position:relative;z-index:2;}
     .section-header{text-align:center;margin-bottom:60px;}
     .section-header h2{margin-bottom:16px;}
@@ -112,33 +79,43 @@
 
     /* ═══ GRIDS & CARDS ═══ */
     .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;}
-    .card{padding:32px 28px;background:var(--glass);border:1px solid var(--glass-border);border-radius:24px;backdrop-filter:blur(16px);transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);box-shadow:var(--shadow-sm);position:relative;overflow:hidden;}
-    .card:hover{transform:translateY(-8px);box-shadow:var(--shadow-md);border-color:rgba(255,255,255,1);}
-    .card .icon{width:56px;height:56px;border-radius:16px;background:var(--terra-glow);color:var(--terra);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;}
+    .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:32px;}
+    .card{padding:32px 28px;background:var(--bg-card);border:1px solid var(--border);border-radius:24px;transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);box-shadow:var(--shadow-sm);position:relative;overflow:hidden;}
+    .card:hover{transform:translateY(-8px);box-shadow:var(--shadow-md);border-color:var(--border-accent);}
+    .card .icon{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;}
+    .card .icon.blue{background:var(--accent-glow);color:var(--accent);}
+    .card .icon.green{background:var(--green-glow);color:var(--green);}
+    .card .icon.amber{background:var(--amber-glow);color:var(--amber);}
     .card h3{margin-bottom:12px;}
     .card p{line-height:1.6;}
 
-    /* ═══ PRICING TIERS ═══ */
-    .tier-card{padding:40px 32px;background:var(--glass);border:1px solid var(--glass-border);border-radius:24px;position:relative;overflow:hidden;backdrop-filter:blur(16px);box-shadow:var(--shadow-sm);transition:all 0.3s ease;display:flex;flex-direction:column;}
-    .tier-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
-    .tier-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;}
-    .tier-card.budget::before{background:var(--olive-light);}
-    .tier-card.mid::before{background:var(--terra-light);}
-    .tier-card.premium::before{background:var(--terra);}
+    /* ═══ COMPARISON TABLE ═══ */
+    .comp-table{width:100%;border-collapse:collapse;font-size:0.9rem;}
+    .comp-table th{text-align:left;padding:12px 16px;border-bottom:2px solid var(--border);color:var(--text-secondary);font-weight:600;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.04em;}
+    .comp-table td{padding:12px 16px;border-bottom:1px solid var(--border);}
+    .comp-table td:not(:first-child){text-align:center;font-weight:600;}
+    .comp-table tr:hover td{background:var(--bg-elevated);}
+    .comp-check{color:var(--green);font-weight:700;}
 
-    .tier-name{font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-secondary);}
-    .tier-price{font-family:'Outfit',sans-serif;font-size:2.5rem;font-weight:800;color:var(--text-primary);margin:8px 0 16px;line-height:1;}
-    .tier-desc{color:var(--text-secondary);font-size:0.95rem;margin-bottom:24px;line-height:1.5;padding-bottom:24px;border-bottom:1px solid rgba(0,0,0,0.06);flex-grow:1;}
-    
-    .tier-list{list-style:none;display:flex;flex-direction:column;gap:12px;}
-    .tier-list li{font-size:0.9rem;color:var(--text-secondary);padding-left:20px;position:relative;}
-    .tier-list li::before{content:'✓';position:absolute;left:0;color:var(--text-accent);font-weight:bold;}
+    /* ═══ PATHS SECTION ═══ */
+    .path-card{padding:40px 32px;background:var(--bg-card);border:1px solid var(--border);border-radius:24px;position:relative;overflow:hidden;box-shadow:var(--shadow-sm);transition:all 0.3s ease;display:flex;flex-direction:column;}
+    .path-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+    .path-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;}
+    .path-card.acq::before{background:var(--green);}
+    .path-card.inv::before{background:var(--accent);}
+    .path-card.hire::before{background:var(--amber);}
+    .path-name{font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-secondary);}
+    .path-title{font-family:'Outfit',sans-serif;font-size:1.6rem;font-weight:800;color:var(--text-primary);margin:8px 0 16px;line-height:1.2;}
+    .path-desc{color:var(--text-secondary);font-size:0.95rem;margin-bottom:24px;line-height:1.5;flex-grow:1;}
+    .path-list{list-style:none;display:flex;flex-direction:column;gap:12px;}
+    .path-list li{font-size:0.9rem;color:var(--text-secondary);padding-left:20px;position:relative;}
+    .path-list li::before{content:'→';position:absolute;left:0;color:var(--accent);font-weight:bold;}
 
     /* ═══ FOOTER ═══ */
-    .footer{padding:80px 40px;text-align:center;background:var(--olive-deep);border-top:1px solid rgba(0,0,0,0.06);}
-    .footer .brand{display:flex;align-items:center;justify-content:center;gap:6px;font-family:'Outfit',sans-serif;font-weight:800;font-size:1.5rem;margin-bottom:24px;color:var(--text-primary);}
+    .footer{padding:60px 40px;text-align:center;background:var(--bg-deep);border-top:1px solid var(--border);}
+    .footer .brand{display:flex;align-items:center;justify-content:center;gap:6px;font-family:'Outfit',sans-serif;font-weight:800;font-size:1.5rem;margin-bottom:16px;color:var(--text-primary);}
     .footer .brand img{width:36px;height:36px;border-radius:10px;}
-    .footer p{font-size:0.9rem;color:var(--text-tertiary);}
+    .footer p{font-size:0.85rem;color:var(--text-tertiary);}
 
     /* ═══ ANIMATIONS ═══ */
     .fade-in{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.22,1,0.36,1);}
@@ -146,296 +123,228 @@
 
     /* ═══ RESPONSIVE ═══ */
     @media(max-width:900px){
-      .grid-3{grid-template-columns:1fr;}
+      .grid-3,.grid-2{grid-template-columns:1fr;}
       section{padding:80px 24px;}
       .topnav{padding:0 24px;}
       .topnav .nav-links{display:none;}
       .hero{padding:120px 24px 80px;}
       .hero-stats{flex-direction:column;gap:20px;}
+      .comp-table{font-size:0.78rem;}
+      .comp-table th,.comp-table td{padding:8px 10px;}
     }
-    .controls-bar-landing{display:flex;gap:8px;align-items:center;}
-    .theme-btn-landing{background:none;border:1px solid var(--border);border-radius:20px;padding:6px 10px;cursor:pointer;font-size:0.9rem;color:var(--text-secondary);transition:all 0.2s;}
-    .theme-btn-landing:hover{color:var(--text-primary);}
-  img[src*="logo.png"] { mix-blend-mode: multiply; }
-  :root.dark img[src*="logo.png"] { mix-blend-mode: normal; filter: brightness(1.2); }
-    .lang-toggle{position:fixed;bottom:1.25rem;left:1.25rem;z-index:1000;display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(0,0,0,0.08);box-shadow:0 4px 12px rgba(0,0,0,0.03);font-size:0.75rem;font-weight:600;}
-    .lang-toggle button{padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;}
-    .lang-toggle button.active{background:var(--terra);color:#fff;}
-    .lang-toggle button:not(.active){background:var(--glass);color:var(--text-secondary);}
-</style>
+    img[src*="logo.png"] { mix-blend-mode: normal; filter: brightness(1.2); }
+  </style>
 </head>
 <body>
 
 <nav class="topnav">
-  <a href="#" class="nav-brand">
+  <a href="index.html" class="nav-brand">
     <img src="assets/logo.png" alt="Menuverso">
-    <span>Menu<span class="accent">verso</span></span>
+    <span>Menuverso</span>
   </a>
   <div class="nav-links">
-    <a href="#features">Características</a>
-    <a href="#tiers">Niveles de Precio</a>
-    <a href="analytics.html">Analytics</a>
-    <a href="landing.html" class="btn-nav" style="font-size:0.85rem;">Sobre</a>
-  </div>
-  <div class="controls-bar-landing">
-    <button class="theme-btn-landing" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
+    <a href="index.html">📋 Database</a>
+    <a href="analytics.html">📊 Market Intel</a>
+    <a href="lists.html">🎯 Target Lists</a>
+    <a href="landing.html" class="active">💰 Pitch</a>
   </div>
 </nav>
 
 <div class="hero">
-  <div class="pill fade-in">🚀&nbsp; La plataforma definitiva para comer en Barcelona</div>
-  <h1 class="fade-in">Encontrar un buen Menú del Día <span class="accent">no debería ser tan difícil.</span></h1>
-  <p class="tagline fade-in">Hemos centralizado la oferta gastronómica de la ciudad. Descubre, filtra y compara menús diarios de 1.504 restaurantes en una base de datos impecablemente organizada.</p>
-  
+  <div class="pill fade-in">🚀&nbsp; The Cold-Start Problem — Solved</div>
+  <h1 class="fade-in">Barcelona is <span class="accent">Ready for Neotaste.</span></h1>
+  <p class="tagline fade-in">Menuverso has mapped, profiled, and scored 1,458 restaurants across 18 neighborhoods. The supply-side infrastructure for Spain's first restaurant deal subscription is built. Zero competition. Massive market. Ready to launch.</p>
+
   <div class="hero-cta fade-in">
-    <a href="index.html" class="btn-primary">Explorar Base de Datos</a>
-    <a href="#features" class="btn-ghost">Saber Más</a>
+    <a href="index.html" class="btn-primary">Explore the Pipeline →</a>
+    <a href="analytics.html" class="btn-ghost">📊 See Market Intel</a>
   </div>
 
   <div class="hero-stats fade-in">
     <div class="stat-card">
-      <div class="num">1.504</div>
-      <div class="desc">Restaurantes Monitorizados</div>
+      <div class="num">1,458</div>
+      <div class="desc">Restaurants Mapped</div>
     </div>
     <div class="stat-card">
       <div class="num">18</div>
-      <div class="desc">Barrios en Barcelona</div>
+      <div class="desc">Neighborhoods</div>
     </div>
     <div class="stat-card">
       <div class="num">28</div>
-      <div class="desc">Tipos de Cocina</div>
+      <div class="desc">Cuisine Types</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">380+</div>
+      <div class="desc">With Real Photos</div>
     </div>
   </div>
 </div>
 
-<section id="features">
+<!-- WHY BARCELONA -->
+<section id="why-bcn">
   <div class="container">
     <div class="section-header fade-in">
-      <div class="label">La Solución</div>
-      <h2>Toda la oferta gastronómica en un solo lugar</h2>
-      <p>Deja de dar vueltas buscando pizarras en la calle. Menuverso lleva las mejores opciones de la ciudad directamente a tu pantalla.</p>
+      <div class="label">The Market Opportunity</div>
+      <h2>Why Barcelona First?</h2>
+      <p>Spain's most dynamic dining market has zero competition in the restaurant deal subscription space.</p>
     </div>
-    
+
     <div class="grid-3">
       <div class="card fade-in">
-        <div class="icon">🔍</div>
-        <h3>Búsqueda Potente</h3>
-        <p>Filtra por barrio, cocina, menú del día, nivel de precios, etiquetas, y metro más cercano. Exporta resultados a CSV.</p>
+        <div class="icon blue">🌍</div>
+        <h3>Tourism Capital</h3>
+        <p>32M+ visitors/year. Massive rotating demand for restaurant discovery — tourists + locals create dual-market dynamics that accelerate deal redemption.</p>
       </div>
       <div class="card fade-in">
-        <div class="icon">⭐</div>
-        <h3>Favoritos y Offline</h3>
-        <p>Guarda tus restaurantes favoritos. Funciona sin conexión gracias a nuestra Progressive Web App. Instálalo en tu móvil.</p>
+        <div class="icon green">🏪</div>
+        <h3>Restaurant Density</h3>
+        <p>7,500+ restaurants in metro Barcelona. We've profiled 1,458 across the core 18 neighborhoods — ideal partner density for a concentrated launch.</p>
       </div>
       <div class="card fade-in">
-        <div class="icon">📊</div>
-        <h3>Analytics de Precios</h3>
-        <p>Compara precios por barrio y tipo de cocina. Descubre las mejores relaciones calidad-precio con nuestro panel de analytics.</p>
+        <div class="icon amber">🚫</div>
+        <h3>Zero Competition</h3>
+        <p>No subscription dining clubs. No 2-for-1 deal platforms. The Spanish market is completely uncontested — first mover advantage is total.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="tiers">
+<!-- WHAT WE'VE BUILT -->
+<section id="built">
   <div class="container">
     <div class="section-header fade-in">
-      <div class="label">Elige tu Nivel</div>
-      <h2>Entiende tus opciones</h2>
-      <p>Clasificamos los menús en tres niveles de precios claros, desde comidas rápidas y económicas hasta almuerzos de negocios y alta cocina.</p>
+      <div class="label">The Infrastructure</div>
+      <h2>What Menuverso Has Built</h2>
+      <p>Every restaurant profiled with the exact data needed to launch a new city in the Neotaste model. This isn't a concept — it's a production-ready supply-side database.</p>
     </div>
-    
+
     <div class="grid-3">
-      <div class="tier-card budget fade-in">
-        <div class="tier-name">Económico</div>
-        <div class="tier-price">≤ 12€</div>
-        <div class="tier-desc">Comida sin pretensiones y porciones generosas para el día a día. Ideal para tu rutina semanal.</div>
-        <ul class="tier-list">
-          <li>Excelente relación calidad-precio</li>
-          <li>Clásicos del barrio</li>
-          <li>Rápido y fiable</li>
+      <div class="card fade-in">
+        <div class="icon blue">📍</div>
+        <h3>Full Geocoding</h3>
+        <p>1,200+ restaurants with precise lat/long coordinates. Map-based discovery ready. Neighborhood and metro station mapping for every listing.</p>
+      </div>
+      <div class="card fade-in">
+        <div class="icon green">📸</div>
+        <h3>Visual-First Profiles</h3>
+        <p>380+ restaurants with authentic scraped photos. Professional branded fallbacks for the rest. Hero images + card thumbnails optimized for app-like UX.</p>
+      </div>
+      <div class="card fade-in">
+        <div class="icon amber">📊</div>
+        <h3>Market Intelligence</h3>
+        <p>Pricing tiers, cuisine taxonomy, Google ratings, review counts, contact info, social media links — every field a partner CRM needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARABLE CITIES -->
+<section id="comparable">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="label">Benchmarks</div>
+      <h2>How BCN Compares to Neotaste's German Cities</h2>
+      <p>Menuverso's restaurant coverage is on par with Neotaste's most successful markets.</p>
+    </div>
+
+    <div class="fade-in" style="background:var(--bg-card);border:1px solid var(--border);border-radius:24px;overflow:hidden;box-shadow:var(--shadow-sm);">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Berlin</th>
+            <th>Hamburg</th>
+            <th>Munich</th>
+            <th style="color:var(--accent);">Barcelona (Menuverso)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Restaurant Deals / Mapped</td><td>1,526</td><td>626</td><td>630</td><td style="color:var(--accent);font-weight:700;">1,458</td></tr>
+          <tr><td>Population (Metro)</td><td>3.6M</td><td>1.9M</td><td>1.5M</td><td>5.6M</td></tr>
+          <tr><td>Annual Tourists</td><td>14M</td><td>7M</td><td>8M</td><td style="color:var(--green);font-weight:700;">32M</td></tr>
+          <tr><td>Existing Competition</td><td>Neotaste</td><td>Neotaste</td><td>Neotaste</td><td style="color:var(--green);font-weight:700;">None</td></tr>
+          <tr><td>Supply-Side Data Ready</td><td class="comp-check">✓</td><td class="comp-check">✓</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- THREE PATHS -->
+<section id="paths">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="label">Engagement Model</div>
+      <h2>Three Paths Forward</h2>
+      <p>We're flexible on structure. What matters is getting the Neotaste model into Barcelona.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="path-card acq fade-in">
+        <div class="path-name" style="color:var(--green);">Path 1</div>
+        <div class="path-title">Acquisition</div>
+        <div class="path-desc">Acquire Menuverso's data infrastructure and local team to fast-track the BCN launch. Plug our database directly into your platform.</div>
+        <ul class="path-list">
+          <li>Full database ownership transfer</li>
+          <li>Local market expertise included</li>
+          <li>Immediate launch capability</li>
+          <li>Fastest time-to-market</li>
         </ul>
       </div>
-      
-      <div class="tier-card mid fade-in">
-        <div class="tier-name">Gama Media</div>
-        <div class="tier-price">12€ – 18€</div>
-        <div class="tier-desc">Ingredientes de mayor calidad, opciones creativas y un cuidado ambiente para disfrutar.</div>
-        <ul class="tier-list">
-          <li>Emplatado minucioso</li>
-          <li>Opciones de cocina de mercado</li>
-          <li>Perfecto para reuniones informales</li>
+
+      <div class="path-card inv fade-in">
+        <div class="path-name" style="color:var(--accent);">Path 2</div>
+        <div class="path-title">Investment</div>
+        <div class="path-desc">Invest in Menuverso as your Spanish market partner. We execute the launch using the Neotaste playbook, brand, and technology stack.</div>
+        <ul class="path-list">
+          <li>Local execution, your brand</li>
+          <li>Revenue share model</li>
+          <li>Scalable to Madrid, Valencia, etc.</li>
+          <li>Proven playbook, local ops</li>
         </ul>
       </div>
-      
-      <div class="tier-card premium fade-in">
-        <div class="tier-name">Premium</div>
-        <div class="tier-price">18€+</div>
-        <div class="tier-desc">Cocina de autor, presentación impecable e ingredientes excepcionales en lugares únicos.</div>
-        <ul class="tier-list">
-          <li>Ingredientes de alta gama</li>
-          <li>Experiencia gastronómica superior</li>
-          <li>Ideal para almuerzos de negocios</li>
+
+      <div class="path-card hire fade-in">
+        <div class="path-name" style="color:var(--amber);">Path 3</div>
+        <div class="path-title">Hire Us</div>
+        <div class="path-desc">Hire the Menuverso team to run the BCN launch as your first Spanish city operators. We become your Barcelona team.</div>
+        <ul class="path-list">
+          <li>Full operational control</li>
+          <li>Built-in local network</li>
+          <li>Restaurant relationships ready</li>
+          <li>Lowest risk for you</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section style="background:var(--olive-dark);text-align:center;padding:100px 40px;">
+<!-- CTA -->
+<section style="text-align:center;padding:100px 40px;background:linear-gradient(160deg,#1A1040 0%,#0F172A 100%);">
   <div class="container fade-in" style="max-width:700px;">
-    <h2 style="font-size:clamp(1.8rem,3.5vw,2.5rem);margin-bottom:24px;">¿Listo para encontrar tu próximo lugar favorito?</h2>
-    <p style="margin-bottom:40px;color:var(--text-primary);opacity:0.8;">Únete a miles de personas que ya disfrutan de los mejores menús del día en Barcelona.</p>
-    <a href="index.html" class="btn-primary" style="display:inline-flex;padding:16px 40px;background:var(--terra);color:white;border-radius:100px;font-family:'Outfit',sans-serif;font-weight:700;font-size:1.1rem;text-decoration:none;box-shadow:0 12px 32px rgba(196,99,63,0.3);transition:transform 0.3s;">Explorar Restaurantes</a>
+    <h2 style="font-size:clamp(1.8rem,3.5vw,2.5rem);margin-bottom:24px;">The supply side is built.<br><span class="accent">Let's launch Barcelona.</span></h2>
+    <p style="margin-bottom:40px;color:var(--text-secondary);font-size:1.1rem;">1,458 restaurants. 18 neighborhoods. 28 cuisine types. Zero competition.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="index.html" style="display:inline-flex;padding:16px 40px;background:var(--accent);color:white;border-radius:100px;font-family:'Outfit',sans-serif;font-weight:700;font-size:1.1rem;text-decoration:none;box-shadow:0 12px 32px rgba(59,130,246,0.3);transition:transform 0.3s;">Explore Pipeline →</a>
+      <a href="analytics.html" style="display:inline-flex;padding:16px 40px;background:var(--bg-card);color:var(--text-primary);border:1px solid var(--border);border-radius:100px;font-family:'Outfit',sans-serif;font-weight:700;font-size:1.1rem;text-decoration:none;transition:transform 0.3s;">View Market Intel</a>
+    </div>
   </div>
 </section>
 
 <footer class="footer">
   <div class="brand">
     <img src="assets/logo.png" alt="Menuverso">
-    <span>Menu<span class="accent">verso</span></span>
+    <span>Menuverso</span>
   </div>
-  <p>&copy; 2026 Menuverso. Todos los derechos reservados.</p>
+  <p>© 2026 Menuverso · Barcelona restaurant deal infrastructure</p>
 </footer>
 
-<div class="lang-toggle">
-  <button data-lang="es" class="active" onclick="setLang('es')">ES</button>
-  <button data-lang="ca" onclick="setLang('ca')">CA</button>
-  <button data-lang="en" onclick="setLang('en')">EN</button>
-</div>
-
 <script>
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-
   // Intersection Observer for scroll animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  // Theme
-  function initTheme(){
-    const saved=localStorage.getItem('menuverso_theme');
-    if(saved==='dark'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches)){
-      document.documentElement.classList.add('dark');
-      document.getElementById('theme-toggle').textContent='☀️';
-    }
-  }
-  function toggleTheme(){
-    const isDark=document.documentElement.classList.toggle('dark');
-    localStorage.setItem('menuverso_theme',isDark?'dark':'light');
-    document.getElementById('theme-toggle').textContent=isDark?'☀️':'🌙';
-  }
-  initTheme();
-
-  // === TRILINGUAL i18n ===
-  const LI={
-    es:{
-      nav_features:'Características',nav_tiers:'Niveles de Precio',nav_analytics:'Analytics',nav_about:'Sobre',
-      hero_pill:'🚀\u00a0 La plataforma definitiva para comer en Barcelona',
-      hero_title:'Encontrar un buen Menú del Día ',hero_accent:'no debería ser tan difícil.',
-      hero_tagline:'Hemos centralizado la oferta gastronómica de la ciudad. Descubre, filtra y compara menús diarios de 1.504 restaurantes en una base de datos impecablemente organizada.',
-      cta_db:'Explorar Base de Datos',cta_more:'Saber Más',
-      stat1:'Restaurantes Monitorizados',stat2:'Barrios en Barcelona',stat3:'Tipos de Cocina',
-      feat_label:'La Solución',feat_title:'Toda la oferta gastronómica en un solo lugar',
-      feat_desc:'Deja de dar vueltas buscando pizarras en la calle. Menuverso lleva las mejores opciones de la ciudad directamente a tu pantalla.',
-      f1_t:'Búsqueda Potente',f1_d:'Filtra por barrio, cocina, menú del día, nivel de precios, etiquetas, y metro más cercano. Exporta resultados a CSV.',
-      f2_t:'Favoritos y Offline',f2_d:'Guarda tus restaurantes favoritos. Funciona sin conexión gracias a nuestra Progressive Web App. Instálalo en tu móvil.',
-      f3_t:'Analytics de Precios',f3_d:'Compara precios por barrio y tipo de cocina. Descubre las mejores relaciones calidad-precio con nuestro panel de analytics.',
-      tiers_label:'Elige tu Nivel',tiers_title:'Entiende tus opciones',
-      tiers_desc:'Clasificamos los menús en tres niveles de precios claros, desde comidas rápidas y económicas hasta almuerzos de negocios y alta cocina.',
-      t1:'Económico',t2:'Gama Media',t3:'Premium',
-      cta_final:'¿Listo para encontrar tu próximo lugar favorito?',
-      cta_final_d:'Únete a miles de personas que ya disfrutan de los mejores menús del día en Barcelona.',
-      cta_final_btn:'Explorar Restaurantes',
-      footer_copy:'© 2026 Menuverso. Todos los derechos reservados.'
-    },
-    ca:{
-      nav_features:'Característiques',nav_tiers:'Nivells de Preu',nav_analytics:'Analytics',nav_about:'Sobre',
-      hero_pill:'🚀\u00a0 La plataforma definitiva per menjar a Barcelona',
-      hero_title:'Trobar un bon Menú del Dia ',hero_accent:'no hauria de ser tan difícil.',
-      hero_tagline:'Hem centralitzat l\'oferta gastronòmica de la ciutat. Descobreix, filtra i compara menús diaris de 1.504 restaurants en una base de dades impecablement organitzada.',
-      cta_db:'Explorar Base de Dades',cta_more:'Saber Més',
-      stat1:'Restaurants Monitoritzats',stat2:'Barris a Barcelona',stat3:'Tipus de Cuina',
-      feat_label:'La Solució',feat_title:'Tota l\'oferta gastronòmica en un sol lloc',
-      feat_desc:'Deixa de donar voltes buscant pissarres al carrer. Menuverso porta les millors opcions de la ciutat directament a la teva pantalla.',
-      f1_t:'Cerca Potent',f1_d:'Filtra per barri, cuina, menú del dia, nivell de preus, etiquetes i metro més proper. Exporta resultats a CSV.',
-      f2_t:'Preferits i Offline',f2_d:'Guarda els teus restaurants preferits. Funciona sense connexió gràcies a la nostra Progressive Web App.',
-      f3_t:'Analytics de Preus',f3_d:'Compara preus per barri i tipus de cuina. Descobreix les millors relacions qualitat-preu.',
-      tiers_label:'Tria el teu Nivell',tiers_title:'Entén les teves opcions',
-      tiers_desc:'Classifiquem els menús en tres nivells de preus clars.',
-      t1:'Econòmic',t2:'Gamma Mitjana',t3:'Premium',
-      cta_final:'Preparat per trobar el teu proper lloc preferit?',
-      cta_final_d:'Uneix-te a milers de persones que ja gaudeixen dels millors menús del dia a Barcelona.',
-      cta_final_btn:'Explorar Restaurants',
-      footer_copy:'© 2026 Menuverso. Tots els drets reservats.'
-    },
-    en:{
-      nav_features:'Features',nav_tiers:'Price Tiers',nav_analytics:'Analytics',nav_about:'About',
-      hero_pill:'🚀\u00a0 The definitive platform for eating in Barcelona',
-      hero_title:'Finding a good Menú del Día ',hero_accent:'shouldn\'t be this hard.',
-      hero_tagline:'We\'ve centralized the city\'s dining scene. Discover, filter, and compare daily menus from 1,504 restaurants in a beautifully organized database.',
-      cta_db:'Explore Database',cta_more:'Learn More',
-      stat1:'Restaurants Monitored',stat2:'Barcelona Neighborhoods',stat3:'Cuisine Types',
-      feat_label:'The Solution',feat_title:'All dining options in one place',
-      feat_desc:'Stop wandering the streets looking for chalkboards. Menuverso brings the city\'s best options directly to your screen.',
-      f1_t:'Powerful Search',f1_d:'Filter by neighborhood, cuisine, menú del día, price tier, tags, and nearest metro. Export results to CSV.',
-      f2_t:'Favorites & Offline',f2_d:'Save your favorite restaurants. Works offline thanks to our Progressive Web App. Install it on your phone.',
-      f3_t:'Price Analytics',f3_d:'Compare prices by neighborhood and cuisine type. Discover the best value with our analytics dashboard.',
-      tiers_label:'Choose Your Tier',tiers_title:'Understand your options',
-      tiers_desc:'We classify menus into three clear price tiers, from quick budget meals to business lunches and fine dining.',
-      t1:'Budget',t2:'Mid-Range',t3:'Premium',
-      cta_final:'Ready to find your next favorite spot?',
-      cta_final_d:'Join thousands of people already enjoying the best menús del día in Barcelona.',
-      cta_final_btn:'Explore Restaurants',
-      footer_copy:'© 2026 Menuverso. All rights reserved.'
-    }
-  };
-  let currentLang=localStorage.getItem('menuverso_lang')||'es';
-  function setLang(lang){
-    currentLang=lang;
-    localStorage.setItem('menuverso_lang',lang);
-    document.querySelectorAll('.lang-toggle button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
-    const t=LI[lang];
-    // Nav
-    const nl=document.querySelectorAll('.topnav .nav-links a');
-    nl[0].textContent=t.nav_features;nl[1].textContent=t.nav_tiers;nl[2].textContent=t.nav_analytics;nl[3].textContent=t.nav_about;
-    // Hero
-    document.querySelector('.hero .pill').innerHTML=t.hero_pill;
-    document.querySelector('.hero h1').innerHTML=t.hero_title+'<span class="accent">'+t.hero_accent+'</span>';
-    document.querySelector('.hero .tagline').textContent=t.hero_tagline;
-    const ctaBtns=document.querySelectorAll('.hero-cta a');
-    ctaBtns[0].textContent=t.cta_db;ctaBtns[1].textContent=t.cta_more;
-    const stats=document.querySelectorAll('.hero .stat-card .desc');
-    stats[0].textContent=t.stat1;stats[1].textContent=t.stat2;stats[2].textContent=t.stat3;
-    // Features
-    document.querySelectorAll('#features .label')[0].textContent=t.feat_label;
-    document.querySelector('#features h2').textContent=t.feat_title;
-    document.querySelector('#features .section-header p').textContent=t.feat_desc;
-    const cards=document.querySelectorAll('#features .card');
-    cards[0].querySelector('h3').textContent=t.f1_t;cards[0].querySelector('p').textContent=t.f1_d;
-    cards[1].querySelector('h3').textContent=t.f2_t;cards[1].querySelector('p').textContent=t.f2_d;
-    cards[2].querySelector('h3').textContent=t.f3_t;cards[2].querySelector('p').textContent=t.f3_d;
-    // Tiers
-    document.querySelectorAll('#tiers .label')[0].textContent=t.tiers_label;
-    document.querySelector('#tiers h2').textContent=t.tiers_title;
-    document.querySelector('#tiers .section-header p').textContent=t.tiers_desc;
-    const tiers=document.querySelectorAll('.tier-card .tier-name');
-    tiers[0].textContent=t.t1;tiers[1].textContent=t.t2;tiers[2].textContent=t.t3;
-    // CTA
-    document.querySelectorAll('section')[2].querySelector('h2').textContent=t.cta_final;
-    document.querySelectorAll('section')[2].querySelector('p').textContent=t.cta_final_d;
-    document.querySelectorAll('section')[2].querySelector('a').textContent=t.cta_final_btn;
-    // Footer
-    document.querySelector('.footer p').textContent=t.footer_copy;
-  }
-  document.querySelectorAll('.lang-toggle button').forEach(b=>b.classList.toggle('active',b.dataset.lang===currentLang));
-  setLang(currentLang);
 </script>
 </body>
 </html>

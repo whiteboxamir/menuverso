@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menuverso — Barcelona Restaurant Database</title>
-<meta name="description" content="1,504 Barcelona restaurants across 18 neighborhoods with menú del día tracking, ratings, metro stations, and interactive map.">
+<title>Menuverso — Barcelona Restaurant Partnership Pipeline</title>
+<meta name="description" content="1,458 Barcelona restaurants across 18 neighborhoods scored for deal readiness — the Neotaste-model partnership pipeline for BCN.">
 <meta name="theme-color" content="#1E293B">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="assets/logo.png">
@@ -213,10 +213,9 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
   </a>
   <div class="nav-links">
     <a href="index.html" class="active"><span>📋 </span>Database</a>
-    <a href="finder.html"><span>🔍 </span>Finder</a>
-    <a href="analytics.html"><span>📊 </span>Analytics</a>
-    <a href="lists.html"><span>🏆 </span>Best Of</a>
-    <a href="crawl.html"><span>🚶 </span>Crawl</a>
+    <a href="analytics.html"><span>📊 </span>Market Intel</a>
+    <a href="lists.html"><span>🎯 </span>Target Lists</a>
+    <a href="landing.html"><span>💰 </span>Pitch</a>
   </div>
   <div class="controls-bar">
     <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
@@ -231,9 +230,9 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
 </div>
 <div class="stats" id="statsbar">
 <div class="stat"><div class="stat-num" id="s-total">—</div><div class="stat-label">Total Restaurants</div></div>
-<div class="stat"><div class="stat-num green" id="s-confirmed">—</div><div class="stat-label">🟢 Confirmed Menú</div></div>
-<div class="stat"><div class="stat-num yellow" id="s-likely">—</div><div class="stat-label">🟡 Likely Menú</div></div>
-<div class="stat"><div class="stat-num red" id="s-none">—</div><div class="stat-label">🔴 No Menú</div></div>
+<div class="stat"><div class="stat-num green" id="s-confirmed">—</div><div class="stat-label">🟢 Deal-Ready</div></div>
+<div class="stat"><div class="stat-num yellow" id="s-likely">—</div><div class="stat-label">🟡 High Potential</div></div>
+<div class="stat"><div class="stat-num red" id="s-none">—</div><div class="stat-label">🔴 Prospects</div></div>
 <div class="stat"><div class="stat-num" id="s-hoods">—</div><div class="stat-label">Neighborhoods</div></div>
 <div class="stat"><div class="stat-num" id="s-mapped" style="color:var(--accent)">—</div><div class="stat-label">📍 On Map</div></div>
 <div class="stat"><div class="stat-num" id="s-tagged" style="color:#7C3AED">—</div><div class="stat-label">🏷️ Tagged</div></div>
@@ -251,9 +250,9 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
   </div>
 </div>
 <div class="filters" id="filters">
-  <span class="chip g" data-filter="mtier" data-value="confirmed">🟢 <span data-i18n="confirmed">Confirmed</span></span>
-  <span class="chip y" data-filter="mtier" data-value="likely">🟡 <span data-i18n="likely">Likely</span></span>
-  <span class="chip r" data-filter="mtier" data-value="none">🔴 <span data-i18n="no_menu">No Menú</span></span>
+  <span class="chip g" data-filter="mtier" data-value="confirmed">🟢 <span data-i18n="confirmed">Deal-Ready</span></span>
+  <span class="chip y" data-filter="mtier" data-value="likely">🟡 <span data-i18n="likely">High Potential</span></span>
+  <span class="chip r" data-filter="mtier" data-value="none">🔴 <span data-i18n="no_menu">Prospects</span></span>
   <span class="chip" data-filter="fav" data-value="yes">⭐ <span data-i18n="favorites">Favorites</span> <span id="fav-count" style="font-size:0.65rem;opacity:0.7;"></span></span>
   <span class="chip g" data-filter="openNow" data-value="yes">🟢 <span data-i18n="open_now">Open Now</span></span>
   <span class="pipe">|</span>
@@ -283,7 +282,7 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
       <option value="price-low">Sort: Price ↑</option>
       <option value="price-high">Sort: Price ↓</option>
       <option value="reviews">Sort: Reviews ↓</option>
-      <option value="completeness" selected>Sort: Best Profiles First</option>
+      <option value="completeness" selected>Sort: Partnership Readiness</option>
     </select>
   </div>
 </div>
@@ -350,10 +349,10 @@ let favorites=JSON.parse(localStorage.getItem('menuverso_favs')||'[]');
 let currentLang=localStorage.getItem('menuverso_lang')||'es';
 
 const I18N={
-  es:{subtitle:'Base de datos exhaustiva de restaurantes de Barcelona. {total} restaurantes en {hoods} barrios con seguimiento de menú del día.',
+  es:{subtitle:'Pipeline de partnerships de restaurantes en Barcelona. {total} restaurantes en {hoods} barrios evaluados para deal readiness.',
     search_placeholder:'🔍 Buscar por nombre, cocina, barrio, notas...',
     all_hoods:'Todos los Barrios',all_cuisines:'Todas las Cocinas',
-    confirmed:'Confirmado',likely:'Probable',no_menu:'Sin Menú',favorites:'Favoritos',
+    confirmed:'Deal-Ready',likely:'Alto Potencial',no_menu:'Prospecto',favorites:'Favoritos',
     budget:'Económico',mid_range:'Medio',premium:'Premium',
     sort_name:'Orden: Nombre A→Z',sort_rating:'Orden: Rating ↓',sort_price_low:'Orden: Precio ↑',sort_price_high:'Orden: Precio ↓',sort_reviews:'Orden: Reseñas ↓',
     showing:'Mostrando {n} de {t} restaurantes',
@@ -361,11 +360,11 @@ const I18N={
     clear:'Limpiar Filtros',export_csv:'Exportar CSV',dashboard:'Panel de Barrios',
     web:'Web',maps:'Maps',call:'Llamar',
     on_map:'En Mapa',tagged:'Etiquetados',neighborhoods:'Barrios',total:'Total Restaurantes',
-    confirmed_menu:'Menú Confirmado',likely_menu:'Menú Probable',no_menu_stat:'Sin Menú'},
-  en:{subtitle:'Exhaustive Barcelona restaurant database. {total} restaurants across {hoods} neighborhoods with menú del día tracking.',
+    confirmed_menu:'Deal-Ready',likely_menu:'Alto Potencial',no_menu_stat:'Prospecto',open_now:'Abierto'},
+  en:{subtitle:'Barcelona restaurant partnership pipeline. {total} restaurants across {hoods} neighborhoods scored for deal readiness.',
     search_placeholder:'🔍 Search by name, cuisine, neighborhood, notes...',
     all_hoods:'All Neighborhoods',all_cuisines:'All Cuisines',
-    confirmed:'Confirmed',likely:'Likely',no_menu:'No Menú',favorites:'Favorites',
+    confirmed:'Deal-Ready',likely:'High Potential',no_menu:'Prospect',favorites:'Favorites',
     budget:'Budget',mid_range:'Mid-Range',premium:'Premium',
     sort_name:'Sort: Name A→Z',sort_rating:'Sort: Rating ↓',sort_price_low:'Sort: Price ↑',sort_price_high:'Sort: Price ↓',sort_reviews:'Sort: Reviews ↓',
     showing:'Showing {n} of {t} restaurants',
@@ -373,11 +372,11 @@ const I18N={
     clear:'Clear Filters',export_csv:'Export CSV',dashboard:'Neighborhood Dashboard',
     web:'Web',maps:'Maps',call:'Call',
     on_map:'On Map',tagged:'Tagged',neighborhoods:'Neighborhoods',total:'Total Restaurants',
-    confirmed_menu:'Confirmed Menú',likely_menu:'Likely Menú',no_menu_stat:'No Menú'},
-  ca:{subtitle:'Base de dades exhaustiva de restaurants de Barcelona. {total} restaurants en {hoods} barris amb seguiment del menú del dia.',
+    confirmed_menu:'Deal-Ready',likely_menu:'High Potential',no_menu_stat:'Prospect',open_now:'Open Now'},
+  ca:{subtitle:'Pipeline de partnerships de restaurants de Barcelona. {total} restaurants en {hoods} barris avaluats per deal readiness.',
     search_placeholder:'🔍 Cercar per nom, cuina, barri, notes...',
     all_hoods:'Tots els Barris',all_cuisines:'Totes les Cuines',
-    confirmed:'Confirmat',likely:'Probable',no_menu:'Sense Menú',favorites:'Preferits',
+    confirmed:'Deal-Ready',likely:'Alt Potencial',no_menu:'Prospecte',favorites:'Preferits',
     budget:'Econòmic',mid_range:'Mitjà',premium:'Premium',
     sort_name:'Ordre: Nom A→Z',sort_rating:'Ordre: Valoració ↓',sort_price_low:'Ordre: Preu ↑',sort_price_high:'Ordre: Preu ↓',sort_reviews:'Ordre: Ressenyes ↓',
     showing:'Mostrant {n} de {t} restaurants',
@@ -385,7 +384,7 @@ const I18N={
     clear:'Netejar Filtres',export_csv:'Exportar CSV',dashboard:'Panell de Barris',
     web:'Web',maps:'Maps',call:'Trucar',
     on_map:'Al Mapa',tagged:'Etiquetats',neighborhoods:'Barris',total:'Total Restaurants',
-    confirmed_menu:'Menú Confirmat',likely_menu:'Menú Probable',no_menu_stat:'Sense Menú'}
+    confirmed_menu:'Deal-Ready',likely_menu:'Alt Potencial',no_menu_stat:'Prospecte',open_now:'Obert'}
 };
 
 if(DATA.length){init()}else{document.getElementById('grid').innerHTML='<div class="no-results">Error: restaurants_data.js not found.</div>'}
@@ -399,7 +398,7 @@ function init(){
   const mapped=DATA.filter(r=>{if(!r.coordinates||!r.coordinates.lat||!r.coordinates.lng)return false;const d=String(r.coordinates.lat).split('.')[1]||'';return d.length>=5;}).length;
   const tagged=DATA.filter(r=>r.tags&&r.tags.length>0).length;
 
-  document.getElementById('subtitle').textContent=`Exhaustive Barcelona restaurant database. ${DATA.length} restaurants across ${hoods.length} neighborhoods with menú del día tracking.`;
+  document.getElementById('subtitle').textContent=`Barcelona restaurant partnership pipeline. ${DATA.length} restaurants across ${hoods.length} neighborhoods scored for deal readiness.`;
   document.getElementById('s-total').textContent=DATA.length;
   document.getElementById('s-confirmed').textContent=confirmed;
   document.getElementById('s-likely').textContent=likely;
@@ -533,7 +532,7 @@ function renderList(filtered){
     if(r.website)links.push(`<a href="${r.website}" target="_blank" onclick="event.stopPropagation()">🌐 ${t('web')}</a>`);
     if(r.google_maps_url)links.push(`<a href="${r.google_maps_url}" target="_blank" onclick="event.stopPropagation()">📍 ${t('maps')}</a>`);
     if(r.phone)links.push(`<a href="tel:${r.phone}" onclick="event.stopPropagation()">📞 ${t('call')}</a>`);
-    const tierBadge=tier==='confirmed'?'<span class="badge confirmed">🟢 Confirmed</span>':tier==='likely'?'<span class="badge likely">🟡 Likely</span>':'<span class="badge none">🔴 No Menú</span>';
+    const tierBadge=tier==='confirmed'?'<span class="badge confirmed">🟢 Deal-Ready</span>':tier==='likely'?'<span class="badge likely">🟡 High Potential</span>':'<span class="badge none">🔴 Prospect</span>';
     const openStatus=getOpenStatus(r);
     const openHtml=openStatus==='open'?'<div class="open-pill open"><span class="pulse"></span> Open</div>':openStatus==='closed'?'<div class="open-pill closed">Closed</div>':'';
     const ratingHtml=r.google_maps_rating?`<span class="card-rating"><span class="star">★</span> ${r.google_maps_rating}<span class="review-ct">(${(r.google_maps_review_count||0).toLocaleString()})</span></span>`:'';
@@ -543,7 +542,7 @@ function renderList(filtered){
     if(!r.website) missingFields.push('website');
     if(!r.phone) missingFields.push('phone');
     if(!r.google_maps_rating) missingFields.push('rating');
-    const ctaHtml=missingFields.length>=2?`<div class="profile-cta">📋 ${missingFields.length} fields missing — <strong>owners can claim this listing</strong></div>`:'';
+    const ctaHtml=missingFields.length>=2?`<div class="profile-cta">📋 ${missingFields.length} fields missing — <strong>needs enrichment for outreach</strong></div>`:'';
     const imgUrl=getCardImage(r);
     return `<div class="card" onclick="window.location.href='r/${r.id}.html'">
       <button class="fav-btn ${isFav?'active':''}" onclick="event.stopPropagation();toggleFav(${r.id},this)" title="${isFav?'Remove from':'Add to'} favorites">${isFav?'❤️':'🩶'}</button>
@@ -605,7 +604,7 @@ function renderMap(filtered){
       
       marker.bindPopup(`<div class="map-popup">
         <div class="popup-name">${r.name}</div>
-        <span class="popup-badge ${tier}">${tier==='confirmed'?'🟢 Confirmed':tier==='likely'?'🟡 Likely':'🔴 No Menú'}</span>
+        <span class="popup-badge ${tier}">${tier==='confirmed'?'🟢 Deal-Ready':tier==='likely'?'🟡 High Potential':'🔴 Prospect'}</span>
         <div class="popup-meta">${r.cuisine_type} · ${r.pricing_tier}${r.menu_price_range?' · '+r.menu_price_range:''}</div>
         <div class="popup-meta">⭐ ${r.google_maps_rating||'?'} (${r.google_maps_review_count||0} rev)</div>
         ${r.address_full?`<div class="popup-meta">📍 ${r.address_full}</div>`:''}
@@ -909,7 +908,7 @@ function dismissInstall(){
   "@type": "WebApplication",
   "name": "Menuverso",
   "url": "https://whiteboxamir.github.io/menuverso/",
-  "description": "1,504 Barcelona restaurants with menú del día tracking, ratings, and interactive map",
+  "description": "1,458 Barcelona restaurants scored for deal readiness — partnership pipeline with ratings and interactive map",
   "applicationCategory": "FoodEstablishment",
   "operatingSystem": "Any",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},

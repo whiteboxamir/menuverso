@@ -1,7 +1,7 @@
 {
   "name": "Menuverso — Barcelona Restaurants",
   "short_name": "Menuverso",
-  "description": "Discover Barcelona's 1,520 best restaurants. Menú del día tracking, ratings, interactive map, and smart finder.",
+  "description": "Barcelona restaurant partnership pipeline. 1,458 restaurants scored for deal readiness with ratings, interactive map, and market intel.",
   "start_url": "/menuverso/app.html",
   "scope": "/menuverso/",
   "display": "standalone",
