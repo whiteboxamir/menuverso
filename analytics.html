@@ -109,35 +109,35 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 </nav>
 
 <div class="container">
-  <h1 id="page-title">📊 Market Intelligence</h1>
-  <p class="subtitle" id="page-subtitle">Biz dev intelligence from <strong id="total">—</strong> Barcelona restaurants</p>
+  <h1 id="page-title">📊 <span data-i18n="page_title">Market Intelligence</span></h1>
+  <p class="subtitle" id="page-subtitle"><span data-i18n="page_subtitle_pre">Biz dev intelligence from</span> <strong id="total">—</strong> <span data-i18n="page_subtitle_post">Barcelona restaurants</span></p>
 
   <!-- ═══ TOP STATS ═══ -->
   <div class="stat-row" id="top-stats"></div>
 
   <!-- ═══ SECTION 1: PARTNER READINESS ═══ -->
   <div class="section-divider">
-    <h2>🎯 Partner Readiness</h2>
-    <p>Composite score based on contact availability, online presence, photos, and pricing sweet spot</p>
+    <h2>🎯 <span data-i18n="sec_readiness">Partner Readiness</span></h2>
+    <p data-i18n="sec_readiness_desc">Composite score based on contact availability, online presence, photos, and pricing sweet spot</p>
   </div>
 
   <div class="grid-4" id="readiness-stats"></div>
 
   <div class="grid">
     <div class="panel">
-      <h2>📊 Readiness Score Distribution</h2>
+      <h2>📊 <span data-i18n="chart_readiness">Readiness Score Distribution</span></h2>
       <div class="chart-container"><canvas id="chart-readiness"></canvas></div>
     </div>
     <div class="panel">
-      <h2>📞 Contact & Outreach Coverage</h2>
+      <h2>📞 <span data-i18n="chart_contact">Contact & Outreach Coverage</span></h2>
       <div id="contact-coverage"></div>
     </div>
   </div>
 
   <!-- ═══ SECTION 2: FIRST-ROUND TARGETS ═══ -->
   <div class="section-divider">
-    <h2>🏆 First-Round Targets</h2>
-    <p>Top 25 restaurants to approach first — highest readiness score, best fit for launch partnerships</p>
+    <h2>🏆 <span data-i18n="sec_targets">First-Round Targets</span></h2>
+    <p data-i18n="sec_targets_desc">Top 25 restaurants to approach first — highest readiness score, best fit for launch partnerships</p>
   </div>
 
   <div class="panel full" style="margin-bottom:1.25rem;">
@@ -151,17 +151,17 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
   <!-- ═══ SECTION 3: ZONE OUTREACH PLAN ═══ -->
   <div class="section-divider">
-    <h2>📍 Zone Outreach Plan</h2>
-    <p>Which neighborhoods have the richest cluster of partner-ready restaurants to hit first</p>
+    <h2>📍 <span data-i18n="sec_zone">Zone Outreach Plan</span></h2>
+    <p data-i18n="sec_zone_desc">Which neighborhoods have the richest cluster of partner-ready restaurants to hit first</p>
   </div>
 
   <div class="grid">
     <div class="panel">
-      <h2>🗺️ Readiness by Zone</h2>
+      <h2>🗺️ <span data-i18n="chart_zone">Readiness by Zone</span></h2>
       <div class="chart-container"><canvas id="chart-zone-readiness"></canvas></div>
     </div>
     <div class="panel">
-      <h2>📋 Zone Breakdown</h2>
+      <h2>📋 <span data-i18n="chart_zone_table">Zone Breakdown</span></h2>
       <div style="max-height:380px;overflow-y:auto;">
         <table id="zone-table">
           <thead><tr><th>Zone</th><th>Total</th><th>Ready</th><th>Contacts</th><th>Avg Score</th></tr></thead>
@@ -173,45 +173,45 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
   <!-- ═══ SECTION 4: PRICING SWEET SPOT ═══ -->
   <div class="section-divider">
-    <h2>💰 Pricing Sweet Spot</h2>
-    <p>Mid-range restaurants (€12-25) are the ideal first partners — enough margin for 2-for-1 deals</p>
+    <h2>💰 <span data-i18n="sec_pricing">Pricing Sweet Spot</span></h2>
+    <p data-i18n="sec_pricing_desc">Mid-range restaurants (€12-25) are the ideal first partners — enough margin for 2-for-1 deals</p>
   </div>
 
   <div class="grid">
     <div class="panel">
-      <h2>📈 Price Distribution (Deal Viability)</h2>
+      <h2>📈 <span data-i18n="chart_price">Price Distribution (Deal Viability)</span></h2>
       <div class="chart-container"><canvas id="chart-price-sweet"></canvas></div>
     </div>
     <div class="panel">
-      <h2>🎯 Market Quality Map</h2>
+      <h2>🎯 <span data-i18n="chart_quality">Market Quality Map</span></h2>
       <div class="chart-container"><canvas id="chart-scatter"></canvas></div>
     </div>
   </div>
 
   <!-- ═══ SECTION 5: MARKET OVERVIEW ═══ -->
   <div class="section-divider">
-    <h2>🍽️ Market Overview</h2>
-    <p>Cuisine and pipeline composition across the BCN restaurant landscape</p>
+    <h2>🍽️ <span data-i18n="sec_overview">Market Overview</span></h2>
+    <p data-i18n="sec_overview_desc">Cuisine and pipeline composition across the BCN restaurant landscape</p>
   </div>
 
   <div class="grid">
     <div class="panel">
-      <h2>🍽️ Cuisine Distribution</h2>
+      <h2>🍽️ <span data-i18n="chart_cuisine">Cuisine Distribution</span></h2>
       <div class="chart-container"><canvas id="chart-cuisine-donut"></canvas></div>
     </div>
     <div class="panel">
-      <h2>🎯 Pipeline Status</h2>
+      <h2>🎯 <span data-i18n="chart_pipeline">Pipeline Status</span></h2>
       <div class="chart-container"><canvas id="chart-tier-donut"></canvas></div>
     </div>
   </div>
 
   <div class="grid">
     <div class="panel">
-      <h2>💰 Cuisine Price Comparison</h2>
+      <h2>💰 <span data-i18n="chart_cuisine_price">Cuisine Price Comparison</span></h2>
       <div class="chart-container"><canvas id="chart-cuisine-price"></canvas></div>
     </div>
     <div class="panel">
-      <h2>🏘️ Avg Price by Zone</h2>
+      <h2>🏘️ <span data-i18n="chart_zone_price">Avg Price by Zone</span></h2>
       <div class="chart-container"><canvas id="chart-hood-bars"></canvas></div>
     </div>
   </div>
@@ -224,6 +224,83 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 const DATA = window.RESTAURANT_DATA || [];
 let currentLang = localStorage.getItem('menuverso_lang') || (navigator.language && navigator.language.startsWith('de') ? 'de' : 'es');
 let charts = {};
+const I18N_A = {
+  es: {
+    page_title: 'Inteligencia de Mercado', page_subtitle_pre: 'Inteligencia biz dev de', page_subtitle_post: 'restaurantes de Barcelona',
+    sec_readiness: 'Disposición de Partners', sec_readiness_desc: 'Puntuación compuesta basada en disponibilidad de contacto, presencia online, fotos y rango de precios ideal',
+    chart_readiness: 'Distribución de Puntuación', chart_contact: 'Cobertura de Contacto y Outreach',
+    sec_targets: 'Objetivos de Primera Ronda', sec_targets_desc: 'Top 25 restaurantes a contactar primero — mayor puntuación, mejor ajuste para partnerships de lanzamiento',
+    sec_zone: 'Plan de Outreach por Zona', sec_zone_desc: 'Qué barrios tienen la mayor concentración de restaurantes listos para partnership',
+    chart_zone: 'Disposición por Zona', chart_zone_table: 'Desglose por Zona',
+    sec_pricing: 'Rango de Precios Ideal', sec_pricing_desc: 'Restaurantes de precio medio (€12-25) son los socios ideales — margen suficiente para ofertas 2x1',
+    chart_price: 'Distribución de Precios', chart_quality: 'Mapa de Calidad del Mercado',
+    sec_overview: 'Visión del Mercado', sec_overview_desc: 'Composición culinaria y de pipeline del panorama gastronómico de BCN',
+    chart_cuisine: 'Distribución por Cocina', chart_pipeline: 'Estado del Pipeline',
+    chart_cuisine_price: 'Comparación de Precios por Cocina', chart_zone_price: 'Precio Medio por Zona',
+    total_mapped:'Total Mapeados', partner_ready:'Partner-Ready', high_potential:'Alto Potencial', sweet_spot:'Rango Ideal (€12-25)', have_phone:'Con Teléfono', avg_price:'Precio Medio',
+    lbl_partner_ready:'PARTNER-READY', lbl_high_potential:'ALTO POTENCIAL', lbl_sweet_spot:'PRECIO IDEAL', lbl_contactable:'CONTACTABLE',
+    desc_partner_ready:'Puntuación ≥70 — info de contacto completa + buen perfil', desc_high_potential:'Puntuación 40-69 — algunas carencias, enriquecible',
+    desc_sweet_spot:'Rango €12-25 — ideal para 2x1', desc_contactable:'restaurantes con número de teléfono',
+    cov_phone:'Teléfono', cov_website:'Sitio Web', cov_instagram:'Instagram', cov_photos:'Fotos Reales', cov_rating:'Rating Google ≥4.0', cov_coords:'Con Coordenadas'
+  },
+  en: {
+    page_title: 'Market Intelligence', page_subtitle_pre: 'Biz dev intelligence from', page_subtitle_post: 'Barcelona restaurants',
+    sec_readiness: 'Partner Readiness', sec_readiness_desc: 'Composite score based on contact availability, online presence, photos, and pricing sweet spot',
+    chart_readiness: 'Readiness Score Distribution', chart_contact: 'Contact & Outreach Coverage',
+    sec_targets: 'First-Round Targets', sec_targets_desc: 'Top 25 restaurants to approach first — highest readiness score, best fit for launch partnerships',
+    sec_zone: 'Zone Outreach Plan', sec_zone_desc: 'Which neighborhoods have the richest cluster of partner-ready restaurants to hit first',
+    chart_zone: 'Readiness by Zone', chart_zone_table: 'Zone Breakdown',
+    sec_pricing: 'Pricing Sweet Spot', sec_pricing_desc: 'Mid-range restaurants (€12-25) are the ideal first partners — enough margin for 2-for-1 deals',
+    chart_price: 'Price Distribution (Deal Viability)', chart_quality: 'Market Quality Map',
+    sec_overview: 'Market Overview', sec_overview_desc: 'Cuisine and pipeline composition across the BCN restaurant landscape',
+    chart_cuisine: 'Cuisine Distribution', chart_pipeline: 'Pipeline Status',
+    chart_cuisine_price: 'Cuisine Price Comparison', chart_zone_price: 'Avg Price by Zone',
+    total_mapped:'Total Mapped', partner_ready:'Partner-Ready', high_potential:'High Potential', sweet_spot:'Sweet Spot (€12-25)', have_phone:'Have Phone', avg_price:'Avg Price',
+    lbl_partner_ready:'PARTNER-READY', lbl_high_potential:'HIGH POTENTIAL', lbl_sweet_spot:'SWEET SPOT PRICING', lbl_contactable:'CONTACTABLE',
+    desc_partner_ready:'Score ≥70 — full contact info + good profile', desc_high_potential:'Score 40-69 — some gaps, enrichable',
+    desc_sweet_spot:'€12-25 range — ideal for 2-for-1', desc_contactable:'restaurants with phone numbers',
+    cov_phone:'Phone Number', cov_website:'Website', cov_instagram:'Instagram', cov_photos:'Real Photos', cov_rating:'Google Rating ≥4.0', cov_coords:'Has Coordinates'
+  },
+  ca: {
+    page_title: 'Intel·ligència de Mercat', page_subtitle_pre: 'Intel·ligència biz dev de', page_subtitle_post: 'restaurants de Barcelona',
+    sec_readiness: 'Disposició de Partners', sec_readiness_desc: 'Puntuació composta basada en disponibilitat de contacte, presència online, fotos i rang de preus ideal',
+    chart_readiness: 'Distribució de Puntuació', chart_contact: 'Cobertura de Contacte i Outreach',
+    sec_targets: 'Objectius de Primera Ronda', sec_targets_desc: 'Top 25 restaurants a contactar primer — major puntuació, millor ajust per partnerships de llançament',
+    sec_zone: 'Pla d\'Outreach per Zona', sec_zone_desc: 'Quins barris tenen la major concentració de restaurants llestos per partnership',
+    chart_zone: 'Disposició per Zona', chart_zone_table: 'Desglossament per Zona',
+    sec_pricing: 'Rang de Preus Ideal', sec_pricing_desc: 'Restaurants de preu mitjà (€12-25) són els socis ideals — marge suficient per ofertes 2x1',
+    chart_price: 'Distribució de Preus', chart_quality: 'Mapa de Qualitat del Mercat',
+    sec_overview: 'Visió del Mercat', sec_overview_desc: 'Composició culinària i de pipeline del panorama gastronòmic de BCN',
+    chart_cuisine: 'Distribució per Cuina', chart_pipeline: 'Estat del Pipeline',
+    chart_cuisine_price: 'Comparació de Preus per Cuina', chart_zone_price: 'Preu Mitjà per Zona',
+    total_mapped:'Total Mapejats', partner_ready:'Partner-Ready', high_potential:'Alt Potencial', sweet_spot:'Rang Ideal (€12-25)', have_phone:'Amb Telèfon', avg_price:'Preu Mitjà',
+    lbl_partner_ready:'PARTNER-READY', lbl_high_potential:'ALT POTENCIAL', lbl_sweet_spot:'PREU IDEAL', lbl_contactable:'CONTACTABLE',
+    desc_partner_ready:'Puntuació ≥70 — info de contacte completa + bon perfil', desc_high_potential:'Puntuació 40-69 — algunes mancances, enriquible',
+    desc_sweet_spot:'Rang €12-25 — ideal per 2x1', desc_contactable:'restaurants amb número de telèfon',
+    cov_phone:'Telèfon', cov_website:'Lloc Web', cov_instagram:'Instagram', cov_photos:'Fotos Reals', cov_rating:'Rating Google ≥4.0', cov_coords:'Amb Coordenades'
+  },
+  de: {
+    page_title: 'Marktintelligenz', page_subtitle_pre: 'Biz-Dev-Intelligenz aus', page_subtitle_post: 'Restaurants in Barcelona',
+    sec_readiness: 'Partnerbereitschaft', sec_readiness_desc: 'Zusammengesetzte Bewertung basierend auf Kontaktverfügbarkeit, Online-Präsenz, Fotos und Preis-Sweet-Spot',
+    chart_readiness: 'Bereitschafts-Score-Verteilung', chart_contact: 'Kontakt- & Outreach-Abdeckung',
+    sec_targets: 'Erste-Runde-Ziele', sec_targets_desc: 'Top 25 Restaurants für den Erstkontakt — höchster Bereitschafts-Score, beste Eignung für Launch-Partnerschaften',
+    sec_zone: 'Zonen-Outreach-Plan', sec_zone_desc: 'Welche Viertel die höchste Konzentration partnerschaftsbereiter Restaurants aufweisen',
+    chart_zone: 'Bereitschaft nach Zone', chart_zone_table: 'Aufschlüsselung nach Zone',
+    sec_pricing: 'Preis-Sweet-Spot', sec_pricing_desc: 'Mittelklasse-Restaurants (€12-25) sind ideale Erstpartner — genug Marge für 2-für-1-Deals',
+    chart_price: 'Preisverteilung (Deal-Eignung)', chart_quality: 'Marktqualitäts-Karte',
+    sec_overview: 'Marktüberblick', sec_overview_desc: 'Küchen- und Pipeline-Zusammensetzung der BCN-Gastronomie',
+    chart_cuisine: 'Küchenverteilung', chart_pipeline: 'Pipeline-Status',
+    chart_cuisine_price: 'Preisvergleich nach Küche', chart_zone_price: 'Durchschnittspreis nach Zone',
+    total_mapped:'Gesamt Kartiert', partner_ready:'Partner-Ready', high_potential:'Hohes Potenzial', sweet_spot:'Sweet Spot (€12-25)', have_phone:'Mit Telefon', avg_price:'Ø Preis',
+    lbl_partner_ready:'PARTNER-READY', lbl_high_potential:'HOHES POTENZIAL', lbl_sweet_spot:'SWEET-SPOT-PREIS', lbl_contactable:'KONTAKTIERBAR',
+    desc_partner_ready:'Score ≥70 — vollständige Kontaktdaten + gutes Profil', desc_high_potential:'Score 40-69 — einige Lücken, anreicherbar',
+    desc_sweet_spot:'€12-25 Bereich — ideal für 2-für-1', desc_contactable:'Restaurants mit Telefonnummer',
+    cov_phone:'Telefonnummer', cov_website:'Website', cov_instagram:'Instagram', cov_photos:'Echte Fotos', cov_rating:'Google-Rating ≥4.0', cov_coords:'Mit Koordinaten'
+  }
+};
+
+function tA(key) { return (I18N_A[currentLang] && I18N_A[currentLang][key]) || key; }
+
 
 // === PARTNER READINESS SCORE ===
 // Weights: phone(20) + website(20) + instagram(15) + photo(10) + rating>=4.0(15) + sweet-spot-price(20)
@@ -272,6 +349,10 @@ function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('menuverso_lang', lang);
   document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (I18N_A[lang] && I18N_A[lang][key]) el.textContent = I18N_A[lang][key];
+  });
   destroyCharts();
   init();
 }
@@ -298,46 +379,46 @@ function init() {
 
   // === TOP STATS ===
   document.getElementById('top-stats').innerHTML = `
-    <div class="stat-card"><div class="num">${DATA.length}</div><div class="label">Total Mapped</div></div>
-    <div class="stat-card"><div class="num" style="color:var(--green)">${highReady}</div><div class="label">Partner-Ready</div></div>
-    <div class="stat-card"><div class="num" style="color:var(--amber)">${midReady}</div><div class="label">High Potential</div></div>
-    <div class="stat-card"><div class="num">${sweetSpot}</div><div class="label">Sweet Spot (€12-25)</div></div>
-    <div class="stat-card"><div class="num">${withPhone}</div><div class="label">Have Phone</div></div>
-    <div class="stat-card"><div class="num">€${avg}</div><div class="label">Avg Price</div></div>
+    <div class="stat-card"><div class="num">${DATA.length}</div><div class="label">${tA('total_mapped')}</div></div>
+    <div class="stat-card"><div class="num" style="color:var(--green)">${highReady}</div><div class="label">${tA('partner_ready')}</div></div>
+    <div class="stat-card"><div class="num" style="color:var(--amber)">${midReady}</div><div class="label">${tA('high_potential')}</div></div>
+    <div class="stat-card"><div class="num">${sweetSpot}</div><div class="label">${tA('sweet_spot')}</div></div>
+    <div class="stat-card"><div class="num">${withPhone}</div><div class="label">${tA('have_phone')}</div></div>
+    <div class="stat-card"><div class="num">€${avg}</div><div class="label">${tA('avg_price')}</div></div>
   `;
 
   // === READINESS STATS (4 cards) ===
   document.getElementById('readiness-stats').innerHTML = `
     <div class="panel" style="text-align:center;">
       <div style="font-size:2.2rem;font-weight:800;color:var(--green);">${highReady}</div>
-      <div style="font-size:0.78rem;color:var(--text-sub);font-weight:600;">PARTNER-READY</div>
-      <div style="font-size:0.72rem;color:var(--text-mut);margin-top:4px;">Score ≥70 — full contact info + good profile</div>
+      <div style="font-size:0.78rem;color:var(--text-sub);font-weight:600;">${tA("lbl_partner_ready")}</div>
+      <div style="font-size:0.72rem;color:var(--text-mut);margin-top:4px;">${tA("desc_partner_ready")}</div>
     </div>
     <div class="panel" style="text-align:center;">
       <div style="font-size:2.2rem;font-weight:800;color:var(--amber);">${midReady}</div>
-      <div style="font-size:0.78rem;color:var(--text-sub);font-weight:600;">HIGH POTENTIAL</div>
-      <div style="font-size:0.72rem;color:var(--text-mut);margin-top:4px;">Score 40-69 — some gaps, enrichable</div>
+      <div style="font-size:0.78rem;color:var(--text-sub);font-weight:600;">${tA("lbl_high_potential")}</div>
+      <div style="font-size:0.72rem;color:var(--text-mut);margin-top:4px;">${tA("desc_high_potential")}</div>
     </div>
     <div class="panel" style="text-align:center;">
       <div style="font-size:2.2rem;font-weight:800;">${sweetSpot}</div>
-      <div style="font-size:0.78rem;color:var(--text-sub);font-weight:600;">SWEET SPOT PRICING</div>
-      <div style="font-size:0.72rem;color:var(--text-mut);margin-top:4px;">€12-25 range — ideal for 2-for-1</div>
+      <div style="font-size:0.78rem;color:var(--text-sub);font-weight:600;">${tA("lbl_sweet_spot")}</div>
+      <div style="font-size:0.72rem;color:var(--text-mut);margin-top:4px;">${tA("desc_sweet_spot")}</div>
     </div>
     <div class="panel" style="text-align:center;">
       <div style="font-size:2.2rem;font-weight:800;color:var(--accent);">${(withPhone/DATA.length*100).toFixed(0)}%</div>
-      <div style="font-size:0.78rem;color:var(--text-sub);font-weight:600;">CONTACTABLE</div>
-      <div style="font-size:0.72rem;color:var(--text-mut);margin-top:4px;">${withPhone} restaurants with phone numbers</div>
+      <div style="font-size:0.78rem;color:var(--text-sub);font-weight:600;">${tA("lbl_contactable")}</div>
+      <div style="font-size:0.72rem;color:var(--text-mut);margin-top:4px;">${withPhone} ${tA("desc_contactable")}</div>
     </div>
   `;
 
   // === CONTACT COVERAGE ===
   const coverageData = [
-    { label: 'Phone Number', count: withPhone, color: '#10B981' },
-    { label: 'Website', count: withWebsite, color: '#3B82F6' },
-    { label: 'Instagram', count: withInstagram, color: '#8B5CF6' },
-    { label: 'Real Photos', count: withPhoto, color: '#F59E0B' },
-    { label: 'Google Rating ≥4.0', count: DATA.filter(r => r.google_maps_rating >= 4.0).length, color: '#EC4899' },
-    { label: 'Has Coordinates', count: DATA.filter(r => r.coordinates && r.coordinates.lat).length, color: '#06B6D4' },
+    { label: tA('cov_phone'), count: withPhone, color: '#10B981' },
+    { label: tA('cov_website'), count: withWebsite, color: '#3B82F6' },
+    { label: tA('cov_instagram'), count: withInstagram, color: '#8B5CF6' },
+    { label: tA('cov_photos'), count: withPhoto, color: '#F59E0B' },
+    { label: tA('cov_rating'), count: DATA.filter(r => r.google_maps_rating >= 4.0).length, color: '#EC4899' },
+    { label: tA('cov_coords'), count: DATA.filter(r => r.coordinates && r.coordinates.lat).length, color: '#06B6D4' },
   ];
   document.getElementById('contact-coverage').innerHTML = coverageData.map(d => `
     <div class="progress-row">
@@ -672,6 +753,10 @@ function toggleTheme() {
 
 // Init
 document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.toggle('active', b.dataset.lang === currentLang));
+document.querySelectorAll('[data-i18n]').forEach(el => {
+  const key = el.dataset.i18n;
+  if (I18N_A[currentLang] && I18N_A[currentLang][key]) el.textContent = I18N_A[currentLang][key];
+});
 initTheme();
 init();
 </script>

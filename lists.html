@@ -40,6 +40,10 @@ footer a{color:var(--sub);text-decoration:none;}
 img[src*="logo.png"]{mix-blend-mode:multiply;}
 :root.dark img[src*="logo.png"]{mix-blend-mode:normal;filter:brightness(1.2);}
 @media(max-width:640px){.list-grid{grid-template-columns:1fr;}.nav-links a span{display:none;}}
+.lang-toggle{position:fixed;bottom:1.25rem;right:1.25rem;z-index:1000;display:flex;border-radius:20px;overflow:hidden;border:1px solid var(--border);font-size:0.75rem;font-weight:600;}
+.lang-toggle button{padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;}
+.lang-toggle button.active{background:var(--text-main,var(--text,#1E293B));color:#fff;}
+.lang-toggle button:not(.active){background:var(--card,#fff);color:var(--text-sub,var(--sub,#64748B));}
 </style>
 </head>
 <body>
@@ -56,48 +60,48 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
 <div class="container">
   <div class="page-header">
-    <h1>🎯 Target Lists</h1>
-    <p>Curated outreach targets from 1,458 restaurants. Sorted by partnership readiness.</p>
+    <h1>🎯 <span data-i18n="page_title">Target Lists</span></h1>
+    <p data-i18n="page_subtitle">Curated outreach targets from 1,458 restaurants. Sorted by partnership readiness.</p>
   </div>
 
   <div class="section">
-    <div class="section-title">Priority Outreach Lists</div>
+    <div class="section-title" data-i18n="priority_lists">Priority Outreach Lists</div>
     <div class="list-grid">
       <a href="lists/best-value.html" class="list-item">
         <span class="list-emoji">🏆</span>
-        <div class="list-info"><div class="list-name">Ideal First Partners</div><div class="list-desc">Rating 4.3+ & mid-range pricing</div></div>
+        <div class="list-info"><div class="list-name" data-i18n="ideal_partners">Ideal First Partners</div><div class="list-desc" data-i18n="ideal_partners_desc">Rating 4.3+ & mid-range pricing</div></div>
         <span class="list-count">Top 10</span>
       </a>
       <a href="lists/top-rated.html" class="list-item">
         <span class="list-emoji">⭐</span>
-        <div class="list-info"><div class="list-name">Highest Rated</div><div class="list-desc">Top Google ratings = strong social proof</div></div>
+        <div class="list-info"><div class="list-name" data-i18n="highest_rated">Highest Rated</div><div class="list-desc" data-i18n="highest_rated_desc">Top Google ratings = strong social proof</div></div>
         <span class="list-count">Top 10</span>
       </a>
       <a href="lists/budget.html" class="list-item">
         <span class="list-emoji">💡</span>
-        <div class="list-info"><div class="list-name">Quick Wins</div><div class="list-desc">Full contact info + photos ready</div></div>
+        <div class="list-info"><div class="list-name" data-i18n="quick_wins">Quick Wins</div><div class="list-desc" data-i18n="quick_wins_desc">Full contact info + photos ready</div></div>
         <span class="list-count">Top 10</span>
       </a>
       <a href="lists/premium.html" class="list-item">
         <span class="list-emoji">💎</span>
-        <div class="list-info"><div class="list-name">Premium Segment</div><div class="list-desc">High-end restaurants for flagship deals</div></div>
+        <div class="list-info"><div class="list-name" data-i18n="premium_segment">Premium Segment</div><div class="list-desc" data-i18n="premium_segment_desc">High-end restaurants for flagship deals</div></div>
         <span class="list-count">Top 10</span>
       </a>
       <a href="lists/confirmed-best.html" class="list-item">
         <span class="list-emoji">🟢</span>
-        <div class="list-info"><div class="list-name">Deal-Ready</div><div class="list-desc">Already offering deals, top rated</div></div>
+        <div class="list-info"><div class="list-name" data-i18n="deal_ready">Deal-Ready</div><div class="list-desc" data-i18n="deal_ready_desc">Already offering deals, top rated</div></div>
         <span class="list-count">Top 10</span>
       </a>
     </div>
   </div>
 
   <div class="section">
-    <div class="section-title">By Zone (Neighborhood Outreach)</div>
+    <div class="section-title" data-i18n="by_zone">By Zone (Neighborhood Outreach)</div>
     <div class="list-grid" id="hood-lists"></div>
   </div>
 
   <div class="section">
-    <div class="section-title">By Cuisine</div>
+    <div class="section-title" data-i18n="by_cuisine">By Cuisine</div>
     <div class="list-grid" id="cuisine-lists"></div>
   </div>
 </div>
@@ -148,6 +152,119 @@ function toggleTheme(){
   document.getElementById('theme-toggle').textContent=d?'☀️':'🌙';
 }
 initTheme();
+</script>
+
+<div class="lang-toggle" style="position:fixed;bottom:1.25rem;right:1.25rem;z-index:1000;display:flex;border-radius:20px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);font-size:0.75rem;font-weight:600;">
+  <button data-lang="es" class="active" onclick="setLang('es')" style="padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;">ES</button>
+  <button data-lang="ca" onclick="setLang('ca')" style="padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;">CA</button>
+  <button data-lang="en" onclick="setLang('en')" style="padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;">EN</button>
+  <button data-lang="de" onclick="setLang('de')" style="padding:0.4rem 0.7rem;border:none;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;">DE</button>
+</div>
+<script>
+let currentLang = localStorage.getItem('menuverso_lang') || (navigator.language && navigator.language.startsWith('de') ? 'de' : 'es');
+
+const I18N = {
+  es: {
+    page_title: 'Listas de Objetivos',
+    page_subtitle: 'Objetivos de outreach curados de 1.458 restaurantes. Ordenados por disposición a partnership.',
+    priority_lists: 'Listas de Outreach Prioritario',
+    by_zone: 'Por Zona (Outreach por Barrio)',
+    by_cuisine: 'Por Cocina',
+    ideal_partners: 'Primeros Socios Ideales',
+    ideal_partners_desc: 'Rating 4.3+ y precio medio',
+    highest_rated: 'Mejor Valorados',
+    highest_rated_desc: 'Top ratings de Google = fuerte prueba social',
+    quick_wins: 'Victorias Rápidas',
+    quick_wins_desc: 'Info de contacto completa + fotos listas',
+    premium_segment: 'Segmento Premium',
+    premium_segment_desc: 'Restaurantes de alta gama para deals premium',
+    deal_ready: 'Deal-Ready',
+    deal_ready_desc: 'Ya ofrecen deals, mejor valorados',
+    zone_suffix: 'Zona',
+    prospects: 'prospectos',
+    best_prefix: 'Mejor',
+    restaurants: 'restaurantes'
+  },
+  en: {
+    page_title: 'Target Lists',
+    page_subtitle: 'Curated outreach targets from 1,458 restaurants. Sorted by partnership readiness.',
+    priority_lists: 'Priority Outreach Lists',
+    by_zone: 'By Zone (Neighborhood Outreach)',
+    by_cuisine: 'By Cuisine',
+    ideal_partners: 'Ideal First Partners',
+    ideal_partners_desc: 'Rating 4.3+ & mid-range pricing',
+    highest_rated: 'Highest Rated',
+    highest_rated_desc: 'Top Google ratings = strong social proof',
+    quick_wins: 'Quick Wins',
+    quick_wins_desc: 'Full contact info + photos ready',
+    premium_segment: 'Premium Segment',
+    premium_segment_desc: 'High-end restaurants for flagship deals',
+    deal_ready: 'Deal-Ready',
+    deal_ready_desc: 'Already offering deals, top rated',
+    zone_suffix: 'Zone',
+    prospects: 'prospects',
+    best_prefix: 'Best',
+    restaurants: 'restaurants'
+  },
+  ca: {
+    page_title: 'Llistes d\'Objectius',
+    page_subtitle: 'Objectius d\'outreach curats de 1.458 restaurants. Ordenats per disposició a partnership.',
+    priority_lists: 'Llistes d\'Outreach Prioritari',
+    by_zone: 'Per Zona (Outreach per Barri)',
+    by_cuisine: 'Per Cuina',
+    ideal_partners: 'Primers Socis Ideals',
+    ideal_partners_desc: 'Rating 4.3+ i preu mitjà',
+    highest_rated: 'Millor Valorats',
+    highest_rated_desc: 'Top ratings de Google = forta prova social',
+    quick_wins: 'Victòries Ràpides',
+    quick_wins_desc: 'Info de contacte completa + fotos llestes',
+    premium_segment: 'Segment Premium',
+    premium_segment_desc: 'Restaurants d\'alta gamma per deals premium',
+    deal_ready: 'Deal-Ready',
+    deal_ready_desc: 'Ja ofereixen deals, millor valorats',
+    zone_suffix: 'Zona',
+    prospects: 'prospectes',
+    best_prefix: 'Millor',
+    restaurants: 'restaurants'
+  },
+  de: {
+    page_title: 'Ziellisten',
+    page_subtitle: 'Kuratierte Outreach-Ziele aus 1.458 Restaurants. Sortiert nach Partnerschaftsbereitschaft.',
+    priority_lists: 'Prioritäts-Outreach-Listen',
+    by_zone: 'Nach Zone (Viertel-Outreach)',
+    by_cuisine: 'Nach Küche',
+    ideal_partners: 'Ideale Erstpartner',
+    ideal_partners_desc: 'Rating 4.3+ & mittlere Preisklasse',
+    highest_rated: 'Bestbewertet',
+    highest_rated_desc: 'Top Google-Ratings = starker Social Proof',
+    quick_wins: 'Quick Wins',
+    quick_wins_desc: 'Vollständige Kontaktdaten + Fotos bereit',
+    premium_segment: 'Premium-Segment',
+    premium_segment_desc: 'Gehobene Restaurants für Premium-Deals',
+    deal_ready: 'Deal-Ready',
+    deal_ready_desc: 'Bieten bereits Deals an, bestbewertet',
+    zone_suffix: 'Zone',
+    prospects: 'Interessenten',
+    best_prefix: 'Beste',
+    restaurants: 'Restaurants'
+  }
+};
+
+function t(key) { return (I18N[currentLang] && I18N[currentLang][key]) || key; }
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('menuverso_lang', lang);
+  document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (I18N[lang] && I18N[lang][key]) el.textContent = I18N[lang][key];
+  });
+}
+
+// Apply lang on load
+document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.toggle('active', b.dataset.lang === currentLang));
+if (currentLang !== 'en') setLang(currentLang);
 </script>
 </body>
 </html>

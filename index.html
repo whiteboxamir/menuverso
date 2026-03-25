@@ -229,13 +229,13 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
 <p id="subtitle">Loading Barcelona restaurant database...</p>
 </div>
 <div class="stats" id="statsbar">
-<div class="stat"><div class="stat-num" id="s-total">—</div><div class="stat-label">Total Restaurants</div></div>
-<div class="stat"><div class="stat-num green" id="s-confirmed">—</div><div class="stat-label">🟢 Deal-Ready</div></div>
-<div class="stat"><div class="stat-num yellow" id="s-likely">—</div><div class="stat-label">🟡 High Potential</div></div>
-<div class="stat"><div class="stat-num red" id="s-none">—</div><div class="stat-label">🔴 Prospects</div></div>
-<div class="stat"><div class="stat-num" id="s-hoods">—</div><div class="stat-label">Neighborhoods</div></div>
-<div class="stat"><div class="stat-num" id="s-mapped" style="color:var(--accent)">—</div><div class="stat-label">📍 On Map</div></div>
-<div class="stat"><div class="stat-num" id="s-tagged" style="color:#7C3AED">—</div><div class="stat-label">🏷️ Tagged</div></div>
+<div class="stat"><div class="stat-num" id="s-total">—</div><div class="stat-label" data-i18n="total">Total Restaurants</div></div>
+<div class="stat"><div class="stat-num green" id="s-confirmed">—</div><div class="stat-label" data-i18n="confirmed_menu">🟢 Deal-Ready</div></div>
+<div class="stat"><div class="stat-num yellow" id="s-likely">—</div><div class="stat-label" data-i18n="likely_menu">🟡 High Potential</div></div>
+<div class="stat"><div class="stat-num red" id="s-none">—</div><div class="stat-label" data-i18n="no_menu_stat">🔴 Prospects</div></div>
+<div class="stat"><div class="stat-num" id="s-hoods">—</div><div class="stat-label" data-i18n="neighborhoods">Neighborhoods</div></div>
+<div class="stat"><div class="stat-num" id="s-mapped" style="color:var(--accent)">—</div><div class="stat-label" data-i18n="on_map">📍 On Map</div></div>
+<div class="stat"><div class="stat-num" id="s-tagged" style="color:#7C3AED">—</div><div class="stat-label" data-i18n="tagged">🏷️ Tagged</div></div>
 </div>
 <div class="dashboard-toggle">
   <button id="dash-toggle" onclick="toggleDashboard()">📊 Neighborhood Dashboard</button>
@@ -245,8 +245,8 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
 <div class="search-row">
   <input type="text" class="search" id="search" placeholder="🔍 Search by name, cuisine, neighborhood, notes..." autocomplete="off">
   <div class="view-toggle">
-    <button class="view-btn active" id="btn-list" onclick="setView('list')" title="List view">📋 List</button>
-    <button class="view-btn" id="btn-map" onclick="setView('map')" title="Map view">🗺️ Map</button>
+    <button class="view-btn active" id="btn-list" onclick="setView('list')" title="List view">📋 <span data-i18n="list_view">List</span></button>
+    <button class="view-btn" id="btn-map" onclick="setView('map')" title="Map view">🗺️ <span data-i18n="map_view">Map</span></button>
   </div>
 </div>
 <div class="filters" id="filters">
@@ -268,7 +268,7 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
   </select>
 </div>
 <div class="tag-filters" id="tag-filters">
-  <span class="label">Tags:</span>
+  <span class="label" data-i18n="tags_label">Tags:</span>
 </div>
 </div>
 <div class="count-display" id="count">
@@ -356,8 +356,9 @@ const I18N={
     no_results:'No hay restaurantes que coincidan. Prueba otros filtros.',
     clear:'Limpiar Filtros',export_csv:'Exportar CSV',dashboard:'Panel de Barrios',
     web:'Web',maps:'Maps',call:'Llamar',
-    on_map:'En Mapa',tagged:'Etiquetados',neighborhoods:'Barrios',total:'Total Restaurantes',
-    confirmed_menu:'Deal-Ready',likely_menu:'Alto Potencial',no_menu_stat:'Prospecto',open_now:'Abierto'},
+    on_map:'📍 En Mapa',tagged:'🏷️ Etiquetados',neighborhoods:'Barrios',total:'Total Restaurantes',
+    confirmed_menu:'🟢 Deal-Ready',likely_menu:'🟡 Alto Potencial',no_menu_stat:'🔴 Prospecto',open_now:'Abierto',
+    list_view:'Lista',map_view:'Mapa',tags_label:'Etiquetas:',sort_readiness:'Orden: Partnership Readiness'},
   en:{subtitle:'Barcelona restaurant partnership pipeline. {total} restaurants across {hoods} neighborhoods scored for deal readiness.',
     search_placeholder:'🔍 Search by name, cuisine, neighborhood, notes...',
     all_hoods:'All Neighborhoods',all_cuisines:'All Cuisines',
@@ -368,8 +369,9 @@ const I18N={
     no_results:'No restaurants match. Try different filters.',
     clear:'Clear Filters',export_csv:'Export CSV',dashboard:'Neighborhood Dashboard',
     web:'Web',maps:'Maps',call:'Call',
-    on_map:'On Map',tagged:'Tagged',neighborhoods:'Neighborhoods',total:'Total Restaurants',
-    confirmed_menu:'Deal-Ready',likely_menu:'High Potential',no_menu_stat:'Prospect',open_now:'Open Now'},
+    on_map:'📍 On Map',tagged:'🏷️ Tagged',neighborhoods:'Neighborhoods',total:'Total Restaurants',
+    confirmed_menu:'🟢 Deal-Ready',likely_menu:'🟡 High Potential',no_menu_stat:'🔴 Prospect',open_now:'Open Now',
+    list_view:'List',map_view:'Map',tags_label:'Tags:',sort_readiness:'Sort: Partnership Readiness'},
   ca:{subtitle:'Pipeline de partnerships de restaurants de Barcelona. {total} restaurants en {hoods} barris avaluats per deal readiness.',
     search_placeholder:'🔍 Cercar per nom, cuina, barri, notes...',
     all_hoods:'Tots els Barris',all_cuisines:'Totes les Cuines',
@@ -380,8 +382,9 @@ const I18N={
     no_results:'Cap restaurant coincideix. Prova altres filtres.',
     clear:'Netejar Filtres',export_csv:'Exportar CSV',dashboard:'Panell de Barris',
     web:'Web',maps:'Maps',call:'Trucar',
-    on_map:'Al Mapa',tagged:'Etiquetats',neighborhoods:'Barris',total:'Total Restaurants',
-    confirmed_menu:'Deal-Ready',likely_menu:'Alt Potencial',no_menu_stat:'Prospecte',open_now:'Obert'},
+    on_map:'📍 Al Mapa',tagged:'🏷️ Etiquetats',neighborhoods:'Barris',total:'Total Restaurants',
+    confirmed_menu:'🟢 Deal-Ready',likely_menu:'🟡 Alt Potencial',no_menu_stat:'🔴 Prospecte',open_now:'Obert',
+    list_view:'Llista',map_view:'Mapa',tags_label:'Etiquetes:',sort_readiness:'Ordre: Partnership Readiness'},
   de:{subtitle:'Partnerschafts-Pipeline für Restaurants in Barcelona. {total} Restaurants in {hoods} Vierteln nach Dealbereitschaft bewertet.',
     search_placeholder:'🔍 Suche nach Name, Küche, Viertel, Notizen...',
     all_hoods:'Alle Viertel',all_cuisines:'Alle Küchen',
@@ -392,8 +395,9 @@ const I18N={
     no_results:'Keine Restaurants gefunden. Versuche andere Filter.',
     clear:'Filter zurücksetzen',export_csv:'CSV Export',dashboard:'Viertel-Übersicht',
     web:'Web',maps:'Karte',call:'Anrufen',
-    on_map:'Auf Karte',tagged:'Markiert',neighborhoods:'Viertel',total:'Restaurants gesamt',
-    confirmed_menu:'Deal-Ready',likely_menu:'Hohes Potenzial',no_menu_stat:'Interessent',open_now:'Jetzt geöffnet'}
+    on_map:'📍 Auf Karte',tagged:'🏷️ Markiert',neighborhoods:'Viertel',total:'Restaurants gesamt',
+    confirmed_menu:'🟢 Deal-Ready',likely_menu:'🟡 Hohes Potenzial',no_menu_stat:'🔴 Interessent',open_now:'Jetzt geöffnet',
+    list_view:'Liste',map_view:'Karte',tags_label:'Tags:',sort_readiness:'Sortierung: Partnership Readiness'}
 };
 
 if(DATA.length){init()}else{document.getElementById('grid').innerHTML='<div class="no-results">Error: restaurants_data.js not found.</div>'}
