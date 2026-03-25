@@ -17397,7 +17397,7 @@ var RESTAURANT_DATA = [
       "lat": 41.400922,
       "lng": 2.2037105
     },
-    "image_url": "",
+    "image_url": "assets/photos/266_hero.webp",
     "has_photo": false
   },
   {
@@ -20089,7 +20089,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3753024,
       "lng": 2.1406313
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/308_hero.webp"
   },
   {
     "id": 309,
@@ -20673,7 +20674,7 @@ var RESTAURANT_DATA = [
       "lat": 41.3963086,
       "lng": 2.1666656
     },
-    "image_url": "",
+    "image_url": "assets/photos/317_hero.webp",
     "has_photo": false
   },
   {
@@ -21423,7 +21424,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3848554,
       "lng": 2.16361
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/328_hero.webp"
   },
   {
     "id": 329,
@@ -22235,7 +22237,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3837114,
       "lng": 2.1691196
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/340_hero.webp"
   },
   {
     "id": 341,
@@ -23315,7 +23318,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3741081,
       "lng": 2.163679
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/356_hero.webp"
   },
   {
     "id": 357,
@@ -23854,7 +23858,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3791633,
       "lng": 2.1791112
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/364_hero.webp"
   },
   {
     "id": 365,
@@ -24122,7 +24127,8 @@ var RESTAURANT_DATA = [
       "lat": 41.380947,
       "lng": 2.1799439
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/368_hero.webp"
   },
   {
     "id": 369,
@@ -24258,7 +24264,7 @@ var RESTAURANT_DATA = [
       "lat": 41.3863567,
       "lng": 2.1830328
     },
-    "image_url": "",
+    "image_url": "assets/photos/370_hero.webp",
     "has_photo": false
   },
   {
@@ -24392,7 +24398,8 @@ var RESTAURANT_DATA = [
       "lat": 41.4004209,
       "lng": 2.2022719
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/372_hero.webp"
   },
   {
     "id": 373,
@@ -24792,7 +24799,7 @@ var RESTAURANT_DATA = [
       "lat": 41.3946143,
       "lng": 2.1936541
     },
-    "image_url": "",
+    "image_url": "assets/photos/378_hero.webp",
     "has_photo": false
   },
   {
@@ -25393,7 +25400,7 @@ var RESTAURANT_DATA = [
       "lat": 41.4033271,
       "lng": 2.1590779
     },
-    "image_url": "",
+    "image_url": "assets/photos/387_hero.webp",
     "has_photo": false
   },
   {
@@ -25459,7 +25466,8 @@ var RESTAURANT_DATA = [
       "lat": 41.376315,
       "lng": 2.1581093
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/388_hero.webp"
   },
   {
     "id": 389,
@@ -26141,7 +26149,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3731453,
       "lng": 2.1879727
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/398_hero.webp"
   },
   {
     "id": 399,
@@ -27669,7 +27678,7 @@ var RESTAURANT_DATA = [
       "lat": 41.3863062,
       "lng": 2.1401122
     },
-    "image_url": "",
+    "image_url": "assets/photos/421_hero.webp",
     "has_photo": true
   },
   {
@@ -27738,7 +27747,7 @@ var RESTAURANT_DATA = [
       "lat": 41.3786914,
       "lng": 2.134781
     },
-    "image_url": "",
+    "image_url": "assets/photos/422_hero.webp",
     "has_photo": false
   },
   {
@@ -28337,7 +28346,7 @@ var RESTAURANT_DATA = [
       "lat": 41.3904601,
       "lng": 2.1332032
     },
-    "image_url": "",
+    "image_url": "assets/photos/431_hero.webp",
     "has_photo": false
   },
   {
@@ -31087,7 +31096,8 @@ var RESTAURANT_DATA = [
       "lat": 41.383,
       "lng": 2.177
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/472_hero.webp"
   },
   {
     "id": 473,
@@ -31153,7 +31163,8 @@ var RESTAURANT_DATA = [
       "lat": 41.383,
       "lng": 2.177
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/473_hero.webp"
   },
   {
     "id": 474,
@@ -31490,7 +31501,8 @@ var RESTAURANT_DATA = [
       "lat": 41.4632308,
       "lng": 2.1702555
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/478_hero.webp"
   },
   {
     "id": 479,
@@ -32020,7 +32032,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3848296,
       "lng": 2.1684799
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/486_hero.webp"
   },
   {
     "id": 487,
@@ -32087,7 +32100,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3851321,
       "lng": 2.1654741
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/487_hero.webp"
   },
   {
     "id": 488,
@@ -33423,7 +33437,8 @@ var RESTAURANT_DATA = [
       "lat": 41.38,
       "lng": 2.189
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/507_hero.webp"
   },
   {
     "id": 508,
@@ -36241,7 +36256,8 @@ var RESTAURANT_DATA = [
       "lat": 41.4029445,
       "lng": 2.1771469
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/549_hero.webp"
   },
   {
     "id": 550,
@@ -41351,7 +41367,7 @@ var RESTAURANT_DATA = [
       "lat": 41.3768982,
       "lng": 2.1628879
     },
-    "image_url": "",
+    "image_url": "assets/photos/625_hero.webp",
     "has_photo": false
   },
   {
@@ -41556,7 +41572,8 @@ var RESTAURANT_DATA = [
       "lat": 41.385,
       "lng": 2.183
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/628_hero.webp"
   },
   {
     "id": 629,
@@ -41621,7 +41638,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3975414,
       "lng": 2.1229662
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/629_hero.webp"
   },
   {
     "id": 630,
@@ -43367,7 +43385,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3816466,
       "lng": 2.1881927
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/655_hero.webp"
   },
   {
     "id": 656,
@@ -43501,7 +43520,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3815306,
       "lng": 2.1744419
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/657_hero.webp"
   },
   {
     "id": 658,
@@ -43774,7 +43794,7 @@ var RESTAURANT_DATA = [
       "lat": 41.3979638,
       "lng": 2.1610245
     },
-    "image_url": "",
+    "image_url": "assets/photos/661_hero.webp",
     "has_photo": false
   },
   {
@@ -45194,7 +45214,8 @@ var RESTAURANT_DATA = [
       "lat": 41.4161095,
       "lng": 2.1315763
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/682_hero.webp"
   },
   {
     "id": 683,
@@ -45399,7 +45420,7 @@ var RESTAURANT_DATA = [
       "lat": 41.3891624,
       "lng": 2.1401666
     },
-    "image_url": "",
+    "image_url": "assets/photos/685_hero.webp",
     "has_photo": false
   },
   {
@@ -47010,7 +47031,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3955996,
       "lng": 2.1611452
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/709_hero.webp"
   },
   {
     "id": 710,
@@ -55834,7 +55856,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3882834,
       "lng": 2.1615596
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/841_hero.webp"
   },
   {
     "id": 842,
@@ -56708,7 +56731,7 @@ var RESTAURANT_DATA = [
       "lat": 41.3926728,
       "lng": 2.164779
     },
-    "image_url": "",
+    "image_url": "assets/photos/854_hero.webp",
     "has_photo": false
   },
   {
@@ -59796,7 +59819,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3889463,
       "lng": 2.1669376
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/900_hero.webp"
   },
   {
     "id": 901,
@@ -59862,7 +59886,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3858504,
       "lng": 2.1694606
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/901_hero.webp"
   },
   {
     "id": 902,
@@ -60131,7 +60156,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3927442,
       "lng": 2.1539985
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/905_hero.webp"
   },
   {
     "id": 906,
@@ -60810,7 +60836,7 @@ var RESTAURANT_DATA = [
       "lat": 41.3818725,
       "lng": 2.1568973
     },
-    "image_url": "",
+    "image_url": "assets/photos/915_hero.webp",
     "has_photo": false
   },
   {
@@ -61013,7 +61039,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3868966,
       "lng": 2.1761916
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/918_hero.webp"
   },
   {
     "id": 919,
@@ -61210,7 +61237,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3813839,
       "lng": 2.1775054
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/921_hero.webp"
   },
   {
     "id": 922,
@@ -62007,7 +62035,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3867346,
       "lng": 2.1744184
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/933_hero.webp"
   },
   {
     "id": 934,
@@ -62075,7 +62104,8 @@ var RESTAURANT_DATA = [
       "lat": 41.4158456,
       "lng": 2.157989
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/934_hero.webp"
   },
   {
     "id": 935,
@@ -62759,7 +62789,8 @@ var RESTAURANT_DATA = [
       "lat": 41.4076681,
       "lng": 2.1880457
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/944_hero.webp"
   },
   {
     "id": 945,
@@ -62956,7 +62987,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3820378,
       "lng": 2.1879486
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/947_hero.webp"
   },
   {
     "id": 948,
@@ -63964,7 +63996,8 @@ var RESTAURANT_DATA = [
       "lat": 41.418,
       "lng": 2.165
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/962_hero.webp"
   },
   {
     "id": 963,
@@ -73087,7 +73120,8 @@ var RESTAURANT_DATA = [
       "lat": 41.3851321,
       "lng": 2.1654741
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/1098_hero.webp"
   },
   {
     "id": 1099,
@@ -74368,7 +74402,8 @@ var RESTAURANT_DATA = [
       "lat": 41.385,
       "lng": 2.183
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/1117_hero.webp"
   },
   {
     "id": 1118,
@@ -75308,7 +75343,7 @@ var RESTAURANT_DATA = [
       "lat": 41.38,
       "lng": 2.168
     },
-    "image_url": "",
+    "image_url": "assets/photos/1131_hero.webp",
     "has_photo": false
   },
   {
@@ -75446,7 +75481,8 @@ var RESTAURANT_DATA = [
       "lat": 41.383,
       "lng": 2.177
     },
-    "has_photo": false
+    "has_photo": false,
+    "image_url": "assets/photos/1133_hero.webp"
   },
   {
     "id": 1134,
@@ -76402,3268 +76438,6 @@ var RESTAURANT_DATA = [
   },
   {
     "id": 1148,
-    "name": "La Llesca Sant Martí",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08019",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 466,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly catalan. in Sant Martí. 4.2★ (450 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Llesca+Sant+Mart%C3%AD+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30",
-      "tuesday": "12:30-15:30",
-      "wednesday": "12:30-16:30",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:00",
-      "sunday": "12:30-16:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1149,
-    "name": "Can Muns",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "11-14€",
-    "address_full": "",
-    "postal_code": "08019",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 380,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Muns+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:00, 19:30-23:30",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1150,
-    "name": "Restaurant El Faro",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Seafood",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08019",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 520,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Seafood restaurant. in Sant Martí. 4.3★ (520 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Faro+Barcelona",
-    "tags": [
-      "deal-ready",
-      "seafood",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-15:30",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-15:30, 20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1151,
-    "name": "Restaurant Betúlia",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08019",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 340,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Sant Martí. 4.3★ (340 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Bet%C3%BAlia+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30, 20:00-24:00",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:00, 20:00-24:00",
-      "saturday": "13:00-16:30",
-      "sunday": "13:00-16:30",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1152,
-    "name": "Tívoli Sant Martí",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08020",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 290,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=T%C3%ADvoli+Sant+Mart%C3%AD+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-16:30",
-      "wednesday": "12:30-16:30",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:00",
-      "saturday": "19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "image_url": "assets/photos/1152_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1153,
-    "name": "Ca la Margarida",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-15€",
-    "address_full": "",
-    "postal_code": "08019",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 410,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ca+la+Margarida+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "Closed",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-15:30",
-      "closed_days": [
-        "tuesday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1154,
-    "name": "Trópico Sant Martí",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Fusion",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08019",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 320,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly fusion. in Sant Martí. 4.1★ (320 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tr%C3%B3pico+Sant+Mart%C3%AD+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:30, 19:30-23:30",
-      "friday": "12:30-16:00, 19:30-22:30",
-      "saturday": "12:30-16:00, 19:30-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1155,
-    "name": "Bar Restaurante El Recó",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08020",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 208,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Restaurante+El+Rec%C3%B3+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:30, 19:30-23:30",
-      "saturday": "12:30-16:30, 19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1156,
-    "name": "La Masia de Sant Martí",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08020",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 480,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Masia+de+Sant+Mart%C3%AD+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30",
-      "tuesday": "13:00-16:30, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:00",
-      "thursday": "13:00-15:30",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:30, 20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1157,
-    "name": "El Rincón Gallego Sant Martí",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08019",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 308,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Spanish restaurant. in Sant Martí. 4.1★ (350 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rinc%C3%B3n+Gallego+Sant+Mart%C3%AD+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:30, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:30, 20:00-23:30",
-      "saturday": "13:00-15:30, 20:00-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1158,
-    "name": "Pizzería Da Michele Sant Martí",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Italian",
-    "pricing_tier": "mid-range",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08019",
-    "google_maps_rating": 4.5,
-    "google_maps_review_count": 971,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Italian restaurant. in Sant Martí. Highly rated (4.5★, 1,200 reviews)",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+Da+Michele+Sant+Mart%C3%AD+Barcelona",
-    "tags": [
-      "views"
-    ],
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-16:30, 20:00-24:00",
-      "thursday": "13:00-16:00, 20:00-23:00",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1159,
-    "name": "Wok Garden Sant Martí",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Fusion",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08019",
-    "google_maps_rating": 3.9,
-    "google_maps_review_count": 545,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly fusion. in Sant Martí. 3.9★ (600 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Wok+Garden+Sant+Mart%C3%AD+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-22:30",
-      "tuesday": "12:30-15:30, 19:30-23:00",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:30, 19:30-23:00",
-      "saturday": "19:30-22:30",
-      "sunday": "12:30-16:30, 19:30-23:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1160,
-    "name": "La Taverna del Clínic Sant Martí",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08020",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 370,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Sant Martí. 4.2★ (370 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Taverna+del+Cl%C3%ADnic+Sant+Mart%C3%AD+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:00",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-15:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "20:00-23:00",
-      "sunday": "13:00-15:30",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1161,
-    "name": "Restaurant La Glorieta",
-    "neighborhood": "Clot",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-15€",
-    "address_full": "",
-    "postal_code": "08018",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 480,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Glorieta+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.409,
-      "lng": 2.187
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-15:30, 20:00-24:00",
-      "wednesday": "13:00-15:30",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "20:00-24:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1162,
-    "name": "Bar Tano Clot",
-    "neighborhood": "Clot",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08018",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 320,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Tano+Clot+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.409,
-      "lng": 2.187
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:30, 19:30-22:30",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:00",
-      "saturday": "12:30-15:30, 19:30-22:30",
-      "sunday": "12:30-16:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1163,
-    "name": "El Bocata del Clot",
-    "neighborhood": "Clot",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08018",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 304,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly spanish. in Clot. 4.0★ (250 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Bocata+del+Clot+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.409,
-      "lng": 2.187
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-16:30",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00, 19:30-22:30",
-      "friday": "12:30-16:30, 19:30-23:00",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1164,
-    "name": "Osteria del Clot",
-    "neighborhood": "Clot",
-    "cuisine_type": "Italian",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08018",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 474,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Italian restaurant. in Clot. Highly rated (4.4★, 550 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Osteria+del+Clot+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.409,
-      "lng": 2.187
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30, 20:00-23:30",
-      "tuesday": "13:00-15:30",
-      "wednesday": "13:00-15:30, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:00",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-16:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1165,
-    "name": "Thai Corner Clot",
-    "neighborhood": "Clot",
-    "cuisine_type": "Thai",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08018",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 420,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly thai. in Clot. 4.2★ (420 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Thai+Corner+Clot+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.409,
-      "lng": 2.187
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-22:30",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-15:30",
-      "thursday": "12:30-16:00, 19:30-22:30",
-      "friday": "12:30-16:00",
-      "saturday": "12:30-16:30, 19:30-23:00",
-      "sunday": "12:30-16:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1166,
-    "name": "Can Pau Clot",
-    "neighborhood": "Clot",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "11-13€",
-    "address_full": "",
-    "postal_code": "08018",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 280,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Pau+Clot+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.409,
-      "lng": 2.187
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:30, 19:30-22:30",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00, 19:30-23:30",
-      "saturday": "12:30-15:30, 19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1167,
-    "name": "El Fogón del Clot",
-    "neighborhood": "Clot",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08018",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 310,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Fog%C3%B3n+del+Clot+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.409,
-      "lng": 2.187
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-15:30, 19:30-22:30",
-      "wednesday": "12:30-15:30",
-      "thursday": "12:30-16:30, 19:30-23:00",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:30",
-      "sunday": "12:30-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1168,
-    "name": "La Cuina Oberta Clot",
-    "neighborhood": "Clot",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-15€",
-    "address_full": "",
-    "postal_code": "08018",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 481,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+Oberta+Clot+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.409,
-      "lng": 2.187
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-15:30, 20:00-23:30",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "image_url": "assets/photos/1168_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1169,
-    "name": "Ramen Shifu Clot",
-    "neighborhood": "Clot",
-    "cuisine_type": "Japanese",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08018",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 716,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly japanese. in Clot. 4.3★ (650 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ramen+Shifu+Clot+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "ramen",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.409,
-      "lng": 2.187
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00",
-      "tuesday": "12:30-16:30",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-15:30, 19:30-23:00",
-      "friday": "12:30-16:00",
-      "saturday": "12:30-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1170,
-    "name": "La Pizarra del Clot",
-    "neighborhood": "Clot",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08018",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 220,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Pizarra+del+Clot+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.409,
-      "lng": 2.187
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30",
-      "tuesday": "12:30-15:30",
-      "wednesday": "12:30-16:00, 19:30-22:30",
-      "thursday": "12:30-16:00, 19:30-22:30",
-      "friday": "12:30-16:00, 19:30-23:30",
-      "saturday": "12:30-15:30, 19:30-23:00",
-      "sunday": "12:30-16:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1171,
-    "name": "La Taquería Sagrada",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Mexican",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08013",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 780,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly mexican. in Sagrada Família. 4.2★ (780 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Taquer%C3%ADa+Sagrada+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "tacos",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-15:30, 19:30-23:00",
-      "saturday": "12:30-15:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1172,
-    "name": "El Bar de la Sagrada",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08013",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 410,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Bar+de+la+Sagrada+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-22:30",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-15:30, 19:30-23:30",
-      "thursday": "12:30-15:30, 19:30-23:00",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:30, 19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1173,
-    "name": "Can Jordi Sagrada",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-15€",
-    "address_full": "",
-    "postal_code": "08025",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 420,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Jordi+Sagrada+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-24:00",
-      "tuesday": "13:00-15:30, 20:00-24:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:00",
-      "friday": "13:00-15:30, 20:00-23:00",
-      "saturday": "20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1174,
-    "name": "Osteria Sagrada",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Italian",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08013",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 1135,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Italian restaurant. in Sagrada Família. Highly rated (4.4★, 900 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Osteria+Sagrada+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-15:30",
-      "friday": "13:00-15:30, 20:00-23:30",
-      "saturday": "13:00-16:30, 20:00-23:30",
-      "sunday": "13:00-16:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1175,
-    "name": "Himal Nepali Sagrada",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Indian",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "9-12€",
-    "address_full": "",
-    "postal_code": "08025",
-    "google_maps_rating": 4.5,
-    "google_maps_review_count": 340,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Himal+Nepali+Sagrada+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30, 19:30-23:00",
-      "tuesday": "12:30-16:00, 19:30-22:30",
-      "wednesday": "12:30-16:00, 19:30-23:30",
-      "thursday": "12:30-16:30, 19:30-23:30",
-      "friday": "12:30-15:30, 19:30-23:30",
-      "saturday": "12:30-16:00, 19:30-23:30",
-      "sunday": "12:30-16:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1176,
-    "name": "La Parrilla de Lepant",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Argentine",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08013",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 430,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Argentine restaurant. in Sagrada Família. 4.1★ (430 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Parrilla+de+Lepant+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:30, 20:00-24:00",
-      "wednesday": "13:00-16:00, 20:00-23:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-15:30, 20:00-23:30",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-16:00, 20:00-23:30",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1177,
-    "name": "Bar El Temple",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08025",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 280,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+El+Temple+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "12:30-16:30, 19:30-23:30",
-      "tuesday": "12:30-16:00, 19:30-23:30",
-      "wednesday": "12:30-16:30",
-      "thursday": "12:30-15:30, 19:30-23:30",
-      "friday": "12:30-16:00, 19:30-22:30",
-      "saturday": "19:30-22:30",
-      "sunday": "12:30-16:00, 19:30-23:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1178,
-    "name": "Wok to Walk Sagrada",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Fusion",
-    "pricing_tier": "budget",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08013",
-    "google_maps_rating": 3.8,
-    "google_maps_review_count": 520,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly fusion. in Sagrada Família. 3.8★ (520 reviews)",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Wok+to+Walk+Sagrada+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "views"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-22:30",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-15:30, 19:30-23:30",
-      "thursday": "12:30-16:00, 19:30-23:30",
-      "friday": "12:30-16:00, 19:30-22:30",
-      "saturday": "12:30-15:30, 19:30-23:00",
-      "sunday": "12:30-15:30, 19:30-23:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1179,
-    "name": "Restaurant La Marina Sagrada",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Seafood",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08025",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 380,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Marina+Sagrada+Barcelona",
-    "tags": [
-      "deal-ready",
-      "seafood"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30, 20:00-23:00",
-      "tuesday": "Closed",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:30, 20:00-23:30",
-      "friday": "13:00-16:30",
-      "saturday": "13:00-16:30, 20:00-23:30",
-      "sunday": "13:00-16:00, 20:00-23:00",
-      "closed_days": [
-        "tuesday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1180,
-    "name": "El Rincón de Padilla",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08013",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 310,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rinc%C3%B3n+de+Padilla+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30",
-      "tuesday": "12:30-16:30, 19:30-23:00",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:00, 19:30-23:30",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-15:30, 19:30-23:00",
-      "sunday": "12:30-16:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1181,
-    "name": "Cal Pere Sant Andreu",
-    "neighborhood": "Sant Andreu",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08030",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 360,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cal+Pere+Sant+Andreu+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.435,
-      "lng": 2.19
-    },
-    "metro_station": "Sant Andreu (L1)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-15:30, 19:30-23:00",
-      "wednesday": "12:30-16:30",
-      "thursday": "12:30-15:30, 19:30-23:00",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:00",
-      "sunday": "12:30-15:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1182,
-    "name": "Restaurant El Molí",
-    "neighborhood": "Sant Andreu",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-15€",
-    "address_full": "",
-    "postal_code": "08030",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 420,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Mol%C3%AD+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.435,
-      "lng": 2.19
-    },
-    "metro_station": "Sant Andreu (L1)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:30",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:30",
-      "friday": "13:00-16:00, 20:00-24:00",
-      "saturday": "13:00-16:30, 20:00-23:30",
-      "sunday": "13:00-16:00, 20:00-23:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1183,
-    "name": "La Taberna de Can Fabra",
-    "neighborhood": "Sant Andreu",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08030",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 280,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Taberna+de+Can+Fabra+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.435,
-      "lng": 2.19
-    },
-    "metro_station": "Sant Andreu (L1)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00, 19:30-22:30",
-      "wednesday": "12:30-16:00, 19:30-22:30",
-      "thursday": "12:30-16:30, 19:30-23:00",
-      "friday": "12:30-15:30, 19:30-23:00",
-      "saturday": "12:30-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1184,
-    "name": "Bar El Rincón Andaluz Sant Andreu",
-    "neighborhood": "Sant Andreu",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "9-12€",
-    "address_full": "",
-    "postal_code": "08030",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 320,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+El+Rinc%C3%B3n+Andaluz+Sant+Andreu+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.435,
-      "lng": 2.19
-    },
-    "metro_station": "Sant Andreu (L1)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-16:00, 19:30-22:30",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:30",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:00, 19:30-22:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1185,
-    "name": "Pizzería Il Forno Sant Andreu",
-    "neighborhood": "Sant Andreu",
-    "cuisine_type": "Italian",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08030",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 380,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly italian. in Sant Andreu. 4.2★ (380 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+Il+Forno+Sant+Andreu+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.435,
-      "lng": 2.19
-    },
-    "metro_station": "Sant Andreu (L1)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:30",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-15:30",
-      "thursday": "12:30-16:00, 19:30-22:30",
-      "friday": "12:30-16:00",
-      "saturday": "12:30-16:30",
-      "sunday": "12:30-16:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1186,
-    "name": "Restaurant La Font Sant Andreu",
-    "neighborhood": "Sant Andreu",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08030",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 290,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Sant Andreu. 4.1★ (290 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Font+Sant+Andreu+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.435,
-      "lng": 2.19
-    },
-    "metro_station": "Sant Andreu (L1)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-15:30, 20:00-24:00",
-      "wednesday": "13:00-16:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:30, 20:00-23:30",
-      "saturday": "13:00-16:30, 20:00-24:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "image_url": "assets/photos/1186_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1187,
-    "name": "Can Lluís Sant Andreu",
-    "neighborhood": "Sant Andreu",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08030",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 252,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Llu%C3%ADs+Sant+Andreu+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.435,
-      "lng": 2.19
-    },
-    "metro_station": "Sant Andreu (L1)",
-    "opening_hours_full": {
-      "monday": "12:30-16:30",
-      "tuesday": "12:30-16:30, 19:30-22:30",
-      "wednesday": "12:30-16:00, 19:30-22:30",
-      "thursday": "12:30-16:30",
-      "friday": "12:30-15:30",
-      "saturday": "12:30-15:30, 19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "image_url": "assets/photos/1187_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1188,
-    "name": "La Cuina del Barri Sant Andreu",
-    "neighborhood": "Sant Andreu",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08030",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 288,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+del+Barri+Sant+Andreu+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.435,
-      "lng": 2.19
-    },
-    "metro_station": "Sant Andreu (L1)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-15:30, 19:30-23:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:00",
-      "saturday": "12:30-15:30, 19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1189,
-    "name": "El Japo Sant Andreu",
-    "neighborhood": "Sant Andreu",
-    "cuisine_type": "Japanese",
-    "pricing_tier": "mid-range",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08030",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 565,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Japanese restaurant. in Sant Andreu. 4.3★ (450 reviews)",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Japo+Sant+Andreu+Barcelona",
-    "tags": [
-      "views"
-    ],
-    "coordinates": {
-      "lat": 41.435,
-      "lng": 2.19
-    },
-    "metro_station": "Sant Andreu (L1)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:00-23:30",
-      "tuesday": "12:30-16:30, 19:00-24:00",
-      "wednesday": "12:30-15:30, 19:00-23:30",
-      "thursday": "12:30-16:00, 19:00-23:00",
-      "friday": "12:30-16:00, 19:00-23:30",
-      "saturday": "19:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "image_url": "assets/photos/1189_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1190,
-    "name": "Restaurant L'Havana",
-    "neighborhood": "Sant Antoni",
-    "cuisine_type": "Cuban",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08015",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 480,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Cuban restaurant. in Sant Antoni. 4.2★ (480 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+L%27Havana+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.379,
-      "lng": 2.159
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-15:30",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-15:30, 20:00-24:00",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:30, 20:00-24:00",
-      "sunday": "13:00-16:30",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1191,
-    "name": "Can Vilaro",
-    "neighborhood": "Sant Antoni",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08015",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 341,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Vilaro+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.379,
-      "lng": 2.159
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:30, 19:30-23:00",
-      "thursday": "12:30-16:30",
-      "friday": "12:30-16:00, 19:30-22:30",
-      "saturday": "12:30-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1192,
-    "name": "Petit Comitè Sant Antoni",
-    "neighborhood": "Sant Antoni",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08015",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 520,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Sant Antoni. 4.3★ (600 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Petit+Comit%C3%A8+Sant+Antoni+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.379,
-      "lng": 2.159
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-15:30",
-      "saturday": "13:00-16:00, 20:00-23:00",
-      "sunday": "13:00-15:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1193,
-    "name": "El Cafè del Mercat Sant Antoni",
-    "neighborhood": "Sant Antoni",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08015",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 310,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Caf%C3%A8+del+Mercat+Sant+Antoni+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.379,
-      "lng": 2.159
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:00, 19:30-22:30",
-      "thursday": "12:30-16:30",
-      "friday": "12:30-16:30, 19:30-23:00",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "12:30-16:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1194,
-    "name": "Restaurant El Parlament",
-    "neighborhood": "Sant Antoni",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08015",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 720,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Parlament+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.379,
-      "lng": 2.159
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30, 20:00-23:30",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-15:30, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1195,
-    "name": "Restaurant Can Verdaguer",
-    "neighborhood": "Nou Barris",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "9-12€",
-    "address_full": "",
-    "postal_code": "08042",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 320,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Verdaguer+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.441,
-      "lng": 2.177
-    },
-    "metro_station": "Via Júlia (L4)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "12:30-15:30",
-      "closed_days": []
-    },
-    "image_url": "assets/photos/1195_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1196,
-    "name": "Bar La Creu Nou Barris",
-    "neighborhood": "Nou Barris",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "9-11€",
-    "address_full": "",
-    "postal_code": "08042",
-    "google_maps_rating": 3.9,
-    "google_maps_review_count": 210,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+La+Creu+Nou+Barris+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.441,
-      "lng": 2.177
-    },
-    "metro_station": "Via Júlia (L4)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-22:30",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:00",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1197,
-    "name": "Restaurant El Parc Nou Barris",
-    "neighborhood": "Nou Barris",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08016",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 280,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Parc+Nou+Barris+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.441,
-      "lng": 2.177
-    },
-    "metro_station": "Via Júlia (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:30",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:30",
-      "friday": "12:30-16:30",
-      "saturday": "12:30-16:00",
-      "sunday": "12:30-15:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1198,
-    "name": "Kebab Palace Nou Barris",
-    "neighborhood": "Nou Barris",
-    "cuisine_type": "Turkish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08042",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 350,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly turkish. in Nou Barris. 4.1★ (450 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Kebab+Palace+Nou+Barris+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.441,
-      "lng": 2.177
-    },
-    "metro_station": "Via Júlia (L4)",
-    "opening_hours_full": {
-      "monday": "12:30-16:30, 19:30-23:00",
-      "tuesday": "12:30-16:00, 19:30-22:30",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:30, 19:30-23:30",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-15:30, 19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1199,
-    "name": "La Caseta de Roquetes",
-    "neighborhood": "Nou Barris",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "9-12€",
-    "address_full": "",
-    "postal_code": "08042",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 340,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Caseta+de+Roquetes+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.441,
-      "lng": 2.177
-    },
-    "metro_station": "Via Júlia (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-15:30, 19:30-23:00",
-      "wednesday": "12:30-16:30, 19:30-23:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00",
-      "saturday": "19:30-23:00",
-      "sunday": "12:30-16:00, 19:30-23:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1200,
-    "name": "El Patio de Nou Barris",
-    "neighborhood": "Nou Barris",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08016",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 260,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Patio+de+Nou+Barris+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.441,
-      "lng": 2.177
-    },
-    "metro_station": "Via Júlia (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00, 19:30-23:30",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-15:30",
-      "saturday": "12:30-16:30, 19:30-23:00",
-      "sunday": "12:30-16:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1201,
-    "name": "China Garden Nou Barris",
-    "neighborhood": "Nou Barris",
-    "cuisine_type": "Chinese",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08042",
-    "google_maps_rating": 3.8,
-    "google_maps_review_count": 380,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly chinese. in Nou Barris. 3.8★ (380 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=China+Garden+Nou+Barris+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.441,
-      "lng": 2.177
-    },
-    "metro_station": "Via Júlia (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-15:30",
-      "saturday": "12:30-15:30",
-      "sunday": "12:30-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1202,
-    "name": "Bar Restaurant La Prosperitat",
-    "neighborhood": "Nou Barris",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "9-11€",
-    "address_full": "",
-    "postal_code": "08016",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 230,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Restaurant+La+Prosperitat+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.441,
-      "lng": 2.177
-    },
-    "metro_station": "Via Júlia (L4)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:00, 19:30-22:30",
-      "sunday": "12:30-16:00, 19:30-23:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1203,
-    "name": "Restaurant Can Travi Nou",
-    "neighborhood": "Horta-Guinardó",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14-18€",
-    "address_full": "C/ de Jorge Manrique, s/n",
-    "postal_code": "08035",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 1809,
-    "website": "https://cantravinou.com/",
-    "phone": "+34 934280301",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Travi+Nou+C%2F+de+Jorge+Manrique%2C+s%2Fn+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4309351,
-      "lng": 2.1515696
-    },
-    "metro_station": "El Carmel (L5)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-15:30, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-15:30",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-16:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "image_url": "assets/photos/1203_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1204,
-    "name": "El Racó d'Horta",
-    "neighborhood": "Horta-Guinardó",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08032",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 380,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rac%C3%B3+d%27Horta+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.418,
-      "lng": 2.165
-    },
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30, 19:30-22:30",
-      "tuesday": "12:30-16:30",
-      "wednesday": "12:30-15:30, 19:30-23:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:30",
-      "saturday": "12:30-16:00, 19:30-23:30",
-      "sunday": "12:30-15:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1205,
-    "name": "La Torre de Horta",
-    "neighborhood": "Horta-Guinardó",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08032",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 420,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Horta-Guinardó. 4.2★ (420 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Torre+de+Horta+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.418,
-      "lng": 2.165
-    },
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-15:30",
-      "thursday": "13:00-16:00, 20:00-24:00",
-      "friday": "13:00-16:30, 20:00-23:30",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-16:30",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1206,
-    "name": "Pizzería Güell",
-    "neighborhood": "Horta-Guinardó",
-    "cuisine_type": "Italian",
-    "pricing_tier": "budget",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08024",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 564,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly italian. in Horta-Guinardó. 4.3★ (650 reviews)",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+G%C3%BCell+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "views"
-    ],
-    "coordinates": {
-      "lat": 41.418,
-      "lng": 2.165
-    },
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-16:30, 19:30-22:30",
-      "wednesday": "12:30-16:00, 19:30-23:30",
-      "thursday": "12:30-16:00, 19:30-23:30",
-      "friday": "12:30-16:30, 19:30-23:00",
-      "saturday": "12:30-16:30, 19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1207,
-    "name": "Restaurant El Laberint",
-    "neighborhood": "Horta-Guinardó",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-15€",
-    "address_full": "",
-    "postal_code": "08035",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 596,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Laberint+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.418,
-      "lng": 2.165
-    },
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-16:30, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "13:00-16:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1208,
-    "name": "Bar Restaurant Can Margarit Horta",
-    "neighborhood": "Horta-Guinardó",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08032",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 270,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Restaurant+Can+Margarit+Horta+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.418,
-      "lng": 2.165
-    },
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00",
-      "tuesday": "12:30-16:30, 19:30-23:00",
-      "wednesday": "12:30-16:30, 19:30-23:00",
-      "thursday": "12:30-16:00, 19:30-23:30",
-      "friday": "12:30-16:00",
-      "saturday": "12:30-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1209,
-    "name": "El Petit Horta",
-    "neighborhood": "Horta-Guinardó",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08032",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 310,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Petit+Horta+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.418,
-      "lng": 2.165
-    },
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:30, 19:30-23:00",
-      "thursday": "12:30-16:00, 19:30-23:30",
-      "friday": "12:30-16:30, 19:30-22:30",
-      "saturday": "12:30-16:30, 19:30-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1210,
-    "name": "Cervecería Ciudad Condal",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "Rambla de Catalunya, 18",
-    "postal_code": "08007",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 4084,
-    "website": "https://laflautagroup.com/",
-    "phone": "+34 933181997",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cervecer%C3%ADa+Ciudad+Condal+Rambla+de+Catalunya%2C+18+Barcelona",
-    "tags": [
-      "craft-beer"
-    ],
-    "coordinates": {
-      "lat": 41.3889463,
-      "lng": 2.1669376
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "images": {
-      "hero": "",
-      "card": "assets/photos/1269_card.webp"
-    },
-    "opening_hours_full": {
-      "monday": "13:00-15:30, 20:00-23:00",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:00",
-      "thursday": "13:00-15:30, 20:00-23:00",
-      "friday": "13:00-16:30, 20:00-23:30",
-      "saturday": "20:00-23:30",
-      "sunday": "13:00-16:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "image_url": "",
-    "has_photo": false
-  },
-  {
-    "id": 1211,
-    "name": "Ramen-Ya Eixample",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Japanese",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08009",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 1344,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly japanese. in Eixample. Highly rated (4.4★, 1,200 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ramen-Ya+Eixample+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "ramen",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-15:30",
-      "wednesday": "12:30-15:30",
-      "thursday": "12:30-16:30, 19:30-22:30",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "12:30-15:30, 19:30-23:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1212,
-    "name": "La Flauta Diagonal",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "11-14€",
-    "address_full": "C/ d'Aribau, 23",
-    "postal_code": "08036",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 1688,
-    "website": "https://laflautagroup.com/",
-    "phone": "+34 933237038",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Flauta+Diagonal+C%2F+d%27Aribau%2C+23+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.3869111,
-      "lng": 2.1611096
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "images": {
-      "hero": "",
-      "card": "assets/photos/1271_card.webp"
-    },
-    "opening_hours_full": {
-      "monday": "12:30-15:30, 19:30-23:00",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:30",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "image_url": "",
-    "has_photo": false
-  },
-  {
-    "id": 1213,
-    "name": "Taller de Tapas Passeig de Gràcia",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08007",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 1725,
-    "website": "https://tallerdetapas.com/",
-    "phone": "+34 934874842",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Taller+de+Tapas+Passeig+de+Gr%C3%A0cia+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-15:30, 20:00-23:00",
-      "wednesday": "13:00-15:30, 20:00-23:30",
-      "thursday": "13:00-15:30, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-15:30, 20:00-23:30",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "image_url": "assets/photos/1213_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1214,
-    "name": "Honest Greens Eixample",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Café",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "C/ del Rosselló, 197",
-    "postal_code": "08008",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 1289,
-    "website": "https://honestgreens.com/",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Honest+Greens+Eixample+C%2F+del+Rossell%C3%B3%2C+197+Barcelona",
-    "tags": [
-      "breakfast"
-    ],
-    "coordinates": {
-      "lat": 41.3923045,
-      "lng": 2.1558108
-    },
-    "metro_station": "Diagonal (L3/L5)",
-    "opening_hours_full": {
-      "monday": "08:00-20:30",
-      "tuesday": "08:00-20:00",
-      "wednesday": "08:00-20:00",
-      "thursday": "08:00-19:30",
-      "friday": "08:00-20:00",
-      "saturday": "09:00-19:30",
-      "sunday": "09:00-19:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1215,
-    "name": "Foc i Oli",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08009",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 580,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Foc+i+Oli+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-15:30, 20:00-23:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-15:30, 20:00-23:30",
-      "friday": "13:00-16:30",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-15:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1216,
-    "name": "Restaurant Mesopotamia",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Middle Eastern",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08011",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 720,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Mesopotamia+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:00, 19:30-23:30",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00, 19:30-23:30",
-      "saturday": "12:30-16:00",
-      "sunday": "12:30-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1217,
-    "name": "La Piazzetta Eixample",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Italian",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08008",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 890,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Italian restaurant. in Eixample. 4.3★ (890 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Piazzetta+Eixample+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:30, 20:00-24:00",
-      "wednesday": "13:00-15:30, 20:00-23:30",
-      "thursday": "13:00-16:30",
-      "friday": "13:00-16:00, 20:00-24:00",
-      "saturday": "13:00-15:30, 20:00-23:30",
-      "sunday": "13:00-15:30, 20:00-23:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1218,
-    "name": "Yakitoro Eixample",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Japanese",
-    "pricing_tier": "mid-range",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08009",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 640,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Japanese restaurant. in Eixample. 4.2★ (640 reviews)",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Yakitoro+Eixample+Barcelona",
-    "tags": [
-      "views"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30, 19:00-24:00",
-      "tuesday": "12:30-16:00, 19:00-23:30",
-      "wednesday": "12:30-15:30, 19:00-24:00",
-      "thursday": "12:30-16:00, 19:00-23:30",
-      "friday": "12:30-15:30, 19:00-23:00",
-      "saturday": "12:30-16:00, 19:00-23:30",
-      "sunday": "12:30-16:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1219,
-    "name": "El Bierzo Eixample",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08010",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 380,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Bierzo+Eixample+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:30, 19:30-23:00",
-      "wednesday": "12:30-16:00, 19:30-22:30",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:00, 19:30-23:30",
-      "saturday": "12:30-16:00",
-      "sunday": "12:30-15:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1220,
-    "name": "Restaurant Roig Robí",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "premium",
-    "menu_tier": "confirmed",
-    "menu_price_range": "25-35€",
-    "address_full": "C/ de Sèneca, 20",
-    "postal_code": "08006",
-    "google_maps_rating": 4.5,
-    "google_maps_review_count": 720,
-    "website": "https://roigrobi.com/",
-    "phone": "+34 932189222",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Roig+Rob%C3%AD+C%2F+de+S%C3%A8neca%2C+20+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.3968928,
-      "lng": 2.1562774
-    },
-    "metro_station": "Diagonal (L3/L5)",
-    "image_url": "",
-    "images": {
-      "hero": "assets/photos/1279_hero.webp",
-      "card": "assets/photos/1279_card.webp"
-    },
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:30-16:00, 20:30-23:00",
-      "wednesday": "13:30-15:30, 20:30-22:30",
-      "thursday": "13:30-16:00, 20:30-23:30",
-      "friday": "13:30-15:30",
-      "saturday": "13:30-15:30",
-      "sunday": "13:30-15:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1221,
-    "name": "Sarria Taverna Gràcia",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08012",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 340,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Gràcia. 4.2★ (340 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sarria+Taverna+Gr%C3%A0cia+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:00",
-      "thursday": "13:00-16:30, 20:00-23:30",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1222,
-    "name": "Hummus Barcelona Gràcia",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Middle Eastern",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08012",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 680,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly middle eastern. in Gràcia. Highly rated (4.4★, 680 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hummus+Barcelona+Gr%C3%A0cia+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-15:30, 19:30-23:30",
-      "wednesday": "12:30-15:30",
-      "thursday": "12:30-15:30, 19:30-22:30",
-      "friday": "12:30-16:00",
-      "saturday": "19:30-23:00",
-      "sunday": "12:30-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1223,
     "name": "Bormuth Born",
     "neighborhood": "El Born",
     "cuisine_type": "Spanish",
@@ -79723,92 +76497,7 @@ var RESTAURANT_DATA = [
     "has_photo": false
   },
   {
-    "id": 1224,
-    "name": "Restaurant La Cuina del Born",
-    "neighborhood": "El Born",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 480,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Cuina+del+Born+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.385,
-      "lng": 2.183
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30, 20:00-23:30",
-      "tuesday": "Closed",
-      "wednesday": "13:00-15:30, 20:00-23:30",
-      "thursday": "13:00-15:30",
-      "friday": "13:00-15:30",
-      "saturday": "20:00-23:30",
-      "sunday": "13:00-16:30",
-      "closed_days": [
-        "tuesday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1225,
-    "name": "El Pla Born",
-    "neighborhood": "El Born",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14-18€",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 590,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Pla+Born+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.385,
-      "lng": 2.183
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-15:30",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:00",
-      "saturday": "20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1226,
+    "id": 1149,
     "name": "Picnic Born",
     "neighborhood": "El Born",
     "cuisine_type": "Vegetarian/Vegan",
@@ -79871,10001 +76560,1511 @@ var RESTAURANT_DATA = [
     "has_photo": false
   },
   {
-    "id": 1227,
-    "name": "Restaurant Suquet de l'Almirall",
-    "neighborhood": "Barceloneta",
-    "cuisine_type": "Seafood",
-    "pricing_tier": "premium",
-    "menu_tier": "none",
+    "name": "Restaurant El Clot",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
     "menu_price_range": "",
-    "address_full": "Pg. de Joan de Borbó, 65",
-    "postal_code": "08003",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 2122,
-    "website": "https://suquetdelalmirall.com/",
-    "phone": "+34 932216233",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/Restaurant+El+Clot/data=!4m7!3m6!1s0x12a4a3265a9089c5:0x44e15768a1ec8c21!8m2!3d41.408839!4d2.18753",
+    "phone": "",
+    "opening_hours_lunch": "",
     "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Suquet+de+l%27Almirall+Pg.+de+Joan+de+Borb%C3%B3%2C+65+Barcelona",
-    "tags": [
-      "seafood"
-    ],
-    "coordinates": {
-      "lat": 41.3762081,
-      "lng": 2.1891397
-    },
-    "metro_station": "Barceloneta (L4)",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer d'Aragó, 600",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.6,
+    "google_maps_review_count": 9091,
+    "opening_hours_full": {},
     "images": {
       "hero": "",
-      "card": "assets/photos/1286_card.webp"
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
     },
-    "opening_hours_full": {
-      "monday": "13:30-15:00, 20:30-23:30",
-      "tuesday": "13:30-16:00, 20:30-23:00",
-      "wednesday": "13:30-16:00, 20:30-23:00",
-      "thursday": "13:30-15:30, 20:30-23:00",
-      "friday": "13:30-15:30, 20:30-23:30",
-      "saturday": "13:30-16:00, 20:30-23:00",
-      "sunday": "13:30-15:30, 20:30-23:30",
-      "closed_days": []
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.408839,
+      "lng": 2.18753
     },
     "image_url": "",
-    "has_photo": false
+    "has_photo": false,
+    "id": 1150
   },
   {
-    "id": 1228,
-    "name": "Maians Barceloneta",
-    "neighborhood": "Barceloneta",
-    "cuisine_type": "Seafood",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 890,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Seafood restaurant. in Barceloneta. 4.1★ (890 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Maians+Barceloneta+Barcelona",
-    "tags": [
-      "deal-ready",
-      "seafood",
-      "views",
-      "waterfront"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.189
-    },
-    "metro_station": "Barceloneta (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-15:30",
-      "wednesday": "13:00-16:00, 20:00-22:30",
-      "thursday": "13:00-16:30",
-      "friday": "13:00-16:30, 20:00-23:00",
-      "saturday": "13:00-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1229,
-    "name": "Restaurant Salamanca 2",
-    "neighborhood": "Barceloneta",
-    "cuisine_type": "Seafood",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 1090,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Seafood restaurant. in Barceloneta. Popular (1,200 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Salamanca+2+Barcelona",
-    "tags": [
-      "deal-ready",
-      "seafood",
-      "views",
-      "waterfront"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.189
-    },
-    "metro_station": "Barceloneta (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:30",
-      "thursday": "13:00-16:00, 20:00-23:00",
-      "friday": "13:00-16:00, 20:00-22:30",
-      "saturday": "13:00-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1230,
-    "name": "Restaurant Via Veneto",
-    "neighborhood": "Les Corts",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "premium",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "C/ de Ganduxer, 10",
-    "postal_code": "08021",
-    "google_maps_rating": 4.5,
-    "google_maps_review_count": 1625,
-    "website": "https://viavenetorestaurant.com/",
-    "phone": "+34 932007024",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Via+Veneto+C%2F+de+Ganduxer%2C+10+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.392474,
-      "lng": 2.1391279
-    },
-    "metro_station": "Maria Cristina (L3)",
-    "opening_hours_full": {
-      "monday": "13:30-15:30, 20:30-23:00",
-      "tuesday": "13:30-15:30, 20:30-23:30",
-      "wednesday": "13:30-15:30, 20:30-23:00",
-      "thursday": "13:30-15:30, 20:30-23:00",
-      "friday": "13:30-16:00, 20:30-22:30",
-      "saturday": "20:30-23:00",
-      "sunday": "13:30-15:30, 20:30-23:30",
-      "closed_days": []
-    },
-    "image_url": "assets/photos/1230_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1231,
-    "name": "La Masia Les Corts",
-    "neighborhood": "Les Corts",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08028",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 480,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Masia+Les+Corts+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.387,
-      "lng": 2.127
-    },
-    "metro_station": "Les Corts (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-24:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1232,
-    "name": "El Rincón de Les Corts",
-    "neighborhood": "Les Corts",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08028",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 320,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rinc%C3%B3n+de+Les+Corts+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.387,
-      "lng": 2.127
-    },
-    "metro_station": "Les Corts (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-15:30",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:00, 19:30-23:30",
-      "saturday": "12:30-16:00, 19:30-22:30",
-      "sunday": "12:30-16:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1233,
-    "name": "Tapas les Corts",
-    "neighborhood": "Les Corts",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08028",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 280,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly spanish. in Les Corts. 4.1★ (280 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tapas+les+Corts+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.387,
-      "lng": 2.127
-    },
-    "metro_station": "Les Corts (L3)",
-    "opening_hours_full": {
-      "monday": "12:30-16:30, 19:30-22:30",
-      "tuesday": "12:30-16:00, 19:30-22:30",
-      "wednesday": "12:30-15:30",
-      "thursday": "12:30-15:30",
-      "friday": "12:30-16:00, 19:30-23:30",
-      "saturday": "19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1234,
-    "name": "Sushi Dream Les Corts",
-    "neighborhood": "Les Corts",
-    "cuisine_type": "Japanese",
-    "pricing_tier": "mid-range",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08028",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 356,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Japanese restaurant. in Les Corts. 4.2★ (450 reviews)",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sushi+Dream+Les+Corts+Barcelona",
-    "tags": [
-      "views"
-    ],
-    "coordinates": {
-      "lat": 41.387,
-      "lng": 2.127
-    },
-    "metro_station": "Les Corts (L3)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30, 19:00-23:30",
-      "tuesday": "12:30-16:00, 19:00-23:30",
-      "wednesday": "12:30-16:00, 19:00-23:30",
-      "thursday": "12:30-15:30, 19:00-23:30",
-      "friday": "12:30-16:00, 19:00-23:00",
-      "saturday": "12:30-16:00, 19:00-24:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1235,
-    "name": "Restaurant Els Quatre Gats Poblenou",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08005",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 420,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Catalan restaurant. in Poblenou. 4.2★ (420 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Els+Quatre+Gats+Poblenou+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.403,
-      "lng": 2.201
-    },
-    "metro_station": "Poblenou (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-24:00",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "20:00-23:00",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1236,
-    "name": "Flax & Kale Poblenou",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Vegetarian/Vegan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08005",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 780,
-    "website": "https://flaxandkale.com/",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Flax+%26+Kale+Poblenou+Barcelona",
-    "tags": [
-      "vegetarian"
-    ],
-    "coordinates": {
-      "lat": 41.403,
-      "lng": 2.201
-    },
-    "metro_station": "Poblenou (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30, 20:00-23:00",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:30, 20:00-23:30",
-      "saturday": "13:00-16:00, 20:00-24:00",
-      "sunday": "13:00-16:00, 20:00-23:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1237,
-    "name": "El Parc Poblenou",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08005",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 340,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Poblenou. 4.1★ (340 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Parc+Poblenou+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.403,
-      "lng": 2.201
-    },
-    "metro_station": "Poblenou (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:30, 20:00-23:30",
-      "thursday": "13:00-15:30",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "20:00-23:00",
-      "sunday": "13:00-15:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1238,
-    "name": "Restaurant Amar Poblenou",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Seafood",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08005",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 560,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Seafood restaurant. in Poblenou. Highly rated (4.4★, 560 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Amar+Poblenou+Barcelona",
-    "tags": [
-      "deal-ready",
-      "seafood",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.403,
-      "lng": 2.201
-    },
-    "metro_station": "Poblenou (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-15:30, 20:00-23:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-15:30",
-      "friday": "13:00-16:30, 20:00-23:30",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-15:30",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1239,
-    "name": "Nomad Coffee Lab Poblenou",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Café",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08005",
-    "google_maps_rating": 4.5,
-    "google_maps_review_count": 920,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Café restaurant. in Poblenou. Highly rated (4.5★, 920 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Nomad+Coffee+Lab+Poblenou+Barcelona",
-    "tags": [
-      "breakfast",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.403,
-      "lng": 2.201
-    },
-    "metro_station": "Poblenou (L4)",
-    "opening_hours_full": {
-      "monday": "08:00-20:00",
-      "tuesday": "08:00-20:30",
-      "wednesday": "08:00-19:30",
-      "thursday": "08:00-20:00",
-      "friday": "08:00-20:00",
-      "saturday": "09:00-20:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1240,
-    "name": "Restaurant Cal Chusco",
-    "neighborhood": "Sants",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08014",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 380,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Cal+Chusco+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.374,
-      "lng": 2.134
-    },
-    "metro_station": "Santa Eulàlia (L1)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:00, 19:30-22:30",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00, 19:30-22:30",
-      "saturday": "12:30-15:30, 19:30-22:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1241,
-    "name": "El Recó de Sants",
-    "neighborhood": "Sants",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08014",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 290,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rec%C3%B3+de+Sants+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.374,
-      "lng": 2.134
-    },
-    "metro_station": "Santa Eulàlia (L1)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-15:30, 19:30-23:30",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00",
-      "saturday": "12:30-15:30, 19:30-23:00",
-      "sunday": "12:30-16:00, 19:30-23:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1242,
-    "name": "Restaurant Kashmir Sants",
-    "neighborhood": "Sants",
-    "cuisine_type": "Indian",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "9-12€",
-    "address_full": "",
-    "postal_code": "08014",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 520,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Kashmir+Sants+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.374,
-      "lng": 2.134
-    },
-    "metro_station": "Santa Eulàlia (L1)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-15:30, 19:30-22:30",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1243,
-    "name": "La Cuina de l'Ugo Sants",
-    "neighborhood": "Sants",
-    "cuisine_type": "Italian",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08014",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 610,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Italian restaurant. in Sants. Highly rated (4.4★, 610 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+de+l%27Ugo+Sants+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.374,
-      "lng": 2.134
-    },
-    "metro_station": "Santa Eulàlia (L1)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-15:30, 20:00-23:30",
-      "friday": "13:00-16:30, 20:00-23:30",
-      "saturday": "20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1244,
-    "name": "Bar El Viti Sants",
-    "neighborhood": "Sants",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "9-11€",
-    "address_full": "",
-    "postal_code": "08014",
-    "google_maps_rating": 3.9,
-    "google_maps_review_count": 220,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+El+Viti+Sants+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.374,
-      "lng": 2.134
-    },
-    "metro_station": "Santa Eulàlia (L1)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00, 19:30-22:30",
-      "wednesday": "12:30-15:30, 19:30-22:30",
-      "thursday": "12:30-15:30, 19:30-23:30",
-      "friday": "12:30-15:30, 19:30-23:00",
-      "saturday": "19:30-22:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1245,
-    "name": "El Cafè dels Àngels",
-    "neighborhood": "El Raval",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08001",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 380,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Caf%C3%A8+dels+%C3%80ngels+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.168
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-15:30",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:00, 19:30-23:30",
-      "saturday": "19:30-22:30",
-      "sunday": "12:30-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1246,
-    "name": "Milk Bar Gothic",
-    "neighborhood": "Barri Gòtic",
-    "cuisine_type": "Fusion",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "Carrer d'en Gignàs, 21, 08002 Barcelona",
-    "postal_code": "08002",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 1858,
-    "website": "https://milkbarcelona.com/",
-    "phone": "+34 932680922",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Milk+Bar+Gothic+Carrer+d%27en+Gign%C3%A0s%2C+21%2C+08002+Barcelona+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.3813306,
-      "lng": 2.1801063
-    },
-    "metro_station": "Jaume I (L4)",
-    "image_url": "",
-    "images": {
-      "hero": "assets/photos/1306_hero.webp",
-      "card": "assets/photos/1306_card.webp"
-    },
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-15:30, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-24:00",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1247,
-    "name": "Restaurant Ocaña",
-    "neighborhood": "Barri Gòtic",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "Plaça Reial, 13-15",
-    "postal_code": "08002",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 2475,
-    "website": "https://ocana.cat/",
-    "phone": "+34 936764814",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Oca%C3%B1a+Pla%C3%A7a+Reial%2C+13-15+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.383,
-      "lng": 2.177
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:00",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-15:30, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:30, 20:00-23:00",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "13:00-16:00, 20:00-23:30",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "image_url": "assets/photos/1247_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1248,
-    "name": "El Gran Café",
-    "neighborhood": "Barri Gòtic",
+    "name": "Restaurante Sol",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
     "cuisine_type": "Spanish",
     "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14-18€",
-    "address_full": "",
-    "postal_code": "08002",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 1584,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Gran+Caf%C3%A9+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.383,
-      "lng": 2.177
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:00",
-      "tuesday": "13:00-16:00, 20:00-24:00",
-      "wednesday": "13:00-15:30",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-15:30, 20:00-23:00",
-      "saturday": "13:00-16:30, 20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1249,
-    "name": "Taller de Tapas Gòtic",
-    "neighborhood": "Barri Gòtic",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
+    "menu_del_dia_confirmed": false,
     "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08002",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 1885,
-    "website": "https://tallerdetapas.com/",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Taller+de+Tapas+G%C3%B2tic+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.383,
-      "lng": 2.177
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30, 20:00-24:00",
-      "tuesday": "13:00-15:30, 20:00-24:00",
-      "wednesday": "13:00-16:00, 20:00-24:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "13:00-16:00, 20:00-24:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "image_url": "assets/photos/1249_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1250,
-    "name": "Restaurant Tram-Tram",
-    "neighborhood": "Sarrià-Sant Gervasi",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "premium",
-    "menu_tier": "confirmed",
-    "menu_price_range": "20-30€",
-    "address_full": "C/ Major de Sarrià, 121",
-    "postal_code": "08017",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 680,
-    "website": "https://tram-tram.com/",
-    "phone": "+34 932041518",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Tram-Tram+C%2F+Major+de+Sarri%C3%A0%2C+121+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.401,
-      "lng": 2.135
-    },
-    "metro_station": "Vallcarca (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:30-15:00, 20:30-23:30",
-      "wednesday": "13:30-15:30, 20:30-23:30",
-      "thursday": "13:30-15:30, 20:30-23:30",
-      "friday": "13:30-16:00, 20:30-23:00",
-      "saturday": "13:30-15:30, 20:30-23:30",
-      "sunday": "13:30-15:30, 20:30-23:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "image_url": "assets/photos/1250_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1251,
-    "name": "El Jardí de l'Àpat",
-    "neighborhood": "Sarrià-Sant Gervasi",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14-18€",
-    "address_full": "",
-    "postal_code": "08034",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 480,
     "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/Restaurante+Sol/data=!4m7!3m6!1s0x12a4a32f5331c6d5:0x39d868e65d7b09f5!8m2!3d41.4108352!4d2.189277",
     "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
+    "opening_hours_lunch": "",
     "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Jard%C3%AD+de+l%27%C3%80pat+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.401,
-      "lng": 2.135
-    },
-    "metro_station": "Vallcarca (L3)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00",
-      "saturday": "20:00-23:30",
-      "sunday": "13:00-15:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1252,
-    "name": "Can Martí Sarrià",
-    "neighborhood": "Sarrià-Sant Gervasi",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "11-14€",
-    "address_full": "",
-    "postal_code": "08017",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 274,
-    "website": "",
-    "phone": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer del Clot, 127",
+    "postal_code": "",
+    "city": "Barcelona",
     "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Mart%C3%AD+Sarri%C3%A0+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.401,
-      "lng": 2.135
-    },
-    "metro_station": "Vallcarca (L3)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30",
-      "tuesday": "12:30-15:30, 19:30-23:00",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:30",
-      "friday": "12:30-16:30",
-      "saturday": "12:30-16:00, 19:30-22:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1253,
-    "name": "Mussol Diagonal",
-    "neighborhood": "Sarrià-Sant Gervasi",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08034",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 1398,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Catalan restaurant. in Sarrià-Sant Gervasi. Popular (1,200 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mussol+Diagonal+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.401,
-      "lng": 2.135
-    },
-    "metro_station": "Vallcarca (L3)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "Closed",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "tuesday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1254,
-    "name": "Bodega Quimet",
-    "neighborhood": "Poble Sec",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08004",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 620,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bodega+Quimet+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "wine-bar"
-    ],
-    "coordinates": {
-      "lat": 41.372,
-      "lng": 2.161
-    },
-    "metro_station": "Poble Sec (L3)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30, 19:30-23:00",
-      "tuesday": "12:30-16:30",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00",
-      "saturday": "19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1255,
-    "name": "Restaurant Elche",
-    "neighborhood": "Poble Sec",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-16€",
-    "address_full": "C/ de Vila i Vilà, 71",
-    "postal_code": "08004",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 1391,
-    "website": "",
-    "phone": "+34 934410089",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Elche+C%2F+de+Vila+i+Vil%C3%A0%2C+71+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.372,
-      "lng": 2.161
-    },
-    "metro_station": "Poble Sec (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:30",
-      "saturday": "20:00-23:00",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1256,
-    "name": "La Clara",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "C/ del Rosselló, 235",
-    "postal_code": "08008",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 2503,
-    "website": "https://laclara.cat/",
-    "phone": "+34 934872820",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Clara+C%2F+del+Rossell%C3%B3%2C+235+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:00",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-15:30, 20:00-24:00",
-      "thursday": "13:00-15:30, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-24:00",
-      "saturday": "20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1257,
-    "name": "Cervecería Catalana Balmes",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "C/ de Mallorca, 236, 08008 Barcelona",
-    "postal_code": "08006",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 1668,
-    "website": "https://laflautagroup.com/",
-    "phone": "+34 932160368",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cervecer%C3%ADa+Catalana+Balmes+C%2F+de+Mallorca%2C+236%2C+08008+Barcelona+Barcelona",
-    "tags": [
-      "craft-beer"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
+    "google_maps_rating": 4.7,
+    "google_maps_review_count": 757,
+    "opening_hours_full": {},
     "images": {
       "hero": "",
-      "card": "assets/photos/1318_card.webp"
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
     },
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-15:30, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:00",
-      "friday": "13:00-16:30, 20:00-24:00",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "13:00-16:00, 20:00-23:00",
-      "closed_days": []
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4108352,
+      "lng": 2.189277
     },
     "image_url": "",
-    "has_photo": false
+    "has_photo": false,
+    "id": 1151
   },
   {
-    "id": 1258,
-    "name": "Restaurante Nepal",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Indian",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "9-12€",
-    "address_full": "",
-    "postal_code": "08011",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 420,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurante+Nepal+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-15:30",
-      "wednesday": "12:30-15:30, 19:30-23:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "19:30-23:00",
-      "sunday": "12:30-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1259,
-    "name": "El Japones de Passeig de Gràcia",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Japanese",
-    "pricing_tier": "premium",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08007",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 1869,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Premium japanese dining. in Eixample. Popular (1,500 reviews)",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Japones+de+Passeig+de+Gr%C3%A0cia+Barcelona",
-    "tags": [
-      "views"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:30-16:00, 20:30-23:00",
-      "tuesday": "13:30-15:30, 20:30-23:00",
-      "wednesday": "13:30-15:00, 20:30-23:30",
-      "thursday": "13:30-16:00, 20:30-22:30",
-      "friday": "13:30-16:00, 20:30-23:00",
-      "saturday": "13:30-16:00, 20:30-23:30",
-      "sunday": "13:30-15:00, 20:30-23:30",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1260,
-    "name": "Cervecería Catalana Enric Granados",
-    "neighborhood": "Eixample",
+    "name": "La Clote de Clot",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
     "cuisine_type": "Spanish",
     "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
+    "menu_del_dia_confirmed": false,
     "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08008",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 1271,
     "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/La+Clote+de+Clot/data=!4m7!3m6!1s0x12a4a3268b6846e7:0x239629bd34e94145!8m2!3d41.4077221!4d2.1880701",
     "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Spanish restaurant. in Eixample. Popular (1,200 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cervecer%C3%ADa+Catalana+Enric+Granados+Barcelona",
-    "tags": [
-      "business-lunch",
-      "craft-beer",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:00, 20:00-23:00",
-      "sunday": "13:00-16:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1261,
-    "name": "Cañete Eixample",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08009",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 1064,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Spanish restaurant. in Eixample. 4.3★ (900 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ca%C3%B1ete+Eixample+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:30",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-15:30, 20:00-23:30",
-      "saturday": "20:00-23:30",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1262,
-    "name": "Can Culleretes Eixample",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "11-14€",
-    "address_full": "",
-    "postal_code": "08011",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 380,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
+    "opening_hours_lunch": "",
     "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Culleretes+Eixample+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:30, 19:30-23:00",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "12:30-16:00, 19:30-23:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1263,
-    "name": "Céleri Restaurant",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14-18€",
-    "address_full": "",
-    "postal_code": "08010",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer del Clot, 49",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
     "google_maps_rating": 4.5,
-    "google_maps_review_count": 620,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
+    "google_maps_review_count": 2470,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=C%C3%A9leri+Restaurant+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
     "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
+      "lat": 41.4077221,
+      "lng": 2.1880701
     },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30",
-      "tuesday": "13:00-16:30, 20:00-23:30",
-      "wednesday": "13:00-16:30, 20:00-23:30",
-      "thursday": "13:00-16:30, 20:00-23:00",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-16:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1264,
-    "name": "Kosmopolit",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Fusion",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08009",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 480,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Fusion restaurant. in Eixample. 4.2★ (480 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Kosmopolit+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-15:30, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00",
-      "saturday": "20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1265,
-    "name": "La Fonda del Port Olímpic",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08010",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 1114,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Eixample. Popular (1,100 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Fonda+del+Port+Ol%C3%ADmpic+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-15:30",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-16:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1266,
-    "name": "Taktika Berri",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Basque",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14-18€",
-    "address_full": "C/ de València, 169",
-    "postal_code": "08010",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 720,
-    "website": "",
-    "phone": "+34 934530624",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Taktika+Berri+C%2F+de+Val%C3%A8ncia%2C+169+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30",
-      "tuesday": "13:00-16:00, 20:00-24:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-15:30",
-      "saturday": "13:00-15:30, 20:00-23:30",
-      "sunday": "13:00-16:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1267,
-    "name": "La Pepita Gràcia 2",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08012",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 680,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly spanish. in Gràcia. 4.2★ (680 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Pepita+Gr%C3%A0cia+2+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:30, 19:30-23:00",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-15:30",
-      "saturday": "12:30-15:30, 19:30-23:00",
-      "sunday": "12:30-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1268,
-    "name": "Restaurant Pepa Tomate Gràcia",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-15€",
-    "address_full": "",
-    "postal_code": "08012",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 540,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Pepa+Tomate+Gr%C3%A0cia+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:30, 20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1269,
-    "name": "Café Tramoia",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08012",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 620,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly mediterranean. in Gràcia. 4.1★ (620 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+Tramoia+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00, 19:30-22:30",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00",
-      "saturday": "19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
     "image_url": "",
-    "has_photo": true
+    "has_photo": false,
+    "id": 1152
   },
   {
-    "id": 1270,
-    "name": "Can Lluís",
-    "neighborhood": "El Raval",
-    "cuisine_type": "Catalan",
+    "name": "LA BIGA",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
     "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-16€",
-    "address_full": "C/ de la Cera, 49",
-    "postal_code": "08001",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 1064,
-    "website": "",
-    "phone": "+34 934413187",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Llu%C3%ADs+C%2F+de+la+Cera%2C+49+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.168
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-24:00",
-      "tuesday": "Closed",
-      "wednesday": "13:00-15:30",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-15:30, 20:00-23:30",
-      "sunday": "13:00-15:30",
-      "closed_days": [
-        "tuesday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1271,
-    "name": "Bar Kasparo",
-    "neighborhood": "El Raval",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "budget",
-    "menu_tier": "likely",
+    "menu_del_dia_confirmed": false,
     "menu_price_range": "",
-    "address_full": "Plaça de Vicenç Martorell, 4",
-    "postal_code": "08001",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 1392,
     "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/LA+BIGA/data=!4m7!3m6!1s0x12a4a327ff91725d:0xae7cd87684b9982a!8m2!3d41.411334!4d2.1893403",
     "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
+    "opening_hours_lunch": "",
     "notes": "",
-    "last_verified": "2025-03-01",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer del Clot, 137",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.7,
+    "google_maps_review_count": 791,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
     "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Kasparo+Pla%C3%A7a+de+Vicen%C3%A7+Martorell%2C+4+Barcelona",
-    "tags": [
-      "budget-friendly"
-    ],
     "coordinates": {
-      "lat": 41.38,
-      "lng": 2.168
+      "lat": 41.411334,
+      "lng": 2.1893403
     },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-16:30, 19:30-23:00",
-      "wednesday": "12:30-16:00, 19:30-22:30",
-      "thursday": "12:30-16:30, 19:30-23:00",
-      "friday": "12:30-16:30, 19:30-23:00",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
     "image_url": "",
-    "has_photo": true
+    "has_photo": false,
+    "id": 1153
   },
   {
-    "id": 1272,
-    "name": "Sésamo",
-    "neighborhood": "El Raval",
-    "cuisine_type": "Vegetarian/Vegan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08001",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 680,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=S%C3%A9samo+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "vegetarian"
-    ],
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.168
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:30, 19:30-23:00",
-      "thursday": "12:30-16:30, 19:30-23:30",
-      "friday": "12:30-16:30, 19:30-23:00",
-      "saturday": "19:30-22:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1273,
-    "name": "Restaurant Romesco",
-    "neighborhood": "El Raval",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08001",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 577,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Romesco+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.168
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-15:30, 19:30-23:30",
-      "wednesday": "12:30-16:00, 19:30-22:30",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-15:30",
-      "saturday": "19:30-22:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1274,
-    "name": "Casa Almirall",
-    "neighborhood": "El Raval",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08001",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 980,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly spanish. in El Raval. 4.2★ (980 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Casa+Almirall+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.168
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:00, 19:30-22:30",
-      "thursday": "12:30-15:30",
-      "friday": "12:30-15:30, 19:30-23:00",
-      "saturday": "12:30-15:30, 19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1275,
-    "name": "Restaurant Shalimar",
-    "neighborhood": "El Raval",
-    "cuisine_type": "Indian",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "8-11€",
-    "address_full": "Carrer del Carme, 71, 08001 Barcelona",
-    "postal_code": "08001",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 1470,
-    "website": "https://restauranteshalimar.es/",
-    "phone": "+34 934120698",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Shalimar+Carrer+del+Carme%2C+71%2C+08001+Barcelona+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.168
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-15:30",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00, 19:30-23:30",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "12:30-16:00, 19:30-23:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1276,
-    "name": "Ginger Bar",
-    "neighborhood": "Barri Gòtic",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "C/ de Palma de Sant Just, 1",
-    "postal_code": "08002",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 853,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ginger+Bar+C%2F+de+Palma+de+Sant+Just%2C+1+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.383,
-      "lng": 2.177
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:30, 20:00-23:00",
-      "thursday": "13:00-15:30, 20:00-24:00",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "20:00-23:30",
-      "sunday": "13:00-16:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1277,
-    "name": "El Atril",
-    "neighborhood": "El Born",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-17€",
-    "address_full": "C/ dels Carders, 23",
-    "postal_code": "08003",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 771,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Atril+C%2F+dels+Carders%2C+23+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.385,
-      "lng": 2.183
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-15:30",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:30, 20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1278,
-    "name": "Cal Pep Born 2",
-    "neighborhood": "El Born",
-    "cuisine_type": "Seafood",
-    "pricing_tier": "premium",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.5,
-    "google_maps_review_count": 609,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Premium seafood dining. in El Born. Highly rated (4.5★, 600 reviews)",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cal+Pep+Born+2+Barcelona",
-    "tags": [
-      "seafood",
-      "views"
-    ],
-    "coordinates": {
-      "lat": 41.385,
-      "lng": 2.183
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "13:30-15:30, 20:30-23:00",
-      "tuesday": "13:30-15:30, 20:30-23:00",
-      "wednesday": "13:30-15:00, 20:30-22:30",
-      "thursday": "13:30-16:00, 20:30-22:30",
-      "friday": "13:30-15:30, 20:30-23:00",
-      "saturday": "13:30-15:30, 20:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1279,
-    "name": "La Vinya del Senyor",
-    "neighborhood": "El Born",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "Plaça de Santa Maria, 5",
-    "postal_code": "08003",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 2284,
-    "website": "https://lavinyadelsenyor.es/",
-    "phone": "+34 933103379",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Vinya+del+Senyor+Pla%C3%A7a+de+Santa+Maria%2C+5+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.385,
-      "lng": 2.183
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-16:00, 20:00-24:00",
-      "wednesday": "13:00-16:00, 20:00-23:00",
-      "thursday": "13:00-16:30, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "20:00-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "image_url": "assets/photos/1279_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1280,
-    "name": "El Born Bar",
-    "neighborhood": "El Born",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 780,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly spanish. in El Born. 4.1★ (780 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Born+Bar+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.385,
-      "lng": 2.183
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-15:30",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:00, 19:30-22:30",
-      "saturday": "12:30-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1281,
-    "name": "Quimet d'Horta Poble Sec",
-    "neighborhood": "Poble Sec",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08004",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 420,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Quimet+d%27Horta+Poble+Sec+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.372,
-      "lng": 2.161
-    },
-    "metro_station": "Poble Sec (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:30, 19:30-23:00",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00, 19:30-22:30",
-      "friday": "12:30-16:30, 19:30-22:30",
-      "saturday": "12:30-16:30",
-      "sunday": "12:30-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1282,
-    "name": "Xemei",
-    "neighborhood": "Poble Sec",
-    "cuisine_type": "Italian",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "Pg. de l'Exposició, 85",
-    "postal_code": "08004",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 1135,
-    "website": "https://xemei.es/",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Xemei+Pg.+de+l%27Exposici%C3%B3%2C+85+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.372,
-      "lng": 2.161
-    },
-    "metro_station": "Poble Sec (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:30, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-15:30, 20:00-23:30",
-      "saturday": "20:00-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "image_url": "assets/photos/1282_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1283,
-    "name": "Tapa Tapa Montjuïc",
-    "neighborhood": "Poble Sec",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08004",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 780,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Spanish restaurant. in Poble Sec. 4.0★ (780 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tapa+Tapa+Montju%C3%AFc+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.372,
-      "lng": 2.161
-    },
-    "metro_station": "Poble Sec (L3)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-15:30, 20:00-23:30",
-      "thursday": "13:00-16:30, 20:00-23:30",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:30, 20:00-23:30",
-      "sunday": "13:00-16:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1284,
-    "name": "Rias de Galicia Barceloneta",
-    "neighborhood": "Barceloneta",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "premium",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 1371,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Premium spanish dining. in Barceloneta. Popular (1,200 reviews)",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rias+de+Galicia+Barceloneta+Barcelona",
-    "tags": [
-      "views"
-    ],
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.189
-    },
-    "metro_station": "Barceloneta (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:30-16:00, 20:30-23:30",
-      "wednesday": "13:30-15:30, 20:30-23:00",
-      "thursday": "13:30-15:00, 20:30-23:00",
-      "friday": "13:30-15:30, 20:30-23:00",
-      "saturday": "13:30-15:30, 20:30-23:00",
-      "sunday": "13:30-15:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1285,
-    "name": "Santa Marta Barceloneta",
-    "neighborhood": "Barceloneta",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 890,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Barceloneta. 4.1★ (890 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Santa+Marta+Barceloneta+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.189
-    },
-    "metro_station": "Barceloneta (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30, 20:00-23:30",
-      "tuesday": "13:00-16:30",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:00, 20:00-24:00",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "13:00-15:30, 20:00-24:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1286,
-    "name": "Pinotxo Bar Boqueria",
-    "neighborhood": "Barceloneta",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "Mercat de la Boqueria, Parada 466-467",
-    "postal_code": "08001",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 4118,
-    "website": "https://pinotxobar.com/",
-    "phone": "+34 933171731",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pinotxo+Bar+Boqueria+Mercat+de+la+Boqueria%2C+Parada+466-467+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.189
-    },
-    "metro_station": "Barceloneta (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-16:30, 20:00-24:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "13:00-16:00, 20:00-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "image_url": "assets/photos/1286_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1287,
-    "name": "Olé Café Barceloneta",
-    "neighborhood": "Barceloneta",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 560,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly spanish. in Barceloneta. 4.0★ (560 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ol%C3%A9+Caf%C3%A9+Barceloneta+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.189
-    },
-    "metro_station": "Barceloneta (L4)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-15:30",
-      "thursday": "12:30-15:30",
-      "friday": "12:30-15:30, 19:30-23:00",
-      "saturday": "12:30-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1288,
-    "name": "Restaurant Lluçanès Barceloneta",
-    "neighborhood": "Barceloneta",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-17€",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 480,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Llu%C3%A7an%C3%A8s+Barceloneta+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.189
-    },
-    "metro_station": "Barceloneta (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30, 20:00-23:30",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:00",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-15:30",
-      "sunday": "13:00-15:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1289,
-    "name": "Mussol Sants",
-    "neighborhood": "Sants",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08014",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 1139,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Catalan restaurant. in Sants. Popular (1,500 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mussol+Sants+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.374,
-      "lng": 2.134
-    },
-    "metro_station": "Santa Eulàlia (L1)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00, 20:00-23:00",
-      "thursday": "13:00-15:30, 20:00-24:00",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:00, 20:00-24:00",
-      "sunday": "13:00-16:00, 20:00-23:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1290,
-    "name": "El Tomàs de Sarrià Sants",
-    "neighborhood": "Sants",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08014",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 680,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly spanish. in Sants. 4.2★ (680 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Tom%C3%A0s+de+Sarri%C3%A0+Sants+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.374,
-      "lng": 2.134
-    },
-    "metro_station": "Santa Eulàlia (L1)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-15:30",
-      "saturday": "19:30-23:00",
-      "sunday": "12:30-16:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1291,
-    "name": "Restaurant El Caliu Sants",
-    "neighborhood": "Sants",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08014",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 340,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Caliu+Sants+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.374,
-      "lng": 2.134
-    },
-    "metro_station": "Santa Eulàlia (L1)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:00, 19:30-22:30",
-      "saturday": "12:30-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1292,
-    "name": "Els Pescadors Poblenou 2",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Seafood",
-    "pricing_tier": "premium",
-    "menu_tier": "confirmed",
-    "menu_price_range": "18-25€",
-    "address_full": "",
-    "postal_code": "08005",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 688,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Els+Pescadors+Poblenou+2+Barcelona",
-    "tags": [
-      "deal-ready",
-      "seafood"
-    ],
-    "coordinates": {
-      "lat": 41.403,
-      "lng": 2.201
-    },
-    "metro_station": "Poblenou (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:30-15:30",
-      "wednesday": "13:30-15:30, 20:30-23:30",
-      "thursday": "13:30-15:30, 20:30-23:00",
-      "friday": "13:30-15:30, 20:30-23:30",
-      "saturday": "13:30-15:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1293,
-    "name": "La Pubilla Poblenou",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08005",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 420,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Pubilla+Poblenou+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.403,
-      "lng": 2.201
-    },
-    "metro_station": "Poblenou (L4)",
-    "opening_hours_full": {
-      "monday": "12:30-16:30",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:30, 19:30-23:30",
-      "thursday": "12:30-16:30, 19:30-23:30",
-      "friday": "12:30-16:00, 19:30-22:30",
-      "saturday": "19:30-23:00",
-      "sunday": "12:30-16:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1294,
-    "name": "Honest Greens Poblenou",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Café",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "C/ de Pallars, 195",
-    "postal_code": "08005",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 1171,
-    "website": "https://honestgreens.com/",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Honest+Greens+Poblenou+C%2F+de+Pallars%2C+195+Barcelona",
-    "tags": [
-      "breakfast"
-    ],
-    "coordinates": {
-      "lat": 41.403,
-      "lng": 2.201
-    },
-    "metro_station": "Poblenou (L4)",
-    "opening_hours_full": {
-      "monday": "08:00-19:30",
-      "tuesday": "08:00-20:30",
-      "wednesday": "08:00-20:00",
-      "thursday": "08:00-20:00",
-      "friday": "08:00-19:30",
-      "saturday": "09:00-20:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1295,
-    "name": "Cervecería Catalana Les Corts",
-    "neighborhood": "Les Corts",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08028",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 857,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Spanish restaurant. in Les Corts. 4.1★ (900 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cervecer%C3%ADa+Catalana+Les+Corts+Barcelona",
-    "tags": [
-      "business-lunch",
-      "craft-beer",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.387,
-      "lng": 2.127
-    },
-    "metro_station": "Les Corts (L3)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:30, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "13:00-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1296,
-    "name": "Restaurant Vivanda",
-    "neighborhood": "Les Corts",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14-18€",
-    "address_full": "C/ Major de Sarrià, 134",
-    "postal_code": "08034",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 620,
-    "website": "https://vivanda.cat/",
-    "phone": "+34 932031918",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Vivanda+C%2F+Major+de+Sarri%C3%A0%2C+134+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.387,
-      "lng": 2.127
-    },
-    "metro_station": "Les Corts (L3)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30",
-      "tuesday": "13:00-15:30, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:00",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-15:30",
-      "saturday": "20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "image_url": "assets/photos/1296_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1297,
-    "name": "Cal Pinxo Les Corts",
-    "neighborhood": "Les Corts",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08028",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 380,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cal+Pinxo+Les+Corts+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.387,
-      "lng": 2.127
-    },
-    "metro_station": "Les Corts (L3)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30, 19:30-23:30",
-      "tuesday": "12:30-16:00, 19:30-22:30",
-      "wednesday": "12:30-16:30, 19:30-23:30",
-      "thursday": "12:30-16:00, 19:30-22:30",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:30",
-      "sunday": "12:30-16:00, 19:30-23:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1298,
-    "name": "Thai Gardens Les Corts",
-    "neighborhood": "Les Corts",
-    "cuisine_type": "Thai",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08028",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 548,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Thai restaurant. in Les Corts. 4.3★ (550 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Thai+Gardens+Les+Corts+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.387,
-      "lng": 2.127
-    },
-    "metro_station": "Les Corts (L3)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00, 19:00-23:30",
-      "saturday": "12:30-15:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1299,
-    "name": "El Rincón Asturiano Les Corts",
-    "neighborhood": "Les Corts",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-16€",
-    "address_full": "",
-    "postal_code": "08028",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 440,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rinc%C3%B3n+Asturiano+Les+Corts+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.387,
-      "lng": 2.127
-    },
-    "metro_station": "Les Corts (L3)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30",
-      "tuesday": "13:00-16:00, 20:00-24:00",
-      "wednesday": "13:00-15:30",
-      "thursday": "13:00-15:30, 20:00-24:00",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "20:00-24:00",
-      "sunday": "13:00-16:00, 20:00-23:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1300,
-    "name": "Silvestre",
-    "neighborhood": "Sarrià-Sant Gervasi",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "15-20€",
-    "address_full": "",
-    "postal_code": "08006",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 520,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Silvestre+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.401,
-      "lng": 2.135
-    },
-    "metro_station": "Vallcarca (L3)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30, 20:00-23:30",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00, 20:00-23:00",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:00, 20:00-24:00",
-      "saturday": "13:00-16:00, 20:00-23:00",
-      "sunday": "13:00-16:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1301,
-    "name": "A Contracorriente",
-    "neighborhood": "Sarrià-Sant Gervasi",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-17€",
-    "address_full": "",
-    "postal_code": "08034",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 480,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=A+Contracorriente+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.401,
-      "lng": 2.135
-    },
-    "metro_station": "Vallcarca (L3)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:30, 20:00-23:30",
-      "thursday": "13:00-16:30",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "13:00-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1302,
-    "name": "Restaurant Lomo Alto",
-    "neighborhood": "Sarrià-Sant Gervasi",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "premium",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "C/ d'Aragó, 283-285",
-    "postal_code": "08034",
-    "google_maps_rating": 4.5,
-    "google_maps_review_count": 2164,
-    "website": "https://lomoalto.com/",
-    "phone": "+34 932008410",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Lomo+Alto+C%2F+d%27Arag%C3%B3%2C+283-285+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.401,
-      "lng": 2.135
-    },
-    "metro_station": "Vallcarca (L3)",
-    "opening_hours_full": {
-      "monday": "13:30-16:00, 20:30-22:30",
-      "tuesday": "13:30-15:30, 20:30-23:00",
-      "wednesday": "13:30-15:00, 20:30-23:00",
-      "thursday": "13:30-15:00, 20:30-23:00",
-      "friday": "13:30-15:30, 20:30-23:00",
-      "saturday": "13:30-15:30, 20:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1303,
-    "name": "El Café de Pedralbes",
-    "neighborhood": "Sarrià-Sant Gervasi",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08034",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 620,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Sarrià-Sant Gervasi. 4.1★ (620 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Caf%C3%A9+de+Pedralbes+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.401,
-      "lng": 2.135
-    },
-    "metro_station": "Vallcarca (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-24:00",
-      "wednesday": "13:00-16:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1304,
-    "name": "Granja Petitbo",
-    "neighborhood": "Sant Antoni",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "Passeig de Sant Joan, 82, 08010 Barcelona",
-    "postal_code": "08015",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 1780,
-    "website": "https://granjapetitbo.com/",
-    "phone": "+34 935515740",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Granja+Petitbo+Passeig+de+Sant+Joan%2C+82%2C+08010+Barcelona+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.379,
-      "lng": 2.159
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-15:30, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-24:00",
-      "thursday": "13:00-16:30, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "image_url": "assets/photos/1304_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1305,
-    "name": "Flax & Kale Mercat de Sant Antoni",
-    "neighborhood": "Sant Antoni",
-    "cuisine_type": "Vegetarian/Vegan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "C/ del Comte d'Urgell, 2",
-    "postal_code": "08015",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 780,
-    "website": "https://flaxandkale.com/",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Flax+%26+Kale+Mercat+de+Sant+Antoni+C%2F+del+Comte+d%27Urgell%2C+2+Barcelona",
-    "tags": [
-      "vegetarian"
-    ],
-    "coordinates": {
-      "lat": 41.379,
-      "lng": 2.159
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:00",
-      "tuesday": "13:00-16:00, 20:00-24:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-15:30, 20:00-24:00",
-      "friday": "13:00-15:30, 20:00-23:00",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1306,
-    "name": "Palo Cortado",
-    "neighborhood": "Sant Antoni",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08015",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 920,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Spanish restaurant. in Sant Antoni. Highly rated (4.4★, 920 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Palo+Cortado+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.379,
-      "lng": 2.159
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30, 20:00-23:30",
-      "tuesday": "13:00-15:30",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:00, 20:00-23:00",
-      "sunday": "13:00-16:30, 20:00-24:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "image_url": "assets/photos/1306_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1307,
-    "name": "Can Manent",
-    "neighborhood": "Sant Antoni",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08015",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 310,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Manent+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.379,
-      "lng": 2.159
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:30",
-      "thursday": "12:30-15:30, 19:30-23:00",
-      "friday": "12:30-16:00",
-      "saturday": "12:30-16:00, 19:30-23:30",
-      "sunday": "12:30-15:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1308,
-    "name": "Els Quatre Gats Sant Antoni",
-    "neighborhood": "Sant Antoni",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08015",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 388,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Catalan restaurant. in Sant Antoni. 4.1★ (450 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Els+Quatre+Gats+Sant+Antoni+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.379,
-      "lng": 2.159
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:30",
-      "thursday": "13:00-15:30, 20:00-23:30",
-      "friday": "13:00-15:30",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-15:30, 20:00-23:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1309,
-    "name": "Taller de Tapas Sagrada Família",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08013",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 2261,
-    "website": "https://tallerdetapas.com/",
-    "phone": "+34 933430533",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Taller+de+Tapas+Sagrada+Fam%C3%ADlia+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30, 20:00-23:00",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:30, 20:00-23:30",
-      "thursday": "13:00-16:30, 20:00-23:00",
-      "friday": "13:00-15:30, 20:00-23:30",
-      "saturday": "20:00-23:00",
-      "sunday": "13:00-16:00",
-      "closed_days": []
-    },
-    "image_url": "assets/photos/1309_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1310,
-    "name": "La Paradeta Sagrada Família",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Seafood",
-    "pricing_tier": "mid-range",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "Pg. de Sant Joan, 65",
-    "postal_code": "08013",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 3243,
-    "website": "https://laparadeta.com/",
-    "phone": "+34 934507691",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Paradeta+Sagrada+Fam%C3%ADlia+Pg.+de+Sant+Joan%2C+65+Barcelona",
-    "tags": [
-      "seafood"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-15:30, 20:00-23:30",
-      "thursday": "13:00-16:30, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "20:00-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "image_url": "assets/photos/1310_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1311,
-    "name": "Cervecería Catalana Sagrada Família",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08025",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 1363,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Spanish restaurant. in Sagrada Família. Popular (1,100 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cervecer%C3%ADa+Catalana+Sagrada+Fam%C3%ADlia+Barcelona",
-    "tags": [
-      "craft-beer",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:30",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1312,
-    "name": "Can Paquis",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08013",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 546,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Paquis+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "12:30-16:30",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-15:30",
-      "saturday": "12:30-16:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1313,
-    "name": "Restaurante La Cantina del Born SF",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08025",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 320,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurante+La+Cantina+del+Born+SF+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00",
-      "tuesday": "12:30-15:30",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:00, 19:30-22:30",
-      "friday": "12:30-16:00, 19:30-22:30",
-      "saturday": "12:30-16:00",
-      "sunday": "12:30-16:30, 19:30-23:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1314,
-    "name": "Restaurant Filferro Clot",
-    "neighborhood": "Clot",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-15€",
-    "address_full": "",
-    "postal_code": "08018",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 490,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Filferro+Clot+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.409,
-      "lng": 2.187
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:30, 20:00-23:30",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "13:00-16:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1315,
-    "name": "El Petit Clot",
-    "neighborhood": "Clot",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08018",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 310,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Petit+Clot+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.409,
-      "lng": 2.187
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:30, 19:30-23:00",
-      "wednesday": "12:30-15:30",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:30",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "12:30-16:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1316,
-    "name": "La Masia del Clot",
-    "neighborhood": "Clot",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08018",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 380,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Masia+del+Clot+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.409,
-      "lng": 2.187
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1317,
-    "name": "Restaurant El Cingle",
-    "neighborhood": "Horta-Guinardó",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-15€",
-    "address_full": "",
-    "postal_code": "08032",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 420,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Cingle+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.418,
-      "lng": 2.165
-    },
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30, 20:00-23:30",
-      "tuesday": "13:00-15:30, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:00",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:30",
-      "saturday": "13:00-15:30",
-      "sunday": "13:00-15:30, 20:00-23:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1318,
-    "name": "El Mussol Nou Barris",
-    "neighborhood": "Nou Barris",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08042",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 561,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Catalan restaurant. in Nou Barris. 4.0★ (550 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Mussol+Nou+Barris+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.441,
-      "lng": 2.177
-    },
-    "metro_station": "Via Júlia (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-15:30, 20:00-23:30",
-      "friday": "13:00-16:00",
-      "saturday": "20:00-24:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "image_url": "",
-    "has_photo": true
-  },
-  {
-    "id": 1319,
-    "name": "Restaurant la Masia de Roquetes",
-    "neighborhood": "Nou Barris",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-15€",
-    "address_full": "",
-    "postal_code": "08042",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 380,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+la+Masia+de+Roquetes+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.441,
-      "lng": 2.177
-    },
-    "metro_station": "Via Júlia (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30, 20:00-23:00",
-      "tuesday": "Closed",
-      "wednesday": "13:00-16:30, 20:00-23:00",
-      "thursday": "13:00-16:30, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-24:00",
-      "saturday": "13:00-16:30, 20:00-23:00",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "tuesday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1320,
-    "name": "El Racó de Sant Andreu",
-    "neighborhood": "Sant Andreu",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08030",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 340,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rac%C3%B3+de+Sant+Andreu+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.435,
-      "lng": 2.19
-    },
-    "metro_station": "Sant Andreu (L1)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:30, 19:30-23:00",
-      "friday": "12:30-16:00",
-      "saturday": "19:30-23:00",
-      "sunday": "12:30-16:30, 19:30-23:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1321,
-    "name": "Restaurant Can Fabra",
-    "neighborhood": "Sant Andreu",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-15€",
-    "address_full": "",
-    "postal_code": "08030",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 460,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Fabra+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.435,
-      "lng": 2.19
-    },
-    "metro_station": "Sant Andreu (L1)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-15:30, 20:00-24:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "20:00-23:30",
-      "sunday": "13:00-16:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1322,
-    "name": "La Fonda de Sant Andreu",
-    "neighborhood": "Sant Andreu",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08030",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 280,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Fonda+de+Sant+Andreu+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.435,
-      "lng": 2.19
-    },
-    "metro_station": "Sant Andreu (L1)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:30",
-      "tuesday": "12:30-16:30",
-      "wednesday": "12:30-15:30",
-      "thursday": "12:30-15:30",
-      "friday": "12:30-16:00",
-      "saturday": "12:30-16:30, 19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1323,
-    "name": "Restaurant Cal Marinero",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Seafood",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14-18€",
-    "address_full": "",
-    "postal_code": "08019",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 520,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Cal+Marinero+Barcelona",
-    "tags": [
-      "deal-ready",
-      "seafood"
-    ],
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30, 20:00-23:00",
-      "tuesday": "13:00-15:30, 20:00-23:30",
-      "wednesday": "13:00-15:30, 20:00-22:30",
-      "thursday": "13:00-16:00, 20:00-23:00",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "13:00-15:30, 20:00-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1324,
-    "name": "La Pubilla Sant Martí",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08020",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 364,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Pubilla+Sant+Mart%C3%AD+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00",
-      "saturday": "19:30-23:30",
-      "sunday": "12:30-16:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1325,
-    "name": "Bar El Tomás Sant Martí",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08019",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 280,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly spanish. in Sant Martí. 4.0★ (280 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+El+Tom%C3%A1s+Sant+Mart%C3%AD+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:30",
-      "wednesday": "12:30-15:30",
-      "thursday": "12:30-15:30, 19:30-23:00",
-      "friday": "12:30-16:00, 19:30-23:30",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "12:30-16:00, 19:30-23:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1326,
-    "name": "Trattoria da Luigi Sant Martí",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Italian",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08019",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 460,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Italian restaurant. in Sant Martí. 4.2★ (460 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Trattoria+da+Luigi+Sant+Mart%C3%AD+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00, 20:00-23:00",
-      "thursday": "13:00-16:30, 20:00-23:30",
-      "friday": "13:00-15:30, 20:00-24:00",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "13:00-16:00, 20:00-23:30",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1327,
-    "name": "Restaurant El Port Sant Martí",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Seafood",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08005",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 390,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Seafood restaurant. in Sant Martí. 4.1★ (390 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Port+Sant+Mart%C3%AD+Barcelona",
-    "tags": [
-      "deal-ready",
-      "seafood",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:00",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:30, 20:00-23:00",
-      "thursday": "13:00-15:30",
-      "friday": "13:00-16:30",
-      "saturday": "13:00-16:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1328,
-    "name": "Maitea",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Basque",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "C/ de Casanova, 157, 08036 Barcelona",
-    "postal_code": "08007",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 860,
-    "website": "https://maitea.es/",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Maitea+C%2F+de+Casanova%2C+157%2C+08036+Barcelona+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.3911024,
-      "lng": 2.1510665
-    },
-    "metro_station": "Hospital Clínic (L5)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-24:00",
-      "tuesday": "13:00-15:30, 20:00-24:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-15:30, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "20:00-23:30",
-      "sunday": "13:00-15:30, 20:00-23:00",
-      "closed_days": []
-    },
-    "image_url": "assets/photos/1328_hero.webp",
-    "has_photo": true
-  },
-  {
-    "id": 1329,
-    "name": "Patagonia Beef & Wine",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Argentine",
-    "pricing_tier": "premium",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "Gran Via de les Corts Catalanes, 660, 08007 Barcelona",
-    "postal_code": "08007",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 2055,
-    "website": "https://patagoniabcn.com/",
-    "phone": "+34 933189292",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Patagonia+Beef+%26+Wine+Gran+Via+de+les+Corts+Catalanes%2C+660%2C+08007+Barcelona+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.3911199,
-      "lng": 2.170955
-    },
-    "metro_station": "Urquinaona (L1/L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:30-16:00, 20:30-23:00",
-      "wednesday": "13:30-15:00, 20:30-23:30",
-      "thursday": "13:30-16:00, 20:30-22:30",
-      "friday": "13:30-15:30, 20:30-23:00",
-      "saturday": "13:30-15:00, 20:30-23:30",
-      "sunday": "13:30-15:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1330,
-    "name": "Restaurant Gaig",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "premium",
-    "menu_tier": "confirmed",
-    "menu_price_range": "35-45€",
-    "address_full": "C/ de Còrsega, 200, 08036 Barcelona",
-    "postal_code": "08010",
-    "google_maps_rating": 4.5,
-    "google_maps_review_count": 1466,
-    "website": "https://restaurantgaig.com/",
-    "phone": "+34 934291017",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": " [Note: tasting menu format, not traditional menú del día]",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Gaig+C%2F+de+C%C3%B2rsega%2C+200%2C+08036+Barcelona+Barcelona",
-    "tags": [
-      "business-lunch",
-      "date-night",
-      "deal-ready",
-      "tasting-menu"
-    ],
-    "coordinates": {
-      "lat": 41.3910351,
-      "lng": 2.152237
-    },
-    "metro_station": "Hospital Clínic (L5)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:30-15:30, 20:30-23:30",
-      "wednesday": "13:30-15:30, 20:30-23:00",
-      "thursday": "13:30-15:30, 20:30-23:00",
-      "friday": "13:30-15:00, 20:30-23:00",
-      "saturday": "13:30-15:30",
-      "sunday": "13:30-15:30, 20:30-23:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "dinner_menu_del_dia": true,
-    "dinner_tier": "likely",
-    "has_photo": false
-  },
-  {
-    "id": 1331,
-    "name": "El Japonés",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Japanese",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "Passatge de la Concepció, 2, 08008 Barcelona",
-    "postal_code": "08007",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 2040,
-    "website": "https://eljaponesmovimientotapas.com/",
-    "phone": "+34 932097020",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Japon%C3%A9s+Passatge+de+la+Concepci%C3%B3%2C+2%2C+08008+Barcelona+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.3951595,
-      "lng": 2.1607634
-    },
-    "metro_station": "Passeig de Gràcia (L2/L3/L4)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:00-24:00",
-      "tuesday": "Closed",
-      "wednesday": "12:30-16:00, 19:00-24:00",
-      "thursday": "12:30-15:30, 19:00-23:30",
-      "friday": "12:30-16:00, 19:00-23:30",
-      "saturday": "12:30-16:00, 19:00-23:30",
-      "sunday": "12:30-16:30, 19:00-24:00",
-      "closed_days": [
-        "tuesday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1332,
-    "name": "Mango Thai",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Thai",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-15€",
-    "address_full": "",
-    "postal_code": "08011",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 561,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mango+Thai+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-15:30, 19:00-23:30",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:30, 19:00-24:00",
-      "saturday": "12:30-15:30, 19:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1333,
-    "name": "Rasoterra Eixample",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Vegetarian/Vegan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08010",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 369,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Vegetarian/Vegan restaurant. in Eixample. Highly rated (4.4★, 400 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rasoterra+Eixample+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready",
-      "vegan",
-      "vegetarian",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30, 20:00-23:30",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-16:30, 20:00-23:00",
-      "thursday": "13:00-16:30, 20:00-24:00",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1334,
-    "name": "Nairod Restaurant",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14-17€",
-    "address_full": "Carrer de Nàpols, 207, 08013 Barcelona",
-    "postal_code": "08009",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 360,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Nairod+Restaurant+Carrer+de+N%C3%A0pols%2C+207%2C+08013+Barcelona+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.3993413,
-      "lng": 2.173926
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:30, 20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1335,
-    "name": "Bao Bar Eixample",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Asian",
-    "pricing_tier": "budget",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08010",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 556,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly asian. in Eixample. 4.3★ (600 reviews)",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bao+Bar+Eixample+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "views"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:30, 19:30-23:30",
-      "tuesday": "12:30-15:30, 19:30-23:00",
-      "wednesday": "12:30-16:00, 19:30-23:30",
-      "thursday": "12:30-16:30, 19:30-22:30",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:00, 19:30-22:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1336,
-    "name": "Casa Delfín Eixample",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14-18€",
-    "address_full": "",
-    "postal_code": "08009",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 551,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Casa+Delf%C3%ADn+Eixample+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-24:00",
-      "friday": "13:00-16:30",
-      "saturday": "13:00-15:30",
-      "sunday": "13:00-15:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1337,
-    "name": "Niu Raval",
-    "neighborhood": "El Raval",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08001",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 487,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Niu+Raval+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.168
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:30, 20:00-24:00",
-      "friday": "13:00-16:00, 20:00-24:00",
-      "saturday": "13:00-16:30",
-      "sunday": "13:00-16:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1338,
-    "name": "Peixerot",
-    "neighborhood": "Barceloneta",
-    "cuisine_type": "Seafood",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "Carrer del Maquinista, 13, 08003 Barcelona",
-    "postal_code": "08003",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 1344,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Peixerot+Carrer+del+Maquinista%2C+13%2C+08003+Barcelona+Barcelona",
-    "tags": [
-      "seafood"
-    ],
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.189
-    },
-    "metro_station": "Barceloneta (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:30, 20:00-23:00",
-      "wednesday": "13:00-16:00, 20:00-22:30",
-      "thursday": "13:00-16:00, 20:00-23:00",
-      "friday": "13:00-16:00, 20:00-22:30",
-      "saturday": "13:00-16:30, 20:00-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1339,
-    "name": "Restaurant Maritim",
-    "neighborhood": "Barceloneta",
-    "cuisine_type": "Seafood",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 970,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Seafood restaurant. in Barceloneta. 4.1★ (800 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Maritim+Barcelona",
-    "tags": [
-      "deal-ready",
-      "seafood",
-      "views",
-      "waterfront"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.189
-    },
-    "metro_station": "Barceloneta (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30",
-      "tuesday": "13:00-15:30, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:00",
-      "thursday": "13:00-16:00, 20:00-22:30",
-      "friday": "13:00-15:30, 20:00-22:30",
-      "saturday": "13:00-16:00, 20:00-23:00",
-      "sunday": "13:00-16:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1340,
-    "name": "El Viti",
-    "neighborhood": "Barceloneta",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 288,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Viti+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.189
-    },
-    "metro_station": "Barceloneta (L4)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:30, 19:30-23:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-15:30",
-      "sunday": "12:30-16:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1341,
-    "name": "Restaurant Nomo",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Japanese",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "Torrent d'en Vidalet, 35, 08012 Barcelona",
-    "postal_code": "08012",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 767,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Nomo+Torrent+d%27en+Vidalet%2C+35%2C+08012+Barcelona+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30, 19:00-23:30",
-      "tuesday": "12:30-16:00, 19:00-24:00",
-      "wednesday": "12:30-16:30, 19:00-23:30",
-      "thursday": "12:30-16:00, 19:00-23:30",
-      "friday": "12:30-16:00, 19:00-23:30",
-      "saturday": "12:30-16:00, 19:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1342,
-    "name": "La Colombiana Gràcia",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Colombian",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "9-12€",
-    "address_full": "",
-    "postal_code": "08012",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 317,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Colombiana+Gr%C3%A0cia+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:30",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:30, 19:30-23:00",
-      "sunday": "12:30-16:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1343,
-    "name": "La Punta Gràcia",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08012",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 373,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Gràcia. 4.3★ (400 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Punta+Gr%C3%A0cia+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-15:30, 20:00-23:30",
-      "friday": "13:00-16:30, 20:00-23:00",
-      "saturday": "13:00-15:30",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1344,
-    "name": "Pepa i Cia",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08012",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 540,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pepa+i+Cia+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-24:00",
-      "friday": "13:00-16:30",
-      "saturday": "13:00-16:00, 20:00-24:00",
-      "sunday": "13:00-16:00, 20:00-24:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1345,
-    "name": "La Bodega de Gràcia",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08012",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 342,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly spanish. in Gràcia. 4.1★ (400 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Bodega+de+Gr%C3%A0cia+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views",
-      "wine-bar"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00, 19:30-22:30",
-      "wednesday": "12:30-16:00, 19:30-22:30",
-      "thursday": "12:30-16:30",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:00",
-      "sunday": "12:30-16:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1346,
-    "name": "El Bar de l'Oscar",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08012",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 280,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Bar+de+l%27Oscar+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:00",
-      "saturday": "19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1347,
-    "name": "Sureny Gràcia",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08012",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 421,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Gràcia. 4.3★ (500 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sureny+Gr%C3%A0cia+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-15:30",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-15:30, 20:00-23:30",
-      "friday": "13:00-16:30, 20:00-23:30",
-      "saturday": "13:00-16:30, 20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1348,
-    "name": "Lo de Flor",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Argentine",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "C/ de l'Escorial, 66, 08024 Barcelona",
-    "postal_code": "08012",
-    "google_maps_rating": 4.5,
-    "google_maps_review_count": 666,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Lo+de+Flor+C%2F+de+l%27Escorial%2C+66%2C+08024+Barcelona+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.4083157,
-      "lng": 2.1603344
-    },
-    "metro_station": "Joanic (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30, 20:00-23:30",
-      "tuesday": "13:00-15:30, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:30, 20:00-24:00",
-      "friday": "13:00-15:30, 20:00-23:30",
-      "saturday": "13:00-16:00, 20:00-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1349,
-    "name": "Chök BCN Gràcia",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Café",
-    "pricing_tier": "budget",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08012",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 429,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly café. in Gràcia. 4.3★ (500 reviews)",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ch%C3%B6k+BCN+Gr%C3%A0cia+Barcelona",
-    "tags": [
-      "breakfast",
-      "budget-friendly",
-      "views"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "08:00-20:00",
-      "wednesday": "08:00-19:30",
-      "thursday": "08:00-19:30",
-      "friday": "08:00-20:00",
-      "saturday": "09:00-20:00",
-      "sunday": "09:00-20:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1350,
-    "name": "Bar Central Gràcia",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08012",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 204,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Central+Gr%C3%A0cia+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:30",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-15:30",
-      "thursday": "12:30-16:00, 19:30-23:30",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:00",
-      "sunday": "12:30-15:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1351,
-    "name": "Vinissim",
-    "neighborhood": "Barri Gòtic",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08002",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 471,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Barri Gòtic. Highly rated (4.4★, 500 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Vinissim+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.383,
-      "lng": 2.177
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:30",
-      "wednesday": "13:00-15:30, 20:00-23:00",
-      "thursday": "13:00-16:30, 20:00-24:00",
-      "friday": "13:00-15:30, 20:00-23:30",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1352,
-    "name": "Restaurant La Casserola",
-    "neighborhood": "Barri Gòtic",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08002",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 312,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Casserola+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.383,
-      "lng": 2.177
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:30",
-      "wednesday": "13:00-15:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:00, 20:00-24:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1353,
-    "name": "Taller 28",
-    "neighborhood": "Barri Gòtic",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08002",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 282,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Taller+28+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.383,
-      "lng": 2.177
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:30",
-      "wednesday": "13:00-16:30",
-      "thursday": "13:00-16:30, 20:00-23:00",
-      "friday": "13:00-15:30",
-      "saturday": "20:00-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1354,
-    "name": "Pla Restaurant",
-    "neighborhood": "Barri Gòtic",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "15-18€",
-    "address_full": "C/ de Bellafila, 5, 08002 Barcelona",
-    "postal_code": "08002",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 984,
-    "website": "https://restaurantpla.cat/",
-    "phone": "+34 934126552",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pla+Restaurant+C%2F+de+Bellafila%2C+5%2C+08002+Barcelona+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.38227,
-      "lng": 2.1785761
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-15:30",
-      "wednesday": "13:00-15:30",
-      "thursday": "13:00-16:30",
-      "friday": "13:00-16:30, 20:00-23:30",
-      "saturday": "13:00-16:30, 20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1355,
-    "name": "Cervantes Restaurant",
-    "neighborhood": "Barri Gòtic",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08002",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 586,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Catalan restaurant. in Barri Gòtic. 4.1★ (600 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cervantes+Restaurant+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.383,
-      "lng": 2.177
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:30",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:30, 20:00-23:30",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-16:00, 20:00-24:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1356,
-    "name": "Casa Delfín Gòtic",
-    "neighborhood": "Barri Gòtic",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08002",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 1479,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Catalan restaurant. in Barri Gòtic. Popular (1,500 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Casa+Delf%C3%ADn+G%C3%B2tic+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.383,
-      "lng": 2.177
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:30, 20:00-24:00",
-      "wednesday": "13:00-15:30, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-24:00",
-      "friday": "13:00-16:30, 20:00-23:30",
-      "saturday": "20:00-24:00",
-      "sunday": "13:00-16:00, 20:00-23:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1357,
-    "name": "El Mesón del Café",
-    "neighborhood": "Barri Gòtic",
-    "cuisine_type": "Café",
-    "pricing_tier": "budget",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08002",
-    "google_maps_rating": 4.5,
-    "google_maps_review_count": 903,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly café. in Barri Gòtic. Highly rated (4.5★, 800 reviews)",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Mes%C3%B3n+del+Caf%C3%A9+Barcelona",
-    "tags": [
-      "breakfast",
-      "budget-friendly",
-      "views"
-    ],
-    "coordinates": {
-      "lat": 41.383,
-      "lng": 2.177
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "08:00-20:00",
-      "wednesday": "08:00-20:30",
-      "thursday": "08:00-20:30",
-      "friday": "08:00-20:00",
-      "saturday": "09:00-20:00",
-      "sunday": "09:00-20:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1358,
-    "name": "Bar Celta",
-    "neighborhood": "Barri Gòtic",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "C/ de la Mercè, 16, 08002 Barcelona",
-    "postal_code": "08002",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 1079,
-    "website": "",
-    "phone": "+34 933151006",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Celta+C%2F+de+la+Merc%C3%A8%2C+16%2C+08002+Barcelona+Barcelona",
-    "tags": [
-      "budget-friendly"
-    ],
-    "coordinates": {
-      "lat": 41.3798512,
-      "lng": 2.1801573
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:30, 19:30-23:00",
-      "thursday": "12:30-16:30, 19:30-22:30",
-      "friday": "12:30-15:30, 19:30-23:00",
-      "saturday": "12:30-16:00, 19:30-22:30",
-      "sunday": "12:30-16:00, 19:30-23:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1359,
-    "name": "Lonja del Mar",
-    "neighborhood": "El Born",
-    "cuisine_type": "Seafood",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 710,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Seafood restaurant. in El Born. 4.2★ (600 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Lonja+del+Mar+Barcelona",
-    "tags": [
-      "deal-ready",
-      "seafood",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.385,
-      "lng": 2.183
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-16:30, 20:00-22:30",
-      "thursday": "13:00-15:30",
-      "friday": "13:00-16:30",
-      "saturday": "13:00-16:30",
-      "sunday": "13:00-16:00, 20:00-22:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1360,
-    "name": "Cervantes Born",
-    "neighborhood": "El Born",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 535,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Spanish restaurant. in El Born. 4.1★ (500 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cervantes+Born+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.385,
-      "lng": 2.183
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-15:30, 20:00-23:30",
-      "wednesday": "13:00-16:30",
-      "thursday": "13:00-16:30",
-      "friday": "13:00-15:30, 20:00-23:30",
-      "saturday": "13:00-15:30, 20:00-23:30",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1361,
-    "name": "Restaurant Disfrutar Born",
-    "neighborhood": "El Born",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 392,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in El Born. 4.3★ (400 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Disfrutar+Born+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.385,
-      "lng": 2.183
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30",
-      "tuesday": "13:00-16:00, 20:00-24:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "20:00-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1362,
-    "name": "El Magatzem del Born",
-    "neighborhood": "El Born",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 416,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Magatzem+del+Born+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.385,
-      "lng": 2.183
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30, 20:00-23:00",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-15:30, 20:00-23:30",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1363,
-    "name": "Betlem Born",
-    "neighborhood": "El Born",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 282,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in El Born. 4.3★ (300 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Betlem+Born+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.385,
-      "lng": 2.183
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:30, 20:00-24:00",
-      "thursday": "13:00-16:00, 20:00-24:00",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1364,
-    "name": "Nena Pastisseria",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Café",
-    "pricing_tier": "budget",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08005",
-    "google_maps_rating": 4.5,
-    "google_maps_review_count": 471,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly café. in Poblenou. Highly rated (4.5★, 400 reviews)",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Nena+Pastisseria+Barcelona",
-    "tags": [
-      "breakfast",
-      "budget-friendly",
-      "views"
-    ],
-    "coordinates": {
-      "lat": 41.403,
-      "lng": 2.201
-    },
-    "metro_station": "Poblenou (L4)",
-    "opening_hours_full": {
-      "monday": "08:00-19:30",
-      "tuesday": "08:00-19:30",
-      "wednesday": "08:00-20:00",
-      "thursday": "08:00-20:30",
-      "friday": "08:00-20:00",
-      "saturday": "09:00-20:00",
-      "sunday": "09:00-19:30",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1365,
-    "name": "La Boqueria de Poblenou",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-15€",
-    "address_full": "",
-    "postal_code": "08005",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 445,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Boqueria+de+Poblenou+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.403,
-      "lng": 2.201
-    },
-    "metro_station": "Poblenou (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:00",
-      "thursday": "13:00-15:30",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "13:00-16:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1366,
-    "name": "Bar Calders Poblenou",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08005",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 565,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Poblenou. 4.3★ (500 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Calders+Poblenou+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.403,
-      "lng": 2.201
-    },
-    "metro_station": "Poblenou (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-15:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:30, 20:00-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1367,
-    "name": "Palo Santo Poblenou",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08005",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 488,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Spanish restaurant. in Poblenou. 4.3★ (400 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Palo+Santo+Poblenou+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.403,
-      "lng": 2.201
-    },
-    "metro_station": "Poblenou (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00, 20:00-24:00",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "20:00-23:30",
-      "sunday": "13:00-15:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1368,
-    "name": "Can Gibert",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08005",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 280,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Gibert+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.403,
-      "lng": 2.201
-    },
-    "metro_station": "Poblenou (L4)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-16:30",
-      "wednesday": "12:30-15:30, 19:30-23:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:00",
-      "saturday": "19:30-22:30",
-      "sunday": "12:30-16:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1369,
-    "name": "Restaurant Can Fisher 2",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Seafood",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08019",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 577,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Seafood restaurant. in Sant Martí. 4.2★ (500 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Fisher+2+Barcelona",
-    "tags": [
-      "deal-ready",
-      "seafood",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30",
-      "tuesday": "13:00-15:30",
-      "wednesday": "13:00-16:30",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:30, 20:00-23:00",
-      "sunday": "13:00-16:30, 20:00-23:30",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1370,
-    "name": "La Terraza del Forum",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08019",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 561,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Sant Martí. 4.1★ (600 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Terraza+del+Forum+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00, 20:00-23:00",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "13:00-15:30, 20:00-23:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1371,
-    "name": "Bodega Gibert Sant Martí",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08019",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 205,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bodega+Gibert+Sant+Mart%C3%AD+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "wine-bar"
-    ],
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-16:30, 19:30-23:30",
-      "wednesday": "12:30-16:30, 19:30-22:30",
-      "thursday": "12:30-16:30, 19:30-23:00",
-      "friday": "12:30-16:00, 19:30-23:30",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "12:30-16:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1372,
-    "name": "Restaurant Marina Port",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Seafood",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08005",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 374,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Seafood restaurant. in Sant Martí. 4.2★ (400 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Marina+Port+Barcelona",
-    "tags": [
-      "deal-ready",
-      "seafood",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30",
-      "tuesday": "13:00-15:30",
-      "wednesday": "13:00-16:00, 20:00-23:00",
-      "thursday": "13:00-16:30, 20:00-23:00",
-      "friday": "13:00-15:30, 20:00-23:00",
-      "saturday": "20:00-23:30",
-      "sunday": "13:00-16:00, 20:00-23:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1373,
-    "name": "El Forn de Sant Martí",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08020",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 280,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Forn+de+Sant+Mart%C3%AD+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30",
-      "tuesday": "12:30-16:30",
-      "wednesday": "12:30-15:30",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1374,
-    "name": "Can Rosell Sants",
-    "neighborhood": "Sants",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08014",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 395,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Rosell+Sants+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.374,
-      "lng": 2.134
-    },
-    "metro_station": "Santa Eulàlia (L1)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30, 20:00-23:30",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:30, 20:00-23:00",
-      "saturday": "13:00-15:30, 20:00-24:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1375,
-    "name": "Bodega Quimet Sants",
-    "neighborhood": "Sants",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08014",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 423,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly spanish. in Sants. 4.1★ (350 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bodega+Quimet+Sants+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views",
-      "wine-bar"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.374,
-      "lng": 2.134
-    },
-    "metro_station": "Santa Eulàlia (L1)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:30, 19:30-23:00",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:30",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "12:30-16:00, 19:30-23:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1376,
-    "name": "Restaurant El Pati de l'Ermita",
-    "neighborhood": "Sants",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14-17€",
-    "address_full": "",
-    "postal_code": "08028",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 434,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Pati+de+l%27Ermita+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.374,
-      "lng": 2.134
-    },
-    "metro_station": "Santa Eulàlia (L1)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-15:30, 20:00-23:00",
-      "thursday": "13:00-16:30, 20:00-24:00",
-      "friday": "13:00-15:30",
-      "saturday": "13:00-15:30",
-      "sunday": "13:00-16:00, 20:00-23:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1377,
-    "name": "El Nou Can Travi Sants",
-    "neighborhood": "Sants",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08014",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 333,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Catalan restaurant. in Sants. 4.2★ (350 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Nou+Can+Travi+Sants+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.374,
-      "lng": 2.134
-    },
-    "metro_station": "Santa Eulàlia (L1)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-15:30, 20:00-24:00",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1378,
-    "name": "Bar La Canyada",
-    "neighborhood": "Sants",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "9-11€",
-    "address_full": "",
-    "postal_code": "08014",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 208,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+La+Canyada+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.374,
-      "lng": 2.134
-    },
-    "metro_station": "Santa Eulàlia (L1)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30",
-      "tuesday": "12:30-15:30, 19:30-23:00",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:30",
-      "saturday": "12:30-15:30, 19:30-22:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1379,
-    "name": "Restaurant Can Vies",
-    "neighborhood": "Les Corts",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14-17€",
-    "address_full": "",
-    "postal_code": "08028",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 383,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Vies+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.387,
-      "lng": 2.127
-    },
-    "metro_station": "Les Corts (L3)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30",
-      "tuesday": "13:00-15:30, 20:00-24:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-15:30, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "20:00-23:30",
-      "sunday": "13:00-15:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1380,
-    "name": "Bodega Marga Les Corts",
-    "neighborhood": "Les Corts",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08028",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 362,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly spanish. in Les Corts. 4.1★ (300 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bodega+Marga+Les+Corts+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views",
-      "wine-bar"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.387,
-      "lng": 2.127
-    },
-    "metro_station": "Les Corts (L3)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30, 19:30-23:30",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:30, 19:30-22:30",
-      "thursday": "12:30-16:00, 19:30-22:30",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1381,
-    "name": "El Café de Sarrià",
-    "neighborhood": "Sarrià-Sant Gervasi",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08017",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 538,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Sarrià-Sant Gervasi. 4.2★ (500 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Caf%C3%A9+de+Sarri%C3%A0+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.401,
-      "lng": 2.135
-    },
-    "metro_station": "Vallcarca (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-15:30, 20:00-23:30",
-      "wednesday": "13:00-15:30",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "13:00-16:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1382,
-    "name": "Restaurant El Molí de Sarrià",
-    "neighborhood": "Sarrià-Sant Gervasi",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "15-20€",
-    "address_full": "",
-    "postal_code": "08017",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 526,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Mol%C3%AD+de+Sarri%C3%A0+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.401,
-      "lng": 2.135
-    },
-    "metro_station": "Vallcarca (L3)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-24:00",
-      "thursday": "13:00-15:30, 20:00-23:30",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1383,
-    "name": "La Vaqueria Sarrià",
-    "neighborhood": "Sarrià-Sant Gervasi",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08017",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 549,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Sarrià-Sant Gervasi. 4.3★ (450 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Vaqueria+Sarri%C3%A0+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.401,
-      "lng": 2.135
-    },
-    "metro_station": "Vallcarca (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:30",
-      "thursday": "13:00-15:30, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1384,
-    "name": "La Singular Sant Antoni",
-    "neighborhood": "Sant Antoni",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08015",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 391,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Sant Antoni. 4.3★ (400 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Singular+Sant+Antoni+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.379,
-      "lng": 2.159
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:30",
-      "wednesday": "13:00-16:30",
-      "thursday": "13:00-15:30",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:00, 20:00-24:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1385,
-    "name": "El Nou Raval Sant Antoni",
-    "neighborhood": "Sant Antoni",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-15€",
-    "address_full": "",
-    "postal_code": "08015",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 322,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Nou+Raval+Sant+Antoni+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.379,
-      "lng": 2.159
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30, 20:00-23:30",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-15:30, 20:00-23:00",
-      "friday": "13:00-16:30, 20:00-24:00",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-16:00, 20:00-23:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1386,
-    "name": "Café Cometa Sant Antoni",
-    "neighborhood": "Sant Antoni",
-    "cuisine_type": "Café",
-    "pricing_tier": "mid-range",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08015",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 413,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Café restaurant. in Sant Antoni. Highly rated (4.4★, 500 reviews)",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+Cometa+Sant+Antoni+Barcelona",
-    "tags": [
-      "breakfast",
-      "views"
-    ],
-    "coordinates": {
-      "lat": 41.379,
-      "lng": 2.159
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "08:00-20:30",
-      "tuesday": "08:00-20:00",
-      "wednesday": "08:00-20:00",
-      "thursday": "08:00-20:30",
-      "friday": "08:00-19:30",
-      "saturday": "09:00-20:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1387,
-    "name": "Bar Can Lluís Sant Antoni",
-    "neighborhood": "Sant Antoni",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08015",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 295,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Can+Llu%C3%ADs+Sant+Antoni+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.379,
-      "lng": 2.159
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:30",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:00, 19:30-23:30",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1388,
-    "name": "Restaurant Rías de Galicia SF",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "premium",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08013",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 610,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Premium spanish dining. in Sagrada Família. Highly rated (4.4★, 800 reviews)",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+R%C3%ADas+de+Galicia+SF+Barcelona",
-    "tags": [
-      "views"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "13:30-15:30, 20:30-23:00",
-      "tuesday": "13:30-15:30, 20:30-22:30",
-      "wednesday": "13:30-16:00, 20:30-23:00",
-      "thursday": "13:30-15:00, 20:30-23:00",
-      "friday": "13:30-16:00, 20:30-23:30",
-      "saturday": "13:30-15:30, 20:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1389,
-    "name": "El Racó de la Sagrada Família",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08013",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 348,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rac%C3%B3+de+la+Sagrada+Fam%C3%ADlia+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-15:30, 20:00-23:30",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-15:30",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:00, 20:00-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1390,
-    "name": "La Marina del Clot",
-    "neighborhood": "Clot",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-15€",
-    "address_full": "",
-    "postal_code": "08018",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 431,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Marina+del+Clot+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.409,
-      "lng": 2.187
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30",
-      "tuesday": "13:00-16:30, 20:00-23:00",
-      "wednesday": "13:00-15:30",
-      "thursday": "13:00-16:30",
-      "friday": "13:00-16:30, 20:00-24:00",
-      "saturday": "20:00-24:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1391,
-    "name": "El Bar del Clot",
+    "name": "La Margui",
+    "address": "Clot, Barcelona",
     "neighborhood": "Clot",
     "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08018",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 279,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Bar+del+Clot+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.409,
-      "lng": 2.187
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:30, 19:30-23:30",
-      "saturday": "12:30-16:30, 19:30-23:00",
-      "sunday": "12:30-16:30, 19:30-22:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1392,
-    "name": "Restaurant Can Cargolet Horta",
-    "neighborhood": "Horta-Guinardó",
-    "cuisine_type": "Catalan",
     "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08032",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 309,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Cargolet+Horta+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.418,
-      "lng": 2.165
-    },
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-15:30",
-      "friday": "13:00-15:30, 20:00-23:00",
-      "saturday": "13:00-16:30, 20:00-24:00",
-      "sunday": "13:00-16:30, 20:00-23:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1393,
-    "name": "Bar Cal Toni Nou Barris",
-    "neighborhood": "Nou Barris",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "9-11€",
-    "address_full": "",
-    "postal_code": "08042",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 205,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Cal+Toni+Nou+Barris+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.441,
-      "lng": 2.177
-    },
-    "metro_station": "Via Júlia (L4)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00",
-      "tuesday": "Closed",
-      "wednesday": "12:30-15:30",
-      "thursday": "12:30-16:30",
-      "friday": "12:30-16:30, 19:30-23:00",
-      "saturday": "19:30-23:00",
-      "sunday": "12:30-16:00",
-      "closed_days": [
-        "tuesday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1394,
-    "name": "Restaurant Can Pep Nou Barris",
-    "neighborhood": "Nou Barris",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-14€",
-    "address_full": "",
-    "postal_code": "08042",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 391,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Pep+Nou+Barris+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.441,
-      "lng": 2.177
-    },
-    "metro_station": "Via Júlia (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-15:30",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1395,
-    "name": "El Mirador de Sant Andreu",
-    "neighborhood": "Sant Andreu",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08030",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 370,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Sant Andreu. 4.2★ (400 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Mirador+de+Sant+Andreu+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.435,
-      "lng": 2.19
-    },
-    "metro_station": "Sant Andreu (L1)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-15:30, 20:00-23:00",
-      "wednesday": "13:00-15:30, 20:00-24:00",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "13:00-16:00, 20:00-24:00",
-      "sunday": "13:00-15:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1396,
-    "name": "Can Xaloc Sant Andreu",
-    "neighborhood": "Sant Andreu",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08030",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 329,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Xaloc+Sant+Andreu+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.435,
-      "lng": 2.19
-    },
-    "metro_station": "Sant Andreu (L1)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00",
-      "tuesday": "Closed",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-15:30",
-      "friday": "12:30-16:30, 19:30-23:00",
-      "saturday": "12:30-16:30, 19:30-22:30",
-      "sunday": "12:30-16:00",
-      "closed_days": [
-        "tuesday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1397,
-    "name": "La Mundana Poble Sec",
-    "neighborhood": "Poble Sec",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08004",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 680,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Spanish restaurant. in Poble Sec. 4.3★ (600 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Mundana+Poble+Sec+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.372,
-      "lng": 2.161
-    },
-    "metro_station": "Poble Sec (L3)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-15:30, 20:00-23:00",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "13:00-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1398,
-    "name": "Bodega Montjuïc",
-    "neighborhood": "Poble Sec",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08004",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 423,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly spanish. in Poble Sec. 4.1★ (350 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bodega+Montju%C3%AFc+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views",
-      "wine-bar"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.372,
-      "lng": 2.161
-    },
-    "metro_station": "Poble Sec (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00, 19:30-22:30",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:30, 19:30-22:30",
-      "saturday": "19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1399,
-    "name": "Restaurant La Terrassa Poble Sec",
-    "neighborhood": "Poble Sec",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08004",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 371,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Poble Sec. 4.2★ (400 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Terrassa+Poble+Sec+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.372,
-      "lng": 2.161
-    },
-    "metro_station": "Poble Sec (L3)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30, 20:00-23:30",
-      "tuesday": "Closed",
-      "wednesday": "13:00-16:30",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:30, 20:00-23:30",
-      "saturday": "20:00-23:30",
-      "sunday": "13:00-15:30",
-      "closed_days": [
-        "tuesday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1400,
-    "name": "El Nou Blai",
-    "neighborhood": "Poble Sec",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08004",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 249,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Nou+Blai+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.372,
-      "lng": 2.161
-    },
-    "metro_station": "Poble Sec (L3)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-22:30",
-      "tuesday": "12:30-16:00, 19:30-22:30",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-15:30, 19:30-23:00",
-      "friday": "12:30-16:30",
-      "saturday": "12:30-16:00, 19:30-22:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1401,
-    "name": "Can Lluís Poble Sec",
-    "neighborhood": "Poble Sec",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "11-14€",
-    "address_full": "",
-    "postal_code": "08004",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 359,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Llu%C3%ADs+Poble+Sec+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.372,
-      "lng": 2.161
-    },
-    "metro_station": "Poble Sec (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-15:30, 19:30-23:00",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "12:30-15:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1402,
-    "name": "Restaurant El Jardí del Raval",
-    "neighborhood": "El Raval",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08001",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 470,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in El Raval. 4.2★ (400 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Jard%C3%AD+del+Raval+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.168
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-24:00",
-      "saturday": "13:00-16:00, 20:00-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1403,
-    "name": "Bar Bodega Raval",
-    "neighborhood": "El Raval",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08001",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 253,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly spanish. in El Raval. 4.0★ (250 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Bodega+Raval+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views",
-      "wine-bar"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.168
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-15:30",
-      "thursday": "12:30-16:30, 19:30-23:00",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "19:30-23:00",
-      "sunday": "12:30-16:00, 19:30-23:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1404,
-    "name": "Restaurant Mercat Raval",
-    "neighborhood": "El Raval",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08001",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 559,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Mercat+Raval+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.168
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-15:30, 20:00-23:30",
-      "friday": "13:00-16:30, 20:00-23:00",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "13:00-15:30, 20:00-23:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1405,
-    "name": "La Cuina del Poble Sec",
-    "neighborhood": "Poble Sec",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-15€",
-    "address_full": "",
-    "postal_code": "08004",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 456,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+del+Poble+Sec+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.372,
-      "lng": 2.161
-    },
-    "metro_station": "Poble Sec (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-23:00",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:30, 20:00-23:30",
-      "sunday": "13:00-15:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1406,
-    "name": "La Cuina d'en Garriga",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "15-18€",
-    "address_full": "",
-    "postal_code": "08009",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 581,
-    "website": "https://lacuinadengarriga.com/",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+d%27en+Garriga+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-24:00",
-      "tuesday": "13:00-16:30",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-15:30",
-      "friday": "13:00-16:30, 20:00-24:00",
-      "saturday": "13:00-16:00, 20:00-24:00",
-      "sunday": "13:00-16:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1407,
-    "name": "El Petit Cuiner",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "11-14€",
-    "address_full": "",
-    "postal_code": "08010",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 370,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Petit+Cuiner+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00, 19:30-22:30",
-      "friday": "12:30-16:00",
-      "saturday": "12:30-16:00, 19:30-22:30",
-      "sunday": "12:30-15:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1408,
-    "name": "Wagokoro",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Japanese",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "C/ de Comte d'Urgell, 56, 08011 Barcelona",
-    "postal_code": "08011",
-    "google_maps_rating": 4.5,
-    "google_maps_review_count": 648,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Wagokoro+C%2F+de+Comte+d%27Urgell%2C+56%2C+08011+Barcelona+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-16:30",
-      "tuesday": "12:30-16:00, 19:00-23:00",
-      "wednesday": "12:30-15:30, 19:00-23:30",
-      "thursday": "12:30-16:00, 19:00-23:00",
-      "friday": "12:30-16:00, 19:00-23:00",
-      "saturday": "19:00-24:00",
-      "sunday": "12:30-16:00, 19:00-24:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1409,
-    "name": "Korokke Barcelona",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Japanese",
-    "pricing_tier": "budget",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08008",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 473,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly japanese. in Eixample. Highly rated (4.4★, 400 reviews)",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Korokke+Barcelona+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "views"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30, 19:30-22:30",
-      "tuesday": "12:30-15:30, 19:30-23:00",
-      "wednesday": "12:30-15:30, 19:30-22:30",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:00, 19:30-22:30",
-      "saturday": "12:30-16:00, 19:30-22:30",
-      "sunday": "12:30-16:00, 19:30-22:30",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1410,
-    "name": "Restaurante Sibaris",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14-17€",
-    "address_full": "",
-    "postal_code": "08036",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 370,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurante+Sibaris+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-16:00, 20:00-24:00",
-      "thursday": "13:00-15:30, 20:00-24:00",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "13:00-16:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1411,
-    "name": "La Pepita Eixample",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "C/ de Còrsega, 343, 08037 Barcelona",
-    "postal_code": "08008",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 1436,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Pepita+Eixample+C%2F+de+C%C3%B2rsega%2C+343%2C+08037+Barcelona+Barcelona",
-    "tags": [],
-    "coordinates": {
-      "lat": 41.3979638,
-      "lng": 2.1610245
-    },
-    "metro_station": "Verdaguer (L4/L5)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-24:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-15:30, 20:00-23:00",
-      "friday": "13:00-15:30, 20:00-23:30",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1412,
-    "name": "Koku Kitchen Buns",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Asian",
-    "pricing_tier": "budget",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "C/ de Còrsega, 242, 08036 Barcelona",
-    "postal_code": "08010",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 510,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Koku+Kitchen+Buns+C%2F+de+C%C3%B2rsega%2C+242%2C+08036+Barcelona+Barcelona",
-    "tags": [
-      "budget-friendly"
-    ],
-    "coordinates": {
-      "lat": 41.393013,
-      "lng": 2.1548767
-    },
-    "metro_station": "Diagonal (L3/L5)",
-    "opening_hours_full": {
-      "monday": "12:30-15:30, 19:30-22:30",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:30, 19:30-23:30",
-      "thursday": "12:30-16:00, 19:30-23:30",
-      "friday": "12:30-15:30, 19:30-23:00",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1413,
-    "name": "Restaurant Bilbao Gràcia",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Basque",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14-17€",
-    "address_full": "C/ de Perla, 33, 08012 Barcelona",
-    "postal_code": "08012",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 433,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Bilbao+Gr%C3%A0cia+C%2F+de+Perla%2C+33%2C+08012+Barcelona+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4039493,
-      "lng": 2.1579262
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:30",
-      "wednesday": "13:00-15:30",
-      "thursday": "13:00-16:30",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1414,
-    "name": "La Cuina de l'Uribou",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-15€",
-    "address_full": "",
-    "postal_code": "08012",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 336,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+de+l%27Uribou+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:00",
-      "tuesday": "Closed",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:30, 20:00-23:00",
-      "friday": "13:00-15:30",
-      "saturday": "20:00-23:30",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "tuesday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1415,
-    "name": "El Nou Can Che",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08012",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 280,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Nou+Can+Che+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00",
-      "saturday": "12:30-16:00, 19:30-22:30",
-      "sunday": "12:30-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1416,
-    "name": "Can Lluís Gràcia",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "11-13€",
-    "address_full": "",
-    "postal_code": "08012",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 346,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Llu%C3%ADs+Gr%C3%A0cia+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-15:30",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:00",
-      "saturday": "12:30-15:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1417,
-    "name": "Restaurante Nepal Gràcia",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Indian",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "9-12€",
-    "address_full": "",
-    "postal_code": "08012",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 373,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurante+Nepal+Gr%C3%A0cia+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1567
-    },
-    "metro_station": "Fontana (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00, 19:30-22:30",
-      "wednesday": "12:30-15:30",
-      "thursday": "12:30-16:00, 19:30-23:00",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-15:30",
-      "sunday": "12:30-15:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1418,
-    "name": "El Celler del Born",
-    "neighborhood": "El Born",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14-17€",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 473,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Celler+del+Born+Barcelona",
-    "tags": [
-      "deal-ready",
-      "wine-bar"
-    ],
-    "coordinates": {
-      "lat": 41.385,
-      "lng": 2.183
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-15:30",
-      "friday": "13:00-16:30, 20:00-24:00",
-      "saturday": "13:00-16:00, 20:00-24:00",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1419,
-    "name": "La Cuina d'en Simon",
-    "neighborhood": "El Born",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08003",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 357,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in El Born. 4.2★ (350 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+d%27en+Simon+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.385,
-      "lng": 2.183
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30, 20:00-23:00",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-15:30",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-15:30, 20:00-23:30",
-      "saturday": "13:00-15:30, 20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1420,
-    "name": "Restaurant La Plassohla",
-    "neighborhood": "Barri Gòtic",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08002",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 403,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Plassohla+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.383,
-      "lng": 2.177
-    },
-    "metro_station": "Jaume I (L4)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:30",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-24:00",
-      "friday": "13:00-15:30",
-      "saturday": "13:00-15:30",
-      "sunday": "13:00-15:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1421,
-    "name": "Café Zurich",
-    "neighborhood": "Barri Gòtic",
-    "cuisine_type": "Café",
-    "pricing_tier": "mid-range",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "Plaça de Catalunya, 1, 08002 Barcelona",
-    "postal_code": "08002",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 3907,
-    "website": "https://zurichrestaurant.es/",
-    "phone": "+34 933179153",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+Zurich+Pla%C3%A7a+de+Catalunya%2C+1%2C+08002+Barcelona+Barcelona",
-    "tags": [
-      "breakfast"
-    ],
-    "coordinates": {
-      "lat": 41.3858504,
-      "lng": 2.1694606
-    },
-    "metro_station": "Catalunya (L1/L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "08:00-19:30",
-      "wednesday": "08:00-20:00",
-      "thursday": "08:00-20:00",
-      "friday": "08:00-20:00",
-      "saturday": "09:00-20:00",
-      "sunday": "09:00-20:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1422,
-    "name": "Restaurant Nectari",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "premium",
-    "menu_tier": "confirmed",
-    "menu_price_range": "25-35€",
-    "address_full": "",
-    "postal_code": "08011",
-    "google_maps_rating": 4.5,
-    "google_maps_review_count": 871,
-    "website": "https://nectari.es/",
-    "phone": "+34 932266887",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Nectari+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.3888,
-      "lng": 2.162
-    },
-    "metro_station": "Universitat (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:30-15:00, 20:30-23:00",
-      "wednesday": "13:30-16:00, 20:30-22:30",
-      "thursday": "13:30-15:30, 20:30-23:00",
-      "friday": "13:30-15:30, 20:30-22:30",
-      "saturday": "20:30-23:00",
-      "sunday": "13:30-15:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1423,
-    "name": "Bar Mendizábal",
-    "neighborhood": "El Raval",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08001",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 674,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Budget-friendly spanish. in El Raval. 4.1★ (600 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Mendiz%C3%A1bal+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.168
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-15:30, 19:30-23:30",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00",
-      "saturday": "12:30-15:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday",
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1424,
-    "name": "La Tertulia Poble Sec",
-    "neighborhood": "Poble Sec",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-15€",
-    "address_full": "",
-    "postal_code": "08004",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 334,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Tertulia+Poble+Sec+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.372,
-      "lng": 2.161
-    },
-    "metro_station": "Poble Sec (L3)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:00",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-16:00, 20:00-23:00",
-      "thursday": "13:00-15:30, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "13:00-16:30, 20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1425,
-    "name": "Bar Calders Raval",
-    "neighborhood": "El Raval",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08001",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 581,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in El Raval. 4.2★ (500 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Calders+Raval+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.38,
-      "lng": 2.168
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-15:30, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-24:00",
-      "saturday": "13:00-15:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1426,
-    "name": "Restaurant La Esquina Poble Sec",
-    "neighborhood": "Poble Sec",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08004",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 246,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Esquina+Poble+Sec+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.372,
-      "lng": 2.161
-    },
-    "metro_station": "Poble Sec (L3)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:30",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "12:30-16:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1427,
-    "name": "La Cuina del Forum",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08019",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 356,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+del+Forum+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-15:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-16:30",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1428,
-    "name": "Restaurant Diagonal Mar",
-    "neighborhood": "Sant Martí",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08019",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 496,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Sant Martí. 4.1★ (500 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Diagonal+Mar+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.41,
-      "lng": 2.191
-    },
-    "metro_station": "Clot (L1/L2)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-15:30, 20:00-23:30",
-      "wednesday": "13:00-16:30",
-      "thursday": "13:00-16:30",
-      "friday": "13:00-16:00, 20:00-24:00",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "13:00-15:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1429,
-    "name": "El Petit Poblenou",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08005",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 352,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Petit+Poblenou+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.403,
-      "lng": 2.201
-    },
-    "metro_station": "Poblenou (L4)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "Closed",
-      "wednesday": "12:30-16:30, 19:30-23:00",
-      "thursday": "12:30-15:30",
-      "friday": "12:30-16:00",
-      "saturday": "12:30-16:30",
-      "sunday": "12:30-16:00, 19:30-23:00",
-      "closed_days": [
-        "tuesday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1430,
-    "name": "La Taverna de Poblenou",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08005",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 510,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Spanish restaurant. in Poblenou. 4.3★ (400 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Taverna+de+Poblenou+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.403,
-      "lng": 2.201
-    },
-    "metro_station": "Poblenou (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:30",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-15:30, 20:00-24:00",
-      "friday": "13:00-15:30, 20:00-23:30",
-      "saturday": "13:00-16:30",
-      "sunday": "13:00-16:00",
-      "closed_days": []
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1431,
-    "name": "Restaurant Pujades 33",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14-17€",
-    "address_full": "",
-    "postal_code": "08005",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 278,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Pujades+33+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.403,
-      "lng": 2.201
-    },
-    "metro_station": "Poblenou (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-15:30, 20:00-23:00",
-      "friday": "13:00-15:30, 20:00-23:30",
-      "saturday": "20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1432,
-    "name": "El Petit Sants",
-    "neighborhood": "Sants",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08014",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 280,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Petit+Sants+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.374,
-      "lng": 2.134
-    },
-    "metro_station": "Santa Eulàlia (L1)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-22:30",
-      "tuesday": "Closed",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-16:30, 19:30-23:00",
-      "friday": "12:30-16:30",
-      "saturday": "12:30-16:30",
-      "sunday": "12:30-16:00",
-      "closed_days": [
-        "tuesday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1433,
-    "name": "Restaurant El Molí de Sants",
-    "neighborhood": "Sants",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08014",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 327,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Mol%C3%AD+de+Sants+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.374,
-      "lng": 2.134
-    },
-    "metro_station": "Santa Eulàlia (L1)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00, 20:00-24:00",
-      "thursday": "13:00-16:30, 20:00-23:00",
-      "friday": "13:00-15:30",
-      "saturday": "20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1434,
-    "name": "La Cuina de les Corts",
-    "neighborhood": "Les Corts",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08028",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 405,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+de+les+Corts+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.387,
-      "lng": 2.127
-    },
-    "metro_station": "Les Corts (L3)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-15:30",
-      "saturday": "13:00-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1435,
-    "name": "Restaurant Can Ferran Sarrià",
-    "neighborhood": "Sarrià-Sant Gervasi",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "15-18€",
-    "address_full": "",
-    "postal_code": "08017",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 476,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Ferran+Sarri%C3%A0+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.401,
-      "lng": 2.135
-    },
-    "metro_station": "Vallcarca (L3)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00, 20:00-23:00",
-      "tuesday": "Closed",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:30",
-      "saturday": "20:00-23:30",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "tuesday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1436,
-    "name": "El Racó de Sarrià",
-    "neighborhood": "Sarrià-Sant Gervasi",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08017",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 397,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Sarrià-Sant Gervasi. 4.3★ (400 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rac%C3%B3+de+Sarri%C3%A0+Barcelona",
-    "tags": [
-      "business-lunch",
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.401,
-      "lng": 2.135
-    },
-    "metro_station": "Vallcarca (L3)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00, 20:00-24:00",
-      "thursday": "13:00-16:30, 20:00-24:00",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "13:00-16:30",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1437,
-    "name": "Restaurant La Guineueta",
-    "neighborhood": "Nou Barris",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "12-15€",
-    "address_full": "",
-    "postal_code": "08042",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 346,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Guineueta+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.441,
-      "lng": 2.177
-    },
-    "metro_station": "Via Júlia (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:00, 20:00-23:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:30, 20:00-23:30",
-      "friday": "13:00-15:30",
-      "saturday": "20:00-23:30",
-      "sunday": "13:00-16:00, 20:00-23:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1438,
-    "name": "El Petit Sagrada Família",
-    "neighborhood": "Sagrada Família",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-13€",
-    "address_full": "",
-    "postal_code": "08013",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 250,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Petit+Sagrada+Fam%C3%ADlia+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.4036,
-      "lng": 2.1744
-    },
-    "metro_station": "Sagrada Família (L2/L5)",
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:30, 19:30-23:30",
-      "wednesday": "12:30-16:00, 19:30-22:30",
-      "thursday": "12:30-16:00, 19:30-22:30",
-      "friday": "12:30-16:30",
-      "saturday": "12:30-16:30, 19:30-23:00",
-      "sunday": "12:30-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1439,
-    "name": "Restaurant Can Jordi Horta",
-    "neighborhood": "Horta-Guinardó",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13-16€",
-    "address_full": "",
-    "postal_code": "08032",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 341,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Jordi+Horta+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.418,
-      "lng": 2.165
-    },
-    "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
-    "opening_hours_full": {
-      "monday": "13:00-16:30, 20:00-23:30",
-      "tuesday": "13:00-16:30, 20:00-23:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00, 20:00-23:00",
-      "friday": "13:00-16:00, 20:00-23:30",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-16:30, 20:00-23:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1440,
-    "name": "Bar El Horno Sant Andreu",
-    "neighborhood": "Sant Andreu",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "10-12€",
-    "address_full": "",
-    "postal_code": "08030",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 228,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+El+Horno+Sant+Andreu+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.435,
-      "lng": 2.19
-    },
-    "metro_station": "Sant Andreu (L1)",
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-22:30",
-      "tuesday": "12:30-16:00, 19:30-23:00",
-      "wednesday": "12:30-16:00, 19:30-22:30",
-      "thursday": "12:30-15:30",
-      "friday": "12:30-16:00",
-      "saturday": "19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1441,
-    "name": "Ca l'Isidre Sant Antoni",
-    "neighborhood": "Sant Antoni",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14-17€",
-    "address_full": "",
-    "postal_code": "08015",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 553,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ca+l%27Isidre+Sant+Antoni+Barcelona",
-    "tags": [
-      "deal-ready"
-    ],
-    "coordinates": {
-      "lat": 41.379,
-      "lng": 2.159
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30, 20:00-23:30",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:30, 20:00-24:00",
-      "thursday": "13:00-16:30",
-      "friday": "13:00-16:30, 20:00-23:30",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-16:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1442,
-    "name": "El Racó de Sant Antoni",
-    "neighborhood": "Sant Antoni",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "",
-    "address_full": "",
-    "postal_code": "08015",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 450,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean restaurant. in Sant Antoni. 4.3★ (400 reviews). Menú del día likely available.",
-    "last_verified": "2025-03-01",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rac%C3%B3+de+Sant+Antoni+Barcelona",
-    "tags": [
-      "deal-ready",
-      "views"
-    ],
-    "menu_evidence": "auto_diagnostic",
-    "coordinates": {
-      "lat": 41.379,
-      "lng": 2.159
-    },
-    "metro_station": "Sant Antoni (L2)",
-    "opening_hours_full": {
-      "monday": "13:00-15:30, 20:00-24:00",
-      "tuesday": "13:00-15:30",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:30, 20:00-24:00",
-      "friday": "13:00-16:00",
-      "saturday": "13:00-15:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1443,
-    "name": "Bar APZ",
-    "neighborhood": "Barri Gòtic",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "~12€",
-    "address_full": "C/ d'Estruc, 32",
-    "postal_code": "08002",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 355,
-    "website": "",
-    "phone": "+34 933 02 37 42",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Tapas bar near Plaça Catalunya. Tortilla, bravas. Family-run since 1988. Menú del día 13-16h.",
-    "last_verified": "2026-03-24",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+APZ+C%2F+d%27Estruc%2C+32+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "family-run",
-      "historic",
-      "kid-friendly",
-      "deal-ready",
-      "solo-friendly",
-      "tapas"
-    ],
-    "menu_evidence": "menuveo_competitor",
-    "menu_del_dia_confirmed": true,
-    "opening_hours_full": {
-      "monday": "12:30-16:30, 19:30-23:00",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:30",
-      "thursday": "12:30-16:30",
-      "friday": "12:30-16:30, 19:30-23:00",
-      "saturday": "12:30-15:30, 19:30-22:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1444,
-    "name": "Rebeka",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "15€",
-    "address_full": "C/ dels Almogàvers, 107",
-    "postal_code": "08018",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 517,
-    "website": "",
-    "phone": "+34 933 09 92 41",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Mediterranean with brunch. Near L'Auditori. 4 first + 4 second courses.",
-    "last_verified": "2026-03-24",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rebeka+C%2F+dels+Almog%C3%A0vers%2C+107+Barcelona",
-    "tags": [
-      "brunch",
-      "deal-ready"
-    ],
-    "menu_evidence": "menuveo_competitor",
-    "menu_del_dia_confirmed": true,
-    "opening_hours_full": {
-      "monday": "09:00-17:00",
-      "tuesday": "09:00-17:00",
-      "wednesday": "09:00-17:00",
-      "thursday": "09:00-16:30",
-      "friday": "09:00-17:00",
-      "saturday": "09:00-17:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1445,
-    "name": "Ryu Ramen Gràcia",
-    "neighborhood": "Gràcia",
-    "cuisine_type": "Japanese",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14.50€",
-    "address_full": "C/ de Ramón y Cajal, 35",
-    "postal_code": "08012",
-    "google_maps_rating": 5.0,
-    "google_maps_review_count": 25,
-    "website": "",
-    "phone": "+34 935 09 33 13",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Ryu Ramen Gràcia branch. Ramen menu starter+main+dessert. Cozy atmosphere.",
-    "last_verified": "2026-03-24",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ryu+Ramen+Gr%C3%A0cia+C%2F+de+Ram%C3%B3n+y+Cajal%2C+35+Barcelona",
-    "tags": [
-      "cozy",
-      "deal-ready",
-      "ramen"
-    ],
-    "menu_evidence": "menuveo_competitor",
-    "menu_del_dia_confirmed": true,
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:00",
-      "thursday": "12:30-16:30, 19:00-23:00",
-      "friday": "12:30-16:30",
-      "saturday": "12:30-16:00, 19:00-23:30",
-      "sunday": "12:30-16:00, 19:00-23:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1446,
-    "name": "Bar Carme",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "14.50€",
-    "address_full": "C/ de Llull, 70",
-    "postal_code": "08005",
-    "google_maps_rating": 4.4,
-    "google_maps_review_count": 78,
-    "website": "",
-    "phone": "+34 934 85 23 32",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Traditional menú del día. Fideuá, homemade desserts. 100% casero.",
-    "last_verified": "2026-03-24",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Carme+C%2F+de+Llull%2C+70+Barcelona",
-    "tags": [
-      "homemade",
-      "deal-ready"
-    ],
-    "menu_evidence": "menuveo_competitor",
-    "menu_del_dia_confirmed": true,
-    "opening_hours_full": {
-      "monday": "13:00-16:00",
-      "tuesday": "13:00-16:00, 20:00-24:00",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-15:30, 20:00-23:30",
-      "saturday": "13:00-15:30, 20:00-24:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1447,
-    "name": "Donde Tito Bar & Restaurante",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "~14€",
-    "address_full": "C/ de la Llacuna, 124",
-    "postal_code": "08018",
-    "google_maps_rating": 4.9,
-    "google_maps_review_count": 514,
-    "website": "",
-    "phone": "+34 636 98 69 88",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "25+ years. Paellas and rice dishes. Pet-friendly terrace. Cocina abierta todo el día.",
-    "last_verified": "2026-03-24",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Donde+Tito+Bar+%26+Restaurante+C%2F+de+la+Llacuna%2C+124+Barcelona",
-    "tags": [
-      "dog-friendly",
-      "historic",
-      "deal-ready",
-      "rice-dishes",
-      "terrace"
-    ],
-    "menu_evidence": "menuveo_competitor",
-    "menu_del_dia_confirmed": true,
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-16:00, 20:00-23:30",
-      "wednesday": "13:00-15:30, 20:00-23:30",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-15:30, 20:00-23:00",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-16:00",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "outdoor_seating": true,
-    "dog_friendly": true,
-    "has_photo": false
-  },
-  {
-    "id": 1448,
-    "name": "Verde Amore Healthy Food",
-    "neighborhood": "Les Corts",
-    "cuisine_type": "Vegetarian/Vegan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "~14€",
-    "address_full": "C/ de Galileu, 261",
-    "postal_code": "08028",
-    "google_maps_rating": 4.8,
-    "google_maps_review_count": 464,
-    "website": "",
-    "phone": "+34 930 05 78 61",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Healthy, vegan/vegetarian. Brunch, specialty coffee. Near Sants station.",
-    "last_verified": "2026-03-24",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Verde+Amore+Healthy+Food+C%2F+de+Galileu%2C+261+Barcelona",
-    "tags": [
-      "brunch",
-      "business-lunch",
-      "healthy",
-      "deal-ready",
-      "vegan",
-      "vegetarian"
-    ],
-    "menu_evidence": "menuveo_competitor",
-    "menu_del_dia_confirmed": true,
-    "opening_hours_full": {
-      "monday": "09:00-17:00",
-      "tuesday": "09:00-16:30",
-      "wednesday": "09:00-17:00",
-      "thursday": "09:00-16:30",
-      "friday": "09:00-17:00",
-      "saturday": "09:00-17:00",
-      "sunday": "09:00-17:00",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1449,
-    "name": "Forn Cafeteria La Parada",
-    "neighborhood": "Horta-Guinardó",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "budget",
-    "menu_tier": "confirmed",
-    "menu_price_range": "~11€",
-    "address_full": "Passatge de Llívia, 34",
-    "postal_code": "08041",
-    "google_maps_rating": 4.5,
-    "google_maps_review_count": 189,
-    "website": "",
-    "phone": "+34 936 81 64 23",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "In Mercat del Guinardó. Bakery + café + daily menu. Homemade. 13-16h.",
-    "last_verified": "2026-03-24",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Forn+Cafeteria+La+Parada+Passatge+de+Ll%C3%ADvia%2C+34+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "homemade",
-      "deal-ready"
-    ],
-    "menu_evidence": "menuveo_competitor",
-    "menu_del_dia_confirmed": true,
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-23:00",
-      "tuesday": "12:30-16:00",
-      "wednesday": "12:30-16:30, 19:30-23:00",
-      "thursday": "12:30-16:00",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:00, 19:30-22:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1450,
-    "name": "Bar Restaurante Felipe @22",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "13.90€",
-    "address_full": "C/ de Llull, 294",
-    "postal_code": "08019",
-    "google_maps_rating": 3.9,
-    "google_maps_review_count": 259,
-    "website": "",
-    "phone": "+34 933 07 39 81",
-    "instagram": "@22.",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Homemade food in @22. Menú with drink, bread, dessert. Group menus.",
-    "last_verified": "2026-03-24",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Restaurante+Felipe+%4022+C%2F+de+Llull%2C+294+Barcelona",
-    "tags": [
-      "group-dining",
-      "homemade",
-      "deal-ready"
-    ],
-    "menu_evidence": "menuveo_competitor",
-    "menu_del_dia_confirmed": true,
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-15:30",
-      "wednesday": "13:00-16:00, 20:00-24:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-15:30, 20:00-23:30",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "13:00-16:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1451,
-    "name": "Casa de Comidas Nogal",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "~15€",
-    "address_full": "C/ de la Diputació, 412",
-    "postal_code": "08013",
-    "google_maps_rating": 4.1,
-    "google_maps_review_count": 2710,
-    "website": "",
-    "phone": "+34 932 65 47 49",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "40+ years. Arrocería, paellas, calçots, cochinillo. Group menus. Terraza.",
-    "last_verified": "2026-03-24",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Casa+de+Comidas+Nogal+C%2F+de+la+Diputaci%C3%B3%2C+412+Barcelona",
-    "tags": [
-      "business-lunch",
-      "group-dining",
-      "historic",
-      "deal-ready",
-      "rice-dishes",
-      "terrace"
-    ],
-    "menu_evidence": "menuveo_competitor",
-    "menu_del_dia_confirmed": true,
-    "opening_hours_full": {
-      "monday": "13:00-16:30",
-      "tuesday": "13:00-15:30",
-      "wednesday": "13:00-16:00",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:30, 20:00-23:30",
-      "saturday": "13:00-16:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1452,
-    "name": "Restaurante Marés",
-    "neighborhood": "Eixample",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "~14€",
-    "address_full": "C/ del Comte Borrell, 208",
-    "postal_code": "08029",
-    "google_maps_rating": 5.0,
-    "google_maps_review_count": 49,
-    "website": "",
-    "phone": "+34 685 06 88 49",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "In Hotel Zenit Borrell. Cocktail menus, group events. Calamares a la andaluza.",
-    "last_verified": "2026-03-24",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurante+Mar%C3%A9s+C%2F+del+Comte+Borrell%2C+208+Barcelona",
-    "tags": [
-      "business-lunch",
-      "cocktails",
-      "group-dining",
-      "deal-ready"
-    ],
-    "menu_evidence": "menuveo_competitor",
-    "menu_del_dia_confirmed": true,
-    "opening_hours_full": {
-      "monday": "13:00-16:30, 20:00-23:30",
-      "tuesday": "13:00-16:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-16:00, 20:00-23:00",
-      "saturday": "13:00-16:30, 20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1453,
-    "name": "Nou Celler",
-    "neighborhood": "El Born",
-    "cuisine_type": "Catalan",
-    "pricing_tier": "mid-range",
-    "menu_tier": "confirmed",
-    "menu_price_range": "~15€",
-    "address_full": "C/ de la Princesa, 16",
-    "postal_code": "08003",
-    "google_maps_rating": 4.3,
-    "google_maps_review_count": 989,
-    "website": "",
-    "phone": "+34 933 10 47 73",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Since 1960. Traditional Catalan. Fricandó, bacalao a la llauna. Near Picasso Museum.",
-    "last_verified": "2026-03-24",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Nou+Celler+C%2F+de+la+Princesa%2C+16+Barcelona",
-    "tags": [
-      "historic",
-      "deal-ready",
-      "wine-bar"
-    ],
-    "menu_evidence": "menuveo_competitor",
-    "menu_del_dia_confirmed": true,
-    "opening_hours_full": {
-      "monday": "Closed",
-      "tuesday": "13:00-15:30",
-      "wednesday": "13:00-16:30, 20:00-23:30",
-      "thursday": "13:00-16:00",
-      "friday": "13:00-16:30",
-      "saturday": "13:00-16:00",
-      "sunday": "13:00-16:00, 20:00-23:30",
-      "closed_days": [
-        "monday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1454,
-    "name": "Café Solo",
-    "neighborhood": "Sant Antoni",
-    "cuisine_type": "Café",
-    "pricing_tier": "mid-range",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "C/ de Floridablanca, 24",
-    "postal_code": "08015",
-    "google_maps_rating": 4.8,
-    "google_maps_review_count": 326,
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Specialty coffee, brunch, tostadas. Pet friendly. Near Mercat de Sant Antoni.",
-    "last_verified": "2026-03-24",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+Solo+C%2F+de+Floridablanca%2C+24+Barcelona",
-    "tags": [
-      "brunch",
-      "dog-friendly"
-    ],
-    "menu_evidence": "menuveo_competitor",
     "menu_del_dia_confirmed": false,
-    "opening_hours_full": {
-      "monday": "09:00-16:30",
-      "tuesday": "09:00-16:30",
-      "wednesday": "09:00-17:30",
-      "thursday": "09:00-17:00",
-      "friday": "09:00-17:00",
-      "saturday": "09:00-17:00",
-      "sunday": "09:00-17:00",
-      "closed_days": []
-    },
-    "dog_friendly": true,
-    "has_photo": false
-  },
-  {
-    "id": 1455,
-    "name": "Xiscarexantar",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Spanish",
-    "pricing_tier": "budget",
-    "menu_tier": "likely",
-    "menu_price_range": "~12€",
-    "address_full": "C/ de Pere IV, 59",
-    "postal_code": "08018",
-    "google_maps_rating": 4.2,
-    "google_maps_review_count": 970,
-    "website": "",
-    "phone": "+34 934 85 58 62",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Menú for @22 office workers. Tapas, burgers, bravas. Late kitchen Fridays.",
-    "last_verified": "2026-03-24",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Xiscarexantar+C%2F+de+Pere+IV%2C+59+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "burgers",
-      "tapas"
-    ],
-    "menu_evidence": "menuveo_competitor",
-    "menu_del_dia_confirmed": false,
-    "opening_hours_full": {
-      "monday": "12:30-16:30, 19:30-23:00",
-      "tuesday": "12:30-16:00, 19:30-23:30",
-      "wednesday": "12:30-16:00, 19:30-23:00",
-      "thursday": "12:30-15:30, 19:30-22:30",
-      "friday": "12:30-16:00, 19:30-23:00",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "12:30-15:30",
-      "closed_days": []
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1456,
-    "name": "Restaurant Mediterrània",
-    "neighborhood": "Sarrià-Sant Gervasi",
-    "cuisine_type": "Mediterranean",
-    "pricing_tier": "mid-range",
-    "menu_tier": "likely",
     "menu_price_range": "",
-    "address_full": "C/ de Santaló, 8",
-    "postal_code": "08021",
-    "google_maps_rating": 4.8,
-    "google_maps_review_count": 92,
     "website": "",
-    "phone": "+34 932 41 18 00",
+    "google_maps_url": "https://www.google.com/maps/place/La+Margui/data=!4m7!3m6!1s0x12a4a328c85734c3:0x69aa75701a5bd81d!8m2!3d41.4069656!4d2.1864878",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Avinguda Meridiana, 97",
+    "postal_code": "",
+    "city": "Barcelona",
     "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "In Hotel Zenit Barcelona. Author cuisine. Bravas, croquetas, paellas.",
-    "last_verified": "2026-03-24",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Mediterr%C3%A0nia+C%2F+de+Santal%C3%B3%2C+8+Barcelona",
-    "tags": [
-      "rice-dishes"
-    ],
-    "menu_evidence": "menuveo_competitor",
-    "menu_del_dia_confirmed": false,
-    "opening_hours_full": {
-      "monday": "13:00-16:30, 20:00-23:00",
-      "tuesday": "13:00-15:30, 20:00-24:00",
-      "wednesday": "13:00-16:00, 20:00-23:30",
-      "thursday": "13:00-16:00, 20:00-23:30",
-      "friday": "13:00-15:30, 20:00-23:30",
-      "saturday": "13:00-16:00, 20:00-23:30",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "has_photo": false
-  },
-  {
-    "id": 1457,
-    "name": "Malhumor",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Café",
-    "pricing_tier": "mid-range",
-    "menu_tier": "none",
-    "menu_price_range": "",
-    "address_full": "C/ de la Llacuna, 128",
-    "postal_code": "08018",
-    "google_maps_rating": 4.9,
-    "google_maps_review_count": 729,
-    "website": "",
-    "phone": "+34 959 02 81 66",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Brunch in Poblenou. Acai bowl, café brasileño. Vegan options. Terraza, near Llacuna.",
-    "last_verified": "2026-03-24",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Malhumor+C%2F+de+la+Llacuna%2C+128+Barcelona",
-    "tags": [
-      "brunch",
-      "terrace",
-      "vegan",
-      "vegetarian"
-    ],
-    "menu_evidence": "menuveo_competitor",
-    "menu_del_dia_confirmed": false,
-    "opening_hours_full": {
-      "monday": "09:00-17:00",
-      "tuesday": "09:00-16:30",
-      "wednesday": "09:00-17:30",
-      "thursday": "09:00-17:00",
-      "friday": "09:00-17:00",
-      "saturday": "09:00-17:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
-    },
-    "outdoor_seating": true,
-    "has_photo": false
-  },
-  {
-    "id": 1458,
-    "name": "Chang Feng",
-    "neighborhood": "Poblenou",
-    "cuisine_type": "Chinese",
-    "pricing_tier": "budget",
-    "menu_tier": "likely",
-    "menu_price_range": "",
-    "address_full": "Av. Diagonal, 145",
-    "postal_code": "08018",
     "google_maps_rating": 4.4,
     "google_maps_review_count": 1022,
-    "website": "",
-    "phone": "+34 932 66 48 25",
-    "instagram": "",
-    "opening_hours_lunch": "13:00-16:00",
-    "notes": "Traditional Chinese. Generous portions. Group menus 2-7 people. Pato con almendras.",
-    "last_verified": "2026-03-24",
-    "status": "active",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Chang+Feng+Av.+Diagonal%2C+145+Barcelona",
-    "tags": [
-      "budget-friendly",
-      "group-dining",
-      "waterfront"
-    ],
-    "menu_evidence": "menuveo_competitor",
-    "menu_del_dia_confirmed": false,
-    "opening_hours_full": {
-      "monday": "12:30-16:00, 19:30-22:30",
-      "tuesday": "12:30-15:30, 19:30-23:00",
-      "wednesday": "12:30-16:30, 19:30-22:30",
-      "thursday": "12:30-15:30, 19:30-22:30",
-      "friday": "12:30-16:30, 19:30-23:00",
-      "saturday": "12:30-16:00, 19:30-23:00",
-      "sunday": "Closed",
-      "closed_days": [
-        "sunday"
-      ]
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
     },
-    "outdoor_seating": true,
-    "has_photo": false
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4069656,
+      "lng": 2.1864878
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1154
+  },
+  {
+    "name": "Platillo Volador",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/Platillo+Volador/data=!4m7!3m6!1s0x12a4a364be9527e7:0x5761609d5f47c62b!8m2!3d41.4089433!4d2.1886152",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer del Clot, 75",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.5,
+    "google_maps_review_count": 1634,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4089433,
+      "lng": 2.1886152
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1155
+  },
+  {
+    "name": "Bar Restaurante Secho's",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/Bar+Restaurante+Secho's/data=!4m7!3m6!1s0x12a4a37877e753bd:0xe9fe43f117b107e1!8m2!3d41.4071613!4d2.1907998",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer de la Llacuna, 167",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.8,
+    "google_maps_review_count": 368,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4071613,
+      "lng": 2.1907998
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1156
+  },
+  {
+    "name": "NANA restaurante - brasa",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/NANA+restaurante+-+brasa+Charcoal+Grill/data=!4m7!3m6!1s0x12a4a3268f73a06b:0xad20b4f7fed834aa!8m2!3d41.407634!4d2.189183",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Plaça del Mercat, 20",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.6,
+    "google_maps_review_count": 694,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.407634,
+      "lng": 2.189183
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1157
+  },
+  {
+    "name": "El Patio de mi Casa",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/El+Patio+de+mi+Casa/data=!4m7!3m6!1s0x12a4a32698dcb1eb:0x12cc38232c06459d!8m2!3d41.4069141!4d2.188879",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer del Coronel Sanfeliu, 17",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.4,
+    "google_maps_review_count": 645,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4069141,
+      "lng": 2.188879
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1158
+  },
+  {
+    "name": "NATURY Brunch",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/NATURY+Brunch/data=!4m7!3m6!1s0x12a4a3f214619d55:0x5ee5647a742a2b91!8m2!3d41.4085275!4d2.1883617",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer del Clot, 69",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.8,
+    "google_maps_review_count": 307,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4085275,
+      "lng": 2.1883617
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1159
+  },
+  {
+    "name": "Alevoso Bar",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/Alevoso+Bar/data=!4m7!3m6!1s0x12a4a37f0a5ff7ab:0x1d94181411b6991!8m2!3d41.4077294!4d2.1883778",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer del Clot, 64",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.7,
+    "google_maps_review_count": 151,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4077294,
+      "lng": 2.1883778
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1160
+  },
+  {
+    "name": "Aretapas Barcelona",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/Aretapas+Barcelona/data=!4m7!3m6!1s0x12a4a30bbef169af:0x3faaa8c33eab7dc0!8m2!3d41.4116595!4d2.1896056",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer del Clot, 139",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.6,
+    "google_maps_review_count": 155,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4116595,
+      "lng": 2.1896056
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1161
+  },
+  {
+    "name": "Il Palato - Restaurante y Charcutería Italiana",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/Il+Palato/data=!4m7!3m6!1s0x12a4a3478c0d65bf:0x9029cd4cbf0fc4d0!8m2!3d41.4089508!4d2.1888618",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer del Clot, 100, local 2",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.8,
+    "google_maps_review_count": 425,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4089508,
+      "lng": 2.1888618
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1162
+  },
+  {
+    "name": "Salamat Clot",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/Salamat+Clot/data=!4m7!3m6!1s0x12a4a3dfb74626c3:0x72eacb84d866dadf!8m2!3d41.4077002!4d2.1845397",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer dels Enamorats, 130",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.9,
+    "google_maps_review_count": 354,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4077002,
+      "lng": 2.1845397
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1163
+  },
+  {
+    "name": "La Lomita Bar Restaurante",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/La+Lomita+Bar+Restaurante/data=!4m7!3m6!1s0x12a4a3a81388cf11:0x9bf09c44ad958a3c!8m2!3d41.4126289!4d2.1862223",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer de la Nació, 6",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 5.0,
+    "google_maps_review_count": 41,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4126289,
+      "lng": 2.1862223
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1164
+  },
+  {
+    "name": "L'Olivera",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/L'Olivera/data=!4m7!3m6!1s0x12a4a324021c6c0f:0x648b1fff21a12203!8m2!3d41.4058963!4d2.1893331",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer dels Escultors Claperós, 39",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.2,
+    "google_maps_review_count": 3110,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4058963,
+      "lng": 2.1893331
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1165
+  },
+  {
+    "name": "La Fame",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/La+Fame/data=!4m7!3m6!1s0x12a4a3ae8a67e337:0x9b27277d73c1742c!8m2!3d41.4064961!4d2.186065",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer del Consell de Cent, 621",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.6,
+    "google_maps_review_count": 574,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4064961,
+      "lng": 2.186065
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1166
+  },
+  {
+    "name": "Clot Kebab Restaurante",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/Clot+Kebab+Resurante/data=!4m7!3m6!1s0x12a4a3a6df74ed0d:0x2574652a318c8200!8m2!3d41.4082027!4d2.1875391",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer de la Sèquia Comtal, 13, LOCAL 2",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.9,
+    "google_maps_review_count": 108,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4082027,
+      "lng": 2.1875391
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1167
+  },
+  {
+    "name": "Dolsotbap",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/Dolsotbap/data=!4m7!3m6!1s0x12a4a32672c89ac1:0xa1c82eba5f2cb6c1!8m2!3d41.409207!4d2.1887185",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer del Clot, 85",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.6,
+    "google_maps_review_count": 1185,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.409207,
+      "lng": 2.1887185
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1168
+  },
+  {
+    "name": "Restaurant La Llama",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/Restaurant+La+Llama/data=!4m7!3m6!1s0x12a4a2d626cadc57:0x576a15f2ecb85bb7!8m2!3d41.4140205!4d2.1842043",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer de Besalú, 44",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.6,
+    "google_maps_review_count": 1841,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4140205,
+      "lng": 2.1842043
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1169
+  },
+  {
+    "name": "El Brases",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/El+Brases/data=!4m7!3m6!1s0x12a4a3942866f13b:0x906dd6c007c8b505!8m2!3d41.4089231!4d2.1847721",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer de València, 589",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.7,
+    "google_maps_review_count": 667,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4089231,
+      "lng": 2.1847721
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1170
+  },
+  {
+    "name": "Portio",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/Portio/data=!4m7!3m6!1s0x12a4a3408cf35d47:0x5959ed68b1f33801!8m2!3d41.4078524!4d2.1894792",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer dels Escultors Claperós, 14",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.7,
+    "google_maps_review_count": 423,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4078524,
+      "lng": 2.1894792
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1171
+  },
+  {
+    "name": "La Taqueria",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/La+Taqueria/data=!4m7!3m6!1s0x12a4a3d6e447dd47:0x2c8d6520dbd900!8m2!3d41.4080831!4d2.1895269",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer dels Escultors Claperós, 8",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.4,
+    "google_maps_review_count": 665,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4080831,
+      "lng": 2.1895269
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1172
+  },
+  {
+    "name": "La Pala Clot",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/La+Pala+Clot/data=!4m7!3m6!1s0x12a4a3b7a8b59d73:0xf26000a03b5d16d0!8m2!3d41.4087899!4d2.1863733",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer de Rogent, 6",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.3,
+    "google_maps_review_count": 250,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4087899,
+      "lng": 2.1863733
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1173
+  },
+  {
+    "name": "Fortaleza Del Clot",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/Fortaleza+Del+Clot/data=!4m7!3m6!1s0x12a4a32700e8ac45:0xcdc47f07eec2a866!8m2!3d41.4079191!4d2.1865726",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Avinguda Meridiana, 111",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.5,
+    "google_maps_review_count": 532,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4079191,
+      "lng": 2.1865726
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1174
+  },
+  {
+    "name": "Chef bar restaurant",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/Chef+bar+restaurant/data=!4m7!3m6!1s0x12a4a30014779c47:0x99dca6f9984cec66!8m2!3d41.4080102!4d2.188551",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Plaça de Font i Sagué, 3",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.6,
+    "google_maps_review_count": 55,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4080102,
+      "lng": 2.188551
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1175
+  },
+  {
+    "name": "Imperdible",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/Imperdible/data=!4m7!3m6!1s0x12a4a31732c2975f:0x11f5c79e94a76b31!8m2!3d41.4085776!4d2.1884972",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer del Clot, 71",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.5,
+    "google_maps_review_count": 208,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4085776,
+      "lng": 2.1884972
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1176
+  },
+  {
+    "name": "Empanades casolanes iaia Celia",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/Empanades+casolanes+iaia+Celia+Clot/data=!4m7!3m6!1s0x12a4a32613aeaaab:0x7980dad6b08a1ff!8m2!3d41.4094542!4d2.1883413",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer d'Aragó, 612",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.9,
+    "google_maps_review_count": 184,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4094542,
+      "lng": 2.1883413
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1177
+  },
+  {
+    "name": "La Tasca de Pancho",
+    "address": "Clot, Barcelona",
+    "neighborhood": "Clot",
+    "cuisine_type": "Spanish",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "website": "",
+    "google_maps_url": "https://www.google.com/maps/place/La+Tasca+de+Pancho/data=!4m7!3m6!1s0x12a4a3fb9cc844f9:0xafa142dc3782591d!8m2!3d41.4121095!4d2.1897842",
+    "phone": "",
+    "opening_hours_lunch": "",
+    "notes": "",
+    "verification_status": "unverified",
+    "menu_tier": "unknown",
+    "menu_evidence": "",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "source": "google_maps_scrape",
+    "address_full": "Carrer del Clot, 155",
+    "postal_code": "",
+    "city": "Barcelona",
+    "instagram": "",
+    "google_maps_rating": 4.5,
+    "google_maps_review_count": 19,
+    "opening_hours_full": {},
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "tags": [],
+    "metro_station": "",
+    "last_verified": "2026-03-25",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "coordinates": {
+      "lat": 41.4121095,
+      "lng": 2.1897842
+    },
+    "image_url": "",
+    "has_photo": false,
+    "id": 1178
   }
 ];

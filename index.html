@@ -101,7 +101,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text-main);
 .open-pill.closed{background:var(--red-bg);color:var(--red);}
 .open-pill .pulse{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse-dot 2s infinite;}
 @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.4);}}
-.card-notes{font-size:0.78rem;color:var(--text-sub);margin-top:0.35rem;line-height:1.5;padding-top:0.5rem;border-top:1px solid var(--border);max-height:3em;overflow:hidden;text-overflow:ellipsis;flex-grow:1;}
+.card-notes{font-size:0.78rem;color:var(--text-sub);margin-top:0.35rem;line-height:1.5;padding-top:0.5rem;border-top:1px solid var(--border);display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;flex-grow:1;}
 .card-footer{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.65rem;padding-top:0.65rem;border-top:1px solid var(--border);align-items:center;}
 .card-footer a{font-size:0.72rem;font-weight:600;color:var(--accent);text-decoration:none;padding:0.25rem 0.5rem;border-radius:8px;border:1px solid var(--border);transition:all 0.2s;}
 .card-footer a:hover{background:var(--accent-sub);border-color:var(--accent);}
@@ -199,7 +199,16 @@ footer a:hover{color:var(--text-main);}
 .map-mode-btn{padding:0.3rem 0.7rem;border:1px solid var(--border);border-radius:16px;background:var(--card);color:var(--text-sub);font-size:0.72rem;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:Inter,sans-serif;}
 .map-mode-btn:hover{border-color:var(--accent);color:var(--accent);}
 .map-mode-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);}
-@media(max-width:640px){.grid{grid-template-columns:1fr;}.stats{gap:0.75rem;}.stat{padding:0.75rem;min-width:calc(50% - 0.5rem);}.search-row{flex-direction:column;}.filters{flex-direction:column;align-items:stretch;}.action-bar{justify-content:center;}.nav-links a span{display:none;}}
+/* Tooltips */
+[data-tooltip]{position:relative;cursor:help;}
+[data-tooltip]::after{content:attr(data-tooltip);position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%) translateY(4px);background:var(--text-main);color:var(--bg);padding:0.5rem 0.75rem;border-radius:8px;font-size:0.72rem;font-weight:400;white-space:normal;width:max-content;max-width:220px;line-height:1.45;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.15);opacity:0;pointer-events:none;transition:opacity 0.2s ease, transform 0.2s ease;z-index:999;letter-spacing:0;text-transform:none;}
+[data-tooltip]::before{content:'';position:absolute;bottom:calc(100% + 3px);left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--text-main);opacity:0;pointer-events:none;transition:opacity 0.2s ease;z-index:999;}
+[data-tooltip]:hover::after{opacity:1;transform:translateX(-50%) translateY(0);}
+[data-tooltip]:hover::before{opacity:1;}
+.stat[data-tooltip]::after{bottom:auto;top:calc(100% + 8px);transform:translateX(-50%) translateY(-4px);}
+.stat[data-tooltip]::before{bottom:auto;top:calc(100% + 3px);border-top-color:transparent;border-bottom-color:var(--text-main);}
+.stat[data-tooltip]:hover::after{transform:translateX(-50%) translateY(0);}
+@media(max-width:640px){.grid{grid-template-columns:1fr;}.stats{gap:0.75rem;}.stat{padding:0.75rem;min-width:calc(50% - 0.5rem);}.search-row{flex-direction:column;}.filters{flex-direction:column;align-items:stretch;}.action-bar{justify-content:center;}.nav-links a span{display:none;}[data-tooltip]::after{max-width:180px;font-size:0.68rem;}}
 img[src*="logo.png"] { mix-blend-mode: multiply; }
 :root.dark img[src*="logo.png"] { mix-blend-mode: normal; filter: brightness(1.2); }
 :root.dark .leaflet-tile{filter:invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9);}
@@ -229,13 +238,13 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
 <p id="subtitle">Loading Barcelona restaurant database...</p>
 </div>
 <div class="stats" id="statsbar">
-<div class="stat"><div class="stat-num" id="s-total">—</div><div class="stat-label" data-i18n="total">Total Restaurants</div></div>
-<div class="stat"><div class="stat-num green" id="s-confirmed">—</div><div class="stat-label" data-i18n="confirmed_menu">🟢 Deal-Ready</div></div>
-<div class="stat"><div class="stat-num yellow" id="s-likely">—</div><div class="stat-label" data-i18n="likely_menu">🟡 High Potential</div></div>
-<div class="stat"><div class="stat-num red" id="s-none">—</div><div class="stat-label" data-i18n="no_menu_stat">🔴 Prospects</div></div>
-<div class="stat"><div class="stat-num" id="s-hoods">—</div><div class="stat-label" data-i18n="neighborhoods">Neighborhoods</div></div>
-<div class="stat"><div class="stat-num" id="s-mapped" style="color:var(--accent)">—</div><div class="stat-label" data-i18n="on_map">📍 On Map</div></div>
-<div class="stat"><div class="stat-num" id="s-tagged" style="color:#7C3AED">—</div><div class="stat-label" data-i18n="tagged">🏷️ Tagged</div></div>
+<div class="stat" data-tooltip="All restaurants in our Barcelona database"><div class="stat-num" id="s-total">—</div><div class="stat-label" data-i18n="total">Total Restaurants</div></div>
+<div class="stat" data-tooltip="Verified menu + contact info available. Ready for partnership outreach."><div class="stat-num green" id="s-confirmed">—</div><div class="stat-label" data-i18n="confirmed_menu">🟢 Deal-Ready</div></div>
+<div class="stat" data-tooltip="Strong profile but missing some contact info or menu verification. Worth enriching."><div class="stat-num yellow" id="s-likely">—</div><div class="stat-label" data-i18n="likely_menu">🟡 High Potential</div></div>
+<div class="stat" data-tooltip="Early-stage leads — limited data available. Need more research before outreach."><div class="stat-num red" id="s-none">—</div><div class="stat-label" data-i18n="no_menu_stat">🔴 Prospects</div></div>
+<div class="stat" data-tooltip="Distinct Barcelona neighborhoods covered in the database"><div class="stat-num" id="s-hoods">—</div><div class="stat-label" data-i18n="neighborhoods">Neighborhoods</div></div>
+<div class="stat" data-tooltip="Restaurants with precise GPS coordinates shown on the interactive map"><div class="stat-num" id="s-mapped" style="color:var(--accent)">—</div><div class="stat-label" data-i18n="on_map">📍 On Map</div></div>
+<div class="stat" data-tooltip="Restaurants with cuisine or feature tags for filtering"><div class="stat-num" id="s-tagged" style="color:#7C3AED">—</div><div class="stat-label" data-i18n="tagged">🏷️ Tagged</div></div>
 </div>
 <div class="dashboard-toggle">
   <button id="dash-toggle" onclick="toggleDashboard()">📊 Neighborhood Dashboard</button>
@@ -250,15 +259,15 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
   </div>
 </div>
 <div class="filters" id="filters">
-  <span class="chip g" data-filter="mtier" data-value="confirmed">🟢 <span data-i18n="confirmed">Deal-Ready</span></span>
-  <span class="chip y" data-filter="mtier" data-value="likely">🟡 <span data-i18n="likely">High Potential</span></span>
-  <span class="chip r" data-filter="mtier" data-value="none">🔴 <span data-i18n="no_menu">Prospects</span></span>
-  <span class="chip" data-filter="fav" data-value="yes">⭐ <span data-i18n="favorites">Favorites</span> <span id="fav-count" style="font-size:0.65rem;opacity:0.7;"></span></span>
-  <span class="chip g" data-filter="openNow" data-value="yes">🟢 <span data-i18n="open_now">Open Now</span></span>
+  <span class="chip g" data-filter="mtier" data-value="confirmed" data-tooltip="Verified menu + contact info. Ready for partnership outreach.">🟢 <span data-i18n="confirmed">Deal-Ready</span></span>
+  <span class="chip y" data-filter="mtier" data-value="likely" data-tooltip="Strong profile but missing some data. Worth enriching for outreach.">🟡 <span data-i18n="likely">High Potential</span></span>
+  <span class="chip r" data-filter="mtier" data-value="none" data-tooltip="Early-stage leads with limited data. Need more research.">🔴 <span data-i18n="no_menu">Prospects</span></span>
+  <span class="chip" data-filter="fav" data-value="yes" data-tooltip="Your personally bookmarked restaurants">⭐ <span data-i18n="favorites">Favorites</span> <span id="fav-count" style="font-size:0.65rem;opacity:0.7;"></span></span>
+  <span class="chip g" data-filter="openNow" data-value="yes" data-tooltip="Restaurants currently open based on listed hours">🟢 <span data-i18n="open_now">Open Now</span></span>
   <span class="pipe">|</span>
-  <span class="chip" data-filter="tier" data-value="budget">💚 <span data-i18n="budget">Budget</span></span>
-  <span class="chip" data-filter="tier" data-value="mid-range">🧡 <span data-i18n="mid_range">Mid-Range</span></span>
-  <span class="chip" data-filter="tier" data-value="premium">💜 <span data-i18n="premium">Premium</span></span>
+  <span class="chip" data-filter="tier" data-value="budget" data-tooltip="Under €12 avg. — affordable, casual dining">💚 <span data-i18n="budget">Budget</span></span>
+  <span class="chip" data-filter="tier" data-value="mid-range" data-tooltip="€12–25 avg. — ideal sweet spot for 2-for-1 deals">🧡 <span data-i18n="mid_range">Mid-Range</span></span>
+  <span class="chip" data-filter="tier" data-value="premium" data-tooltip="€25+ avg. — upscale dining, higher margins">💜 <span data-i18n="premium">Premium</span></span>
   <span class="pipe">|</span>
   <select id="hood-select" class="sort-select" style="min-width:160px;padding:0.4rem 0.75rem;">
     <option value="">All Neighborhoods</option>
