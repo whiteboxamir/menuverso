@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Menuverso Restaurant Page Generator — Neotaste-Grade Edition
+Menuverso Restaurant Page Generator — Partnership Pipeline Edition
 Creates individual HTML pages for each restaurant with:
 - Full-width cuisine hero image with gradient overlay
 - Tabbed content layout (Info | Map | Reviews | Nearby)
-- Menú del Día highlight card (Neotaste-style deal card)
+- Partner Readiness profile card
 - Premium typography, rounded corners, modern aesthetic
-- Dark mode, QR code, share buttons, JSON-LD
+- Dark mode, share buttons, JSON-LD
 """
 
 import json
@@ -106,13 +106,31 @@ def generate_page(r, all_restaurants, total_count):
     if has_coords: completeness += 5
     comp_pct = min(completeness, 100)
 
-    tier_label = {"confirmed": "Menú del Día Confirmed", "likely": "Likely Menú del Día", "none": "No Menú del Día"}.get(tier, "")
+    tier_label = {"confirmed": "Deal-Ready", "likely": "High Potential", "none": "Prospect"}.get(tier, "")
     tier_emoji = {"confirmed": "🟢", "likely": "🟡", "none": "🔴"}.get(tier, "")
     tier_color = {"confirmed": "#059669", "likely": "#D97706", "none": "#DC2626"}.get(tier, "#94A3B8")
     tier_bg = {"confirmed": "#D1FAE5", "likely": "#FEF3C7", "none": "#FEE2E2"}.get(tier, "#F1F5F9")
 
+    # Partner readiness score
+    readiness = 0
+    if phone: readiness += 20
+    if website: readiness += 20
+    if instagram: readiness += 15
+    if has_real_photo: readiness += 10
+    if rating and float(rating) >= 4.0: readiness += 15
+    p_val = None
+    if price:
+        import re
+        nums = re.findall(r'[\d.]+', price)
+        if nums: p_val = float(nums[0])
+    if p_val and 12 <= p_val <= 25: readiness += 20
+    elif p_val and p_val > 25: readiness += 10
+    readiness = min(readiness, 100)
+    readiness_tier = 'high' if readiness >= 70 else 'mid' if readiness >= 40 else 'low'
+    readiness_color = {'high': '#059669', 'mid': '#D97706', 'low': '#DC2626'}[readiness_tier]
+
     page_url = f"https://whiteboxamir.github.io/menuverso/r/{r['id']}.html"
-    whatsapp_text = quote(f"Check out {name} in {hood}, Barcelona! {price} menú del día. {page_url}")
+    whatsapp_text = quote(f"Check out {name} in {hood}, Barcelona! {cuisine} restaurant. {page_url}")
 
     # JSON-LD
     jsonld = {
@@ -153,7 +171,7 @@ def generate_page(r, all_restaurants, total_count):
     nearby_cards = []
     for dist, nr in nearby:
         nt = nr.get("menu_tier", "none")
-        nl = {"confirmed": "🟢", "likely": "🟡", "none": "🔴"}.get(nt, "")
+        nl = {"confirmed": "🟢 Deal-Ready", "likely": "🟡 High Potential", "none": ""}.get(nt, "")
         dist_m = int(dist * 1000)
         dist_str = f"{dist_m}m" if dist_m < 1000 else f"{dist:.1f}km"
         nearby_cards.append(f'''<a href="{nr['id']}.html" class="nearby-card">
@@ -228,10 +246,10 @@ if(document.documentElement.classList.contains('dark')){{document.querySelectorA
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{name} — Menú del Día Barcelona | Menuverso</title>
-<meta name="description" content="{name} in {hood}, Barcelona. {cuisine} cuisine. {price} menú del día. {tier_label}. Rating: {rating}/5 ({reviews} reviews).">
-<meta property="og:title" content="{name} — Menú del Día | Menuverso">
-<meta property="og:description" content="{cuisine} in {hood}. {price} menú del día. {'⭐ '+str(rating)+'/5' if rating else ''}">
+<title>{name} — Barcelona Restaurant | Menuverso</title>
+<meta name="description" content="{name} in {hood}, Barcelona. {cuisine} cuisine. {tier_label}. Partner readiness: {readiness}/100. Rating: {rating}/5 ({reviews} reviews).">
+<meta property="og:title" content="{name} — {cuisine} in {hood} | Menuverso">
+<meta property="og:description" content="{cuisine} in {hood}. {tier_label}. {'⭐ '+str(rating)+'/5' if rating else ''}">
 <meta property="og:url" content="{page_url}">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:site_name" content="Menuverso">
@@ -281,13 +299,17 @@ body{{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-
 /* Container */
 .container{{max-width:720px;margin:-40px auto 0;padding:0 1rem 2rem;position:relative;z-index:2;}}
 
-/* Deal Card (Neotaste-style) */
+/* Partner Profile Card */
 .deal-card{{background:{tier_bg};border:2px solid {tier_color}22;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}}
 .deal-header{{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}}
 .deal-emoji{{font-size:1.5rem;}}
 .deal-title{{font-size:1.1rem;font-weight:700;color:{tier_color};}}
 .deal-price{{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:0.25rem;}}
 .deal-desc{{font-size:0.82rem;color:var(--sub);}}
+.readiness-bar{{margin-top:0.75rem;}}
+.readiness-label{{font-size:0.72rem;font-weight:600;color:var(--sub);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:4px;}}
+.readiness-track{{height:8px;background:var(--bg);border-radius:4px;overflow:hidden;}}
+.readiness-fill{{height:100%;border-radius:4px;background:{readiness_color};transition:width 0.6s ease;}}
 :root.dark .deal-card{{background:var(--card);border-color:{tier_color}44;}}
 
 /* Open Status */
@@ -382,11 +404,10 @@ img[src*="logo.png"]{{mix-blend-mode:multiply;}}
     <span>Menuverso</span>
   </a>
   <div class="nav-links">
-    <a href="../app.html"><span>🏠 </span>Discover</a>
     <a href="../index.html"><span>📋 </span>Database</a>
-    <a href="../finder.html"><span>🔍 </span>Finder</a>
-    <a href="../analytics.html"><span>📊 </span>Analytics</a>
-    <a href="../lists.html"><span>🏆 </span>Best Of</a>
+    <a href="../analytics.html"><span>📊 </span>Market Intel</a>
+    <a href="../lists.html"><span>🎯 </span>Target Lists</a>
+    <a href="../landing.html"><span>💰 </span>Pitch</a>
   </div>
   <div>
     <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
@@ -411,14 +432,18 @@ img[src*="logo.png"]{{mix-blend-mode:multiply;}}
 </div>
 
 <div class="container">
-  <!-- Menú del Día Deal Card -->
+  <!-- Partner Profile Card -->
   <div class="deal-card">
     <div class="deal-header">
       <span class="deal-emoji">{tier_emoji}</span>
       <span class="deal-title">{tier_label}</span>
     </div>
     {f'<div class="deal-price">{price}</div>' if price else ''}
-    <div class="deal-desc">{'Menú del día price range · ' + hood if price else hood}{f' · {metro}' if metro else ''}</div>
+    <div class="deal-desc">{hood}{f' · {metro}' if metro else ''}{f' · {cuisine}' if cuisine else ''}</div>
+    <div class="readiness-bar">
+      <div class="readiness-label">Partner Readiness: {readiness}/100</div>
+      <div class="readiness-track"><div class="readiness-fill" style="width:{readiness}%"></div></div>
+    </div>
   </div>
 
   {quick_actions_html}
@@ -469,7 +494,7 @@ img[src*="logo.png"]{{mix-blend-mode:multiply;}}
 </div>
 
 <footer>
-  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #{r['id']} of {total_count:,}
+  <a href="../index.html">Menuverso</a> · <a href="../analytics.html">Market Intel</a> · <a href="../lists.html">Target Lists</a> · Restaurant #{r['id']} of {total_count:,}
 </footer>
 
 <script>
@@ -498,7 +523,7 @@ function switchTab(id){{
 
 // Share
 function shareNative(){{
-  if(navigator.share){{navigator.share({{title:'{name} — Menuverso',text:'{cuisine} in {hood}. {price} menú del día.',url:window.location.href}})}}
+  if(navigator.share){{navigator.share({{title:'{name} — Menuverso',text:'{cuisine} in {hood}. {price}.',url:window.location.href}})}}
   else{{copyLink(document.querySelector('.share-btn'))}}
 }}
 function copyLink(btn){{
@@ -579,13 +604,9 @@ def main():
     # Generate sitemap
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/</loc><priority>1.0</priority></url>\n'
-    sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/app.html</loc><priority>1.0</priority></url>\n'
-    sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/finder.html</loc><priority>0.9</priority></url>\n'
-    sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/analytics.html</loc><priority>0.8</priority></url>\n'
+    sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/analytics.html</loc><priority>0.9</priority></url>\n'
     sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/lists.html</loc><priority>0.9</priority></url>\n'
-    sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/collections.html</loc><priority>0.7</priority></url>\n'
-    sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/crawl.html</loc><priority>0.7</priority></url>\n'
-    sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/landing.html</loc><priority>0.9</priority></url>\n'
+    sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/landing.html</loc><priority>1.0</priority></url>\n'
     for r in restaurants:
         sitemap += f'  <url><loc>https://whiteboxamir.github.io/menuverso/r/{r["id"]}.html</loc><priority>0.6</priority></url>\n'
     sitemap += '</urlset>'
@@ -593,9 +614,9 @@ def main():
     with open("sitemap.xml", "w") as f:
         f.write(sitemap)
 
-    print(f"🏗️  Generated {total} Neotaste-grade restaurant pages in /{OUTPUT_DIR}/")
-    print(f"   Features: hero images, tabbed layout, deal cards, dark mode, OG tags")
-    print(f"📋 Generated sitemap.xml with {total + 7} URLs")
+    print(f"🏗️  Generated {total} partnership pipeline restaurant profiles in /{OUTPUT_DIR}/")
+    print(f"   Features: hero images, tabbed layout, readiness scores, dark mode, OG tags")
+    print(f"📋 Generated sitemap.xml with {total + 4} URLs")
 
 
 if __name__ == "__main__":

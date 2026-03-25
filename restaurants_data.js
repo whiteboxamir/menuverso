@@ -51,7 +51,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "rice-dishes"
     ],
     "metro_station": "Urgell (L1)",
@@ -119,7 +119,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "seafood",
       "tapas"
     ],
@@ -187,7 +187,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "last_verified": "2026-03-22",
@@ -252,7 +252,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "business-lunch",
       "ceviche",
-      "menú-del-día",
+      "deal-ready",
       "seafood",
       "vegan",
       "vegetarian"
@@ -322,7 +322,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "business-lunch",
       "healthy",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "last_verified": "2026-03-22",
@@ -388,7 +388,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "pizza"
     ],
     "metro_station": "Hospital Clínic (L5)",
@@ -457,7 +457,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "business-lunch",
       "instagrammable",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Girona (L4)",
     "last_verified": "2026-03-22",
@@ -521,7 +521,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Girona (L4)",
     "last_verified": "2026-03-22",
@@ -587,7 +587,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Hospital Clínic (L5)",
     "last_verified": "2026-03-22",
@@ -652,7 +652,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "business-lunch",
       "creative",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Girona (L4)",
     "last_verified": "2026-03-22",
@@ -717,7 +717,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "reservations",
       "weekday-lunch"
     ],
@@ -784,7 +784,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Fontana (L3)",
     "last_verified": "2026-03-22",
@@ -849,7 +849,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "metro_station": "Fontana (L3)",
@@ -915,7 +915,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "great-value",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Joanic (L4)",
     "last_verified": "2026-03-22",
@@ -982,7 +982,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "great-value",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Fontana (L3)",
     "last_verified": "2026-03-22",
@@ -1049,7 +1049,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "budget-friendly",
       "great-value",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Fontana (L3)",
     "last_verified": "2026-03-23",
@@ -1115,7 +1115,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "group-dining",
-      "menú-del-día",
+      "deal-ready",
       "ramen",
       "vegan",
       "vegetarian"
@@ -1185,7 +1185,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "family-run",
       "kid-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Fontana (L3)",
     "last_verified": "2026-03-22",
@@ -1252,7 +1252,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "budget-friendly",
       "great-value",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Fontana (L3)",
     "last_verified": "2026-03-23",
@@ -1318,7 +1318,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Fontana (L3)",
     "last_verified": "2026-03-22",
@@ -1445,7 +1445,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Jaume I (L4)",
     "last_verified": "2026-03-22",
@@ -1511,7 +1511,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Jaume I (L4)",
     "last_verified": "2026-03-22",
@@ -1574,7 +1574,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "tapas"
     ],
     "metro_station": "Jaume I (L4)",
@@ -1640,7 +1640,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Arc de Triomf (L1)",
     "last_verified": "2026-03-23",
@@ -1707,7 +1707,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "budget-friendly",
       "homemade",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Poble Sec (L3)",
     "last_verified": "2026-03-23",
@@ -1773,7 +1773,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Paral·lel (L2/L3)",
     "last_verified": "2026-03-23",
@@ -1839,7 +1839,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "market-fresh",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Paral·lel (L2/L3)",
     "last_verified": "2026-03-23",
@@ -1904,7 +1904,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Poble Sec (L3)",
     "last_verified": "2026-03-23",
@@ -1970,7 +1970,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "gluten-free",
-      "menú-del-día",
+      "deal-ready",
       "tacos",
       "vegan",
       "vegetarian",
@@ -2040,7 +2040,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "gluten-free",
-      "menú-del-día",
+      "deal-ready",
       "vegetarian"
     ],
     "metro_station": "Liceu (L3)",
@@ -2105,7 +2105,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "homemade",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Sant Antoni (L2)",
     "last_verified": "2026-03-22",
@@ -2171,7 +2171,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "great-value",
-      "menú-del-día",
+      "deal-ready",
       "wine-bar"
     ],
     "metro_station": "Sant Antoni (L2)",
@@ -2238,7 +2238,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "homemade",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Drassanes (L3)",
     "last_verified": "2026-03-23",
@@ -2301,7 +2301,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Paral·lel (L2/L3)",
     "last_verified": "2026-03-23",
@@ -2365,7 +2365,7 @@ var RESTAURANT_DATA = [
       "card": "assets/photos/36_card.webp"
     },
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "rice-dishes",
       "weekday-lunch"
     ],
@@ -2430,7 +2430,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "seafood",
       "sushi",
       "weekday-lunch"
@@ -2498,7 +2498,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "market-fresh",
-      "menú-del-día",
+      "deal-ready",
       "seafood",
       "waterfront",
       "weekday-lunch"
@@ -2567,7 +2567,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "market-fresh",
-      "menú-del-día",
+      "deal-ready",
       "seafood"
     ],
     "metro_station": "Barceloneta (L4)",
@@ -2633,7 +2633,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "seafood"
     ],
     "metro_station": "Barceloneta (L4)",
@@ -2699,7 +2699,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "organic",
       "vegetarian"
     ],
@@ -2764,7 +2764,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Jaume I (L4)",
     "last_verified": "2026-03-22",
@@ -2829,7 +2829,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "rice-dishes"
     ],
     "metro_station": "Liceu (L3)",
@@ -2895,7 +2895,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Jaume I (L4)",
     "last_verified": "2026-03-22",
@@ -3026,7 +3026,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "tapas"
     ],
     "metro_station": "Vallcarca (L3)",
@@ -3093,7 +3093,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Hospital de Bellvitge (L1)",
     "last_verified": "2026-03-23",
@@ -3161,7 +3161,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "business-lunch",
       "homemade",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Penitents (L3)",
     "last_verified": "2026-03-22",
@@ -3228,7 +3228,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Gorg (L2/L10)",
     "last_verified": "2026-03-22",
@@ -3294,7 +3294,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "rice-dishes",
       "weekday-lunch"
     ],
@@ -3363,7 +3363,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "homemade",
       "market-fresh",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "metro_station": "Bogatell (L4)",
@@ -3429,7 +3429,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Poblenou (L4)",
     "last_verified": "2026-03-22",
@@ -3492,7 +3492,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "rice-dishes"
     ],
     "metro_station": "Llacuna (L4)",
@@ -3561,7 +3561,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "breakfast",
       "brunch",
-      "menú-del-día",
+      "deal-ready",
       "organic",
       "vegan",
       "vegetarian"
@@ -3629,7 +3629,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Bogatell (L4)",
     "last_verified": "2026-03-22",
@@ -3692,7 +3692,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "organic",
       "vegan",
       "vegetarian"
@@ -3760,7 +3760,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "metro_station": "Fabra i Puig (L1)",
@@ -3825,7 +3825,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "ramen"
     ],
     "metro_station": "Poblenou (L4)",
@@ -3890,7 +3890,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "homemade",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Sagrada Família (L2/L5)",
     "last_verified": "2026-03-22",
@@ -3957,7 +3957,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "budget-friendly",
       "homemade",
-      "menú-del-día",
+      "deal-ready",
       "vegetarian"
     ],
     "metro_station": "Monumental (L2)",
@@ -4024,7 +4024,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "rice-dishes"
     ],
     "metro_station": "Sagrada Família (L2/L5)",
@@ -4091,7 +4091,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "dog-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Torras i Bages (L1)",
     "last_verified": "2026-03-22",
@@ -4156,7 +4156,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "budget-friendly",
       "cozy",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Clot (L1/L2)",
     "last_verified": "2026-03-22",
@@ -4222,7 +4222,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Clot (L1/L2)",
     "last_verified": "2026-03-22",
@@ -4288,7 +4288,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "terrace"
     ],
     "metro_station": "Navas (L1)",
@@ -4354,7 +4354,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "family-run",
       "kid-friendly",
-      "menú-del-día",
+      "deal-ready",
       "tacos"
     ],
     "metro_station": "Via Júlia (L4)",
@@ -4419,7 +4419,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "market-fresh",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Maria Cristina (L3)",
     "last_verified": "2026-03-22",
@@ -4483,7 +4483,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "pizza"
     ],
     "metro_station": "Sant Andreu (L1)",
@@ -4550,7 +4550,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "homemade",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Sant Andreu (L1)",
     "last_verified": "2026-03-22",
@@ -4613,7 +4613,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "sushi"
     ],
     "metro_station": "Torras i Bages (L1)",
@@ -4681,7 +4681,7 @@ var RESTAURANT_DATA = [
       "card": "assets/photos/71_card.webp"
     },
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "rice-dishes"
     ],
     "metro_station": "El Carmel (L5)",
@@ -4746,7 +4746,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "homemade",
-      "menú-del-día",
+      "deal-ready",
       "solo-friendly",
       "waterfront"
     ],
@@ -4944,7 +4944,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "business-lunch",
       "date-night",
-      "menú-del-día",
+      "deal-ready",
       "michelin",
       "tasting-menu"
     ],
@@ -5276,7 +5276,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "business-lunch",
       "date-night",
-      "menú-del-día",
+      "deal-ready",
       "michelin",
       "tasting-menu"
     ],
@@ -5999,7 +5999,7 @@ var RESTAURANT_DATA = [
       "business-lunch",
       "creative",
       "historic",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Verdaguer (L4/L5)",
     "last_verified": "2026-03-22",
@@ -6824,7 +6824,7 @@ var RESTAURANT_DATA = [
       "business-lunch",
       "great-value",
       "market-fresh",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Tetuan (L2)",
     "last_verified": "2026-03-22",
@@ -7148,7 +7148,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "business-lunch",
       "market-fresh",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Sant Antoni (L2)",
     "last_verified": "2026-03-22",
@@ -7732,7 +7732,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "vegetarian"
     ],
     "metro_station": "Urgell (L1)",
@@ -7863,7 +7863,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "burgers",
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "vegan",
       "vegetarian"
     ],
@@ -7930,7 +7930,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "budget-friendly",
       "great-value",
-      "menú-del-día",
+      "deal-ready",
       "vegetarian"
     ],
     "metro_station": "Urgell (L1)",
@@ -7997,7 +7997,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "terrace",
       "vegan",
       "vegetarian"
@@ -8067,7 +8067,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "budget-friendly",
       "homemade",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Diagonal (L3/L5)",
     "last_verified": "2026-03-22",
@@ -9765,7 +9765,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "homemade",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Fontana (L3)",
     "last_verified": "2026-03-22",
@@ -11512,7 +11512,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Liceu (L3)",
     "last_verified": "2026-03-22",
@@ -11578,7 +11578,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "date-night",
-      "menú-del-día",
+      "deal-ready",
       "rice-dishes"
     ],
     "metro_station": "Liceu (L3)",
@@ -11642,7 +11642,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Jaume I (L4)",
     "last_verified": "2026-03-22",
@@ -15095,7 +15095,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "gluten-free",
-      "menú-del-día",
+      "deal-ready",
       "vegetarian"
     ],
     "metro_station": "Sant Antoni (L2)",
@@ -17576,7 +17576,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "vegan",
       "vegetarian"
     ],
@@ -17835,7 +17835,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "vegan",
       "vegetarian"
     ],
@@ -19371,7 +19371,7 @@ var RESTAURANT_DATA = [
     },
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Plaça del Centre (L3)",
     "last_verified": "2026-03-22",
@@ -19502,7 +19502,7 @@ var RESTAURANT_DATA = [
       "great-value",
       "historic",
       "homemade",
-      "menú-del-día",
+      "deal-ready",
       "rice-dishes",
       "wine-bar"
     ],
@@ -20264,7 +20264,7 @@ var RESTAURANT_DATA = [
       "team": []
     },
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "metro_station": "Sagrada Família (L2/L5)",
     "last_verified": "2026-03-22",
@@ -20455,7 +20455,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Verdaguer (L4/L5)",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -20590,7 +20590,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Universitat (L1/L2)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -20726,7 +20726,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -20994,7 +20994,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Urgell (L1)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -21063,7 +21063,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -21133,7 +21133,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Urgell (L1)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -21941,7 +21941,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Verdaguer (L4/L5)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -22011,7 +22011,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Urgell (L1)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -22078,7 +22078,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Urgell (L1)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -22146,7 +22146,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Catalunya (L1/L3)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "vegetarian",
       "weekday-lunch"
     ],
@@ -22219,7 +22219,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "budget-friendly",
       "historic",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -22286,7 +22286,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Sant Antoni (L2)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -22489,7 +22489,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Liceu (L3)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -22757,7 +22757,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Sant Antoni (L2)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -22894,7 +22894,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Sant Antoni (L2)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "vegetarian"
     ],
     "images": {
@@ -23097,7 +23097,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Poble Sec (L3)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -23166,7 +23166,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Poble Sec (L3)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -24106,7 +24106,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Jaume I (L4)",
     "tags": [
       "historic",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -24310,7 +24310,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Jaume I (L4)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -24508,7 +24508,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Poblenou (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -24638,7 +24638,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Poblenou (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -24707,7 +24707,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Poblenou (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -24844,7 +24844,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Fontana (L3)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -25041,7 +25041,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Fontana (L3)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -25178,7 +25178,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Fontana (L3)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -25510,7 +25510,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Sant Antoni (L2)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -25579,7 +25579,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Drassanes (L3)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -26057,7 +26057,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "El Carmel (L5)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -27720,7 +27720,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Plaça de Sants (L1)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "rice-dishes"
     ],
     "images": {
@@ -27791,7 +27791,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Collblanc (L5)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -27925,7 +27925,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Collblanc (L5)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -28591,7 +28591,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Collblanc (L5)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "tapas",
       "weekday-lunch"
     ],
@@ -28726,7 +28726,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Hostafrancs (L1)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -28794,7 +28794,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "budget-friendly",
       "dog-friendly",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -28865,7 +28865,7 @@ var RESTAURANT_DATA = [
       "budget-friendly",
       "family-run",
       "kid-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -29125,7 +29125,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Plaça de Sants (L1)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -29193,7 +29193,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Santa Eulàlia (L1)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -29330,7 +29330,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Sant Andreu (L1)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -29398,7 +29398,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Sant Andreu (L1)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "wine-bar"
     ],
     "images": {
@@ -29467,7 +29467,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Sant Andreu (L1)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -29603,7 +29603,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Torras i Bages (L1)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -29671,7 +29671,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Via Júlia (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -29806,7 +29806,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Via Júlia (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -29874,7 +29874,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Via Júlia (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -29940,7 +29940,7 @@ var RESTAURANT_DATA = [
     "metro_station": "El Carmel (L5)",
     "tags": [
       "historic",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -30006,7 +30006,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Horta (L5)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -30073,7 +30073,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Penitents (L3)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -30142,7 +30142,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Horta (L5)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -30270,7 +30270,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Encants (L2)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -30336,7 +30336,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -30467,7 +30467,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -30536,7 +30536,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -30601,7 +30601,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Clot (L1/L2)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -30671,7 +30671,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Clot (L1/L2)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -31003,7 +31003,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Jaume I (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "organic",
       "vegetarian"
     ],
@@ -31203,7 +31203,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Jaume I (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -31540,7 +31540,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Jaume I (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "vegetarian"
     ],
     "images": {
@@ -31671,7 +31671,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Jaume I (L4)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "assets/photos/496_hero.webp",
@@ -31739,7 +31739,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Jaume I (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -31936,7 +31936,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Sant Antoni (L2)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -32139,7 +32139,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Liceu (L3)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -32273,7 +32273,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Poble Sec (L3)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "wine-bar"
     ],
     "images": {
@@ -32477,7 +32477,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Poble Sec (L3)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -32941,7 +32941,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Fontana (L3)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -33075,7 +33075,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Fontana (L3)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -33209,7 +33209,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Fontana (L3)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -33339,7 +33339,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Fontana (L3)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "ramen"
     ],
     "images": {
@@ -33870,7 +33870,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Universitat (L1/L2)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -33939,7 +33939,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Universitat (L1/L2)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -34005,7 +34005,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Poblenou (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -34075,7 +34075,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Vallcarca (L3)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -34144,7 +34144,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Fontana (L3)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -34211,7 +34211,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Sant Antoni (L2)",
     "tags": [
       "market-fresh",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -34280,7 +34280,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Vallcarca (L3)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "pizza",
       "weekday-lunch"
     ],
@@ -34352,7 +34352,7 @@ var RESTAURANT_DATA = [
       "budget-friendly",
       "great-value",
       "homemade",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -34420,7 +34420,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Universitat (L1/L2)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -34552,7 +34552,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -34821,7 +34821,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "El Coll/La Teixonera (L5)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -35360,7 +35360,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "budget-friendly",
       "homemade",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -35758,7 +35758,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Torras i Bages (L1)",
     "tags": [
       "creative",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -35826,7 +35826,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Sant Andreu (L1)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "rice-dishes"
     ],
     "images": {
@@ -35896,7 +35896,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Fabra i Puig (L1)",
     "tags": [
       "homemade",
-      "menú-del-día",
+      "deal-ready",
       "rice-dishes",
       "weekday-lunch"
     ],
@@ -36092,7 +36092,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Clot (L1/L2)",
     "tags": [
       "homemade",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -36430,7 +36430,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Poblenou (L4)",
     "tags": [
       "cozy",
-      "menú-del-día",
+      "deal-ready",
       "rice-dishes",
       "weekday-lunch"
     ],
@@ -36501,7 +36501,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "business-lunch",
       "great-value",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -36701,7 +36701,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Fontana (L3)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -37228,7 +37228,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Collblanc (L5)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -37298,7 +37298,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "budget-friendly",
       "great-value",
-      "menú-del-día",
+      "deal-ready",
       "vegetarian",
       "weekday-lunch"
     ],
@@ -37370,7 +37370,7 @@ var RESTAURANT_DATA = [
       "business-lunch",
       "family-run",
       "kid-friendly",
-      "menú-del-día",
+      "deal-ready",
       "rice-dishes",
       "seafood"
     ],
@@ -37506,7 +37506,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Collblanc (L5)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -37713,7 +37713,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Paral·lel (L2/L3)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "tasting-menu"
     ],
     "images": {
@@ -38385,7 +38385,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Urgell (L1)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -38522,7 +38522,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Urgell (L1)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "seafood",
       "weekday-lunch"
     ],
@@ -38590,7 +38590,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Verdaguer (L4/L5)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -38659,7 +38659,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Tetuan (L2)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -38793,7 +38793,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Universitat (L1/L2)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -39325,7 +39325,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Fontana (L3)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -39662,7 +39662,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Marina (L1)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -39794,7 +39794,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Collblanc (L5)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -39861,7 +39861,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Mercat Nou (L1)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "waterfront"
     ],
     "images": {
@@ -39994,7 +39994,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Tarragona (L3)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -40060,7 +40060,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Collblanc (L5)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -40196,7 +40196,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -40329,7 +40329,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Sant Andreu (L1)",
     "tags": [
       "great-value",
-      "menú-del-día",
+      "deal-ready",
       "sushi",
       "weekday-lunch"
     ],
@@ -40664,7 +40664,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Fabra i Puig (L1)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -40865,7 +40865,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Horta (L5)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -40999,7 +40999,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -41068,7 +41068,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Horta (L5)",
     "tags": [
       "historic",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -42880,7 +42880,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "business-lunch",
       "historic",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -43015,7 +43015,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Liceu (L3)",
     "tags": [
       "historic",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -43083,7 +43083,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Jaume I (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -43826,7 +43826,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Joanic (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "waterfront",
       "weekday-lunch"
     ],
@@ -44101,7 +44101,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Sant Antoni (L2)",
     "tags": [
       "historic",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -44305,7 +44305,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Tarragona (L3)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -44374,7 +44374,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Collblanc (L5)",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -44505,7 +44505,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Collblanc (L5)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "tasting-menu",
       "weekday-lunch"
     ],
@@ -44974,7 +44974,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "michelin",
       "weekday-lunch"
     ],
@@ -45042,7 +45042,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Diagonal (L3/L5)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -45520,7 +45520,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Sant Antoni (L2)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -45589,7 +45589,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "budget-friendly",
       "great-value",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -45858,7 +45858,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "budget-friendly",
       "historic",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch",
       "wine-bar"
     ],
@@ -45927,7 +45927,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Hostafrancs (L1)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -45995,7 +45995,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Mercat Nou (L1)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch",
       "wine-bar"
     ],
@@ -48323,7 +48323,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Monumental (L2)",
     "tags": [
       "group-dining",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -49525,7 +49525,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Maragall (L4/L5)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -49591,7 +49591,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Via Júlia (L4)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -49656,7 +49656,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Via Júlia (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -50125,7 +50125,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Universitat (L1/L2)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -51261,7 +51261,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Sant Antoni (L2)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "solo-friendly",
       "tapas",
       "weekday-lunch"
@@ -52929,7 +52929,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Liceu (L3)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "vegan",
       "vegetarian"
     ],
@@ -53266,7 +53266,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Alfons X (L4)",
     "tags": [
       "market-fresh",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -53334,7 +53334,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Fontana (L3)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -53612,7 +53612,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Barceloneta (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -54012,7 +54012,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Urgell (L1)",
     "tags": [
       "creative",
-      "menú-del-día",
+      "deal-ready",
       "tasting-menu",
       "weekday-lunch"
     ],
@@ -54149,7 +54149,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Jaume I (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "tapas"
     ],
     "images": {
@@ -54218,7 +54218,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Collblanc (L5)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -54484,7 +54484,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Clot (L1/L2)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -54682,7 +54682,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Sant Andreu (L1)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -54747,7 +54747,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Torras i Bages (L1)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -54880,7 +54880,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Via Júlia (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -55083,7 +55083,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Via Júlia (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -55153,7 +55153,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -56156,7 +56156,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Urgell (L1)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "pizza"
     ],
     "images": {
@@ -56761,7 +56761,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Verdaguer (L4/L5)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -56962,7 +56962,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Universitat (L1/L2)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -57165,7 +57165,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "cozy",
       "market-fresh",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -57503,7 +57503,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Poblenou (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -57776,7 +57776,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Santa Eulàlia (L1)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -57844,7 +57844,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Santa Eulàlia (L1)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -57911,7 +57911,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Santa Eulàlia (L1)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -58177,7 +58177,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Selva de Mar (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -58243,7 +58243,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Llacuna (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -58380,7 +58380,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Llacuna (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -58448,7 +58448,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Marina (L1)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -58516,7 +58516,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Encants (L2)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -58779,7 +58779,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Sant Andreu (L1)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -58910,7 +58910,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Maragall (L4/L5)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -59043,7 +59043,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Horta (L5)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "terrace"
     ],
     "images": {
@@ -59243,7 +59243,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Plaça del Centre (L3)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -59643,7 +59643,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -59712,7 +59712,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Girona (L4)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "weekday-lunch"
     ],
     "images": {
@@ -60318,7 +60318,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -60455,7 +60455,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Liceu (L3)",
     "tags": [
       "market-fresh",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -60661,7 +60661,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "family-run",
       "kid-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -60793,7 +60793,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Urgell (L1)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "assets/photos/949_hero.webp",
@@ -60862,7 +60862,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Mercat Nou (L1)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "terrace"
     ],
     "images": {
@@ -60997,7 +60997,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Jaume I (L4)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -61194,7 +61194,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Jaume I (L4)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -61391,7 +61391,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Jaume I (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "wine-bar"
     ],
     "images": {
@@ -61991,7 +61991,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Jaume I (L4)",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -62059,7 +62059,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Alfons X (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -62127,7 +62127,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Jaume I (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "vegetarian"
     ],
     "images": {
@@ -62541,7 +62541,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Fontana (L3)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -62676,7 +62676,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Clot (L1/L2)",
     "tags": [
       "homemade",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -62810,7 +62810,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Plaça del Centre (L3)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -62877,7 +62877,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Sant Antoni (L2)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -63214,7 +63214,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "business-lunch",
       "cozy",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -63343,7 +63343,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -63410,7 +63410,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Jaume I (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "organic",
       "vegetarian"
     ],
@@ -63550,7 +63550,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "business-lunch",
       "historic",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -63616,7 +63616,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Poblenou (L4)",
     "tags": [
       "cozy",
-      "menú-del-día",
+      "deal-ready",
       "tapas"
     ],
     "images": {
@@ -63817,7 +63817,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Poble Sec (L3)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -63882,7 +63882,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Poble Sec (L3)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -63948,7 +63948,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
     "tags": [
       "kid-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -64016,7 +64016,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -64084,7 +64084,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Via Júlia (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -64151,7 +64151,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Sant Andreu (L1)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -64289,7 +64289,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "budget-friendly",
       "historic",
-      "menú-del-día",
+      "deal-ready",
       "waterfront"
     ],
     "images": {
@@ -64358,7 +64358,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Poble Sec (L3)",
     "tags": [
       "historic",
-      "menú-del-día",
+      "deal-ready",
       "rice-dishes"
     ],
     "images": {
@@ -64427,7 +64427,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Poble Sec (L3)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -65711,7 +65711,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Llacuna (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "vegetarian"
     ],
     "images": {
@@ -65781,7 +65781,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "business-lunch",
       "homemade",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -65849,7 +65849,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "vegetarian"
     ],
     "images": {
@@ -65918,7 +65918,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Liceu (L3)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "vegetarian"
     ],
     "images": {
@@ -65986,7 +65986,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "budget-friendly",
       "great-value",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -66318,7 +66318,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Poble Sec (L3)",
     "tags": [
       "great-value",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -66518,7 +66518,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Santa Eulàlia (L1)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -67377,7 +67377,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Penitents (L3)",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -68974,7 +68974,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Santa Eulàlia (L1)",
     "tags": [
       "breakfast",
-      "menú-del-día",
+      "deal-ready",
       "ramen"
     ],
     "images": {
@@ -69107,7 +69107,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Santa Eulàlia (L1)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -69379,7 +69379,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Les Corts (L3)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -69585,7 +69585,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "breakfast",
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "tapas"
     ],
     "images": {
@@ -69718,7 +69718,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Guinardó/Hospital de Sant Pau (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -69784,7 +69784,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Sant Andreu (L1)",
     "tags": [
       "historic",
-      "menú-del-día",
+      "deal-ready",
       "tapas"
     ],
     "images": {
@@ -69853,7 +69853,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Via Júlia (L4)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -70056,7 +70056,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Clot (L1/L2)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -71122,7 +71122,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -71256,7 +71256,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "business-lunch",
       "creative",
-      "menú-del-día",
+      "deal-ready",
       "vegan",
       "vegetarian"
     ],
@@ -71326,7 +71326,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "seafood"
     ],
     "images": {
@@ -71393,7 +71393,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -71464,7 +71464,7 @@ var RESTAURANT_DATA = [
       "family-run",
       "homemade",
       "kid-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -71868,7 +71868,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Penitents (L3)",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -72002,7 +72002,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Joanic (L4)",
     "tags": [
       "creative",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -72070,7 +72070,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Poblenou (L4)",
     "tags": [
       "brunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -73001,7 +73001,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Jaume I (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -73137,7 +73137,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Penitents (L3)",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "images": {
@@ -73340,7 +73340,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "wine-bar"
     ],
     "images": {
@@ -73409,7 +73409,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -73477,7 +73477,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -73678,7 +73678,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Passeig de Gràcia (L2/L3/L4)",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -73948,7 +73948,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Liceu (L3)",
     "tags": [
       "historic",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -74015,7 +74015,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Sant Antoni (L2)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -74151,7 +74151,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Poblenou (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -74556,7 +74556,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Santa Eulàlia (L1)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -74624,7 +74624,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Via Júlia (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -74689,7 +74689,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Via Júlia (L4)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -74757,7 +74757,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Sant Andreu (L1)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -74826,7 +74826,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "budget-friendly",
       "cozy",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -74891,7 +74891,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Clot (L1/L2)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -75090,7 +75090,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -75568,7 +75568,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Jaume I (L4)",
     "tags": [
       "creative",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -75635,7 +75635,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Jaume I (L4)",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "vegetarian"
     ],
     "images": {
@@ -75704,7 +75704,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Santa Eulàlia (L1)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -75770,7 +75770,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Poble Sec (L3)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -76177,7 +76177,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Jaume I (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "tapas"
     ],
     "images": {
@@ -76246,7 +76246,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Sant Antoni (L2)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -76314,7 +76314,7 @@ var RESTAURANT_DATA = [
     "dog_friendly": false,
     "metro_station": "Sagrada Família (L2/L5)",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -76382,7 +76382,7 @@ var RESTAURANT_DATA = [
     "metro_station": "Joanic (L4)",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "images": {
       "hero": "",
@@ -76422,7 +76422,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Llesca+Sant+Mart%C3%AD+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -76466,7 +76466,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Muns+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.41,
@@ -76508,7 +76508,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Faro+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "seafood",
       "views"
     ],
@@ -76554,7 +76554,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Bet%C3%BAlia+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -76598,7 +76598,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=T%C3%ADvoli+Sant+Mart%C3%AD+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.41,
@@ -76641,7 +76641,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ca+la+Margarida+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.41,
@@ -76684,7 +76684,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tr%C3%B3pico+Sant+Mart%C3%AD+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -76731,7 +76731,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Restaurante+El+Rec%C3%B3+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.41,
@@ -76773,7 +76773,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Masia+de+Sant+Mart%C3%AD+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.41,
@@ -76815,7 +76815,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rinc%C3%B3n+Gallego+Sant+Mart%C3%AD+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -76905,7 +76905,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Wok+Garden+Sant+Mart%C3%AD+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -76948,7 +76948,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Taverna+del+Cl%C3%ADnic+Sant+Mart%C3%AD+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -76991,7 +76991,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Glorieta+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.409,
@@ -77035,7 +77035,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Tano+Clot+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.409,
@@ -77076,7 +77076,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Bocata+del+Clot+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -77121,7 +77121,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Osteria+del+Clot+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -77165,7 +77165,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Thai+Corner+Clot+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -77209,7 +77209,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Pau+Clot+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.409,
@@ -77252,7 +77252,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Fog%C3%B3n+del+Clot+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.409,
@@ -77294,7 +77294,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+Oberta+Clot+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.409,
@@ -77338,7 +77338,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ramen+Shifu+Clot+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "ramen",
       "views"
     ],
@@ -77385,7 +77385,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Pizarra+del+Clot+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.409,
@@ -77426,7 +77426,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Taquer%C3%ADa+Sagrada+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "tacos",
       "views"
     ],
@@ -77473,7 +77473,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Bar+de+la+Sagrada+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -77515,7 +77515,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Jordi+Sagrada+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -77557,7 +77557,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Osteria+Sagrada+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -77603,7 +77603,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Himal+Nepali+Sagrada+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -77643,7 +77643,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Parrilla+de+Lepant+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -77687,7 +77687,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+El+Temple+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -77769,7 +77769,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Marina+Sagrada+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "seafood"
     ],
     "coordinates": {
@@ -77813,7 +77813,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rinc%C3%B3n+de+Padilla+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -77854,7 +77854,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cal+Pere+Sant+Andreu+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.435,
@@ -77896,7 +77896,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Mol%C3%AD+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.435,
@@ -77937,7 +77937,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Taberna+de+Can+Fabra+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.435,
@@ -77981,7 +77981,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+El+Rinc%C3%B3n+Andaluz+Sant+Andreu+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.435,
@@ -78024,7 +78024,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pizzer%C3%ADa+Il+Forno+Sant+Andreu+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -78067,7 +78067,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Font+Sant+Andreu+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -78114,7 +78114,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Llu%C3%ADs+Sant+Andreu+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.435,
@@ -78158,7 +78158,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+del+Barri+Sant+Andreu+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.435,
@@ -78244,7 +78244,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+L%27Havana+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -78288,7 +78288,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Vilaro+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.379,
@@ -78331,7 +78331,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Petit+Comit%C3%A8+Sant+Antoni+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -78377,7 +78377,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Caf%C3%A8+del+Mercat+Sant+Antoni+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.379,
@@ -78419,7 +78419,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Parlament+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.379,
@@ -78462,7 +78462,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Verdaguer+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.441,
@@ -78504,7 +78504,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+La+Creu+Nou+Barris+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.441,
@@ -78547,7 +78547,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Parc+Nou+Barris+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.441,
@@ -78590,7 +78590,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Kebab+Palace+Nou+Barris+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -78636,7 +78636,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Caseta+de+Roquetes+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.441,
@@ -78679,7 +78679,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Patio+de+Nou+Barris+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.441,
@@ -78723,7 +78723,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=China+Garden+Nou+Barris+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -78769,7 +78769,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Restaurant+La+Prosperitat+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.441,
@@ -78809,7 +78809,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Travi+Nou+C%2F+de+Jorge+Manrique%2C+s%2Fn+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4309351,
@@ -78853,7 +78853,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rac%C3%B3+d%27Horta+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.418,
@@ -78893,7 +78893,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Torre+de+Horta+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -78980,7 +78980,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Laberint+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.418,
@@ -79021,7 +79021,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Restaurant+Can+Margarit+Horta+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.418,
@@ -79064,7 +79064,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Petit+Horta+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.418,
@@ -79154,7 +79154,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ramen-Ya+Eixample+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "ramen",
       "views"
     ],
@@ -79201,7 +79201,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Flauta+Diagonal+C%2F+d%27Aribau%2C+23+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.3869111,
@@ -79330,7 +79330,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Foc+i+Oli+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.3888,
@@ -79373,7 +79373,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Mesopotamia+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.3888,
@@ -79416,7 +79416,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Piazzetta+Eixample+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -79503,7 +79503,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Bierzo+Eixample+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.3888,
@@ -79545,7 +79545,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Roig+Rob%C3%AD+C%2F+de+S%C3%A8neca%2C+20+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.3968928,
@@ -79592,7 +79592,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sarria+Taverna+Gr%C3%A0cia+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -79638,7 +79638,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hummus+Barcelona+Gr%C3%A0cia+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -79684,7 +79684,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bormuth+Born+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -79743,7 +79743,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Cuina+del+Born+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.385,
@@ -79785,7 +79785,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Pla+Born+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.385,
@@ -79829,7 +79829,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Picnic+Born+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "vegan",
       "vegetarian",
       "views"
@@ -79936,7 +79936,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Maians+Barceloneta+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "seafood",
       "views",
       "waterfront"
@@ -79984,7 +79984,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Salamanca+2+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "seafood",
       "views",
       "waterfront"
@@ -80071,7 +80071,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Masia+Les+Corts+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.387,
@@ -80114,7 +80114,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rinc%C3%B3n+de+Les+Corts+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.387,
@@ -80157,7 +80157,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tapas+les+Corts+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -80245,7 +80245,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Els+Quatre+Gats+Poblenou+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -80330,7 +80330,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Parc+Poblenou+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -80375,7 +80375,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Amar+Poblenou+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "seafood",
       "views"
     ],
@@ -80420,7 +80420,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Nomad+Coffee+Lab+Poblenou+Barcelona",
     "tags": [
       "breakfast",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -80466,7 +80466,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Cal+Chusco+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.374,
@@ -80510,7 +80510,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rec%C3%B3+de+Sants+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.374,
@@ -80553,7 +80553,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Kashmir+Sants+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.374,
@@ -80595,7 +80595,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+de+l%27Ugo+Sants+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -80641,7 +80641,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+El+Viti+Sants+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.374,
@@ -80685,7 +80685,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Caf%C3%A8+dels+%C3%80ngels+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.38,
@@ -80812,7 +80812,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Gran+Caf%C3%A9+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.383,
@@ -80896,7 +80896,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Tram-Tram+C%2F+Major+de+Sarri%C3%A0%2C+121+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.401,
@@ -80940,7 +80940,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Jard%C3%AD+de+l%27%C3%80pat+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.401,
@@ -80981,7 +80981,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Mart%C3%AD+Sarri%C3%A0+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.401,
@@ -81024,7 +81024,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mussol+Diagonal+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -81070,7 +81070,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bodega+Quimet+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "wine-bar"
     ],
     "coordinates": {
@@ -81113,7 +81113,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Elche+C%2F+de+Vila+i+Vil%C3%A0%2C+71+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.372,
@@ -81241,7 +81241,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurante+Nepal+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.3888,
@@ -81326,7 +81326,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "business-lunch",
       "craft-beer",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -81370,7 +81370,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ca%C3%B1ete+Eixample+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -81416,7 +81416,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Culleretes+Eixample+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.3888,
@@ -81457,7 +81457,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=C%C3%A9leri+Restaurant+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.3888,
@@ -81498,7 +81498,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Kosmopolit+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -81545,7 +81545,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Fonda+del+Port+Ol%C3%ADmpic+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -81589,7 +81589,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Taktika+Berri+C%2F+de+Val%C3%A8ncia%2C+169+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.3888,
@@ -81630,7 +81630,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Pepita+Gr%C3%A0cia+2+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -81675,7 +81675,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Pepa+Tomate+Gr%C3%A0cia+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -81719,7 +81719,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+Tramoia+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -81766,7 +81766,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Llu%C3%ADs+C%2F+de+la+Cera%2C+49+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.38,
@@ -81853,7 +81853,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=S%C3%A9samo+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "vegetarian"
     ],
     "coordinates": {
@@ -81897,7 +81897,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Romesco+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.38,
@@ -81940,7 +81940,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Casa+Almirall+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -81987,7 +81987,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Shalimar+Carrer+del+Carme%2C+71%2C+08001+Barcelona+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.38,
@@ -82067,7 +82067,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Atril+C%2F+dels+Carders%2C+23+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.385,
@@ -82197,7 +82197,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Born+Bar+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -82243,7 +82243,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Quimet+d%27Horta+Poble+Sec+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.372,
@@ -82327,7 +82327,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tapa+Tapa+Montju%C3%AFc+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -82413,7 +82413,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Santa+Marta+Barceloneta+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -82498,7 +82498,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ol%C3%A9+Caf%C3%A9+Barceloneta+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -82543,7 +82543,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Llu%C3%A7an%C3%A8s+Barceloneta+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.38,
@@ -82583,7 +82583,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mussol+Sants+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -82629,7 +82629,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Tom%C3%A0s+de+Sarri%C3%A0+Sants+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -82675,7 +82675,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Caliu+Sants+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.374,
@@ -82717,7 +82717,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Els+Pescadors+Poblenou+2+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "seafood"
     ],
     "coordinates": {
@@ -82762,7 +82762,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Pubilla+Poblenou+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.403,
@@ -82846,7 +82846,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "business-lunch",
       "craft-beer",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -82892,7 +82892,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Vivanda+C%2F+Major+de+Sarri%C3%A0%2C+134+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.387,
@@ -82936,7 +82936,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cal+Pinxo+Les+Corts+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.387,
@@ -82977,7 +82977,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Thai+Gardens+Les+Corts+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -83023,7 +83023,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rinc%C3%B3n+Asturiano+Les+Corts+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.387,
@@ -83064,7 +83064,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Silvestre+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.401,
@@ -83105,7 +83105,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=A+Contracorriente+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.401,
@@ -83188,7 +83188,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Caf%C3%A9+de+Pedralbes+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -83317,7 +83317,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Palo+Cortado+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -83362,7 +83362,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Manent+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.379,
@@ -83402,7 +83402,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Els+Quatre+Gats+Sant+Antoni+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -83528,7 +83528,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cervecer%C3%ADa+Catalana+Sagrada+Fam%C3%ADlia+Barcelona",
     "tags": [
       "craft-beer",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -83575,7 +83575,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Paquis+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -83618,7 +83618,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurante+La+Cantina+del+Born+SF+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -83658,7 +83658,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Filferro+Clot+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.409,
@@ -83699,7 +83699,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Petit+Clot+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.409,
@@ -83741,7 +83741,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Masia+del+Clot+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.409,
@@ -83783,7 +83783,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Cingle+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.418,
@@ -83823,7 +83823,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Mussol+Nou+Barris+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -83870,7 +83870,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+la+Masia+de+Roquetes+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.441,
@@ -83913,7 +83913,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rac%C3%B3+de+Sant+Andreu+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.435,
@@ -83955,7 +83955,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Fabra+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.435,
@@ -83996,7 +83996,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Fonda+de+Sant+Andreu+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.435,
@@ -84038,7 +84038,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Cal+Marinero+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "seafood"
     ],
     "coordinates": {
@@ -84082,7 +84082,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Pubilla+Sant+Mart%C3%AD+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.41,
@@ -84123,7 +84123,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+El+Tom%C3%A1s+Sant+Mart%C3%AD+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -84168,7 +84168,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Trattoria+da+Luigi+Sant+Mart%C3%AD+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -84211,7 +84211,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Port+Sant+Mart%C3%AD+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "seafood",
       "views"
     ],
@@ -84338,7 +84338,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "business-lunch",
       "date-night",
-      "menú-del-día",
+      "deal-ready",
       "tasting-menu"
     ],
     "coordinates": {
@@ -84424,7 +84424,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mango+Thai+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.3888,
@@ -84468,7 +84468,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rasoterra+Eixample+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "vegan",
       "vegetarian",
       "views"
@@ -84516,7 +84516,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Nairod+Restaurant+Carrer+de+N%C3%A0pols%2C+207%2C+08013+Barcelona+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.3993413,
@@ -84603,7 +84603,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Casa+Delf%C3%ADn+Eixample+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.3888,
@@ -84643,7 +84643,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Niu+Raval+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.38,
@@ -84726,7 +84726,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Maritim+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "seafood",
       "views",
       "waterfront"
@@ -84772,7 +84772,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Viti+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.38,
@@ -84853,7 +84853,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Colombiana+Gr%C3%A0cia+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -84893,7 +84893,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Punta+Gr%C3%A0cia+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -84938,7 +84938,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pepa+i+Cia+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -84981,7 +84981,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Bodega+de+Gr%C3%A0cia+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views",
       "wine-bar"
     ],
@@ -85028,7 +85028,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Bar+de+l%27Oscar+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -85070,7 +85070,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sureny+Gr%C3%A0cia+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -85202,7 +85202,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Central+Gr%C3%A0cia+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -85242,7 +85242,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Vinissim+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -85287,7 +85287,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Casserola+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.383,
@@ -85329,7 +85329,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Taller+28+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.383,
@@ -85372,7 +85372,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pla+Restaurant+C%2F+de+Bellafila%2C+5%2C+08002+Barcelona+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.38227,
@@ -85414,7 +85414,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cervantes+Restaurant+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -85457,7 +85457,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Casa+Delf%C3%ADn+G%C3%B2tic+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -85587,7 +85587,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Lonja+del+Mar+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "seafood",
       "views"
     ],
@@ -85633,7 +85633,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cervantes+Born+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -85678,7 +85678,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Disfrutar+Born+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -85723,7 +85723,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Magatzem+del+Born+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.385,
@@ -85765,7 +85765,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Betlem+Born+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -85853,7 +85853,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Boqueria+de+Poblenou+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.403,
@@ -85895,7 +85895,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Calders+Poblenou+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -85940,7 +85940,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Palo+Santo+Poblenou+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -85986,7 +85986,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Gibert+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.403,
@@ -86026,7 +86026,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Fisher+2+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "seafood",
       "views"
     ],
@@ -86070,7 +86070,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Terraza+del+Forum+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -86116,7 +86116,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bodega+Gibert+Sant+Mart%C3%AD+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "wine-bar"
     ],
     "coordinates": {
@@ -86157,7 +86157,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Marina+Port+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "seafood",
       "views"
     ],
@@ -86202,7 +86202,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Forn+de+Sant+Mart%C3%AD+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.41,
@@ -86244,7 +86244,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Rosell+Sants+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.374,
@@ -86287,7 +86287,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bodega+Quimet+Sants+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views",
       "wine-bar"
     ],
@@ -86333,7 +86333,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Pati+de+l%27Ermita+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.374,
@@ -86375,7 +86375,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Nou+Can+Travi+Sants+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -86421,7 +86421,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+La+Canyada+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.374,
@@ -86464,7 +86464,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Vies+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.387,
@@ -86505,7 +86505,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bodega+Marga+Les+Corts+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views",
       "wine-bar"
     ],
@@ -86552,7 +86552,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Caf%C3%A9+de+Sarri%C3%A0+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -86598,7 +86598,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Mol%C3%AD+de+Sarri%C3%A0+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.401,
@@ -86641,7 +86641,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Vaqueria+Sarri%C3%A0+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -86687,7 +86687,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Singular+Sant+Antoni+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -86733,7 +86733,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Nou+Raval+Sant+Antoni+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.379,
@@ -86818,7 +86818,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Can+Llu%C3%ADs+Sant+Antoni+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.379,
@@ -86903,7 +86903,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rac%C3%B3+de+la+Sagrada+Fam%C3%ADlia+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -86945,7 +86945,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Marina+del+Clot+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.409,
@@ -86988,7 +86988,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Bar+del+Clot+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.409,
@@ -87028,7 +87028,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Cargolet+Horta+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.418,
@@ -87071,7 +87071,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Cal+Toni+Nou+Barris+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.441,
@@ -87113,7 +87113,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Pep+Nou+Barris+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.441,
@@ -87155,7 +87155,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Mirador+de+Sant+Andreu+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -87201,7 +87201,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Xaloc+Sant+Andreu+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.435,
@@ -87243,7 +87243,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Mundana+Poble+Sec+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -87289,7 +87289,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bodega+Montju%C3%AFc+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views",
       "wine-bar"
     ],
@@ -87336,7 +87336,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Terrassa+Poble+Sec+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -87382,7 +87382,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Nou+Blai+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.372,
@@ -87425,7 +87425,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Llu%C3%ADs+Poble+Sec+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.372,
@@ -87467,7 +87467,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Jard%C3%AD+del+Raval+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -87513,7 +87513,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Bodega+Raval+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views",
       "wine-bar"
     ],
@@ -87559,7 +87559,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Mercat+Raval+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.38,
@@ -87599,7 +87599,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+del+Poble+Sec+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.372,
@@ -87642,7 +87642,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+d%27en+Garriga+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.3888,
@@ -87683,7 +87683,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Petit+Cuiner+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.3888,
@@ -87726,7 +87726,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Wagokoro+C%2F+de+Comte+d%27Urgell%2C+56%2C+08011+Barcelona+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.3888,
@@ -87809,7 +87809,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurante+Sibaris+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.3888,
@@ -87935,7 +87935,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Bilbao+Gr%C3%A0cia+C%2F+de+Perla%2C+33%2C+08012+Barcelona+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4039493,
@@ -87978,7 +87978,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+de+l%27Uribou+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -88021,7 +88021,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Nou+Can+Che+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -88064,7 +88064,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Can+Llu%C3%ADs+Gr%C3%A0cia+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -88108,7 +88108,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurante+Nepal+Gr%C3%A0cia+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -88150,7 +88150,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Celler+del+Born+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "wine-bar"
     ],
     "coordinates": {
@@ -88193,7 +88193,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+d%27en+Simon+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -88238,7 +88238,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Plassohla+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.383,
@@ -88324,7 +88324,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Nectari+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.3888,
@@ -88367,7 +88367,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Mendiz%C3%A1bal+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -88413,7 +88413,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Tertulia+Poble+Sec+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.372,
@@ -88455,7 +88455,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Calders+Raval+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -88501,7 +88501,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Esquina+Poble+Sec+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.372,
@@ -88541,7 +88541,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+del+Forum+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.41,
@@ -88583,7 +88583,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Diagonal+Mar+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -88629,7 +88629,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Petit+Poblenou+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.403,
@@ -88671,7 +88671,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Taverna+de+Poblenou+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -88714,7 +88714,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Pujades+33+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.403,
@@ -88757,7 +88757,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Petit+Sants+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.374,
@@ -88799,7 +88799,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+El+Mol%C3%AD+de+Sants+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.374,
@@ -88842,7 +88842,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Cuina+de+les+Corts+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.387,
@@ -88885,7 +88885,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Ferran+Sarri%C3%A0+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.401,
@@ -88928,7 +88928,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rac%C3%B3+de+Sarri%C3%A0+Barcelona",
     "tags": [
       "business-lunch",
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -88973,7 +88973,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+La+Guineueta+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.441,
@@ -89014,7 +89014,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Petit+Sagrada+Fam%C3%ADlia+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.4036,
@@ -89056,7 +89056,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Can+Jordi+Horta+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.418,
@@ -89097,7 +89097,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+El+Horno+Sant+Andreu+Barcelona",
     "tags": [
       "budget-friendly",
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.435,
@@ -89139,7 +89139,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ca+l%27Isidre+Sant+Antoni+Barcelona",
     "tags": [
-      "menú-del-día"
+      "deal-ready"
     ],
     "coordinates": {
       "lat": 41.379,
@@ -89179,7 +89179,7 @@ var RESTAURANT_DATA = [
     "status": "active",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rac%C3%B3+de+Sant+Antoni+Barcelona",
     "tags": [
-      "menú-del-día",
+      "deal-ready",
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
@@ -89228,7 +89228,7 @@ var RESTAURANT_DATA = [
       "family-run",
       "historic",
       "kid-friendly",
-      "menú-del-día",
+      "deal-ready",
       "solo-friendly",
       "tapas"
     ],
@@ -89270,7 +89270,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rebeka+C%2F+dels+Almog%C3%A0vers%2C+107+Barcelona",
     "tags": [
       "brunch",
-      "menú-del-día"
+      "deal-ready"
     ],
     "menu_evidence": "menuveo_competitor",
     "menu_del_dia_confirmed": true,
@@ -89310,7 +89310,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ryu+Ramen+Gr%C3%A0cia+C%2F+de+Ram%C3%B3n+y+Cajal%2C+35+Barcelona",
     "tags": [
       "cozy",
-      "menú-del-día",
+      "deal-ready",
       "ramen"
     ],
     "menu_evidence": "menuveo_competitor",
@@ -89351,7 +89351,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar+Carme+C%2F+de+Llull%2C+70+Barcelona",
     "tags": [
       "homemade",
-      "menú-del-día"
+      "deal-ready"
     ],
     "menu_evidence": "menuveo_competitor",
     "menu_del_dia_confirmed": true,
@@ -89392,7 +89392,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "dog-friendly",
       "historic",
-      "menú-del-día",
+      "deal-ready",
       "rice-dishes",
       "terrace"
     ],
@@ -89438,7 +89438,7 @@ var RESTAURANT_DATA = [
       "brunch",
       "business-lunch",
       "healthy",
-      "menú-del-día",
+      "deal-ready",
       "vegan",
       "vegetarian"
     ],
@@ -89479,7 +89479,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "budget-friendly",
       "homemade",
-      "menú-del-día"
+      "deal-ready"
     ],
     "menu_evidence": "menuveo_competitor",
     "menu_del_dia_confirmed": true,
@@ -89520,7 +89520,7 @@ var RESTAURANT_DATA = [
     "tags": [
       "group-dining",
       "homemade",
-      "menú-del-día"
+      "deal-ready"
     ],
     "menu_evidence": "menuveo_competitor",
     "menu_del_dia_confirmed": true,
@@ -89562,7 +89562,7 @@ var RESTAURANT_DATA = [
       "business-lunch",
       "group-dining",
       "historic",
-      "menú-del-día",
+      "deal-ready",
       "rice-dishes",
       "terrace"
     ],
@@ -89607,7 +89607,7 @@ var RESTAURANT_DATA = [
       "business-lunch",
       "cocktails",
       "group-dining",
-      "menú-del-día"
+      "deal-ready"
     ],
     "menu_evidence": "menuveo_competitor",
     "menu_del_dia_confirmed": true,
@@ -89647,7 +89647,7 @@ var RESTAURANT_DATA = [
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Nou+Celler+C%2F+de+la+Princesa%2C+16+Barcelona",
     "tags": [
       "historic",
-      "menú-del-día",
+      "deal-ready",
       "wine-bar"
     ],
     "menu_evidence": "menuveo_competitor",

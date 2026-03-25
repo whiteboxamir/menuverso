@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Restaurant La Plassohla — Menú del Día Barcelona | Menuverso</title>
-<meta name="description" content="Restaurant La Plassohla in Barri Gòtic, Barcelona. Catalan cuisine. 13-16€ menú del día. Menú del Día Confirmed. Rating: 4.2/5 (403 reviews).">
-<meta property="og:title" content="Restaurant La Plassohla — Menú del Día | Menuverso">
-<meta property="og:description" content="Catalan in Barri Gòtic. 13-16€ menú del día. ⭐ 4.2/5">
+<title>Restaurant La Plassohla — Barcelona Restaurant | Menuverso</title>
+<meta name="description" content="Restaurant La Plassohla in Barri Gòtic, Barcelona. Catalan cuisine. Deal-Ready. Partner readiness: 35/100. Rating: 4.2/5 (403 reviews).">
+<meta property="og:title" content="Restaurant La Plassohla — Catalan in Barri Gòtic | Menuverso">
+<meta property="og:description" content="Catalan in Barri Gòtic. Deal-Ready. ⭐ 4.2/5">
 <meta property="og:url" content="https://whiteboxamir.github.io/menuverso/r/1420.html">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:site_name" content="Menuverso">
@@ -56,13 +56,17 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 /* Container */
 .container{max-width:720px;margin:-40px auto 0;padding:0 1rem 2rem;position:relative;z-index:2;}
 
-/* Deal Card (Neotaste-style) */
+/* Partner Profile Card */
 .deal-card{background:#D1FAE5;border:2px solid #05966922;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
 .deal-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}
 .deal-emoji{font-size:1.5rem;}
 .deal-title{font-size:1.1rem;font-weight:700;color:#059669;}
 .deal-price{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:0.25rem;}
 .deal-desc{font-size:0.82rem;color:var(--sub);}
+.readiness-bar{margin-top:0.75rem;}
+.readiness-label{font-size:0.72rem;font-weight:600;color:var(--sub);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:4px;}
+.readiness-track{height:8px;background:var(--bg);border-radius:4px;overflow:hidden;}
+.readiness-fill{height:100%;border-radius:4px;background:#DC2626;transition:width 0.6s ease;}
 :root.dark .deal-card{background:var(--card);border-color:#05966944;}
 
 /* Open Status */
@@ -157,11 +161,10 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
     <span>Menuverso</span>
   </a>
   <div class="nav-links">
-    <a href="../app.html"><span>🏠 </span>Discover</a>
     <a href="../index.html"><span>📋 </span>Database</a>
-    <a href="../finder.html"><span>🔍 </span>Finder</a>
-    <a href="../analytics.html"><span>📊 </span>Analytics</a>
-    <a href="../lists.html"><span>🏆 </span>Best Of</a>
+    <a href="../analytics.html"><span>📊 </span>Market Intel</a>
+    <a href="../lists.html"><span>🎯 </span>Target Lists</a>
+    <a href="../landing.html"><span>💰 </span>Pitch</a>
   </div>
   <div>
     <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
@@ -186,14 +189,18 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 </div>
 
 <div class="container">
-  <!-- Menú del Día Deal Card -->
+  <!-- Partner Profile Card -->
   <div class="deal-card">
     <div class="deal-header">
       <span class="deal-emoji">🟢</span>
-      <span class="deal-title">Menú del Día Confirmed</span>
+      <span class="deal-title">Deal-Ready</span>
     </div>
     <div class="deal-price">13-16€</div>
-    <div class="deal-desc">Menú del día price range · Barri Gòtic · Jaume I (L4)</div>
+    <div class="deal-desc">Barri Gòtic · Jaume I (L4) · Catalan</div>
+    <div class="readiness-bar">
+      <div class="readiness-label">Partner Readiness: 35/100</div>
+      <div class="readiness-track"><div class="readiness-fill" style="width:35%"></div></div>
+    </div>
   </div>
 
   <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Restaurant+La+Plassohla+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
@@ -209,7 +216,7 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 
   <!-- Tab: Info -->
   <div class="tab-content active" id="tab-info">
-    <div class="tags"><span class="tag">menú-del-día</span></div>
+    <div class="tags"><span class="tag">deal-ready</span></div>
 
     <div class="info-section">
       <h3>Details</h3>
@@ -226,7 +233,7 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
     <div class="share-section">
       <button class="share-btn" onclick="shareNative()">📤 Share</button>
       <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
-      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Restaurant%20La%20Plassohla%20in%20Barri%20G%C3%B2tic%2C%20Barcelona%21%2013-16%E2%82%AC%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/1420.html" target="_blank">💬 WhatsApp</a>
+      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Restaurant%20La%20Plassohla%20in%20Barri%20G%C3%B2tic%2C%20Barcelona%21%20Catalan%20restaurant.%20https%3A//whiteboxamir.github.io/menuverso/r/1420.html" target="_blank">💬 WhatsApp</a>
     </div>
 
     <div class="community">
@@ -262,26 +269,26 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
           <div class="nearby-icon">🥗</div>
           <div class="nearby-info">
             <div class="nearby-name">BOSCO Restaurant</div>
-            <div class="nearby-meta">🟢 Mediterranean · 14-17€ · 0m</div>
+            <div class="nearby-meta">🟢 Deal-Ready Mediterranean · 14-17€ · 0m</div>
           </div>
         </a><a href="44.html" class="nearby-card">
           <div class="nearby-icon">🌶️</div>
           <div class="nearby-info">
             <div class="nearby-name">Grangels Mix</div>
-            <div class="nearby-meta">🟢 Catalan · 16.50€ · 0m</div>
+            <div class="nearby-meta">🟢 Deal-Ready Catalan · 16.50€ · 0m</div>
           </div>
         </a><a href="174.html" class="nearby-card">
           <div class="nearby-icon">🥗</div>
           <div class="nearby-info">
             <div class="nearby-name">Caelis</div>
-            <div class="nearby-meta">🔴 Mediterranean ·  · 0m</div>
+            <div class="nearby-meta"> Mediterranean ·  · 0m</div>
           </div>
         </a>
     </div>
 </div>
 
 <footer>
-  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #1420 of 1,458
+  <a href="../index.html">Menuverso</a> · <a href="../analytics.html">Market Intel</a> · <a href="../lists.html">Target Lists</a> · Restaurant #1420 of 1,458
 </footer>
 
 <script>
@@ -310,7 +317,7 @@ function switchTab(id){
 
 // Share
 function shareNative(){
-  if(navigator.share){navigator.share({title:'Restaurant La Plassohla — Menuverso',text:'Catalan in Barri Gòtic. 13-16€ menú del día.',url:window.location.href})}
+  if(navigator.share){navigator.share({title:'Restaurant La Plassohla — Menuverso',text:'Catalan in Barri Gòtic. 13-16€.',url:window.location.href})}
   else{copyLink(document.querySelector('.share-btn'))}
 }
 function copyLink(btn){

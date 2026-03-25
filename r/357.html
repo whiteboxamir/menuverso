@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Federal Café Poble Sec — Menú del Día Barcelona | Menuverso</title>
-<meta name="description" content="Federal Café Poble Sec in Poble Sec, Barcelona. Café cuisine.  menú del día. No Menú del Día. Rating: 4.3/5 (1768 reviews).">
-<meta property="og:title" content="Federal Café Poble Sec — Menú del Día | Menuverso">
-<meta property="og:description" content="Café in Poble Sec.  menú del día. ⭐ 4.3/5">
+<title>Federal Café Poble Sec — Barcelona Restaurant | Menuverso</title>
+<meta name="description" content="Federal Café Poble Sec in Poble Sec, Barcelona. Café cuisine. Prospect. Partner readiness: 65/100. Rating: 4.3/5 (1768 reviews).">
+<meta property="og:title" content="Federal Café Poble Sec — Café in Poble Sec | Menuverso">
+<meta property="og:description" content="Café in Poble Sec. Prospect. ⭐ 4.3/5">
 <meta property="og:url" content="https://whiteboxamir.github.io/menuverso/r/357.html">
 <meta property="og:type" content="restaurant.restaurant">
 <meta property="og:site_name" content="Menuverso">
@@ -56,13 +56,17 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 /* Container */
 .container{max-width:720px;margin:-40px auto 0;padding:0 1rem 2rem;position:relative;z-index:2;}
 
-/* Deal Card (Neotaste-style) */
+/* Partner Profile Card */
 .deal-card{background:#FEE2E2;border:2px solid #DC262622;border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
 .deal-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;}
 .deal-emoji{font-size:1.5rem;}
 .deal-title{font-size:1.1rem;font-weight:700;color:#DC2626;}
 .deal-price{font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:0.25rem;}
 .deal-desc{font-size:0.82rem;color:var(--sub);}
+.readiness-bar{margin-top:0.75rem;}
+.readiness-label{font-size:0.72rem;font-weight:600;color:var(--sub);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:4px;}
+.readiness-track{height:8px;background:var(--bg);border-radius:4px;overflow:hidden;}
+.readiness-fill{height:100%;border-radius:4px;background:#D97706;transition:width 0.6s ease;}
 :root.dark .deal-card{background:var(--card);border-color:#DC262644;}
 
 /* Open Status */
@@ -157,11 +161,10 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
     <span>Menuverso</span>
   </a>
   <div class="nav-links">
-    <a href="../app.html"><span>🏠 </span>Discover</a>
     <a href="../index.html"><span>📋 </span>Database</a>
-    <a href="../finder.html"><span>🔍 </span>Finder</a>
-    <a href="../analytics.html"><span>📊 </span>Analytics</a>
-    <a href="../lists.html"><span>🏆 </span>Best Of</a>
+    <a href="../analytics.html"><span>📊 </span>Market Intel</a>
+    <a href="../lists.html"><span>🎯 </span>Target Lists</a>
+    <a href="../landing.html"><span>💰 </span>Pitch</a>
   </div>
   <div>
     <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
@@ -186,14 +189,18 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 </div>
 
 <div class="container">
-  <!-- Menú del Día Deal Card -->
+  <!-- Partner Profile Card -->
   <div class="deal-card">
     <div class="deal-header">
       <span class="deal-emoji">🔴</span>
-      <span class="deal-title">No Menú del Día</span>
+      <span class="deal-title">Prospect</span>
     </div>
     
-    <div class="deal-desc">Poble Sec · Sant Antoni (L2)</div>
+    <div class="deal-desc">Poble Sec · Sant Antoni (L2) · Café</div>
+    <div class="readiness-bar">
+      <div class="readiness-label">Partner Readiness: 65/100</div>
+      <div class="readiness-track"><div class="readiness-fill" style="width:65%"></div></div>
+    </div>
   </div>
 
   <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;"><a href="https://www.google.com/maps/search/?api=1&query=Federal+Caf%C3%A9+Poble+Sec+C%2F+del+Parlament%2C+39+Barcelona" target="_blank" class="share-btn" style="flex:1;justify-content:center;">📍 Directions</a>
@@ -228,7 +235,7 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
     <div class="share-section">
       <button class="share-btn" onclick="shareNative()">📤 Share</button>
       <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
-      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Federal%20Caf%C3%A9%20Poble%20Sec%20in%20Poble%20Sec%2C%20Barcelona%21%20%20men%C3%BA%20del%20d%C3%ADa.%20https%3A//whiteboxamir.github.io/menuverso/r/357.html" target="_blank">💬 WhatsApp</a>
+      <a class="share-btn" href="https://wa.me/?text=Check%20out%20Federal%20Caf%C3%A9%20Poble%20Sec%20in%20Poble%20Sec%2C%20Barcelona%21%20Caf%C3%A9%20restaurant.%20https%3A//whiteboxamir.github.io/menuverso/r/357.html" target="_blank">💬 WhatsApp</a>
     </div>
 
     <div class="community">
@@ -264,26 +271,26 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
           <div class="nearby-icon">☕</div>
           <div class="nearby-info">
             <div class="nearby-name">Federal Café Sant Antoni</div>
-            <div class="nearby-meta">🔴 Café ·  · 0m</div>
+            <div class="nearby-meta"> Café ·  · 0m</div>
           </div>
         </a><a href="559.html" class="nearby-card">
           <div class="nearby-icon">🌮</div>
           <div class="nearby-info">
             <div class="nearby-name">Jiribilla</div>
-            <div class="nearby-meta">🟡 Mexican ·  · 17m</div>
+            <div class="nearby-meta">🟡 High Potential Mexican ·  · 17m</div>
           </div>
         </a><a href="811.html" class="nearby-card">
           <div class="nearby-icon">🥘</div>
           <div class="nearby-info">
             <div class="nearby-name">La Esquina</div>
-            <div class="nearby-meta">🟡 Spanish ·  · 57m</div>
+            <div class="nearby-meta">🟡 High Potential Spanish ·  · 57m</div>
           </div>
         </a>
     </div>
 </div>
 
 <footer>
-  <a href="../index.html">Menuverso</a> · <a href="../finder.html">Finder</a> · <a href="../analytics.html">Analytics</a> · Restaurant #357 of 1,458
+  <a href="../index.html">Menuverso</a> · <a href="../analytics.html">Market Intel</a> · <a href="../lists.html">Target Lists</a> · Restaurant #357 of 1,458
 </footer>
 
 <script>
@@ -312,7 +319,7 @@ function switchTab(id){
 
 // Share
 function shareNative(){
-  if(navigator.share){navigator.share({title:'Federal Café Poble Sec — Menuverso',text:'Café in Poble Sec.  menú del día.',url:window.location.href})}
+  if(navigator.share){navigator.share({title:'Federal Café Poble Sec — Menuverso',text:'Café in Poble Sec. .',url:window.location.href})}
   else{copyLink(document.querySelector('.share-btn'))}
 }
 function copyLink(btn){
