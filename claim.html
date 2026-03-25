@@ -80,9 +80,9 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <a href="index.html" class="nav-brand"><img src="assets/logo.png" alt="Menuverso"><span>Menuverso</span></a>
   <div class="nav-links">
     <a href="index.html"><span>📋 </span>Database</a>
-    <a href="finder.html"><span>🔍 </span>Finder</a>
-    <a href="analytics.html"><span>📊 </span>Analytics</a>
-    <a href="lists.html"><span>🏆 </span>Best Of</a>
+    
+    <a href="analytics.html"><span>📊 </span>Market Intel</a>
+    <a href="lists.html"><span>🎯 </span>Target Lists</a>
     <a href="claim.html" class="active"><span>🏪 </span>Owners</a>
   </div>
   <div class="controls-bar"><button class="theme-btn" id="theme-toggle" onclick="toggleTheme()">🌙</button></div>
@@ -205,7 +205,7 @@ function renderDashboard() {
         <p>${r.cuisine_type} · ${r.neighborhood}</p>
         <div id="poster-qr"></div>
         <p style="font-size:0.85rem;font-weight:600;margin-bottom:0.25rem;">Scan to see our listing on Menuverso</p>
-        <p style="font-size:0.75rem;color:#64748B;">${r.menu_price_range ? 'Menú del día: ' + r.menu_price_range : ''} ${r.google_maps_rating ? '· ⭐ ' + r.google_maps_rating + '/5' : ''}</p>
+        <p style="font-size:0.75rem;color:#64748B;">${r.menu_price_range ? 'Restaurant Deals: ' + r.menu_price_range : ''} ${r.google_maps_rating ? '· ⭐ ' + r.google_maps_rating + '/5' : ''}</p>
         <div class="poster-brand">menuverso.com</div>
       </div>
     </div>
@@ -217,7 +217,7 @@ function renderDashboard() {
           ${!r.phone ? '<li>Add your phone number to help customers reach you</li>' : ''}
           ${!r.website ? '<li>Add your website URL for more visibility</li>' : ''}
           ${!r.instagram ? '<li>Connect your Instagram for social proof</li>' : ''}
-          ${tier === 'none' ? '<li>Confirm your menú del día to appear in Best Of lists</li>' : ''}
+          ${tier === 'none' ? '<li>Confirm your restaurant deals to appear in Best Of lists</li>' : ''}
           ${!(r.tags||[]).length ? '<li>Add tags to help foodies discover your restaurant</li>' : ''}
           ${!r.notes ? '<li>Add a description to tell customers what makes you special</li>' : ''}
           <li>Print your QR poster and display it in your window</li>

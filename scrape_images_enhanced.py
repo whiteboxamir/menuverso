@@ -27,7 +27,8 @@ from io import BytesIO
 from urllib.parse import urlparse, urljoin
 
 try:
-    from PIL import Image
+    from PIL import Image, ImageFile
+    ImageFile.LOAD_TRUNCATED_IMAGES = True
 except ImportError:
     print("❌ Pillow not found. Install: pip3 install --target=/tmp/pylibs Pillow")
     sys.exit(1)

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sarrià-Sant Gervasi Restaurants — Menuverso Barcelona</title>
-<meta name="description" content="Sarrià-Sant Gervasi: 64 restaurants, avg €15 menú del día, 22 confirmed. Best of Sarrià-Sant Gervasi in Barcelona by Menuverso.">
+<meta name="description" content="Sarrià-Sant Gervasi: 64 restaurants, avg €15 restaurant deals, 22 confirmed. Best of Sarrià-Sant Gervasi in Barcelona by Menuverso.">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -67,9 +67,9 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <a href="../index.html" class="nav-brand"><img src="../assets/logo.png" alt="Menuverso"><span>Menuverso</span></a>
   <div class="nav-links">
     <a href="../index.html"><span>📋 </span>Database</a>
-    <a href="../finder.html"><span>🔍 </span>Finder</a>
-    <a href="../analytics.html"><span>📊 </span>Analytics</a>
-    <a href="../lists.html"><span>🏆 </span>Best Of</a>
+    
+    <a href="../analytics.html"><span>📊 </span>Market Intel</a>
+    <a href="../lists.html"><span>🏆 </span>Target Lists</a>
     <a href="../crawl.html"><span>🚶 </span>Crawl</a>
   </div>
   <div class="controls-bar"><button class="theme-btn" id="theme-toggle" onclick="toggleTheme()">🌙</button></div>
@@ -78,7 +78,7 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <a href="../index.html" class="back">← All Neighborhoods</a>
   <div class="hero">
     <h1>📍 Sarrià-Sant Gervasi</h1>
-    <p>64 restaurants · 22 confirmed menú del día</p>
+    <p>64 restaurants · 22 confirmed restaurant deals</p>
   </div>
 
   <div class="stats">
@@ -152,7 +152,7 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
     <div class="hood-links"><a href="barceloneta.html" class="hood-link">Barceloneta <span>(64)</span></a><a href="barri-gotic.html" class="hood-link">Barri Gòtic <span>(90)</span></a><a href="clot.html" class="hood-link">Clot <span>(41)</span></a><a href="eixample.html" class="hood-link">Eixample <span>(329)</span></a><a href="el-born.html" class="hood-link">El Born <span>(92)</span></a><a href="el-raval.html" class="hood-link">El Raval <span>(103)</span></a><a href="gracia.html" class="hood-link">Gràcia <span>(123)</span></a><a href="horta-guinardó.html" class="hood-link">Horta-Guinardó <span>(50)</span></a><a href="les-corts.html" class="hood-link">Les Corts <span>(60)</span></a><a href="nou-barris.html" class="hood-link">Nou Barris <span>(47)</span></a><a href="poble-sec.html" class="hood-link">Poble Sec <span>(84)</span></a><a href="poblenou.html" class="hood-link">Poblenou <span>(107)</span></a><a href="sagrada-familia.html" class="hood-link">Sagrada Família <span>(49)</span></a><a href="sant-andreu.html" class="hood-link">Sant Andreu <span>(46)</span></a><a href="sant-antoni.html" class="hood-link">Sant Antoni <span>(51)</span></a><a href="sant-marti.html" class="hood-link">Sant Martí <span>(47)</span></a><a href="sants.html" class="hood-link">Sants <span>(73)</span></a></div>
   </div>
 </div>
-<footer><a href="../index.html">Menuverso</a> · <a href="../lists.html">Best Of</a> · <a href="../analytics.html">Analytics</a></footer>
+<footer><a href="../index.html">Menuverso</a> · <a href="../lists.html">Target Lists</a> · <a href="../analytics.html">Analytics</a></footer>
 <script>
 function initTheme(){var s=localStorage.getItem('menuverso_theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark');document.getElementById('theme-toggle').textContent='☀️';}};
 function toggleTheme(){var d=document.documentElement.classList.toggle('dark');localStorage.setItem('menuverso_theme',d?'dark':'light');document.getElementById('theme-toggle').textContent=d?'☀️':'🌙';};

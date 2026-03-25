@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Top Rated Restaurants | Menuverso — Barcelona</title>
-<meta name="description" content="Top Rated Restaurants. The highest-rated restaurants in Barcelona with 50+ Google reviews.. Curated by Menuverso from 1,504 Barcelona restaurants.">
+<meta name="description" content="Top Rated Restaurants. The highest-rated restaurants in Barcelona with 50+ Google reviews.. Profiled by Menuverso from 1,504 Barcelona restaurants.">
 <meta property="og:title" content="Top Rated Restaurants | Menuverso">
 <meta property="og:description" content="The highest-rated restaurants in Barcelona with 50+ Google reviews.">
 <meta property="og:type" content="website">
@@ -55,14 +55,14 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
   <a href="../index.html" class="nav-brand"><img src="../assets/logo.png" alt="Menuverso"><span>Menuverso</span></a>
   <div class="nav-links">
     <a href="../index.html"><span>📋 </span>Database</a>
-    <a href="../finder.html"><span>🔍 </span>Finder</a>
-    <a href="../analytics.html"><span>📊 </span>Analytics</a>
-    <a href="../lists.html" class="active"><span>🏆 </span>Best Of</a>
+    <a href="../analytics.html"><span>📊 </span>Market Intel</a>
+    <a href="../analytics.html"><span>📊 </span>Market Intel</a>
+    <a href="../lists.html" class="active"><span>🏆 </span>Target Lists</a>
   </div>
   <div class="controls-bar"><button class="theme-btn" id="theme-toggle" onclick="toggleTheme()">🌙</button></div>
 </nav>
 <div class="container">
-  <a href="../lists.html" class="back">← All Curated Lists</a>
+  <a href="../lists.html" class="back">← All Target Lists</a>
   <div class="list-header">
     <h1>⭐ Top Rated Restaurants</h1>
     <p>The highest-rated restaurants in Barcelona with 50+ Google reviews.</p>
@@ -123,8 +123,8 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
         <div class="card-name">La Pubilla</div>
         <div class="card-meta">🟢 Catalan · Gràcia · 14.75€</div>
         <div class="card-meta">⭐ 4.7/5 (2881 reviews) · 🚇 Fontana (L3)</div>
-        <div class="card-notes">One of Barcelona's best menú del día. Near Mercat de la Llibertat. Reservations recommended.</div>
-        <div class="card-tags"><span class="list-tag">menú-del-día</span><span class="list-tag">reservations</span><span class="list-tag">weekday-lunch</span></div>
+        <div class="card-notes">One of Barcelona's best daily deals. Near Mercat de la Llibertat. Reservations recommended.</div>
+        <div class="card-tags"><span class="list-tag">deal-ready</span><span class="list-tag">reservations</span><span class="list-tag">weekday-lunch</span></div>
       </div>
       <div class="card-score">14.75€<small>menú</small></div>
     </a><a href="../r/310.html" class="list-card">
@@ -169,7 +169,7 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
       <div class="card-score"><small>menú</small></div>
     </a>
 </div>
-<footer><a href="../index.html">Menuverso</a> · <a href="../lists.html">All Lists</a> · <a href="../analytics.html">Analytics</a></footer>
+<footer><a href="../index.html">Menuverso</a> · <a href="../lists.html">All Lists</a> · <a href="../analytics.html">Market Intel</a></footer>
 <script>
 function initTheme(){var s=localStorage.getItem('menuverso_theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark');document.getElementById('theme-toggle').textContent='☀️';}}
 function toggleTheme(){var d=document.documentElement.classList.toggle('dark');localStorage.setItem('menuverso_theme',d?'dark':'light');document.getElementById('theme-toggle').textContent=d?'☀️':'🌙';}

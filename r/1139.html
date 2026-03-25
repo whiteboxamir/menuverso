@@ -43,7 +43,9 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 
 /* Hero */
 .hero{position:relative;width:100%;height:320px;overflow:hidden;}
-.hero img{width:100%;height:100%;object-fit:cover;}
+.hero.has-photo img{width:100%;height:100%;object-fit:cover;}
+.hero.no-photo{background:linear-gradient(135deg,#0F172A 0%,#1E3A5F 50%,#334155 100%);}
+.hero-emoji{position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);font-size:4rem;opacity:0.25;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.1) 50%,rgba(0,0,0,0.0) 100%);}
 .hero-content{position:absolute;bottom:0;left:0;right:0;padding:1.5rem 2rem;color:#fff;}
 .hero-back{display:inline-flex;align-items:center;gap:4px;color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.82rem;font-weight:500;margin-bottom:0.75rem;transition:color 0.2s;}
@@ -167,8 +169,8 @@ img[src*="logo.png"]{mix-blend-mode:multiply;}
 </nav>
 
 <!-- Hero Section -->
-<div class="hero">
-  <img src="../assets/photos/1195_hero.webp" alt="Mediterranean cuisine" loading="eager">
+<div class="hero has-photo">
+  <img src="../assets/photos/1195_hero.webp" alt="Oleum MNAC" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <a href="../index.html?hood=Poble+Sec" class="hero-back">← Poble Sec</a>

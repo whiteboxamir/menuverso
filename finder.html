@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Menuverso — Find My Lunch</title>
-<meta name="description" content="Smart lunch finder for Barcelona. Tell us your neighborhood and preferences, and we'll recommend the perfect menú del día.">
+<meta name="description" content="Smart lunch finder for Barcelona. Tell us your neighborhood and preferences, and we'll recommend the perfect restaurant deals.">
 <meta name="theme-color" content="#1E293B">
 <link rel="manifest" href="manifest.json">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -171,9 +171,9 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
   </a>
   <div class="nav-links">
     <a href="index.html"><span>📋 </span>Database</a>
-    <a href="finder.html" class="active"><span>🔍 </span>Finder</a>
-    <a href="analytics.html"><span>📊 </span>Analytics</a>
-    <a href="lists.html"><span>🏆 </span>Best Of</a>
+    
+    <a href="analytics.html"><span>📊 </span>Market Intel</a>
+    <a href="lists.html"><span>🏆 </span>Target Lists</a>
     <a href="landing.html"><span>🏠 </span>About</a>
   </div>
   <div class="controls-bar">
@@ -189,7 +189,7 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
 <div class="wizard-container">
   <div class="wizard-header">
     <h1 id="wiz-title">🍽️ Encuentra tu Almuerzo</h1>
-    <p id="wiz-subtitle">En 3 pasos te recomendamos el menú del día perfecto para hoy.</p>
+    <p id="wiz-subtitle">En 3 pasos te recomendamos el restaurant deals perfecto para hoy.</p>
   </div>
 
   <div class="progress">
@@ -234,7 +234,7 @@ img[src*="logo.png"] { mix-blend-mode: multiply; }
     </div>
 
     <div class="pref-section">
-      <div class="pref-label" id="label-menu">Menú del Día</div>
+      <div class="pref-label" id="label-menu">Restaurant Deals</div>
       <div class="pref-chips" id="menu-chips">
         <span class="pref-chip green" data-pref="menu" data-value="confirmed" onclick="togglePref(this)">🟢 Confirmado</span>
         <span class="pref-chip amber" data-pref="menu" data-value="likely" onclick="togglePref(this)">🟡 Probable</span>
@@ -326,12 +326,12 @@ let results = [];
 const I18N = {
   es: {
     title: '🍽️ Encuentra tu Almuerzo',
-    subtitle: 'En 3 pasos te recomendamos el menú del día perfecto para hoy.',
+    subtitle: 'En 3 pasos te recomendamos el restaurant deals perfecto para hoy.',
     s1_title: '📍 ¿Dónde estás?', s1_sub: 'Elige un barrio o usa tu ubicación actual.',
     gps: 'Usar mi ubicación', gps_loading: 'Localizando...', gps_found: 'Ubicación encontrada',
     next: 'Siguiente →',
     s2_title: '✨ ¿Qué buscas?', s2_sub: 'Selecciona tus preferencias. Todo es opcional.',
-    budget_label: 'Presupuesto', menu_label: 'Menú del Día', cuisine_label: 'Cocina', vibes_label: 'Vibes', amenities_label: 'Amenidades',
+    budget_label: 'Presupuesto', menu_label: 'Restaurant Deals', cuisine_label: 'Cocina', vibes_label: 'Vibes', amenities_label: 'Amenidades',
     am_terrace: '🏡 Terraza', am_dog: '🐕 Dog-Friendly', am_waterfront: '🌊 Waterfront', am_open: '⏰ Abierto Ahora',
     budget_b: '💚 Económico (≤12€)', budget_m: '🧡 Medio (12-18€)', budget_p: '💜 Premium (18€+)',
     menu_c: '🟢 Confirmado', menu_l: '🟡 Probable',
@@ -344,12 +344,12 @@ const I18N = {
   },
   en: {
     title: '🍽️ Find My Lunch',
-    subtitle: 'In 3 steps we\'ll recommend the perfect menú del día for today.',
+    subtitle: 'In 3 steps we\'ll recommend the perfect restaurant deals for today.',
     s1_title: '📍 Where are you?', s1_sub: 'Pick a neighborhood or use your current location.',
     gps: 'Use my location', gps_loading: 'Locating...', gps_found: 'Location found',
     next: 'Next →',
     s2_title: '✨ What are you looking for?', s2_sub: 'Select your preferences. Everything is optional.',
-    budget_label: 'Budget', menu_label: 'Menú del Día', cuisine_label: 'Cuisine', vibes_label: 'Vibes', amenities_label: 'Amenities',
+    budget_label: 'Budget', menu_label: 'Restaurant Deals', cuisine_label: 'Cuisine', vibes_label: 'Vibes', amenities_label: 'Amenities',
     am_terrace: '🏡 Terrace', am_dog: '🐕 Dog-Friendly', am_waterfront: '🌊 Waterfront', am_open: '⏰ Open Now',
     budget_b: '💚 Budget (≤12€)', budget_m: '🧡 Mid-Range (12-18€)', budget_p: '💜 Premium (18€+)',
     menu_c: '🟢 Confirmed', menu_l: '🟡 Likely',
@@ -362,7 +362,7 @@ const I18N = {
   },
   ca: {
     title: '🍽️ Troba el teu Dinar',
-    subtitle: 'En 3 passos et recomanem el menú del dia perfecte per avui.',
+    subtitle: 'En 3 passos et recomanem el restaurant deals perfecte per avui.',
     s1_title: '📍 On ets?', s1_sub: 'Tria un barri o fes servir la teva ubicació actual.',
     gps: 'Utilitzar la meva ubicació', gps_loading: 'Localitzant...', gps_found: 'Ubicació trobada',
     next: 'Següent →',
