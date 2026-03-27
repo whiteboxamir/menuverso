@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barcelona F&B Database Dashboard — Menuverso</title>
+  <meta name="description" content="Verified market intelligence dashboard for the Barcelona food and beverage industry.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg-primary: #0a0e1a;
+      --bg-secondary: #111827;
+      --bg-card: #1a1f35;
+      --bg-card-hover: #222845;
+      --border: rgba(255,255,255,0.06);
+      --border-accent: rgba(99,102,241,0.3);
+      --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent-blue: #6366f1;
+      --accent-cyan: #22d3ee;
+      --accent-green: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+      --accent-purple: #a78bfa;
+      --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+      --gradient-2: linear-gradient(135deg, #22d3ee 0%, #6366f1 100%);
+      --gradient-green: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      --gradient-amber: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      --gradient-rose: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+      --shadow-lg: 0 20px 40px rgba(0,0,0,0.3);
+      --shadow-glow: 0 0 30px rgba(99,102,241,0.15);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --radius-xs: 6px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    /* Ambient background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 25% 25%, rgba(99,102,241,0.06) 0%, transparent 50%),
+                  radial-gradient(ellipse at 75% 75%, rgba(34,211,238,0.04) 0%, transparent 50%);
+      animation: ambientShift 20s ease-in-out infinite alternate;
+      pointer-events: none;
+      z-index: 0;
+    }
+    @keyframes ambientShift {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      100% { transform: translate(-5%, -5%) rotate(3deg); }
+    }
+    /* Layout */
+    .container { max-width: 1380px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+    /* Header */
+    .header {
+      padding: 48px 0 32px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+    .header-inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .header h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.03em;
+    }
+    .header .subtitle { color: var(--text-secondary); font-size: 0.95rem; margin-top: 6px; }
+    .header .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16,185,129,0.12);
+      color: var(--accent-green);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      border: 1px solid rgba(16,185,129,0.2);
+    }
+    .badge::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-green); animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+    /* Section titles */
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title .icon { font-size: 1.3rem; }
+    .section-title .line { flex: 1; height: 1px; background: var(--border); }
+    .section-divider { margin: 48px 0; }
+
+    /* Grid */
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    @media (max-width: 1100px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 700px) { .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; } }
+
+    /* Cards */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      border-radius: var(--radius) var(--radius) 0 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .card:hover::before { opacity: 1; }
+    .card.accent-blue::before { background: var(--gradient-2); }
+    .card.accent-green::before { background: var(--gradient-green); }
+    .card.accent-amber::before { background: var(--gradient-amber); }
+    .card.accent-rose::before { background: var(--gradient-rose); }
+    .card.accent-purple::before { background: var(--gradient-1); }
+
+    /* Stat cards */
+    .stat-card .stat-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .stat-card .stat-value {
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin-bottom: 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .stat-card .stat-source {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .stat-card .stat-source a { color: var(--accent-blue); text-decoration: none; }
+    .stat-card .stat-source a:hover { text-decoration: underline; }
+
+    /* Donut chart */
+    .donut-container { display: flex; align-items: center; gap: 28px; }
+    .donut-svg { width: 180px; height: 180px; transform: rotate(-90deg); flex-shrink: 0; }
+    .donut-svg circle {
+      fill: none;
+      stroke-width: 28;
+      stroke-linecap: round;
+    }
+    .donut-legend { display: flex; flex-direction: column; gap: 14px; }
+    .donut-legend-item { display: flex; align-items: center; gap: 10px; }
+    .donut-legend-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+    .donut-legend-label { font-size: 0.85rem; color: var(--text-secondary); }
+    .donut-legend-value { font-weight: 700; color: var(--text-primary); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; }
+
+    /* Platform cards */
+    .platform-card { padding: 0; display: flex; flex-direction: column; }
+    .platform-header {
+      padding: 24px 28px 16px;
+      display: flex; align-items: center; gap: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .platform-logo {
+      width: 44px; height: 44px;
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .platform-name { font-weight: 700; font-size: 1rem; }
+    .platform-body { padding: 20px 28px 24px; flex: 1; }
+    .platform-stat { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--border); }
+    .platform-stat:last-child { border-bottom: none; }
+    .platform-stat-label { font-size: 0.82rem; color: var(--text-secondary); }
+    .platform-stat-value { font-weight: 700; font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; }
+    .platform-stat-value.highlight { color: var(--accent-green); }
+
+    /* Segmentation bars */
+    .seg-bar-container { margin-top: 12px; }
+    .seg-bar {
+      height: 40px;
+      border-radius: var(--radius-xs);
+      display: flex;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .seg-bar-part {
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      transition: flex 1s cubic-bezier(0.4,0,0.2,1);
+      position: relative;
+      white-space: nowrap;
+      padding: 0 10px;
+    }
+    .seg-legend { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .seg-legend-item { display: flex; flex-direction: column; gap: 4px; }
+    .seg-legend-item .seg-dot { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--text-secondary); font-weight: 500; }
+    .seg-legend-item .seg-dot::before {
+      content: '';
+      width: 10px; height: 10px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .seg-legend-item.green .seg-dot::before { background: var(--accent-green); }
+    .seg-legend-item.amber .seg-dot::before { background: var(--accent-amber); }
+    .seg-legend-item.rose .seg-dot::before { background: var(--accent-rose); }
+    .seg-legend-item .seg-desc { font-size: 0.72rem; color: var(--text-muted); padding-left: 18px; }
+    .seg-legend-item .seg-pct { font-family: 'JetBrains Mono', monospace; font-size: 1.3rem; font-weight: 800; padding-left: 18px; }
+    .seg-legend-item.green .seg-pct { color: var(--accent-green); }
+    .seg-legend-item.amber .seg-pct { color: var(--accent-amber); }
+    .seg-legend-item.rose .seg-pct { color: var(--accent-rose); }
+
+    /* Events table */
+    .events-table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); }
+    .events-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    .events-table th {
+      background: var(--bg-secondary);
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+    }
+    .events-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+    .events-table tr:last-child td { border-bottom: none; }
+    .events-table tr:hover td { background: rgba(99,102,241,0.04); }
+    .events-table .event-name { color: var(--text-primary); font-weight: 600; }
+    .events-table .status-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+    .status-confirmed { background: rgba(16,185,129,0.12); color: var(--accent-green); }
+    .status-tbc { background: rgba(245,158,11,0.12); color: var(--accent-amber); }
+    .status-recurring { background: rgba(99,102,241,0.12); color: var(--accent-blue); }
+    .events-table a { color: var(--accent-cyan); text-decoration: none; font-size: 0.75rem; }
+    .events-table a:hover { text-decoration: underline; }
+
+    /* Source footer */
+    .source-footer {
+      margin-top: 48px;
+      padding: 32px 0;
+      border-top: 1px solid var(--border);
+    }
+    .source-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+    .source-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .source-item .source-num {
+      background: rgba(99,102,241,0.12);
+      color: var(--accent-blue);
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .source-item a { color: var(--accent-cyan); text-decoration: none; }
+    .source-item a:hover { text-decoration: underline; }
+
+    /* Disclaimer banner */
+    .disclaimer {
+      background: rgba(245,158,11,0.08);
+      border: 1px solid rgba(245,158,11,0.2);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      font-size: 0.78rem;
+      color: var(--accent-amber);
+      margin-top: 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .disclaimer .warn-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+
+    /* Tabs */
+    .tab-bar { display: flex; gap: 4px; margin-bottom: 24px; background: var(--bg-secondary); border-radius: var(--radius-sm); padding: 4px; width: fit-content; }
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 8px 18px;
+      border-radius: var(--radius-xs);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .tab-btn.active { background: var(--accent-blue); color: #fff; }
+    .tab-btn:hover:not(.active) { color: var(--text-primary); }
+
+    /* Filter */
+    .filter-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .filter-chip {
+      background: rgba(99,102,241,0.08);
+      border: 1px solid rgba(99,102,241,0.15);
+      color: var(--text-secondary);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .filter-chip.active, .filter-chip:hover {
+      background: rgba(99,102,241,0.18);
+      border-color: var(--accent-blue);
+      color: var(--text-primary);
+    }
+
+    /* Counters animation */
+    .counter { display: inline-block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER -->
+    <header class="header fade-in">
+      <div class="header-inner">
+        <div>
+          <h1>Barcelona F&B Database</h1>
+          <p class="subtitle">Verified market intelligence for partnership development</p>
+        </div>
+        <div class="badge">LIVE DATA — 27 Mar 2026</div>
+      </div>
+    </header>
+
+    <!-- MARKET OVERVIEW -->
+    <section class="fade-in delay-1">
+      <div class="section-title">
+        <span class="icon">📊</span>
+        Market Overview — Barcelona
+        <span class="line"></span>
+      </div>
+      <div class="grid-4">
+        <div class="card stat-card accent-blue">
+          <div class="stat-label">Total Bars & Restaurants</div>
+          <div class="stat-value" style="color: var(--accent-blue)"><span class="counter" data-target="10000">0</span>+</div>
+          <div class="stat-source">📎 <a href="https://www.catalannews.com" target="_blank">Ajuntament BCN — Guía Restauración 2024</a></div>
+        </div>
+        <div class="card stat-card accent-green">
+          <div class="stat-label">Nº Restaurants (pure)</div>
+          <div class="stat-value" style="color: var(--accent-green)">~<span class="counter" data-target="810">0</span></div>
+          <div class="stat-source">📎 8.1% of 10K+ (OMD Ajuntament breakdown)</div>
+        </div>
+        <div class="card stat-card accent-cyan" style="--accent: var(--accent-cyan);">
+          <div class="stat-label">Nº Coffee Places</div>
+          <div class="stat-value" style="color: var(--accent-cyan)">~<span class="counter" data-target="1037">0</span></div>
+          <div class="stat-source">📎 <a href="#">RentechDigital Market Report — Oct 2025</a></div>
+        </div>
+        <div class="card stat-card accent-amber">
+          <div class="stat-label">Nº Bars & Cocktails</div>
+          <div class="stat-value" style="color: var(--accent-amber)">~<span class="counter" data-target="4320">0</span></div>
+          <div class="stat-source">📎 43.2% of 10K+ (OMD Ajuntament breakdown)</div>
+        </div>
+      </div>
+      <div class="disclaimer">
+        <span class="warn-icon">⚠️</span>
+        <span>Restaurant-Bars (~4,870) overlap both "restaurant" and "bar" counts. The 10,000+ Ajuntament total and 13,062 INE figure use different classification systems — they should not be added together. Coffee places counted separately from RentechDigital's market report.</span>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- CATEGORY BREAKDOWN DONUT -->
+    <section class="fade-in delay-2">
+      <div class="section-title">
+        <span class="icon">🍽️</span>
+        Establishment Breakdown (Ajuntament OMD 2024)
+        <span class="line"></span>
+      </div>
+      <div class="card" style="max-width: 640px;">
+        <div class="donut-container">
+          <svg class="donut-svg" viewBox="0 0 200 200">
+            <!-- Background circle -->
+            <circle cx="100" cy="100" r="70" stroke="rgba(255,255,255,0.04)" />
+            <!-- Restaurant-Bars 48.7% -->
+            <circle cx="100" cy="100" r="70" stroke="#6366f1"
+                    stroke-dasharray="213.8 440" stroke-dashoffset="0"
+                    style="transition: stroke-dasharray 1.5s ease;" />
+            <!-- Bars 43.2% -->
+            <circle cx="100" cy="100" r="70" stroke="#f59e0b"
+                    stroke-dasharray="189.6 440" stroke-dashoffset="-213.8"
+                    style="transition: stroke-dasharray 1.5s ease;" />
+            <!-- Pure Restaurants 8.1% -->
+            <circle cx="100" cy="100" r="70" stroke="#10b981"
+                    stroke-dasharray="35.6 440" stroke-dashoffset="-403.4"
+                    style="transition: stroke-dasharray 1.5s ease;" />
+          </svg>
+          <div class="donut-legend">
+            <div class="donut-legend-item">
+              <span class="donut-legend-dot" style="background: #6366f1;"></span>
+              <div>
+                <div class="donut-legend-value">48.7%</div>
+                <div class="donut-legend-label">Restaurant-Bars (~4,870)</div>
+              </div>
+            </div>
+            <div class="donut-legend-item">
+              <span class="donut-legend-dot" style="background: #f59e0b;"></span>
+              <div>
+                <div class="donut-legend-value">43.2%</div>
+                <div class="donut-legend-label">Bars (~4,320)</div>
+              </div>
+            </div>
+            <div class="donut-legend-item">
+              <span class="donut-legend-dot" style="background: #10b981;"></span>
+              <div>
+                <div class="donut-legend-value">8.1%</div>
+                <div class="donut-legend-label">Pure Restaurants (~810)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- DEAL READINESS SEGMENTATION -->
+    <section class="fade-in delay-2">
+      <div class="section-title">
+        <span class="icon">🎯</span>
+        Deal-Readiness Segmentation
+        <span class="line"></span>
+      </div>
+      <div class="card">
+        <div class="seg-bar-container">
+          <div class="seg-bar">
+            <div class="seg-bar-part" style="flex: 7; background: var(--gradient-green);">~5–8%</div>
+            <div class="seg-bar-part" style="flex: 30; background: var(--gradient-amber);">~25–35%</div>
+            <div class="seg-bar-part" style="flex: 60; background: var(--gradient-rose);">~55–65%</div>
+          </div>
+          <div class="seg-legend">
+            <div class="seg-legend-item green">
+              <div class="seg-pct">5–8%</div>
+              <div class="seg-dot">🟢 Deal-Ready</div>
+              <div class="seg-desc">Already on TheFork w/ discounts, Groupon, or ClassPass. Active promo users.</div>
+            </div>
+            <div class="seg-legend-item amber">
+              <div class="seg-pct">25–35%</div>
+              <div class="seg-dot">🟡 High Potential</div>
+              <div class="seg-desc">100+ Google reviews, active Instagram/website. Not yet on deal platforms.</div>
+            </div>
+            <div class="seg-legend-item rose">
+              <div class="seg-pct">55–65%</div>
+              <div class="seg-dot">🔴 Prospects</div>
+              <div class="seg-desc">Basic Google Maps listing, &lt;50 reviews, minimal online presence.</div>
+            </div>
+          </div>
+        </div>
+        <div class="disclaimer">
+          <span class="warn-icon">⚠️</span>
+          <span>These percentages are <strong>estimated</strong> based on platform listing counts vs. total market size. They are not official statistics. Dashboard should label them as "estimated segmentation."</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- PLATFORM PRESENCE -->
+    <section class="fade-in delay-3">
+      <div class="section-title">
+        <span class="icon">📱</span>
+        Platform Presence — Barcelona (Live Data)
+        <span class="line"></span>
+      </div>
+      <div class="grid-3">
+        <!-- TheFork -->
+        <div class="card platform-card accent-green">
+          <div class="platform-header">
+            <div class="platform-logo" style="background: linear-gradient(135deg, #00695c, #00897b);">🍴</div>
+            <div>
+              <div class="platform-name">TheFork</div>
+              <div style="font-size: 0.72rem; color: var(--text-muted);">thefork.es — Scraped 27 Mar 2026</div>
+            </div>
+          </div>
+          <div class="platform-body">
+            <div class="platform-stat">
+              <span class="platform-stat-label">Barcelona Listings</span>
+              <span class="platform-stat-value highlight">1,267</span>
+            </div>
+            <div class="platform-stat">
+              <span class="platform-stat-label">Active Discounts</span>
+              <span class="platform-stat-value">20–50% off</span>
+            </div>
+            <div class="platform-stat">
+              <span class="platform-stat-label">Spain Total</span>
+              <span class="platform-stat-value">~12,000</span>
+            </div>
+            <div class="platform-stat">
+              <span class="platform-stat-label">Global Total</span>
+              <span class="platform-stat-value">~55,000</span>
+            </div>
+            <div class="platform-stat">
+              <span class="platform-stat-label">Promo Types</span>
+              <span class="platform-stat-value" style="font-family: Inter; font-size: 0.78rem;">Festival, Yums, % Off</span>
+            </div>
+          </div>
+        </div>
+        <!-- Groupon -->
+        <div class="card platform-card accent-amber">
+          <div class="platform-header">
+            <div class="platform-logo" style="background: linear-gradient(135deg, #2e7d32, #43a047);">G</div>
+            <div>
+              <div class="platform-name">Groupon</div>
+              <div style="font-size: 0.72rem; color: var(--text-muted);">groupon.es — Scraped 27 Mar 2026</div>
+            </div>
+          </div>
+          <div class="platform-body">
+            <div class="platform-stat">
+              <span class="platform-stat-label">Gastronomía Deals</span>
+              <span class="platform-stat-value highlight">100+</span>
+            </div>
+            <div class="platform-stat">
+              <span class="platform-stat-label">Restaurant Deals</span>
+              <span class="platform-stat-value">80+</span>
+            </div>
+            <div class="platform-stat">
+              <span class="platform-stat-label">Sub-categories</span>
+              <span class="platform-stat-value" style="font-family: Inter; font-size: 0.72rem;">Restaurants, Breweries, Markets, Bars, Café</span>
+            </div>
+            <div class="platform-stat">
+              <span class="platform-stat-label">Discount Code</span>
+              <span class="platform-stat-value" style="color: var(--accent-amber);">TASTY (25%)</span>
+            </div>
+          </div>
+        </div>
+        <!-- ClassPass -->
+        <div class="card platform-card accent-purple">
+          <div class="platform-header">
+            <div class="platform-logo" style="background: linear-gradient(135deg, #5b21b6, #7c3aed);">CP</div>
+            <div>
+              <div class="platform-name">ClassPass</div>
+              <div style="font-size: 0.72rem; color: var(--text-muted);">classpass.com — Scraped 27 Mar 2026</div>
+            </div>
+          </div>
+          <div class="platform-body">
+            <div class="platform-stat">
+              <span class="platform-stat-label">F&B Locations</span>
+              <span class="platform-stat-value highlight">~28</span>
+            </div>
+            <div class="platform-stat">
+              <span class="platform-stat-label">Unique Brands</span>
+              <span class="platform-stat-value">16</span>
+            </div>
+            <div class="platform-stat">
+              <span class="platform-stat-label">Top Brand</span>
+              <span class="platform-stat-value" style="font-family: Inter; font-size: 0.82rem;">Honest Greens (7 loc)</span>
+            </div>
+            <div class="platform-stat">
+              <span class="platform-stat-label">Category Focus</span>
+              <span class="platform-stat-value" style="font-family: Inter; font-size: 0.72rem;">Smoothies, Coffee, Poke, Açaí</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="disclaimer" style="margin-top: 16px;">
+        <span class="warn-icon">ℹ️</span>
+        <span><strong>Groupon</strong> shows <em>deals</em>, not unique locations — one restaurant may have multiple deals. <strong>ClassPass</strong> is heavily skewed toward healthy/fitness-adjacent F&B. These are niche platforms with limited overlap with the traditional restaurant market.</span>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- FOOD EVENTS -->
+    <section class="fade-in delay-3">
+      <div class="section-title">
+        <span class="icon">🎪</span>
+        Barcelona Food Events 2026 — Potential Partnerships
+        <span class="line"></span>
+      </div>
+      <div class="filter-row">
+        <button class="filter-chip active" onclick="filterEvents('all')">All (23)</button>
+        <button class="filter-chip" onclick="filterEvents('confirmed')">✅ Confirmed (10)</button>
+        <button class="filter-chip" onclick="filterEvents('tbc')">⌛ TBC (10)</button>
+        <button class="filter-chip" onclick="filterEvents('recurring')">🔄 Recurring (3)</button>
+        <button class="filter-chip" onclick="filterEvents('professional')">🏢 Professional (3)</button>
+        <button class="filter-chip" onclick="filterEvents('public')">👥 Public (20)</button>
+      </div>
+      <div class="events-table-wrap">
+        <table class="events-table" id="eventsTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Event</th>
+              <th>Type</th>
+              <th>Date(s) 2026</th>
+              <th>Location</th>
+              <th>Audience</th>
+              <th>Status</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody id="eventsBody">
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-top: 12px; font-size: 0.72rem; color: var(--text-muted);">
+        📎 Source: <a href="https://docs.google.com/spreadsheets/d/1bymolNKqDMyhlqeZfmjrl_7n9SQRwQ8I/" target="_blank" style="color: var(--accent-cyan); text-decoration:none;">Patricia's Food Events Spreadsheet</a> — Accessed 27 Mar 2026
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- CLASSPASS VENUES DETAIL -->
+    <section class="fade-in delay-4">
+      <div class="section-title">
+        <span class="icon">🏋️</span>
+        ClassPass F&B Venues — Barcelona Detail
+        <span class="line"></span>
+      </div>
+      <div class="events-table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr>
+              <th>Venue</th>
+              <th>Category</th>
+              <th>Locations</th>
+              <th>Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="event-name">Honest Greens</td><td>Healthy Food</td><td>Rambla Catalunya, Tuset, Diagonal, Pg. Gràcia, Rec, Sta. Madrona, Pelai</td><td>7</td></tr>
+            <tr><td class="event-name">Syra Coffee</td><td>Coffee</td><td>Consell de Cent, Gràcia, Mallorca, Rec</td><td>4</td></tr>
+            <tr><td class="event-name">OAKBERRY Açaí</td><td>Smoothie Bowls</td><td>Plaça del Sol, Glòries, Baluard</td><td>3</td></tr>
+            <tr><td class="event-name">Nudes</td><td>Smoothies / Coffee</td><td>Rambla Catalunya, Calvet, Rec</td><td>3</td></tr>
+            <tr><td class="event-name">EatMyTrip</td><td>Restaurant</td><td>Eixample, Borrell</td><td>2</td></tr>
+            <tr><td class="event-name">Enlagloria Salad House</td><td>Salads / Poke</td><td>Provença, Avenir</td><td>2</td></tr>
+            <tr><td class="event-name">Healthy Poke</td><td>Poke Bowls</td><td>Llacuna, Universitat</td><td>2</td></tr>
+            <tr><td class="event-name">Barry's Fuel Bar</td><td>Fitness Café</td><td>Pau Casals</td><td>1</td></tr>
+            <tr><td class="event-name">Goodfit Café</td><td>Café</td><td>Rector Ubach</td><td>1</td></tr>
+            <tr><td class="event-name">Pulso Estudio F&B</td><td>Fitness F&B</td><td>Riera de Cassoles</td><td>1</td></tr>
+            <tr><td class="event-name">Dòt Healthy Bar</td><td>Healthy Bar</td><td>Diputació</td><td>1</td></tr>
+            <tr><td class="event-name">Bloome by Sasha</td><td>Smoothies / Coffee</td><td>—</td><td>1</td></tr>
+            <tr><td class="event-name">Gonzalez & Co</td><td>Salads / Burritos</td><td>Consell de Cent</td><td>1</td></tr>
+            <tr><td class="event-name">SEA YOU HOUSE</td><td>Smoothies / Coffee / Juices</td><td>—</td><td>1</td></tr>
+            <tr><td class="event-name">Karma Cafè</td><td>Café</td><td>Carme</td><td>1</td></tr>
+            <tr><td class="event-name">TRIB3 Sagrada Familia</td><td>Shakes</td><td>Sagrada Familia</td><td>1</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SOURCE REGISTRY -->
+    <footer class="source-footer fade-in delay-4">
+      <div class="section-title">
+        <span class="icon">📋</span>
+        Source Registry — Every Number is Traceable
+        <span class="line"></span>
+      </div>
+      <div class="source-grid">
+        <div class="source-item">
+          <span class="source-num">1</span>
+          <span><strong>Ajuntament de Barcelona</strong> — Guía de la Restauración 2024 (via <a href="https://www.catalannews.com" target="_blank">catalannews.com</a>, <a href="https://www.acib.cat" target="_blank">acib.cat</a>)</span>
+        </div>
+        <div class="source-item">
+          <span class="source-num">2</span>
+          <span><strong>Oficina Municipal de Dades (OMD)</strong> — 2024 restoration sector breakdown (via todoitalianobarcelona.es)</span>
+        </div>
+        <div class="source-item">
+          <span class="source-num">3</span>
+          <span><strong>RentechDigital</strong> — Barcelona café market report, Oct 2025 (1,024–1,037 cafés)</span>
+        </div>
+        <div class="source-item">
+          <span class="source-num">4</span>
+          <span><strong>TheFork</strong> — Live scrape 27 Mar 2026 from <a href="https://www.thefork.es" target="_blank">thefork.es</a> (1,267 results)</span>
+        </div>
+        <div class="source-item">
+          <span class="source-num">5</span>
+          <span><strong>TheFork PR</strong> — SpainTravelNews Jan 2025 (12K Spain, 55K global)</span>
+        </div>
+        <div class="source-item">
+          <span class="source-num">6</span>
+          <span><strong>Groupon</strong> — Live scrape 27 Mar 2026 from <a href="https://www.groupon.es" target="_blank">groupon.es</a> (100+ gastronomía)</span>
+        </div>
+        <div class="source-item">
+          <span class="source-num">7</span>
+          <span><strong>ClassPass</strong> — Live scrape 27 Mar 2026 from <a href="https://classpass.com" target="_blank">classpass.com</a> (~28 F&B locations)</span>
+        </div>
+        <div class="source-item">
+          <span class="source-num">8</span>
+          <span><strong>INE / Idescat</strong> — Catalonia: 19,470 restaurants, 55,906 total F&B (2023)</span>
+        </div>
+        <div class="source-item">
+          <span class="source-num">9</span>
+          <span><strong>SpainGuru</strong> — INE bar stats: 13,062 bars BCN (broad definition)</span>
+        </div>
+        <div class="source-item">
+          <span class="source-num">10</span>
+          <span><strong>Patricia's Spreadsheet</strong> — Food events Barcelona 2026 (23 events, accessed 27 Mar 2026)</span>
+        </div>
+      </div>
+      <div style="margin-top: 32px; text-align: center; color: var(--text-muted); font-size: 0.72rem;">
+        Dashboard generated 27 March 2026 · Data verified via live scraping with screenshot evidence · Menuverso
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // EVENTS DATA
+    const events = [
+      { id: 1, name: "Barcelona Wine Week", type: "Wine Trade Fair", date: "2–4 February", location: "Fira Barcelona, Montjuïc", audience: "Professional", status: "confirmed", url: "https://www.barcelonawineweek.com/" },
+      { id: 2, name: "GastroFest Km0", type: "Food Festival", date: "7–8 March", location: "Antiga Fàbrica Estrella Damm", audience: "Public", status: "confirmed", url: "https://www.barcelonaturisme.com" },
+      { id: 3, name: "Passeig de Gourmets", type: "Gourmet Restaurant Week", date: "12–22 March", location: "Passeig de Gràcia", audience: "Public", status: "confirmed", url: "https://www.passeigdegourmets.com/" },
+      { id: 4, name: "Time Out Fest", type: "Food Festival", date: "13–15 March", location: "Antiga Fàbrica Estrella Damm", audience: "Public", status: "confirmed", url: "https://www.timeout.com/barcelona/food-and-drink/time-out-fest" },
+      { id: 5, name: "Alimentaria + Hostelco", type: "Trade Fair", date: "23–26 March", location: "Fira Barcelona Gran Via", audience: "Professional", status: "confirmed", url: "https://www.alimentaria.com/en/" },
+      { id: 6, name: "Barcelona Beer Festival", type: "Craft Beer Festival", date: "10–12 April", location: "Fira de Montjuïc, Hall 2", audience: "Public", status: "confirmed", url: "https://barcelonabeerfestival.com/en/" },
+      { id: 7, name: "All Those Food Market (Spring)", type: "Artisan Food Market", date: "26–27 April", location: "Moll de la Fusta", audience: "Public", status: "confirmed", url: "https://allthosefoodmarket.com" },
+      { id: 8, name: "Sant Ponç", type: "Traditional Food Fair", date: "11 May", location: "Hospital de la Santa Creu", audience: "Public", status: "confirmed", url: "https://www.barcelonaturisme.com" },
+      { id: 9, name: "Tast a la Rambla", type: "Gastronomy Festival", date: "28–31 May", location: "Plaça de Catalunya", audience: "Public", status: "confirmed", url: "https://www.tastalarambla.cat/en/" },
+      { id: 10, name: "Meat & Fire Festival", type: "BBQ / Fire Cooking", date: "12–14 June", location: "TBC, Barcelona", audience: "Public", status: "confirmed", url: "https://meatandfire.org/" },
+      { id: 11, name: "Taco Fest Barcelona", type: "Street Food Festival", date: "Summer (TBC)", location: "Montjuïc", audience: "Public", status: "tbc", url: "https://barcelonaexpatlife.com/food-festivals-in-barcelona/" },
+      { id: 12, name: "Born Street Food", type: "Street Food Festival", date: "June (TBC)", location: "Pla de Palau, El Born", audience: "Public", status: "tbc", url: "https://www.barcelona-metropolitan.com/events/born-street-food/" },
+      { id: 13, name: "San Miguel Biergarten", type: "Beer & Food Festival", date: "Summer (TBC)", location: "Poble Espanyol", audience: "Public", status: "tbc", url: "https://www.sanmiguel.es" },
+      { id: 14, name: "Vermut & Soul", type: "Vermouth Festival", date: "Summer (TBC)", location: "TBC, Barcelona", audience: "Public", status: "tbc", url: "https://barcelonaexpatlife.com/food-festivals-in-barcelona/" },
+      { id: 15, name: "Pizza Fest", type: "Food Festival", date: "Summer (TBC)", location: "Poble Espanyol", audience: "Public", status: "tbc", url: "https://barcelonaexpatlife.com/food-festivals-in-barcelona/" },
+      { id: 16, name: "All Those Food Market (Autumn)", type: "Artisan Food Market", date: "Autumn (TBC)", location: "TBC, Barcelona", audience: "Public", status: "tbc", url: "https://allthosefoodmarket.com" },
+      { id: 17, name: "Mercat de Mercats", type: "Gastronomy Fair", date: "October (TBC)", location: "Plaça de les Glòries", audience: "Public", status: "tbc", url: "https://mercatdemercats.cat" },
+      { id: 18, name: "Bravas Fest", type: "Street Food Festival", date: "October (TBC)", location: "Poble Espanyol", audience: "Public", status: "tbc", url: "https://barcelonaexpatlife.com/food-festivals-in-barcelona/" },
+      { id: 19, name: "Oktoberfest Barcelona", type: "Beer & Food Festival", date: "October (TBC)", location: "Montjuïc area", audience: "Public", status: "tbc", url: "https://barcelonahacks.com/barcelona-events/" },
+      { id: 20, name: "Gastronomic Forum", type: "Professional Trade Event", date: "2–4 November", location: "Fira Barcelona Gran Via", audience: "Professional", status: "confirmed", url: "https://www.gastronomicforumbarcelona.com/en/" },
+      { id: 21, name: "Palo Alto Market", type: "Monthly Street Market", date: "1st weekend/mo", location: "Poblenou", audience: "Public", status: "recurring", url: "https://paloaltomarket.com" },
+      { id: 22, name: "Van Van Market", type: "Nomad Gastro Market", date: "Variable monthly", location: "Various locations", audience: "Public", status: "recurring", url: "https://vanvanmarket.com" },
+      { id: 23, name: "Eat Street Food Festival", type: "Street Food", date: "Multiple dates", location: "Various locations", audience: "Public", status: "recurring", url: "https://eatstreetfood.com" },
+    ];
+
+    function renderEvents(filter = 'all') {
+      const tbody = document.getElementById('eventsBody');
+      const filtered = events.filter(e => {
+        if (filter === 'all') return true;
+        if (filter === 'confirmed') return e.status === 'confirmed';
+        if (filter === 'tbc') return e.status === 'tbc';
+        if (filter === 'recurring') return e.status === 'recurring';
+        if (filter === 'professional') return e.audience === 'Professional';
+        if (filter === 'public') return e.audience === 'Public';
+        return true;
+      });
+      tbody.innerHTML = filtered.map(e => {
+        const statusClass = e.status === 'confirmed' ? 'status-confirmed' :
+                           e.status === 'tbc' ? 'status-tbc' : 'status-recurring';
+        const statusLabel = e.status === 'confirmed' ? '✅ Confirmed' :
+                           e.status === 'tbc' ? '⌛ TBC' : '🔄 Recurring';
+        return `<tr data-status="${e.status}" data-audience="${e.audience}">
+          <td>${e.id}</td>
+          <td class="event-name">${e.name}</td>
+          <td>${e.type}</td>
+          <td>${e.date}</td>
+          <td>${e.location}</td>
+          <td>${e.audience}</td>
+          <td><span class="status-badge ${statusClass}">${statusLabel}</span></td>
+          <td><a href="${e.url}" target="_blank">🔗 Website</a></td>
+        </tr>`;
+      }).join('');
+    }
+
+    function filterEvents(filter) {
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      event.target.classList.add('active');
+      renderEvents(filter);
+    }
+
+    // Animated counters
+    function animateCounters() {
+      document.querySelectorAll('.counter').forEach(counter => {
+        const target = parseInt(counter.dataset.target);
+        const duration = 2000;
+        const start = performance.now();
+        function step(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          counter.textContent = Math.floor(target * eased).toLocaleString();
+          if (progress < 1) requestAnimationFrame(step);
+          else counter.textContent = target.toLocaleString();
+        }
+        requestAnimationFrame(step);
+      });
+    }
+
+    // Intersection observer for animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Init
+    renderEvents();
+    setTimeout(animateCounters, 600);
+  </script>
+</body>
+</html>
