@@ -77670,7 +77670,10 @@
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4033238,
+      "lng": 2.1565509
+    },
     "has_photo": false,
     "thefork_rating": null,
     "thefork_avg_price": "",
@@ -82650,7 +82653,7 @@
   {
     "name": "Poca-Solta - Rambla Catalunya",
     "address": "Eixample, Barcelona",
-    "address_full": "",
+    "address_full": "Rambla+Catalunya++Barcelona&amp;pb=%211sPoca-Solta+-+Rambla+Catalunya++Barcelona",
     "postal_code": "",
     "city": "Barcelona",
     "neighborhood": "Eixample",
@@ -83865,7 +83868,10 @@
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4033238,
+      "lng": 2.1565509
+    },
     "has_photo": false,
     "thefork_rating": 8.9,
     "thefork_avg_price": "24€",
@@ -84471,7 +84477,10 @@
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3652876,
+      "lng": 2.1724915
+    },
     "has_photo": false,
     "thefork_rating": 7.1,
     "thefork_avg_price": "28€",
@@ -84897,7 +84906,10 @@
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3983327,
+      "lng": 2.1554282
+    },
     "has_photo": false,
     "thefork_rating": 8.8,
     "thefork_avg_price": "20€",
