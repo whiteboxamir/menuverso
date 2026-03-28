@@ -76,6 +76,7 @@
       font-size: 2.2rem;
       font-weight: 800;
       background: var(--gradient-1);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       letter-spacing: -0.03em;
@@ -386,6 +387,43 @@
 
     /* Counters animation */
     .counter { display: inline-block; }
+
+    /* Neighborhood horizontal bars */
+    .neighborhood-bars { display: flex; flex-direction: column; gap: 10px; }
+    .nb-row { display: flex; align-items: center; gap: 12px; }
+    .nb-name {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      width: 160px;
+      flex-shrink: 0;
+      text-align: right;
+      font-weight: 500;
+    }
+    .nb-bar-bg {
+      flex: 1;
+      height: 26px;
+      background: rgba(255,255,255,0.03);
+      border-radius: var(--radius-xs);
+      overflow: hidden;
+    }
+    .nb-bar {
+      height: 100%;
+      border-radius: var(--radius-xs);
+      transition: width 1.5s cubic-bezier(0.4,0,0.2,1);
+      min-width: 4px;
+    }
+    .nb-count {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      width: 36px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    @media (max-width: 700px) {
+      .nb-name { width: 100px; font-size: 0.72rem; }
+    }
   </style>
 </head>
 <body>
@@ -397,7 +435,7 @@
           <h1>Barcelona F&B Database</h1>
           <p class="subtitle">Verified market intelligence for partnership development</p>
         </div>
-        <div class="badge">LIVE DATA — 27 Mar 2026</div>
+        <div class="badge">LIVE DATA — 28 Mar 2026</div>
       </div>
     </header>
 
@@ -492,41 +530,190 @@
 
     <div class="section-divider"></div>
 
-    <!-- DEAL READINESS SEGMENTATION -->
+    <!-- DIGITAL PRESENCE & SALES READINESS — DATA FROM OUR 1,302 VERIFIED DB -->
     <section class="fade-in delay-2">
       <div class="section-title">
-        <span class="icon">🎯</span>
-        Deal-Readiness Segmentation
+        <span class="icon">📡</span>
+        Digital Presence & Sales Readiness — From Our Database
         <span class="line"></span>
       </div>
-      <div class="card">
+
+      <!-- Tier overview cards -->
+      <div class="grid-4" style="margin-bottom: 24px;">
+        <div class="card stat-card accent-green">
+          <div class="stat-label">Tier 1 — Platform-Active</div>
+          <div class="stat-value" style="color: var(--accent-green)"><span class="counter" data-target="129">0</span></div>
+          <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 4px;">9.9% of our DB</div>
+          <div class="stat-source">Listed on TheFork with active promos</div>
+        </div>
+        <div class="card stat-card accent-blue">
+          <div class="stat-label">Tier 2 — High Digital</div>
+          <div class="stat-value" style="color: var(--accent-blue)"><span class="counter" data-target="255">0</span></div>
+          <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 4px;">19.6% of our DB</div>
+          <div class="stat-source">Website + 100+ reviews + ★4.0+</div>
+        </div>
+        <div class="card stat-card accent-amber">
+          <div class="stat-label">Tier 3 — Moderate Digital</div>
+          <div class="stat-value" style="color: var(--accent-amber)"><span class="counter" data-target="916">0</span></div>
+          <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 4px;">70.4% of our DB</div>
+          <div class="stat-source">Website or 50+ reviews (not both)</div>
+        </div>
+        <div class="card stat-card accent-rose">
+          <div class="stat-label">Tier 4 — Minimal</div>
+          <div class="stat-value" style="color: var(--accent-rose)"><span class="counter" data-target="2">0</span></div>
+          <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 4px;">0.2% of our DB</div>
+          <div class="stat-source">Google Maps listing only</div>
+        </div>
+      </div>
+
+      <!-- Segmentation bar — now with real data -->
+      <div class="card" style="margin-bottom: 24px;">
+        <div style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.06em;">Readiness distribution — 1,302 verified restaurants</div>
         <div class="seg-bar-container">
           <div class="seg-bar">
-            <div class="seg-bar-part" style="flex: 7; background: var(--gradient-green);">~5–8%</div>
-            <div class="seg-bar-part" style="flex: 30; background: var(--gradient-amber);">~25–35%</div>
-            <div class="seg-bar-part" style="flex: 60; background: var(--gradient-rose);">~55–65%</div>
+            <div class="seg-bar-part" style="flex: 9.9; background: var(--gradient-green);">9.9%</div>
+            <div class="seg-bar-part" style="flex: 19.6; background: var(--gradient-2);">19.6%</div>
+            <div class="seg-bar-part" style="flex: 70.4; background: var(--gradient-amber);">70.4%</div>
+            <div class="seg-bar-part" style="flex: 0.2; background: var(--gradient-rose);"></div>
           </div>
-          <div class="seg-legend">
+          <div class="seg-legend" style="grid-template-columns: repeat(4, 1fr);">
             <div class="seg-legend-item green">
-              <div class="seg-pct">5–8%</div>
-              <div class="seg-dot">🟢 Deal-Ready</div>
-              <div class="seg-desc">Already on TheFork w/ discounts, Groupon, or ClassPass. Active promo users.</div>
+              <div class="seg-pct">129</div>
+              <div class="seg-dot">🟢 Platform-Active</div>
+              <div class="seg-desc">Already on TheFork. Easiest to close — promo-experienced.</div>
+            </div>
+            <div class="seg-legend-item" style="--seg-color: var(--accent-blue);">
+              <div class="seg-pct" style="color: var(--accent-blue);">255</div>
+              <div class="seg-dot">🔵 High Digital</div>
+              <div class="seg-desc">Website + strong reviews + high rating. Ready for outreach.</div>
             </div>
             <div class="seg-legend-item amber">
-              <div class="seg-pct">25–35%</div>
-              <div class="seg-dot">🟡 High Potential</div>
-              <div class="seg-desc">100+ Google reviews, active Instagram/website. Not yet on deal platforms.</div>
+              <div class="seg-pct">916</div>
+              <div class="seg-dot">🟡 Moderate</div>
+              <div class="seg-desc">Some online presence. Need nurturing before deal conversion.</div>
             </div>
             <div class="seg-legend-item rose">
-              <div class="seg-pct">55–65%</div>
-              <div class="seg-dot">🔴 Prospects</div>
-              <div class="seg-desc">Basic Google Maps listing, &lt;50 reviews, minimal online presence.</div>
+              <div class="seg-pct">2</div>
+              <div class="seg-dot">🔴 Minimal</div>
+              <div class="seg-desc">Listing only. Not viable for digital partnerships.</div>
             </div>
           </div>
         </div>
-        <div class="disclaimer">
-          <span class="warn-icon">⚠️</span>
-          <span>These percentages are <strong>estimated</strong> based on platform listing counts vs. total market size. They are not official statistics. Dashboard should label them as "estimated segmentation."</span>
+      </div>
+
+      <!-- Digital Indicators -->
+      <div class="grid-4" style="margin-bottom: 24px;">
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 8px;">🌐</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.6rem; font-weight: 800; color: var(--accent-cyan);"><span class="counter" data-target="267">0</span></div>
+          <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">Have Website</div>
+          <div style="font-size: 0.72rem; color: var(--text-muted);">20.5% of DB</div>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 8px;">📞</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.6rem; font-weight: 800; color: var(--accent-cyan);"><span class="counter" data-target="278">0</span></div>
+          <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">Have Phone</div>
+          <div style="font-size: 0.72rem; color: var(--text-muted);">21.4% of DB</div>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 8px;">⭐</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.6rem; font-weight: 800; color: var(--accent-cyan);"><span class="counter" data-target="1181">0</span></div>
+          <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">100+ Reviews</div>
+          <div style="font-size: 0.72rem; color: var(--text-muted);">90.7% of DB</div>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 8px;">🏆</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.6rem; font-weight: 800; color: var(--accent-cyan);"><span class="counter" data-target="1131">0</span></div>
+          <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">★ 4.0+ Rating</div>
+          <div style="font-size: 0.72rem; color: var(--text-muted);">93.4% of rated</div>
+        </div>
+      </div>
+
+      <!-- Market Projection -->
+      <div class="card" style="margin-bottom: 24px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+          <span style="font-size: 1.2rem;">📐</span>
+          <span style="font-weight: 700; font-size: 0.92rem;">Market Projection — Extrapolated to 5,698 Establishments (Eixos Baseline)</span>
+        </div>
+        <div class="grid-4">
+          <div style="text-align: center; padding: 16px; background: rgba(16,185,129,0.06); border-radius: var(--radius-sm); border: 1px solid rgba(16,185,129,0.15);">
+            <div style="font-family: 'JetBrains Mono'; font-size: 1.4rem; font-weight: 800; color: var(--accent-green);">~564</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Platform-Active</div>
+          </div>
+          <div style="text-align: center; padding: 16px; background: rgba(99,102,241,0.06); border-radius: var(--radius-sm); border: 1px solid rgba(99,102,241,0.15);">
+            <div style="font-family: 'JetBrains Mono'; font-size: 1.4rem; font-weight: 800; color: var(--accent-blue);">~1,115</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">High Digital</div>
+          </div>
+          <div style="text-align: center; padding: 16px; background: rgba(245,158,11,0.06); border-radius: var(--radius-sm); border: 1px solid rgba(245,158,11,0.15);">
+            <div style="font-family: 'JetBrains Mono'; font-size: 1.4rem; font-weight: 800; color: var(--accent-amber);">~4,008</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Moderate Digital</div>
+          </div>
+          <div style="text-align: center; padding: 16px; background: rgba(244,63,94,0.06); border-radius: var(--radius-sm); border: 1px solid rgba(244,63,94,0.15);">
+            <div style="font-family: 'JetBrains Mono'; font-size: 1.4rem; font-weight: 800; color: var(--accent-rose);">~8</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Minimal</div>
+          </div>
+        </div>
+        <div class="disclaimer" style="margin-top: 16px;">
+          <span class="warn-icon">📎</span>
+          <span>Projection uses our DB ratio (1,302 sampled) applied to the Eixos.cat baseline of 5,698. This is <strong>directional</strong>, not census-grade. Our sample skews toward higher-visibility restaurants.</span>
+        </div>
+      </div>
+
+      <!-- Top Neighborhoods for Sales -->
+      <div class="card" style="margin-bottom: 24px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+          <span style="font-size: 1.2rem;">📍</span>
+          <span style="font-weight: 700; font-size: 0.92rem;">Top Neighborhoods — High-Value Targets (Tier 1 + 2)</span>
+        </div>
+        <div class="neighborhood-bars">
+          <div class="nb-row"><span class="nb-name">Eixample</span><div class="nb-bar-bg"><div class="nb-bar" style="width: 100%; background: var(--gradient-1);"></div></div><span class="nb-count">170</span></div>
+          <div class="nb-row"><span class="nb-name">Barri Gòtic</span><div class="nb-bar-bg"><div class="nb-bar" style="width: 17.6%; background: var(--gradient-2);"></div></div><span class="nb-count">30</span></div>
+          <div class="nb-row"><span class="nb-name">Gràcia</span><div class="nb-bar-bg"><div class="nb-bar" style="width: 17.6%; background: var(--gradient-2);"></div></div><span class="nb-count">30</span></div>
+          <div class="nb-row"><span class="nb-name">El Raval</span><div class="nb-bar-bg"><div class="nb-bar" style="width: 17.1%; background: var(--gradient-green);"></div></div><span class="nb-count">29</span></div>
+          <div class="nb-row"><span class="nb-name">El Born</span><div class="nb-bar-bg"><div class="nb-bar" style="width: 15.3%; background: var(--gradient-green);"></div></div><span class="nb-count">26</span></div>
+          <div class="nb-row"><span class="nb-name">Barceloneta</span><div class="nb-bar-bg"><div class="nb-bar" style="width: 13.5%; background: var(--gradient-amber);"></div></div><span class="nb-count">23</span></div>
+          <div class="nb-row"><span class="nb-name">Poble Sec</span><div class="nb-bar-bg"><div class="nb-bar" style="width: 8.2%; background: var(--gradient-amber);"></div></div><span class="nb-count">14</span></div>
+          <div class="nb-row"><span class="nb-name">Poblenou</span><div class="nb-bar-bg"><div class="nb-bar" style="width: 7.1%; background: var(--gradient-rose);"></div></div><span class="nb-count">12</span></div>
+          <div class="nb-row"><span class="nb-name">Sarrià-Sant Gervasi</span><div class="nb-bar-bg"><div class="nb-bar" style="width: 7.1%; background: var(--gradient-rose);"></div></div><span class="nb-count">12</span></div>
+          <div class="nb-row"><span class="nb-name">Sants</span><div class="nb-bar-bg"><div class="nb-bar" style="width: 5.3%; background: var(--gradient-rose);"></div></div><span class="nb-count">9</span></div>
+        </div>
+      </div>
+
+      <!-- Top 10 Deal-Ready Prospects -->
+      <div class="card">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+          <span style="font-size: 1.2rem;">🔥</span>
+          <span style="font-weight: 700; font-size: 0.92rem;">Top 10 Deal-Ready Prospects — Highest Visibility Restaurants</span>
+        </div>
+        <div class="events-table-wrap" style="border: none;">
+          <table class="events-table" style="font-size: 0.8rem;">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Restaurant</th>
+                <th>Neighborhood</th>
+                <th>Rating</th>
+                <th>Reviews</th>
+                <th>Source</th>
+                <th>Tier</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td class="event-name">La Boqueria Market Stalls</td><td>El Raval</td><td>★ 4.3</td><td style="font-family:'JetBrains Mono';font-weight:700;color:var(--accent-green)">15,613</td><td>Web Search</td><td><span class="status-badge status-confirmed">Tier 2</span></td></tr>
+              <tr><td>2</td><td class="event-name">Braseria Barcelona</td><td>Eixample</td><td>★ 4.8</td><td style="font-family:'JetBrains Mono';font-weight:700;color:var(--accent-green)">10,057</td><td>TheFork</td><td><span class="status-badge" style="background:rgba(16,185,129,0.18);color:#10b981;">Tier 1</span></td></tr>
+              <tr><td>3</td><td class="event-name">Balthazar</td><td>Eixample</td><td>★ 4.4</td><td style="font-family:'JetBrains Mono';font-weight:700;color:var(--accent-green)">8,091</td><td>Web Search</td><td><span class="status-badge status-confirmed">Tier 2</span></td></tr>
+              <tr><td>4</td><td class="event-name">Los Caracoles</td><td>Barri Gòtic</td><td>★ 4.0</td><td style="font-family:'JetBrains Mono';font-weight:700;color:var(--accent-green)">8,014</td><td>Web Search</td><td><span class="status-badge status-confirmed">Tier 2</span></td></tr>
+              <tr><td>5</td><td class="event-name">Can Paixano (La Xampanyeria)</td><td>Barceloneta</td><td>★ 4.3</td><td style="font-family:'JetBrains Mono';font-weight:700;color:var(--accent-green)">7,697</td><td>Web Search</td><td><span class="status-badge status-confirmed">Tier 2</span></td></tr>
+              <tr><td>6</td><td class="event-name">Restaurant 7 Portes</td><td>El Born</td><td>★ 4.2</td><td style="font-family:'JetBrains Mono';font-weight:700;color:var(--accent-green)">6,770</td><td>Web Search</td><td><span class="status-badge status-confirmed">Tier 2</span></td></tr>
+              <tr><td>7</td><td class="event-name">Cerveseria Catalana</td><td>Eixample</td><td>★ 4.3</td><td style="font-family:'JetBrains Mono';font-weight:700;color:var(--accent-green)">6,765</td><td>Web Search</td><td><span class="status-badge status-confirmed">Tier 2</span></td></tr>
+              <tr><td>8</td><td class="event-name">Disfrutar</td><td>Eixample</td><td>★ 4.8</td><td style="font-family:'JetBrains Mono';font-weight:700;color:var(--accent-green)">6,133</td><td>Web Search</td><td><span class="status-badge status-confirmed">Tier 2</span></td></tr>
+              <tr><td>9</td><td class="event-name">Parra Grill Asador Argentino</td><td>Eixample</td><td>★ 4.8</td><td style="font-family:'JetBrains Mono';font-weight:700;color:var(--accent-green)">5,708</td><td>TheFork</td><td><span class="status-badge" style="background:rgba(16,185,129,0.18);color:#10b981;">Tier 1</span></td></tr>
+              <tr><td>10</td><td class="event-name">Casa Amalia</td><td>Eixample</td><td>★ 4.5</td><td style="font-family:'JetBrains Mono';font-weight:700;color:var(--accent-green)">6,067</td><td>Web Search</td><td><span class="status-badge status-confirmed">Tier 2</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top: 12px; font-size: 0.72rem; color: var(--text-muted);">
+          📎 Source: Menuverso DB (1,302 restaurants) — Google Maps ratings/reviews scraped & verified · TheFork listings cross-referenced
         </div>
       </div>
     </section>
@@ -765,9 +952,13 @@
           <span class="source-num">10</span>
           <span><strong>Patricia's Spreadsheet</strong> — Food events Barcelona 2026 (23 events, accessed 27 Mar 2026)</span>
         </div>
+        <div class="source-item">
+          <span class="source-num">11</span>
+          <span><strong>Menuverso DB</strong> — 1,302 verified restaurants with Google Maps ratings, review counts, websites, phone numbers. Digital readiness tiers computed from this dataset (28 Mar 2026)</span>
+        </div>
       </div>
       <div style="margin-top: 32px; text-align: center; color: var(--text-muted); font-size: 0.72rem;">
-        Dashboard generated 27 March 2026 · Data verified via live scraping with screenshot evidence · Menuverso
+        Dashboard updated 28 March 2026 · Data verified via live scraping with screenshot evidence · Digital readiness computed from 1,302 verified DB entries · Menuverso
       </div>
     </footer>
   </div>

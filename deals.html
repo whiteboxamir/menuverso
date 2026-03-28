@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Menuverso — 2×1 Dining Deals in Barcelona</title>
+<meta name="description" content="Exclusive 2-for-1 dining at Barcelona's best restaurants. Subscribe for €4.99/month.">
+<meta name="theme-color" content="#0F172A">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/logo.png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0A0F1E;--bg2:#141B2D;--bg3:#1F2937;
+  --card:#141B2D;--card-hover:#1A2332;
+  --text:#F8FAFC;--text2:#94A3B8;--text3:#64748B;
+  --accent:#8B5CF6;--accent2:#A78BFA;--accent-glow:rgba(139,92,246,0.12);
+  --green:#00D68F;--green-glow:rgba(0,214,143,0.15);
+  --amber:#F59E0B;--red:#EF4444;
+  --border:rgba(148,163,184,0.08);
+  --radius:18px;--radius-sm:12px;
+}
+html,body{height:100%;overflow:hidden}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+
+/* Shell */
+.app{display:flex;flex-direction:column;height:100dvh;width:100%;max-width:480px;margin:0 auto;position:relative;overflow:hidden}
+@media(min-width:481px){.app{border-left:1px solid var(--border);border-right:1px solid var(--border)}}
+.screen{display:none;flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+.screen.active{display:flex;flex-direction:column;animation:fadeIn .25s ease}
+.screen::-webkit-scrollbar{display:none}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* Nav */
+.bnav{display:flex;background:var(--bg2);border-top:1px solid var(--border);padding:6px 0 env(safe-area-inset-bottom,8px);flex-shrink:0}
+.bnav-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;cursor:pointer;color:var(--text3);-webkit-tap-highlight-color:transparent;transition:color .2s}
+.bnav-item.active{color:var(--accent)}
+.bnav-item .bi{font-size:1.25rem}.bnav-item .bl{font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+
+/* ═══ ONBOARDING ═══ */
+.ob{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;min-height:100%;background:radial-gradient(ellipse at 50% 0%,rgba(139,92,246,0.1),transparent 60%),radial-gradient(ellipse at 80% 100%,rgba(0,214,143,0.06),transparent 50%)}
+.ob-logo{font-size:3.4rem;margin-bottom:14px;filter:drop-shadow(0 8px 24px rgba(139,92,246,0.3));animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.ob h2{font-size:2rem;font-weight:900;line-height:1.12;margin-bottom:10px;background:linear-gradient(135deg,#fff 30%,var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.ob .sub{font-size:.88rem;color:var(--text2);max-width:310px;margin:0 auto 28px;line-height:1.55}
+.ob-stats{display:flex;gap:28px;margin-bottom:28px}
+.ob-stat .num{font-size:1.6rem;font-weight:800;color:var(--green)}.ob-stat .lbl{font-size:.58rem;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-top:2px}
+.ob-cards{display:flex;gap:10px;margin-bottom:32px;width:100%;max-width:340px}
+.ob-feature{flex:1;background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:16px 10px;text-align:center;transition:border-color .2s}
+.ob-feature:hover{border-color:var(--accent)}
+.ob-feature .of-icon{font-size:1.5rem;margin-bottom:6px}.ob-feature .of-text{font-size:.68rem;font-weight:600;color:var(--text2);line-height:1.3}
+.btn-sub{width:100%;max-width:320px;padding:16px;border-radius:14px;border:none;background:linear-gradient(135deg,var(--green),#00B876);color:#fff;font-size:1rem;font-weight:700;font-family:inherit;cursor:pointer;box-shadow:0 8px 28px rgba(0,214,143,0.3);margin-bottom:10px;transition:transform .15s}
+.btn-sub:active{transform:scale(.97)}
+.btn-free{width:100%;max-width:320px;padding:14px;border-radius:14px;background:none;border:1px solid var(--border);color:var(--text2);font-size:.84rem;font-weight:600;font-family:inherit;cursor:pointer;transition:border-color .2s}
+.btn-free:hover{border-color:var(--accent)}
+
+/* ═══ LOGIN ═══ */
+.login{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;min-height:100%}
+.login h2{font-size:1.5rem;font-weight:800;margin-bottom:6px}
+.login .sub{color:var(--text2);font-size:.84rem;margin-bottom:24px}
+.form-group{width:100%;max-width:320px;margin-bottom:14px}
+.form-group input{width:100%;padding:14px 16px;background:var(--bg2);border:1px solid var(--border);border-radius:12px;color:var(--text);font-size:.88rem;font-family:inherit;outline:none;transition:border .2s}
+.form-group input:focus{border-color:var(--accent)}
+.form-group input::placeholder{color:var(--text3)}
+.btn-login{width:100%;max-width:320px;padding:15px;border-radius:12px;border:none;background:var(--accent);color:#fff;font-size:.92rem;font-weight:700;font-family:inherit;cursor:pointer;margin-top:4px}
+.login-alt{margin-top:16px;font-size:.78rem;color:var(--text3)}
+.login-alt a{color:var(--accent2);cursor:pointer;text-decoration:none}
+
+/* ═══ HEADER ═══ */
+.hdr{padding:16px 20px 12px;background:rgba(10,15,30,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);position:sticky;top:0;z-index:10;flex-shrink:0;border-bottom:1px solid var(--border)}
+.hdr-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.hdr h1{font-size:1.15rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hdr-badge{font-size:.52rem;background:var(--green);color:#fff;padding:3px 8px;border-radius:20px;font-weight:700;letter-spacing:.04em}
+.hdr-avatar{width:30px;height:30px;border-radius:50%;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:.8rem;cursor:pointer;border:2px solid var(--accent)}
+.sbar{display:flex;align-items:center;background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:11px 14px;gap:8px}
+.sbar input{flex:1;background:none;border:none;outline:none;color:var(--text);font-size:.84rem;font-family:inherit}
+.sbar input::placeholder{color:var(--text3)}
+
+/* Chips */
+.chips{display:flex;gap:8px;padding:8px 20px 12px;overflow-x:auto;flex-shrink:0;-ms-overflow-style:none;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{white-space:nowrap;padding:7px 14px;border-radius:20px;font-size:.73rem;font-weight:600;cursor:pointer;transition:all .2s;border:1px solid var(--border);color:var(--text2);background:var(--bg2)}
+.chip.active{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 4px 12px rgba(139,92,246,.3)}
+
+/* Cards */
+.feed{padding:0 16px 100px;display:flex;flex-direction:column;gap:14px}
+.rc{background:var(--card);border-radius:var(--radius);overflow:hidden;cursor:pointer;transition:transform .15s,box-shadow .25s,border-color .25s;border:1px solid var(--border)}
+.rc:active{transform:scale(.98)}
+.rc:hover{box-shadow:0 8px 32px rgba(0,0,0,.35);border-color:rgba(139,92,246,.15)}
+.rc-img{width:100%;height:165px;object-fit:cover;background:var(--bg3)}
+.rc-ph{width:100%;height:165px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;position:relative}
+.rc-ph .ph-emoji{font-size:2.8rem;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3))}
+.rc-ph .ph-name{font-size:.72rem;font-weight:600;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.06em;max-width:80%;text-align:center;line-height:1.3}
+.rc-body{padding:13px 15px 15px}
+.rc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:5px}
+.rc-name{font-size:.92rem;font-weight:700;line-height:1.2;flex:1}
+.rc-rat{display:flex;align-items:center;gap:3px;font-size:.73rem;font-weight:700;color:var(--amber);flex-shrink:0;margin-left:8px}
+.rc-meta{font-size:.7rem;color:var(--text2);margin-bottom:7px}
+.rc-deal{display:inline-flex;align-items:center;gap:5px;background:var(--green-glow);border:1px solid rgba(0,214,143,.2);color:var(--green);padding:5px 10px;border-radius:8px;font-size:.68rem;font-weight:700}
+.deal-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.deal-dot.off{background:var(--text3);animation:none}
+.cnt-badge{font-size:.72rem;color:var(--text3);padding:4px 20px 2px}
+.load-more{text-align:center;padding:16px;color:var(--accent2);font-size:.82rem;font-weight:600;cursor:pointer}
+/* Cluster styles */
+.marker-cluster-small,.marker-cluster-medium,.marker-cluster-large{background:rgba(139,92,246,.35)!important}
+.marker-cluster-small div,.marker-cluster-medium div,.marker-cluster-large div{background:var(--accent)!important;color:#fff!important;font-family:Inter,sans-serif!important;font-weight:700!important;font-size:12px!important}
+
+/* ═══ MAP ═══ */
+#map-c{flex:1;position:relative}
+#nmap{width:100%;height:100%}
+.map-hdr{padding:14px 20px;background:var(--bg);border-bottom:1px solid var(--border);flex-shrink:0}
+.map-hdr h2{font-size:1rem;font-weight:700}
+.map-re{position:absolute;bottom:20px;right:16px;z-index:1000;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 16px rgba(139,92,246,.4);display:flex;align-items:center;justify-content:center}
+
+/* ═══ DETAIL ═══ */
+.d-back{position:absolute;top:16px;left:16px;z-index:10;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);border:none;color:#fff;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.d-fav{position:absolute;top:16px;right:16px;z-index:10;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);border:none;color:#fff;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.d-fav.faved{color:var(--red)}
+.d-hero{width:100%;height:220px;object-fit:cover;background:var(--bg3)}
+.d-ph{width:100%;height:220px;display:flex;align-items:center;justify-content:center;font-size:4rem}
+.d-content{padding:20px;flex:1}
+.d-name{font-size:1.35rem;font-weight:800;margin-bottom:4px}
+.d-meta{font-size:.8rem;color:var(--text2);margin-bottom:16px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.d-meta .sep{color:var(--text3)}
+
+/* Deal card */
+.dc{background:linear-gradient(135deg,rgba(139,92,246,.1),rgba(139,92,246,.03));border:1px solid rgba(139,92,246,.22);border-radius:var(--radius);padding:18px;margin-bottom:20px}
+.dc-hdr{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.dc-hdr .icon{font-size:1.6rem}.dc-hdr .title{font-size:1rem;font-weight:700;color:var(--accent2)}
+.dc-desc{font-size:.8rem;color:var(--text2);line-height:1.5;margin-bottom:12px}
+.dc-slots{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.dc-slot{padding:5px 10px;border-radius:8px;font-size:.68rem;font-weight:600;background:var(--bg3);color:var(--text2)}
+.dc-slot.on{background:rgba(16,185,129,.12);color:var(--green);border:1px solid rgba(16,185,129,.25)}
+.btn-red{width:100%;padding:14px;border-radius:14px;border:none;background:linear-gradient(135deg,var(--green),#00B876);color:#fff;font-size:.9rem;font-weight:700;font-family:inherit;cursor:pointer;box-shadow:0 6px 20px rgba(0,214,143,.25);transition:transform .15s}
+.btn-red:active{transform:scale(.97)}
+
+/* Info */
+.isec{margin-bottom:16px}.isec h3{font-size:.72rem;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.irow{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border)}
+.irow:last-child{border-bottom:none}
+.irow .ic{font-size:1rem;width:22px;text-align:center}.irow .il{font-size:.8rem;color:var(--text)}
+.irow a{color:var(--accent2);text-decoration:none;font-size:.8rem}
+
+/* ═══ REDEEM ═══ */
+.rdm{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;text-align:center;min-height:100%;background:radial-gradient(ellipse at 50% 30%,rgba(139,92,246,.08),transparent 70%)}
+.rdm-code{font-size:3.2rem;font-weight:900;letter-spacing:.12em;color:var(--accent2);margin:20px 0;font-family:monospace;background:var(--bg2);padding:18px 30px;border-radius:var(--radius);border:2px solid rgba(139,92,246,.25)}
+.rdm-name{font-size:1.15rem;font-weight:700;margin-bottom:3px}
+.rdm-deal{font-size:.86rem;color:var(--accent2);margin-bottom:28px;font-weight:600}
+.rdm-inst{font-size:.8rem;color:var(--text2);margin-bottom:6px}
+.rdm-timer{font-size:.72rem;color:var(--text3);margin-top:14px}
+.btn-done{padding:14px 40px;border-radius:12px;border:1px solid var(--border);background:var(--bg2);color:var(--text);font-size:.86rem;font-weight:600;font-family:inherit;cursor:pointer;margin-top:20px}
+
+/* ═══ PROFILE ═══ */
+.prof{padding:24px 20px 100px}
+.prof-card{text-align:center;padding:24px;background:var(--bg2);border-radius:var(--radius);border:1px solid var(--border);margin-bottom:20px}
+.prof-avatar{width:64px;height:64px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 10px;border:3px solid var(--accent2)}
+.prof-name{font-size:1.1rem;font-weight:700;margin-bottom:2px}
+.prof-email{font-size:.78rem;color:var(--text2)}
+.prof-sub{display:inline-flex;align-items:center;gap:5px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.25);color:var(--green);padding:4px 12px;border-radius:20px;font-size:.68rem;font-weight:700;margin-top:8px}
+.prof-section{margin-bottom:16px}
+.prof-section h3{font-size:.72rem;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;padding-left:4px}
+.prof-row{display:flex;align-items:center;justify-content:space-between;padding:13px 14px;background:var(--bg2);border-radius:12px;margin-bottom:6px;cursor:pointer;border:1px solid var(--border)}
+.prof-row .pr-left{display:flex;align-items:center;gap:10px}.prof-row .pr-icon{font-size:1rem}
+.prof-row .pr-text{font-size:.84rem;font-weight:500}.prof-row .pr-arrow{color:var(--text3);font-size:.8rem}
+.prof-row.danger .pr-text{color:var(--red)}
+
+/* ═══ SECTION HEADERS ═══ */
+.sh{padding:10px 20px 4px;display:flex;justify-content:space-between;align-items:center}
+.sh h2{font-size:.86rem;font-weight:700}.sh .sa{font-size:.7rem;color:var(--accent2);cursor:pointer;font-weight:600}
+
+/* Empty */
+.empty{text-align:center;padding:60px 20px;color:var(--text3)}
+.empty .em{font-size:2.5rem;margin-bottom:10px}
+
+/* Leaflet popup fix */
+.leaflet-popup-content-wrapper{background:var(--bg2)!important;color:var(--text)!important;border-radius:12px!important;box-shadow:0 8px 24px rgba(0,0,0,.4)!important}
+.leaflet-popup-tip{background:var(--bg2)!important}
+.leaflet-popup-content{margin:10px 14px!important}
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- ═══ ONBOARDING ═══ -->
+<div class="screen active" id="s-onboard">
+<div class="ob">
+  <div class="ob-logo">🍽️</div>
+  <h2>2×1 Dining Deals<br>in Barcelona</h2>
+  <p class="sub">Discover exclusive 2-for-1 deals at the city's best restaurants. One subscription. Unlimited savings.</p>
+  <div class="ob-stats">
+    <div class="ob-stat"><div class="num" id="ob-n">—</div><div class="lbl">Restaurants</div></div>
+    <div class="ob-stat"><div class="num">18</div><div class="lbl">Barrios</div></div>
+    <div class="ob-stat"><div class="num">27</div><div class="lbl">Cuisines</div></div>
+  </div>
+  <div class="ob-cards">
+    <div class="ob-feature"><div class="of-icon">🎁</div><div class="of-text">2-for-1<br>Main Course</div></div>
+    <div class="ob-feature"><div class="of-icon">🗺️</div><div class="of-text">Map<br>Discovery</div></div>
+    <div class="ob-feature"><div class="of-icon">📱</div><div class="of-text">Instant<br>Redemption</div></div>
+  </div>
+  <button class="btn-sub" onclick="goLogin()">Get Started — €4.99/mo</button>
+  <button class="btn-free" onclick="guestEnter()">Browse Deals Free →</button>
+</div>
+</div>
+
+<!-- ═══ LOGIN ═══ -->
+<div class="screen" id="s-login">
+<div class="login">
+  <div style="font-size:2.2rem;margin-bottom:16px">🍽️</div>
+  <h2 id="login-title">Sign Up</h2>
+  <p class="sub" id="login-sub">Create your account to unlock deals</p>
+  <div class="form-group" id="fg-name"><input type="text" id="inp-name" placeholder="Full name"></div>
+  <div class="form-group"><input type="email" id="inp-email" placeholder="Email address"></div>
+  <div class="form-group"><input type="password" id="inp-pass" placeholder="Password"></div>
+  <button class="btn-login" id="btn-auth" onclick="doAuth()">Create Account</button>
+  <p class="login-alt" id="login-toggle">Already have an account? <a onclick="toggleAuthMode()">Log in</a></p>
+</div>
+</div>
+
+<!-- ═══ DISCOVER ═══ -->
+<div class="screen" id="s-discover">
+<div class="hdr">
+  <div class="hdr-top">
+    <h1>Menuverso Deals</h1>
+    <div style="display:flex;gap:8px;align-items:center">
+      <span class="hdr-badge">BARCELONA</span>
+      <div class="hdr-avatar" onclick="nav('profile')">👤</div>
+    </div>
+  </div>
+  <div class="sbar">
+    <span>🔍</span>
+    <input type="text" id="neo-search" placeholder="Search restaurants, cuisines..." oninput="filterFeed()">
+  </div>
+</div>
+<div class="chips" id="chips"></div>
+<div class="cnt-badge" id="cnt"></div>
+<div class="feed" id="feed"></div>
+</div>
+
+<!-- ═══ MAP ═══ -->
+<div class="screen" id="s-map">
+<div class="map-hdr"><h2>📍 Deals Near You</h2></div>
+<div id="map-c"><div id="nmap"></div><button class="map-re" onclick="reMap()">📍</button></div>
+</div>
+
+<!-- ═══ DETAIL ═══ -->
+<div class="screen" id="s-detail">
+<div style="position:relative;flex-shrink:0">
+  <button class="d-back" onclick="goBack()">←</button>
+  <button class="d-fav" id="d-fav" onclick="togFav()">♡</button>
+  <div id="d-hero-w"></div>
+</div>
+<div class="d-content" id="d-content"></div>
+</div>
+
+<!-- ═══ REDEEM ═══ -->
+<div class="screen" id="s-redeem">
+<div class="rdm" id="rdm-c"></div>
+</div>
+
+<!-- ═══ PROFILE ═══ -->
+<div class="screen" id="s-profile">
+<div class="hdr"><div class="hdr-top"><h1 style="font-size:1.1rem">Profile</h1><div></div></div></div>
+<div class="prof" id="prof-c"></div>
+</div>
+
+<!-- ═══ NAV ═══ -->
+<nav class="bnav" id="bnav" style="display:none">
+  <div class="bnav-item active" onclick="nav('discover')"><span class="bi">🏠</span><span class="bl">Discover</span></div>
+  <div class="bnav-item" onclick="nav('map')"><span class="bi">🗺️</span><span class="bl">Map</span></div>
+  <div class="bnav-item" onclick="nav('favs')"><span class="bi">❤️</span><span class="bl">Saved</span></div>
+  <div class="bnav-item" onclick="nav('profile')"><span class="bi">👤</span><span class="bl">Profile</span></div>
+</nav>
+
+</div>
+
+<script src="restaurants_data.js"></script>
+<script>
+const D=typeof RESTAURANT_DATA!=='undefined'?RESTAURANT_DATA:[];
+let cur='onboard',prev='discover',detR=null,nMap=null,nMk=[],actC=null,feedPage=0;
+const PAGE_SIZE=40;
+let favs=JSON.parse(localStorage.getItem('neo_favs')||'[]');
+let uLat=41.3874,uLng=2.1686,isSignup=true;
+let user=JSON.parse(localStorage.getItem('neo_user')||'null');
+
+const CE={
+  'Mediterranean':'🫒','Spanish':'🇪🇸','Catalan':'🏔️','Italian':'🍝','Japanese':'🍣',
+  'Chinese':'🥢','Mexican':'🌮','Indian':'🍛','Thai':'🍜','Korean':'🥘',
+  'French':'🥐','Greek':'🫓','Lebanese':'🧆','Turkish':'🥙','Peruvian':'🇵🇪',
+  'Argentine':'🥩','Basque':'🐟','Colombian':'🫘','Cuban':'🌴','Ethiopian':'🍲',
+  'Fusion':'✨','Gastropub':'🍺','Seafood':'🦐','Asian':'🍱','Café':'☕',
+  'Vegetarian/Vegan':'🥬','Other':'🍽️','Middle Eastern':'🧆'
+};
+
+// Gradient fallbacks for restaurants without photos
+const GRAD=['linear-gradient(135deg,#1a1a2e,#16213e)','linear-gradient(135deg,#0f3460,#16213e)',
+'linear-gradient(135deg,#533483,#0b2447)','linear-gradient(135deg,#1e3a5f,#0b2447)',
+'linear-gradient(135deg,#2d3436,#000000)','linear-gradient(135deg,#2c3e50,#4a69bd)'];
+
+document.getElementById('ob-n').textContent=D.length;
+var currentFeedList=[];
+
+// Init
+if(user){nav('discover')}
+
+function goLogin(){show('s-login')}
+function guestEnter(){user={name:'Guest',email:'guest@menuverso.app'};localStorage.setItem('neo_user',JSON.stringify(user));nav('discover')}
+
+function toggleAuthMode(){
+  isSignup=!isSignup;
+  document.getElementById('login-title').textContent=isSignup?'Sign Up':'Welcome Back';
+  document.getElementById('login-sub').textContent=isSignup?'Create your account to unlock deals':'Log in to your account';
+  document.getElementById('fg-name').style.display=isSignup?'block':'none';
+  document.getElementById('btn-auth').textContent=isSignup?'Create Account':'Log In';
+  document.getElementById('login-toggle').innerHTML=isSignup?'Already have an account? <a onclick="toggleAuthMode()">Log in</a>':'New here? <a onclick="toggleAuthMode()">Sign up</a>';
+}
+
+function doAuth(){
+  const name=document.getElementById('inp-name').value||'Foodie';
+  const email=document.getElementById('inp-email').value||'user@menuverso.app';
+  user={name,email};
+  localStorage.setItem('neo_user',JSON.stringify(user));
+  nav('discover');
+}
+
+// ═══ NAVIGATION ═══
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active')}
+
+function nav(name){
+  if(name==='favs'){showFavs();return}
+  show('s-'+name);
+  document.getElementById('bnav').style.display=(name==='detail'||name==='redeem'||name==='onboard'||name==='login')?'none':'flex';
+  document.querySelectorAll('.bnav-item').forEach((n,i)=>{const ss=['discover','map','favs','profile'];n.classList.toggle('active',ss[i]===name)});
+  if(name==='discover'&&!document.getElementById('feed').children.length){buildChips();renderFeed(D)}
+  if(name==='map')setTimeout(initMap,150);
+  if(name==='profile')renderProfile();
+  cur=name;
+}
+
+function goBack(){nav(prev)}
+
+// ═══ CHIPS ═══
+function buildChips(){
+  const c={};D.forEach(r=>{c[r.cuisine_type]=(c[r.cuisine_type]||0)+1});
+  const s=Object.entries(c).sort((a,b)=>b[1]-a[1]);
+  let h='<div class="chip active" onclick="fltC(null,this)">All</div>';
+  s.forEach(([k,n])=>{h+=`<div class="chip" onclick="fltC('${k}',this)">${CE[k]||'🍽️'} ${k}</div>`});
+  document.getElementById('chips').innerHTML=h;
+}
+
+function fltC(c,el){actC=c;document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));if(el)el.classList.add('active');filterFeed()}
+
+function filterFeed(){
+  const q=document.getElementById('neo-search').value.toLowerCase().trim();
+  let f=D.filter(r=>{
+    if(actC&&r.cuisine_type!==actC)return false;
+    if(q){const h=[r.name,r.neighborhood,r.cuisine_type,r.notes||'',(r.tags||[]).join(' ')].join(' ').toLowerCase();if(!h.includes(q))return false}
+    return true;
+  });
+  renderFeed(f);
+}
+
+// ═══ FEED ═══
+function renderFeed(list){
+  // Sort: photos first, then by rating×log(reviews)
+  list.sort((a,b)=>{
+    const aPhoto=(a.image_url&&a.has_photo)?1:0,bPhoto=(b.image_url&&b.has_photo)?1:0;
+    if(bPhoto!==aPhoto)return bPhoto-aPhoto;
+    const aScore=(a.google_maps_rating||0)*Math.log10((a.google_maps_review_count||1)+1);
+    const bScore=(b.google_maps_rating||0)*Math.log10((b.google_maps_review_count||1)+1);
+    return bScore-aScore;
+  });
+  currentFeedList=list;
+  feedPage=0;
+  document.getElementById('cnt').textContent=list.length+' restaurants with deals';
+  if(!list.length){document.getElementById('feed').innerHTML='<div class="empty"><div class="em">🔍</div><p>No restaurants match</p></div>';return}
+  const chunk=list.slice(0,PAGE_SIZE);
+  document.getElementById('feed').innerHTML=chunk.map(renderCard).join('')+(list.length>PAGE_SIZE?'<div class="load-more" onclick="loadMore()">Show more ('+list.length+' total) ↓</div>':'');
+}
+function loadMore(){
+  feedPage++;
+  const start=feedPage*PAGE_SIZE,end=start+PAGE_SIZE;
+  const chunk=currentFeedList.slice(start,end);
+  const loadBtn=document.querySelector('.load-more');
+  if(loadBtn)loadBtn.remove();
+  document.getElementById('feed').insertAdjacentHTML('beforeend',chunk.map(renderCard).join('')+(end<currentFeedList.length?'<div class="load-more" onclick="loadMore()">Show more ('+currentFeedList.length+' total) ↓</div>':''));
+}
+function renderCard(r){
+  const e=CE[r.cuisine_type]||'🍽️';
+  const g=GRAD[r.id%GRAD.length];
+  const img=r.image_url&&r.has_photo
+    ?`<img class="rc-img" src="${r.image_url}" alt="${r.name}" loading="lazy" onerror="this.parentElement.querySelector('.rc-img')&&(this.outerHTML='<div class=rc-ph style=background:${g.replace(/"/g,String.fromCharCode(39))}><span class=ph-emoji>${e}</span></div>')">`
+    :`<div class="rc-ph" style="background:${g}"><span class="ph-emoji">${e}</span><span class="ph-name">${r.neighborhood}</span></div>`;
+  const revCount=r.google_maps_review_count||0;
+  const revStr=revCount>=1000?(revCount/1000).toFixed(1)+'K':revCount;
+  const avail=isDealOn(r);
+  return`<div class="rc" onclick="openD(${r.id})">${img}<div class="rc-body"><div class="rc-top"><div class="rc-name">${r.name}</div><div class="rc-rat">⭐ ${r.google_maps_rating||'—'}<span style="color:var(--text3);font-weight:500;margin-left:2px">(${revStr})</span></div></div><div class="rc-meta">${e} ${r.cuisine_type} · ${r.neighborhood}${r.menu_price_range?' · '+r.menu_price_range:''}</div><div class="rc-deal"><span class="deal-dot${avail?'':' off'}"></span>2×1 Main Course ${avail?'· Available Now':'· Check Times'}</div></div></div>`;
+}
+
+function isDealOn(r){
+  const n=new Date(),d=n.getDay(),h=n.getHours(),m=n.getMinutes(),t=h*60+m;
+  if(d>=1&&d<=4&&t>=720&&t<=900)return true;
+  if(d>=1&&d<=3&&t>=1140&&t<=1260)return true;
+  return false;
+}
+
+// ═══ DETAIL ═══
+function openD(id){
+  const r=D.find(x=>x.id===id);if(!r)return;
+  detR=r;prev=cur;
+  const e=CE[r.cuisine_type]||'🍽️';
+  const g=GRAD[r.id%GRAD.length];
+  const hw=document.getElementById('d-hero-w');
+  hw.innerHTML=r.image_url&&r.has_photo
+    ?`<img class="d-hero" src="${r.image_url}" alt="${r.name}" onerror="this.outerHTML='<div class=d-ph style=background:${g.replace(/"/g,"'")}>${e}</div>'">`
+    :`<div class="d-ph" style="background:${g}">${e}</div>`;
+  
+  const fb=document.getElementById('d-fav');
+  fb.textContent=favs.includes(id)?'♥':'♡';fb.className='d-fav'+(favs.includes(id)?' faved':'');
+  
+  const avail=isDealOn(r);
+  const days=['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+  const dl=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  let hrs='';
+  if(r.opening_hours_full&&typeof r.opening_hours_full==='object'){
+    hrs=days.map((d,i)=>`<div class="irow"><span class="ic" style="font-size:.7rem;color:var(--text3)">${dl[i]}</span><span class="il">${r.opening_hours_full[d]||'Closed'}</span></div>`).join('');
+  }
+  
+  document.getElementById('d-content').innerHTML=`
+    <div class="d-name">${r.name}</div>
+    <div class="d-meta"><span>${e} ${r.cuisine_type}</span><span class="sep">·</span><span>${r.neighborhood}</span><span class="sep">·</span><span>⭐ ${r.google_maps_rating||'—'} (${(r.google_maps_review_count||0).toLocaleString()})</span></div>
+    <div class="dc">
+      <div class="dc-hdr"><span class="icon">🎁</span><span class="title">2×1 Main Course</span></div>
+      <div class="dc-desc">Order two main courses and pay for one. Valid during available time slots. Show this app to your server when ordering.</div>
+      <div class="dc-slots"><span class="dc-slot${avail?' on':''}">🕐 Mon-Thu Lunch 12-15h</span><span class="dc-slot${avail?' on':''}">🌙 Mon-Wed Dinner 19-21h</span></div>
+      <button class="btn-red" onclick="redeem(${r.id})">${avail?'✨ Redeem Deal Now':'🔔 View Deal Times'}</button>
+    </div>
+    <div class="isec"><h3>Info</h3>
+      ${r.menu_price_range?`<div class="irow"><span class="ic">💰</span><span class="il">${r.menu_price_range}</span></div>`:''}
+      ${r.address_full?`<div class="irow"><span class="ic">📍</span><span class="il">${r.address_full}, Barcelona</span></div>`:''}
+      ${r.metro_station?`<div class="irow"><span class="ic">🚇</span><span class="il">${r.metro_station}</span></div>`:''}
+      ${r.phone?`<div class="irow"><span class="ic">📞</span><a href="tel:${r.phone}">${r.phone}</a></div>`:''}
+      ${r.website?`<div class="irow"><span class="ic">🌐</span><a href="${r.website}" target="_blank">Website</a></div>`:''}
+      ${r.instagram?`<div class="irow"><span class="ic">📸</span><a href="https://instagram.com/${r.instagram.replace('@','')}" target="_blank">${r.instagram}</a></div>`:''}
+    </div>
+    ${hrs?`<div class="isec"><h3>Hours</h3>${hrs}</div>`:''}
+    ${r.notes?`<div class="isec"><h3>About</h3><div class="irow"><span class="il" style="color:var(--text2)">${r.notes}</span></div></div>`:''}
+    ${r.google_maps_url?`<div style="padding:8px 0 24px"><a href="${r.google_maps_url}" target="_blank" style="display:block;text-align:center;padding:12px;border:1px solid var(--border);border-radius:12px;color:var(--text2);text-decoration:none;font-size:.82rem;font-weight:600">📍 Open in Google Maps</a></div>`:''}
+  `;
+  nav('detail');
+}
+
+// ═══ REDEEM ═══
+function redeem(id){
+  const r=D.find(x=>x.id===id);if(!r)return;
+  const code=String(Math.floor(100000+Math.random()*900000));
+  const exp=new Date(Date.now()+7200000);
+  document.getElementById('rdm-c').innerHTML=`
+    <div style="font-size:2.2rem;margin-bottom:14px">🎉</div>
+    <div class="rdm-inst">Show this to your server</div>
+    <div class="rdm-name">${r.name}</div>
+    <div class="rdm-deal">2×1 Main Course</div>
+    <div class="rdm-code">${code}</div>
+    <div class="rdm-inst" style="font-weight:600;color:var(--accent2)">Verification Code</div>
+    <div class="rdm-timer">Valid until ${exp.toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'})}</div>
+    <button class="btn-done" onclick="goBack()">← Back to Restaurant</button>
+  `;
+  prev='detail';nav('redeem');
+}
+
+// ═══ FAVORITES ═══
+function togFav(){
+  if(!detR)return;const id=detR.id,i=favs.indexOf(id);
+  if(i>=0)favs.splice(i,1);else favs.push(id);
+  localStorage.setItem('neo_favs',JSON.stringify(favs));
+  const b=document.getElementById('d-fav');b.textContent=favs.includes(id)?'♥':'♡';b.className='d-fav'+(favs.includes(id)?' faved':'');
+}
+
+function showFavs(){
+  const fd=D.filter(r=>favs.includes(r.id));
+  show('s-discover');
+  document.getElementById('bnav').style.display='flex';
+  document.querySelectorAll('.bnav-item').forEach((n,i)=>n.classList.toggle('active',i===2));
+  if(!fd.length){document.getElementById('feed').innerHTML='<div class="empty"><div class="em">❤️</div><p>No saved restaurants yet</p><p style="font-size:.76rem;margin-top:6px;color:var(--text3)">Tap the heart on any restaurant to save it</p></div>';document.getElementById('cnt').textContent='0 saved'}
+  else{renderFeed(fd);document.getElementById('cnt').textContent=fd.length+' saved restaurants'}
+  cur='favs';
+}
+
+// ═══ MAP ═══
+function initMap(){
+  if(nMap){nMap.invalidateSize();return}
+  nMap=L.map('nmap',{zoomControl:false}).setView([uLat,uLng],14);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{attribution:'©OpenStreetMap ©CARTO',maxZoom:19}).addTo(nMap);
+  const cluster=L.markerClusterGroup({maxClusterRadius:50,spiderfyOnMaxZoom:true,showCoverageOnHover:false,iconCreateFunction:function(c){const n=c.getChildCount();const sz=n<20?'small':n<50?'medium':'large';return L.divIcon({html:'<div>'+n+'</div>',className:'marker-cluster marker-cluster-'+sz,iconSize:[36,36]})}});
+  D.forEach(r=>{
+    if(!r.coordinates||!r.coordinates.lat)return;
+    const e=CE[r.cuisine_type]||'🍽️';
+    const ic=L.divIcon({html:`<div style="background:#7C3AED;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;border:2px solid rgba(255,255,255,.3);box-shadow:0 2px 8px rgba(0,0,0,.4)">${e}</div>`,className:'',iconSize:[28,28],iconAnchor:[14,14]});
+    const m=L.marker([r.coordinates.lat,r.coordinates.lng],{icon:ic});
+    m.bindPopup(`<div style="font-weight:700;font-size:13px">${r.name}</div><div style="font-size:11px;color:#94A3B8">${r.cuisine_type} · ⭐${r.google_maps_rating||'—'}</div><div style="margin-top:6px"><a href="#" onclick="openD(${r.id});return false" style="color:#8B5CF6;font-weight:600;font-size:12px">View Deal →</a></div>`,{closeButton:false});
+    cluster.addLayer(m);
+    nMk.push(m);
+  });
+  nMap.addLayer(cluster);
+  if(navigator.geolocation){navigator.geolocation.getCurrentPosition(p=>{uLat=p.coords.latitude;uLng=p.coords.longitude;L.circleMarker([uLat,uLng],{radius:7,fillColor:'#8B5CF6',fillOpacity:1,color:'#fff',weight:2}).addTo(nMap);nMap.setView([uLat,uLng],15)},()=>{},{timeout:5000})}
+}
+function reMap(){if(nMap)nMap.setView([uLat,uLng],15,{animate:true})}
+
+// ═══ PROFILE ═══
+function renderProfile(){
+  const u=user||{name:'Guest',email:'guest@menuverso.app'};
+  const redemptions=parseInt(localStorage.getItem('neo_redeemed')||'0');
+  document.getElementById('prof-c').innerHTML=`
+    <div class="prof-card">
+      <div class="prof-avatar">🍽️</div>
+      <div class="prof-name">${u.name}</div>
+      <div class="prof-email">${u.email}</div>
+      <div class="prof-sub">✓ Active Subscriber</div>
+    </div>
+    <div class="prof-section"><h3>Activity</h3>
+      <div class="prof-row"><div class="pr-left"><span class="pr-icon">❤️</span><span class="pr-text">${favs.length} Saved Restaurants</span></div><span class="pr-arrow">→</span></div>
+      <div class="prof-row"><div class="pr-left"><span class="pr-icon">🎁</span><span class="pr-text">${redemptions} Deals Redeemed</span></div><span class="pr-arrow">→</span></div>
+    </div>
+    <div class="prof-section"><h3>Settings</h3>
+      <div class="prof-row"><div class="pr-left"><span class="pr-icon">🌍</span><span class="pr-text">Language: ES</span></div><span class="pr-arrow">→</span></div>
+      <div class="prof-row"><div class="pr-left"><span class="pr-icon">🔔</span><span class="pr-text">Notifications</span></div><span class="pr-arrow">→</span></div>
+      <div class="prof-row"><div class="pr-left"><span class="pr-icon">📋</span><span class="pr-text">Terms & Conditions</span></div><span class="pr-arrow">→</span></div>
+    </div>
+    <div class="prof-section"><h3>Account</h3>
+      <div class="prof-row danger" onclick="logout()"><div class="pr-left"><span class="pr-icon">🚪</span><span class="pr-text">Log Out</span></div><span class="pr-arrow">→</span></div>
+    </div>
+    <div style="text-align:center;padding:20px 0;font-size:.68rem;color:var(--text3)">Menuverso Deals v1.0 · Barcelona<br>© 2026 Menuverso</div>
+  `;
+}
+
+function logout(){localStorage.removeItem('neo_user');localStorage.removeItem('neo_subscribed');user=null;show('s-onboard');document.getElementById('bnav').style.display='none'}
+</script>
+</body>
+</html>

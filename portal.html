@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Menuverso — Restaurant Partner Portal</title>
+<meta name="description" content="Manage your restaurant's presence on Menuverso Deals. Track performance, manage deals, update your profile.">
+<meta name="theme-color" content="#0F172A">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0F172A;--bg2:#1E293B;--bg3:#334155;
+  --card:#1E293B;--text:#F1F5F9;--text2:#94A3B8;--text3:#64748B;
+  --accent:#8B5CF6;--accent2:#A78BFA;
+  --green:#10B981;--amber:#F59E0B;--red:#EF4444;
+  --border:rgba(148,163,184,0.1);--radius:16px;
+}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;min-height:100vh}
+
+/* Layout */
+.portal{max-width:900px;margin:0 auto;padding:20px}
+.portal-header{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--border);margin-bottom:24px}
+.portal-header h1{font-size:1.2rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.portal-header .badge{font-size:.6rem;background:var(--green);color:#fff;padding:3px 10px;border-radius:20px;font-weight:700}
+
+/* Screens */
+.p-screen{display:none}.p-screen.active{display:block}
+
+/* Login */
+.p-login{max-width:420px;margin:60px auto;text-align:center}
+.p-login h2{font-size:1.6rem;font-weight:800;margin-bottom:6px}
+.p-login .sub{color:var(--text2);font-size:.88rem;margin-bottom:24px}
+.p-search-wrap{position:relative;margin-bottom:16px}
+.p-search{width:100%;padding:14px 16px;background:var(--bg2);border:1px solid var(--border);border-radius:12px;color:var(--text);font-size:.88rem;font-family:inherit;outline:none}
+.p-search:focus{border-color:var(--accent)}
+.p-search::placeholder{color:var(--text3)}
+.p-results{background:var(--bg2);border:1px solid var(--border);border-radius:12px;max-height:300px;overflow-y:auto;margin-bottom:16px}
+.p-result{padding:14px 16px;cursor:pointer;border-bottom:1px solid var(--border);transition:background .15s}
+.p-result:hover{background:var(--bg3)}
+.p-result:last-child{border-bottom:none}
+.p-result .name{font-size:.88rem;font-weight:600}.p-result .meta{font-size:.72rem;color:var(--text2);margin-top:2px}
+
+/* Dashboard */
+.dash-restaurant{display:flex;align-items:center;gap:16px;padding:20px;background:var(--bg2);border-radius:var(--radius);border:1px solid var(--border);margin-bottom:24px}
+.dash-img{width:64px;height:64px;border-radius:12px;object-fit:cover;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:1.8rem}
+.dash-info h2{font-size:1.1rem;font-weight:700;margin-bottom:2px}.dash-info .meta{font-size:.78rem;color:var(--text2)}
+.dash-tabs{display:flex;gap:6px;margin-bottom:20px;border-bottom:1px solid var(--border);padding-bottom:6px}
+.dash-tab{padding:8px 16px;border-radius:10px;font-size:.78rem;font-weight:600;cursor:pointer;color:var(--text2);transition:all .2s}
+.dash-tab.active{background:var(--accent);color:#fff}
+
+/* Stat Cards */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:24px}
+.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+.stat-card .label{font-size:.68rem;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-bottom:6px}
+.stat-card .value{font-size:1.6rem;font-weight:800;color:var(--accent2)}
+.stat-card .delta{font-size:.7rem;color:var(--green);margin-top:4px;font-weight:600}
+
+/* Deal toggle */
+.deal-panel{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px}
+.deal-panel h3{font-size:.92rem;font-weight:700;margin-bottom:12px}
+.deal-toggle{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border)}
+.deal-toggle:last-child{border-bottom:none}
+.deal-toggle .dt-label{font-size:.84rem;font-weight:500}
+.deal-toggle .dt-desc{font-size:.7rem;color:var(--text2);margin-top:2px}
+.toggle{position:relative;width:44px;height:24px;background:var(--bg3);border-radius:12px;cursor:pointer;transition:background .2s;flex-shrink:0}
+.toggle.on{background:var(--green)}
+.toggle::after{content:'';position:absolute;width:20px;height:20px;background:#fff;border-radius:50%;top:2px;left:2px;transition:transform .2s}
+.toggle.on::after{transform:translateX(20px)}
+
+/* Hours Editor */
+.hours-grid{display:grid;gap:8px}
+.hour-row{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--bg2);border-radius:10px;border:1px solid var(--border)}
+.hour-row .day{width:40px;font-size:.78rem;font-weight:600;color:var(--text2)}
+.hour-row input{flex:1;padding:8px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:.78rem;font-family:inherit;outline:none}
+.hour-row input:focus{border-color:var(--accent)}
+
+/* Chart placeholder */
+.chart-placeholder{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:24px;height:200px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.chart-bars{display:flex;align-items:flex-end;gap:8px;height:140px}
+.chart-bar{width:28px;border-radius:6px 6px 0 0;background:linear-gradient(to top,var(--accent),var(--accent2));transition:height .5s;position:relative}
+.chart-bar .cl{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);font-size:.55rem;color:var(--text3);font-weight:600}
+
+/* Profile edit */
+.field{margin-bottom:14px}
+.field label{display:block;font-size:.72rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.field input,.field textarea{width:100%;padding:12px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:.84rem;font-family:inherit;outline:none;resize:vertical}
+.field textarea{min-height:80px}
+.field input:focus,.field textarea:focus{border-color:var(--accent)}
+
+.btn-save{padding:14px 32px;border-radius:12px;border:none;background:var(--accent);color:#fff;font-size:.88rem;font-weight:700;font-family:inherit;cursor:pointer;margin-top:8px}
+.btn-outline{padding:10px 20px;border-radius:10px;border:1px solid var(--border);background:none;color:var(--text2);font-size:.82rem;font-weight:600;font-family:inherit;cursor:pointer}
+.btn-logout{padding:10px 20px;border-radius:10px;border:1px solid var(--red);background:none;color:var(--red);font-size:.82rem;font-weight:600;font-family:inherit;cursor:pointer;margin-top:20px}
+
+/* Section */
+.section{margin-bottom:24px}
+.section h3{font-size:.82rem;font-weight:700;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="portal">
+
+<div class="portal-header">
+  <h1>🍽️ Menuverso Partner Portal</h1>
+  <div id="portal-right"></div>
+</div>
+
+<!-- ═══ LOGIN ═══ -->
+<div class="p-screen active" id="ps-login">
+<div class="p-login">
+  <div style="font-size:2.5rem;margin-bottom:16px">🏪</div>
+  <h2>Restaurant Portal</h2>
+  <p class="sub">Search for your restaurant to claim your profile and manage your Menuverso Deals presence.</p>
+  <div class="p-search-wrap">
+    <input type="text" class="p-search" id="p-search" placeholder="🔍 Search your restaurant name..." oninput="portalSearch()">
+  </div>
+  <div class="p-results" id="p-results" style="display:none"></div>
+  <p style="font-size:.72rem;color:var(--text3);margin-top:16px">Don't see your restaurant? <a href="mailto:hola@menuverso.app" style="color:var(--accent2)">Contact us</a> to get listed.</p>
+</div>
+</div>
+
+<!-- ═══ DASHBOARD ═══ -->
+<div class="p-screen" id="ps-dash">
+<div id="dash-header"></div>
+
+<div class="dash-tabs">
+  <div class="dash-tab active" onclick="dashTab('overview',this)">📊 Overview</div>
+  <div class="dash-tab" onclick="dashTab('deals',this)">🎁 Deals</div>
+  <div class="dash-tab" onclick="dashTab('profile',this)">✏️ Profile</div>
+</div>
+
+<!-- Overview Tab -->
+<div id="tab-overview">
+  <div class="stats" id="dash-stats"></div>
+  <div class="section">
+    <h3>📈 Views This Week</h3>
+    <div class="chart-placeholder"><div class="chart-bars" id="chart-bars"></div></div>
+  </div>
+  <div class="section">
+    <h3>💡 Tips to Improve Performance</h3>
+    <div id="dash-tips"></div>
+  </div>
+</div>
+
+<!-- Deals Tab -->
+<div id="tab-deals" style="display:none">
+  <div class="deal-panel">
+    <h3>🎁 Deal Slots</h3>
+    <div class="deal-toggle">
+      <div><div class="dt-label">Weekday Lunch (Mon-Thu 12-15h)</div><div class="dt-desc">2-for-1 main course during lunch service</div></div>
+      <div class="toggle on" id="tg-lunch" onclick="togDeal(this)"></div>
+    </div>
+    <div class="deal-toggle">
+      <div><div class="dt-label">Early Dinner (Mon-Wed 19-21h)</div><div class="dt-desc">2-for-1 main course during early dinner</div></div>
+      <div class="toggle on" id="tg-dinner" onclick="togDeal(this)"></div>
+    </div>
+    <div class="deal-toggle">
+      <div><div class="dt-label">Weekend Brunch (Sat-Sun 10-13h)</div><div class="dt-desc">2-for-1 brunch set menu</div></div>
+      <div class="toggle" id="tg-brunch" onclick="togDeal(this)"></div>
+    </div>
+  </div>
+  <div class="deal-panel">
+    <h3>📋 Deal Conditions</h3>
+    <div class="field"><label>Custom conditions (shown to diners)</label><textarea id="deal-cond" placeholder="e.g., Must order 2 main courses. Not valid on holidays.">Must order 2 main courses. Valid during selected time slots. Show Menuverso app to server when ordering.</textarea></div>
+    <div class="field"><label>Maximum redemptions per day</label><input type="number" id="deal-max" value="10" min="1" max="100"></div>
+    <button class="btn-save" onclick="saveDealSettings()">Save Deal Settings</button>
+  </div>
+</div>
+
+<!-- Profile Tab -->
+<div id="tab-profile" style="display:none">
+  <div class="section">
+    <h3>📝 Restaurant Information</h3>
+    <div class="field"><label>Restaurant Name</label><input type="text" id="pf-name"></div>
+    <div class="field"><label>Description</label><textarea id="pf-desc" placeholder="Tell diners what makes your restaurant special..."></textarea></div>
+    <div class="field"><label>Cuisine Type</label><input type="text" id="pf-cuisine"></div>
+    <div class="field"><label>Price Range</label><input type="text" id="pf-price" placeholder="e.g., 14-18€"></div>
+    <div class="field"><label>Phone</label><input type="tel" id="pf-phone"></div>
+    <div class="field"><label>Website</label><input type="url" id="pf-web"></div>
+    <div class="field"><label>Instagram</label><input type="text" id="pf-ig" placeholder="@yourhandle"></div>
+  </div>
+  <div class="section">
+    <h3>🕐 Opening Hours</h3>
+    <div class="hours-grid" id="hours-grid"></div>
+  </div>
+  <button class="btn-save" onclick="saveProfile()" style="margin-top:12px">Save Changes</button>
+  <br><button class="btn-logout" onclick="portalLogout()">🚪 Log Out</button>
+</div>
+</div>
+
+</div>
+
+<script src="restaurants_data.js"></script>
+<script>
+const DATA = typeof RESTAURANT_DATA !== 'undefined' ? RESTAURANT_DATA : [];
+let claimedR = null;
+
+// Portal Search
+function portalSearch() {
+  const q = document.getElementById('p-search').value.toLowerCase().trim();
+  const res = document.getElementById('p-results');
+  if (q.length < 2) { res.style.display = 'none'; return; }
+  
+  const matches = DATA.filter(r => r.name.toLowerCase().includes(q) || r.neighborhood.toLowerCase().includes(q)).slice(0, 10);
+  
+  if (!matches.length) {
+    res.style.display = 'block';
+    res.innerHTML = '<div style="padding:16px;color:var(--text3);text-align:center;font-size:.82rem">No restaurants found</div>';
+    return;
+  }
+  
+  res.style.display = 'block';
+  res.innerHTML = matches.map(r => `
+    <div class="p-result" onclick="claimRestaurant(${r.id})">
+      <div class="name">${r.name}</div>
+      <div class="meta">${r.cuisine_type} · ${r.neighborhood} · ⭐${r.google_maps_rating || '—'} (${r.google_maps_review_count || 0} reviews)</div>
+    </div>
+  `).join('');
+}
+
+function claimRestaurant(id) {
+  const r = DATA.find(x => x.id === id);
+  if (!r) return;
+  claimedR = r;
+  
+  // Show dashboard
+  document.getElementById('ps-login').classList.remove('active');
+  document.getElementById('ps-dash').classList.add('active');
+  document.getElementById('portal-right').innerHTML = `<span class="badge">Partner</span>`;
+  
+  renderDashboard();
+}
+
+function renderDashboard() {
+  const r = claimedR;
+  const emoji = {'Mediterranean':'🫒','Spanish':'🇪🇸','Catalan':'🏔️','Italian':'🍝','Japanese':'🍣','Chinese':'🥢','Mexican':'🌮','Indian':'🍛','Seafood':'🦐'}[r.cuisine_type] || '🍽️';
+  
+  // Header
+  document.getElementById('dash-header').innerHTML = `
+    <div class="dash-restaurant">
+      ${r.image_url && r.has_photo
+        ? `<img src="${r.image_url}" alt="${r.name}" style="width:64px;height:64px;border-radius:12px;object-fit:cover">`
+        : `<div class="dash-img">${emoji}</div>`}
+      <div class="dash-info">
+        <h2>${r.name}</h2>
+        <div class="meta">${r.cuisine_type} · ${r.neighborhood} · ⭐${r.google_maps_rating || '—'}</div>
+      </div>
+    </div>
+  `;
+  
+  // Stats (simulated)
+  const views = Math.floor(r.google_maps_review_count * 2.5 + Math.random() * 200);
+  const redemptions = Math.floor(views * 0.08 + Math.random() * 10);
+  const saves = Math.floor(views * 0.15 + Math.random() * 20);
+  
+  document.getElementById('dash-stats').innerHTML = `
+    <div class="stat-card"><div class="label">Profile Views</div><div class="value">${views.toLocaleString()}</div><div class="delta">↑ ${Math.floor(Math.random()*20+5)}% this week</div></div>
+    <div class="stat-card"><div class="label">Deals Redeemed</div><div class="value">${redemptions}</div><div class="delta">↑ ${Math.floor(Math.random()*15+3)}% this week</div></div>
+    <div class="stat-card"><div class="label">Saved by Users</div><div class="value">${saves}</div><div class="delta">↑ ${Math.floor(Math.random()*25+8)}% this week</div></div>
+    <div class="stat-card"><div class="label">Rating</div><div class="value">⭐ ${r.google_maps_rating || '—'}</div><div class="delta">${r.google_maps_review_count || 0} reviews</div></div>
+  `;
+  
+  // Chart
+  const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  const barsHtml = days.map(d => {
+    const h = Math.floor(30 + Math.random() * 100);
+    return `<div class="chart-bar" style="height:${h}px"><span class="cl">${d}</span></div>`;
+  }).join('');
+  document.getElementById('chart-bars').innerHTML = barsHtml;
+  
+  // Tips
+  const tips = [];
+  if (!r.phone) tips.push({icon:'📞', text:'Add your phone number to let diners call directly', action:'Go to Profile →'});
+  if (!r.website) tips.push({icon:'🌐', text:'Add your website to boost credibility', action:'Go to Profile →'});
+  if (!r.instagram) tips.push({icon:'📸', text:'Link your Instagram for more visibility', action:'Go to Profile →'});
+  if (!r.has_photo) tips.push({icon:'📷', text:'Add a photo — listings with photos get 3× more views', action:'Go to Profile →'});
+  if (!tips.length) tips.push({icon:'✅', text:'Your profile is looking great! Keep it up.', action:''});
+  
+  document.getElementById('dash-tips').innerHTML = tips.map(t => `
+    <div style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--bg2);border:1px solid var(--border);border-radius:12px;margin-bottom:8px">
+      <span style="font-size:1.2rem">${t.icon}</span>
+      <div style="flex:1"><div style="font-size:.82rem;font-weight:500">${t.text}</div></div>
+      ${t.action ? `<span style="font-size:.7rem;color:var(--accent2);font-weight:600;cursor:pointer" onclick="dashTab('profile',document.querySelectorAll('.dash-tab')[2])">${t.action}</span>` : ''}
+    </div>
+  `).join('');
+  
+  // Fill profile fields
+  document.getElementById('pf-name').value = r.name || '';
+  document.getElementById('pf-desc').value = r.notes || '';
+  document.getElementById('pf-cuisine').value = r.cuisine_type || '';
+  document.getElementById('pf-price').value = r.menu_price_range || '';
+  document.getElementById('pf-phone').value = r.phone || '';
+  document.getElementById('pf-web').value = r.website || '';
+  document.getElementById('pf-ig').value = r.instagram || '';
+  
+  // Hours
+  const dayKeys = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+  const dayLabels = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  document.getElementById('hours-grid').innerHTML = dayKeys.map((d, i) => {
+    const val = (r.opening_hours_full && r.opening_hours_full[d]) || '';
+    return `<div class="hour-row"><span class="day">${dayLabels[i]}</span><input type="text" value="${val}" placeholder="e.g., 13:00-16:00, 20:00-23:30"></div>`;
+  }).join('');
+}
+
+function dashTab(tab, el) {
+  ['overview','deals','profile'].forEach(t => document.getElementById('tab-'+t).style.display = (t===tab) ? 'block' : 'none');
+  document.querySelectorAll('.dash-tab').forEach(t => t.classList.remove('active'));
+  if (el) el.classList.add('active');
+}
+
+function togDeal(el) { el.classList.toggle('on'); }
+
+function saveDealSettings() {
+  const toast = document.createElement('div');
+  toast.style.cssText = 'position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;padding:12px 24px;border-radius:12px;font-size:.84rem;font-weight:600;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,.3)';
+  toast.textContent = '✅ Deal settings saved!';
+  document.body.appendChild(toast);
+  setTimeout(() => toast.remove(), 2500);
+}
+
+function saveProfile() {
+  const toast = document.createElement('div');
+  toast.style.cssText = 'position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;padding:12px 24px;border-radius:12px;font-size:.84rem;font-weight:600;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,.3)';
+  toast.textContent = '✅ Profile updated!';
+  document.body.appendChild(toast);
+  setTimeout(() => toast.remove(), 2500);
+}
+
+function portalLogout() {
+  claimedR = null;
+  document.getElementById('ps-dash').classList.remove('active');
+  document.getElementById('ps-login').classList.add('active');
+  document.getElementById('portal-right').innerHTML = '';
+  document.getElementById('p-search').value = '';
+  document.getElementById('p-results').style.display = 'none';
+}
+</script>
+</body>
+</html>
