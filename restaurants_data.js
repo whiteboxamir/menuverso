@@ -15341,7 +15341,10 @@ const RESTAURANT_DATA = [
     "outdoor_seating": false,
     "dog_friendly": false,
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3738458,
+      "lng": 2.1644987
+    },
     "has_photo": false,
     "image_url": "assets/photos/236_hero.webp"
   },
@@ -15403,7 +15406,10 @@ const RESTAURANT_DATA = [
     "outdoor_seating": false,
     "dog_friendly": false,
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3724009,
+      "lng": 2.1645692
+    },
     "image_url": "assets/photos/237_hero.webp",
     "has_photo": true
   },
@@ -15786,7 +15792,10 @@ const RESTAURANT_DATA = [
     "outdoor_seating": true,
     "dog_friendly": false,
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.378983,
+      "lng": 2.1883542
+    },
     "image_url": "assets/photos/244_hero.webp",
     "has_photo": true
   },
@@ -15919,7 +15928,10 @@ const RESTAURANT_DATA = [
     "outdoor_seating": true,
     "dog_friendly": false,
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3758,
+      "lng": 2.1874945
+    },
     "image_url": "assets/photos/246_hero.webp",
     "has_photo": false
   },
@@ -16179,7 +16191,10 @@ const RESTAURANT_DATA = [
     "outdoor_seating": true,
     "dog_friendly": false,
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3830101,
+      "lng": 2.1948645
+    },
     "has_photo": false
   },
   {
@@ -16504,7 +16519,10 @@ const RESTAURANT_DATA = [
     "outdoor_seating": false,
     "dog_friendly": false,
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.379349,
+      "lng": 2.190017
+    },
     "has_photo": false
   },
   {
@@ -16567,7 +16585,10 @@ const RESTAURANT_DATA = [
     "outdoor_seating": true,
     "dog_friendly": false,
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3816466,
+      "lng": 2.1881927
+    },
     "has_photo": false
   },
   {
@@ -16629,7 +16650,10 @@ const RESTAURANT_DATA = [
     "outdoor_seating": false,
     "dog_friendly": false,
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3792983,
+      "lng": 2.1891943
+    },
     "has_photo": false
   },
   {
@@ -16958,7 +16982,10 @@ const RESTAURANT_DATA = [
     "outdoor_seating": false,
     "dog_friendly": false,
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3687343,
+      "lng": 2.1884028
+    },
     "has_photo": false
   },
   {
@@ -20414,7 +20441,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3937247,
+      "lng": 2.1689734
+    },
     "has_photo": false
   },
   {
@@ -20615,7 +20645,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3883709,
+      "lng": 2.1614586
+    },
     "has_photo": false
   },
   {
@@ -22172,7 +22205,10 @@ const RESTAURANT_DATA = [
       "card": "assets/photos/352_card.webp"
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3778869,
+      "lng": 2.1698052
+    },
     "image_url": "",
     "has_photo": false
   },
@@ -30687,7 +30723,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3801585,
+      "lng": 2.1808382
+    },
     "has_photo": false
   },
   {
@@ -30749,7 +30788,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4069999,
+      "lng": 2.210266
+    },
     "has_photo": false
   },
   {
@@ -30815,7 +30857,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.381234,
+      "lng": 2.1780994
+    },
     "image_url": "assets/photos/471_hero.webp",
     "has_photo": true
   },
@@ -30878,7 +30923,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3884173,
+      "lng": 2.1765204
+    },
     "has_photo": false,
     "image_url": "assets/photos/472_hero.webp"
   },
@@ -30942,7 +30990,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3825775,
+      "lng": 2.1752255
+    },
     "has_photo": false,
     "image_url": "assets/photos/473_hero.webp"
   },
@@ -31006,7 +31057,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3807073,
+      "lng": 2.1779153
+    },
     "has_photo": false
   },
   {
@@ -31607,7 +31661,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3788918,
+      "lng": 2.1661774
+    },
     "has_photo": false
   },
   {
@@ -31667,7 +31724,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3807305,
+      "lng": 2.1665553
+    },
     "has_photo": false
   },
   {
@@ -31732,7 +31792,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3821155,
+      "lng": 2.1656843
+    },
     "image_url": "assets/photos/485_hero.webp",
     "has_photo": true
   },
@@ -33003,7 +33066,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4009746,
+      "lng": 2.1545091
+    },
     "has_photo": false
   },
   {
@@ -33065,7 +33131,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4037722,
+      "lng": 2.1584801
+    },
     "has_photo": false
   },
   {
@@ -33192,7 +33261,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3791771,
+      "lng": 2.1890259
+    },
     "has_photo": false,
     "image_url": "assets/photos/507_hero.webp"
   },
@@ -33256,7 +33328,10 @@ const RESTAURANT_DATA = [
       "card": "assets/photos/525_card.webp"
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3758,
+      "lng": 2.1874945
+    },
     "image_url": "",
     "has_photo": false
   },
@@ -33321,7 +33396,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3773203,
+      "lng": 2.1450266
+    },
     "has_photo": false
   },
   {
@@ -33383,7 +33461,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4010758,
+      "lng": 2.2014097
+    },
     "has_photo": false
   },
   {
@@ -33449,7 +33530,10 @@ const RESTAURANT_DATA = [
       "card": "assets/photos/528_card.webp"
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3819103,
+      "lng": 2.1836814
+    },
     "image_url": "",
     "has_photo": false
   },
@@ -33510,7 +33594,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4054929,
+      "lng": 2.2078902
+    },
     "has_photo": false
   },
   {
@@ -33570,7 +33657,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4062506,
+      "lng": 2.2005899
+    },
     "has_photo": false
   },
   {
@@ -33636,7 +33726,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3858705,
+      "lng": 2.1501632
+    },
     "has_photo": false
   },
   {
@@ -33702,7 +33795,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3949068,
+      "lng": 2.1634013
+    },
     "has_photo": false
   },
   {
@@ -33765,7 +33861,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3955118,
+      "lng": 2.1899564
+    },
     "has_photo": false
   },
   {
@@ -33832,7 +33931,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3932963,
+      "lng": 2.1442048
+    },
     "has_photo": false
   },
   {
@@ -33898,7 +34000,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4013848,
+      "lng": 2.1590113
+    },
     "has_photo": false
   },
   {
@@ -33962,7 +34067,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3766557,
+      "lng": 2.1633874
+    },
     "has_photo": false
   },
   {
@@ -34029,7 +34137,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4037272,
+      "lng": 2.1426074
+    },
     "has_photo": false
   },
   {
@@ -34096,7 +34207,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4114783,
+      "lng": 2.140572
+    },
     "has_photo": false
   },
   {
@@ -34161,7 +34275,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3826467,
+      "lng": 2.1581621
+    },
     "has_photo": false
   },
   {
@@ -34225,7 +34342,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4307266,
+      "lng": 2.1616064
+    },
     "has_photo": false
   },
   {
@@ -39050,7 +39170,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4032321,
+      "lng": 2.1590579
+    },
     "has_photo": false
   },
   {
@@ -39114,7 +39237,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4050859,
+      "lng": 2.1614632
+    },
     "has_photo": false
   },
   {
@@ -39244,7 +39370,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4000535,
+      "lng": 2.2029713
+    },
     "has_photo": false
   },
   {
@@ -41110,7 +41239,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.385604,
+      "lng": 2.1790402
+    },
     "has_photo": false,
     "image_url": "assets/photos/628_hero.webp"
   },
@@ -42653,7 +42785,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3843695,
+      "lng": 2.1729219
+    },
     "has_photo": false
   },
   {
@@ -43185,7 +43320,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3995321,
+      "lng": 2.1600856
+    },
     "has_photo": false
   },
   {
@@ -43249,7 +43387,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3987014,
+      "lng": 2.1596859
+    },
     "has_photo": false
   },
   {
@@ -52943,7 +53084,10 @@ const RESTAURANT_DATA = [
       "card": "assets/photos/838_card.webp"
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4041412,
+      "lng": 2.1566003
+    },
     "image_url": "",
     "has_photo": false
   },
@@ -53010,7 +53154,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3795964,
+      "lng": 2.1874665
+    },
     "has_photo": false
   },
   {
@@ -53681,7 +53828,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3852382,
+      "lng": 2.1833685
+    },
     "image_url": "assets/photos/816_hero.webp",
     "has_photo": true
   },
@@ -56958,7 +57108,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3983871,
+      "lng": 2.198175
+    },
     "has_photo": false
   },
   {
@@ -57024,7 +57177,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4019944,
+      "lng": 2.2001988
+    },
     "has_photo": false
   },
   {
@@ -57153,7 +57309,10 @@ const RESTAURANT_DATA = [
       "card": "assets/photos/902_card.webp"
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3821717,
+      "lng": 2.1832472
+    },
     "image_url": "assets/photos/868_hero.webp",
     "has_photo": false
   },
@@ -57285,7 +57444,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3755795,
+      "lng": 2.1315977
+    },
     "has_photo": false
   },
   {
@@ -57350,7 +57512,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3753044,
+      "lng": 2.1453013
+    },
     "has_photo": false
   },
   {
@@ -57413,7 +57578,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3755498,
+      "lng": 2.1329947
+    },
     "has_photo": false
   },
   {
@@ -62586,7 +62754,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4016165,
+      "lng": 2.1298571
+    },
     "image_url": "assets/photos/950_hero.webp",
     "has_photo": true
   },
@@ -64266,7 +64437,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3743906,
+      "lng": 2.1630348
+    },
     "has_photo": false
   },
   {
@@ -64939,7 +65113,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3845274,
+      "lng": 2.1828248
+    },
     "has_photo": false
   },
   {
@@ -65279,7 +65456,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4039185,
+      "lng": 2.1819255
+    },
     "has_photo": false
   },
   {
@@ -65544,7 +65724,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3854925,
+      "lng": 2.1796645
+    },
     "has_photo": false
   },
   {
@@ -65608,7 +65791,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3853815,
+      "lng": 2.1821247
+    },
     "has_photo": false
   },
   {
@@ -65670,7 +65856,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3622721,
+      "lng": 2.1547545
+    },
     "has_photo": false
   },
   {
@@ -65735,7 +65924,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3679271,
+      "lng": 2.1577022
+    },
     "has_photo": false
   },
   {
@@ -65797,7 +65989,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3675307,
+      "lng": 2.1481951
+    },
     "has_photo": false
   },
   {
@@ -65862,7 +66057,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3763525,
+      "lng": 2.160597
+    },
     "has_photo": false
   },
   {
@@ -65926,7 +66124,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3756547,
+      "lng": 2.1319231
+    },
     "has_photo": false
   },
   {
@@ -66057,7 +66258,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3828811,
+      "lng": 2.1620864
+    },
     "has_photo": false
   },
   {
@@ -66122,7 +66326,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3999928,
+      "lng": 2.1955828
+    },
     "has_photo": false
   },
   {
@@ -66186,7 +66393,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3977727,
+      "lng": 2.1932488
+    },
     "has_photo": false
   },
   {
@@ -66246,7 +66456,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4011067,
+      "lng": 2.2033492
+    },
     "has_photo": false
   },
   {
@@ -66311,7 +66524,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4054177,
+      "lng": 2.2056401
+    },
     "has_photo": false
   },
   {
@@ -66439,7 +66655,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3923398,
+      "lng": 2.1748599
+    },
     "has_photo": false
   },
   {
@@ -66499,7 +66718,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3950618,
+      "lng": 2.1376397
+    },
     "has_photo": false
   },
   {
@@ -66561,7 +66783,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4016165,
+      "lng": 2.1298571
+    },
     "has_photo": false
   },
   {
@@ -66621,7 +66846,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4016165,
+      "lng": 2.1298571
+    },
     "has_photo": false
   },
   {
@@ -66881,7 +67109,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3848426,
+      "lng": 2.1828745
+    },
     "has_photo": false
   },
   {
@@ -67212,7 +67443,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4035046,
+      "lng": 2.1744283
+    },
     "has_photo": false
   },
   {
@@ -67670,7 +67904,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3936885,
+      "lng": 2.1636552
+    },
     "has_photo": false
   },
   {
@@ -67730,7 +67967,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3936885,
+      "lng": 2.1636552
+    },
     "has_photo": false
   },
   {
@@ -67794,7 +68034,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4065767,
+      "lng": 2.1582812
+    },
     "has_photo": false
   },
   {
@@ -67860,7 +68103,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3784116,
+      "lng": 2.1617677
+    },
     "has_photo": false
   },
   {
@@ -67924,7 +68170,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3936885,
+      "lng": 2.1636552
+    },
     "has_photo": false
   },
   {
@@ -67987,7 +68236,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3848426,
+      "lng": 2.1828745
+    },
     "has_photo": false
   },
   {
@@ -68052,7 +68304,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3821171,
+      "lng": 2.1854822
+    },
     "has_photo": false
   },
   {
@@ -68118,7 +68373,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3795176,
+      "lng": 2.1683678
+    },
     "has_photo": false
   },
   {
@@ -68183,7 +68441,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3795176,
+      "lng": 2.1683678
+    },
     "has_photo": false
   },
   {
@@ -68247,7 +68508,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3821171,
+      "lng": 2.1854822
+    },
     "has_photo": false
   },
   {
@@ -68311,7 +68575,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3753288,
+      "lng": 2.1349117
+    },
     "has_photo": false
   },
   {
@@ -68374,7 +68641,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3753288,
+      "lng": 2.1349117
+    },
     "has_photo": false
   },
   {
@@ -68437,7 +68707,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3753288,
+      "lng": 2.1349117
+    },
     "has_photo": false
   },
   {
@@ -68502,7 +68775,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3753288,
+      "lng": 2.1349117
+    },
     "has_photo": false
   },
   {
@@ -68567,7 +68843,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3753288,
+      "lng": 2.1349117
+    },
     "has_photo": false
   },
   {
@@ -68632,7 +68911,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3753288,
+      "lng": 2.1349117
+    },
     "has_photo": false
   },
   {
@@ -68697,7 +68979,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.385244,
+      "lng": 2.1328626
+    },
     "has_photo": false
   },
   {
@@ -68762,7 +69047,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.385244,
+      "lng": 2.1328626
+    },
     "has_photo": false
   },
   {
@@ -68828,7 +69116,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.385244,
+      "lng": 2.1328626
+    },
     "has_photo": false
   },
   {
@@ -68895,7 +69186,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.385244,
+      "lng": 2.1328626
+    },
     "image_url": "assets/photos/1046_hero.webp",
     "has_photo": true
   },
@@ -68956,7 +69250,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.385244,
+      "lng": 2.1328626
+    },
     "has_photo": false
   },
   {
@@ -69021,7 +69318,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4289652,
+      "lng": 2.1506189
+    },
     "has_photo": false
   },
   {
@@ -69085,7 +69385,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4372495,
+      "lng": 2.1954872
+    },
     "has_photo": false
   },
   {
@@ -69150,7 +69453,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4458153,
+      "lng": 2.1798006
+    },
     "has_photo": false
   },
   {
@@ -69214,7 +69520,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.410316,
+      "lng": 2.1867206
+    },
     "has_photo": false
   },
   {
@@ -69279,7 +69588,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.410316,
+      "lng": 2.1867206
+    },
     "has_photo": false
   },
   {
@@ -69344,7 +69656,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4102552,
+      "lng": 2.1867249
+    },
     "has_photo": false
   },
   {
@@ -69411,7 +69726,10 @@ const RESTAURANT_DATA = [
       "card": "assets/photos/1090_card.webp"
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4084102,
+      "lng": 2.2031889
+    },
     "image_url": "",
     "has_photo": false
   },
@@ -69474,7 +69792,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4084102,
+      "lng": 2.2031889
+    },
     "has_photo": false
   },
   {
@@ -69537,7 +69858,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4084102,
+      "lng": 2.2031889
+    },
     "has_photo": false
   },
   {
@@ -69600,7 +69924,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4084102,
+      "lng": 2.2031889
+    },
     "has_photo": false
   },
   {
@@ -69662,7 +69989,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4084102,
+      "lng": 2.2031889
+    },
     "has_photo": false
   },
   {
@@ -69724,7 +70054,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4016165,
+      "lng": 2.1298571
+    },
     "has_photo": false
   },
   {
@@ -69789,7 +70122,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4016165,
+      "lng": 2.1298571
+    },
     "has_photo": false
   },
   {
@@ -69852,7 +70188,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4016165,
+      "lng": 2.1298571
+    },
     "has_photo": false
   },
   {
@@ -69920,7 +70259,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4036418,
+      "lng": 2.2032751
+    },
     "has_photo": false
   },
   {
@@ -69983,7 +70325,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3784116,
+      "lng": 2.1617677
+    },
     "has_photo": false
   },
   {
@@ -70046,7 +70391,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3936885,
+      "lng": 2.1636552
+    },
     "has_photo": false
   },
   {
@@ -70108,7 +70456,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3936885,
+      "lng": 2.1636552
+    },
     "has_photo": false
   },
   {
@@ -70170,7 +70521,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3936885,
+      "lng": 2.1636552
+    },
     "has_photo": false
   },
   {
@@ -70710,7 +71064,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4035046,
+      "lng": 2.1744283
+    },
     "has_photo": false
   },
   {
@@ -70775,7 +71132,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4035046,
+      "lng": 2.1744283
+    },
     "has_photo": false
   },
   {
@@ -70839,7 +71199,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4035046,
+      "lng": 2.1744283
+    },
     "has_photo": false
   },
   {
@@ -71307,7 +71670,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4036418,
+      "lng": 2.2032751
+    },
     "has_photo": false
   },
   {
@@ -73453,7 +73819,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4036418,
+      "lng": 2.2032751
+    },
     "has_photo": false
   },
   {
@@ -73516,7 +73885,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4036418,
+      "lng": 2.2032751
+    },
     "has_photo": false
   },
   {
@@ -74932,7 +75304,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3753005,
+      "lng": 2.146278
+    },
     "has_photo": false
   },
   {
@@ -74995,7 +75370,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3730752,
+      "lng": 2.1661095
+    },
     "has_photo": false
   },
   {
@@ -75330,7 +75708,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3848426,
+      "lng": 2.1828745
+    },
     "has_photo": false
   },
   {
@@ -75394,7 +75775,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3848426,
+      "lng": 2.1828745
+    },
     "has_photo": false
   },
   {
@@ -75527,7 +75911,10 @@ const RESTAURANT_DATA = [
       "team": []
     },
     "status": "active",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4035046,
+      "lng": 2.1744283
+    },
     "has_photo": false
   },
   {
@@ -75624,7 +76011,10 @@ const RESTAURANT_DATA = [
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3845212,
+      "lng": 2.1836302
+    },
     "metro_station": "Jaume I (L4)",
     "opening_hours_full": {
       "monday": "Closed",
@@ -75683,7 +76073,10 @@ const RESTAURANT_DATA = [
       "views"
     ],
     "menu_evidence": "auto_diagnostic",
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3868604,
+      "lng": 2.1817294
+    },
     "metro_station": "Jaume I (L4)",
     "opening_hours_full": {
       "monday": "12:30-16:00, 19:30-22:30",
@@ -85113,7 +85506,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.390212,
+      "lng": 2.1698103
+    },
     "has_photo": false,
     "thefork_rating": 5.2,
     "thefork_avg_price": "22€",
