@@ -73,7 +73,7 @@ def main():
     with open("restaurants.json") as f:
         data = json.load(f)
     with open("restaurants_data.js", "w") as f:
-        f.write("const RESTAURANT_DATA = ")
+        f.write("var RESTAURANT_DATA = ")
         json.dump(data, f, ensure_ascii=False)
         f.write(";\n")
     print(f"\n✅ Regenerated restaurants_data.js ({len(data)} entries)")

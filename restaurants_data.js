@@ -1,4 +1,4 @@
-const RESTAURANT_DATA = [
+var RESTAURANT_DATA = [
   {
     "id": 1,
     "name": "Casa Jaime",
@@ -77619,8 +77619,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Casa Xef",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de les Guilleries, 17, Gràcia, 08012 Barcelona",
+    "postal_code": "08012",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -77633,11 +77633,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 679 78 10 92",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Casa+Xef++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 3.9,
+    "google_maps_review_count": 155,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -77696,11 +77696,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "28€",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 697 91 68 31",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Brasa+Gaucha+Grill+Carrer+de+Margarit%2C+31+Barcelona",
     "google_maps_rating": 4.9,
-    "google_maps_review_count": 4097,
+    "google_maps_review_count": 4123,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -77734,8 +77734,8 @@ const RESTAURANT_DATA = [
       "thefork-festival"
     ],
     "coordinates": {
-      "lat": 41.3731,
-      "lng": 2.1609
+      "lat": 41.3731769,
+      "lng": 2.1635153
     },
     "has_photo": false,
     "thefork_rating": 9.6,
@@ -77758,8 +77758,8 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "50€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://latatabarcelona.es/",
+    "phone": "+34 934 26 22 87",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Tata+Carrer+de+Cal%C3%A0bria%2C+69+Barcelona",
     "google_maps_rating": 4.4,
@@ -77797,8 +77797,8 @@ const RESTAURANT_DATA = [
       "thefork-festival"
     ],
     "coordinates": {
-      "lat": 41.3781,
-      "lng": 2.1542
+      "lat": 41.3781094,
+      "lng": 2.1568522
     },
     "has_photo": false,
     "thefork_rating": 9.7,
@@ -77822,7 +77822,7 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "15€",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 670 77 99 75",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Maiks+Carrer+de+Pujades%2C+207+Barcelona",
     "google_maps_rating": 5.0,
@@ -77860,8 +77860,8 @@ const RESTAURANT_DATA = [
       "thefork-festival"
     ],
     "coordinates": {
-      "lat": 41.4031,
-      "lng": 2.2023
+      "lat": 41.4031706,
+      "lng": 2.198007
     },
     "has_photo": false,
     "thefork_rating": 9.9,
@@ -77884,8 +77884,8 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "19€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "http://saltafood.com/",
+    "phone": "+34 665 78 73 59",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=SALTA+FOOD+ZONA+FRANCA+Carrer+de+la+Mare+de+D%C3%A9u+de+Port%2C+90+Barcelona",
     "google_maps_rating": 4.9,
@@ -77923,8 +77923,8 @@ const RESTAURANT_DATA = [
       "thefork-festival"
     ],
     "coordinates": {
-      "lat": 41.3562,
-      "lng": 2.1429
+      "lat": 41.3561609,
+      "lng": 2.1454498
     },
     "has_photo": false,
     "thefork_rating": 9.6,
@@ -77947,8 +77947,8 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "15€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://www.sushiherestaurant.com/",
+    "phone": "+34 936 83 77 57",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sushi+He+-+Urgell+Carrer+del+Comte+d%27Urgell%2C+174+Barcelona",
     "google_maps_rating": 4.1,
@@ -77986,8 +77986,8 @@ const RESTAURANT_DATA = [
       "thefork-festival"
     ],
     "coordinates": {
-      "lat": 41.3871,
-      "lng": 2.1498
+      "lat": 41.3870492,
+      "lng": 2.1523581
     },
     "has_photo": false,
     "thefork_rating": 8.7,
@@ -78010,12 +78010,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "19€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://rasabarcelona.com/",
+    "phone": "+34 931 97 51 84",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rasa+Carrer+de+Josep+Anselm+Clav%C3%A9%2C+11+Barcelona",
-    "google_maps_rating": 5.0,
-    "google_maps_review_count": 457,
+    "google_maps_rating": 4.9,
+    "google_maps_review_count": 464,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -78049,8 +78049,8 @@ const RESTAURANT_DATA = [
       "thefork-festival"
     ],
     "coordinates": {
-      "lat": 41.3774,
-      "lng": 2.1753
+      "lat": 41.3774027,
+      "lng": 2.1778909
     },
     "has_photo": false,
     "thefork_rating": 9.7,
@@ -78074,11 +78074,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "20€",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 625 12 60 61",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Barcelona+Grill+Steak+House+Carrer+del+Rec+Comtal%2C+7+Barcelona",
     "google_maps_rating": 4.8,
-    "google_maps_review_count": 2598,
+    "google_maps_review_count": 2646,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -78137,11 +78137,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "36€",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 682 51 91 60",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Don+Brasa+Asador+Argentino+Carrer+del+Poeta+Cabanyes%2C+19+Barcelona",
     "google_maps_rating": 4.8,
-    "google_maps_review_count": 3060,
+    "google_maps_review_count": 3080,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -78175,8 +78175,8 @@ const RESTAURANT_DATA = [
       "thefork-festival"
     ],
     "coordinates": {
-      "lat": 41.3742,
-      "lng": 2.1632
+      "lat": 41.3741852,
+      "lng": 2.1658241
     },
     "has_photo": false,
     "thefork_rating": 9.6,
@@ -78199,8 +78199,8 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "21€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://www.papadam.es/",
+    "phone": "+34 931 43 85 56",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Papadam+Indian+Authentic+Ronda+de+Sant+Pau%2C+11+Barcelona",
     "google_maps_rating": 4.6,
@@ -78238,8 +78238,8 @@ const RESTAURANT_DATA = [
       "thefork-festival"
     ],
     "coordinates": {
-      "lat": 41.3757,
-      "lng": 2.1643
+      "lat": 41.3756516,
+      "lng": 2.166858
     },
     "has_photo": false,
     "thefork_rating": 9.4,
@@ -78262,12 +78262,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "36€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://asado-central.eatbu.com/?lang=es",
+    "phone": "+34 632 06 08 32",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Asado+Central+Barcelona+Pg.+Sant+Antoni%2C+23+Barcelona",
     "google_maps_rating": 4.9,
-    "google_maps_review_count": 1038,
+    "google_maps_review_count": 1048,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -78301,8 +78301,8 @@ const RESTAURANT_DATA = [
       "thefork-festival"
     ],
     "coordinates": {
-      "lat": 41.3772,
-      "lng": 2.1346
+      "lat": 41.3772459,
+      "lng": 2.1371266
     },
     "has_photo": false,
     "thefork_rating": 9.6,
@@ -78326,7 +78326,7 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "25€",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 697 91 68 31",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Criolla+Asador+Carrer+de+Margarit%2C+13+Barcelona",
     "google_maps_rating": 4.8,
@@ -78388,8 +78388,8 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "16€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://noush.es/",
+    "phone": "+34 694 25 24 01",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Noush+Bcn+Carrer+d%27Olzinelles%2C+100+Barcelona",
     "google_maps_rating": 4.9,
@@ -78451,12 +78451,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "25€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://fioritoestiloargentino.makro.rest/",
+    "phone": "+34 692 12 41 56",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Fiorito+Estilo+Argentino+Carrer+de+Rocafort%2C+29+Barcelona",
-    "google_maps_rating": 4.9,
-    "google_maps_review_count": 1010,
+    "google_maps_rating": 4.8,
+    "google_maps_review_count": 1023,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -78490,8 +78490,8 @@ const RESTAURANT_DATA = [
       "thefork-festival"
     ],
     "coordinates": {
-      "lat": 41.3763,
-      "lng": 2.1543
+      "lat": 41.3763065,
+      "lng": 2.1568725
     },
     "has_photo": false,
     "thefork_rating": 9.4,
@@ -78514,8 +78514,8 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "23€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://petitmuu.es/",
+    "phone": "+34 608 63 30 36",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Petit+Muu+Pl.+del+Dr.+Letamendi%2C+28+Barcelona",
     "google_maps_rating": 4.8,
@@ -78553,8 +78553,8 @@ const RESTAURANT_DATA = [
       "thefork-festival"
     ],
     "coordinates": {
-      "lat": 41.3896,
-      "lng": 2.1583
+      "lat": 41.3895644,
+      "lng": 2.1609127
     },
     "has_photo": false,
     "thefork_rating": 9.4,
@@ -78578,11 +78578,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "25€",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 627 30 28 61",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Parra+Grill+Asador+Argentino+Carrer+de+Villarroel%2C+181+Barcelona",
     "google_maps_rating": 4.8,
-    "google_maps_review_count": 5708,
+    "google_maps_review_count": 5735,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -78616,8 +78616,8 @@ const RESTAURANT_DATA = [
       "thefork-festival"
     ],
     "coordinates": {
-      "lat": 41.3886,
-      "lng": 2.1492
+      "lat": 41.3885832,
+      "lng": 2.1518245
     },
     "has_photo": false,
     "thefork_rating": 9.4,
@@ -78641,11 +78641,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "30€",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 634 96 92 50",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Braseria+Barcelona+Carrer+d%27Arag%C3%B3%2C+364+Barcelona",
     "google_maps_rating": 4.8,
-    "google_maps_review_count": 10057,
+    "google_maps_review_count": 10142,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -78679,8 +78679,8 @@ const RESTAURANT_DATA = [
       "thefork-festival"
     ],
     "coordinates": {
-      "lat": 41.3969,
-      "lng": 2.1693
+      "lat": 41.396873,
+      "lng": 2.1718491
     },
     "has_photo": false,
     "thefork_rating": 9.4,
@@ -78703,8 +78703,8 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "15€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://www.privateaser.es/local/52351-Viatger-Cafe",
+    "phone": "+34 622 29 14 84",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Viatger+Caf%C3%A9+Brunch+Carrer+de+la+Diputaci%C3%B3%2C+377+Barcelona",
     "google_maps_rating": 4.7,
@@ -78766,12 +78766,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "21€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "http://www.julivertmeu.com/",
+    "phone": "+34 932 46 42 62",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Julivert+Meu+Restaurante+Carrer+del+Bonsucc%C3%A9s%2C+7+Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.3,
+    "google_maps_review_count": 2641,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -78829,7 +78829,7 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "15€",
     "dinner_tier": "unknown",
-    "website": "",
+    "website": "https://alhambrarestaurant.es/",
     "phone": "",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Alhambra+Rda.+de+Sant+Pau%2C+48+Barcelona",
@@ -78868,8 +78868,8 @@ const RESTAURANT_DATA = [
       "thefork-festival"
     ],
     "coordinates": {
-      "lat": 41.3774,
-      "lng": 2.1625
+      "lat": 41.3773393,
+      "lng": 2.1650922
     },
     "has_photo": false,
     "thefork_rating": 8.6,
@@ -78892,8 +78892,8 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "35€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "http://www.oliviaplazahotel.com/nineteen-restaurant",
+    "phone": "+34 933 16 87 00",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Nineteen+Restaurant+-+Olivia+Plaza+Hotel+Pl.+de+Catalunya%2C+19+Barcelona",
     "google_maps_rating": 4.4,
@@ -78931,8 +78931,8 @@ const RESTAURANT_DATA = [
       "thefork-festival"
     ],
     "coordinates": {
-      "lat": 41.3862,
-      "lng": 2.1684
+      "lat": 41.3861985,
+      "lng": 2.1710144
     },
     "has_photo": false,
     "thefork_rating": 9.4,
@@ -78956,11 +78956,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "25€",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 931 43 04 35",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Grill+Argento+Steakhouse+Carrer+del+Bou+de+Sant+Pere%2C+13+Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.8,
+    "google_maps_review_count": 1702,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -79005,8 +79005,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Sway Soul",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Av. Diagonal, 353, Eixample, 08037 Barcelona",
+    "postal_code": "08037",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -79018,12 +79018,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://www.privateaser.es/local/53696-sway-soul-bar",
+    "phone": "+34 645 27 52 89",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sway+Soul++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.8,
+    "google_maps_review_count": 1136,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -79056,7 +79056,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3975884,
+      "lng": 2.1646966
+    },
     "has_photo": false,
     "thefork_rating": null,
     "thefork_avg_price": "",
@@ -79078,12 +79081,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "35€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "http://maysibarcelona.com/",
+    "phone": "+34 627 97 12 16",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Maysi+Barcelona+Carrer+d%27Aribau%2C+159+Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.1,
+    "google_maps_review_count": 344,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -79142,11 +79145,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "20€",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 931 41 89 12",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=T%C3%ADpico+Asador+Argentino+C.+de+Villarroel%2C+31+Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.9,
+    "google_maps_review_count": 5466,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -79191,8 +79194,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Bistrot Levante",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Placeta de Manuel Ribé, 1, Ciutat Vella, 08002 Barcelona",
+    "postal_code": "08002",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -79204,72 +79207,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "http://bistrotlevante.com/",
+    "phone": "+34 938 58 26 79",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bistrot+Levante++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
-    "opening_hours_lunch": "13:00-16:00",
-    "opening_hours_full": {
-      "monday": "",
-      "tuesday": "",
-      "wednesday": "",
-      "thursday": "",
-      "friday": "",
-      "saturday": "",
-      "sunday": "",
-      "closed_days": []
-    },
-    "images": {
-      "hero": "",
-      "food": [],
-      "interior": [],
-      "exterior": [],
-      "menu_photo": [],
-      "ambiance": [],
-      "team": []
-    },
-    "notes": "TheFork Festival 2026 participant.  avg. TheFork rating: None/10.",
-    "verification_status": "partially_verified",
-    "source": "thefork",
-    "last_verified": "2026-03-26",
-    "reservation_required": false,
-    "delivery_available": false,
-    "outdoor_seating": false,
-    "dog_friendly": false,
-    "status": "active",
-    "tags": [
-      "thefork-festival"
-    ],
-    "coordinates": {},
-    "has_photo": false,
-    "thefork_rating": null,
-    "thefork_avg_price": "",
-    "id": 1199
-  },
-  {
-    "name": "Restaurant Gotic",
-    "address": "Barri Gòtic, Barcelona",
-    "address_full": "",
-    "postal_code": "",
-    "city": "Barcelona",
-    "neighborhood": "Barri Gòtic",
-    "cuisine_type": "Other",
-    "pricing_tier": "mid-range",
-    "menu_del_dia_confirmed": false,
-    "menu_price_range": "",
-    "menu_tier": "none",
-    "menu_evidence": "none",
-    "dinner_menu_del_dia": false,
-    "dinner_price_range": "",
-    "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
-    "instagram": "",
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Gotic++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.4,
+    "google_maps_review_count": 918,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -79303,8 +79246,71 @@ const RESTAURANT_DATA = [
       "thefork-festival"
     ],
     "coordinates": {
-      "lat": 41.3857903,
-      "lng": 2.1738261
+      "lat": 41.3826632,
+      "lng": 2.17552
+    },
+    "has_photo": false,
+    "thefork_rating": null,
+    "thefork_avg_price": "",
+    "id": 1199
+  },
+  {
+    "name": "Restaurant Gotic",
+    "address": "Barri Gòtic, Barcelona",
+    "address_full": "Carrer de Ferran, 30, Ciutat Vella, 08002 Barcelona",
+    "postal_code": "08002",
+    "city": "Barcelona",
+    "neighborhood": "Barri Gòtic",
+    "cuisine_type": "Other",
+    "pricing_tier": "mid-range",
+    "menu_del_dia_confirmed": false,
+    "menu_price_range": "",
+    "menu_tier": "none",
+    "menu_evidence": "none",
+    "dinner_menu_del_dia": false,
+    "dinner_price_range": "",
+    "dinner_tier": "unknown",
+    "website": "https://restaurante.covermanager.com/restaurant-gotic/",
+    "phone": "+34 931 82 21 52",
+    "instagram": "",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant+Gotic++Barcelona",
+    "google_maps_rating": 4.6,
+    "google_maps_review_count": 533,
+    "opening_hours_lunch": "13:00-16:00",
+    "opening_hours_full": {
+      "monday": "",
+      "tuesday": "",
+      "wednesday": "",
+      "thursday": "",
+      "friday": "",
+      "saturday": "",
+      "sunday": "",
+      "closed_days": []
+    },
+    "images": {
+      "hero": "",
+      "food": [],
+      "interior": [],
+      "exterior": [],
+      "menu_photo": [],
+      "ambiance": [],
+      "team": []
+    },
+    "notes": "TheFork Festival 2026 participant.  avg. TheFork rating: None/10.",
+    "verification_status": "partially_verified",
+    "source": "thefork",
+    "last_verified": "2026-03-26",
+    "reservation_required": false,
+    "delivery_available": false,
+    "outdoor_seating": false,
+    "dog_friendly": false,
+    "status": "active",
+    "tags": [
+      "thefork-festival"
+    ],
+    "coordinates": {
+      "lat": 41.3815293,
+      "lng": 2.1670412
     },
     "has_photo": false,
     "thefork_rating": null,
@@ -79314,8 +79320,8 @@ const RESTAURANT_DATA = [
   {
     "name": "WONDMO BCN",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de la Diputació, 168, Eixample, 08011 Barcelona",
+    "postal_code": "08011",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -79328,11 +79334,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 936 78 87 66",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=WONDMO+BCN++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.7,
+    "google_maps_review_count": 447,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -79365,7 +79371,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3839978,
+      "lng": 2.1588012
+    },
     "has_photo": false,
     "thefork_rating": null,
     "thefork_avg_price": "",
@@ -79374,8 +79383,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Antic Pitarra",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer d'Avinyó, 56, Ciutat Vella, 08002 Barcelona",
+    "postal_code": "08002",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -79388,11 +79397,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 933 49 99 51",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Antic+Pitarra++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.8,
+    "google_maps_review_count": 3870,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -79425,7 +79434,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3802237,
+      "lng": 2.1791273
+    },
     "has_photo": false,
     "thefork_rating": null,
     "thefork_avg_price": "",
@@ -79434,8 +79446,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Mambo Sushi",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de Montserrat, 13, Ciutat Vella, 08001 Barcelona",
+    "postal_code": "08001",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Japanese",
@@ -79447,12 +79459,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://mambosushi.es/",
+    "phone": "+34 649 01 79 24",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mambo+Sushi++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.6,
+    "google_maps_review_count": 1239,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -79485,7 +79497,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.377157,
+      "lng": 2.175092
+    },
     "has_photo": false,
     "thefork_rating": null,
     "thefork_avg_price": "",
@@ -79494,8 +79509,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Restaurante Casa Pince",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de Ferran, 21, Ciutat Vella, 08002 Barcelona",
+    "postal_code": "08002",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -79507,12 +79522,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://www.casapince.com/restaurante/",
+    "phone": "+34 722 46 90 65",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurante+Casa+Pince++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.5,
+    "google_maps_review_count": 353,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -79545,7 +79560,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3811,
+      "lng": 2.175059
+    },
     "has_photo": false,
     "thefork_rating": null,
     "thefork_avg_price": "",
@@ -79554,8 +79572,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Quo Vadis",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer del Carme, 7, Ciutat Vella, 08001 Barcelona",
+    "postal_code": "08001",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -79568,11 +79586,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 690 64 97 34",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Quo+Vadis++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.7,
+    "google_maps_review_count": 1278,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -79605,7 +79623,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3826894,
+      "lng": 2.1711407
+    },
     "has_photo": false,
     "thefork_rating": null,
     "thefork_avg_price": "",
@@ -79614,8 +79635,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Don Asador",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer del Comte d'Urgell, 111, Eixample, 08011 Barcelona",
+    "postal_code": "08011",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Argentine",
@@ -79627,12 +79648,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://app.donasador.es/inicio/",
+    "phone": "+34 661 40 45 30",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Don+Asador++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.8,
+    "google_maps_review_count": 26888,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -79677,8 +79698,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Koh-i-Noor India Barcelona",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer del Marquès de Campo Sagrado, 3, Eixample, 08015 Barcelona",
+    "postal_code": "08015",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Indian",
@@ -79691,11 +79712,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 931 79 90 48",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Koh-i-Noor+India+Barcelona++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.6,
+    "google_maps_review_count": 1872,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -79728,7 +79749,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3755608,
+      "lng": 2.1634538
+    },
     "has_photo": false,
     "thefork_rating": null,
     "thefork_avg_price": "",
@@ -79751,11 +79775,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "25€",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 662 32 19 00",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pueblo+Grill+Steak+House+Carrer+del+Cardenal+Reig%2C+16+Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.9,
+    "google_maps_review_count": 485,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -79800,8 +79824,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Elaichi Indian restaurant",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de Floridablanca, 130, Eixample, 08011 Barcelona",
+    "postal_code": "08011",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Indian",
@@ -79813,12 +79837,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://elaichispain.com/",
+    "phone": "+34 933 30 26 82",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Elaichi+Indian+restaurant++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.8,
+    "google_maps_review_count": 864,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -79851,7 +79875,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3806698,
+      "lng": 2.1616976
+    },
     "has_photo": false,
     "thefork_rating": null,
     "thefork_avg_price": "",
@@ -79860,8 +79887,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Olivia Bistró",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de Viladomat, 80, Eixample, 08015 Barcelona",
+    "postal_code": "08015",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -79873,12 +79900,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://olivia-bistro.makro.rest/",
+    "phone": "+34 658 08 68 69",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Olivia+Bistr%C3%B3++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.8,
+    "google_maps_review_count": 2544,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -79911,7 +79938,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3785216,
+      "lng": 2.1590525
+    },
     "has_photo": false,
     "thefork_rating": null,
     "thefork_avg_price": "",
@@ -79920,8 +79950,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Da Piero Ristorante Pizzeria",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de Viladomat, 261, Eixample, 08029 Barcelona",
+    "postal_code": "08029",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Italian",
@@ -79934,11 +79964,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 934 10 20 40",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Da+Piero+Ristorante+Pizzeria++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.4,
+    "google_maps_review_count": 253,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -79971,7 +80001,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3866833,
+      "lng": 2.1476527
+    },
     "has_photo": false,
     "thefork_rating": null,
     "thefork_avg_price": "",
@@ -79980,8 +80013,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Jay's Japanese by Gatsby",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de Tuset, 19, Sarrià-Sant Gervasi, 08006 Barcelona",
+    "postal_code": "08006",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Japanese",
@@ -79993,12 +80026,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://www.jaysjapanese.com/",
+    "phone": "+34 931 22 36 08",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Jay%27s+Japanese+by+Gatsby++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.6,
+    "google_maps_review_count": 455,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -80031,7 +80064,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3960982,
+      "lng": 2.1513154
+    },
     "has_photo": false,
     "thefork_rating": null,
     "thefork_avg_price": "",
@@ -80040,8 +80076,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Seventeen - Hotel Olivia Balmes",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Ciutat Vella, 08002 Barcelona",
+    "postal_code": "08002",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -80053,12 +80089,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://www.oliviabalmeshotel.com/gastronomia/",
+    "phone": "+34 932 14 20 04",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Seventeen+-+Hotel+Olivia+Balmes++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.2,
+    "google_maps_review_count": 1419,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -80091,7 +80127,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3886449,
+      "lng": 2.1658754
+    },
     "has_photo": false,
     "thefork_rating": null,
     "thefork_avg_price": "",
@@ -80100,8 +80139,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Ca Fer",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de Brusi, 47, 08006 Barcelona",
+    "postal_code": "08006",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -80113,12 +80152,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://eatlink.es/cafer/",
+    "phone": "+34 652 06 85 85",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ca+Fer++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 5.0,
+    "google_maps_review_count": 12,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -80151,7 +80190,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4016882,
+      "lng": 2.1447902
+    },
     "has_photo": false,
     "thefork_rating": null,
     "thefork_avg_price": "",
@@ -80160,8 +80202,8 @@ const RESTAURANT_DATA = [
   {
     "name": "ARiO Pizzería, Hamburguesería, Coctelería",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de Pere Terré i Domènech, 11, Sant Andreu, 08027 Barcelona",
+    "postal_code": "08027",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -80174,11 +80216,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 610 65 16 09",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=ARiO+Pizzer%C3%ADa%2C+Hamburgueser%C3%ADa%2C+Cocteler%C3%ADa++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.9,
+    "google_maps_review_count": 64,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -80211,7 +80253,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4254953,
+      "lng": 2.1923124
+    },
     "has_photo": false,
     "thefork_rating": null,
     "thefork_avg_price": "",
@@ -80220,8 +80265,8 @@ const RESTAURANT_DATA = [
   {
     "name": "La bella vita",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de Bac de Roda, 84, Sant Martí, 08019 Barcelona",
+    "postal_code": "08019",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Italian",
@@ -80233,12 +80278,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "17€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://labellavita.myrestoo.net/es/reservar",
+    "phone": "+34 931 65 50 74",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+bella+vita++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.7,
+    "google_maps_review_count": 649,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -80271,7 +80316,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.4069862,
+      "lng": 2.2049926
+    },
     "has_photo": false,
     "thefork_rating": 9.0,
     "thefork_avg_price": "17€",
@@ -80280,8 +80328,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Merce Tapas And Drinks",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de la Mercè, 27, Ciutat Vella, 08004 Barcelona",
+    "postal_code": "08004",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Spanish",
@@ -80294,11 +80342,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "16€",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 652 62 67 74",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Merce+Tapas+And+Drinks++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.8,
+    "google_maps_review_count": 3023,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -80331,7 +80379,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3809571,
+      "lng": 2.1809534
+    },
     "has_photo": false,
     "thefork_rating": 9.0,
     "thefork_avg_price": "16€",
@@ -80340,8 +80391,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Maranpau Barcelona",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Rambla de Catalunya, 133, Eixample, 08008 Barcelona",
+    "postal_code": "08008",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -80353,12 +80404,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "25€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "http://www.maranpau.com/",
+    "phone": "+34 931 44 89 67",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Maranpau+Barcelona++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.7,
+    "google_maps_review_count": 3220,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -80403,8 +80454,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Samantha's",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Pl. Reial, 12, Ciutat Vella, 08002 Barcelona",
+    "postal_code": "08002",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -80416,12 +80467,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "25€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://samanthasbcn.com/",
+    "phone": "+34 933 17 61 96",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Samantha%27s++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.4,
+    "google_maps_review_count": 882,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -80466,8 +80517,8 @@ const RESTAURANT_DATA = [
   {
     "name": "The Clubhouse: Laietana & Nikki's",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Via Laietana, 6, Ciutat Vella, 08003 Barcelona",
+    "postal_code": "08003",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -80479,12 +80530,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "20€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://thecomedyclubhouse.es/",
+    "phone": "+34 611 61 94 46",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The+Clubhouse%3A+Laietana+%26+Nikki%27s++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.9,
+    "google_maps_review_count": 117,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -80517,7 +80568,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.382369,
+      "lng": 2.1811729
+    },
     "has_photo": false,
     "thefork_rating": 9.3,
     "thefork_avg_price": "20€",
@@ -80526,8 +80580,8 @@ const RESTAURANT_DATA = [
   {
     "name": "The Circle",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer Ample, 31, Ciutat Vella, 08002 Barcelona",
+    "postal_code": "08002",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -80539,12 +80593,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "30€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://www.bythecircle.com/",
+    "phone": "+34 613 01 26 10",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The+Circle++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.9,
+    "google_maps_review_count": 262,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -80577,7 +80631,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3804618,
+      "lng": 2.1797587
+    },
     "has_photo": false,
     "thefork_rating": 9.3,
     "thefork_avg_price": "30€",
@@ -80586,8 +80643,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Angus Grill Steakhouse Brasserie",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de la Diputació, 26, Eixample, 08015 Barcelona",
+    "postal_code": "08015",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Argentine",
@@ -80600,11 +80657,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "30€",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 663 57 98 31",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Angus+Grill+Steakhouse+Brasserie++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.8,
+    "google_maps_review_count": 11161,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -80649,8 +80706,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Craft Pizza Entença",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer d'Entença, 64, Eixample, 08015 Barcelona",
+    "postal_code": "08015",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Italian",
@@ -80662,12 +80719,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "15€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "http://craftpizza.cat/",
+    "phone": "+34 934 59 76 11",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Craft+Pizza+Enten%C3%A7a++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.3,
+    "google_maps_review_count": 399,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -80712,8 +80769,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Poca-Solta - Portal de l'Àngel",
     "address": "Barri Gòtic, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de Duran i Bas, 3, Ciutat Vella, 08002 Barcelona",
+    "postal_code": "08002",
     "city": "Barcelona",
     "neighborhood": "Barri Gòtic",
     "cuisine_type": "Mediterranean",
@@ -80725,12 +80782,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "30€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://pocaxsolta.com/",
+    "phone": "+34 937 86 67 23",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Poca-Solta+-+Portal+de+l%27%C3%80ngel++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.9,
+    "google_maps_review_count": 812,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -80763,7 +80820,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.385501,
+      "lng": 2.1738947
+    },
     "has_photo": false,
     "thefork_rating": 8.9,
     "thefork_avg_price": "30€",
@@ -80772,8 +80832,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Gràcia Platets i Bistró",
     "address": "Gràcia, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de Roger de Llúria, 49, Eixample, 08009 Barcelona",
+    "postal_code": "08009",
     "city": "Barcelona",
     "neighborhood": "Gràcia",
     "cuisine_type": "Mediterranean",
@@ -80785,12 +80845,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "20€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://graciaplatetsibistro.makro.rest/",
+    "phone": "+34 654 65 41 80",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Gr%C3%A0cia+Platets+i+Bistr%C3%B3++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.8,
+    "google_maps_review_count": 2666,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -80823,7 +80883,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3930165,
+      "lng": 2.1687121
+    },
     "has_photo": false,
     "thefork_rating": 8.9,
     "thefork_avg_price": "20€",
@@ -80832,8 +80895,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Bapary Center",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer del Carme, 116, Ciutat Vella, 08001 Barcelona",
+    "postal_code": "08001",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -80845,12 +80908,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "20€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://baparycentar.es/",
+    "phone": "+34 935 04 61 04",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bapary+Center++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.5,
+    "google_maps_review_count": 124,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -80883,7 +80946,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3797779,
+      "lng": 2.1662657
+    },
     "has_photo": false,
     "thefork_rating": 8.9,
     "thefork_avg_price": "20€",
@@ -80892,8 +80958,8 @@ const RESTAURANT_DATA = [
   {
     "name": "L'Amfora La Casa de la Paella",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Avinguda del Paral·lel, 184, Eixample, 08015 Barcelona",
+    "postal_code": "08015",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Mediterranean",
@@ -80905,12 +80971,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "38€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://restaurantamfora.com/",
+    "phone": "+34 626 84 63 69",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=L%27Amfora+La+Casa+de+la+Paella++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.2,
+    "google_maps_review_count": 3440,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -80943,7 +81009,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3752989,
+      "lng": 2.1535659
+    },
     "has_photo": false,
     "thefork_rating": 9.0,
     "thefork_avg_price": "38€",
@@ -80952,8 +81021,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Tastari Mediterrani",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de Viladomat, 80, Eixample, 08015 Barcelona",
+    "postal_code": "08015",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Mediterranean",
@@ -80965,12 +81034,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "20€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://www.tastarimediterrani.es/",
+    "phone": "+34 930 29 95 51",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tastari+Mediterrani++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.9,
+    "google_maps_review_count": 415,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -81003,7 +81072,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3785631,
+      "lng": 2.1590179
+    },
     "has_photo": false,
     "thefork_rating": 9.0,
     "thefork_avg_price": "20€",
@@ -81012,8 +81084,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Concepto Nonna",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de Villarroel, 245, Eixample, 08036 Barcelona",
+    "postal_code": "08036",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -81025,12 +81097,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "23€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "http://www.conceptononna.com/",
+    "phone": "+34 938 35 76 78",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Concepto+Nonna++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.2,
+    "google_maps_review_count": 1600,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -81063,7 +81135,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3917453,
+      "lng": 2.1479208
+    },
     "has_photo": false,
     "thefork_rating": 9.0,
     "thefork_avg_price": "23€",
@@ -81072,8 +81147,8 @@ const RESTAURANT_DATA = [
   {
     "name": "216 Grammi Eixample",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de Provença, 99, Eixample, 08029 Barcelona",
+    "postal_code": "08029",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -81085,12 +81160,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "20€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://216grammi.com/",
+    "phone": "+34 931 97 22 55",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=216+Grammi+Eixample++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.5,
+    "google_maps_review_count": 170,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -81123,7 +81198,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3863858,
+      "lng": 2.149974
+    },
     "has_photo": false,
     "thefork_rating": 9.0,
     "thefork_avg_price": "20€",
@@ -81132,8 +81210,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Local Tapas",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer d'Aribau, 37, Eixample, 08011 Barcelona",
+    "postal_code": "08011",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Spanish",
@@ -81146,11 +81224,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "30€",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 645 58 15 09",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Local+Tapas++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.7,
+    "google_maps_review_count": 8746,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -81183,7 +81261,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3876228,
+      "lng": 2.1602109
+    },
     "has_photo": false,
     "thefork_rating": 9.0,
     "thefork_avg_price": "30€",
@@ -81192,8 +81273,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Pampa Grill",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de Villarroel, 88, Eixample, 08011 Barcelona",
+    "postal_code": "08011",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Argentine",
@@ -81206,11 +81287,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "30€",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 930 04 49 46",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pampa+Grill++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.8,
+    "google_maps_review_count": 5416,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -81243,7 +81324,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3846033,
+      "lng": 2.1579653
+    },
     "has_photo": false,
     "thefork_rating": 9.0,
     "thefork_avg_price": "30€",
@@ -81252,8 +81336,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Casa de Vivi - Fauna",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer del Duc, 15, Ciutat Vella, 08002 Barcelona",
+    "postal_code": "08002",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -81265,12 +81349,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "35€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "http://www.casadevivi.com/",
+    "phone": "+34 678 18 75 62",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Casa+de+Vivi+-+Fauna++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.4,
+    "google_maps_review_count": 231,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -81303,7 +81387,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3846923,
+      "lng": 2.1728835
+    },
     "has_photo": false,
     "thefork_rating": 9.0,
     "thefork_avg_price": "35€",
@@ -81312,8 +81399,8 @@ const RESTAURANT_DATA = [
   {
     "name": "La Adelita Botanero",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "C/ de Muntaner, 100, Eixample, 08036 Barcelona",
+    "postal_code": "08036",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Mexican",
@@ -81325,12 +81412,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "20€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://adelitabotanero.es/es",
+    "phone": "+34 931 26 69 52",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La+Adelita+Botanero++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.1,
+    "google_maps_review_count": 2421,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -81363,7 +81450,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3886158,
+      "lng": 2.1569939
+    },
     "has_photo": false,
     "thefork_rating": 9.0,
     "thefork_avg_price": "20€",
@@ -81372,8 +81462,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Montesquiu",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de Mandri, 56, Sarrià-Sant Gervasi, 08022 Barcelona",
+    "postal_code": "08022",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -81385,12 +81475,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "25€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://www.elquiu.com/",
+    "phone": "+34 934 17 30 61",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Montesquiu++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.1,
+    "google_maps_review_count": 1320,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -81435,8 +81525,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Especiarium Bar",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de la Princesa, 29, Ciutat Vella, 08003 Barcelona",
+    "postal_code": "08003",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -81448,12 +81538,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "15€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://www.especiariumbar.com/",
+    "phone": "+34 647 37 36 55",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Especiarium+Bar++Barcelona",
-    "google_maps_rating": 4.0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.9,
+    "google_maps_review_count": 2617,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -81486,7 +81576,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3857089,
+      "lng": 2.1807634
+    },
     "has_photo": false,
     "thefork_rating": null,
     "thefork_avg_price": "15€",
@@ -81495,8 +81588,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Lido",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Gran Via de les Corts Catalanes, 560, Eixample, 08011 Barcelona",
+    "postal_code": "08011",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -81508,12 +81601,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "19€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://lidobarcelona.com/",
+    "phone": "+34 934 53 11 77",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Lido++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.0,
+    "google_maps_review_count": 1121,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -81558,8 +81651,8 @@ const RESTAURANT_DATA = [
   {
     "name": "El Curry",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer del Parlament, 54, Eixample, 08015 Barcelona",
+    "postal_code": "08015",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Indian",
@@ -81571,12 +81664,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "20€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "http://www.elcurry.com/",
+    "phone": "+34 936 27 82 71",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Curry++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.7,
+    "google_maps_review_count": 459,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -81609,7 +81702,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3772714,
+      "lng": 2.1639444
+    },
     "has_photo": false,
     "thefork_rating": 8.8,
     "thefork_avg_price": "20€",
@@ -81618,8 +81714,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Foodie",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer dels Mercaders, 28, Ciutat Vella, 08003 Barcelona",
+    "postal_code": "08003",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -81632,11 +81728,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "19€",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 937 42 73 03",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Foodie++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.7,
+    "google_maps_review_count": 6322,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -81669,7 +81765,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3855218,
+      "lng": 2.1689116
+    },
     "has_photo": false,
     "thefork_rating": 8.3,
     "thefork_avg_price": "19€",
@@ -81678,8 +81777,8 @@ const RESTAURANT_DATA = [
   {
     "name": "El Racó Argentí",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer d'Europa, 18, Les Corts, 08028 Barcelona",
+    "postal_code": "08028",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -81692,11 +81791,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "24€",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 685 62 94 28",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=El+Rac%C3%B3+Argent%C3%AD++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.7,
+    "google_maps_review_count": 93,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -81729,7 +81828,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3869945,
+      "lng": 2.1298779
+    },
     "has_photo": false,
     "thefork_rating": 8.9,
     "thefork_avg_price": "24€",
@@ -81738,8 +81840,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Palau del Born",
     "address": "El Born, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Pla de Palau, 7, Ciutat Vella, 08003 Barcelona",
+    "postal_code": "08003",
     "city": "Barcelona",
     "neighborhood": "El Born",
     "cuisine_type": "Other",
@@ -81751,12 +81853,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "28€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://palaudelborn.com/",
+    "phone": "+34 930 47 85 02",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Palau+del+Born++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.8,
+    "google_maps_review_count": 460,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -81790,8 +81892,8 @@ const RESTAURANT_DATA = [
       "thefork-festival"
     ],
     "coordinates": {
-      "lat": 41.3875837,
-      "lng": 2.1752316
+      "lat": 41.3832851,
+      "lng": 2.182828
     },
     "has_photo": false,
     "thefork_rating": 8.9,
@@ -81801,8 +81903,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Delicias del Caribe RD",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer d'En Fontrodona, 9, Sants-Montjuïc, 08004 Barcelona",
+    "postal_code": "08004",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Other",
@@ -81815,11 +81917,11 @@ const RESTAURANT_DATA = [
     "dinner_price_range": "23€",
     "dinner_tier": "unknown",
     "website": "",
-    "phone": "",
+    "phone": "+34 931 46 70 82",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Delicias+del+Caribe+RD++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 3.9,
+    "google_maps_review_count": 11,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -81852,7 +81954,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3739815,
+      "lng": 2.1674894
+    },
     "has_photo": false,
     "thefork_rating": 8.9,
     "thefork_avg_price": "23€",
@@ -81861,8 +81966,8 @@ const RESTAURANT_DATA = [
   {
     "name": "Antic tapas Balmes",
     "address": "Eixample, Barcelona",
-    "address_full": "",
-    "postal_code": "",
+    "address_full": "Carrer de Balmes, 203, Sarrià-Sant Gervasi, 08006 Barcelona",
+    "postal_code": "08006",
     "city": "Barcelona",
     "neighborhood": "Eixample",
     "cuisine_type": "Spanish",
@@ -81874,12 +81979,12 @@ const RESTAURANT_DATA = [
     "dinner_menu_del_dia": false,
     "dinner_price_range": "20€",
     "dinner_tier": "unknown",
-    "website": "",
-    "phone": "",
+    "website": "https://www.privateaser.es/local/58876-Antic-Tapas-Balmes",
+    "phone": "+34 911 67 99 85",
     "instagram": "",
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Antic+tapas+Balmes++Barcelona",
-    "google_maps_rating": 0,
-    "google_maps_review_count": 0,
+    "google_maps_rating": 4.8,
+    "google_maps_review_count": 1142,
     "opening_hours_lunch": "13:00-16:00",
     "opening_hours_full": {
       "monday": "",
@@ -81912,7 +82017,10 @@ const RESTAURANT_DATA = [
     "tags": [
       "thefork-festival"
     ],
-    "coordinates": {},
+    "coordinates": {
+      "lat": 41.3977204,
+      "lng": 2.1514689
+    },
     "has_photo": false,
     "thefork_rating": 8.9,
     "thefork_avg_price": "20€",

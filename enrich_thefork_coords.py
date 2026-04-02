@@ -133,7 +133,7 @@ def main():
         json.dump(restaurants, f, indent=2, ensure_ascii=False)
     
     # Regenerate JS
-    js_content = 'const RESTAURANT_DATA = ' + json.dumps(restaurants, indent=2, ensure_ascii=False) + ';\n'
+    js_content = 'var RESTAURANT_DATA = ' + json.dumps(restaurants, indent=2, ensure_ascii=False) + ';\n'
     with open('restaurants_data.js', 'w') as f:
         f.write(js_content)
     
