@@ -10,7 +10,7 @@ from xml.sax.saxutils import escape
 
 INPUT = "restaurants.json"
 OUTPUT = "feed.xml"
-BASE = "https://whiteboxamir.github.io/menuverso"
+BASE = "https://patriciaadro.github.io/menuverso-app"
 
 
 def main():

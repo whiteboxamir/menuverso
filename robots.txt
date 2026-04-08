@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin.html
 Disallow: /*.py$
 
-Sitemap: https://whiteboxamir.github.io/menuverso/sitemap.xml
+Sitemap: https://patriciaadro.github.io/menuverso-app/sitemap.xml

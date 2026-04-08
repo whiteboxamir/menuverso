@@ -129,7 +129,7 @@ def generate_page(r, all_restaurants, total_count):
     readiness_tier = 'high' if readiness >= 70 else 'mid' if readiness >= 40 else 'low'
     readiness_color = {'high': '#059669', 'mid': '#D97706', 'low': '#DC2626'}[readiness_tier]
 
-    page_url = f"https://whiteboxamir.github.io/menuverso/r/{r['id']}.html"
+    page_url = f"https://patriciaadro.github.io/menuverso-app/r/{r['id']}.html"
     whatsapp_text = quote(f"Check out {name} in {hood}, Barcelona! {cuisine} restaurant. {page_url}")
 
     # JSON-LD
@@ -603,12 +603,12 @@ def main():
 
     # Generate sitemap
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/</loc><priority>1.0</priority></url>\n'
-    sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/analytics.html</loc><priority>0.9</priority></url>\n'
-    sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/lists.html</loc><priority>0.9</priority></url>\n'
-    sitemap += '  <url><loc>https://whiteboxamir.github.io/menuverso/landing.html</loc><priority>1.0</priority></url>\n'
+    sitemap += '  <url><loc>https://patriciaadro.github.io/menuverso-app/</loc><priority>1.0</priority></url>\n'
+    sitemap += '  <url><loc>https://patriciaadro.github.io/menuverso-app/analytics.html</loc><priority>0.9</priority></url>\n'
+    sitemap += '  <url><loc>https://patriciaadro.github.io/menuverso-app/lists.html</loc><priority>0.9</priority></url>\n'
+    sitemap += '  <url><loc>https://patriciaadro.github.io/menuverso-app/landing.html</loc><priority>1.0</priority></url>\n'
     for r in restaurants:
-        sitemap += f'  <url><loc>https://whiteboxamir.github.io/menuverso/r/{r["id"]}.html</loc><priority>0.6</priority></url>\n'
+        sitemap += f'  <url><loc>https://patriciaadro.github.io/menuverso-app/r/{r["id"]}.html</loc><priority>0.6</priority></url>\n'
     sitemap += '</urlset>'
 
     with open("sitemap.xml", "w") as f:

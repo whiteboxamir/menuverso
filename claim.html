@@ -162,7 +162,7 @@ function renderDashboard() {
   const avgPrice = allPrices.length ? (allPrices.reduce((a,b)=>a+b,0)/allPrices.length).toFixed(1) : '—';
   const pricePosition = myPrice && allPrices.length > 1 ? (myPrice <= parseFloat(avgPrice) ? '💚 Below average' : '🧡 Above average') : '—';
 
-  const pageUrl = `https://whiteboxamir.github.io/menuverso/r/${r.id}.html`;
+  const pageUrl = `https://patriciaadro.github.io/menuverso-app/r/${r.id}.html`;
 
   dash.innerHTML = `
     <div class="dash-header">

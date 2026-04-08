@@ -2,7 +2,7 @@
 
 The largest menú del día database in Barcelona. 1,504 restaurants across 18 neighborhoods with menu tracking, pricing analytics, and trilingual support.
 
-**Live:** [whiteboxamir.github.io/menuverso](https://whiteboxamir.github.io/menuverso/)
+**Live:** [patriciaadro.github.io/menuverso-app](https://patriciaadro.github.io/menuverso-app/)
 
 ## Pages
 
@@ -13,7 +13,7 @@ The largest menú del día database in Barcelona. 1,504 restaurants across 18 ne
 | 🔧 Admin | [admin.html](admin.html) | Data quality dashboard (noindex) |
 | 🏠 Landing | [landing.html](landing.html) | Marketing landing page |
 | 📋 Business Plan | [business-plan.html](business-plan.html) | Investor-facing business plan |
-| 🎤 Pitch Deck | [menuverso-deck](https://whiteboxamir.github.io/menuverso-deck/) | Slide deck (separate repo) |
+| 🎤 Pitch Deck | [menuverso-deck](https://patriciaadro.github.io/menuverso-deck/) | Slide deck (separate repo) |
 | 🍴 Restaurant Pages | [/r/1.html](r/1.html) ... [/r/1504.html](r/1504.html) | 1,504 individual pages with JSON-LD |
 
 ## Features
